@@ -25822,7 +25822,7 @@ sub_60459990__LABEL_136:
   char *v42; // [sp+Ch] [bp-24h]
 
   v7 = *a4;
-  v41 = &`vtable for'sead::SafeStringBase<char>;
+  v41 = &`vtable for'sead::SafeStringBase_char;
   v42 = v7;
   result = (int)"NormalButton";
   if ( v7 != "NormalButton" )
@@ -25835,9 +25835,9 @@ sub_60459990__LABEL_136:
       if ( !v7[result] )
         return result;
     }
-    v39 = &`vtable for'sead::SafeStringBase<char>;
+    v39 = &`vtable for'sead::SafeStringBase_char;
     v40 = "DecisionButton";
-    sead::SafeStringBase<char>::assureTerminationImpl_(&v39);
+    sead::SafeStringBase_char::assureTerminationImpl_(&v39);
     result = (int)v40;
     if ( v7 != v40 )
     {
@@ -25850,7 +25850,7 @@ sub_60459990__LABEL_136:
         if ( !v42[i] )
           return result;
       }
-      v39 = &`vtable for'sead::SafeStringBase<char>;
+      v39 = &`vtable for'sead::SafeStringBase_char;
       v40 = "CursorDecisionButton";
       ((void (__fastcall *)(int (***)()))v41[3])(&v41);
       ((void (__fastcall *)(int (***)()))v41[3])(&v41);
@@ -25876,7 +25876,7 @@ MenuLayoutTable_init__LABEL_23:
           if ( !v42[j] )
             goto MenuLayoutTable_init__LABEL_23;
         }
-        v39 = &`vtable for'sead::SafeStringBase<char>;
+        v39 = &`vtable for'sead::SafeStringBase_char;
         v40 = "CursorNormalButton";
         ((void (__fastcall *)(int (***)()))v41[3])(&v41);
         ((void (__fastcall *)(int (***)()))v41[3])(&v41);
@@ -25905,7 +25905,7 @@ MenuLayoutTable_init__LABEL_33:
             if ( !v42[k] )
               goto MenuLayoutTable_init__LABEL_33;
           }
-          v39 = &`vtable for'sead::SafeStringBase<char>;
+          v39 = &`vtable for'sead::SafeStringBase_char;
           v40 = "CursorNormalButtonArrowL";
           ((void (__fastcall *)(int (***)()))v41[3])(&v41);
           ((void (__fastcall *)(int (***)()))v41[3])(&v41);
@@ -25934,7 +25934,7 @@ MenuLayoutTable_init__LABEL_43:
               if ( !v42[m] )
                 goto MenuLayoutTable_init__LABEL_43;
             }
-            v39 = &`vtable for'sead::SafeStringBase<char>;
+            v39 = &`vtable for'sead::SafeStringBase_char;
             v40 = "CursorNormalButtonArrowR";
             ((void (__fastcall *)(int (***)()))v41[3])(&v41);
             ((void (__fastcall *)(int (***)()))v41[3])(&v41);
@@ -25951,7 +25951,7 @@ MenuLayoutTable_init__LABEL_43:
                 if ( !v42[n] )
                   goto MenuLayoutTable_init__LABEL_53;
               }
-              v39 = &`vtable for'sead::SafeStringBase<char>;
+              v39 = &`vtable for'sead::SafeStringBase_char;
               v40 = "CursorCheckButton";
               ((void (__fastcall *)(int (***)()))v41[3])(&v41);
               ((void (__fastcall *)(int (***)()))v41[3])(&v41);
@@ -25988,7 +25988,7 @@ MenuLayoutTable_init__LABEL_64:
                   if ( !v42[ii] )
                     goto MenuLayoutTable_init__LABEL_64;
                 }
-                v39 = &`vtable for'sead::SafeStringBase<char>;
+                v39 = &`vtable for'sead::SafeStringBase_char;
                 v40 = "CursorDragButton";
                 ((void (__fastcall *)(int (***)()))v41[3])(&v41);
                 ((void (__fastcall *)(int (***)()))v41[3])(&v41);
@@ -26005,7 +26005,7 @@ MenuLayoutTable_init__LABEL_64:
                     if ( !v42[jj] )
                       goto MenuLayoutTable_init__LABEL_74;
                   }
-                  v39 = &`vtable for'sead::SafeStringBase<char>;
+                  v39 = &`vtable for'sead::SafeStringBase_char;
                   v40 = "CursorPushButton";
                   ((void (__fastcall *)(int (***)()))v41[3])(&v41);
                   ((void (__fastcall *)(int (***)()))v41[3])(&v41);

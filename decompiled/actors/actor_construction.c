@@ -23032,7 +23032,7 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
       if ( *(_DWORD *)(v6 + 8) > 1u )
         ++v7;
       v9 = *v7;
-      pTarget[0] = (int)&`vtable for'sead::SafeStringBase<char>;
+      pTarget[0] = (int)&`vtable for'sead::SafeStringBase_char;
       pTarget[1] = (int)"jcm_shot_ed";
       SkeletalAnim_play(v9, v8, (int)pTarget);
       v10 = *(_DWORD *)(*(_DWORD *)v5 + 12);
@@ -24976,7 +24976,7 @@ sub_6011941C__LABEL_88:
   (*(void (__fastcall **)(int))(*(_DWORD *)**v12 + 52))(**v12);
   v19 = **v12;
   v20 = *(int (__fastcall **)(int, float32x2_t *))(*(_DWORD *)v19 + 84);
-  v96.n64_u32[0] = (unsigned __int32)&`vtable for'sead::SafeStringBase<char>;
+  v96.n64_u32[0] = (unsigned __int32)&`vtable for'sead::SafeStringBase_char;
   v96.n64_u32[1] = (unsigned __int32)&unk_60ABE5A0;
   v21 = v20(v19, &v96);
   (*(void (__fastcall **)(int, int, float32x2_t *, unsigned int *))(*(_DWORD *)**v12 + 100))(**v12, v21, &v96, v78);
@@ -24989,7 +24989,7 @@ sub_6011941C__LABEL_88:
   (*(void (__fastcall **)(int, int, float32x2_t *, unsigned int *))(*(_DWORD *)**v12 + 96))(**v12, v21, &v96, v78);
   v23 = **v12;
   v24 = *(int (__fastcall **)(int, float32x2_t *))(*(_DWORD *)v23 + 84);
-  v96.n64_u32[0] = (unsigned __int32)&`vtable for'sead::SafeStringBase<char>;
+  v96.n64_u32[0] = (unsigned __int32)&`vtable for'sead::SafeStringBase_char;
   v96.n64_u32[1] = (unsigned __int32)"wrist";
   v25 = v24(v23, &v96);
   (*(void (__fastcall **)(int, int, float32x2_t *, unsigned int *))(*(_DWORD *)**v12 + 100))(**v12, v25, &v96, v78);
@@ -25006,7 +25006,7 @@ sub_6011941C__LABEL_88:
   (*(void (__fastcall **)(int, int, float32x2_t *, unsigned int *))(*(_DWORD *)**v12 + 96))(**v12, v25, &v96, v78);
   v27 = **v12;
   v28 = *(int (__fastcall **)(int, float32x2_t *))(*(_DWORD *)v27 + 84);
-  v96.n64_u32[0] = (unsigned __int32)&`vtable for'sead::SafeStringBase<char>;
+  v96.n64_u32[0] = (unsigned __int32)&`vtable for'sead::SafeStringBase_char;
   v96.n64_u32[1] = (unsigned __int32)"p_shaft_1";
   v29 = v28(v27, &v96);
   (*(void (__fastcall **)(int, int, float32x2_t *, unsigned int *))(*(_DWORD *)**v12 + 100))(**v12, v29, &v96, v78);
@@ -25067,7 +25067,7 @@ sub_6011941C__LABEL_88:
   *(_DWORD *)(a1 + 8984) = HIDWORD(v101);
   v42 = **v12;
   v43 = *(int (__fastcall **)(int, float32x2_t *))(*(_DWORD *)v42 + 84);
-  v96.n64_u32[0] = (unsigned __int32)&`vtable for'sead::SafeStringBase<char>;
+  v96.n64_u32[0] = (unsigned __int32)&`vtable for'sead::SafeStringBase_char;
   v96.n64_u32[1] = (unsigned __int32)"skl_root";
   v44 = v43(v42, &v96);
   (*(void (__fastcall **)(int, int, int))(*(_DWORD *)**v12 + 108))(**v12, v44, a1 + 6892);
@@ -25110,7 +25110,7 @@ sub_6011941C__LABEL_88:
     (*(void (__fastcall **)(_DWORD))(**(_DWORD **)(a1 + 9232) + 224))(*(_DWORD *)(a1 + 9232));
   v58 = **v12;
   v59 = *(int (__fastcall **)(int, float32x2_t *))(*(_DWORD *)v58 + 84);
-  v96.n64_u32[0] = (unsigned __int32)&`vtable for'sead::SafeStringBase<char>;
+  v96.n64_u32[0] = (unsigned __int32)&`vtable for'sead::SafeStringBase_char;
   v96.n64_u32[1] = (unsigned __int32)&unk_60ABE5A0;
   v60 = v59(v58, &v96);
   (*(void (__fastcall **)(int, int, float32x2_t *))(*(_DWORD *)**v12 + 108))(**v12, v60, &v96);
@@ -25134,7 +25134,7 @@ sub_6011941C__LABEL_88:
   *(_DWORD *)(a1 + 9312) = sub_6000F7B8() + 0x40000000;
   v64 = **v12;
   v65 = *(int (__fastcall **)(int, float32x2_t *))(*(_DWORD *)v64 + 84);
-  v96.n64_u32[0] = (unsigned __int32)&`vtable for'sead::SafeStringBase<char>;
+  v96.n64_u32[0] = (unsigned __int32)&`vtable for'sead::SafeStringBase_char;
   v96.n64_u32[1] = (unsigned __int32)"skl_root";
   v66 = v65(v64, &v96);
   v78[0] = 1065353216;
@@ -87145,10 +87145,10 @@ ShapedCollider_vf24_helper_helper_1638EC__LABEL_91:
   }
   ResArchiveById = (void *)Profile::getResArchiveById(*(Profile **)(a1 + 12), 0);
   *(_DWORD *)(a1 + 280) = ResArchiveById;
-  identifier.vtable = &`vtable for'sead::SafeStringBase<char>;
+  identifier.vtable = &`vtable for'sead::SafeStringBase_char;
   identifier.cstr = "cobCourse";
   Model = (void *)Resource_getModel(ResArchiveById, &identifier, 6, 1, 0, 1, 0, 0, 1, 0);
-  v9 = (ModelWrapper *)operator new(0x30u, 0, 4);
+  v9 = (ModelWrapper *)__operator_new_al(0x30u, 0, 4);
   v10 = ModelWrapper_ctor(v9, Model, 1, 0, 1, 0, 0);
   ModelWrapper_setup(v10, (int)ResArchiveById, 0, 0);
   *(_DWORD *)(a1 + 268) = v9;
@@ -87156,19 +87156,19 @@ ShapedCollider_vf24_helper_helper_1638EC__LABEL_91:
   {
     v11 = (void *)Profile::getResArchiveById(*(Profile **)(a1 + 12), 2u);
     *(_DWORD *)(a1 + 288) = v11;
-    identifier.vtable = &`vtable for'sead::SafeStringBase<char>;
+    identifier.vtable = &`vtable for'sead::SafeStringBase_char;
     identifier.cstr = "cobStarCoin";
     v12 = (void *)Resource_getModel(v11, &identifier, 6, 1, 0, 1, 0, 0, 1, 0);
-    v13 = (ModelWrapper *)operator new(0x30u, 0, 4);
+    v13 = (ModelWrapper *)__operator_new_al(0x30u, 0, 4);
     v14 = ModelWrapper_ctor(v13, v12, 1, 0, 1, 0, 0);
     ModelWrapper_setup(v14, (int)v11, 0, 0);
     *(_DWORD *)(a1 + 276) = v13;
     v15 = (void *)Profile::getResArchiveById(*(Profile **)(a1 + 12), 1u);
     *(_DWORD *)(a1 + 284) = v15;
-    identifier.vtable = &`vtable for'sead::SafeStringBase<char>;
+    identifier.vtable = &`vtable for'sead::SafeStringBase_char;
     identifier.cstr = "cobRing";
     v16 = (void *)Resource_getModel(v15, &identifier, 6, 1, 0, 1, 0, 0, 1, 0);
-    v17 = (ModelWrapper *)operator new(0x30u, 0, 4);
+    v17 = (ModelWrapper *)__operator_new_al(0x30u, 0, 4);
     v18 = ModelWrapper_ctor(v17, v16, 1, 0, 1, 0, 0);
     ModelWrapper_setup(v18, (int)v15, 0, 0);
     *(_DWORD *)(a1 + 272) = v17;
@@ -87182,7 +87182,7 @@ sub_60178CF0__LABEL_37:
     *(_DWORD *)(**(_DWORD **)(a1 + 268) + 36) = 2;
     goto sub_60178CF0__LABEL_38;
   }
-  identifier.vtable = &`vtable for'sead::SafeStringBase<char>;
+  identifier.vtable = &`vtable for'sead::SafeStringBase_char;
   identifier.cstr = "W5A0";
   (*(void (__fastcall **)(int))(*(_DWORD *)(a1 + 332) + 12))(a1 + 332);
   (*(void (__fastcall **)(int))(*(_DWORD *)(a1 + 332) + 12))(a1 + 332);
@@ -87200,7 +87200,7 @@ sub_60178CF0__LABEL_37:
     if ( !*(_BYTE *)(v21 + i) )
       goto sub_60178CF0__LABEL_36;
   }
-  v112 = &`vtable for'sead::SafeStringBase<char>;
+  v112 = &`vtable for'sead::SafeStringBase_char;
   v113 = "W7A0";
   (*(void (__fastcall **)(int))(*(_DWORD *)(a1 + 332) + 12))(a1 + 332);
   (*(void (__fastcall **)(int))(*(_DWORD *)(a1 + 332) + 12))(a1 + 332);
@@ -87211,10 +87211,10 @@ sub_60178CF0__LABEL_37:
 sub_60178CF0__LABEL_36:
     v26 = (void *)Profile::getResArchiveById(*(Profile **)(a1 + 12), 1u);
     *(_DWORD *)(a1 + 284) = v26;
-    identifier.vtable = &`vtable for'sead::SafeStringBase<char>;
+    identifier.vtable = &`vtable for'sead::SafeStringBase_char;
     identifier.cstr = "cobRing";
     v27 = (void *)Resource_getModel(v26, &identifier, 6, 1, 0, 1, 0, 0, 1, 0);
-    v28 = (ModelWrapper *)operator new(0x30u, 0, 4);
+    v28 = (ModelWrapper *)__operator_new_al(0x30u, 0, 4);
     v29 = ModelWrapper_ctor(v28, v27, 1, 0, 1, 0, 0);
     ModelWrapper_setup(v29, (int)v26, 0, 0);
     *(_DWORD *)(a1 + 272) = v28;
@@ -87259,7 +87259,7 @@ sub_60178CF0__LABEL_38:
     goto sub_60178CF0__LABEL_96;
   }
   v111 = v33;
-  identifier.vtable = &`vtable for'sead::SafeStringBase<char>;
+  identifier.vtable = &`vtable for'sead::SafeStringBase_char;
   identifier.cstr = "W6C";
   (*(void (__fastcall **)(int))(*(_DWORD *)(a1 + 332) + 12))(a1 + 332);
   (*(void (__fastcall **)(int))(*(_DWORD *)(a1 + 332) + 12))(a1 + 332);
@@ -87271,7 +87271,7 @@ sub_60178CF0__LABEL_38:
      || v35[1] == *((unsigned __int8 *)identifier.cstr + 1)
      && (!v35[1] || v35[2] == *((unsigned __int8 *)identifier.cstr + 2))) )
   {
-    identifier.vtable = &`vtable for'sead::SafeStringBase<char>;
+    identifier.vtable = &`vtable for'sead::SafeStringBase_char;
     identifier.cstr = "W6C0";
     sub_6022C144(dword_60C8D864, &identifier);
     v37 = sub_6019A628(v31, 22);
@@ -87305,7 +87305,7 @@ sub_60178CF0__LABEL_38:
     }
     goto sub_60178CF0__LABEL_96;
   }
-  identifier.vtable = &`vtable for'sead::SafeStringBase<char>;
+  identifier.vtable = &`vtable for'sead::SafeStringBase_char;
   identifier.cstr = "W1X0";
   (*(void (__fastcall **)(int))(*(_DWORD *)(a1 + 332) + 12))(a1 + 332);
   (*(void (__fastcall **)(int))(*(_DWORD *)(a1 + 332) + 12))(a1 + 332);
@@ -87336,7 +87336,7 @@ sub_60178CF0__LABEL_66:
     if ( !*(_BYTE *)(v42 + k) )
       goto sub_60178CF0__LABEL_66;
   }
-  identifier.vtable = &`vtable for'sead::SafeStringBase<char>;
+  identifier.vtable = &`vtable for'sead::SafeStringBase_char;
   identifier.cstr = "W3G0";
   (*(void (__fastcall **)(int))(*(_DWORD *)(a1 + 332) + 12))(a1 + 332);
   (*(void (__fastcall **)(int))(*(_DWORD *)(a1 + 332) + 12))(a1 + 332);
@@ -87360,7 +87360,7 @@ sub_60178CF0__LABEL_79:
         goto sub_60178CF0__LABEL_79;
     }
   }
-  identifier.vtable = &`vtable for'sead::SafeStringBase<char>;
+  identifier.vtable = &`vtable for'sead::SafeStringBase_char;
   identifier.cstr = "W801";
   (*(void (__fastcall **)(int))(*(_DWORD *)(a1 + 332) + 12))(a1 + 332);
   (*(void (__fastcall **)(int))(*(_DWORD *)(a1 + 332) + 12))(a1 + 332);
@@ -87549,7 +87549,7 @@ sub_60178CF0__LABEL_285:
     if ( v92 == "W5A0" )
     {
 sub_60178CF0__LABEL_264:
-      identifier.vtable = &`vtable for'sead::SafeStringBase<char>;
+      identifier.vtable = &`vtable for'sead::SafeStringBase_char;
       identifier.cstr = "W7A0";
       v107 = sub_6022C144(dword_60C8D864, &identifier);
       v108 = sub_6019A628(6, 36);
@@ -87633,7 +87633,7 @@ sub_60178CF0__LABEL_264:
           }
         }
       }
-      identifier.vtable = &`vtable for'sead::SafeStringBase<char>;
+      identifier.vtable = &`vtable for'sead::SafeStringBase_char;
       identifier.cstr = "W5A0";
       (*(void (__fastcall **)(int))(*(_DWORD *)(a1 + 332) + 12))(a1 + 332);
       (*(void (__fastcall **)(int))(*(_DWORD *)(a1 + 332) + 12))(a1 + 332);
@@ -87712,7 +87712,7 @@ sub_60178CF0__LABEL_270:
 sub_60178CF0__LABEL_187:
       if ( sub_603F69FC(v50 + 796, (unsigned __int8)v31, (unsigned __int8)v30) <= 1 )
       {
-        identifier.vtable = &`vtable for'sead::SafeStringBase<char>;
+        identifier.vtable = &`vtable for'sead::SafeStringBase_char;
         identifier.cstr = "W7A0";
         v83 = sub_6022C144(dword_60C8D864, &identifier);
         v84 = sub_6019A628(6, 36);
@@ -87793,7 +87793,7 @@ sub_60178CF0__LABEL_158:
       }
     }
   }
-  identifier.vtable = &`vtable for'sead::SafeStringBase<char>;
+  identifier.vtable = &`vtable for'sead::SafeStringBase_char;
   identifier.cstr = "W5A0";
   (*(void (__fastcall **)(int))(*(_DWORD *)(a1 + 332) + 12))(a1 + 332);
   (*(void (__fastcall **)(int))(*(_DWORD *)(a1 + 332) + 12))(a1 + 332);
@@ -87804,7 +87804,7 @@ sub_60178CF0__LABEL_158:
 sub_60178CF0__LABEL_200:
     if ( sub_603F69FC(v50 + 796, (unsigned __int8)v31, (unsigned __int8)v30) <= 1 )
     {
-      identifier.vtable = &`vtable for'sead::SafeStringBase<char>;
+      identifier.vtable = &`vtable for'sead::SafeStringBase_char;
       identifier.cstr = "W7A0";
       v88 = sub_6022C144(dword_60C8D864, &identifier);
       v89 = sub_6019A628(6, 36);
@@ -87871,7 +87871,7 @@ sub_60178CF0__LABEL_96:
   *(_DWORD *)(a1 + 308) = v39;
   *(float *)(a1 + 312) = v38;
   v51 = **(_DWORD **)(*(_DWORD *)(a1 + 268) + 28);
-  identifier.vtable = &`vtable for'sead::SafeStringBase<char>;
+  identifier.vtable = &`vtable for'sead::SafeStringBase_char;
   identifier.cstr = "cobCourse";
   v52 = LoadResource(ResourceMgrRelated_instance, &identifier);
   ShuAnim_play((_DWORD *)v51, v52, (int)&arr_dword_60C88E90[2 * *(_DWORD *)(a1 + 308) + 3]);
@@ -89025,7 +89025,7 @@ sub_60178CF0__LABEL_96:
   v108 = &v110;
   v107 = &BufferedSafeStringBase_char_vtable_probably;
   v109 = 32;
-  sead::BufferedSafeStringBase<char>::assureTerminationImpl_((int)&v107);
+  sead::BufferedSafeStringBase_char::assureTerminationImpl_((int)&v107);
   *(_BYTE *)v108 = 0;
   v106 = 0;
   v107 = &off_60BD4C20;
@@ -89067,12 +89067,12 @@ sub_60178CF0__LABEL_96:
     }
     v5 = a1;
   }
-  v94 = &`vtable for'sead::SafeStringBase<char>;
+  v94 = &`vtable for'sead::SafeStringBase_char;
   v95 = v8;
   v100 = &v102;
   v99 = &BufferedSafeStringBase_char_vtable_probably;
   v101 = 4096;
-  sead::BufferedSafeStringBase<char>::assureTerminationImpl_((int)&v99);
+  sead::BufferedSafeStringBase_char::assureTerminationImpl_((int)&v99);
   v99 = &off_60BD5118;
   v10 = v100;
   ((void (__fastcall *)(int (***)()))off_60BC0244)(&v94);
@@ -89899,7 +89899,7 @@ sub_6017BE9C__LABEL_337:
   v95 = &v97;
   v94 = &BufferedSafeStringBase_char_vtable_probably;
   v96 = 0x2000;
-  sead::BufferedSafeStringBase<char>::assureTerminationImpl_((int)&v94);
+  sead::BufferedSafeStringBase_char::assureTerminationImpl_((int)&v94);
   v94 = &off_60BD5148;
   v85 = v95;
   if ( v95 != v84 )
@@ -90420,12 +90420,12 @@ sub_6017D65C__LABEL_308:
     if ( v28 < 0x20 )
       v48 = &v109[v28];
     *v48 = 0;
-    v103 = &`vtable for'sead::SafeStringBase<char>;
+    v103 = &`vtable for'sead::SafeStringBase_char;
     v104 = v109;
     v106 = (char *)&v108;
     v105 = &BufferedSafeStringBase_char_vtable_probably;
     v107 = 32;
-    sead::BufferedSafeStringBase<char>::assureTerminationImpl_((int)&v105);
+    sead::BufferedSafeStringBase_char::assureTerminationImpl_((int)&v105);
     v105 = &off_60BD4C38;
     v50 = (unsigned __int8 *)v106;
     ((void (__fastcall *)(int (***)()))v103[3])(&v103);
@@ -90466,7 +90466,7 @@ sub_6017D65C__LABEL_308:
     {
       v54 = v53;
       v55 = sub_60183BE8();
-      v103 = &`vtable for'sead::SafeStringBase<char>;
+      v103 = &`vtable for'sead::SafeStringBase_char;
       v104 = (unsigned __int8 *)v55;
       ((void (__fastcall *)(int (***)()))v105[3])(&v105);
       ((void (__fastcall *)(int (***)()))v105[3])(&v105);
@@ -90500,7 +90500,7 @@ sub_6017D65C__LABEL_164:
     {
       v60 = v59;
       v61 = sub_60183F9C();
-      v103 = &`vtable for'sead::SafeStringBase<char>;
+      v103 = &`vtable for'sead::SafeStringBase_char;
       v104 = (unsigned __int8 *)v61;
       ((void (__fastcall *)(int (***)()))v105[3])(&v105);
       ((void (__fastcall *)(int (***)()))v105[3])(&v105);
@@ -90534,7 +90534,7 @@ sub_6017D65C__LABEL_181:
     {
       v66 = v65;
       v67 = sub_60184350();
-      v103 = &`vtable for'sead::SafeStringBase<char>;
+      v103 = &`vtable for'sead::SafeStringBase_char;
       v104 = (unsigned __int8 *)v67;
       ((void (__fastcall *)(int (***)()))v105[3])(&v105);
       ((void (__fastcall *)(int (***)()))v105[3])(&v105);
@@ -90568,7 +90568,7 @@ sub_6017D65C__LABEL_198:
     {
       v72 = v71;
       v73 = sub_60184704();
-      v103 = &`vtable for'sead::SafeStringBase<char>;
+      v103 = &`vtable for'sead::SafeStringBase_char;
       v104 = (unsigned __int8 *)v73;
       ((void (__fastcall *)(int (***)()))v105[3])(&v105);
       ((void (__fastcall *)(int (***)()))v105[3])(&v105);
@@ -90597,7 +90597,7 @@ sub_6017D65C__LABEL_212:
       v76 = 0;
     *(_DWORD *)(a1 + 1096 * v76 + 1128) |= 1 << v72;
 sub_6017D65C__LABEL_215:
-    v103 = &`vtable for'sead::SafeStringBase<char>;
+    v103 = &`vtable for'sead::SafeStringBase_char;
     v104 = "lookW";
     ((void (__fastcall *)(int (***)()))v105[3])(&v105);
     ((void (__fastcall *)(int (***)()))v105[3])(&v105);
@@ -93148,12 +93148,12 @@ sub_6017D65C__LABEL_307:
       v54 = v9;
       v12 = (int *)(*(int (__fastcall **)(int, int))(*(_DWORD *)a2 + 88))(a2, v7);
       v13 = (int)v6;
-      v70 = &`vtable for'sead::SafeStringBase<char>;
+      v70 = &`vtable for'sead::SafeStringBase_char;
       v71 = v12;
       v67 = &v69;
       v66 = &BufferedSafeStringBase_char_vtable_probably;
       v68 = 32;
-      sead::BufferedSafeStringBase<char>::assureTerminationImpl_((int)v6);
+      sead::BufferedSafeStringBase_char::assureTerminationImpl_((int)v6);
       v66 = &off_60BD4C38;
       v14 = v67;
       ((void (__fastcall *)(int (***)()))v70[3])(&v70);
@@ -93189,7 +93189,7 @@ sub_6017D65C__LABEL_307:
       }
       v6 = (int (***)())v13;
       v66 = &off_60BD4C20;
-      sead::BufferedSafeStringBase<char>::assureTerminationImpl_(v13);
+      sead::BufferedSafeStringBase_char::assureTerminationImpl_(v13);
       v18 = 0;
       while ( 1 )
       {
@@ -93366,13 +93366,13 @@ sub_60181FC0__LABEL_35:
                   v57 = (const char *)&v59;
                   v56 = &BufferedSafeStringBase_char_vtable_probably;
                   v58 = 5;
-                  sead::BufferedSafeStringBase<char>::assureTerminationImpl_((int)&v56);
+                  sead::BufferedSafeStringBase_char::assureTerminationImpl_((int)&v56);
                   *v57 = 0;
                   v63 = &v65;
                   v62 = &BufferedSafeStringBase_char_vtable_probably;
                   v56 = &off_60BD4F38;
                   v64 = 5;
-                  sead::BufferedSafeStringBase<char>::assureTerminationImpl_((int)&v62);
+                  sead::BufferedSafeStringBase_char::assureTerminationImpl_((int)&v62);
                   *(_BYTE *)v63 = 0;
                   v62 = &off_60BD4F38;
                   v34 = *(_DWORD *)(v49 + 40);
@@ -93401,11 +93401,11 @@ sub_60181FC0__LABEL_126:
         }
       }
 sub_60181FC0__LABEL_104:
-      v56 = &`vtable for'sead::SafeStringBase<char>;
+      v56 = &`vtable for'sead::SafeStringBase_char;
       v57 = "start";
       if ( sub_6018506C(v13, &v56) == -1 )
       {
-        v56 = &`vtable for'sead::SafeStringBase<char>;
+        v56 = &`vtable for'sead::SafeStringBase_char;
         v57 = "end";
         ((void (__fastcall *)(int))v66[3])(v13);
         ((void (__fastcall *)(int))v66[3])(v13);
@@ -93436,13 +93436,13 @@ sub_60181FC0__LABEL_125:
       }
       if ( ((unsigned int)&dword_60C89484 & ~(1612195816 << v37) & 1) == 0 && _cxa_guard_acquire(&dword_60C89484) )
       {
-        dword_60C89490[0] = &`vtable for'sead::SafeStringBase<char>;
+        dword_60C89490[0] = &`vtable for'sead::SafeStringBase_char;
         dword_60C89490[1] = "start";
-        dword_60C89490[2] = &`vtable for'sead::SafeStringBase<char>;
+        dword_60C89490[2] = &`vtable for'sead::SafeStringBase_char;
         dword_60C89490[3] = "startPan";
-        dword_60C89490[4] = &`vtable for'sead::SafeStringBase<char>;
+        dword_60C89490[4] = &`vtable for'sead::SafeStringBase_char;
         dword_60C89490[5] = "startTilt";
-        dword_60C89490[6] = &`vtable for'sead::SafeStringBase<char>;
+        dword_60C89490[6] = &`vtable for'sead::SafeStringBase_char;
         dword_60C89490[7] = "startFix";
         sub_60000288();
         _cxa_guard_release(&dword_60C89484);
@@ -110102,7 +110102,7 @@ sub_60181FC0__LABEL_147:
                   v8 = (_DWORD *)sub_60182ED0(v6, 0, v3, i);
                   if ( ((v5 == 15) & (unsigned __int8)v41 & (v43 == 3)) != 0 )
                   {
-                    v52 = &`vtable for'sead::SafeStringBase<char>;
+                    v52 = &`vtable for'sead::SafeStringBase_char;
                     v53 = "RW6J2W6J3";
                     (*(void (__fastcall **)(_DWORD *))(*v8 + 12))(v8);
                     (*(void (__fastcall **)(_DWORD *))(*v8 + 12))(v8);
@@ -110121,7 +110121,7 @@ sub_60181FC0__LABEL_147:
                         if ( !*(_BYTE *)(v11 + j) )
                           goto sub_6019F708__LABEL_42;
                       }
-                      v50 = &`vtable for'sead::SafeStringBase<char>;
+                      v50 = &`vtable for'sead::SafeStringBase_char;
                       v51 = "RW6J3W6M0";
                       (*(void (__fastcall **)(_DWORD *))(*v8 + 12))(v8);
                       (*(void (__fastcall **)(_DWORD *))(*v8 + 12))(v8);
@@ -110139,7 +110139,7 @@ sub_60181FC0__LABEL_147:
                           if ( !*(_BYTE *)(v14 + k) )
                             goto sub_6019F708__LABEL_42;
                         }
-                        v48 = &`vtable for'sead::SafeStringBase<char>;
+                        v48 = &`vtable for'sead::SafeStringBase_char;
                         v49 = "RW6M0W601";
                         (*(void (__fastcall **)(_DWORD *))(*v8 + 12))(v8);
                         (*(void (__fastcall **)(_DWORD *))(*v8 + 12))(v8);
@@ -138819,7 +138819,7 @@ sub_601CA03C__LABEL_152:
         }
         if ( sub_601916F4(v18) == 1 )
         {
-          LODWORD(v101) = &`vtable for'sead::SafeStringBase<char>;
+          LODWORD(v101) = &`vtable for'sead::SafeStringBase_char;
           HIDWORD(v101) = "F001";
           v37 = (_DWORD *)sub_601E03D4(7, 1, &v101);
           a1[20] = v37[18];

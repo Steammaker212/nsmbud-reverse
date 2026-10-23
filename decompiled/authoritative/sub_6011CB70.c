@@ -193,7 +193,7 @@ int __fastcall sub_6011CB70(int a1)
   (*(void (__fastcall **)(int))(*(_DWORD *)**v12 + 52))(**v12);
   v19 = **v12;
   v20 = *(int (__fastcall **)(int, float32x2_t *))(*(_DWORD *)v19 + 84);
-  v96.n64_u32[0] = (unsigned __int32)&`vtable for'sead::SafeStringBase<char>;
+  v96.n64_u32[0] = (unsigned __int32)&`vtable for'sead::SafeStringBase_char;
   v96.n64_u32[1] = (unsigned __int32)&unk_60ABE5A0;
   v21 = v20(v19, &v96);
   (*(void (__fastcall **)(int, int, float32x2_t *, unsigned int *))(*(_DWORD *)**v12 + 100))(**v12, v21, &v96, v78);
@@ -206,7 +206,7 @@ int __fastcall sub_6011CB70(int a1)
   (*(void (__fastcall **)(int, int, float32x2_t *, unsigned int *))(*(_DWORD *)**v12 + 96))(**v12, v21, &v96, v78);
   v23 = **v12;
   v24 = *(int (__fastcall **)(int, float32x2_t *))(*(_DWORD *)v23 + 84);
-  v96.n64_u32[0] = (unsigned __int32)&`vtable for'sead::SafeStringBase<char>;
+  v96.n64_u32[0] = (unsigned __int32)&`vtable for'sead::SafeStringBase_char;
   v96.n64_u32[1] = (unsigned __int32)"wrist";
   v25 = v24(v23, &v96);
   (*(void (__fastcall **)(int, int, float32x2_t *, unsigned int *))(*(_DWORD *)**v12 + 100))(**v12, v25, &v96, v78);
@@ -223,7 +223,7 @@ int __fastcall sub_6011CB70(int a1)
   (*(void (__fastcall **)(int, int, float32x2_t *, unsigned int *))(*(_DWORD *)**v12 + 96))(**v12, v25, &v96, v78);
   v27 = **v12;
   v28 = *(int (__fastcall **)(int, float32x2_t *))(*(_DWORD *)v27 + 84);
-  v96.n64_u32[0] = (unsigned __int32)&`vtable for'sead::SafeStringBase<char>;
+  v96.n64_u32[0] = (unsigned __int32)&`vtable for'sead::SafeStringBase_char;
   v96.n64_u32[1] = (unsigned __int32)"p_shaft_1";
   v29 = v28(v27, &v96);
   (*(void (__fastcall **)(int, int, float32x2_t *, unsigned int *))(*(_DWORD *)**v12 + 100))(**v12, v29, &v96, v78);
@@ -284,7 +284,7 @@ int __fastcall sub_6011CB70(int a1)
   *(_DWORD *)(a1 + 8984) = HIDWORD(v101);
   v42 = **v12;
   v43 = *(int (__fastcall **)(int, float32x2_t *))(*(_DWORD *)v42 + 84);
-  v96.n64_u32[0] = (unsigned __int32)&`vtable for'sead::SafeStringBase<char>;
+  v96.n64_u32[0] = (unsigned __int32)&`vtable for'sead::SafeStringBase_char;
   v96.n64_u32[1] = (unsigned __int32)"skl_root";
   v44 = v43(v42, &v96);
   (*(void (__fastcall **)(int, int, int))(*(_DWORD *)**v12 + 108))(**v12, v44, a1 + 6892);
@@ -327,7 +327,7 @@ int __fastcall sub_6011CB70(int a1)
     (*(void (__fastcall **)(_DWORD))(**(_DWORD **)(a1 + 9232) + 224))(*(_DWORD *)(a1 + 9232));
   v58 = **v12;
   v59 = *(int (__fastcall **)(int, float32x2_t *))(*(_DWORD *)v58 + 84);
-  v96.n64_u32[0] = (unsigned __int32)&`vtable for'sead::SafeStringBase<char>;
+  v96.n64_u32[0] = (unsigned __int32)&`vtable for'sead::SafeStringBase_char;
   v96.n64_u32[1] = (unsigned __int32)&unk_60ABE5A0;
   v60 = v59(v58, &v96);
   (*(void (__fastcall **)(int, int, float32x2_t *))(*(_DWORD *)**v12 + 108))(**v12, v60, &v96);
@@ -351,7 +351,7 @@ int __fastcall sub_6011CB70(int a1)
   *(_DWORD *)(a1 + 9312) = sub_6000F7B8() + 0x40000000;
   v64 = **v12;
   v65 = *(int (__fastcall **)(int, float32x2_t *))(*(_DWORD *)v64 + 84);
-  v96.n64_u32[0] = (unsigned __int32)&`vtable for'sead::SafeStringBase<char>;
+  v96.n64_u32[0] = (unsigned __int32)&`vtable for'sead::SafeStringBase_char;
   v96.n64_u32[1] = (unsigned __int32)"skl_root";
   v66 = v65(v64, &v96);
   v78[0] = 1065353216;

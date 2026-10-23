@@ -17635,7 +17635,7 @@ void nullsub_6563()
 /* Recovered from main.idb: VA 0x6017B718  RVA 0x0017B718  size 0x4 */
 Actor *__fastcall Actor_beforeCreate(Actor *v)
 {
-  return Actor::~Actor(v);
+  return Actor_dtor(v);
 }
 
 /* ============================================================================
@@ -18175,7 +18175,7 @@ void nullsub_729()
 /* Recovered from main.idb: VA 0x60194B20  RVA 0x00194B20  size 0x4 */
 Actor *__fastcall Actor_beforeCreate_00194B20(Actor *v)
 {
-  return Actor::~Actor(v);
+  return Actor_dtor(v);
 }
 
 /* ============================================================================
@@ -19505,7 +19505,7 @@ void nullsub_766()
 /* Recovered from main.idb: VA 0x601AC294  RVA 0x001AC294  size 0x4 */
 Actor *__fastcall Actor_beforeCreate_001AC294(Actor *v)
 {
-  return Actor::~Actor(v);
+  return Actor_dtor(v);
 }
 
 /* ============================================================================
@@ -20374,7 +20374,7 @@ void nullsub_813()
 /* Recovered from main.idb: VA 0x601DFB44  RVA 0x001DFB44  size 0x4 */
 Actor *__fastcall Actor_beforeCreate_001DFB44(Actor *v)
 {
-  return Actor::~Actor(v);
+  return Actor_dtor(v);
 }
 
 /* ============================================================================
@@ -21104,7 +21104,7 @@ void nullsub_850()
 /* Recovered from main.idb: VA 0x601EFB18  RVA 0x001EFB18  size 0x4 */
 Actor *__fastcall Actor_beforeCreate_001EFB18(Actor *v)
 {
-  return Actor::~Actor(v);
+  return Actor_dtor(v);
 }
 
 /* ============================================================================
@@ -21694,7 +21694,7 @@ void nullsub_2980()
 /* Recovered from main.idb: VA 0x601F36D8  RVA 0x001F36D8  size 0x4 */
 Actor *__fastcall Actor_beforeCreate_001F36D8(Actor *v)
 {
-  return Actor::~Actor(v);
+  return Actor_dtor(v);
 }
 
 /* ============================================================================
@@ -22573,7 +22573,7 @@ void nullsub_931()
 /* Recovered from main.idb: VA 0x60201B70  RVA 0x00201B70  size 0x4 */
 Actor *__fastcall Actor_beforeCreate_00201B70(Actor *v)
 {
-  return Actor::~Actor(v);
+  return Actor_dtor(v);
 }
 
 /* ============================================================================
@@ -23013,7 +23013,7 @@ void nullsub_944()
 /* Recovered from main.idb: VA 0x60208228  RVA 0x00208228  size 0x4 */
 Actor *__fastcall Actor_beforeCreate_00208228(Actor *v)
 {
-  return Actor::~Actor(v);
+  return Actor_dtor(v);
 }
 
 /* ============================================================================
@@ -24093,7 +24093,7 @@ void __fastcall operator_delete_00217EB8(void *a1)
 /* Recovered from main.idb: VA 0x60217FC0  RVA 0x00217FC0  size 0x4 */
 Actor *__fastcall Actor_beforeCreate_00217FC0(Actor *v)
 {
-  return Actor::~Actor(v);
+  return Actor_dtor(v);
 }
 
 /* ============================================================================
@@ -81470,7 +81470,7 @@ int __fastcall ChallengeResultScene_ctor(int a1, int a2)
   StateMgr_ctor((StateMgr *)(a1 + 472), (StateExecuter *)(a1 + 456), (StateBase *)&dword_60CC58C4);
   *(_DWORD *)(a1 + 452) = &off_60C2678C;
   sead_IDisposer_ctor((sead_IDisposer *)(a1 + 488));
-  *(_DWORD *)(a1 + 504) = &`vtable for'sead_SafeStringBase<char>;
+  *(_DWORD *)(a1 + 504) = &`vtable for'sead_SafeStringBase_char;
   *(_DWORD *)(a1 + 508) = &byte_60ABC94D;
   *(_DWORD *)(a1 + 488) = off_60C5E9A4;
   *(_DWORD *)(a1 + 512) = 0;
@@ -81481,7 +81481,7 @@ int __fastcall ChallengeResultScene_ctor(int a1, int a2)
   *(_DWORD *)(a1 + 536) = 0;
   *(_DWORD *)(a1 + 524) = off_60BD8394;
   sead_IDisposer_ctor((sead_IDisposer *)(a1 + 556));
-  *(_DWORD *)(a1 + 572) = &`vtable for'sead_SafeStringBase<char>;
+  *(_DWORD *)(a1 + 572) = &`vtable for'sead_SafeStringBase_char;
   *(_DWORD *)(a1 + 576) = &byte_60ABC94D;
   *(_DWORD *)(a1 + 556) = off_60C5E9A4;
   *(_DWORD *)(a1 + 580) = 0;
@@ -81492,7 +81492,7 @@ int __fastcall ChallengeResultScene_ctor(int a1, int a2)
   *(_DWORD *)(a1 + 604) = 0;
   *(_DWORD *)(a1 + 592) = off_60BD8394;
   sead_IDisposer_ctor((sead_IDisposer *)(a1 + 624));
-  *(_DWORD *)(a1 + 640) = &`vtable for'sead_SafeStringBase<char>;
+  *(_DWORD *)(a1 + 640) = &`vtable for'sead_SafeStringBase_char;
   *(_DWORD *)(a1 + 644) = &byte_60ABC94D;
   *(_DWORD *)(a1 + 624) = off_60C5E9A4;
   *(_DWORD *)(a1 + 648) = 0;
@@ -81940,7 +81940,7 @@ sead_IDisposer *__fastcall DarkCloudDemoScene_ctor(sead_IDisposer *a1, int a2)
   CalculateTask3_ctor((int)a1, a2, (int)"DarkCloudDemoScene");
   a1->vtable = (int)off_60C26AE0;
   sead_IDisposer_ctor(a1 + 12);
-  a1[13].vtable = (int)&`vtable for'sead_SafeStringBase<char>;
+  a1[13].vtable = (int)&`vtable for'sead_SafeStringBase_char;
   a1[13].containingHeap = (int)&byte_60ABC94D;
   a1[12].vtable = (int)off_60C5E9A4;
   a1[13].field_8 = 0;
@@ -82202,7 +82202,7 @@ int __fastcall GameOverScene_ctor(int a1, int a2)
   StateMgr_ctor((StateMgr *)(a1 + 212), (StateExecuter *)(a1 + 196), (StateBase *)&dword_60CC5B5C);
   *(_DWORD *)(a1 + 192) = &off_60C26E24;
   sead_IDisposer_ctor((sead_IDisposer *)(a1 + 228));
-  *(_DWORD *)(a1 + 244) = &`vtable for'sead_SafeStringBase<char>;
+  *(_DWORD *)(a1 + 244) = &`vtable for'sead_SafeStringBase_char;
   *(_DWORD *)(a1 + 248) = &byte_60ABC94D;
   *(_DWORD *)(a1 + 228) = off_60C5E9A4;
   *(_DWORD *)(a1 + 252) = 0;

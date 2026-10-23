@@ -84,10 +84,10 @@ int __fastcall sub_6094428C(int result, int a2)
   v56 = result;
   while ( 1 )
   {
-    v58[0] = &`vtable for'sead::SafeStringBase<char>;
+    v58[0] = &`vtable for'sead::SafeStringBase_char;
     v58[1] = "name";
     sub_609A5C60(&v59, v2, v58);
-    v63 = (int (***)())&`vtable for'sead::SafeStringBase<char>;
+    v63 = (int (***)())&`vtable for'sead::SafeStringBase_char;
     v64 = off_60C5CB34;
     ((void (__fastcall *)(int (***)()))v59[3])(&v59);
     ((void (__fastcall *)(int (***)()))v59[3])(&v59);
@@ -108,11 +108,11 @@ int __fastcall sub_6094428C(int result, int a2)
       goto LABEL_22;
     }
 LABEL_13:
-    v69[0] = &`vtable for'sead::SafeStringBase<char>;
+    v69[0] = &`vtable for'sead::SafeStringBase_char;
     v69[1] = "type";
     sub_609A5C60(&v70, v2, v69);
     v8 = (*(int (__fastcall **)(int))(*(_DWORD *)v56 + 28))(v56);
-    v67 = &`vtable for'sead::SafeStringBase<char>;
+    v67 = &`vtable for'sead::SafeStringBase_char;
     v68 = off_60C5E518[v8 - 9];
     ((void (__fastcall *)(int (***)()))v70[3])(&v70);
     ((void (__fastcall *)(int (***)()))v70[3])(&v70);
@@ -144,8 +144,8 @@ LABEL_26:
   v12 = *(char **)(v2 + 96);
   v63 = &v70;
   v64 = 0;
-  v70 = &`vtable for'sead::SafeStringBase<char>;
-  v65 = &`vtable for'sead::SafeStringBase<char>;
+  v70 = &`vtable for'sead::SafeStringBase_char;
+  v65 = &`vtable for'sead::SafeStringBase_char;
   v71 = v12;
   v66 = " \r\n\t";
   while ( v12[v11] )
@@ -171,7 +171,7 @@ LABEL_26:
   v60 = (char *)&v62;
   v59 = &BufferedSafeStringBase_char_vtable_probably;
   v61 = 256;
-  sead::BufferedSafeStringBase<char>::assureTerminationImpl_((int)&v59);
+  sead::BufferedSafeStringBase_char::assureTerminationImpl_((int)&v59);
   v14 = (char *)(v11 + 1);
   *v60 = 0;
   v15 = v63;

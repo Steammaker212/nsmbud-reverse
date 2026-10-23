@@ -100,14 +100,14 @@ int __fastcall sub_60045DB4(int a1, int a2, int a3, int a4, float a5, float a6)
     case 0:
       if ( *(_BYTE *)(a1 + 11796) )
       {
-        v102 = &`vtable for'sead::SafeStringBase<char>;
+        v102 = &`vtable for'sead::SafeStringBase_char;
         v10 = "jc_wait";
         goto LABEL_181;
       }
-      v102 = &`vtable for'sead::SafeStringBase<char>;
+      v102 = &`vtable for'sead::SafeStringBase_char;
       v103 = "jcb_wait";
       ((void (__fastcall *)(int, _DWORD, int (***)(), int, float, float))sub_60047464)(a1, 0, &v102, a3, a5, a6);
-      v102 = &`vtable for'sead::SafeStringBase<char>;
+      v102 = &`vtable for'sead::SafeStringBase_char;
       v103 = "jcb_demo_battleA";
       ((void (__fastcall *)(int, int, int (***)(), int, float, float))sub_60047464)(a1, 1, &v102, a3, 0.0, 0.0);
       v96 = -2;
@@ -123,10 +123,10 @@ int __fastcall sub_60045DB4(int a1, int a2, int a3, int a4, float a5, float a6)
       while ( v96 != 15 );
       return result;
     case 1:
-      v102 = &`vtable for'sead::SafeStringBase<char>;
+      v102 = &`vtable for'sead::SafeStringBase_char;
       v103 = "jcb_demo_battleA";
       ((void (__fastcall *)(int, _DWORD, int (***)(), int, float, float))sub_60047464)(a1, 0, &v102, a3, a5, a6);
-      v102 = &`vtable for'sead::SafeStringBase<char>;
+      v102 = &`vtable for'sead::SafeStringBase_char;
       v103 = "jcb_demo_battleA";
       ((void (__fastcall *)(int, int, int (***)(), int, float, float))sub_60047464)(a1, 1, &v102, a3, a5, a6);
       v15 = -2;
@@ -144,10 +144,10 @@ int __fastcall sub_60045DB4(int a1, int a2, int a3, int a4, float a5, float a6)
     case 2:
       if ( a4 == 1 )
         sub_6040EB10(a1 + 11712);
-      v102 = &`vtable for'sead::SafeStringBase<char>;
+      v102 = &`vtable for'sead::SafeStringBase_char;
       v103 = "jcb_wait";
       ((void (__fastcall *)(int, _DWORD, int (***)(), int, float, float))sub_60047464)(a1, 0, &v102, a3, a5, a6);
-      v102 = &`vtable for'sead::SafeStringBase<char>;
+      v102 = &`vtable for'sead::SafeStringBase_char;
       v103 = "jcb_wait";
       ((void (__fastcall *)(int, int, int (***)(), int, float, float))sub_60047464)(a1, 1, &v102, a3, a5, a6);
       v18 = -2;
@@ -164,10 +164,10 @@ int __fastcall sub_60045DB4(int a1, int a2, int a3, int a4, float a5, float a6)
       return result;
     case 3:
       sub_6040EB10(a1 + 11712);
-      v102 = &`vtable for'sead::SafeStringBase<char>;
+      v102 = &`vtable for'sead::SafeStringBase_char;
       v103 = "jcb_jab";
       ((void (__fastcall *)(int, _DWORD, int (***)(), int, float, float))sub_60047464)(a1, 0, &v102, a3, a5, a6);
-      v102 = &`vtable for'sead::SafeStringBase<char>;
+      v102 = &`vtable for'sead::SafeStringBase_char;
       v103 = "jcb_jab";
       ((void (__fastcall *)(int, int, int (***)(), int, float, float))sub_60047464)(a1, 1, &v102, a3, a5, a6);
       v21 = -2;
@@ -185,15 +185,15 @@ int __fastcall sub_60045DB4(int a1, int a2, int a3, int a4, float a5, float a6)
     case 4:
       if ( *(_BYTE *)(a1 + 11796) )
       {
-        v102 = &`vtable for'sead::SafeStringBase<char>;
+        v102 = &`vtable for'sead::SafeStringBase_char;
         v10 = "jc_delight";
         goto LABEL_181;
       }
       sub_6040EB10(a1 + 11712);
-      v102 = &`vtable for'sead::SafeStringBase<char>;
+      v102 = &`vtable for'sead::SafeStringBase_char;
       v103 = "jcb_delight";
       ((void (__fastcall *)(int, _DWORD, int (***)(), int, float, float))sub_60047464)(a1, 0, &v102, a3, a5, a6);
-      v102 = &`vtable for'sead::SafeStringBase<char>;
+      v102 = &`vtable for'sead::SafeStringBase_char;
       v103 = "jcb_delight";
       ((void (__fastcall *)(int, int, int (***)(), int, float, float))sub_60047464)(a1, 1, &v102, a3, a5, a6);
       v99 = -2;
@@ -210,10 +210,10 @@ int __fastcall sub_60045DB4(int a1, int a2, int a3, int a4, float a5, float a6)
       return result;
     case 5:
       sub_6040EB10(a1 + 11712);
-      v102 = &`vtable for'sead::SafeStringBase<char>;
+      v102 = &`vtable for'sead::SafeStringBase_char;
       v103 = "jcb_straight_move_back";
       ((void (__fastcall *)(int, _DWORD, int (***)(), int, float, float))sub_60047464)(a1, 0, &v102, a3, a5, a6);
-      v102 = &`vtable for'sead::SafeStringBase<char>;
+      v102 = &`vtable for'sead::SafeStringBase_char;
       v103 = "jcb_straight_move_back";
       ((void (__fastcall *)(int, int, int (***)(), int, float, float))sub_60047464)(a1, 1, &v102, a3, a5, a6);
       v24 = -2;
@@ -230,10 +230,10 @@ int __fastcall sub_60045DB4(int a1, int a2, int a3, int a4, float a5, float a6)
       return result;
     case 6:
       sub_6040EB10(a1 + 11712);
-      v102 = &`vtable for'sead::SafeStringBase<char>;
+      v102 = &`vtable for'sead::SafeStringBase_char;
       v103 = "jcb_straight_move_down";
       ((void (__fastcall *)(int, _DWORD, int (***)(), int, float, float))sub_60047464)(a1, 0, &v102, a3, a5, a6);
-      v102 = &`vtable for'sead::SafeStringBase<char>;
+      v102 = &`vtable for'sead::SafeStringBase_char;
       v103 = "jcb_straight_move_down";
       ((void (__fastcall *)(int, int, int (***)(), int, float, float))sub_60047464)(a1, 1, &v102, a3, a5, a6);
       v27 = -2;
@@ -249,10 +249,10 @@ int __fastcall sub_60045DB4(int a1, int a2, int a3, int a4, float a5, float a6)
       while ( v27 != 15 );
       return result;
     case 7:
-      v102 = &`vtable for'sead::SafeStringBase<char>;
+      v102 = &`vtable for'sead::SafeStringBase_char;
       v103 = "jcb_straight_w_st";
       ((void (__fastcall *)(int, _DWORD, int (***)(), int, float, float))sub_60047464)(a1, 0, &v102, a3, a5, a6);
-      v102 = &`vtable for'sead::SafeStringBase<char>;
+      v102 = &`vtable for'sead::SafeStringBase_char;
       v103 = "jcb_straight_w_st";
       ((void (__fastcall *)(int, int, int (***)(), int, float, float))sub_60047464)(a1, 1, &v102, a3, a5, a6);
       v30 = -2;
@@ -269,10 +269,10 @@ int __fastcall sub_60045DB4(int a1, int a2, int a3, int a4, float a5, float a6)
       return result;
     case 8:
       sub_6040EB10(a1 + 11712);
-      v102 = &`vtable for'sead::SafeStringBase<char>;
+      v102 = &`vtable for'sead::SafeStringBase_char;
       v103 = "jcb_straight_w";
       ((void (__fastcall *)(int, _DWORD, int (***)(), int, float, float))sub_60047464)(a1, 0, &v102, a3, a5, a6);
-      v102 = &`vtable for'sead::SafeStringBase<char>;
+      v102 = &`vtable for'sead::SafeStringBase_char;
       v103 = "jcb_straight_w";
       ((void (__fastcall *)(int, int, int (***)(), int, float, float))sub_60047464)(a1, 1, &v102, a3, a5, a6);
       v33 = -2;
@@ -289,10 +289,10 @@ int __fastcall sub_60045DB4(int a1, int a2, int a3, int a4, float a5, float a6)
       return result;
     case 9:
       sub_6040EB10(a1 + 11712);
-      v102 = &`vtable for'sead::SafeStringBase<char>;
+      v102 = &`vtable for'sead::SafeStringBase_char;
       v103 = "jcb_wait";
       ((void (__fastcall *)(int, _DWORD, int (***)(), int, float, float))sub_60047464)(a1, 0, &v102, a3, a5, a6);
-      v102 = &`vtable for'sead::SafeStringBase<char>;
+      v102 = &`vtable for'sead::SafeStringBase_char;
       v103 = "jcb_sphere_st";
       ((void (__fastcall *)(int, int, int (***)(), int, float, float))sub_60047464)(a1, 1, &v102, a3, a5, a6);
       v36 = -2;
@@ -309,10 +309,10 @@ int __fastcall sub_60045DB4(int a1, int a2, int a3, int a4, float a5, float a6)
       return result;
     case 10:
       sub_6040EB10(a1 + 11712);
-      v102 = &`vtable for'sead::SafeStringBase<char>;
+      v102 = &`vtable for'sead::SafeStringBase_char;
       v103 = "jcb_wait";
       ((void (__fastcall *)(int, _DWORD, int (***)(), int, float, float))sub_60047464)(a1, 0, &v102, a3, a5, a6);
-      v102 = &`vtable for'sead::SafeStringBase<char>;
+      v102 = &`vtable for'sead::SafeStringBase_char;
       v103 = "jcb_sphere_ed";
       ((void (__fastcall *)(int, int, int (***)(), int, float, float))sub_60047464)(a1, 1, &v102, a3, a5, a6);
       v39 = -2;
@@ -328,10 +328,10 @@ int __fastcall sub_60045DB4(int a1, int a2, int a3, int a4, float a5, float a6)
       while ( v39 != 15 );
       return result;
     case 11:
-      v102 = &`vtable for'sead::SafeStringBase<char>;
+      v102 = &`vtable for'sead::SafeStringBase_char;
       v103 = "jcb_wait";
       ((void (__fastcall *)(int, _DWORD, int (***)(), int, float, float))sub_60047464)(a1, 0, &v102, 1, a5, a6);
-      v102 = &`vtable for'sead::SafeStringBase<char>;
+      v102 = &`vtable for'sead::SafeStringBase_char;
       v103 = "jcb_attack_st";
       ((void (__fastcall *)(int, int, int (***)(), int, float, float))sub_60047464)(a1, 1, &v102, a3, a5, a6);
       v42 = -2;
@@ -348,10 +348,10 @@ int __fastcall sub_60045DB4(int a1, int a2, int a3, int a4, float a5, float a6)
       return result;
     case 12:
       sub_6040EB10(a1 + 11712);
-      v102 = &`vtable for'sead::SafeStringBase<char>;
+      v102 = &`vtable for'sead::SafeStringBase_char;
       v103 = "jcb_wait";
       ((void (__fastcall *)(int, _DWORD, int (***)(), int, float, float))sub_60047464)(a1, 0, &v102, 1, a5, a6);
-      v102 = &`vtable for'sead::SafeStringBase<char>;
+      v102 = &`vtable for'sead::SafeStringBase_char;
       v103 = "jcb_attack_st_wait";
       ((void (__fastcall *)(int, int, int (***)(), int, float, float))sub_60047464)(a1, 1, &v102, a3, a5, a6);
       v45 = -2;
@@ -367,10 +367,10 @@ int __fastcall sub_60045DB4(int a1, int a2, int a3, int a4, float a5, float a6)
       while ( v45 != 15 );
       return result;
     case 13:
-      v102 = &`vtable for'sead::SafeStringBase<char>;
+      v102 = &`vtable for'sead::SafeStringBase_char;
       v103 = "jcb_wait";
       ((void (__fastcall *)(int, _DWORD, int (***)(), int, float, float))sub_60047464)(a1, 0, &v102, 1, a5, a6);
-      v102 = &`vtable for'sead::SafeStringBase<char>;
+      v102 = &`vtable for'sead::SafeStringBase_char;
       v103 = "jcb_attack_st_r";
       ((void (__fastcall *)(int, int, int (***)(), int, float, float))sub_60047464)(a1, 1, &v102, a3, a5, a6);
       v48 = -2;
@@ -387,10 +387,10 @@ int __fastcall sub_60045DB4(int a1, int a2, int a3, int a4, float a5, float a6)
       return result;
     case 14:
       sub_6040EB10(a1 + 11712);
-      v102 = &`vtable for'sead::SafeStringBase<char>;
+      v102 = &`vtable for'sead::SafeStringBase_char;
       v103 = "jcb_wait";
       ((void (__fastcall *)(int, _DWORD, int (***)(), int, float, float))sub_60047464)(a1, 0, &v102, 1, a5, a6);
-      v102 = &`vtable for'sead::SafeStringBase<char>;
+      v102 = &`vtable for'sead::SafeStringBase_char;
       v103 = "jcb_attack_st_r_wait";
       ((void (__fastcall *)(int, int, int (***)(), int, float, float))sub_60047464)(a1, 1, &v102, a3, a5, a6);
       v51 = -2;
@@ -407,10 +407,10 @@ int __fastcall sub_60045DB4(int a1, int a2, int a3, int a4, float a5, float a6)
       return result;
     case 15:
       sub_6040EB10(a1 + 11712);
-      v102 = &`vtable for'sead::SafeStringBase<char>;
+      v102 = &`vtable for'sead::SafeStringBase_char;
       v103 = "jcb_attack_ed_r";
       ((void (__fastcall *)(int, _DWORD, int (***)(), int, float, float))sub_60047464)(a1, 0, &v102, a3, a5, a6);
-      v102 = &`vtable for'sead::SafeStringBase<char>;
+      v102 = &`vtable for'sead::SafeStringBase_char;
       v103 = "jcb_attack_ed_r";
       ((void (__fastcall *)(int, int, int (***)(), int, float, float))sub_60047464)(a1, 1, &v102, a3, a5, a6);
       v54 = -2;
@@ -427,10 +427,10 @@ int __fastcall sub_60045DB4(int a1, int a2, int a3, int a4, float a5, float a6)
       return result;
     case 16:
       sub_6040EB10(a1 + 11712);
-      v102 = &`vtable for'sead::SafeStringBase<char>;
+      v102 = &`vtable for'sead::SafeStringBase_char;
       v103 = "jcb_attack_ed_r_wait";
       ((void (__fastcall *)(int, _DWORD, int (***)(), int, float, float))sub_60047464)(a1, 0, &v102, a3, a5, a6);
-      v102 = &`vtable for'sead::SafeStringBase<char>;
+      v102 = &`vtable for'sead::SafeStringBase_char;
       v103 = "jcb_attack_ed_r_wait";
       ((void (__fastcall *)(int, int, int (***)(), int, float, float))sub_60047464)(a1, 1, &v102, a3, a5, a6);
       v57 = -2;
@@ -446,10 +446,10 @@ int __fastcall sub_60045DB4(int a1, int a2, int a3, int a4, float a5, float a6)
       while ( v57 != 15 );
       return result;
     case 17:
-      v102 = &`vtable for'sead::SafeStringBase<char>;
+      v102 = &`vtable for'sead::SafeStringBase_char;
       v103 = "jcb_attack_return_r";
       ((void (__fastcall *)(int, _DWORD, int (***)(), int, float, float))sub_60047464)(a1, 0, &v102, a3, a5, a6);
-      v102 = &`vtable for'sead::SafeStringBase<char>;
+      v102 = &`vtable for'sead::SafeStringBase_char;
       v103 = "jcb_attack_return_r";
       ((void (__fastcall *)(int, int, int (***)(), int, float, float))sub_60047464)(a1, 1, &v102, a3, a5, a6);
       v60 = -2;
@@ -466,10 +466,10 @@ int __fastcall sub_60045DB4(int a1, int a2, int a3, int a4, float a5, float a6)
       return result;
     case 18:
       sub_6040EB10(a1 + 11712);
-      v102 = &`vtable for'sead::SafeStringBase<char>;
+      v102 = &`vtable for'sead::SafeStringBase_char;
       v103 = "jcb_attack_off_r";
       ((void (__fastcall *)(int, _DWORD, int (***)(), int, float, float))sub_60047464)(a1, 0, &v102, a3, a5, a6);
-      v102 = &`vtable for'sead::SafeStringBase<char>;
+      v102 = &`vtable for'sead::SafeStringBase_char;
       v103 = "jcb_attack_off_r";
       ((void (__fastcall *)(int, int, int (***)(), int, float, float))sub_60047464)(a1, 1, &v102, a3, a5, a6);
       v63 = -2;
@@ -485,10 +485,10 @@ int __fastcall sub_60045DB4(int a1, int a2, int a3, int a4, float a5, float a6)
       while ( v63 != 15 );
       return result;
     case 19:
-      v102 = &`vtable for'sead::SafeStringBase<char>;
+      v102 = &`vtable for'sead::SafeStringBase_char;
       v103 = "jcb_wait";
       ((void (__fastcall *)(int, _DWORD, int (***)(), int, float, float))sub_60047464)(a1, 0, &v102, 1, a5, a6);
-      v102 = &`vtable for'sead::SafeStringBase<char>;
+      v102 = &`vtable for'sead::SafeStringBase_char;
       v103 = "jcb_attack_st_l";
       ((void (__fastcall *)(int, int, int (***)(), int, float, float))sub_60047464)(a1, 1, &v102, a3, a5, a6);
       v66 = -2;
@@ -505,10 +505,10 @@ int __fastcall sub_60045DB4(int a1, int a2, int a3, int a4, float a5, float a6)
       return result;
     case 20:
       sub_6040EB10(a1 + 11712);
-      v102 = &`vtable for'sead::SafeStringBase<char>;
+      v102 = &`vtable for'sead::SafeStringBase_char;
       v103 = "jcb_wait";
       ((void (__fastcall *)(int, _DWORD, int (***)(), int, float, float))sub_60047464)(a1, 0, &v102, 1, a5, a6);
-      v102 = &`vtable for'sead::SafeStringBase<char>;
+      v102 = &`vtable for'sead::SafeStringBase_char;
       v103 = "jcb_attack_st_l_wait";
       ((void (__fastcall *)(int, int, int (***)(), int, float, float))sub_60047464)(a1, 1, &v102, a3, a5, a6);
       v69 = -2;
@@ -525,10 +525,10 @@ int __fastcall sub_60045DB4(int a1, int a2, int a3, int a4, float a5, float a6)
       return result;
     case 21:
       sub_6040EB10(a1 + 11712);
-      v102 = &`vtable for'sead::SafeStringBase<char>;
+      v102 = &`vtable for'sead::SafeStringBase_char;
       v103 = "jcb_attack_ed_l";
       ((void (__fastcall *)(int, _DWORD, int (***)(), int, float, float))sub_60047464)(a1, 0, &v102, a3, a5, a6);
-      v102 = &`vtable for'sead::SafeStringBase<char>;
+      v102 = &`vtable for'sead::SafeStringBase_char;
       v103 = "jcb_attack_ed_l";
       ((void (__fastcall *)(int, int, int (***)(), int, float, float))sub_60047464)(a1, 1, &v102, a3, a5, a6);
       v72 = -2;
@@ -545,10 +545,10 @@ int __fastcall sub_60045DB4(int a1, int a2, int a3, int a4, float a5, float a6)
       return result;
     case 22:
       sub_6040EB10(a1 + 11712);
-      v102 = &`vtable for'sead::SafeStringBase<char>;
+      v102 = &`vtable for'sead::SafeStringBase_char;
       v103 = "jcb_attack_ed_l_wait";
       ((void (__fastcall *)(int, _DWORD, int (***)(), int, float, float))sub_60047464)(a1, 0, &v102, a3, a5, a6);
-      v102 = &`vtable for'sead::SafeStringBase<char>;
+      v102 = &`vtable for'sead::SafeStringBase_char;
       v103 = "jcb_attack_ed_l_wait";
       ((void (__fastcall *)(int, int, int (***)(), int, float, float))sub_60047464)(a1, 1, &v102, a3, a5, a6);
       v75 = -2;
@@ -564,10 +564,10 @@ int __fastcall sub_60045DB4(int a1, int a2, int a3, int a4, float a5, float a6)
       while ( v75 != 15 );
       return result;
     case 23:
-      v102 = &`vtable for'sead::SafeStringBase<char>;
+      v102 = &`vtable for'sead::SafeStringBase_char;
       v103 = "jcb_attack_return_l";
       ((void (__fastcall *)(int, _DWORD, int (***)(), int, float, float))sub_60047464)(a1, 0, &v102, a3, a5, a6);
-      v102 = &`vtable for'sead::SafeStringBase<char>;
+      v102 = &`vtable for'sead::SafeStringBase_char;
       v103 = "jcb_attack_return_l";
       ((void (__fastcall *)(int, int, int (***)(), int, float, float))sub_60047464)(a1, 1, &v102, a3, a5, a6);
       v78 = -2;
@@ -584,10 +584,10 @@ int __fastcall sub_60045DB4(int a1, int a2, int a3, int a4, float a5, float a6)
       return result;
     case 24:
       sub_6040EB10(a1 + 11712);
-      v102 = &`vtable for'sead::SafeStringBase<char>;
+      v102 = &`vtable for'sead::SafeStringBase_char;
       v103 = "jcb_attack_off_l";
       ((void (__fastcall *)(int, _DWORD, int (***)(), int, float, float))sub_60047464)(a1, 0, &v102, a3, a5, a6);
-      v102 = &`vtable for'sead::SafeStringBase<char>;
+      v102 = &`vtable for'sead::SafeStringBase_char;
       v103 = "jcb_attack_off_l";
       ((void (__fastcall *)(int, int, int (***)(), int, float, float))sub_60047464)(a1, 1, &v102, a3, a5, a6);
       v81 = -2;
@@ -604,10 +604,10 @@ int __fastcall sub_60045DB4(int a1, int a2, int a3, int a4, float a5, float a6)
       return result;
     case 25:
       sub_6040EB10(a1 + 11712);
-      v102 = &`vtable for'sead::SafeStringBase<char>;
+      v102 = &`vtable for'sead::SafeStringBase_char;
       v103 = "jcb_damage_s";
       ((void (__fastcall *)(int, _DWORD, int (***)(), int, float, float))sub_60047464)(a1, 0, &v102, a3, a5, a6);
-      v102 = &`vtable for'sead::SafeStringBase<char>;
+      v102 = &`vtable for'sead::SafeStringBase_char;
       v103 = "jcb_damage_s";
       ((void (__fastcall *)(int, int, int (***)(), int, float, float))sub_60047464)(a1, 1, &v102, a3, a5, a6);
       v84 = -2;
@@ -623,10 +623,10 @@ int __fastcall sub_60045DB4(int a1, int a2, int a3, int a4, float a5, float a6)
       while ( v84 != 15 );
       return result;
     case 26:
-      v102 = &`vtable for'sead::SafeStringBase<char>;
+      v102 = &`vtable for'sead::SafeStringBase_char;
       v103 = "jcb_damage";
       ((void (__fastcall *)(int, _DWORD, int (***)(), int, float, float))sub_60047464)(a1, 0, &v102, a3, a5, a6);
-      v102 = &`vtable for'sead::SafeStringBase<char>;
+      v102 = &`vtable for'sead::SafeStringBase_char;
       v103 = "jcb_damage";
       ((void (__fastcall *)(int, int, int (***)(), int, float, float))sub_60047464)(a1, 1, &v102, a3, a5, a6);
       v87 = -2;
@@ -642,10 +642,10 @@ int __fastcall sub_60045DB4(int a1, int a2, int a3, int a4, float a5, float a6)
       while ( v87 != 15 );
       return result;
     case 27:
-      v102 = &`vtable for'sead::SafeStringBase<char>;
+      v102 = &`vtable for'sead::SafeStringBase_char;
       v103 = "jcb_rage";
       ((void (__fastcall *)(int, _DWORD, int (***)(), int, float, float))sub_60047464)(a1, 0, &v102, a3, a5, a6);
-      v102 = &`vtable for'sead::SafeStringBase<char>;
+      v102 = &`vtable for'sead::SafeStringBase_char;
       v103 = "jcb_rage";
       ((void (__fastcall *)(int, int, int (***)(), int, float, float))sub_60047464)(a1, 1, &v102, a3, a5, a6);
       v90 = -2;
@@ -661,10 +661,10 @@ int __fastcall sub_60045DB4(int a1, int a2, int a3, int a4, float a5, float a6)
       while ( v90 != 15 );
       return result;
     case 28:
-      v102 = &`vtable for'sead::SafeStringBase<char>;
+      v102 = &`vtable for'sead::SafeStringBase_char;
       v103 = "jcb_damage_up";
       ((void (__fastcall *)(int, _DWORD, int (***)(), int, float, float))sub_60047464)(a1, 0, &v102, a3, a5, a6);
-      v102 = &`vtable for'sead::SafeStringBase<char>;
+      v102 = &`vtable for'sead::SafeStringBase_char;
       v103 = "jcb_damage_up";
       ((void (__fastcall *)(int, int, int (***)(), int, float, float))sub_60047464)(a1, 1, &v102, a3, a5, a6);
       v93 = -2;
@@ -680,33 +680,33 @@ int __fastcall sub_60045DB4(int a1, int a2, int a3, int a4, float a5, float a6)
       while ( v93 != 15 );
       return result;
     case 29:
-      v102 = &`vtable for'sead::SafeStringBase<char>;
+      v102 = &`vtable for'sead::SafeStringBase_char;
       v10 = "jc_demo_W7_excite";
       goto LABEL_181;
     case 30:
-      v102 = &`vtable for'sead::SafeStringBase<char>;
+      v102 = &`vtable for'sead::SafeStringBase_char;
       v10 = "jc_demo_W7_punch";
       goto LABEL_181;
     case 31:
-      v102 = &`vtable for'sead::SafeStringBase<char>;
+      v102 = &`vtable for'sead::SafeStringBase_char;
       v10 = "jc_demo_W7_shock";
       goto LABEL_181;
     case 32:
-      v102 = &`vtable for'sead::SafeStringBase<char>;
+      v102 = &`vtable for'sead::SafeStringBase_char;
       v10 = "jc_demo_W7_shock2";
       goto LABEL_181;
     case 33:
-      v102 = &`vtable for'sead::SafeStringBase<char>;
+      v102 = &`vtable for'sead::SafeStringBase_char;
       v10 = "jc_demo_W7_panic";
 LABEL_181:
       v103 = v10;
       result = ((int (__fastcall *)(int, _DWORD, int (***)(), int, float, float))sub_60047464)(a1, 0, &v102, a3, a5, a6);
       break;
     default:
-      v102 = &`vtable for'sead::SafeStringBase<char>;
+      v102 = &`vtable for'sead::SafeStringBase_char;
       v103 = "jcb_wait";
       ((void (__fastcall *)(int, _DWORD, int (***)(), int, float, float))sub_60047464)(a1, 0, &v102, a3, a5, a6);
-      v102 = &`vtable for'sead::SafeStringBase<char>;
+      v102 = &`vtable for'sead::SafeStringBase_char;
       v103 = "jcb_wait";
       ((void (__fastcall *)(int, int, int (***)(), int, float, float))sub_60047464)(a1, 1, &v102, a3, a5, a6);
       v11 = -2;

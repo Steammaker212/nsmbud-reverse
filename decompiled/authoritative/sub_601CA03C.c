@@ -367,7 +367,7 @@ LABEL_152:
         }
         if ( sub_601916F4(v18) == 1 )
         {
-          LODWORD(v101) = &`vtable for'sead::SafeStringBase<char>;
+          LODWORD(v101) = &`vtable for'sead::SafeStringBase_char;
           HIDWORD(v101) = "F001";
           v37 = (_DWORD *)sub_601E03D4(7, 1, &v101);
           a1[20] = v37[18];

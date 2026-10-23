@@ -146,10 +146,10 @@ int __fastcall sub_60178CF0(int a1)
   }
   ResArchiveById = (void *)Profile::getResArchiveById(*(Profile **)(a1 + 12), 0);
   *(_DWORD *)(a1 + 280) = ResArchiveById;
-  identifier.vtable = &`vtable for'sead::SafeStringBase<char>;
+  identifier.vtable = &`vtable for'sead::SafeStringBase_char;
   identifier.cstr = "cobCourse";
   Model = (void *)Resource_getModel(ResArchiveById, &identifier, 6, 1, 0, 1, 0, 0, 1, 0);
-  v9 = (ModelWrapper *)operator new(0x30u, 0, 4);
+  v9 = (ModelWrapper *)__operator_new_al(0x30u, 0, 4);
   v10 = ModelWrapper_ctor(v9, Model, 1, 0, 1, 0, 0);
   ModelWrapper_setup(v10, (int)ResArchiveById, 0, 0);
   *(_DWORD *)(a1 + 268) = v9;
@@ -157,19 +157,19 @@ int __fastcall sub_60178CF0(int a1)
   {
     v11 = (void *)Profile::getResArchiveById(*(Profile **)(a1 + 12), 2u);
     *(_DWORD *)(a1 + 288) = v11;
-    identifier.vtable = &`vtable for'sead::SafeStringBase<char>;
+    identifier.vtable = &`vtable for'sead::SafeStringBase_char;
     identifier.cstr = "cobStarCoin";
     v12 = (void *)Resource_getModel(v11, &identifier, 6, 1, 0, 1, 0, 0, 1, 0);
-    v13 = (ModelWrapper *)operator new(0x30u, 0, 4);
+    v13 = (ModelWrapper *)__operator_new_al(0x30u, 0, 4);
     v14 = ModelWrapper_ctor(v13, v12, 1, 0, 1, 0, 0);
     ModelWrapper_setup(v14, (int)v11, 0, 0);
     *(_DWORD *)(a1 + 276) = v13;
     v15 = (void *)Profile::getResArchiveById(*(Profile **)(a1 + 12), 1u);
     *(_DWORD *)(a1 + 284) = v15;
-    identifier.vtable = &`vtable for'sead::SafeStringBase<char>;
+    identifier.vtable = &`vtable for'sead::SafeStringBase_char;
     identifier.cstr = "cobRing";
     v16 = (void *)Resource_getModel(v15, &identifier, 6, 1, 0, 1, 0, 0, 1, 0);
-    v17 = (ModelWrapper *)operator new(0x30u, 0, 4);
+    v17 = (ModelWrapper *)__operator_new_al(0x30u, 0, 4);
     v18 = ModelWrapper_ctor(v17, v16, 1, 0, 1, 0, 0);
     ModelWrapper_setup(v18, (int)v15, 0, 0);
     *(_DWORD *)(a1 + 272) = v17;
@@ -183,7 +183,7 @@ LABEL_37:
     *(_DWORD *)(**(_DWORD **)(a1 + 268) + 36) = 2;
     goto LABEL_38;
   }
-  identifier.vtable = &`vtable for'sead::SafeStringBase<char>;
+  identifier.vtable = &`vtable for'sead::SafeStringBase_char;
   identifier.cstr = "W5A0";
   (*(void (__fastcall **)(int))(*(_DWORD *)(a1 + 332) + 12))(a1 + 332);
   (*(void (__fastcall **)(int))(*(_DWORD *)(a1 + 332) + 12))(a1 + 332);
@@ -201,7 +201,7 @@ LABEL_37:
     if ( !*(_BYTE *)(v21 + i) )
       goto LABEL_36;
   }
-  v112 = &`vtable for'sead::SafeStringBase<char>;
+  v112 = &`vtable for'sead::SafeStringBase_char;
   v113 = "W7A0";
   (*(void (__fastcall **)(int))(*(_DWORD *)(a1 + 332) + 12))(a1 + 332);
   (*(void (__fastcall **)(int))(*(_DWORD *)(a1 + 332) + 12))(a1 + 332);
@@ -212,10 +212,10 @@ LABEL_37:
 LABEL_36:
     v26 = (void *)Profile::getResArchiveById(*(Profile **)(a1 + 12), 1u);
     *(_DWORD *)(a1 + 284) = v26;
-    identifier.vtable = &`vtable for'sead::SafeStringBase<char>;
+    identifier.vtable = &`vtable for'sead::SafeStringBase_char;
     identifier.cstr = "cobRing";
     v27 = (void *)Resource_getModel(v26, &identifier, 6, 1, 0, 1, 0, 0, 1, 0);
-    v28 = (ModelWrapper *)operator new(0x30u, 0, 4);
+    v28 = (ModelWrapper *)__operator_new_al(0x30u, 0, 4);
     v29 = ModelWrapper_ctor(v28, v27, 1, 0, 1, 0, 0);
     ModelWrapper_setup(v29, (int)v26, 0, 0);
     *(_DWORD *)(a1 + 272) = v28;
@@ -260,7 +260,7 @@ LABEL_38:
     goto LABEL_96;
   }
   v111 = v33;
-  identifier.vtable = &`vtable for'sead::SafeStringBase<char>;
+  identifier.vtable = &`vtable for'sead::SafeStringBase_char;
   identifier.cstr = "W6C";
   (*(void (__fastcall **)(int))(*(_DWORD *)(a1 + 332) + 12))(a1 + 332);
   (*(void (__fastcall **)(int))(*(_DWORD *)(a1 + 332) + 12))(a1 + 332);
@@ -272,7 +272,7 @@ LABEL_38:
      || v35[1] == *((unsigned __int8 *)identifier.cstr + 1)
      && (!v35[1] || v35[2] == *((unsigned __int8 *)identifier.cstr + 2))) )
   {
-    identifier.vtable = &`vtable for'sead::SafeStringBase<char>;
+    identifier.vtable = &`vtable for'sead::SafeStringBase_char;
     identifier.cstr = "W6C0";
     sub_6022C144(dword_60C8D864, &identifier);
     v37 = sub_6019A628(v31, 22);
@@ -306,7 +306,7 @@ LABEL_38:
     }
     goto LABEL_96;
   }
-  identifier.vtable = &`vtable for'sead::SafeStringBase<char>;
+  identifier.vtable = &`vtable for'sead::SafeStringBase_char;
   identifier.cstr = "W1X0";
   (*(void (__fastcall **)(int))(*(_DWORD *)(a1 + 332) + 12))(a1 + 332);
   (*(void (__fastcall **)(int))(*(_DWORD *)(a1 + 332) + 12))(a1 + 332);
@@ -337,7 +337,7 @@ LABEL_66:
     if ( !*(_BYTE *)(v42 + k) )
       goto LABEL_66;
   }
-  identifier.vtable = &`vtable for'sead::SafeStringBase<char>;
+  identifier.vtable = &`vtable for'sead::SafeStringBase_char;
   identifier.cstr = "W3G0";
   (*(void (__fastcall **)(int))(*(_DWORD *)(a1 + 332) + 12))(a1 + 332);
   (*(void (__fastcall **)(int))(*(_DWORD *)(a1 + 332) + 12))(a1 + 332);
@@ -361,7 +361,7 @@ LABEL_79:
         goto LABEL_79;
     }
   }
-  identifier.vtable = &`vtable for'sead::SafeStringBase<char>;
+  identifier.vtable = &`vtable for'sead::SafeStringBase_char;
   identifier.cstr = "W801";
   (*(void (__fastcall **)(int))(*(_DWORD *)(a1 + 332) + 12))(a1 + 332);
   (*(void (__fastcall **)(int))(*(_DWORD *)(a1 + 332) + 12))(a1 + 332);
@@ -550,7 +550,7 @@ LABEL_285:
     if ( v92 == "W5A0" )
     {
 LABEL_264:
-      identifier.vtable = &`vtable for'sead::SafeStringBase<char>;
+      identifier.vtable = &`vtable for'sead::SafeStringBase_char;
       identifier.cstr = "W7A0";
       v107 = sub_6022C144(dword_60C8D864, &identifier);
       v108 = sub_6019A628(6, 36);
@@ -634,7 +634,7 @@ LABEL_264:
           }
         }
       }
-      identifier.vtable = &`vtable for'sead::SafeStringBase<char>;
+      identifier.vtable = &`vtable for'sead::SafeStringBase_char;
       identifier.cstr = "W5A0";
       (*(void (__fastcall **)(int))(*(_DWORD *)(a1 + 332) + 12))(a1 + 332);
       (*(void (__fastcall **)(int))(*(_DWORD *)(a1 + 332) + 12))(a1 + 332);
@@ -713,7 +713,7 @@ LABEL_270:
 LABEL_187:
       if ( sub_603F69FC(v50 + 796, (unsigned __int8)v31, (unsigned __int8)v30) <= 1 )
       {
-        identifier.vtable = &`vtable for'sead::SafeStringBase<char>;
+        identifier.vtable = &`vtable for'sead::SafeStringBase_char;
         identifier.cstr = "W7A0";
         v83 = sub_6022C144(dword_60C8D864, &identifier);
         v84 = sub_6019A628(6, 36);
@@ -794,7 +794,7 @@ LABEL_158:
       }
     }
   }
-  identifier.vtable = &`vtable for'sead::SafeStringBase<char>;
+  identifier.vtable = &`vtable for'sead::SafeStringBase_char;
   identifier.cstr = "W5A0";
   (*(void (__fastcall **)(int))(*(_DWORD *)(a1 + 332) + 12))(a1 + 332);
   (*(void (__fastcall **)(int))(*(_DWORD *)(a1 + 332) + 12))(a1 + 332);
@@ -805,7 +805,7 @@ LABEL_158:
 LABEL_200:
     if ( sub_603F69FC(v50 + 796, (unsigned __int8)v31, (unsigned __int8)v30) <= 1 )
     {
-      identifier.vtable = &`vtable for'sead::SafeStringBase<char>;
+      identifier.vtable = &`vtable for'sead::SafeStringBase_char;
       identifier.cstr = "W7A0";
       v88 = sub_6022C144(dword_60C8D864, &identifier);
       v89 = sub_6019A628(6, 36);
@@ -872,7 +872,7 @@ LABEL_96:
   *(_DWORD *)(a1 + 308) = v39;
   *(float *)(a1 + 312) = v38;
   v51 = **(_DWORD **)(*(_DWORD *)(a1 + 268) + 28);
-  identifier.vtable = &`vtable for'sead::SafeStringBase<char>;
+  identifier.vtable = &`vtable for'sead::SafeStringBase_char;
   identifier.cstr = "cobCourse";
   v52 = LoadResource(ResourceMgrRelated_instance, &identifier);
   ShuAnim_play((_DWORD *)v51, v52, (int)&dword_60C88E90[2 * *(_DWORD *)(a1 + 308) + 3]);

@@ -15,6 +15,15 @@ import re
 import subprocess
 import sys
 
+C_KEYWORDS = {
+    "auto", "break", "case", "char", "const", "continue", "default", "do", "double",
+    "else", "enum", "extern", "float", "for", "goto", "if", "inline", "int", "long",
+    "register", "restrict", "return", "short", "signed", "sizeof", "static", "struct",
+    "switch", "typedef", "union", "unsigned", "void", "volatile", "while",
+    "operator", "new", "delete", "this", "template", "typename", "class", "namespace",
+    "and", "or", "not", "xor", "true", "false",
+}
+
 ROOT = r"C:\Users\Saif Khan\Downloads\nsmbud-reverse\decompiled"
 TU = tuple(os.path.join(ROOT, "recovered", f) for f in
            ("recovered_named.c", "recovered_missing.c", "recovered_stubs.c"))
@@ -135,7 +144,14 @@ def main(argv):
         # `typedef void nullsub_5476;` made the name a type, so every definition of it became
         # "redefinition as different kind of symbol" (143 of those), and `typedef void sead_ListNode;`
         # turned 129 accesses through it into "not a structure or union".
-        if re.match(r"(?:nullsub_|j_|sub_|_Z|loc_|off_|asc_|stru_|algn_|def_)\w*$", t):
+        # Never emit a C/C++ keyword or an expression fragment as a type. `typedef void operator;` was being
+        # generated from the text `operator new(...)`, and every such name then made `operator new` parse as
+        # `(<type>)(new)`. That single line caused 133 "unexpected type name 'operator'" errors in one unit and
+        # the same class of failure for `CurrentStateID` (which is a variable, not a type).
+        if t in C_KEYWORDS or not re.fullmatch(r"[A-Za-z_]\w*", t):
+            continue
+        # A trailing `_` is a truncated fragment of a longer name (sead_CalculateTask_), never a real type.
+        if t.endswith("_") and not t.endswith("__"):
             continue
         if t in tags or t[0].isupper():
             lines.append("typedef struct %s %s;" % (t, t))

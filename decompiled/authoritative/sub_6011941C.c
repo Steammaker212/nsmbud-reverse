@@ -103,7 +103,7 @@ int __fastcall sub_6011941C(int a1)
       if ( *(_DWORD *)(v6 + 8) > 1u )
         ++v7;
       v9 = *v7;
-      pTarget[0] = (int)&`vtable for'sead::SafeStringBase<char>;
+      pTarget[0] = (int)&`vtable for'sead::SafeStringBase_char;
       pTarget[1] = (int)"jcm_shot_ed";
       SkeletalAnim_play(v9, v8, (int)pTarget);
       v10 = *(_DWORD *)(*(_DWORD *)v5 + 12);

@@ -38,7 +38,7 @@ int __fastcall sub_60476A7C(int a1, int a2, int a3, char **a4)
   char *v42; // [sp+Ch] [bp-24h]
 
   v7 = *a4;
-  v41 = &`vtable for'sead::SafeStringBase<char>;
+  v41 = &`vtable for'sead::SafeStringBase_char;
   v42 = v7;
   result = (int)"NormalButton";
   if ( v7 != "NormalButton" )
@@ -51,9 +51,9 @@ int __fastcall sub_60476A7C(int a1, int a2, int a3, char **a4)
       if ( !v7[result] )
         return result;
     }
-    v39 = &`vtable for'sead::SafeStringBase<char>;
+    v39 = &`vtable for'sead::SafeStringBase_char;
     v40 = "DecisionButton";
-    sead::SafeStringBase<char>::assureTerminationImpl_(&v39);
+    sead::SafeStringBase_char::assureTerminationImpl_(&v39);
     result = (int)v40;
     if ( v7 != v40 )
     {
@@ -66,7 +66,7 @@ int __fastcall sub_60476A7C(int a1, int a2, int a3, char **a4)
         if ( !v42[i] )
           return result;
       }
-      v39 = &`vtable for'sead::SafeStringBase<char>;
+      v39 = &`vtable for'sead::SafeStringBase_char;
       v40 = "CursorDecisionButton";
       ((void (__fastcall *)(int (***)()))v41[3])(&v41);
       ((void (__fastcall *)(int (***)()))v41[3])(&v41);
@@ -92,7 +92,7 @@ LABEL_23:
           if ( !v42[j] )
             goto LABEL_23;
         }
-        v39 = &`vtable for'sead::SafeStringBase<char>;
+        v39 = &`vtable for'sead::SafeStringBase_char;
         v40 = "CursorNormalButton";
         ((void (__fastcall *)(int (***)()))v41[3])(&v41);
         ((void (__fastcall *)(int (***)()))v41[3])(&v41);
@@ -121,7 +121,7 @@ LABEL_33:
             if ( !v42[k] )
               goto LABEL_33;
           }
-          v39 = &`vtable for'sead::SafeStringBase<char>;
+          v39 = &`vtable for'sead::SafeStringBase_char;
           v40 = "CursorNormalButtonArrowL";
           ((void (__fastcall *)(int (***)()))v41[3])(&v41);
           ((void (__fastcall *)(int (***)()))v41[3])(&v41);
@@ -150,7 +150,7 @@ LABEL_43:
               if ( !v42[m] )
                 goto LABEL_43;
             }
-            v39 = &`vtable for'sead::SafeStringBase<char>;
+            v39 = &`vtable for'sead::SafeStringBase_char;
             v40 = "CursorNormalButtonArrowR";
             ((void (__fastcall *)(int (***)()))v41[3])(&v41);
             ((void (__fastcall *)(int (***)()))v41[3])(&v41);
@@ -167,7 +167,7 @@ LABEL_43:
                 if ( !v42[n] )
                   goto LABEL_53;
               }
-              v39 = &`vtable for'sead::SafeStringBase<char>;
+              v39 = &`vtable for'sead::SafeStringBase_char;
               v40 = "CursorCheckButton";
               ((void (__fastcall *)(int (***)()))v41[3])(&v41);
               ((void (__fastcall *)(int (***)()))v41[3])(&v41);
@@ -204,7 +204,7 @@ LABEL_64:
                   if ( !v42[ii] )
                     goto LABEL_64;
                 }
-                v39 = &`vtable for'sead::SafeStringBase<char>;
+                v39 = &`vtable for'sead::SafeStringBase_char;
                 v40 = "CursorDragButton";
                 ((void (__fastcall *)(int (***)()))v41[3])(&v41);
                 ((void (__fastcall *)(int (***)()))v41[3])(&v41);
@@ -221,7 +221,7 @@ LABEL_64:
                     if ( !v42[jj] )
                       goto LABEL_74;
                   }
-                  v39 = &`vtable for'sead::SafeStringBase<char>;
+                  v39 = &`vtable for'sead::SafeStringBase_char;
                   v40 = "CursorPushButton";
                   ((void (__fastcall *)(int (***)()))v41[3])(&v41);
                   ((void (__fastcall *)(int (***)()))v41[3])(&v41);

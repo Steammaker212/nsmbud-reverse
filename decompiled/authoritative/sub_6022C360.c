@@ -215,7 +215,7 @@ LABEL_90:
                     }
                   }
                   v43 = (char *)(v41 + 5);
-                  v78 = &`vtable for'sead::SafeStringBase<char>;
+                  v78 = &`vtable for'sead::SafeStringBase_char;
                   if ( v42 < 5 )
                     v43 = &byte_60B3BA34;
                   v79 = v43;
@@ -272,7 +272,7 @@ LABEL_102:
                   }
                 }
                 v34 = (char *)(v32 + 5);
-                v78 = &`vtable for'sead::SafeStringBase<char>;
+                v78 = &`vtable for'sead::SafeStringBase_char;
                 if ( v33 < 5 )
                   v34 = &byte_60B3BA34;
                 v79 = v34;

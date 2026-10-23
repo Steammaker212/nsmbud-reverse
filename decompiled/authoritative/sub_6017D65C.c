@@ -424,12 +424,12 @@ LABEL_308:
     if ( v28 < 0x20 )
       v48 = &v109[v28];
     *v48 = 0;
-    v103 = &`vtable for'sead::SafeStringBase<char>;
+    v103 = &`vtable for'sead::SafeStringBase_char;
     v104 = v109;
     v106 = (char *)&v108;
     v105 = &BufferedSafeStringBase_char_vtable_probably;
     v107 = 32;
-    sead::BufferedSafeStringBase<char>::assureTerminationImpl_((int)&v105);
+    sead::BufferedSafeStringBase_char::assureTerminationImpl_((int)&v105);
     v105 = &off_60BD4C38;
     v50 = (unsigned __int8 *)v106;
     ((void (__fastcall *)(int (***)()))v103[3])(&v103);
@@ -470,7 +470,7 @@ LABEL_308:
     {
       v54 = v53;
       v55 = sub_60183BE8();
-      v103 = &`vtable for'sead::SafeStringBase<char>;
+      v103 = &`vtable for'sead::SafeStringBase_char;
       v104 = (unsigned __int8 *)v55;
       ((void (__fastcall *)(int (***)()))v105[3])(&v105);
       ((void (__fastcall *)(int (***)()))v105[3])(&v105);
@@ -504,7 +504,7 @@ LABEL_164:
     {
       v60 = v59;
       v61 = sub_60183F9C();
-      v103 = &`vtable for'sead::SafeStringBase<char>;
+      v103 = &`vtable for'sead::SafeStringBase_char;
       v104 = (unsigned __int8 *)v61;
       ((void (__fastcall *)(int (***)()))v105[3])(&v105);
       ((void (__fastcall *)(int (***)()))v105[3])(&v105);
@@ -538,7 +538,7 @@ LABEL_181:
     {
       v66 = v65;
       v67 = sub_60184350();
-      v103 = &`vtable for'sead::SafeStringBase<char>;
+      v103 = &`vtable for'sead::SafeStringBase_char;
       v104 = (unsigned __int8 *)v67;
       ((void (__fastcall *)(int (***)()))v105[3])(&v105);
       ((void (__fastcall *)(int (***)()))v105[3])(&v105);
@@ -572,7 +572,7 @@ LABEL_198:
     {
       v72 = v71;
       v73 = sub_60184704();
-      v103 = &`vtable for'sead::SafeStringBase<char>;
+      v103 = &`vtable for'sead::SafeStringBase_char;
       v104 = (unsigned __int8 *)v73;
       ((void (__fastcall *)(int (***)()))v105[3])(&v105);
       ((void (__fastcall *)(int (***)()))v105[3])(&v105);
@@ -601,7 +601,7 @@ LABEL_212:
       v76 = 0;
     *(_DWORD *)(a1 + 1096 * v76 + 1128) |= 1 << v72;
 LABEL_215:
-    v103 = &`vtable for'sead::SafeStringBase<char>;
+    v103 = &`vtable for'sead::SafeStringBase_char;
     v104 = "lookW";
     ((void (__fastcall *)(int (***)()))v105[3])(&v105);
     ((void (__fastcall *)(int (***)()))v105[3])(&v105);

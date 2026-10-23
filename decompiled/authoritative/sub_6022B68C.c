@@ -136,7 +136,7 @@ LABEL_2:
       }
     }
     v16 = (char *)(v14 + 1);
-    v81 = &`vtable for'sead::SafeStringBase<char>;
+    v81 = &`vtable for'sead::SafeStringBase_char;
     if ( v13 < 1 )
       v16 = &byte_60B3BA34;
     v82 = (unsigned __int8 *)v16;
@@ -193,7 +193,7 @@ LABEL_20:
       }
     }
     v22 = (char *)(v20 + 5);
-    v81 = &`vtable for'sead::SafeStringBase<char>;
+    v81 = &`vtable for'sead::SafeStringBase_char;
     if ( v21 < 5 )
       v22 = &byte_60B3BA34;
     v82 = (unsigned __int8 *)v22;
@@ -250,7 +250,7 @@ LABEL_34:
       }
     }
     v28 = (char *)(v26 + 1);
-    v81 = &`vtable for'sead::SafeStringBase<char>;
+    v81 = &`vtable for'sead::SafeStringBase_char;
     if ( v27 < 1 )
       v28 = &byte_60B3BA34;
     v82 = (unsigned __int8 *)v28;
@@ -314,7 +314,7 @@ LABEL_50:
       }
     }
     v35 = (char *)(v33 + 5);
-    v81 = &`vtable for'sead::SafeStringBase<char>;
+    v81 = &`vtable for'sead::SafeStringBase_char;
     if ( v34 < 5 )
       v35 = &byte_60B3BA34;
     v82 = (unsigned __int8 *)v35;

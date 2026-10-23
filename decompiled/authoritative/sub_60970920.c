@@ -86,7 +86,7 @@ _DWORD *__fastcall sub_60970920(int a1, int a2, int a3, signed int a4, void *a5,
 
   if ( a4 >= 1 && a5 )
     memset(a5, 0, a4);
-  v10 = (_DWORD *)operator new(0xCu, heap, 4);
+  v10 = (_DWORD *)__operator_new_al(0xCu, heap, 4);
   sub_6097114C(v10, heap, a1, 4);
   (*(void (__fastcall **)(_DWORD *))(*v10 + 12))(v10);
   v11 = v10[1];
@@ -191,7 +191,7 @@ _DWORD *__fastcall sub_60970920(int a1, int a2, int a3, signed int a4, void *a5,
             v81 = v17;
             v29 = v24;
             v92 = 1024;
-            sead::BufferedSafeStringBase<char>::assureTerminationImpl_((int)&v90);
+            sead::BufferedSafeStringBase_char::assureTerminationImpl_((int)&v90);
             v30 = v29;
             *v91 = 0;
             v90 = &off_60BFA9DC;
@@ -240,7 +240,7 @@ _DWORD *__fastcall sub_60970920(int a1, int a2, int a3, signed int a4, void *a5,
             while ( 1 )
             {
               v35 = *(char **)(a2 + 4 * v34);
-              v88 = &`vtable for'sead::SafeStringBase<char>;
+              v88 = &`vtable for'sead::SafeStringBase_char;
               v89 = v35;
               ((void (__fastcall *)(int (***)()))v90[3])(&v90);
               ((void (__fastcall *)(int (***)()))v90[3])(&v90);
@@ -294,11 +294,11 @@ LABEL_60:
                 break;
               }
             }
-            v43 = (_DWORD *)operator new(0xCu, heap, 4);
+            v43 = (_DWORD *)__operator_new_al(0xCu, heap, 4);
             v44 = v41 + v12;
             v45 = v41 + v12 + 1;
             v78 = v44;
-            v85 = (void *)operator new[](v45, (int)heap, 4);
+            v85 = (void *)__operator_new_array_al(v45, (int)heap, 4);
             memset(v85, 0, v45);
             *v43 = &BufferedSafeStringBase_char_vtable_probably;
             v43[1] = v85;
@@ -312,7 +312,7 @@ LABEL_60:
             }
             else
             {
-              sead::BufferedSafeStringBase<char>::assureTerminationImpl_((int)v43);
+              sead::BufferedSafeStringBase_char::assureTerminationImpl_((int)v43);
               v46 = (_BYTE *)v43[1];
             }
             *v43 = &off_60BFA9C4;
@@ -354,7 +354,7 @@ LABEL_60:
             }
             (*(void (__fastcall **)(_DWORD *))(*v10 + 12))(v10);
             v52 = v10[1];
-            v53 = (unsigned __int8 *)operator new[](v12 + 1, (int)heap, 4);
+            v53 = (unsigned __int8 *)__operator_new_array_al(v12 + 1, (int)heap, 4);
             (*(void (__fastcall **)(_DWORD *))(*v86 + 12))(v86);
             v54 = &v72[-v52];
             v55 = v53;
@@ -405,10 +405,10 @@ LABEL_60:
               while ( v68 );
             }
             *v61 = 0;
-            operator delete[](v53);
+            __operator_delete_array_al(v53);
             if ( v10 )
               (*(void (__fastcall **)(_DWORD *))(*v10 + 4))(v10);
-            v10 = (_DWORD *)operator new(0xCu, v63, 4);
+            v10 = (_DWORD *)__operator_new_al(0xCu, v63, 4);
             sub_6097114C(v10, v63, v86, 4);
             if ( v86 )
               (*(void (__fastcall **)(_DWORD *))(*v86 + 4))(v86);

@@ -87,12 +87,12 @@ int __fastcall sub_60181FC0(int a1, int a2, _DWORD *a3, _DWORD *a4)
       v54 = v9;
       v12 = (int *)(*(int (__fastcall **)(int, int))(*(_DWORD *)a2 + 88))(a2, v7);
       v13 = (int)v6;
-      v70 = &`vtable for'sead::SafeStringBase<char>;
+      v70 = &`vtable for'sead::SafeStringBase_char;
       v71 = v12;
       v67 = &v69;
       v66 = &BufferedSafeStringBase_char_vtable_probably;
       v68 = 32;
-      sead::BufferedSafeStringBase<char>::assureTerminationImpl_((int)v6);
+      sead::BufferedSafeStringBase_char::assureTerminationImpl_((int)v6);
       v66 = &off_60BD4C38;
       v14 = v67;
       ((void (__fastcall *)(int (***)()))v70[3])(&v70);
@@ -128,7 +128,7 @@ int __fastcall sub_60181FC0(int a1, int a2, _DWORD *a3, _DWORD *a4)
       }
       v6 = (int (***)())v13;
       v66 = &off_60BD4C20;
-      sead::BufferedSafeStringBase<char>::assureTerminationImpl_(v13);
+      sead::BufferedSafeStringBase_char::assureTerminationImpl_(v13);
       v18 = 0;
       while ( 1 )
       {
@@ -305,13 +305,13 @@ LABEL_35:
                   v57 = (const char *)&v59;
                   v56 = &BufferedSafeStringBase_char_vtable_probably;
                   v58 = 5;
-                  sead::BufferedSafeStringBase<char>::assureTerminationImpl_((int)&v56);
+                  sead::BufferedSafeStringBase_char::assureTerminationImpl_((int)&v56);
                   *v57 = 0;
                   v63 = &v65;
                   v62 = &BufferedSafeStringBase_char_vtable_probably;
                   v56 = &off_60BD4F38;
                   v64 = 5;
-                  sead::BufferedSafeStringBase<char>::assureTerminationImpl_((int)&v62);
+                  sead::BufferedSafeStringBase_char::assureTerminationImpl_((int)&v62);
                   *(_BYTE *)v63 = 0;
                   v62 = &off_60BD4F38;
                   v34 = *(_DWORD *)(v49 + 40);
@@ -340,11 +340,11 @@ LABEL_126:
         }
       }
 LABEL_104:
-      v56 = &`vtable for'sead::SafeStringBase<char>;
+      v56 = &`vtable for'sead::SafeStringBase_char;
       v57 = "start";
       if ( sub_6018506C(v13, &v56) == -1 )
       {
-        v56 = &`vtable for'sead::SafeStringBase<char>;
+        v56 = &`vtable for'sead::SafeStringBase_char;
         v57 = "end";
         ((void (__fastcall *)(int))v66[3])(v13);
         ((void (__fastcall *)(int))v66[3])(v13);
@@ -375,13 +375,13 @@ LABEL_125:
       }
       if ( ((unsigned int)&dword_60C89484 & ~(1612195816 << v37) & 1) == 0 && _cxa_guard_acquire(&dword_60C89484) )
       {
-        dword_60C89490[0] = &`vtable for'sead::SafeStringBase<char>;
+        dword_60C89490[0] = &`vtable for'sead::SafeStringBase_char;
         dword_60C89490[1] = "start";
-        dword_60C89490[2] = &`vtable for'sead::SafeStringBase<char>;
+        dword_60C89490[2] = &`vtable for'sead::SafeStringBase_char;
         dword_60C89490[3] = "startPan";
-        dword_60C89490[4] = &`vtable for'sead::SafeStringBase<char>;
+        dword_60C89490[4] = &`vtable for'sead::SafeStringBase_char;
         dword_60C89490[5] = "startTilt";
-        dword_60C89490[6] = &`vtable for'sead::SafeStringBase<char>;
+        dword_60C89490[6] = &`vtable for'sead::SafeStringBase_char;
         dword_60C89490[7] = "startFix";
         sub_60000288();
         _cxa_guard_release(&dword_60C89484);

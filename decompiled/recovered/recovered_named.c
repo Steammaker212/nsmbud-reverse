@@ -240,7 +240,7 @@ StateActor *__fastcall Yoshi_ctor(StateActor *a1, ActorBuildInfo *a2)
   *(_DWORD *)&a1[1]._.collisionMgr[4608] = 0;
   *(_DWORD *)&a1[1]._.collisionMgr[4612] = 0;
   sub_607D6354(&a1[1]._.collisionMgr[4616], a1->_._._.settings1 & 0xF, 0);
-  v3 = operator new(0x1Cu);
+  v3 = __operator_new(0x1Cu);
   *(_DWORD *)&a1[1]._.collisionMgr[4632] = sub_603E45E4(v3);
   *(_DWORD *)&a1[1]._.collisionMgr[4636] = &off_60C26018;
   *(_DWORD *)&a1[1]._.collisionMgr[4640] = &off_60C26028;
@@ -284,7 +284,7 @@ int __fastcall YoshiFlame_YoshiFlame(ActorBuildInfo *a1)
 {
   int v2; // r4
 
-  v2 = operator new(0x320u);
+  v2 = __operator_new(0x320u);
   StageActor_StageActor((StageActor *)v2, a1);
   *(_DWORD *)v2 = &off_60C26158;
   *(_DWORD *)(v2 + 644) = 0;

@@ -120,13 +120,13 @@ LABEL_19:
       sub_6081CA7C(a1);
       memset(&v63[1], 0, 44);
       v63[0] = &off_60BF9CF0;
-      v62[0] = &`vtable for'sead::SafeStringBase<char>;
+      v62[0] = &`vtable for'sead::SafeStringBase_char;
       v62[1] = "System/Revision.yml";
       sub_608E6578(*(_DWORD *)(dword_60CCEBD0 + 28));
       if ( !v63[1] )
         goto LABEL_120;
       sub_608E7A54(v63);
-      v49.vtable = &`vtable for'sead::SafeStringBase<char>;
+      v49.vtable = &`vtable for'sead::SafeStringBase_char;
       v49.cstr = &byte_60B3BA34;
       v50 = 0;
       v51 = 0;
@@ -140,7 +140,7 @@ LABEL_19:
       v53 = 0;
       v60 = 1;
       v61 = 0;
-      sead::SafeStringBase<char>::operator=((int)&v49, (int)v62);
+      sead::SafeStringBase_char::operator=((int)&v49, (int)v62);
       v3 = (int (__fastcall ***)(_DWORD, int *))sead_ResourceMgr_OpenFileRelated(
                                                   sead::ResourceMgr::sInstance,
                                                   (int)&v49);
@@ -163,13 +163,13 @@ LABEL_19:
       v45 = (char *)&v47;
       v44 = &BufferedSafeStringBase_char_vtable_probably;
       v46 = 256;
-      sead::BufferedSafeStringBase<char>::assureTerminationImpl_((int)&v44);
+      sead::BufferedSafeStringBase_char::assureTerminationImpl_((int)&v44);
       *v45 = 0;
       v44 = &off_60BD94BC;
       v41 = &v43;
       v40 = &BufferedSafeStringBase_char_vtable_probably;
       v42 = 32;
-      sead::BufferedSafeStringBase<char>::assureTerminationImpl_((int)&v40);
+      sead::BufferedSafeStringBase_char::assureTerminationImpl_((int)&v40);
       *(_BYTE *)v41 = 0;
       v40 = &off_60BD4C20;
       v6 = sub_608FD248();
@@ -189,7 +189,7 @@ LABEL_19:
       v37 = (char *)&v39;
       v36 = &BufferedSafeStringBase_char_vtable_probably;
       v38 = 32;
-      sead::BufferedSafeStringBase<char>::assureTerminationImpl_((int)&v36);
+      sead::BufferedSafeStringBase_char::assureTerminationImpl_((int)&v36);
       *v37 = 0;
       v36 = &off_60BD4C20;
       v9 = sub_6081D7B4(i);
@@ -205,7 +205,7 @@ LABEL_39:
         v33 = v35;
         v32 = &BufferedSafeStringBase_char_vtable_probably;
         v34 = 64;
-        sead::BufferedSafeStringBase<char>::assureTerminationImpl_((int)&v32);
+        sead::BufferedSafeStringBase_char::assureTerminationImpl_((int)&v32);
         *v33 = 0;
         v32 = &off_60BD4BF0;
         ((void (__fastcall *)(int (***)()))v44[3])(&v44);
@@ -239,7 +239,7 @@ LABEL_50:
         v14 = off_60C5CB34;
 LABEL_51:
         v31 = v14;
-        v30 = &`vtable for'sead::SafeStringBase<char>;
+        v30 = &`vtable for'sead::SafeStringBase_char;
         ((void (__fastcall *)(int (***)()))v44[3])(&v44);
         v15 = 0;
         while ( v45[v15] )
@@ -328,7 +328,7 @@ LABEL_83:
       v33 = v35;
       v32 = &BufferedSafeStringBase_char_vtable_probably;
       v34 = 64;
-      sead::BufferedSafeStringBase<char>::assureTerminationImpl_((int)&v32);
+      sead::BufferedSafeStringBase_char::assureTerminationImpl_((int)&v32);
       *v33 = 0;
       v32 = &off_60BD4BF0;
       ((void (__fastcall *)(int (***)()))v44[3])(&v44);
@@ -362,7 +362,7 @@ LABEL_94:
       v22 = off_60C5CB34;
 LABEL_95:
       v37 = v22;
-      v36 = &`vtable for'sead::SafeStringBase<char>;
+      v36 = &`vtable for'sead::SafeStringBase_char;
       ((void (__fastcall *)(int (***)()))v44[3])(&v44);
       v23 = 0;
       while ( v45[v23] )

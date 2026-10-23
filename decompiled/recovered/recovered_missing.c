@@ -7399,7 +7399,7 @@ StageActor *__fastcall sub_607C807C(ActorBuildInfo *a1)
   StageActor *v2; // r0
   StageActor *result; // r0
 
-  v2 = (StageActor *)operator new(0x3B30u);
+  v2 = (StageActor *)__operator_new(0x3B30u);
   result = Player_ctor(v2, a1);
   result->_.vtable = (int)off_60C253D4;
   result[23].aCollider.field_60 = 0;
@@ -8018,7 +8018,7 @@ void sub_607C8DA4()
   void *v0; // r0
 
   v0 = (void *)((int (*)(void))loc_60797A50)();
-  operator delete(v0);
+  __operator_delete(v0);
 }
 
 /* ============================================================================
@@ -8494,7 +8494,7 @@ int __fastcall sub_607C970C(int a1, int r1_0, int a3, int a4, signed int unk4)
   else
     Model = Resource_getModel2(v9, &a2, 3, 2, 4, 0, 0, 0, 0);
   v11 = (void *)Model;
-  v12 = (ModelWrapper *)operator new(0x30u, 0, 4);
+  v12 = (ModelWrapper *)__operator_new_al(0x30u, 0, 4);
   v13 = ModelWrapper_ctor(v12, v11, 3, 2, 4, 0, 0);
   ModelWrapper_setup(v13, (int)v9, (int)&v16, 0);
   *(_DWORD *)(a1 + 240) = v12;
@@ -8892,7 +8892,7 @@ LABEL_41:
     v53 = &v55;
     v52 = &BufferedSafeStringBase_char_vtable_probably;
     v54 = 32;
-    sead_BufferedSafeStringBase<char>::assureTerminationImpl_((int)&v52);
+    sead_BufferedSafeStringBase_char::assureTerminationImpl_((int)&v52);
     v15 = ((_DWORD *)(uintptr_t)(0x60000000u + 0x60CC2C64))[2 * v12];
     v51 = v12;
     v16 = v53;
@@ -9264,7 +9264,7 @@ int __fastcall sub_607CAA54(int a1, float a2)
     v25 = &v27;
     v24 = &BufferedSafeStringBase_char_vtable_probably;
     v26 = 32;
-    sead_BufferedSafeStringBase<char>::assureTerminationImpl_((int)&v24);
+    sead_BufferedSafeStringBase_char::assureTerminationImpl_((int)&v24);
     v13 = v25;
     (*(void (__fastcall **)(int *))(((_DWORD *)(uintptr_t)(0x60000000u + 0x60CC2C64))[2 * v10] + 12))(v11);
     v14 = (char *)v11[1];
@@ -9738,8 +9738,8 @@ void __fastcall sub_607CB58C(_DWORD *a1)
 
   *a1 = off_60C24A84;
   nullsub_407(a1 + 102);
-  v2 = sead_IDisposer_~IDisposer(a1);
-  operator delete(v2);
+  v2 = sead_IDisposer_dtor(a1);
+  __operator_delete(v2);
 }
 
 /* ============================================================================
@@ -9815,7 +9815,7 @@ StateActor *__fastcall sub_607CB7B4(ActorBuildInfo *a1)
 {
   StateActor *v2; // r0
 
-  v2 = (StateActor *)operator new(0x2E30u);
+  v2 = (StateActor *)__operator_new(0x2E30u);
   return Yoshi_ctor(v2, a1);
 }
 
@@ -14231,7 +14231,7 @@ LABEL_5:
   *(_DWORD *)(a1 + 528) = 1111490560;
   *(_DWORD *)(a1 + 508) = 1117782016;
   *(_DWORD *)(a1 + 512) = 1107296256;
-  v5 = (RevealMaskRelated *)operator new(0x28u);
+  v5 = (RevealMaskRelated *)__operator_new(0x28u);
   v6 = LightMask_LightMask(v5);
   *(_DWORD *)(a1 + 644) = v6;
   (*(void (__fastcall **)(RevealMaskRelated *, _DWORD, int))v6->vtable)(v6, 0, 2);
@@ -14430,8 +14430,8 @@ Actor *__fastcall sub_607D2D70(int a1)
   *(_DWORD *)(a1 + 656) = EffectWrapper_vtable;
   v2 = (_DWORD *)(a1 + 656);
   sub_60237560(a1 + 656);
-  sead_IDisposer_~IDisposer(v2);
-  return StageActor_~StageActor((Actor *)a1);
+  sead_IDisposer_dtor(v2);
+  return StageActor_dtor((Actor *)a1);
 }
 
 /* ============================================================================
@@ -14448,9 +14448,9 @@ void __fastcall sub_607D2DC0(int a1)
   *(_DWORD *)(a1 + 656) = EffectWrapper_vtable;
   v2 = (_DWORD *)(a1 + 656);
   sub_60237560(a1 + 656);
-  sead_IDisposer_~IDisposer(v2);
-  v3 = StageActor_~StageActor((Actor *)a1);
-  operator delete(v3);
+  sead_IDisposer_dtor(v2);
+  v3 = StageActor_dtor((Actor *)a1);
+  __operator_delete(v3);
 }
 
 /* ============================================================================
@@ -15531,7 +15531,7 @@ int __fastcall sub_607D4818(int a1, int a2)
     Model = (void *)Resource_getModel(v5, (sead_SafeString *)&dword_60CC5450, 6, 3, 2, 4, 0, 0, 1, 0);
   else
     Model = (void *)Resource_getModel2(v5, (sead_SafeString *)&dword_60CC5450, 3, 2, 4, 0, 0, 0, 0);
-  v7 = (ModelWrapper *)operator new(0x30u, 0, 4);
+  v7 = (ModelWrapper *)__operator_new_al(0x30u, 0, 4);
   v8 = ModelWrapper_ctor(v7, Model, 3, 2, 4, 0, 0);
   ModelWrapper_setup(v8, (int)v5, (int)&v10, 0);
   *(_DWORD *)(a1 + 240) = v7;
@@ -16113,7 +16113,7 @@ _DWORD *__fastcall sub_607D6170(_DWORD *a1)
 {
   *a1 = off_60C261E4;
   nullsub_407(a1 + 61);
-  return sead_IDisposer_~IDisposer(a1);
+  return sead_IDisposer_dtor(a1);
 }
 
 /* ============================================================================
@@ -16127,8 +16127,8 @@ void __fastcall sub_607D61A0(_DWORD *a1)
 
   *a1 = off_60C261E4;
   nullsub_407(a1 + 61);
-  v2 = sead_IDisposer_~IDisposer(a1);
-  operator delete(v2);
+  v2 = sead_IDisposer_dtor(a1);
+  __operator_delete(v2);
 }
 
 /* ============================================================================
@@ -16186,7 +16186,7 @@ _DWORD *__fastcall sub_607D6354(_DWORD *a1, int a2)
 
   sub_60794828();
   *a1 = &off_60C2629C;
-  v4 = operator new(0x2B8u);
+  v4 = __operator_new(0x2B8u);
   sub_607D4818(v4, a2);
   a1[3] = v4;
   sub_60794848(a1, v4);
@@ -19092,7 +19092,7 @@ int __fastcall sub_607DB2B4(_DWORD *a1)
   sead_PtrArrayImpl_allocBuffer(a1 + 4136, 48);
   for ( i = 0; i != 48; ++i )
   {
-    v7 = operator new(0x474u);
+    v7 = __operator_new(0x474u);
     v8 = sub_607DC6B0(v7, a1);
     sub_607DC930(v8, v3, i);
     if ( *v5 < a1[4137] )
@@ -19101,10 +19101,10 @@ int __fastcall sub_607DB2B4(_DWORD *a1)
   a1[4142] = 1132;
   a1[4134] = 1;
   a1[4135] = 0;
-  v9 = operator new(0x94u);
+  v9 = __operator_new(0x94u);
   v13[0] = &g_vtable_forsead_SafeStringBase<char>;
   v13[1] = "Lp_Sys_VibrationThread";
-  v10 = (_DWORD *)operator new(0x10u);
+  v10 = (_DWORD *)__operator_new(0x10u);
   v10[1] = a1;
   v10[2] = sub_607DB684;
   v10[3] = 0;
@@ -19670,15 +19670,15 @@ int __fastcall sub_607DC0A8(int a1, int a2, int a3)
 int __fastcall sub_607DC0C8(int a1)
 {
   *(_DWORD *)a1 = off_60C262E0;
-  sead_CriticalSection_~CriticalSection((_DWORD *)(a1 + 16692));
+  sead_CriticalSection_dtor((_DWORD *)(a1 + 16692));
   sub_60954610(a1 + 16624);
   sub_607DC268(a1 + 15888);
   sub_607DC304(a1 + 15024);
   sub_607DC3A0(a1 + 14088);
-  sead_CriticalSection_~CriticalSection((_DWORD *)(a1 + 14048));
+  sead_CriticalSection_dtor((_DWORD *)(a1 + 14048));
   if ( *(_BYTE *)(a1 + 192) )
     dword_60CC5754 = 0;
-  return sead_CalculateTask_~CalculateTask((_DWORD *)a1);
+  return sead_CalculateTask_dtor((_DWORD *)a1);
 }
 
 /* ============================================================================
@@ -19691,16 +19691,16 @@ void __fastcall sub_607DC158(int a1)
   void *v2; // r0
 
   *(_DWORD *)a1 = off_60C262E0;
-  sead_CriticalSection_~CriticalSection((_DWORD *)(a1 + 16692));
+  sead_CriticalSection_dtor((_DWORD *)(a1 + 16692));
   sub_60954610(a1 + 16624);
   sub_607DC268(a1 + 15888);
   sub_607DC304(a1 + 15024);
   sub_607DC3A0(a1 + 14088);
-  sead_CriticalSection_~CriticalSection((_DWORD *)(a1 + 14048));
+  sead_CriticalSection_dtor((_DWORD *)(a1 + 14048));
   if ( *(_BYTE *)(a1 + 192) )
     dword_60CC5754 = 0;
-  v2 = (void *)sead_CalculateTask_~CalculateTask((_DWORD *)a1);
-  operator delete(v2);
+  v2 = (void *)sead_CalculateTask_dtor((_DWORD *)a1);
+  __operator_delete(v2);
 }
 
 /* ============================================================================
@@ -19727,24 +19727,24 @@ int *sub_607DC1F4()
 /* Recovered from main.idb: VA 0x607DC268  RVA 0x007DC268  size 0x9C */
 void __fastcall sub_607DC268(int a1)
 {
-  nn_hid_VibrationNodeConnection_~VibrationNodeConnection((nn_hid_VibrationNodeConnection *)(a1 + 612));
-  nn_hid_VibrationNodeConnection_~VibrationNodeConnection((nn_hid_VibrationNodeConnection *)(a1 + 576));
-  nn_hid_VibrationNodeConnection_~VibrationNodeConnection((nn_hid_VibrationNodeConnection *)(a1 + 540));
-  nn_hid_VibrationNodeConnection_~VibrationNodeConnection((nn_hid_VibrationNodeConnection *)(a1 + 504));
-  nn_hid_VibrationNodeConnection_~VibrationNodeConnection((nn_hid_VibrationNodeConnection *)(a1 + 468));
-  nn_hid_VibrationNodeConnection_~VibrationNodeConnection((nn_hid_VibrationNodeConnection *)(a1 + 432));
-  nn_hid_VibrationNodeConnection_~VibrationNodeConnection((nn_hid_VibrationNodeConnection *)(a1 + 396));
-  nn_hid_VibrationNodeConnection_~VibrationNodeConnection((nn_hid_VibrationNodeConnection *)(a1 + 360));
-  nn_hid_VibrationNodeConnection_~VibrationNodeConnection((nn_hid_VibrationNodeConnection *)(a1 + 324));
-  nn_hid_VibrationNodeConnection_~VibrationNodeConnection((nn_hid_VibrationNodeConnection *)(a1 + 288));
-  nn_hid_VibrationNodeConnection_~VibrationNodeConnection((nn_hid_VibrationNodeConnection *)(a1 + 252));
-  nn_hid_VibrationNodeConnection_~VibrationNodeConnection((nn_hid_VibrationNodeConnection *)(a1 + 216));
-  nn_hid_VibrationNodeConnection_~VibrationNodeConnection((nn_hid_VibrationNodeConnection *)(a1 + 180));
-  nn_hid_VibrationNodeConnection_~VibrationNodeConnection((nn_hid_VibrationNodeConnection *)(a1 + 144));
-  nn_hid_VibrationNodeConnection_~VibrationNodeConnection((nn_hid_VibrationNodeConnection *)(a1 + 108));
-  nn_hid_VibrationNodeConnection_~VibrationNodeConnection((nn_hid_VibrationNodeConnection *)(a1 + 72));
-  nn_hid_VibrationNodeConnection_~VibrationNodeConnection((nn_hid_VibrationNodeConnection *)(a1 + 36));
-  nn_hid_VibrationNodeConnection_~VibrationNodeConnection((nn_hid_VibrationNodeConnection *)a1);
+  nn_hid_VibrationNodeConnection_dtor((nn_hid_VibrationNodeConnection *)(a1 + 612));
+  nn_hid_VibrationNodeConnection_dtor((nn_hid_VibrationNodeConnection *)(a1 + 576));
+  nn_hid_VibrationNodeConnection_dtor((nn_hid_VibrationNodeConnection *)(a1 + 540));
+  nn_hid_VibrationNodeConnection_dtor((nn_hid_VibrationNodeConnection *)(a1 + 504));
+  nn_hid_VibrationNodeConnection_dtor((nn_hid_VibrationNodeConnection *)(a1 + 468));
+  nn_hid_VibrationNodeConnection_dtor((nn_hid_VibrationNodeConnection *)(a1 + 432));
+  nn_hid_VibrationNodeConnection_dtor((nn_hid_VibrationNodeConnection *)(a1 + 396));
+  nn_hid_VibrationNodeConnection_dtor((nn_hid_VibrationNodeConnection *)(a1 + 360));
+  nn_hid_VibrationNodeConnection_dtor((nn_hid_VibrationNodeConnection *)(a1 + 324));
+  nn_hid_VibrationNodeConnection_dtor((nn_hid_VibrationNodeConnection *)(a1 + 288));
+  nn_hid_VibrationNodeConnection_dtor((nn_hid_VibrationNodeConnection *)(a1 + 252));
+  nn_hid_VibrationNodeConnection_dtor((nn_hid_VibrationNodeConnection *)(a1 + 216));
+  nn_hid_VibrationNodeConnection_dtor((nn_hid_VibrationNodeConnection *)(a1 + 180));
+  nn_hid_VibrationNodeConnection_dtor((nn_hid_VibrationNodeConnection *)(a1 + 144));
+  nn_hid_VibrationNodeConnection_dtor((nn_hid_VibrationNodeConnection *)(a1 + 108));
+  nn_hid_VibrationNodeConnection_dtor((nn_hid_VibrationNodeConnection *)(a1 + 72));
+  nn_hid_VibrationNodeConnection_dtor((nn_hid_VibrationNodeConnection *)(a1 + 36));
+  nn_hid_VibrationNodeConnection_dtor((nn_hid_VibrationNodeConnection *)a1);
 }
 
 /* ============================================================================
@@ -19754,24 +19754,24 @@ void __fastcall sub_607DC268(int a1)
 /* Recovered from main.idb: VA 0x607DC304  RVA 0x007DC304  size 0x9C */
 void __fastcall sub_607DC304(int a1)
 {
-  nn_hid_VibrationMixer_~VibrationMixer((nn_hid_VibrationMixer *)(a1 + 816));
-  nn_hid_VibrationMixer_~VibrationMixer((nn_hid_VibrationMixer *)(a1 + 768));
-  nn_hid_VibrationMixer_~VibrationMixer((nn_hid_VibrationMixer *)(a1 + 720));
-  nn_hid_VibrationMixer_~VibrationMixer((nn_hid_VibrationMixer *)(a1 + 672));
-  nn_hid_VibrationMixer_~VibrationMixer((nn_hid_VibrationMixer *)(a1 + 624));
-  nn_hid_VibrationMixer_~VibrationMixer((nn_hid_VibrationMixer *)(a1 + 576));
-  nn_hid_VibrationMixer_~VibrationMixer((nn_hid_VibrationMixer *)(a1 + 528));
-  nn_hid_VibrationMixer_~VibrationMixer((nn_hid_VibrationMixer *)(a1 + 480));
-  nn_hid_VibrationMixer_~VibrationMixer((nn_hid_VibrationMixer *)(a1 + 432));
-  nn_hid_VibrationMixer_~VibrationMixer((nn_hid_VibrationMixer *)(a1 + 384));
-  nn_hid_VibrationMixer_~VibrationMixer((nn_hid_VibrationMixer *)(a1 + 336));
-  nn_hid_VibrationMixer_~VibrationMixer((nn_hid_VibrationMixer *)(a1 + 288));
-  nn_hid_VibrationMixer_~VibrationMixer((nn_hid_VibrationMixer *)(a1 + 240));
-  nn_hid_VibrationMixer_~VibrationMixer((nn_hid_VibrationMixer *)(a1 + 192));
-  nn_hid_VibrationMixer_~VibrationMixer((nn_hid_VibrationMixer *)(a1 + 144));
-  nn_hid_VibrationMixer_~VibrationMixer((nn_hid_VibrationMixer *)(a1 + 96));
-  nn_hid_VibrationMixer_~VibrationMixer((nn_hid_VibrationMixer *)(a1 + 48));
-  nn_hid_VibrationMixer_~VibrationMixer((nn_hid_VibrationMixer *)a1);
+  nn_hid_VibrationMixer_dtor((nn_hid_VibrationMixer *)(a1 + 816));
+  nn_hid_VibrationMixer_dtor((nn_hid_VibrationMixer *)(a1 + 768));
+  nn_hid_VibrationMixer_dtor((nn_hid_VibrationMixer *)(a1 + 720));
+  nn_hid_VibrationMixer_dtor((nn_hid_VibrationMixer *)(a1 + 672));
+  nn_hid_VibrationMixer_dtor((nn_hid_VibrationMixer *)(a1 + 624));
+  nn_hid_VibrationMixer_dtor((nn_hid_VibrationMixer *)(a1 + 576));
+  nn_hid_VibrationMixer_dtor((nn_hid_VibrationMixer *)(a1 + 528));
+  nn_hid_VibrationMixer_dtor((nn_hid_VibrationMixer *)(a1 + 480));
+  nn_hid_VibrationMixer_dtor((nn_hid_VibrationMixer *)(a1 + 432));
+  nn_hid_VibrationMixer_dtor((nn_hid_VibrationMixer *)(a1 + 384));
+  nn_hid_VibrationMixer_dtor((nn_hid_VibrationMixer *)(a1 + 336));
+  nn_hid_VibrationMixer_dtor((nn_hid_VibrationMixer *)(a1 + 288));
+  nn_hid_VibrationMixer_dtor((nn_hid_VibrationMixer *)(a1 + 240));
+  nn_hid_VibrationMixer_dtor((nn_hid_VibrationMixer *)(a1 + 192));
+  nn_hid_VibrationMixer_dtor((nn_hid_VibrationMixer *)(a1 + 144));
+  nn_hid_VibrationMixer_dtor((nn_hid_VibrationMixer *)(a1 + 96));
+  nn_hid_VibrationMixer_dtor((nn_hid_VibrationMixer *)(a1 + 48));
+  nn_hid_VibrationMixer_dtor((nn_hid_VibrationMixer *)a1);
 }
 
 /* ============================================================================
@@ -19781,24 +19781,24 @@ void __fastcall sub_607DC304(int a1)
 /* Recovered from main.idb: VA 0x607DC3A0  RVA 0x007DC3A0  size 0x9C */
 void __fastcall sub_607DC3A0(int a1)
 {
-  nn_hid_VibrationTarget_~VibrationTarget((nn_hid_VibrationTarget *)(a1 + 884));
-  nn_hid_VibrationTarget_~VibrationTarget((nn_hid_VibrationTarget *)(a1 + 832));
-  nn_hid_VibrationTarget_~VibrationTarget((nn_hid_VibrationTarget *)(a1 + 780));
-  nn_hid_VibrationTarget_~VibrationTarget((nn_hid_VibrationTarget *)(a1 + 728));
-  nn_hid_VibrationTarget_~VibrationTarget((nn_hid_VibrationTarget *)(a1 + 676));
-  nn_hid_VibrationTarget_~VibrationTarget((nn_hid_VibrationTarget *)(a1 + 624));
-  nn_hid_VibrationTarget_~VibrationTarget((nn_hid_VibrationTarget *)(a1 + 572));
-  nn_hid_VibrationTarget_~VibrationTarget((nn_hid_VibrationTarget *)(a1 + 520));
-  nn_hid_VibrationTarget_~VibrationTarget((nn_hid_VibrationTarget *)(a1 + 468));
-  nn_hid_VibrationTarget_~VibrationTarget((nn_hid_VibrationTarget *)(a1 + 416));
-  nn_hid_VibrationTarget_~VibrationTarget((nn_hid_VibrationTarget *)(a1 + 364));
-  nn_hid_VibrationTarget_~VibrationTarget((nn_hid_VibrationTarget *)(a1 + 312));
-  nn_hid_VibrationTarget_~VibrationTarget((nn_hid_VibrationTarget *)(a1 + 260));
-  nn_hid_VibrationTarget_~VibrationTarget((nn_hid_VibrationTarget *)(a1 + 208));
-  nn_hid_VibrationTarget_~VibrationTarget((nn_hid_VibrationTarget *)(a1 + 156));
-  nn_hid_VibrationTarget_~VibrationTarget((nn_hid_VibrationTarget *)(a1 + 104));
-  nn_hid_VibrationTarget_~VibrationTarget((nn_hid_VibrationTarget *)(a1 + 52));
-  nn_hid_VibrationTarget_~VibrationTarget((nn_hid_VibrationTarget *)a1);
+  nn_hid_VibrationTarget_dtor((nn_hid_VibrationTarget *)(a1 + 884));
+  nn_hid_VibrationTarget_dtor((nn_hid_VibrationTarget *)(a1 + 832));
+  nn_hid_VibrationTarget_dtor((nn_hid_VibrationTarget *)(a1 + 780));
+  nn_hid_VibrationTarget_dtor((nn_hid_VibrationTarget *)(a1 + 728));
+  nn_hid_VibrationTarget_dtor((nn_hid_VibrationTarget *)(a1 + 676));
+  nn_hid_VibrationTarget_dtor((nn_hid_VibrationTarget *)(a1 + 624));
+  nn_hid_VibrationTarget_dtor((nn_hid_VibrationTarget *)(a1 + 572));
+  nn_hid_VibrationTarget_dtor((nn_hid_VibrationTarget *)(a1 + 520));
+  nn_hid_VibrationTarget_dtor((nn_hid_VibrationTarget *)(a1 + 468));
+  nn_hid_VibrationTarget_dtor((nn_hid_VibrationTarget *)(a1 + 416));
+  nn_hid_VibrationTarget_dtor((nn_hid_VibrationTarget *)(a1 + 364));
+  nn_hid_VibrationTarget_dtor((nn_hid_VibrationTarget *)(a1 + 312));
+  nn_hid_VibrationTarget_dtor((nn_hid_VibrationTarget *)(a1 + 260));
+  nn_hid_VibrationTarget_dtor((nn_hid_VibrationTarget *)(a1 + 208));
+  nn_hid_VibrationTarget_dtor((nn_hid_VibrationTarget *)(a1 + 156));
+  nn_hid_VibrationTarget_dtor((nn_hid_VibrationTarget *)(a1 + 104));
+  nn_hid_VibrationTarget_dtor((nn_hid_VibrationTarget *)(a1 + 52));
+  nn_hid_VibrationTarget_dtor((nn_hid_VibrationTarget *)a1);
 }
 
 /* ============================================================================
@@ -19891,7 +19891,7 @@ _DWORD *__fastcall sub_607DC668(_DWORD *a1, void *a2)
   int v4; // r2
   int v5; // r3
 
-  result = (_DWORD *)operator new(0x10u, a2, 4);
+  result = (_DWORD *)__operator_new_al(0x10u, a2, 4);
   *result = &off_60C26360;
   v4 = a1[2];
   v5 = a1[3];
@@ -20054,15 +20054,15 @@ int __fastcall sub_607DC930(int a1, int a2, int a3)
   v5 = 1;
   if ( a2 )
     v5 = sead_HeapMgr_setCurrentHeap_(sead_HeapMgr_sInstance, a2);
-  v6 = operator new(0x20u);
+  v6 = __operator_new(0x20u);
   *(_DWORD *)(a1 + 72) = sub_607DABB8(v6, 1.0, 1.0);
-  v7 = (nn_hid_VibrationPlayer *)operator new(0xB4u);
+  v7 = (nn_hid_VibrationPlayer *)__operator_new(0xB4u);
   v8 = (_DWORD *)nn_hid_VibrationPlayer_VibrationPlayer(v7);
   *v8 = &off_60C264BC;
   v8[43] = 1065353216;
   v8[44] = 0;
   *(_DWORD *)(a1 + 464) = v8;
-  v9 = (nn_hid_VibrationWriter *)operator new(0x28u);
+  v9 = (nn_hid_VibrationWriter *)__operator_new(0x28u);
   result = nn_hid_VibrationWriter_VibrationWriter(v9);
   *(_DWORD *)(a1 + 468) = result;
   *(_DWORD *)(a1 + 8) = a3;
@@ -21835,8 +21835,8 @@ void __fastcall sub_607DEC14(nn_hid_VibrationMixer *a1)
 {
   void *v1; // r0
 
-  nn_hid_VibrationMixer_~VibrationMixer(a1);
-  operator delete(v1);
+  nn_hid_VibrationMixer_dtor(a1);
+  __operator_delete(v1);
 }
 
 /* ============================================================================
@@ -21848,8 +21848,8 @@ void __fastcall sub_607DEC24(nn_hid_VibrationPlayer *a1)
 {
   void *v1; // r0
 
-  nn_hid_VibrationPlayer_~VibrationPlayer(a1);
-  operator delete(v1);
+  nn_hid_VibrationPlayer_dtor(a1);
+  __operator_delete(v1);
 }
 
 /* ============================================================================
@@ -21860,7 +21860,7 @@ void __fastcall sub_607DEC24(nn_hid_VibrationPlayer *a1)
 int __fastcall sub_607DEC34(_DWORD *a1)
 {
   *a1 = off_60C264D0;
-  sead_CriticalSection_~CriticalSection(a1 + 18);
+  sead_CriticalSection_dtor(a1 + 18);
   return nullsub_2157(a1);
 }
 
@@ -21874,9 +21874,9 @@ void __fastcall sub_607DEC64(_DWORD *a1)
   void *v2; // r0
 
   *a1 = off_60C264D0;
-  sead_CriticalSection_~CriticalSection(a1 + 18);
+  sead_CriticalSection_dtor(a1 + 18);
   v2 = (void *)nullsub_2157(a1);
-  operator delete(v2);
+  __operator_delete(v2);
 }
 
 /* ============================================================================
@@ -21888,8 +21888,8 @@ void __fastcall sub_607DEC98(nn_hid_VibrationNode *a1)
 {
   void *v1; // r0
 
-  nn_hid_VibrationNode_~VibrationNode(a1);
-  operator delete(v1);
+  nn_hid_VibrationNode_dtor(a1);
+  __operator_delete(v1);
 }
 
 /* ============================================================================
@@ -22082,9 +22082,9 @@ int __fastcall sub_607DF074(int a1)
     }
     *(_BYTE *)(a1 + 352) = 0;
   }
-  sead_IDisposer_~IDisposer((_DWORD *)(a1 + 296));
+  sead_IDisposer_dtor((_DWORD *)(a1 + 296));
   sub_60954610(a1 + 228);
-  return sead_CalculateTask_~CalculateTask((_DWORD *)a1);
+  return sead_CalculateTask_dtor((_DWORD *)a1);
 }
 
 /* ============================================================================
@@ -22108,7 +22108,7 @@ _DWORD *__fastcall sub_607DF108(int a1)
     }
     *(_BYTE *)(a1 + 56) = 0;
   }
-  return sead_IDisposer_~IDisposer((_DWORD *)a1);
+  return sead_IDisposer_dtor((_DWORD *)a1);
 }
 
 /* ============================================================================
@@ -22135,10 +22135,10 @@ void __fastcall sub_607DF16C(int a1)
     }
     *(_BYTE *)(a1 + 352) = 0;
   }
-  sead_IDisposer_~IDisposer((_DWORD *)(a1 + 296));
+  sead_IDisposer_dtor((_DWORD *)(a1 + 296));
   sub_60954610(a1 + 228);
-  v3 = (void *)sead_CalculateTask_~CalculateTask((_DWORD *)a1);
-  operator delete(v3);
+  v3 = (void *)sead_CalculateTask_dtor((_DWORD *)a1);
+  __operator_delete(v3);
 }
 
 /* ============================================================================
@@ -22176,7 +22176,7 @@ int __fastcall sub_607DF208(int a1)
   if ( !dword_60C9CCB8 )
   {
     sub_60440688(0);
-    v5 = operator new[](0x30000u, 0, 64);
+    v5 = __operator_new_array_al(0x30000u, 0, 64);
     sub_6044083C(dword_60C9CCB8, 0, v5, 196608, 0, 0);
   }
   if ( !dword_60C9CC80 )
@@ -22265,7 +22265,7 @@ int __fastcall sub_607DF6F8(int a1)
 {
   int v2; // r0
 
-  v2 = operator new(0x4698u, *(void **)(*(_DWORD *)a1 + 4 * *(_DWORD *)(*(_DWORD *)a1 + 20)), 4);
+  v2 = __operator_new_al(0x4698u, *(void **)(*(_DWORD *)a1 + 4 * *(_DWORD *)(*(_DWORD *)a1 + 20)), 4);
   return sub_604256D0(v2, a1);
 }
 
@@ -22294,7 +22294,7 @@ int __fastcall sub_607DF724(_DWORD *a1)
   a1[68] = sub_607DF868;
   a1[69] = 0;
   a1[66] = off_60C26618;
-  sead_SafeStringBase<char>::operator=((int)(a1 + 61), (int)v6);
+  sead_SafeStringBase_char::operator=((int)(a1 + 61), (int)v6);
   a1[63] = 1;
   v2 = *(_DWORD **)(dword_60CD0B40 + 36);
   if ( *(_DWORD *)(dword_60CD0B40 + 32) > 0xEu )
@@ -22313,7 +22313,7 @@ int __fastcall sub_607DF83C(int a1)
 {
   int v2; // r0
 
-  v2 = operator new(0xC0u, *(void **)(*(_DWORD *)a1 + 4 * *(_DWORD *)(*(_DWORD *)a1 + 20)), 4);
+  v2 = __operator_new_al(0xC0u, *(void **)(*(_DWORD *)a1 + 4 * *(_DWORD *)(*(_DWORD *)a1 + 20)), 4);
   return sub_608259D4(v2, a1);
 }
 
@@ -22493,8 +22493,8 @@ void __fastcall sub_607DFCC0(int a1)
     }
     *(_BYTE *)(a1 + 56) = 0;
   }
-  v3 = sead_IDisposer_~IDisposer((_DWORD *)a1);
-  operator delete(v3);
+  v3 = sead_IDisposer_dtor((_DWORD *)a1);
+  __operator_delete(v3);
 }
 
 /* ============================================================================
@@ -22651,7 +22651,7 @@ _DWORD *__fastcall sub_607DFE74(_DWORD *a1, void *a2)
   int v4; // r2
   int v5; // r3
 
-  result = (_DWORD *)operator new(0x10u, a2, 4);
+  result = (_DWORD *)__operator_new_al(0x10u, a2, 4);
   *result = &off_60C26604;
   v4 = a1[2];
   v5 = a1[3];
@@ -22702,7 +22702,7 @@ _DWORD *__fastcall sub_607DFF10(_DWORD *a1, void *a2)
   int v4; // r2
   int v5; // r3
 
-  result = (_DWORD *)operator new(0x10u, a2, 4);
+  result = (_DWORD *)__operator_new_al(0x10u, a2, 4);
   *result = &off_60C26640;
   v4 = a1[2];
   v5 = a1[3];
@@ -22806,7 +22806,7 @@ void __fastcall sub_607E01C8(_DWORD *a1)
   *a1 = off_60C26654;
   sub_60475AE8(a1 + 151);
   v2 = (void *)sub_607E3494(a1);
-  operator delete(v2);
+  __operator_delete(v2);
 }
 
 /* ============================================================================
@@ -23484,7 +23484,7 @@ int __fastcall sub_607E10C8(_DWORD *a1)
   sub_60954610(a1 + 122);
   nullsub_113(a1 + 70);
   nullsub_111(a1 + 48);
-  return sead_CalculateTask_~CalculateTask(a1);
+  return sead_CalculateTask_dtor(a1);
 }
 
 /* ============================================================================
@@ -23497,7 +23497,7 @@ void __fastcall sub_607E1174(_DWORD *a1)
   void *v1; // r0
 
   v1 = (void *)sub_607E10C8(a1);
-  operator delete(v1);
+  __operator_delete(v1);
 }
 
 /* ============================================================================
@@ -23564,7 +23564,7 @@ int __fastcall sub_607E1218(int a1)
   *(_DWORD *)(a1 + 532) = sub_607E14F4;
   *(_DWORD *)(a1 + 536) = 0;
   *(_DWORD *)(a1 + 524) = off_60C267E8;
-  sead_SafeStringBase<char>::operator=(a1 + 504, (int)&v17);
+  sead_SafeStringBase_char::operator=(a1 + 504, (int)&v17);
   *(_DWORD *)(a1 + 512) = 1;
   v3 = *(_DWORD **)(v2 + 36);
   if ( *(_DWORD *)(v2 + 32) > 5u )
@@ -23576,7 +23576,7 @@ int __fastcall sub_607E1218(int a1)
   *(_DWORD *)(a1 + 600) = sub_607E14FC;
   *(_DWORD *)(a1 + 604) = 0;
   *(_DWORD *)(a1 + 592) = off_60C267E8;
-  sead_SafeStringBase<char>::operator=(a1 + 572, (int)&v17);
+  sead_SafeStringBase_char::operator=(a1 + 572, (int)&v17);
   *(_DWORD *)(a1 + 580) = 1;
   v4 = *(_DWORD **)(v2 + 36);
   if ( *(_DWORD *)(v2 + 32) > 7u )
@@ -23588,7 +23588,7 @@ int __fastcall sub_607E1218(int a1)
   *(_DWORD *)(a1 + 668) = sub_607E1548;
   *(_DWORD *)(a1 + 672) = 0;
   *(_DWORD *)(a1 + 660) = off_60C267E8;
-  sead_SafeStringBase<char>::operator=(a1 + 640, (int)&v17);
+  sead_SafeStringBase_char::operator=(a1 + 640, (int)&v17);
   *(_DWORD *)(a1 + 648) = 1;
   sub_6095537C(**(_DWORD **)(v2 + 36), 0, a1 + 624);
   v5 = a1 + 280;
@@ -23869,7 +23869,7 @@ _DWORD *__fastcall sub_607E183C(_DWORD *a1, void *a2)
   int v4; // r2
   int v5; // r3
 
-  result = (_DWORD *)operator new(0x10u, a2, 4);
+  result = (_DWORD *)__operator_new_al(0x10u, a2, 4);
   *result = &off_60C26810;
   v4 = a1[2];
   v5 = a1[3];
@@ -24022,7 +24022,7 @@ int __fastcall sub_607E1DF4(_DWORD *a1)
   sub_60954610(a1 + 122);
   nullsub_113(a1 + 70);
   nullsub_111(a1 + 48);
-  return sead_CalculateTask_~CalculateTask(a1);
+  return sead_CalculateTask_dtor(a1);
 }
 
 /* ============================================================================
@@ -24035,7 +24035,7 @@ void __fastcall sub_607E1E8C(_DWORD *a1)
   void *v1; // r0
 
   v1 = (void *)sub_607E1DF4(a1);
-  operator delete(v1);
+  __operator_delete(v1);
 }
 
 /* ============================================================================
@@ -24104,7 +24104,7 @@ int __fastcall sub_607E1F54(int a1)
   *(_DWORD *)(a1 + 532) = sub_607E2120;
   *(_DWORD *)(a1 + 536) = 0;
   *(_DWORD *)(a1 + 524) = off_60C26900;
-  sead_SafeStringBase<char>::operator=(a1 + 504, (int)v12);
+  sead_SafeStringBase_char::operator=(a1 + 504, (int)v12);
   *(_DWORD *)(a1 + 512) = 1;
   v3 = *(_DWORD **)(v2 + 36);
   if ( *(_DWORD *)(v2 + 32) > 5u )
@@ -24427,7 +24427,7 @@ _DWORD *__fastcall sub_607E2530(_DWORD *a1, void *a2)
   int v4; // r2
   int v5; // r3
 
-  result = (_DWORD *)operator new(0x10u, a2, 4);
+  result = (_DWORD *)__operator_new_al(0x10u, a2, 4);
   *result = &off_60C26928;
   v4 = a1[2];
   v5 = a1[3];
@@ -24599,7 +24599,7 @@ int __fastcall sub_607E2968(_DWORD *a1)
   nullsub_113(a1 + 96);
   nullsub_111(a1 + 74);
   sub_60954610(v2);
-  return sead_CalculateTask_~CalculateTask(a1);
+  return sead_CalculateTask_dtor(a1);
 }
 
 /* ============================================================================
@@ -24617,8 +24617,8 @@ void __fastcall sub_607E29AC(_DWORD *a1)
   nullsub_113(a1 + 96);
   nullsub_111(a1 + 74);
   sub_60954610(v2);
-  v3 = (void *)sead_CalculateTask_~CalculateTask(a1);
-  operator delete(v3);
+  v3 = (void *)sead_CalculateTask_dtor(a1);
+  __operator_delete(v3);
 }
 
 /* ============================================================================
@@ -24693,7 +24693,7 @@ StateMethodExecuter *__fastcall sub_607E2B48(int a1)
   *(_DWORD *)(a1 + 272) = sub_607E2D18;
   *(_DWORD *)(a1 + 276) = 0;
   *(_DWORD *)(a1 + 264) = off_60C26A18;
-  sead_SafeStringBase<char>::operator=(a1 + 244, (int)a5);
+  sead_SafeStringBase_char::operator=(a1 + 244, (int)a5);
   *(_DWORD *)(a1 + 252) = 1;
   v3 = *(_DWORD **)(v2 + 36);
   if ( *(_DWORD *)(v2 + 32) > 5u )
@@ -25072,7 +25072,7 @@ _DWORD *__fastcall sub_607E3288(_DWORD *a1, void *a2)
   int v4; // r2
   int v5; // r3
 
-  result = (_DWORD *)operator new(0x10u, a2, 4);
+  result = (_DWORD *)__operator_new_al(0x10u, a2, 4);
   *result = &off_60C26A40;
   v4 = a1[2];
   v5 = a1[3];
@@ -25153,7 +25153,7 @@ void sub_607E3498()
   void *v0; // r0
 
   v0 = (void *)sub_607F0094();
-  operator delete(v0);
+  __operator_delete(v0);
 }
 
 /* ============================================================================
@@ -25217,7 +25217,7 @@ int __fastcall sub_607E3664(_DWORD *a1)
   sub_6045C0A0(a1 + 167);
   sub_6045C0A0(a1 + 66);
   sub_60954610(a1 + 48);
-  return sead_CalculateTask_~CalculateTask(a1);
+  return sead_CalculateTask_dtor(a1);
 }
 
 /* ============================================================================
@@ -25240,8 +25240,8 @@ void __fastcall sub_607E36DC(_DWORD *a1)
   sub_6045C0A0(a1 + 167);
   sub_6045C0A0(a1 + 66);
   sub_60954610(a1 + 48);
-  v3 = (void *)sead_CalculateTask_~CalculateTask(a1);
-  operator delete(v3);
+  v3 = (void *)sead_CalculateTask_dtor(a1);
+  __operator_delete(v3);
 }
 
 /* ============================================================================
@@ -25362,7 +25362,7 @@ int __fastcall sub_607E375C(_DWORD *a1)
   int v111; // [sp+5Ch] [bp-4Ch]
 
   sub_60023F4C(a1);
-  v2 = operator new(0x390u);
+  v2 = __operator_new(0x390u);
   identifier.vtable = &g_vtable_forsead_SafeStringBase<char>;
   identifier.cstr = "DarkCloudDemo";
   sub_60443FE0(v2, &identifier);
@@ -25370,20 +25370,20 @@ int __fastcall sub_607E375C(_DWORD *a1)
   identifier.vtable = &g_vtable_forsead_SafeStringBase<char>;
   v3 = dword_60CD0B40;
   identifier.cstr = "3D";
-  v4 = operator new(0x1FCu, 0, 4);
+  v4 = __operator_new_al(0x1FCu, 0, 4);
   sub_6044364C();
   sub_60958220(v3, v4, 6, &identifier, 0, 0);
   sub_60443628(v4, v2);
   identifier.vtable = &g_vtable_forsead_SafeStringBase<char>;
   identifier.cstr = "DepthShadow";
-  v5 = operator new(0x1550u, 0, 4);
+  v5 = __operator_new_al(0x1550u, 0, 4);
   sub_60446220();
   sub_60958220(v3, v5, 5, &identifier, 0, 0);
   sub_60443628(v5, v2);
   *(_BYTE *)(v5 + 5449) = 1;
   identifier.vtable = &g_vtable_forsead_SafeStringBase<char>;
   identifier.cstr = "Reflection";
-  v6 = operator new(0x898u, 0, 4);
+  v6 = __operator_new_al(0x898u, 0, 4);
   sub_60441B18();
   sub_60958220(v3, v6, 3, &identifier, 0, 0);
   sub_60443628(v6, v2);
@@ -25405,28 +25405,28 @@ int __fastcall sub_607E375C(_DWORD *a1)
   identifier.vtable = &g_vtable_forsead_SafeStringBase<char>;
   identifier.cstr = "cobFlagPeach";
   Model = (void *)Resource_getModel(v7, &identifier, 6, 1, 1, 2, 1, 1, 1, 0);
-  v9 = (ModelWrapper *)operator new(0x30u, 0, 4);
+  v9 = (ModelWrapper *)__operator_new_al(0x30u, 0, 4);
   v10 = ModelWrapper_ctor(v9, Model, 1, 1, 2, 1, 1);
   ModelWrapper_setup(v10, (int)v7, 0, 0);
   a1[642] = v9;
   identifier.vtable = &g_vtable_forsead_SafeStringBase<char>;
   identifier.cstr = "cobFlagPeach";
   v11 = (void *)Resource_getModel(v7, &identifier, 6, 1, 1, 2, 1, 1, 1, 0);
-  v12 = (ModelWrapper *)operator new(0x30u, 0, 4);
+  v12 = (ModelWrapper *)__operator_new_al(0x30u, 0, 4);
   v13 = ModelWrapper_ctor(v12, v11, 1, 1, 2, 1, 1);
   ModelWrapper_setup(v13, (int)v7, 0, 0);
   a1[643] = v12;
   identifier.vtable = &g_vtable_forsead_SafeStringBase<char>;
   identifier.cstr = "cobFlagPeach";
   v14 = (void *)Resource_getModel(v7, &identifier, 6, 1, 1, 2, 1, 1, 1, 0);
-  v15 = (ModelWrapper *)operator new(0x30u, 0, 4);
+  v15 = (ModelWrapper *)__operator_new_al(0x30u, 0, 4);
   v16 = ModelWrapper_ctor(v15, v14, 1, 1, 2, 1, 1);
   ModelWrapper_setup(v16, (int)v7, 0, 0);
   a1[644] = v15;
   identifier.vtable = &g_vtable_forsead_SafeStringBase<char>;
   identifier.cstr = "cobFlagPeach";
   v17 = (void *)Resource_getModel(v7, &identifier, 6, 1, 1, 2, 1, 1, 1, 0);
-  v18 = (ModelWrapper *)operator new(0x30u, 0, 4);
+  v18 = (ModelWrapper *)__operator_new_al(0x30u, 0, 4);
   v19 = ModelWrapper_ctor(v18, v17, 1, 1, 2, 1, 1);
   ModelWrapper_setup(v19, (int)v7, 0, 0);
   a1[645] = v18;
@@ -25560,28 +25560,28 @@ int __fastcall sub_607E375C(_DWORD *a1)
   identifier.vtable = &g_vtable_forsead_SafeStringBase<char>;
   identifier.cstr = "CS_W8a_World";
   v37 = (void *)Resource_getModel(v36, &identifier, 6, 1, 1, 2, 1, 1, 1, 0);
-  v38 = (ModelWrapper *)operator new(0x30u, 0, 4);
+  v38 = (ModelWrapper *)__operator_new_al(0x30u, 0, 4);
   v39 = ModelWrapper_ctor(v38, v37, 1, 1, 2, 1, 1);
   ModelWrapper_setup(v39, (int)v36, 0, 0);
   a1[639] = v38;
   identifier.vtable = &g_vtable_forsead_SafeStringBase<char>;
   identifier.cstr = "CS_W8a_Castle";
   v40 = (void *)Resource_getModel(v36, &identifier, 6, 1, 1, 2, 1, 1, 1, 0);
-  v41 = (ModelWrapper *)operator new(0x30u, 0, 4);
+  v41 = (ModelWrapper *)__operator_new_al(0x30u, 0, 4);
   v42 = ModelWrapper_ctor(v41, v40, 1, 1, 2, 1, 1);
   ModelWrapper_setup(v42, (int)v36, 0, 0);
   a1[640] = v41;
   identifier.vtable = &g_vtable_forsead_SafeStringBase<char>;
   identifier.cstr = "CS_W8a_Wall";
   v43 = (void *)Resource_getModel(v36, &identifier, 6, 1, 1, 2, 1, 1, 1, 0);
-  v44 = (ModelWrapper *)operator new(0x30u, 0, 4);
+  v44 = (ModelWrapper *)__operator_new_al(0x30u, 0, 4);
   v45 = ModelWrapper_ctor(v44, v43, 1, 1, 2, 1, 1);
   ModelWrapper_setup(v45, (int)v36, 0, 0);
   a1[641] = v44;
   identifier.vtable = &g_vtable_forsead_SafeStringBase<char>;
   identifier.cstr = "CS_W8a_Ocean";
   v46 = (void *)Resource_getModel(v36, &identifier, 6, 1, 1, 2, 1, 1, 1, 0);
-  v47 = (ModelWrapper *)operator new(0x30u, 0, 4);
+  v47 = (ModelWrapper *)__operator_new_al(0x30u, 0, 4);
   v48 = ModelWrapper_ctor(v47, v46, 1, 1, 2, 1, 1);
   ModelWrapper_setup(v48, (int)v36, 0, 0);
   a1[646] = v47;
@@ -25598,7 +25598,7 @@ int __fastcall sub_607E375C(_DWORD *a1)
   identifier.vtable = &g_vtable_forsead_SafeStringBase<char>;
   identifier.cstr = "CS_W8a_Synchro";
   v51 = (void *)Resource_getModel(v36, &identifier, 6, 1, 1, 2, 1, 1, 1, 0);
-  v52 = (ModelWrapper *)operator new(0x30u, 0, 4);
+  v52 = (ModelWrapper *)__operator_new_al(0x30u, 0, 4);
   v53 = ModelWrapper_ctor(v52, v51, 1, 1, 2, 1, 1);
   ModelWrapper_setup(v53, (int)v36, 0, 0);
   a1[647] = v52;
@@ -25608,7 +25608,7 @@ int __fastcall sub_607E375C(_DWORD *a1)
   identifier.vtable = &g_vtable_forsead_SafeStringBase<char>;
   identifier.cstr = "CS_W8a_CloudBG";
   v54 = (void *)Resource_getModel(v36, &identifier, 6, 1, 1, 2, 1, 1, 1, 0);
-  v55 = (ModelWrapper *)operator new(0x30u, 0, 4);
+  v55 = (ModelWrapper *)__operator_new_al(0x30u, 0, 4);
   v56 = ModelWrapper_ctor(v55, v54, 1, 1, 2, 1, 1);
   ModelWrapper_setup(v56, (int)v36, 0, 0);
   a1[648] = v55;
@@ -25660,7 +25660,7 @@ int __fastcall sub_607E375C(_DWORD *a1)
   identifier.vtable = &g_vtable_forsead_SafeStringBase<char>;
   identifier.cstr = "CS_W8a_DarkCloud_Demo2";
   v76 = (void *)Resource_getModel(v36, &identifier, 6, 1, 1, 2, 1, 1, 1, 0);
-  v77 = (ModelWrapper *)operator new(0x30u, 0, 4);
+  v77 = (ModelWrapper *)__operator_new_al(0x30u, 0, 4);
   v78 = ModelWrapper_ctor(v77, v76, 1, 1, 2, 1, 1);
   ModelWrapper_setup(v78, (int)v36, 0, 0);
   a1[649] = v77;
@@ -25750,7 +25750,7 @@ int __fastcall sub_607E4720(float *a1)
   *((_DWORD *)a1 + 59) = sub_607E4B1C;
   a1[60] = 0.0;
   *((_DWORD *)a1 + 57) = off_60C26B4C;
-  sead_SafeStringBase<char>::operator=((int)(a1 + 52), (int)v19);
+  sead_SafeStringBase_char::operator=((int)(a1 + 52), (int)v19);
   *((_DWORD *)a1 + 54) = 1;
   sub_609553AC(**(_DWORD **)(v2 + 36), a1 + 48);
   a1[655] = 0.0;
@@ -25995,7 +25995,7 @@ _DWORD *__fastcall sub_607E4EF8(_DWORD *a1, void *a2)
   int v4; // r2
   int v5; // r3
 
-  result = (_DWORD *)operator new(0x10u, a2, 4);
+  result = (_DWORD *)__operator_new_al(0x10u, a2, 4);
   *result = &off_60C26B74;
   v4 = a1[2];
   v5 = a1[3];
@@ -26029,7 +26029,7 @@ int __fastcall sub_607E5470(_DWORD *a1)
   {
     v5[v4] = EffectWrapper_vtable;
     sub_60237560((int)&v5[v4]);
-    sead_IDisposer_~IDisposer(&v5[v4]);
+    sead_IDisposer_dtor(&v5[v4]);
     v4 -= 26;
   }
   while ( v4 != -106496 );
@@ -26051,7 +26051,7 @@ int __fastcall sub_607E5470(_DWORD *a1)
   sub_60954610(a1 + 82);
   sub_60954610(a1 + 65);
   sub_60954610(a1 + 48);
-  return sead_CalculateTask_~CalculateTask(a1);
+  return sead_CalculateTask_dtor(a1);
 }
 
 /* ============================================================================
@@ -26064,7 +26064,7 @@ void __fastcall sub_607E55C8(_DWORD *a1)
   void *v1; // r0
 
   v1 = (void *)sub_607E5470(a1);
-  operator delete(v1);
+  __operator_delete(v1);
 }
 
 /* ============================================================================
@@ -26272,11 +26272,11 @@ int __fastcall sub_607E55DC(int a1)
   sub_60421050(dword_60C9BAFC, a1 + 1726000);
   v174 = (_DWORD *)a1;
   *(_BYTE *)(a1 + 1728768) = 0;
-  v3 = operator new(0x390u);
+  v3 = __operator_new(0x390u);
   a2.vtable = &g_vtable_forsead_SafeStringBase<char>;
   a2.cstr = "Demo";
   sub_60443FE0(v3, &a2);
-  v4 = operator new(0x390u);
+  v4 = __operator_new(0x390u);
   a2.vtable = &g_vtable_forsead_SafeStringBase<char>;
   a2.cstr = "DemoDV";
   sub_60443FE0(v4, &a2);
@@ -26285,13 +26285,13 @@ int __fastcall sub_607E55DC(int a1)
   a2.vtable = &g_vtable_forsead_SafeStringBase<char>;
   v5 = dword_60CD0B40;
   a2.cstr = "3D";
-  v6 = operator new(0x1FCu, 0, 4);
+  v6 = __operator_new_al(0x1FCu, 0, 4);
   sub_6044364C();
   sub_60958220(v5, v6, 7, &a2, 0, 0);
   sub_60443628(v6, v3);
   a2.vtable = &g_vtable_forsead_SafeStringBase<char>;
   a2.cstr = "DV";
-  v7 = operator new(0x1FCu, 0, 4);
+  v7 = __operator_new_al(0x1FCu, 0, 4);
   sub_6044364C();
   sub_60958220(v5, v7, 5, &a2, 0, 0);
   sub_60443628(v7, v4);
@@ -26390,7 +26390,7 @@ int __fastcall sub_607E55DC(int a1)
       a2.cstr = (char *)(v24 + 2);
       modela = (void *)Resource_getModel2(v22, &a2, 1, 1, 1, 1, 0, 0, 0);
       v10 = v174;
-      v25 = (ModelWrapper *)operator new(0x30u, 0, 4);
+      v25 = (ModelWrapper *)__operator_new_al(0x30u, 0, 4);
       v26 = ModelWrapper_ctor(v25, modela, 1, 1, 1, 1, 0);
       v23 = v21 + 856;
       ModelWrapper_setup(v26, (int)v22, 0, 0);
@@ -26470,7 +26470,7 @@ int __fastcall sub_607E55DC(int a1)
     a2.vtable = &g_vtable_forsead_SafeStringBase<char>;
     a2.cstr = "MH_model";
     Model2 = (void *)Resource_getModel2(v40, &a2, 1, 1, 1, 1, 0, 0, 0);
-    v42 = (ModelWrapper *)operator new(0x30u, 0, 4);
+    v42 = (ModelWrapper *)__operator_new_al(0x30u, 0, 4);
     v10 = v174;
     v43 = ModelWrapper_ctor(v42, Model2, 1, 1, 1, 1, 0);
     ModelWrapper_setup(v43, (int)v40, 0, 0);
@@ -26488,7 +26488,7 @@ int __fastcall sub_607E55DC(int a1)
     {
 LABEL_43:
       v46 = (v44 & 0x7F) == 0;
-      v47 = operator new(0xF0u);
+      v47 = __operator_new(0xF0u);
       v48 = sub_6028FDA0(v47, v46);
       v10[432296] = v48;
       sub_6028FE94(v48, 1729184, v49);
@@ -26509,7 +26509,7 @@ LABEL_43:
       a2.cstr = (char *)v186;
       a2.vtable = &BufferedSafeStringBase_char_vtable_probably;
       v185 = 64;
-      sead_BufferedSafeStringBase<char>::assureTerminationImpl_((int)&a2);
+      sead_BufferedSafeStringBase_char::assureTerminationImpl_((int)&a2);
       v51 = &v10[v50];
       *a2.cstr = 0;
       a2.vtable = &off_60BD4BF0;
@@ -26726,7 +26726,7 @@ LABEL_85:
               path.cstr = (char *)v181;
               path.vtable = &BufferedSafeStringBase_char_vtable_probably;
               v180 = 16;
-              sead_BufferedSafeStringBase<char>::assureTerminationImpl_((int)&path);
+              sead_BufferedSafeStringBase_char::assureTerminationImpl_((int)&path);
               *path.cstr = 0;
               path.vtable = &off_60BD54D4;
               v106 = (*(int (__fastcall **)(int, int))(*(_DWORD *)v102 + 88))(v102, v105);
@@ -26778,7 +26778,7 @@ LABEL_189:
                   path.cstr = (char *)v181;
                   path.vtable = &BufferedSafeStringBase_char_vtable_probably;
                   v180 = 16;
-                  sead_BufferedSafeStringBase<char>::assureTerminationImpl_((int)&path);
+                  sead_BufferedSafeStringBase_char::assureTerminationImpl_((int)&path);
                   *path.cstr = 0;
                   path.vtable = &off_60BD54D4;
                   v116 = (*(int (__fastcall **)(int, int))(*(_DWORD *)v112 + 88))(v112, v115);
@@ -26831,7 +26831,7 @@ LABEL_189:
   v125 = (unsigned __int16 *)(v124 + 32);
   v10[431252] = v126;
   CurrentHeap = (void *)sead_HeapMgr_getCurrentHeap(sead_HeapMgr_sInstance);
-  v128 = (_DWORD *)operator new(0x40u, CurrentHeap, 16);
+  v128 = (_DWORD *)__operator_new_al(0x40u, CurrentHeap, 16);
   v129 = v10 + 431251;
   v128[4] = 0;
   v128[3] = 0;
@@ -26885,7 +26885,7 @@ LABEL_189:
   }
   sub_60872A2C(&a2);
   v136 = v185;
-  v137 = operator new[](v185);
+  v137 = __operator_new_array_al(v185);
   sub_60872AC4(*v129, &a2, v137, v136, a5, a6, a7);
   sub_60872B54(*v129, v10[431252]);
   v138 = "010_dvCamera_010";
@@ -26895,7 +26895,7 @@ LABEL_189:
   v141 = *(_DWORD *)(v139 + 32);
   v140 = (unsigned __int16 *)(v139 + 32);
   v174[431270] = v141;
-  v142 = (_DWORD *)operator new(0x40u, CurrentHeap, 16);
+  v142 = (_DWORD *)__operator_new_al(0x40u, CurrentHeap, 16);
   v143 = v174 + 431269;
   v142[4] = 0;
   v142[3] = 0;
@@ -26949,7 +26949,7 @@ LABEL_189:
   }
   sub_60872A2C(&path);
   v150 = v180;
-  v151 = operator new[](v180);
+  v151 = __operator_new_array_al(v180);
   sub_60872AC4(*v143, &path, v151, v150, a5a, a6a, a7a);
   sub_60872B54(*v143, v174[431270]);
   v174[431246] = 0;
@@ -27037,7 +27037,7 @@ LABEL_189:
         & 1) != 0
       || *(_BYTE *)(dword_60CC6D78 + 109051) )
     {
-      v155 = operator new(0xDE0u);
+      v155 = __operator_new(0xDE0u);
       v174[984] = sub_6054CFE8(v155);
     }
     else
@@ -27171,7 +27171,7 @@ void __fastcall sub_607E74E0(int a1)
   *(_DWORD *)(a1 + 372) = sub_607E792C;
   *(_DWORD *)(a1 + 376) = 0;
   *(_DWORD *)(a1 + 364) = off_60C26C3C;
-  sead_SafeStringBase<char>::operator=(a1 + 344, (int)&v15);
+  sead_SafeStringBase_char::operator=(a1 + 344, (int)&v15);
   *(_DWORD *)(a1 + 352) = 1;
   v3 = *(_DWORD **)(v2 + 36);
   if ( *(_DWORD *)(v2 + 32) > 5u )
@@ -27183,7 +27183,7 @@ void __fastcall sub_607E74E0(int a1)
   *(_DWORD *)(a1 + 440) = sub_607E7AA8;
   *(_DWORD *)(a1 + 444) = 0;
   *(_DWORD *)(a1 + 432) = off_60C26C3C;
-  sead_SafeStringBase<char>::operator=(a1 + 412, (int)&v15);
+  sead_SafeStringBase_char::operator=(a1 + 412, (int)&v15);
   *(_DWORD *)(a1 + 420) = 1;
   v4 = *(_DWORD **)(v2 + 36);
   if ( *(_DWORD *)(v2 + 32) > 5u )
@@ -27195,7 +27195,7 @@ void __fastcall sub_607E74E0(int a1)
   *(_DWORD *)(a1 + 236) = sub_607E7B48;
   *(_DWORD *)(a1 + 240) = 0;
   *(_DWORD *)(a1 + 228) = off_60C26C3C;
-  sead_SafeStringBase<char>::operator=(a1 + 208, (int)&v15);
+  sead_SafeStringBase_char::operator=(a1 + 208, (int)&v15);
   *(_DWORD *)(a1 + 216) = 1;
   sub_609553AC(**(_DWORD **)(v2 + 36), a1 + 192);
   v15 = &g_vtable_forsead_SafeStringBase<char>;
@@ -27204,7 +27204,7 @@ void __fastcall sub_607E74E0(int a1)
   *(_DWORD *)(a1 + 304) = sub_607E8134;
   *(_DWORD *)(a1 + 308) = 0;
   *(_DWORD *)(a1 + 296) = off_60C26C3C;
-  sead_SafeStringBase<char>::operator=(a1 + 276, (int)&v15);
+  sead_SafeStringBase_char::operator=(a1 + 276, (int)&v15);
   *(_DWORD *)(a1 + 284) = 1;
   v5 = *(_DWORD **)(v2 + 36);
   if ( *(_DWORD *)(v2 + 32) > 7u )
@@ -27216,7 +27216,7 @@ void __fastcall sub_607E74E0(int a1)
   *(_DWORD *)(a1 + 3984) = sub_607E815C;
   *(_DWORD *)(a1 + 3988) = 0;
   *(_DWORD *)(a1 + 3976) = off_60C26C3C;
-  sead_SafeStringBase<char>::operator=(a1 + 3956, (int)&v15);
+  sead_SafeStringBase_char::operator=(a1 + 3956, (int)&v15);
   *(_DWORD *)(a1 + 3964) = 1;
   v6 = *(_DWORD **)(v2 + 36);
   if ( *(_DWORD *)(v2 + 32) > 0xEu )
@@ -27232,7 +27232,7 @@ void __fastcall sub_607E74E0(int a1)
   *(_DWORD *)(a1 + 508) = sub_607E81F0;
   *(_DWORD *)(a1 + 512) = 0;
   *(_DWORD *)(a1 + 500) = off_60C26C3C;
-  sead_SafeStringBase<char>::operator=(a1 + 480, (int)&v15);
+  sead_SafeStringBase_char::operator=(a1 + 480, (int)&v15);
   *(_DWORD *)(a1 + 488) = 1;
   *(_DWORD *)(a1 + 492) = -300;
   v8 = *(_DWORD **)(v2 + 36);
@@ -27245,7 +27245,7 @@ void __fastcall sub_607E74E0(int a1)
   *(_DWORD *)(a1 + 576) = sub_607E8204;
   *(_DWORD *)(a1 + 580) = 0;
   *(_DWORD *)(a1 + 568) = off_60C26C3C;
-  sead_SafeStringBase<char>::operator=(a1 + 548, (int)&v15);
+  sead_SafeStringBase_char::operator=(a1 + 548, (int)&v15);
   *(_DWORD *)(a1 + 556) = 1;
   v9 = *(_DWORD **)(v2 + 36);
   if ( *(_DWORD *)(v2 + 32) > 7u )
@@ -27968,7 +27968,7 @@ int __fastcall sub_607E8220(int a1)
     s = (char *)v211;
     v208 = (int)&BufferedSafeStringBase_char_vtable_probably;
     v210 = 64;
-    sead_BufferedSafeStringBase<char>::assureTerminationImpl_((int)&v208);
+    sead_BufferedSafeStringBase_char::assureTerminationImpl_((int)&v208);
     v66 = v12;
     *s = 0;
     v67 = v9;
@@ -28204,7 +28204,7 @@ LABEL_43:
             v204 = v206;
             v203 = COERCE_FLOAT(&BufferedSafeStringBase_char_vtable_probably);
             v205 = 16;
-            sead_BufferedSafeStringBase<char>::assureTerminationImpl_((int)&v203);
+            sead_BufferedSafeStringBase_char::assureTerminationImpl_((int)&v203);
             *v204 = 0;
             v203 = COERCE_FLOAT(&off_60BD54D4);
             v51 = (*(int (__fastcall **)(int, int))(*(_DWORD *)v47 + 88))(v47, v49);
@@ -28250,7 +28250,7 @@ LABEL_43:
             v204 = v206;
             v203 = COERCE_FLOAT(&BufferedSafeStringBase_char_vtable_probably);
             v205 = 16;
-            sead_BufferedSafeStringBase<char>::assureTerminationImpl_((int)&v203);
+            sead_BufferedSafeStringBase_char::assureTerminationImpl_((int)&v203);
             *v204 = 0;
             v203 = COERCE_FLOAT(&off_60BD54D4);
             v60 = (*(int (__fastcall **)(int, int))(*(_DWORD *)v57 + 88))(v57, v59 + 1);
@@ -28291,7 +28291,7 @@ LABEL_121:
   s = (char *)v211;
   v208 = (int)&BufferedSafeStringBase_char_vtable_probably;
   v210 = 64;
-  sead_BufferedSafeStringBase<char>::assureTerminationImpl_((int)&v208);
+  sead_BufferedSafeStringBase_char::assureTerminationImpl_((int)&v208);
   *s = 0;
   v208 = (int)&off_60BD4BF0;
   sub_608FDDF4((int)&v208, "%03d_Camera_%03d", *(_WORD *)(dword_60CC6D78 + 109048) & 0x7F, *v7);
@@ -29137,7 +29137,7 @@ void __fastcall sub_607EACE4(int a1)
   void *v1; // r0
 
   v1 = (void *)sub_60026BFC(a1);
-  operator delete(v1);
+  __operator_delete(v1);
 }
 
 /* ============================================================================
@@ -29180,7 +29180,7 @@ _DWORD *__fastcall sub_607EAD50(_DWORD *a1, void *a2)
   int v4; // r2
   int v5; // r3
 
-  result = (_DWORD *)operator new(0x10u, a2, 4);
+  result = (_DWORD *)__operator_new_al(0x10u, a2, 4);
   *result = &off_60C26C64;
   v4 = a1[2];
   v5 = a1[3];
@@ -29423,7 +29423,7 @@ void __fastcall sub_607EB20C(_DWORD *a1)
   *a1 = off_60C26C8C;
   sub_605189C8(a1 + 142);
   v2 = (void *)sub_607E3494(a1);
-  operator delete(v2);
+  __operator_delete(v2);
 }
 
 /* ============================================================================
@@ -29607,7 +29607,7 @@ void __fastcall sub_607EB4F4(_DWORD *a1)
   *a1 = off_60C26D18;
   sub_60560CAC(a1 + 142);
   v2 = (void *)sub_607E3494(a1);
-  operator delete(v2);
+  __operator_delete(v2);
 }
 
 /* ============================================================================
@@ -29791,7 +29791,7 @@ int __fastcall sub_607EB808(int a1)
 {
   int v2; // r0
 
-  v2 = operator new(0xFC20u, *(void **)(*(_DWORD *)a1 + 4 * *(_DWORD *)(*(_DWORD *)a1 + 20)), 4);
+  v2 = __operator_new_al(0xFC20u, *(void **)(*(_DWORD *)a1 + 4 * *(_DWORD *)(*(_DWORD *)a1 + 20)), 4);
   return sub_607F0458(v2, a1);
 }
 
@@ -29804,7 +29804,7 @@ int __fastcall sub_607EB834(int a1)
 {
   int v2; // r0
 
-  v2 = operator new(0xFC28u, *(void **)(*(_DWORD *)a1 + 4 * *(_DWORD *)(*(_DWORD *)a1 + 20)), 4);
+  v2 = __operator_new_al(0xFC28u, *(void **)(*(_DWORD *)a1 + 4 * *(_DWORD *)(*(_DWORD *)a1 + 20)), 4);
   return sub_607EFCA0(v2, a1);
 }
 
@@ -29817,7 +29817,7 @@ int __fastcall sub_607EB860(int a1)
 {
   int v2; // r0
 
-  v2 = operator new(0xFC28u, *(void **)(*(_DWORD *)a1 + 4 * *(_DWORD *)(*(_DWORD *)a1 + 20)), 4);
+  v2 = __operator_new_al(0xFC28u, *(void **)(*(_DWORD *)a1 + 4 * *(_DWORD *)(*(_DWORD *)a1 + 20)), 4);
   return sub_607EB458(v2, a1);
 }
 
@@ -29830,7 +29830,7 @@ int __fastcall sub_607EB88C(int a1)
 {
   int v2; // r0
 
-  v2 = operator new(0x14B50u, *(void **)(*(_DWORD *)a1 + 4 * *(_DWORD *)(*(_DWORD *)a1 + 20)), 4);
+  v2 = __operator_new_al(0x14B50u, *(void **)(*(_DWORD *)a1 + 4 * *(_DWORD *)(*(_DWORD *)a1 + 20)), 4);
   return sub_607F709C(v2, a1);
 }
 
@@ -29843,7 +29843,7 @@ int __fastcall sub_607EB8BC(int a1)
 {
   int v2; // r0
 
-  v2 = operator new(0x23Cu, *(void **)(*(_DWORD *)a1 + 4 * *(_DWORD *)(*(_DWORD *)a1 + 20)), 4);
+  v2 = __operator_new_al(0x23Cu, *(void **)(*(_DWORD *)a1 + 4 * *(_DWORD *)(*(_DWORD *)a1 + 20)), 4);
   return sub_607F0C3C(v2, a1);
 }
 
@@ -29856,7 +29856,7 @@ int __fastcall sub_607EB8E8(int a1)
 {
   int v2; // r0
 
-  v2 = operator new(0x4ACCu, *(void **)(*(_DWORD *)a1 + 4 * *(_DWORD *)(*(_DWORD *)a1 + 20)), 4);
+  v2 = __operator_new_al(0x4ACCu, *(void **)(*(_DWORD *)a1 + 4 * *(_DWORD *)(*(_DWORD *)a1 + 20)), 4);
   return sub_607F6C14(v2, a1);
 }
 
@@ -29869,7 +29869,7 @@ _DWORD *__fastcall sub_607EB914(int a1)
 {
   _DWORD *v1; // r0
 
-  v1 = (_DWORD *)operator new(0x1098u, *(void **)(*(_DWORD *)a1 + 4 * *(_DWORD *)(*(_DWORD *)a1 + 20)), 4);
+  v1 = (_DWORD *)__operator_new_al(0x1098u, *(void **)(*(_DWORD *)a1 + 4 * *(_DWORD *)(*(_DWORD *)a1 + 20)), 4);
   return sub_607E0144(v1);
 }
 
@@ -29882,7 +29882,7 @@ int __fastcall sub_607EB940(int a1)
 {
   int v2; // r0
 
-  v2 = operator new(0x11ECu, *(void **)(*(_DWORD *)a1 + 4 * *(_DWORD *)(*(_DWORD *)a1 + 20)), 4);
+  v2 = __operator_new_al(0x11ECu, *(void **)(*(_DWORD *)a1 + 4 * *(_DWORD *)(*(_DWORD *)a1 + 20)), 4);
   return sub_607F8D3C(v2, a1);
 }
 
@@ -29895,7 +29895,7 @@ _DWORD *__fastcall sub_607EB96C(int a1)
 {
   _DWORD *v2; // r0
 
-  v2 = (_DWORD *)operator new(0x105Cu, *(void **)(*(_DWORD *)a1 + 4 * *(_DWORD *)(*(_DWORD *)a1 + 20)), 4);
+  v2 = (_DWORD *)__operator_new_al(0x105Cu, *(void **)(*(_DWORD *)a1 + 4 * *(_DWORD *)(*(_DWORD *)a1 + 20)), 4);
   return sub_607EB188(v2, a1);
 }
 
@@ -30115,7 +30115,7 @@ int __fastcall sub_607EC148(_DWORD *a1)
   v2 = a1 + 57;
   sub_604E36DC(a1 + 74);
   sub_60954610(v2);
-  return sead_CalculateTask_~CalculateTask(a1);
+  return sead_CalculateTask_dtor(a1);
 }
 
 /* ============================================================================
@@ -30132,8 +30132,8 @@ void __fastcall sub_607EC188(_DWORD *a1)
   v2 = a1 + 57;
   sub_604E36DC(a1 + 74);
   sub_60954610(v2);
-  v3 = (void *)sead_CalculateTask_~CalculateTask(a1);
-  operator delete(v3);
+  v3 = (void *)sead_CalculateTask_dtor(a1);
+  __operator_delete(v3);
 }
 
 /* ============================================================================
@@ -30167,7 +30167,7 @@ int __fastcall sub_607EC1F0(_DWORD *a1)
   a1[68] = sub_607EC29C;
   a1[69] = 0;
   a1[66] = off_60C26E80;
-  sead_SafeStringBase<char>::operator=((int)(a1 + 61), (int)v4);
+  sead_SafeStringBase_char::operator=((int)(a1 + 61), (int)v4);
   a1[63] = 1;
   v2 = *(_DWORD **)(dword_60CD0B40 + 36);
   if ( *(_DWORD *)(dword_60CD0B40 + 32) > 0xEu )
@@ -30404,7 +30404,7 @@ _DWORD *__fastcall sub_607EC558(_DWORD *a1, void *a2)
   int v4; // r2
   int v5; // r3
 
-  result = (_DWORD *)operator new(0x10u, a2, 4);
+  result = (_DWORD *)__operator_new_al(0x10u, a2, 4);
   *result = &off_60C26EA8;
   v4 = a1[2];
   v5 = a1[3];
@@ -31377,7 +31377,7 @@ int __fastcall sub_607EDC44(int a1)
   sub_60954610(a1 + 232);
   if ( *(_BYTE *)(a1 + 192) )
     dword_60CC5BA8 = 0;
-  return sead_CalculateTask_~CalculateTask((_DWORD *)a1);
+  return sead_CalculateTask_dtor((_DWORD *)a1);
 }
 
 /* ============================================================================
@@ -31390,7 +31390,7 @@ void __fastcall sub_607EDD24(int a1)
   void *v1; // r0
 
   v1 = (void *)sub_607EDC44(a1);
-  operator delete(v1);
+  __operator_delete(v1);
 }
 
 /* ============================================================================
@@ -31439,7 +31439,7 @@ int __fastcall sub_607EDD38(int a1)
   *(_BYTE *)(dword_60CC6D78 + 109057) = 0;
   sub_60426530(dword_60C9BBD4, 0);
   *(_BYTE *)(dword_60C99DEC + 522) = 0;
-  v6 = operator new(0x390u);
+  v6 = __operator_new(0x390u);
   v14 = &g_vtable_forsead_SafeStringBase<char>;
   v15 = "3D";
   sub_60443FE0(v6, &v14);
@@ -31447,12 +31447,12 @@ int __fastcall sub_607EDD38(int a1)
   v14 = &g_vtable_forsead_SafeStringBase<char>;
   v15 = "3D";
   v7 = dword_60CD0B40;
-  v8 = operator new(0x1FCu, 0, 4);
+  v8 = __operator_new_al(0x1FCu, 0, 4);
   sub_6044364C();
   sub_60958220(v7, v8, 6, &v14, 0, 0);
   v14 = &g_vtable_forsead_SafeStringBase<char>;
   v15 = "BackLayout";
-  v9 = (_DWORD *)operator new(0x1A4u, 0, 4);
+  v9 = (_DWORD *)__operator_new_al(0x1A4u, 0, 4);
   memset(v9, 0, 0x1A4u);
   sub_60441A3C(v9);
   *v9 = off_60BF9FE4;
@@ -31460,7 +31460,7 @@ int __fastcall sub_607EDD38(int a1)
   sub_60958220(v7, v9, 5, &v14, 0, 0);
   v14 = &g_vtable_forsead_SafeStringBase<char>;
   v15 = "FrontLayout";
-  v10 = (_DWORD *)operator new(0x1A4u, 0, 4);
+  v10 = (_DWORD *)__operator_new_al(0x1A4u, 0, 4);
   memset(v10, 0, 0x1A4u);
   sub_60441A3C(v10);
   *v10 = off_60BF9FE4;
@@ -31539,7 +31539,7 @@ int __fastcall sub_607EE160(int a1)
   *(_DWORD *)(a1 + 480) = sub_607EE584;
   *(_DWORD *)(a1 + 484) = 0;
   *(_DWORD *)(a1 + 472) = off_60C26F98;
-  sead_SafeStringBase<char>::operator=(a1 + 452, (int)&v18);
+  sead_SafeStringBase_char::operator=(a1 + 452, (int)&v18);
   *(_DWORD *)(a1 + 460) = 2;
   sub_6095537C(**(_DWORD **)(v3 + 36), 0, a1 + 436);
   v18 = &g_vtable_forsead_SafeStringBase<char>;
@@ -31548,7 +31548,7 @@ int __fastcall sub_607EE160(int a1)
   *(_DWORD *)(a1 + 276) = sub_607EE67C;
   *(_DWORD *)(a1 + 280) = 0;
   *(_DWORD *)(a1 + 268) = off_60C26FC0;
-  sead_SafeStringBase<char>::operator=(a1 + 248, (int)&v18);
+  sead_SafeStringBase_char::operator=(a1 + 248, (int)&v18);
   *(_DWORD *)(a1 + 256) = 1;
   v4 = *(_DWORD **)(v3 + 36);
   if ( *(_DWORD *)(v3 + 32) > 5u )
@@ -31560,7 +31560,7 @@ int __fastcall sub_607EE160(int a1)
   *(_DWORD *)(a1 + 344) = sub_607EE820;
   *(_DWORD *)(a1 + 348) = 0;
   *(_DWORD *)(a1 + 336) = off_60C26FC0;
-  sead_SafeStringBase<char>::operator=(a1 + 316, (int)&v18);
+  sead_SafeStringBase_char::operator=(a1 + 316, (int)&v18);
   *(_DWORD *)(a1 + 324) = 1;
   v5 = *(_DWORD **)(v3 + 36);
   if ( *(_DWORD *)(v3 + 32) > 6u )
@@ -31572,7 +31572,7 @@ int __fastcall sub_607EE160(int a1)
   *(_DWORD *)(a1 + 412) = sub_607EE85C;
   *(_DWORD *)(a1 + 416) = 0;
   *(_DWORD *)(a1 + 404) = off_60C26FC0;
-  sead_SafeStringBase<char>::operator=(a1 + 384, (int)&v18);
+  sead_SafeStringBase_char::operator=(a1 + 384, (int)&v18);
   *(_DWORD *)(a1 + 392) = 1;
   v6 = *(_DWORD **)(v3 + 36);
   if ( *(_DWORD *)(v3 + 32) > 8u )
@@ -31804,7 +31804,7 @@ int __fastcall sub_607EE9D4(int a1)
 {
   int v2; // r0
 
-  v2 = operator new(0xE8u, *(void **)(*(_DWORD *)a1 + 4 * *(_DWORD *)(*(_DWORD *)a1 + 20)), 4);
+  v2 = __operator_new_al(0xE8u, *(void **)(*(_DWORD *)a1 + 4 * *(_DWORD *)(*(_DWORD *)a1 + 20)), 4);
   return sub_607F10E0(v2, a1);
 }
 
@@ -31962,7 +31962,7 @@ _DWORD *__fastcall sub_607EEB48(_DWORD *a1, void *a2)
   int v4; // r2
   int v5; // r3
 
-  result = (_DWORD *)operator new(0x10u, a2, 4);
+  result = (_DWORD *)__operator_new_al(0x10u, a2, 4);
   *result = &off_60C26FAC;
   v4 = a1[2];
   v5 = a1[3];
@@ -32013,7 +32013,7 @@ _DWORD *__fastcall sub_607EEBD4(_DWORD *a1, void *a2)
   int v4; // r2
   int v5; // r3
 
-  result = (_DWORD *)operator new(0x10u, a2, 4);
+  result = (_DWORD *)__operator_new_al(0x10u, a2, 4);
   *result = &off_60C26FE8;
   v4 = a1[2];
   v5 = a1[3];
@@ -32327,7 +32327,7 @@ int __fastcall sub_607EF560(int a1)
   sub_6045C0A0(a1 + 196);
   if ( *(_BYTE *)(a1 + 192) )
     dword_60CC5DEC = 0;
-  return sead_CalculateTask_~CalculateTask((_DWORD *)a1);
+  return sead_CalculateTask_dtor((_DWORD *)a1);
 }
 
 /* ============================================================================
@@ -32340,7 +32340,7 @@ void __fastcall sub_607EF60C(int a1)
   void *v1; // r0
 
   v1 = (void *)sub_607EF560(a1);
-  operator delete(v1);
+  __operator_delete(v1);
 }
 
 /* ============================================================================
@@ -32359,7 +32359,7 @@ int __fastcall sub_607EF620(int a1)
   v2 = dword_60CD0B40;
   v6 = &g_vtable_forsead_SafeStringBase<char>;
   v7 = "BackLayout";
-  v3 = (_DWORD *)operator new(0x1A4u, 0, 4);
+  v3 = (_DWORD *)__operator_new_al(0x1A4u, 0, 4);
   memset(v3, 0, 0x1A4u);
   sub_60441A3C(v3);
   *v3 = off_60BF9FE4;
@@ -32367,7 +32367,7 @@ int __fastcall sub_607EF620(int a1)
   sub_60958220(v2, v3, 5, &v6, 0, 0);
   v6 = &g_vtable_forsead_SafeStringBase<char>;
   v7 = "FrontLayout";
-  v4 = (_DWORD *)operator new(0x1A4u, 0, 4);
+  v4 = (_DWORD *)__operator_new_al(0x1A4u, 0, 4);
   memset(v4, 0, 0x1A4u);
   sub_60441A3C(v4);
   *v4 = off_60BF9FE4;
@@ -32410,7 +32410,7 @@ int __fastcall sub_607EF794(int a1)
   *(_DWORD *)(a1 + 2296) = sub_607EF984;
   *(_DWORD *)(a1 + 2300) = 0;
   *(_DWORD *)(a1 + 2288) = off_60C270D8;
-  sead_SafeStringBase<char>::operator=(a1 + 2268, (int)&v12);
+  sead_SafeStringBase_char::operator=(a1 + 2268, (int)&v12);
   *(_DWORD *)(a1 + 2276) = 1;
   v3 = *(_DWORD **)(v2 + 36);
   if ( *(_DWORD *)(v2 + 32) > 5u )
@@ -32422,7 +32422,7 @@ int __fastcall sub_607EF794(int a1)
   *(_DWORD *)(a1 + 2364) = sub_607EF990;
   *(_DWORD *)(a1 + 2368) = 0;
   *(_DWORD *)(a1 + 2356) = off_60C270D8;
-  sead_SafeStringBase<char>::operator=(a1 + 2336, (int)&v12);
+  sead_SafeStringBase_char::operator=(a1 + 2336, (int)&v12);
   *(_DWORD *)(a1 + 2344) = 1;
   v4 = *(_DWORD **)(v2 + 36);
   if ( *(_DWORD *)(v2 + 32) > 6u )
@@ -32646,7 +32646,7 @@ _DWORD *__fastcall sub_607EFB2C(_DWORD *a1, void *a2)
   int v4; // r2
   int v5; // r3
 
-  result = (_DWORD *)operator new(0x10u, a2, 4);
+  result = (_DWORD *)__operator_new_al(0x10u, a2, 4);
   *result = &off_60C27100;
   v4 = a1[2];
   v5 = a1[3];
@@ -32733,7 +32733,7 @@ void __fastcall sub_607EFD3C(_DWORD *a1)
   *a1 = off_60C27114;
   sub_60560CAC(a1 + 142);
   v2 = (void *)sub_607E3494(a1);
-  operator delete(v2);
+  __operator_delete(v2);
 }
 
 /* ============================================================================
@@ -32927,10 +32927,10 @@ int __fastcall sub_607F0094(int a1)
   *(_DWORD *)a1 = off_60C5C4B0;
   *(_DWORD *)(a1 + 392) = off_60BFA048;
   sead_MethodTreeNode_detachAll(a1 + 392);
-  sead_IDisposer_~IDisposer((_DWORD *)(a1 + 392));
+  sead_IDisposer_dtor((_DWORD *)(a1 + 392));
   *(_DWORD *)(a1 + 312) = off_60BFA048;
   sead_MethodTreeNode_detachAll(a1 + 312);
-  sead_IDisposer_~IDisposer((_DWORD *)(a1 + 312));
+  sead_IDisposer_dtor((_DWORD *)(a1 + 312));
   *(_DWORD *)(a1 + 252) = off_60C26570;
   if ( *(_BYTE *)(a1 + 308) )
   {
@@ -32943,8 +32943,8 @@ int __fastcall sub_607F0094(int a1)
     }
     *(_BYTE *)(a1 + 308) = 0;
   }
-  sead_IDisposer_~IDisposer((_DWORD *)(a1 + 252));
-  return sead_TaskBase_~TaskBase(a1);
+  sead_IDisposer_dtor((_DWORD *)(a1 + 252));
+  return sead_TaskBase_dtor(a1);
 }
 
 /* ============================================================================
@@ -32957,7 +32957,7 @@ void __fastcall sub_607F0174(int a1)
   void *v1; // r0
 
   v1 = (void *)sub_607F0094(a1);
-  operator delete(v1);
+  __operator_delete(v1);
 }
 
 /* ============================================================================
@@ -32993,7 +32993,7 @@ int __fastcall sub_607F01E8(_DWORD *a1)
   a1[136] = 100;
   a1[137] = 1;
   a1[134] = off_60C27290;
-  sead_SafeStringBase<char>::operator=((int)(a1 + 129), (int)v4);
+  sead_SafeStringBase_char::operator=((int)(a1 + 129), (int)v4);
   a1[131] = 1;
   v2 = *(_DWORD **)(dword_60CD0B40 + 36);
   if ( *(_DWORD *)(dword_60CD0B40 + 32) > 0x12u )
@@ -33154,7 +33154,7 @@ void __fastcall sub_607F0558(_DWORD *a1)
   *a1 = off_60C27218;
   sub_60560CAC(a1 + 142);
   v2 = (void *)sub_607F0094((int)a1);
-  operator delete(v2);
+  __operator_delete(v2);
 }
 
 /* ============================================================================
@@ -33448,7 +33448,7 @@ _DWORD *__fastcall sub_607F0BF4(_DWORD *a1, void *a2)
   int v4; // r2
   int v5; // r3
 
-  result = (_DWORD *)operator new(0x10u, a2, 4);
+  result = (_DWORD *)__operator_new_al(0x10u, a2, 4);
   *result = &off_60C272B8;
   v4 = a1[2];
   v5 = a1[3];
@@ -33483,7 +33483,7 @@ void __fastcall sub_607F0C94(int a1)
   void *v1; // r0
 
   v1 = (void *)sub_607F0094(a1);
-  operator delete(v1);
+  __operator_delete(v1);
 }
 
 /* ============================================================================
@@ -33495,7 +33495,7 @@ int __fastcall sub_607F0CA8(int a1)
 {
   int v2; // r0
 
-  v2 = operator new(0x488u);
+  v2 = __operator_new(0x488u);
   *(_DWORD *)(a1 + 568) = sub_60440D94(v2);
   return sub_60441050();
 }
@@ -33677,7 +33677,7 @@ int __fastcall sub_607F1190(_DWORD *a1)
   *a1 = off_60C27344;
   if ( *((_BYTE *)a1 + 192) )
     dword_60CC5E58 = 0;
-  return sead_CalculateTask_~CalculateTask(a1);
+  return sead_CalculateTask_dtor(a1);
 }
 
 /* ============================================================================
@@ -33692,8 +33692,8 @@ void __fastcall sub_607F11C8(int a1)
   *(_DWORD *)a1 = off_60C27344;
   if ( *(_BYTE *)(a1 + 192) )
     dword_60CC5E58 = 0;
-  v1 = (void *)sead_CalculateTask_~CalculateTask((_DWORD *)a1);
-  operator delete(v1);
+  v1 = (void *)sead_CalculateTask_dtor((_DWORD *)a1);
+  __operator_delete(v1);
 }
 
 /* ============================================================================
@@ -34214,7 +34214,7 @@ int __fastcall sub_607F1DB4(_DWORD *a1)
   sub_60954610(a1 + 91);
   sub_60954610(a1 + 74);
   sub_60954610(v2);
-  return sead_CalculateTask_~CalculateTask(a1);
+  return sead_CalculateTask_dtor(a1);
 }
 
 /* ============================================================================
@@ -34238,8 +34238,8 @@ void __fastcall sub_607F1E2C(_DWORD *a1)
   sub_60954610(a1 + 91);
   sub_60954610(a1 + 74);
   sub_60954610(v2);
-  v3 = (void *)sead_CalculateTask_~CalculateTask(a1);
-  operator delete(v3);
+  v3 = (void *)sead_CalculateTask_dtor(a1);
+  __operator_delete(v3);
 }
 
 /* ============================================================================
@@ -34279,7 +34279,7 @@ int __fastcall sub_607F1F18(int a1)
 
   sub_60023F4C(a1);
   sub_60426530(dword_60C9BBD4, 0);
-  v1 = operator new(0x390u);
+  v1 = __operator_new(0x390u);
   v10 = &g_vtable_forsead_SafeStringBase<char>;
   v11 = "3D";
   sub_60443FE0(v1, &v10);
@@ -34287,12 +34287,12 @@ int __fastcall sub_607F1F18(int a1)
   v10 = &g_vtable_forsead_SafeStringBase<char>;
   v11 = "3D";
   v2 = dword_60CD0B40;
-  v3 = operator new(0x1FCu, 0, 4);
+  v3 = __operator_new_al(0x1FCu, 0, 4);
   sub_6044364C();
   sub_60958220(v2, v3, 6, &v10, 0, 0);
   v10 = &g_vtable_forsead_SafeStringBase<char>;
   v11 = "BackLayout";
-  v4 = (_DWORD *)operator new(0x1A4u, 0, 4);
+  v4 = (_DWORD *)__operator_new_al(0x1A4u, 0, 4);
   memset(v4, 0, 0x1A4u);
   sub_60441A3C(v4);
   *v4 = off_60BF9FE4;
@@ -34300,7 +34300,7 @@ int __fastcall sub_607F1F18(int a1)
   sub_60958220(v2, v4, 5, &v10, 0, 0);
   v10 = &g_vtable_forsead_SafeStringBase<char>;
   v11 = "FrontLayout";
-  v5 = (_DWORD *)operator new(0x1A4u, 0, 4);
+  v5 = (_DWORD *)__operator_new_al(0x1A4u, 0, 4);
   memset(v5, 0, 0x1A4u);
   sub_60441A3C(v5);
   *v5 = off_60BF9FE4;
@@ -34397,7 +34397,7 @@ int __fastcall sub_607F225C(int a1)
   *(_DWORD *)(a1 + 476) = sub_607F2624;
   *(_DWORD *)(a1 + 480) = 0;
   *(_DWORD *)(a1 + 468) = off_60C274FC;
-  sead_SafeStringBase<char>::operator=(a1 + 448, (int)&v17);
+  sead_SafeStringBase_char::operator=(a1 + 448, (int)&v17);
   *(_DWORD *)(a1 + 456) = 2;
   sub_6095537C(**(_DWORD **)(v2 + 36), 0, a1 + 432);
   v17 = &g_vtable_forsead_SafeStringBase<char>;
@@ -34406,7 +34406,7 @@ int __fastcall sub_607F225C(int a1)
   *(_DWORD *)(a1 + 272) = sub_607F271C;
   *(_DWORD *)(a1 + 276) = 0;
   *(_DWORD *)(a1 + 264) = off_60C27524;
-  sead_SafeStringBase<char>::operator=(a1 + 244, (int)&v17);
+  sead_SafeStringBase_char::operator=(a1 + 244, (int)&v17);
   *(_DWORD *)(a1 + 252) = 1;
   v3 = *(_DWORD **)(v2 + 36);
   if ( *(_DWORD *)(v2 + 32) > 5u )
@@ -34418,7 +34418,7 @@ int __fastcall sub_607F225C(int a1)
   *(_DWORD *)(a1 + 340) = sub_607F2730;
   *(_DWORD *)(a1 + 344) = 0;
   *(_DWORD *)(a1 + 332) = off_60C27524;
-  sead_SafeStringBase<char>::operator=(a1 + 312, (int)&v17);
+  sead_SafeStringBase_char::operator=(a1 + 312, (int)&v17);
   *(_DWORD *)(a1 + 320) = 1;
   v4 = *(_DWORD **)(v2 + 36);
   if ( *(_DWORD *)(v2 + 32) > 6u )
@@ -34430,7 +34430,7 @@ int __fastcall sub_607F225C(int a1)
   *(_DWORD *)(a1 + 408) = sub_607F27A8;
   *(_DWORD *)(a1 + 412) = 0;
   *(_DWORD *)(a1 + 400) = off_60C27524;
-  sead_SafeStringBase<char>::operator=(a1 + 380, (int)&v17);
+  sead_SafeStringBase_char::operator=(a1 + 380, (int)&v17);
   *(_DWORD *)(a1 + 388) = 1;
   v5 = *(_DWORD **)(v2 + 36);
   if ( *(_DWORD *)(v2 + 32) > 7u )
@@ -34792,7 +34792,7 @@ _DWORD *__fastcall sub_607F2AD4(_DWORD *a1, void *a2)
   int v4; // r2
   int v5; // r3
 
-  result = (_DWORD *)operator new(0x10u, a2, 4);
+  result = (_DWORD *)__operator_new_al(0x10u, a2, 4);
   *result = &off_60C27510;
   v4 = a1[2];
   v5 = a1[3];
@@ -34843,7 +34843,7 @@ _DWORD *__fastcall sub_607F2B60(_DWORD *a1, void *a2)
   int v4; // r2
   int v5; // r3
 
-  result = (_DWORD *)operator new(0x10u, a2, 4);
+  result = (_DWORD *)__operator_new_al(0x10u, a2, 4);
   *result = &off_60C2754C;
   v4 = a1[2];
   v5 = a1[3];
@@ -36556,7 +36556,7 @@ int __fastcall sub_607F4E78(_DWORD *a1)
   sub_60954610(a1 + 91);
   sub_60954610(a1 + 74);
   sub_60954610(v2);
-  return sead_CalculateTask_~CalculateTask(a1);
+  return sead_CalculateTask_dtor(a1);
 }
 
 /* ============================================================================
@@ -36581,8 +36581,8 @@ void __fastcall sub_607F4EF8(_DWORD *a1)
   sub_60954610(a1 + 91);
   sub_60954610(a1 + 74);
   sub_60954610(v2);
-  v3 = (void *)sead_CalculateTask_~CalculateTask(a1);
-  operator delete(v3);
+  v3 = (void *)sead_CalculateTask_dtor(a1);
+  __operator_delete(v3);
 }
 
 /* ============================================================================
@@ -36645,7 +36645,7 @@ StateMethodExecuter *__fastcall sub_607F5060(int a1)
   *(_DWORD *)(a1 + 272) = sub_607F5370;
   *(_DWORD *)(a1 + 276) = 0;
   *(_DWORD *)(a1 + 264) = off_60C2779C;
-  sead_SafeStringBase<char>::operator=(a1 + 244, (int)&a5);
+  sead_SafeStringBase_char::operator=(a1 + 244, (int)&a5);
   *(_DWORD *)(a1 + 252) = 1;
   v3 = *(_DWORD **)(v2 + 36);
   if ( *(_DWORD *)(v2 + 32) > 5u )
@@ -36657,7 +36657,7 @@ StateMethodExecuter *__fastcall sub_607F5060(int a1)
   *(_DWORD *)(a1 + 340) = sub_607F54F4;
   *(_DWORD *)(a1 + 344) = 0;
   *(_DWORD *)(a1 + 332) = off_60C2779C;
-  sead_SafeStringBase<char>::operator=(a1 + 312, (int)&a5);
+  sead_SafeStringBase_char::operator=(a1 + 312, (int)&a5);
   *(_DWORD *)(a1 + 320) = 1;
   v4 = *(_DWORD **)(v2 + 36);
   if ( *(_DWORD *)(v2 + 32) > 6u )
@@ -36669,7 +36669,7 @@ StateMethodExecuter *__fastcall sub_607F5060(int a1)
   *(_DWORD *)(a1 + 408) = sub_607F551C;
   *(_DWORD *)(a1 + 412) = 0;
   *(_DWORD *)(a1 + 400) = off_60C2779C;
-  sead_SafeStringBase<char>::operator=(a1 + 380, (int)&a5);
+  sead_SafeStringBase_char::operator=(a1 + 380, (int)&a5);
   *(_DWORD *)(a1 + 388) = 1;
   v5 = *(_DWORD **)(v2 + 36);
   if ( *(_DWORD *)(v2 + 32) > 7u )
@@ -36681,7 +36681,7 @@ StateMethodExecuter *__fastcall sub_607F5060(int a1)
   *(_DWORD *)(a1 + 680) = sub_607F5530;
   *(_DWORD *)(a1 + 684) = 0;
   *(_DWORD *)(a1 + 672) = off_60C277D8;
-  sead_SafeStringBase<char>::operator=(a1 + 652, (int)&a5);
+  sead_SafeStringBase_char::operator=(a1 + 652, (int)&a5);
   *(_DWORD *)(a1 + 660) = 2;
   v6 = *(_DWORD **)(v2 + 36);
   if ( *(_DWORD *)(v2 + 32) > 6u )
@@ -37052,7 +37052,7 @@ _DWORD *__fastcall sub_607F5884(_DWORD *a1, void *a2)
   int v4; // r2
   int v5; // r3
 
-  result = (_DWORD *)operator new(0x10u, a2, 4);
+  result = (_DWORD *)__operator_new_al(0x10u, a2, 4);
   *result = &off_60C277C4;
   v4 = a1[2];
   v5 = a1[3];
@@ -37103,7 +37103,7 @@ _DWORD *__fastcall sub_607F5910(_DWORD *a1, void *a2)
   int v4; // r2
   int v5; // r3
 
-  result = (_DWORD *)operator new(0x10u, a2, 4);
+  result = (_DWORD *)__operator_new_al(0x10u, a2, 4);
   *result = &off_60C277EC;
   v4 = a1[2];
   v5 = a1[3];
@@ -37166,8 +37166,8 @@ void __fastcall sub_607F5B00(_DWORD *a1)
 {
   void *v1; // r0
 
-  v1 = (void *)sead_CalculateTask_~CalculateTask(a1);
-  operator delete(v1);
+  v1 = (void *)sead_CalculateTask_dtor(a1);
+  __operator_delete(v1);
 }
 
 /* ============================================================================
@@ -37201,10 +37201,10 @@ _DWORD *__fastcall sub_607F5B10(_DWORD *a1)
       }
       *(_BYTE *)(v2 + 72) = 0;
     }
-    sead_IDisposer_~IDisposer(v4);
+    sead_IDisposer_dtor(v4);
     dword_60CC62E4 = 0;
   }
-  return sead_IDisposer_~IDisposer(a1);
+  return sead_IDisposer_dtor(a1);
 }
 
 /* ============================================================================
@@ -37239,11 +37239,11 @@ void __fastcall sub_607F5BE0(_DWORD *a1)
       }
       *(_BYTE *)(v2 + 72) = 0;
     }
-    sead_IDisposer_~IDisposer(v4);
+    sead_IDisposer_dtor(v4);
     dword_60CC62E4 = 0;
   }
-  v6 = sead_IDisposer_~IDisposer(a1);
-  operator delete(v6);
+  v6 = sead_IDisposer_dtor(a1);
+  __operator_delete(v6);
 }
 
 /* ============================================================================
@@ -37259,7 +37259,7 @@ int __fastcall sub_607F5CB4(int a1)
   v2 = dword_60CC62E4;
   if ( !dword_60CC62E4 )
   {
-    v2 = operator new[](0x84u, a1, 4);
+    v2 = __operator_new_array_al(0x84u, a1, 4);
     sead_IDisposer_IDisposer((_DWORD *)v2, a1, 3u);
     *(_DWORD *)v2 = off_60C2786C;
     dword_60CC62E0 = v2;
@@ -37318,7 +37318,7 @@ _DWORD *__fastcall sub_607F5DF8(int a1, int a2, int a3)
   _DWORD *result; // r0
 
   *(_DWORD *)(a1 + 100) = a3;
-  v6 = (_DWORD *)operator new(0x28u);
+  v6 = (_DWORD *)__operator_new(0x28u);
   result = sub_607EB998(v6, a2, a3);
   *(_DWORD *)(a1 + 104) = result;
   return result;
@@ -37808,7 +37808,7 @@ int __fastcall sub_607F6AC4(int a1)
 {
   int v2; // r0
 
-  v2 = operator new(0xCCu, *(void **)(*(_DWORD *)a1 + 4 * *(_DWORD *)(*(_DWORD *)a1 + 20)), 4);
+  v2 = __operator_new_al(0xCCu, *(void **)(*(_DWORD *)a1 + 4 * *(_DWORD *)(*(_DWORD *)a1 + 20)), 4);
   return sub_6081A9D0(v2, a1);
 }
 
@@ -37852,7 +37852,7 @@ _DWORD *__fastcall sub_607F6B34(_DWORD *a1, void *a2)
   int v4; // r2
   int v5; // r3
 
-  result = (_DWORD *)operator new(0x10u, a2, 4);
+  result = (_DWORD *)__operator_new_al(0x10u, a2, 4);
   *result = &off_60C27890;
   v4 = a1[2];
   v5 = a1[3];
@@ -37981,7 +37981,7 @@ void __fastcall sub_607F6E74(_DWORD *a1)
   sub_60954610(a1 + 4719);
   sub_6051933C(v2);
   v3 = (void *)sub_607E3494(a1);
-  operator delete(v3);
+  __operator_delete(v3);
 }
 
 /* ============================================================================
@@ -38123,7 +38123,7 @@ void __fastcall sub_607F7124(_DWORD *a1)
   *a1 = off_60C27944;
   sub_6051B394(a1 + 142);
   v2 = (void *)sub_607E3494(a1);
-  operator delete(v2);
+  __operator_delete(v2);
 }
 
 /* ============================================================================
@@ -38639,7 +38639,7 @@ int __fastcall sub_607F7CD4(int a1)
   sub_605590B4(a1 + 232);
   if ( *(_BYTE *)(a1 + 192) )
     dword_60CC6350 = 0;
-  return sead_CalculateTask_~CalculateTask((_DWORD *)a1);
+  return sead_CalculateTask_dtor((_DWORD *)a1);
 }
 
 /* ============================================================================
@@ -38652,7 +38652,7 @@ void __fastcall sub_607F7D90(int a1)
   void *v1; // r0
 
   v1 = (void *)sub_607F7CD4(a1);
-  operator delete(v1);
+  __operator_delete(v1);
 }
 
 /* ============================================================================
@@ -38673,7 +38673,7 @@ int __fastcall sub_607F7DA4(int a1)
 
   sub_60023F4C(a1);
   sub_60426530(dword_60C9BBD4, 0);
-  v1 = operator new(0x390u);
+  v1 = __operator_new(0x390u);
   v9 = &g_vtable_forsead_SafeStringBase<char>;
   v10 = "3D";
   sub_60443FE0(v1, &v9);
@@ -38681,12 +38681,12 @@ int __fastcall sub_607F7DA4(int a1)
   v9 = &g_vtable_forsead_SafeStringBase<char>;
   v10 = "3D";
   v2 = dword_60CD0B40;
-  v3 = operator new(0x1FCu, 0, 4);
+  v3 = __operator_new_al(0x1FCu, 0, 4);
   sub_6044364C();
   sub_60958220(v2, v3, 6, &v9, 0, 0);
   v9 = &g_vtable_forsead_SafeStringBase<char>;
   v10 = "BackLayout";
-  v4 = (_DWORD *)operator new(0x1A4u, 0, 4);
+  v4 = (_DWORD *)__operator_new_al(0x1A4u, 0, 4);
   memset(v4, 0, 0x1A4u);
   sub_60441A3C(v4);
   *v4 = off_60BF9FE4;
@@ -38694,7 +38694,7 @@ int __fastcall sub_607F7DA4(int a1)
   sub_60958220(v2, v4, 5, &v9, 0, 0);
   v9 = &g_vtable_forsead_SafeStringBase<char>;
   v10 = "FrontLayout";
-  v5 = (_DWORD *)operator new(0x1A4u, 0, 4);
+  v5 = (_DWORD *)__operator_new_al(0x1A4u, 0, 4);
   memset(v5, 0, 0x1A4u);
   sub_60441A3C(v5);
   *v5 = off_60BF9FE4;
@@ -38742,7 +38742,7 @@ int __fastcall sub_607F7FB0(int a1)
   *(_DWORD *)(a1 + 9900) = nullsub_5605;
   *(_DWORD *)(a1 + 9904) = 0;
   *(_DWORD *)(a1 + 9892) = off_60C27AC0;
-  sead_SafeStringBase<char>::operator=(a1 + 9872, (int)&v17);
+  sead_SafeStringBase_char::operator=(a1 + 9872, (int)&v17);
   *(_DWORD *)(a1 + 9880) = 2;
   sub_6095537C(**(_DWORD **)(v2 + 36), 0, a1 + 9856);
   v17 = &g_vtable_forsead_SafeStringBase<char>;
@@ -38751,7 +38751,7 @@ int __fastcall sub_607F7FB0(int a1)
   *(_DWORD *)(a1 + 9696) = nullsub_5606;
   *(_DWORD *)(a1 + 9700) = 0;
   *(_DWORD *)(a1 + 9688) = off_60C27AE8;
-  sead_SafeStringBase<char>::operator=(a1 + 9668, (int)&v17);
+  sead_SafeStringBase_char::operator=(a1 + 9668, (int)&v17);
   *(_DWORD *)(a1 + 9676) = 1;
   v3 = *(_DWORD **)(v2 + 36);
   if ( *(_DWORD *)(v2 + 32) > 5u )
@@ -38763,7 +38763,7 @@ int __fastcall sub_607F7FB0(int a1)
   *(_DWORD *)(a1 + 9764) = nullsub_5607;
   *(_DWORD *)(a1 + 9768) = 0;
   *(_DWORD *)(a1 + 9756) = off_60C27AE8;
-  sead_SafeStringBase<char>::operator=(a1 + 9736, (int)&v17);
+  sead_SafeStringBase_char::operator=(a1 + 9736, (int)&v17);
   *(_DWORD *)(a1 + 9744) = 1;
   v4 = *(_DWORD **)(v2 + 36);
   if ( *(_DWORD *)(v2 + 32) > 6u )
@@ -38775,7 +38775,7 @@ int __fastcall sub_607F7FB0(int a1)
   *(_DWORD *)(a1 + 9832) = sub_607F83C8;
   *(_DWORD *)(a1 + 9836) = 0;
   *(_DWORD *)(a1 + 9824) = off_60C27AE8;
-  sead_SafeStringBase<char>::operator=(a1 + 9804, (int)&v17);
+  sead_SafeStringBase_char::operator=(a1 + 9804, (int)&v17);
   *(_DWORD *)(a1 + 9812) = 1;
   v5 = *(_DWORD **)(v2 + 36);
   if ( *(_DWORD *)(v2 + 32) > 7u )
@@ -39075,7 +39075,7 @@ _DWORD *__fastcall sub_607F8758(_DWORD *a1, void *a2)
   int v4; // r2
   int v5; // r3
 
-  result = (_DWORD *)operator new(0x10u, a2, 4);
+  result = (_DWORD *)__operator_new_al(0x10u, a2, 4);
   *result = &off_60C27AD4;
   v4 = a1[2];
   v5 = a1[3];
@@ -39126,7 +39126,7 @@ _DWORD *__fastcall sub_607F87E4(_DWORD *a1, void *a2)
   int v4; // r2
   int v5; // r3
 
-  result = (_DWORD *)operator new(0x10u, a2, 4);
+  result = (_DWORD *)__operator_new_al(0x10u, a2, 4);
   *result = &off_60C27B10;
   v4 = a1[2];
   v5 = a1[3];
@@ -39192,8 +39192,8 @@ void __fastcall sub_607F89F4(_DWORD *a1)
 {
   void *v1; // r0
 
-  v1 = (void *)sead_CalculateTask_~CalculateTask(a1);
-  operator delete(v1);
+  v1 = (void *)sead_CalculateTask_dtor(a1);
+  __operator_delete(v1);
 }
 
 /* ============================================================================
@@ -39369,7 +39369,7 @@ void __fastcall sub_607F8DC0(_DWORD *a1)
   *a1 = off_60C27B90;
   sub_6051C650(a1 + 142);
   v2 = (void *)sub_607E3494(a1);
-  operator delete(v2);
+  __operator_delete(v2);
 }
 
 /* ============================================================================
@@ -39792,7 +39792,7 @@ int __fastcall sub_607F9584(_DWORD *a1)
   nullsub_111(a1 + 113);
   nullsub_113(a1 + 70);
   nullsub_111(v2);
-  return sead_CalculateTask_~CalculateTask(a1);
+  return sead_CalculateTask_dtor(a1);
 }
 
 /* ============================================================================
@@ -39816,8 +39816,8 @@ void __fastcall sub_607F9604(_DWORD *a1)
   nullsub_111(a1 + 113);
   nullsub_113(a1 + 70);
   nullsub_111(v2);
-  v3 = (void *)sead_CalculateTask_~CalculateTask(a1);
-  operator delete(v3);
+  v3 = (void *)sead_CalculateTask_dtor(a1);
+  __operator_delete(v3);
 }
 
 /* ============================================================================
@@ -39859,7 +39859,7 @@ int __fastcall sub_607F96E0(int a1)
   sub_604075A4(dword_60C9A1E0);
   sub_604BF24C(a1 + 1304);
   sub_60544F4C(a1 + 51544);
-  v3 = operator new(0x2BE8u);
+  v3 = __operator_new(0x2BE8u);
   *(_DWORD *)(a1 + 85056) = sub_604EDCD8(v3);
   sub_604EDEA0();
   sub_603F7FF8(0);
@@ -39910,7 +39910,7 @@ int __fastcall sub_607F982C(int a1)
   *(_DWORD *)(a1 + 804) = sub_607F9AFC;
   *(_DWORD *)(a1 + 808) = 0;
   *(_DWORD *)(a1 + 796) = off_60C27CF8;
-  sead_SafeStringBase<char>::operator=(a1 + 776, (int)&v17);
+  sead_SafeStringBase_char::operator=(a1 + 776, (int)&v17);
   *(_DWORD *)(a1 + 784) = 1;
   v3 = *(_DWORD **)(v2 + 36);
   if ( *(_DWORD *)(v2 + 32) > 6u )
@@ -39922,7 +39922,7 @@ int __fastcall sub_607F982C(int a1)
   *(_DWORD *)(a1 + 872) = sub_607F9BB4;
   *(_DWORD *)(a1 + 876) = 0;
   *(_DWORD *)(a1 + 864) = off_60C27D34;
-  sead_SafeStringBase<char>::operator=(a1 + 844, (int)&v17);
+  sead_SafeStringBase_char::operator=(a1 + 844, (int)&v17);
   *(_DWORD *)(a1 + 852) = 2;
   v4 = *(_DWORD **)(v2 + 36);
   if ( *(_DWORD *)(v2 + 32) > 5u )
@@ -40234,7 +40234,7 @@ _DWORD *__fastcall sub_607F9F4C(_DWORD *a1, void *a2)
   int v4; // r2
   int v5; // r3
 
-  result = (_DWORD *)operator new(0x10u, a2, 4);
+  result = (_DWORD *)__operator_new_al(0x10u, a2, 4);
   *result = &off_60C27D20;
   v4 = a1[2];
   v5 = a1[3];
@@ -40285,7 +40285,7 @@ _DWORD *__fastcall sub_607F9FD8(_DWORD *a1, void *a2)
   int v4; // r2
   int v5; // r3
 
-  result = (_DWORD *)operator new(0x10u, a2, 4);
+  result = (_DWORD *)__operator_new_al(0x10u, a2, 4);
   *result = &off_60C27D48;
   v4 = a1[2];
   v5 = a1[3];
@@ -40420,9 +40420,9 @@ int __fastcall sub_607FA27C(int a1, int a2, int a3)
   *(_BYTE *)(a1 + 31) = v6;
   *(_BYTE *)(a1 + 32) = 0;
   *(_BYTE *)(a1 + 33) = 0;
-  v7 = operator new(0x1Cu);
+  v7 = __operator_new(0x1Cu);
   *(_DWORD *)(a1 + 36) = sub_607FA930(v7);
-  v8 = operator new(0x4Cu);
+  v8 = __operator_new(0x4Cu);
   *(_DWORD *)(a1 + 40) = sub_607FB104(v8, a2, a3, a1);
   EffectWrapper_ctor((EffectWrapper *)(a1 + 44));
   *(_DWORD *)(a1 + 44) = off_60BC1450;
@@ -40670,11 +40670,11 @@ _DWORD *__fastcall sub_607FA85C(_DWORD *a1)
   a1[37] = EffectWrapper_vtable;
   v2 = a1 + 37;
   sub_60237560((int)(a1 + 37));
-  sead_IDisposer_~IDisposer(v2);
+  sead_IDisposer_dtor(v2);
   a1[11] = EffectWrapper_vtable;
   sub_60237560((int)(a1 + 11));
-  sead_IDisposer_~IDisposer(a1 + 11);
-  return sead_IDisposer_~IDisposer(a1);
+  sead_IDisposer_dtor(a1 + 11);
+  return sead_IDisposer_dtor(a1);
 }
 
 /* ============================================================================
@@ -40691,12 +40691,12 @@ void __fastcall sub_607FA8C4(_DWORD *a1)
   a1[37] = EffectWrapper_vtable;
   v2 = a1 + 37;
   sub_60237560((int)(a1 + 37));
-  sead_IDisposer_~IDisposer(v2);
+  sead_IDisposer_dtor(v2);
   a1[11] = EffectWrapper_vtable;
   sub_60237560((int)(a1 + 11));
-  sead_IDisposer_~IDisposer(a1 + 11);
-  v3 = sead_IDisposer_~IDisposer(a1);
-  operator delete(v3);
+  sead_IDisposer_dtor(a1 + 11);
+  v3 = sead_IDisposer_dtor(a1);
+  __operator_delete(v3);
 }
 
 /* ============================================================================
@@ -40759,8 +40759,8 @@ void __fastcall sub_607FA9D8(_DWORD *a1)
 {
   _DWORD *v1; // r0
 
-  v1 = sead_IDisposer_~IDisposer(a1);
-  operator delete(v1);
+  v1 = sead_IDisposer_dtor(a1);
+  __operator_delete(v1);
 }
 
 /* ============================================================================
@@ -41167,8 +41167,8 @@ void __fastcall sub_607FBC7C(_DWORD *a1)
 {
   _DWORD *v1; // r0
 
-  v1 = sead_IDisposer_~IDisposer(a1);
-  operator delete(v1);
+  v1 = sead_IDisposer_dtor(a1);
+  __operator_delete(v1);
 }
 
 /* ============================================================================
@@ -41184,7 +41184,7 @@ _DWORD *__fastcall sub_607FBC8C(_DWORD *a1)
     dword_60CC6480 = 0;
     dword_60CC6484 = 0;
   }
-  return sead_IDisposer_~IDisposer(a1);
+  return sead_IDisposer_dtor(a1);
 }
 
 /* ============================================================================
@@ -41202,8 +41202,8 @@ void __fastcall sub_607FBCE0(_DWORD *a1)
     dword_60CC6480 = 0;
     dword_60CC6484 = 0;
   }
-  v1 = sead_IDisposer_~IDisposer(a1);
-  operator delete(v1);
+  v1 = sead_IDisposer_dtor(a1);
+  __operator_delete(v1);
 }
 
 /* ============================================================================
@@ -41222,7 +41222,7 @@ _DWORD *__fastcall sub_607FBD40(int a1)
   v2 = (_DWORD *)dword_60CC6484;
   if ( !dword_60CC6484 )
   {
-    v2 = (_DWORD *)operator new[](0x14Cu, a1, 4);
+    v2 = (_DWORD *)__operator_new_array_al(0x14Cu, a1, 4);
     sead_IDisposer_IDisposer(v2, a1, 3u);
     *v2 = off_60C27D8C;
     dword_60CC6480 = (int)v2;
@@ -41389,15 +41389,15 @@ int __fastcall sub_607FC034(int a1, unsigned int a2, int a3, int a4)
   Area = Level_getArea(Level_instance, a2);
   v8 = sub_60727620(Area, a4, a1 + 24);
   v9 = sub_60727D48(Area, a3);
-  v10 = operator new(0x24u);
+  v10 = __operator_new(0x24u);
   *(_DWORD *)(a1 + 168) = sub_607FDAD0(v10, Area, v8, a1);
-  v11 = operator new(0x63Cu);
+  v11 = __operator_new(0x63Cu);
   *(_DWORD *)(a1 + 172) = sub_607FD550(v11, a1 + 24, a1 + 204, a1);
-  v12 = operator new(0x1B0u);
+  v12 = __operator_new(0x1B0u);
   *(_DWORD *)(a1 + 176) = sub_60805104(v12, a1);
-  v13 = operator new(0x18u);
+  v13 = __operator_new(0x18u);
   *(_DWORD *)(a1 + 180) = sub_607FCB1C(v13, *(unsigned __int16 *)(*(_DWORD *)(*(_DWORD *)(a1 + 168) + 32) + 18), a1);
-  v14 = operator new(0x38u);
+  v14 = __operator_new(0x38u);
   *(_DWORD *)(a1 + 184) = ((int (__fastcall *)(int, int, _DWORD, _DWORD, int, int))loc_60803300)(
                             v14,
                             a1 + 24,
@@ -41405,12 +41405,12 @@ int __fastcall sub_607FC034(int a1, unsigned int a2, int a3, int a4)
                             *(unsigned __int8 *)(v8 + 25),
                             a1 + 204,
                             a1);
-  v15 = operator new(0x9Cu);
+  v15 = __operator_new(0x9Cu);
   sub_60800250(v15, a1);
   *(_DWORD *)(a1 + 188) = v15;
-  v16 = operator new(0xB8u);
+  v16 = __operator_new(0xB8u);
   *(_DWORD *)(a1 + 192) = sub_607FF8C4(v16, v15, a1);
-  v17 = operator new(0xFCu);
+  v17 = __operator_new(0xFCu);
   *(_DWORD *)(a1 + 196) = sub_607FA27C(v17, Area, v9);
   v18 = *(_DWORD *)(a1 + 168);
   v19 = *(_DWORD *)(a1 + 184);
@@ -41419,7 +41419,7 @@ int __fastcall sub_607FC034(int a1, unsigned int a2, int a3, int a4)
   v25[1] = v18;
   v25[2] = v19;
   v25[3] = v20;
-  v21 = operator new(0x2Cu);
+  v21 = __operator_new(0x2Cu);
   v22 = ((int (__fastcall *)(int, _DWORD *, int, int, int, int))sub_60801120)(v21, v25, Area, v9, a1, v24);
   *(_DWORD *)(a1 + 200) = v22;
   if ( *(_BYTE *)(v22 + 40) )
@@ -41865,8 +41865,8 @@ void __fastcall sub_607FCF38(_DWORD *a1)
 {
   _DWORD *v1; // r0
 
-  v1 = sead_IDisposer_~IDisposer(a1);
-  operator delete(v1);
+  v1 = sead_IDisposer_dtor(a1);
+  __operator_delete(v1);
 }
 
 /* ============================================================================
@@ -42503,8 +42503,8 @@ void __fastcall sub_607FDA00(_DWORD *a1)
 {
   _DWORD *v1; // r0
 
-  v1 = sead_IDisposer_~IDisposer(a1);
-  operator delete(v1);
+  v1 = sead_IDisposer_dtor(a1);
+  __operator_delete(v1);
 }
 
 /* ============================================================================
@@ -42601,8 +42601,8 @@ void __fastcall sub_607FDB90(_DWORD *a1)
 {
   _DWORD *v1; // r0
 
-  v1 = sead_IDisposer_~IDisposer(a1);
-  operator delete(v1);
+  v1 = sead_IDisposer_dtor(a1);
+  __operator_delete(v1);
 }
 
 /* ============================================================================
@@ -42870,8 +42870,8 @@ void __fastcall sub_607FED44(_DWORD *a1)
 {
   _DWORD *v1; // r0
 
-  v1 = sead_IDisposer_~IDisposer(a1);
-  operator delete(v1);
+  v1 = sead_IDisposer_dtor(a1);
+  __operator_delete(v1);
 }
 
 /* ============================================================================
@@ -42925,8 +42925,8 @@ void __fastcall sub_607FF254(_DWORD *a1)
 {
   _DWORD *v1; // r0
 
-  v1 = sead_IDisposer_~IDisposer(a1);
-  operator delete(v1);
+  v1 = sead_IDisposer_dtor(a1);
+  __operator_delete(v1);
 }
 
 /* ============================================================================
@@ -43159,8 +43159,8 @@ void __fastcall sub_607FF5C8(_DWORD *a1)
 {
   _DWORD *v1; // r0
 
-  v1 = sead_IDisposer_~IDisposer(a1);
-  operator delete(v1);
+  v1 = sead_IDisposer_dtor(a1);
+  __operator_delete(v1);
 }
 
 /* ============================================================================
@@ -43240,8 +43240,8 @@ void __fastcall sub_607FF78C(_DWORD *a1)
 {
   _DWORD *v1; // r0
 
-  v1 = sead_IDisposer_~IDisposer(a1);
-  operator delete(v1);
+  v1 = sead_IDisposer_dtor(a1);
+  __operator_delete(v1);
 }
 
 /* ============================================================================
@@ -43329,8 +43329,8 @@ void __fastcall sub_607FF8B4(_DWORD *a1)
 {
   _DWORD *v1; // r0
 
-  v1 = sead_IDisposer_~IDisposer(a1);
-  operator delete(v1);
+  v1 = sead_IDisposer_dtor(a1);
+  __operator_delete(v1);
 }
 
 /* ============================================================================
@@ -43400,8 +43400,8 @@ void __fastcall sub_607FFF70(_DWORD *a1)
 {
   _DWORD *v1; // r0
 
-  v1 = sead_IDisposer_~IDisposer(a1);
-  operator delete(v1);
+  v1 = sead_IDisposer_dtor(a1);
+  __operator_delete(v1);
 }
 
 /* ============================================================================
@@ -43877,7 +43877,7 @@ int __fastcall sub_609A0208(_DWORD *a1, int a2, int a3, int a4, int a5)
           v39 = (const char *)&v41;
           v38 = &BufferedSafeStringBase_char_vtable_probably;
           v40 = 150;
-          sead_BufferedSafeStringBase<char>::assureTerminationImpl_((int)&v38);
+          sead_BufferedSafeStringBase_char::assureTerminationImpl_((int)&v38);
           *v39 = 0;
           v38 = &off_60C60DF0;
           (*(void (__fastcall **)(_DWORD *))(*m + 12))(m);
@@ -44557,13 +44557,13 @@ unsigned int __fastcall sub_609A125C(_DWORD *a1, int a2, void *a3, int a4)
     v22 = &v24;
     v21 = &BufferedSafeStringBase_char_vtable_probably;
     v23 = 8;
-    sead_BufferedSafeStringBase<char>::assureTerminationImpl_((int)&v21);
+    sead_BufferedSafeStringBase_char::assureTerminationImpl_((int)&v21);
     *(_BYTE *)v22 = 0;
     v21 = &off_60BD4B8C;
     v18 = &v20;
     v17 = &BufferedSafeStringBase_char_vtable_probably;
     v19 = 128;
-    sead_BufferedSafeStringBase<char>::assureTerminationImpl_((int)&v17);
+    sead_BufferedSafeStringBase_char::assureTerminationImpl_((int)&v17);
     *(_BYTE *)v18 = 0;
     v16 = 0;
     v15 = 0;
@@ -44608,18 +44608,18 @@ unsigned int __fastcall sub_609A125C(_DWORD *a1, int a2, void *a3, int a4)
       else
       {
 LABEL_18:
-        v10 = operator new(0x8Cu, a3, 4);
+        v10 = __operator_new_al(0x8Cu, a3, 4);
         sub_609A59D0(v10);
         v30 = &v32;
         v29 = &BufferedSafeStringBase_char_vtable_probably;
         v31 = 1024;
-        sead_BufferedSafeStringBase<char>::assureTerminationImpl_((int)&v29);
+        sead_BufferedSafeStringBase_char::assureTerminationImpl_((int)&v29);
         *(_BYTE *)v30 = 0;
         v26 = &v28;
         v25 = &BufferedSafeStringBase_char_vtable_probably;
         v29 = &off_60BFA9DC;
         v27 = 1024;
-        sead_BufferedSafeStringBase<char>::assureTerminationImpl_((int)&v25);
+        sead_BufferedSafeStringBase_char::assureTerminationImpl_((int)&v25);
         *(_BYTE *)v26 = 0;
         v25 = &off_60BFA9DC;
         result = sub_609A4FC4(v10, a2, a3, &v29, &v25);
@@ -44629,9 +44629,9 @@ LABEL_18:
   }
   else
   {
-    a1[2] = operator new[](a1[5], (int)a3, -4);
-    a1[3] = operator new[](a1[5], (int)a3, -4);
-    a1[4] = operator new[](a1[5], (int)a3, -4);
+    a1[2] = __operator_new_array_al(a1[5], (int)a3, -4);
+    a1[3] = __operator_new_array_al(a1[5], (int)a3, -4);
+    a1[4] = __operator_new_array_al(a1[5], (int)a3, -4);
     sub_6099F1E8(a1, a3);
     v11 = sub_609A1624(a1, a2, a3);
     if ( v11 >= 0 )
@@ -44642,15 +44642,15 @@ LABEL_18:
     }
     v12 = (void *)a1[2];
     if ( v12 )
-      operator delete(v12);
+      __operator_delete(v12);
     a1[2] = 0;
     v13 = (void *)a1[3];
     if ( v13 )
-      operator delete(v13);
+      __operator_delete(v13);
     a1[3] = 0;
     v14 = (void *)a1[4];
     if ( v14 )
-      operator delete(v14);
+      __operator_delete(v14);
     a1[4] = 0;
     return 0;
   }
@@ -44810,10 +44810,10 @@ LABEL_99:
             v68 = (sead_ListNode *)&v70;
             v67 = &BufferedSafeStringBase_char_vtable_probably;
             v69 = 8;
-            sead_BufferedSafeStringBase<char>::assureTerminationImpl_((int)&v67);
+            sead_BufferedSafeStringBase_char::assureTerminationImpl_((int)&v67);
             LOBYTE(v68->previous) = 0;
             v67 = &off_60BD4B8C;
-            sead_BufferedSafeStringBase<char>::assureTerminationImpl_((int)&v67);
+            sead_BufferedSafeStringBase_char::assureTerminationImpl_((int)&v67);
             v50 = v69;
             if ( v69 < 1 )
               return -1;
@@ -44862,10 +44862,10 @@ LABEL_99:
             v64 = v59;
             v63 = &BufferedSafeStringBase_char_vtable_probably;
             v65 = 128;
-            sead_BufferedSafeStringBase<char>::assureTerminationImpl_((int)&v63);
+            sead_BufferedSafeStringBase_char::assureTerminationImpl_((int)&v63);
             LOBYTE(v64->previous) = 0;
             v63 = &off_60BD95A8;
-            sead_BufferedSafeStringBase<char>::assureTerminationImpl_((int)&v63);
+            sead_BufferedSafeStringBase_char::assureTerminationImpl_((int)&v63);
             v24 = v65;
             if ( v65 < 1 )
               return -1;
@@ -44917,13 +44917,13 @@ LABEL_99:
               next->previous = (sead_ListNode *)&BufferedSafeStringBase_char_vtable_probably;
               next->next = (sead_ListNode *)((char *)next + 12);
               next[1].previous = (sead_ListNode *)8;
-              sead_BufferedSafeStringBase<char>::assureTerminationImpl_((int)next);
+              sead_BufferedSafeStringBase_char::assureTerminationImpl_((int)next);
               LOBYTE(next->next->previous) = 0;
               next->previous = (sead_ListNode *)&off_60BD4B8C;
               next[3].previous = next + 4;
               next[2].next = (sead_ListNode *)&BufferedSafeStringBase_char_vtable_probably;
               next[3].next = (sead_ListNode *)128;
-              sead_BufferedSafeStringBase<char>::assureTerminationImpl_((int)&next[2].next);
+              sead_BufferedSafeStringBase_char::assureTerminationImpl_((int)&next[2].next);
               LOBYTE(next[3].previous->previous) = 0;
               next[2].next = (sead_ListNode *)&off_60BD95A8;
               next[20].previous = 0;
@@ -45392,12 +45392,12 @@ _DWORD *__fastcall sub_609A1EFC(int a1, int a2, int a3)
   v263 = &v265;
   v262 = &BufferedSafeStringBase_char_vtable_probably;
   v264 = 64;
-  sead_BufferedSafeStringBase<char>::assureTerminationImpl_((int)&v262);
+  sead_BufferedSafeStringBase_char::assureTerminationImpl_((int)&v262);
   *(_BYTE *)v263 = 0;
   v248 = a1;
   v262 = &off_60BD4BF0;
   v10 = *(_DWORD *)(a1 + 16);
-  sead_BufferedSafeStringBase<char>::assureTerminationImpl_((int)&v262);
+  sead_BufferedSafeStringBase_char::assureTerminationImpl_((int)&v262);
   v244 = v263;
   if ( !sub_6090552C(a2, &v271, 1) )
     goto LABEL_567;
@@ -45460,10 +45460,10 @@ LABEL_16:
           {
             v238 = v6;
             v19 = v8;
-            v20 = operator new(0x8Cu, heap, 4);
+            v20 = __operator_new_al(0x8Cu, heap, 4);
             sub_609A59D0(v20);
             v10 = v251;
-            v21 = (void *)operator new[](v17 + 1, (int)heap, 4);
+            v21 = (void *)__operator_new_array_al(v17 + 1, (int)heap, 4);
             qmemcpy(v21, *(const void **)(v248 + 16), v17);
             *((_BYTE *)v21 + v17) = 0;
             v22 = v21;
@@ -45691,7 +45691,7 @@ LABEL_345:
           if ( !v135 )
           {
             if ( v8 )
-              operator delete[](v8);
+              __operator_delete_array_al(v8);
             if ( !v268 )
               return v6;
             if ( v266 >= 1 )
@@ -45730,7 +45730,7 @@ LABEL_550:
               goto LABEL_569;
             }
             if ( v8 )
-              operator delete[](v8);
+              __operator_delete_array_al(v8);
             if ( !v268 )
               return v6;
             if ( v266 >= 1 )
@@ -45754,7 +45754,7 @@ LABEL_550:
 LABEL_559:
             v266 = 0;
             if ( v270 )
-              operator delete[](v270);
+              __operator_delete_array_al(v270);
             v267 = 0;
             v268 = 0;
             v269 = 0;
@@ -45813,7 +45813,7 @@ LABEL_32:
 LABEL_567:
         if ( v8 )
 LABEL_568:
-          operator delete[](v8);
+          __operator_delete_array_al(v8);
 LABEL_569:
         if ( v268 )
         {
@@ -45837,7 +45837,7 @@ LABEL_569:
           }
           v266 = 0;
           if ( v270 )
-            operator delete[](v270);
+            __operator_delete_array_al(v270);
           v270 = 0;
           v269 = 0;
           v268 = 0;
@@ -45869,13 +45869,13 @@ LABEL_569:
         v259 = &v261;
         v258 = &BufferedSafeStringBase_char_vtable_probably;
         v260 = 1024;
-        sead_BufferedSafeStringBase<char>::assureTerminationImpl_((int)&v258);
+        sead_BufferedSafeStringBase_char::assureTerminationImpl_((int)&v258);
         *(_BYTE *)v259 = 0;
         v255 = &v257;
         v254 = &BufferedSafeStringBase_char_vtable_probably;
         v258 = &off_60BFA9DC;
         v256 = 1024;
-        sead_BufferedSafeStringBase<char>::assureTerminationImpl_((int)&v254);
+        sead_BufferedSafeStringBase_char::assureTerminationImpl_((int)&v254);
         *(_BYTE *)v255 = 0;
         v254 = &off_60BFA9DC;
         ((void (__fastcall *)(int (***)()))v258[3])(&v258);
@@ -46037,13 +46037,13 @@ LABEL_85:
                 *v45 = &BufferedSafeStringBase_char_vtable_probably;
                 v45[1] = v45 + 3;
                 v45[2] = 1024;
-                sead_BufferedSafeStringBase<char>::assureTerminationImpl_((int)v45);
+                sead_BufferedSafeStringBase_char::assureTerminationImpl_((int)v45);
                 *(_BYTE *)v45[1] = 0;
                 *v45 = &off_60BFA9DC;
                 v45[260] = v45 + 262;
                 v45[259] = &BufferedSafeStringBase_char_vtable_probably;
                 v45[261] = 1024;
-                sead_BufferedSafeStringBase<char>::assureTerminationImpl_((int)(v45 + 259));
+                sead_BufferedSafeStringBase_char::assureTerminationImpl_((int)(v45 + 259));
                 *(_BYTE *)v45[260] = 0;
                 v45[259] = &off_60BFA9DC;
                 if ( v266 < v267 )
@@ -46157,11 +46157,11 @@ LABEL_562:
               next[-2].next = (sead_ListNode *)&off_60BFA9C4;
               previous = next[-1].previous;
               if ( previous )
-                operator delete[](previous);
+                __operator_delete_array_al(previous);
               v186->previous = (sead_ListNode *)&off_60BFA9C4;
               v188 = next[-3].next;
               if ( v188 )
-                operator delete[](v188);
+                __operator_delete_array_al(v188);
               next = v185;
               v186->previous = v183[15].next;
               v183[15].next = v186;
@@ -46333,10 +46333,10 @@ LABEL_515:
               a2 = v253;
               if ( v206 )
               {
-                v208 = operator new(0x8Cu, heap, 4);
+                v208 = __operator_new_al(0x8Cu, heap, 4);
                 sub_609A59D0(v208);
                 a2 = v253;
-                v209 = (void *)operator new[](v206 + 1, (int)heap, 4);
+                v209 = (void *)__operator_new_array_al(v206 + 1, (int)heap, 4);
                 qmemcpy(v209, *(const void **)(v248 + 16), v206);
                 *((_BYTE *)v209 + v206) = 0;
                 sub_609A5C1C(v208, v209, v206, 1);
@@ -46822,7 +46822,7 @@ LABEL_336:
           v132 = v12 & 0xFFFFFFFC;
           if ( *(_DWORD *)(v236 + 108) != 2 )
             v132 = v12;
-          v133 = (void *)operator new[](v132 + 1, (int)heap, 4);
+          v133 = (void *)__operator_new_array_al(v132 + 1, (int)heap, 4);
           qmemcpy(v133, *(const void **)(v72 + 16), v132);
           *((_BYTE *)v133 + v132) = 0;
           v134 = v133;
@@ -46844,7 +46844,7 @@ LABEL_344:
         if ( v249 >= v250 )
           goto LABEL_567;
         v90 = v8;
-        v91 = (_DWORD *)operator new(0x8Cu, heap, 4);
+        v91 = (_DWORD *)__operator_new_al(0x8Cu, heap, 4);
         sub_609A59D0(v91);
         while ( 2 )
         {
@@ -46944,7 +46944,7 @@ LABEL_467:
               if ( !v240 )
               {
                 if ( v90 )
-                  operator delete[](v90);
+                  __operator_delete_array_al(v90);
                 if ( v268 )
                 {
                   if ( v266 >= 1 )
@@ -46967,7 +46967,7 @@ LABEL_467:
                   }
                   v266 = 0;
                   if ( v270 )
-                    operator delete[](v270);
+                    __operator_delete_array_al(v270);
                   v267 = 0;
                   v268 = 0;
                   v269 = 0;
@@ -47113,7 +47113,7 @@ _DWORD *__fastcall sub_609A4754(int a1, void *a2, int a3, int a4)
   CurrentHeap = a2;
   if ( !a2 )
     CurrentHeap = (void *)sead_HeapMgr_getCurrentHeap(sead_HeapMgr_sInstance);
-  v8 = (_DWORD *)operator new(0x34u, CurrentHeap, 4);
+  v8 = (_DWORD *)__operator_new_al(0x34u, CurrentHeap, 4);
   *v8 = &off_60C60DE0;
   v8[4] = 0;
   v8[3] = 0;
@@ -47138,7 +47138,7 @@ _DWORD *__fastcall sub_609A4754(int a1, void *a2, int a3, int a4)
   }
   else
   {
-    v10 = operator new(0x8Cu, CurrentHeap, 4);
+    v10 = __operator_new_al(0x8Cu, CurrentHeap, 4);
     v8[1] = sub_609A59D0(v10);
     sub_6099F1E8(v8, CurrentHeap);
   }
@@ -47764,7 +47764,7 @@ int __fastcall sub_609A4FC4(_DWORD *a1, int a2, int a3, _DWORD *a4, _DWORD *a5)
     v13 = v11;
     if ( v11 )
     {
-      v14 = operator new[](v11 + 1, a3, 4);
+      v14 = __operator_new_array_al(v11 + 1, a3, 4);
       sub_6090552C(a2, v14, v13);
       *(_BYTE *)(v14 + v13) = 0;
       sub_609A5C1C(a1, v14, v13, 1);
@@ -47926,7 +47926,7 @@ LABEL_27:
             v6 = v34;
             if ( v15 )
             {
-              v18 = operator new[](5 * v15 + v13, a5, -4);
+              v18 = __operator_new_array_al(5 * v15 + v13, a5, -4);
               v19 = 0;
               v20 = 0;
               v35 = v12;
@@ -48022,7 +48022,7 @@ LABEL_55:
                   sub_609056A8(v34, v18, v25);
                   v11 = (void *)v18;
 LABEL_57:
-                  operator delete[](v11);
+                  __operator_delete_array_al(v11);
                   return;
                 }
               }
@@ -48049,7 +48049,7 @@ LABEL_59:
   v9 = 4 * v8;
   if ( v9 <= a4 )
   {
-    v10 = (_BYTE *)operator new[](v9, a5, -4);
+    v10 = (_BYTE *)__operator_new_array_al(v9, a5, -4);
     sead_Base64_encode(v10, *(unsigned __int8 **)(a2 + 96), *(_DWORD *)(a2 + 100), 0);
     v37 = &g_vtable_forsead_SafeStringBase<char>;
     v38 = "<![CDATA[<!BASE64[";
@@ -48226,7 +48226,7 @@ int __fastcall sub_609A59D0(int a1)
   *(_DWORD *)(a1 + 24) = a1 + 32;
   *(_DWORD *)(a1 + 20) = &BufferedSafeStringBase_char_vtable_probably;
   *(_DWORD *)(a1 + 28) = 64;
-  sead_BufferedSafeStringBase<char>::assureTerminationImpl_(a1 + 20);
+  sead_BufferedSafeStringBase_char::assureTerminationImpl_(a1 + 20);
   *(_DWORD *)(a1 + 20) = &off_60BD4C08;
   v2 = *(char **)(a1 + 24);
   if ( v2 != &byte_60ABC94D )
@@ -48269,7 +48269,7 @@ int __fastcall sub_609A5AD0(int a1)
   if ( v2 )
     v3 = *(_BYTE *)(a1 + 104) == 0;
   if ( !v3 )
-    operator delete[](v2);
+    __operator_delete_array_al(v2);
   sub_609A5B14(a1 + 112);
   return a1;
 }
@@ -48303,11 +48303,11 @@ void *__fastcall sub_609A5B14(_DWORD *a1)
       *(v3 - 3) = &off_60BFA9C4;
       v6 = (void *)*(v3 - 2);
       if ( v6 )
-        operator delete[](v6);
+        __operator_delete_array_al(v6);
       *v5 = &off_60BFA9C4;
       v7 = (void *)*(v3 - 5);
       if ( v7 )
-        operator delete[](v7);
+        __operator_delete_array_al(v7);
       v3 = v4;
       *v5 = a1[3];
       a1[3] = v5;
@@ -48316,7 +48316,7 @@ void *__fastcall sub_609A5B14(_DWORD *a1)
     result = (void *)a1[4];
     if ( result )
 LABEL_9:
-      operator delete[](result);
+      __operator_delete_array_al(result);
     a1[3] = 0;
     a1[4] = 0;
     a1[5] = 0;
@@ -48341,9 +48341,9 @@ void __fastcall sub_609A5BD4(_DWORD *a1)
   if ( v2 )
     v3 = *((_BYTE *)a1 + 104) == 0;
   if ( !v3 )
-    operator delete[](v2);
+    __operator_delete_array_al(v2);
   sub_609A5B14(a1 + 28);
-  operator delete(a1);
+  __operator_delete(a1);
 }
 
 /* ============================================================================
@@ -48363,7 +48363,7 @@ void __fastcall sub_609A5C1C(int a1, void *a2, int a3, char a4)
     if ( v8 )
       v9 = *(_BYTE *)(a1 + 104) == 0;
     if ( !v9 )
-      operator delete[](v8);
+      __operator_delete_array_al(v8);
     *(_BYTE *)(a1 + 104) = a4;
     *(_DWORD *)(a1 + 96) = a2;
     *(_DWORD *)(a1 + 100) = a3;
@@ -48558,13 +48558,13 @@ sead_ListNode *__fastcall sub_609A5D84(sead_ListNode *a1, int a2, int a3)
             *v15 = &BufferedSafeStringBase_char_vtable_probably;
             v15[1] = v15 + 3;
             v15[2] = 1024;
-            sead_BufferedSafeStringBase<char>::assureTerminationImpl_((int)v15);
+            sead_BufferedSafeStringBase_char::assureTerminationImpl_((int)v15);
             *(_BYTE *)v15[1] = 0;
             *v15 = &off_60BFA9DC;
             v15[260] = v15 + 262;
             v15[259] = &BufferedSafeStringBase_char_vtable_probably;
             v15[261] = 1024;
-            sead_BufferedSafeStringBase<char>::assureTerminationImpl_((int)(v15 + 259));
+            sead_BufferedSafeStringBase_char::assureTerminationImpl_((int)(v15 + 259));
             *(_BYTE *)v15[260] = 0;
             v15[259] = &off_60BFA9DC;
             if ( v51 < v52 )
@@ -48730,7 +48730,7 @@ sead_ListNode *__fastcall sub_609A5D84(sead_ListNode *a1, int a2, int a3)
         }
         v51 = 0;
         if ( v55 )
-          operator delete[](v55);
+          __operator_delete_array_al(v55);
         v55 = 0;
         v54 = 0;
         v53 = 0;
@@ -48928,7 +48928,7 @@ int __fastcall sub_609A6570(int a1, const void **a2, int a3)
       break;
     }
   }
-  v9 = (void *)operator new[](v7 + 1, a3, 4);
+  v9 = (void *)__operator_new_array_al(v7 + 1, a3, 4);
   (*((void (__fastcall **)(const void **))*a2 + 3))(a2);
   qmemcpy(v9, a2[1], v7);
   *((_BYTE *)v9 + v7) = 0;
@@ -48939,7 +48939,7 @@ int __fastcall sub_609A6570(int a1, const void **a2, int a3)
     if ( result )
       v11 = *(_BYTE *)(a1 + 104) == 0;
     if ( !v11 )
-      operator delete[]((void *)result);
+      __operator_delete_array_al((void *)result);
     *(_BYTE *)(a1 + 104) = 1;
     *(_DWORD *)(a1 + 96) = v9;
     *(_DWORD *)(a1 + 100) = v7;
@@ -48960,7 +48960,7 @@ int __fastcall sub_609A6668(int a1, void *a2)
 
   if ( !a2 )
     a2 = *(void **)(a1 + 136);
-  v3 = operator new(0x8Cu, a2, 4);
+  v3 = __operator_new_al(0x8Cu, a2, 4);
   sub_609A59D0(v3);
   v4 = v3;
   if ( v3 )
@@ -48981,7 +48981,7 @@ int __fastcall sub_609A66A8(int a1, void *a2)
 
   if ( !a2 )
     a2 = *(void **)(a1 + 136);
-  v3 = operator new(0x8Cu, a2, 4);
+  v3 = __operator_new_al(0x8Cu, a2, 4);
   sub_609A59D0(v3);
   v4 = v3;
   if ( v3 )
@@ -49010,7 +49010,7 @@ int __fastcall sub_609A66E8(int a1, _DWORD *a2, int a3, void *a4)
   v4 = a4;
   if ( !a4 )
     v4 = *(void **)(a1 + 136);
-  v8 = operator new(0x8Cu, v4, 4);
+  v8 = __operator_new_al(0x8Cu, v4, 4);
   sub_609A59D0(v8);
   v9 = v8;
   if ( v8 )
@@ -49280,7 +49280,7 @@ void __fastcall sub_609A6D8C(int a1)
   void *v1; // r0
 
   v1 = (void *)sub_609A6AE4(a1);
-  operator delete(v1);
+  __operator_delete(v1);
 }
 
 /* ============================================================================
@@ -49293,7 +49293,7 @@ void __fastcall sub_609A6D9C(int a1)
   void *v1; // r0
 
   v1 = (void *)sub_609A6AE4(a1 - 4);
-  operator delete(v1);
+  __operator_delete(v1);
 }
 
 /* ============================================================================
@@ -49895,7 +49895,7 @@ _DWORD *__fastcall sub_609A7954(int a1, int a2, void *a3)
   switch ( a1 )
   {
     case 0:
-      v4 = (_DWORD *)operator new(0xB4u, a3, 4);
+      v4 = (_DWORD *)__operator_new_al(0xB4u, a3, 4);
       sub_609A76A8((int)v4, 0, a2);
       *v4 = off_60C60ECC;
       v4[5] = off_60C60EFC;
@@ -49920,7 +49920,7 @@ _DWORD *__fastcall sub_609A7954(int a1, int a2, void *a3)
       sub_60941A08(v6, &v14, &v12, &v16, v4 + 14);
       goto LABEL_5;
     case 1:
-      v4 = (_DWORD *)operator new(0xB4u, a3, 4);
+      v4 = (_DWORD *)__operator_new_al(0xB4u, a3, 4);
       sub_609A76A8((int)v4, 1, a2);
       *v4 = off_60C60F28;
       v4[5] = off_60C60F58;
@@ -49947,26 +49947,26 @@ LABEL_5:
       v4[44] = 2;
       break;
     case 2:
-      v4 = (_DWORD *)operator new(0xC4u, a3, 4);
+      v4 = (_DWORD *)__operator_new_al(0xC4u, a3, 4);
       sub_609A8CD4(v4, a2);
       break;
     case 3:
-      v4 = (_DWORD *)operator new(0x98u, a3, 4);
+      v4 = (_DWORD *)__operator_new_al(0x98u, a3, 4);
       sub_609A76A8((int)v4, 3, a2);
       *v4 = off_60C60FE0;
       v4[5] = off_60C61010;
       v4[37] = 0;
       break;
     case 4:
-      v4 = (_DWORD *)operator new(0xE4u, a3, 4);
+      v4 = (_DWORD *)__operator_new_al(0xE4u, a3, 4);
       sub_609A986C(v4, a2);
       break;
     case 5:
-      v4 = (_DWORD *)operator new(0xD0u, a3, 4);
+      v4 = (_DWORD *)__operator_new_al(0xD0u, a3, 4);
       sub_609A9CBC(v4, a2);
       break;
     case 6:
-      v4 = (_DWORD *)operator new(0xBCu, a3, 4);
+      v4 = (_DWORD *)__operator_new_al(0xBCu, a3, 4);
       sub_609A76A8((int)v4, 6, a2);
       *v4 = off_60C610F4;
       v4[5] = off_60C61124;
@@ -51192,7 +51192,7 @@ int __fastcall sub_609A9434(int a1, void *a2)
   int v3; // r0
   int v4; // r1
 
-  v3 = operator new(0x13B8u, a2, 4);
+  v3 = __operator_new_al(0x13B8u, a2, 4);
   *(_DWORD *)(a1 + 148) = sub_609AA978(v3);
   sub_609AB778();
   *(_BYTE *)(*(_DWORD *)(a1 + 148) + 440) = 1;
@@ -52748,7 +52748,7 @@ int __fastcall sub_609AB694(_DWORD *a1)
       }
       while ( v7 );
     }
-    operator delete[](v5);
+    __operator_delete_array_al(v5);
     *v3 = 0;
     a1[1075] = 0;
   }
@@ -52777,7 +52777,7 @@ void __fastcall sub_609AB754(int a1)
   void *v1; // r0
 
   v1 = (void *)sub_609AB568(a1);
-  operator delete(v1);
+  __operator_delete(v1);
 }
 
 /* ============================================================================
@@ -52790,7 +52790,7 @@ void __fastcall sub_609AB764(int a1)
   void *v1; // r0
 
   v1 = (void *)sub_609AB568(a1 - 4);
-  operator delete(v1);
+  __operator_delete(v1);
 }
 
 /* ============================================================================
@@ -52878,7 +52878,7 @@ int __fastcall sub_609AB778(_DWORD *a1, signed int a2, void *a3)
   sub_6091FDB0(a1 + 918, 2, 26, 8, 8, 8, 1, 0, 0, 1);
   v11 = a1[927];
   v12 = a1[928];
-  v13 = (_DWORD *)operator new(0x1Cu, a3, 4);
+  v13 = (_DWORD *)__operator_new_al(0x1Cu, a3, 4);
   sub_60913BB4();
   *v13 = off_60BF9C1C;
   sub_60913D88((int)v13, v12, (int)a3, v11, 4);
@@ -53764,7 +53764,7 @@ _DWORD *__fastcall sub_609ACB4C(_DWORD *a1)
       }
       while ( v6 );
     }
-    operator delete[](v4);
+    __operator_delete_array_al(v4);
     a1[5] = 0;
     a1[6] = 0;
   }
@@ -53802,9 +53802,9 @@ void __fastcall sub_609ACBC4(_DWORD *a1)
       }
       while ( v6 );
     }
-    operator delete[](v4);
+    __operator_delete_array_al(v4);
   }
-  operator delete(a1);
+  __operator_delete(a1);
 }
 
 /* ============================================================================
