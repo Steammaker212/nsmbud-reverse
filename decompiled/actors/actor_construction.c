@@ -99303,7 +99303,7 @@ sub_60181FC0__LABEL_147:
         v107 = v84;
         v86 = MEMORY[0xB3BA34];
         v111 = 0;
-        do
+        for ( ;; )   /* terminator dropped by the emitter; exits via break/goto */
         {
           v87 = (_DWORD *)sub_60183600(v74, v84, v85);
           v117 = &v119;
