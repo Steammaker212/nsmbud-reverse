@@ -130,6 +130,9 @@ def main() -> int:
 
     if args.emit_macros:
         Path(args.emit_macros).write_text(MACROS)
+        print("macros: %s" % args.emit_macros)
+        if not args.jsonl:
+            return 0
 
     if args.file:
         p = Path(args.file)

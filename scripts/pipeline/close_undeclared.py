@@ -59,12 +59,24 @@ def main() -> int:
 
     data: set[str] = set()
     funcs: set[str] = set()
-    if hdr.exists():
-        prev = hdr.read_text(encoding="utf-8", errors="replace")
-        data |= set(re.findall(r"extern unsigned char (\w+)\[", prev))
-        data |= set(re.findall(r"extern uintptr_t (\w+)", prev))
-        funcs |= set(re.findall(r"int (\w+)\(\)", prev))
-        print("carried over: %d data, %d funcs" % (len(data), len(funcs)))
+    # The header must exist before the first compile: a unit that cannot find
+    # it fails with "file not found" and clang never reaches the undeclared-
+    # identifier diagnostics this script learns from, so the first pass would
+    # find nothing and report a false fixed point.
+    if not hdr.exists():
+        hdr.write_text(
+            "#ifndef NSMBUDX_UNDECLARED_H\n"
+            "#define NSMBUDX_UNDECLARED_H\n"
+            '#include "nsmbudx_prelude.h"\n'
+            "#endif\n", encoding="utf-8")
+
+    # Carry over whatever an earlier run established, so --rounds can be spread
+    # across invocations.
+    prev = hdr.read_text(encoding="utf-8", errors="replace")
+    data |= set(re.findall(r"extern unsigned char (\w+)\[", prev))
+    data |= set(re.findall(r"extern uintptr_t (\w+)", prev))
+    funcs |= set(re.findall(r"int (\w+)\(\)", prev))
+    print("carried over: %d data, %d funcs" % (len(data), len(funcs)))
 
     for rnd in range(args.rounds):
         with ThreadPoolExecutor(max_workers=args.jobs) as pool:
