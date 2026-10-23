@@ -11313,7 +11313,7 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
     sub_6000A60C();
     result = *(unsigned __int8 *)(a1 + 7608);
     if ( *(_BYTE *)(a1 + 7608) )
-      return SE_SYS_NICE_S_ref();
+      return sub_60023B90();
     return result;
   }
 
@@ -27707,7 +27707,7 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
               v8 = sub_60285510((int)v6);
               v9 = sub_602856EC(v5 + 1569, v8);
               if ( v9 >= 8 )
-                SE_SYS_NICE_S_ref();
+                sub_60023B90();
               v10 = (char)v6[84];
               if ( v10 <= 3 )
                 sub_60022760(MEMORY[0xC7F52C], (int)v5, v9, v10);
@@ -27781,7 +27781,7 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
                     v22 = sub_60285510(*(_DWORD *)(MEMORY[0xCC436C] + 4 * v20 + 32));
                     v23 = sub_602856EC(v5 + 1569, v22);
                     if ( v23 >= 8 )
-                      SE_SYS_NICE_S_ref();
+                      sub_60023B90();
                     v24 = *(char *)(v21 + 84);
                     if ( v24 <= 3 )
                       sub_60022760(MEMORY[0xC7F52C], (int)v5, v23, v24);
@@ -92280,7 +92280,7 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
         if ( (*(_BYTE *)(a1 + 20) & 0xF0) != 0 )
           nullsub_4();
         else
-          SE_SYS_NICE_S_ref();
+          sub_60023B90();
       }
       sub_603FD768(MEMORY[0xC99DF4], *(unsigned __int8 *)(MEMORY[0xC9A684] + 18), 1);
       (*(void (__fastcall **)(int, int))(*(_DWORD *)a1 + 192))(a1, 13341864);
@@ -120981,7 +120981,7 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
     {
       if ( !*(_BYTE *)(MEMORY[0xCC6D8C] + 17) )
         *(_DWORD *)(a1 + 7100) = sub_606C8C0C(a1);
-      SE_SYS_NICE_S_ref();
+      sub_60023B90();
       v29 = (char)*v3;
       v42 = 70;
       v30 = Global_setBitmaskAndReturnC7B3A8(v29);
@@ -121547,7 +121547,7 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
     {
       if ( !*(_BYTE *)(MEMORY[0xCC6D8C] + 17) )
         *(_DWORD *)(a1 + 7100) = sub_606C8C0C(a1);
-      SE_SYS_NICE_S_ref();
+      sub_60023B90();
       v28 = (char)*v21;
       v42 = 70;
       v29 = Global_setBitmaskAndReturnC7B3A8(v28);
@@ -225161,7 +225161,7 @@ sub_60758544__LABEL_197:
         if ( result == *v14 + 1 )
         {
           if ( *v14 )
-            SE_SYS_NICE_S_ref();
+            sub_60023B90();
           return sub_607799F0(MEMORY[0xCBFA90]);
         }
       }

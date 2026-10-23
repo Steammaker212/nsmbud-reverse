@@ -894,7 +894,7 @@ int _nnDetailNintendoSdkRuntimeObjectFileRefer()
       if ( a3 )
         v8 = 4;
       if ( a2 >= v8 )
-        SE_SYS_NICE_S_ref(v8);
+        sub_60023B90(v8);
       v9 = *(float *)(a1 + 108) + *(float *)(a1 + 572);
       v10 = *(float *)(a1 + 112) + *(float *)(a1 + 576);
       v11 = *((_DWORD *)&unk_60C7B3B0 + a2 + 4);
@@ -9048,7 +9048,7 @@ int _nnDetailNintendoSdkRuntimeObjectFileRefer()
     *(_DWORD *)(a1 + 240) = result;
     if ( result == 8 )
     {
-      SE_SYS_NICE_S_ref(8);
+      sub_60023B90(8);
       result = *(_DWORD *)(a1 + 240);
     }
     if ( result >= 9 )
@@ -19470,7 +19470,7 @@ sub_6000FD08__LABEL_240:
   }
 
 /* ============================================================================
- * SE_SYS_NICE_S_ref
+ * sub_60023B90
  * RVA 0x00023b90   size 0xf4   xrefs 39
  * ============================================================================ */
   int sub_60023B90()
@@ -19482,14 +19482,14 @@ sub_6000FD08__LABEL_240:
     _DWORD v4[2]; // [sp+0h] [bp-8h] BYREF
   
     if ( !MEMORY[0xC99DD4] )
-      goto SE_SYS_NICE_S_ref__LABEL_5;
+      goto sub_60023B90__LABEL_5;
     result = *(_DWORD *)(MEMORY[0xC99DD4] + 764);
     v1 = result == 2;
     if ( result != 2 )
       v1 = result == 4;
     if ( !v1 )
     {
-  SE_SYS_NICE_S_ref__LABEL_5:
+  sub_60023B90__LABEL_5:
       if ( MEMORY[0xCC6484] )
       {
         result = sub_60808E60(MEMORY[0xCC6AF8], "SE_SYS_NICE_S");

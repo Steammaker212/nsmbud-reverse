@@ -17238,7 +17238,7 @@ sub_60459990__LABEL_136:
       sub_600221A0(MEMORY[0xC7F52C], 8, *v3, 1);
       sub_604635F4(a1);
       if ( (*(_BYTE *)(a1 + 23) & 0x40) != 0 )
-        SE_SYS_NICE_S_ref();
+        sub_60023B90();
       *(_BYTE *)(a1 + 19) = 1;
     }
     return v2;
@@ -20923,7 +20923,7 @@ sub_60459990__LABEL_136:
         *(_DWORD *)(MEMORY[0xC9A1E0] + 36 * v6 + 556) += 3;
         sub_603FFE10(MEMORY[0xC99DD4] + 852);
         v7 = sub_604635F4(a1);
-        SE_SYS_NICE_S_ref(v7);
+        sub_60023B90(v7);
         *(_BYTE *)(a1 + 19) = 1;
       }
     }

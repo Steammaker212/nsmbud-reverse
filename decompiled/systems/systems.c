@@ -168248,7 +168248,7 @@ static inline unsigned int uxtb16(unsigned int x)
               if ( *((_DWORD *)v5 - 4) )
                 result = nullsub_4();
               else
-                result = SE_SYS_NICE_S_ref();
+                result = sub_60023B90();
             }
           }
         }
@@ -241092,7 +241092,7 @@ sub_605C4308__LABEL_213:
         ++v6;
       if ( v6 == 3 )
       {
-        SE_SYS_NICE_S_ref();
+        sub_60023B90();
         v5 = 1;
       }
       if ( !*(_DWORD *)(a1 + 6132) )
@@ -241132,7 +241132,7 @@ sub_605C4308__LABEL_213:
           if ( v18 + v17 == 3 )
           {
             if ( !v5 )
-              SE_SYS_NICE_S_ref();
+              sub_60023B90();
             v19 = *(_DWORD *)(a1 + 112);
             v20 = MEMORY[0xC7F534];
             v21 = *(_DWORD *)(a1 + 108);
