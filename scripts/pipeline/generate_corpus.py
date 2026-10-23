@@ -49,6 +49,11 @@ PRELUDE_TYPES = {
     "float32x2_t", "float32x4_t", "int32x2_t", "int32x4_t", "uint32x4_t",
     "int8x8_t", "int8x16_t", "uint8x8_t", "uint8x16_t", "int16x4_t",
     "int16x8_t", "uint16x8_t", "int64x2_t", "uint64x2_t",
+    # The decompiler's paired-lane types.
+    "int32x4x2_t", "float32x4x2_t", "int8x16x2_t", "uint8x16x2_t",
+    "float32x2x2_t", "int8x8x2_t", "uint8x8x2_t", "int16x4x2_t",
+    "int16x8x2_t", "uint16x8x2_t", "int64x2x2_t", "uint64x2x2_t",
+    "int32x2x2_t",
 }
 
 ROUTES: list[tuple[str, str]] = [
@@ -168,6 +173,53 @@ BANNER = """/* =================================================================
 """
 
 
+def sanitize_symbol(sig: str) -> str:
+    """Make the declared name a legal C identifier.
+
+    Hex-Rays prints C++ operator names (`operator delete`, `operator==`), which
+    are not identifiers in C. Rewrite them to the flattened spelling used for
+    every other member (`Class__operator_delete`) so call sites and the
+    declaration agree.
+    """
+    def repl(m: re.Match) -> str:
+        op = m.group(1)
+        words = {
+            "delete[]": "delete_array", "delete": "delete", "new[]": "new_array",
+            "new": "new", "==": "eq", "!=": "ne", "<=": "le", ">=": "ge",
+            "<<": "lshift", ">>": "rshift", "<": "lt", ">": "gt", "=": "assign",
+            "+": "add", "-": "sub", "*": "mul", "/": "div", "++": "inc",
+            "--": "dec", "&": "and", "|": "or", "^": "xor", "!": "not",
+            "~": "inv", "%": "mod", "[]": "index", "()": "call",
+        }
+        return "__operator_" + words.get(op.strip(), re.sub(r"\W", "_", op.strip()))
+
+    sig = re.sub(r"\boperator\s*(\[\]|\(\)|delete\[\]|new\[\]|delete|new|<<=|>>=|==|!=|<=|>=|<<|>>|\+\+|--|->|&&|\|\||[=+\-*/%<>!&|^~])",
+                 repl, sig)
+    # Destructors: `Class::~Class` -> `Class__dtor`. The `~` is not an
+    # identifier character in C, so the tilde form can never be declared.
+    sig = re.sub(r"\b([A-Za-z_]\w*)\s*::\s*~\s*([A-Za-z_]\w*)", r"\1__dtor_\2", sig)
+    sig = re.sub(r"~\s*([A-Za-z_]\w*)", r"\1__dtor", sig)
+    return sig
+
+
+# Names owned by libc/the compiler runtime. The image carries PLT stubs under
+# these names; declaring them here conflicts with the real <string.h>/<math.h>
+# prototypes, so they are kept out of the generated headers.
+RESERVED_LIBC = {
+    "vsnprintf", "snprintf", "printf", "sprintf", "vprintf", "sscanf",
+    "strstr", "strlen", "strcpy", "strncpy", "strcmp", "strncmp", "strchr",
+    "strrchr", "strcat", "strncat", "memcpy", "memmove", "memset", "memcmp",
+    "atanf",
+    "atan", "atan2", "atan2f", "sinf", "cosf", "tanf", "tan", "sin", "cos",
+    "sqrtf", "sqrt", "fabs", "fabsf", "exp", "expf", "exp2f", "pow", "powf",
+    "log", "logf", "logb", "floor", "floorf", "ceil", "ceilf", "strtod",
+    "strtol", "atoi", "malloc", "calloc", "realloc", "free", "abort", "exit",
+    "qsort", "bsearch", "fmod", "fmodf", "acosf", "asinf", "hypot", "scalbn",
+    "tolower", "toupper", "__cxa_pure_virtual", "__cxa_guard_acquire",
+    "__cxa_guard_release", "__errno_location",
+}
+
+
 def sig_is_wellformed(sig: str) -> bool:
     """Reject signatures the decompiler could not render cleanly.
 
@@ -231,10 +283,10 @@ def forward_decls(recs: list[dict]) -> list[str]:
             # Compiler/Hex-Rays reserved spellings that begin with '__'.
             if t.startswith("__"):
                 continue
-            # Namespaced SDK types like sead_IDisposer start lowercase but are
-            # still types; a bare lowercase word is far more likely a typo.
-            if not any(ch.isupper() for ch in t) and "__" not in t:
-                continue
+            # Namespaced SDK types like sead_IDisposer start lowercase, and a
+            # namespace itself can be the pointee (`nv *this`), so a lowercase
+            # single token is still worth declaring: the declaration is opaque
+            # and asserts nothing about layout.
             types.add(t)
     lines = ["/* Opaque declarations for types named in this group's signatures. */"]
     for t in sorted(types):
@@ -288,6 +340,16 @@ def main() -> int:
                 continue
             first = r["c"].splitlines()[0]
             sig = first.split("*/", 1)[-1].strip() if "*/" in first else first
+            if not sig or sig.startswith("//"):
+                # Hex-Rays emits `// Overrides: ...` and `// attributes: thunk`
+                # lines ahead of the real prototype; skip them.
+                for ln in r["c"].splitlines():
+                    ln = ln.split("*/", 1)[-1].strip()
+                    if ln and not ln.startswith(("//", "/*", "*")):
+                        sig = ln
+                        break
+                else:
+                    continue
             if not sig:
                 continue
             sig = re.sub(r"\b([A-Za-z_]\w*)\s*::\s*([A-Za-z_]\w*)", r"\1__\2", sig)
@@ -296,6 +358,7 @@ def main() -> int:
             sig = re.sub(r"\(\s*;\s*$", "(void)", sig)
             if not sig.rstrip().endswith(")"):
                 sig = sig.rstrip().rstrip("(") + "(void)"
+            sig = sanitize_symbol(sig)
             if sig_is_wellformed(sig):
                 all_sigs[r["ea"]] = sig
 
@@ -361,20 +424,38 @@ def main() -> int:
         '#include "nsmbudx_types_forward.h"',
         "",
     ]
+    # One prototype per declared name. The database can hold two distinct
+    # functions under the same name with different signatures; emitting both
+    # would not compile, so the first wins and the clash is reported.
+    seen_names: dict[str, int] = {}
+    clashes: list[tuple[str, int, int]] = []
     for ea in sorted(all_sigs):
-        s = all_sigs[ea]
+        s = sanitize_symbol(all_sigs[ea])
+        nm = re.search(r"([A-Za-z_]\w*)\s*\(", s)
+        key = nm.group(1) if nm else s
+        if key in seen_names:
+            continue
+        if key in RESERVED_LIBC:
+            # The image's PLT stubs for libc carry the same names; declaring
+            # them here conflicts with the real prototypes in <math.h> etc.
+            continue
+        seen_names[key] = ea
         # Hex-Rays renders some variadic calls with fewer arguments than the
         # prototype it also printed (printf-family and engine log helpers).
         # Making the declaration variadic keeps the signature usable instead of
         # rejecting the call site; the printed types are still there.
         if s.endswith("(void)") or s.endswith("()"):
             decl.append("%s; /* 0x%08X */" % (s, ea))
+        elif s[:-1].rstrip().endswith("..."):
+            # The parameter list already ends in `...`.
+            decl.append("%s; /* 0x%08X */" % (s, ea))
         else:
-            decl.append("%s, ...; /* 0x%08X */" % (s[:-1], ea))
+            decl.append("%s, ...); /* 0x%08X */" % (s[:-1], ea))
     decl.append("")
     decl.append("#endif")
     (inc / "nsmbudx_prototypes.h").write_text("\n".join(decl))
-    print("prototypes: %d" % len(all_sigs))
+    print("prototypes: %d (%d duplicate names suppressed)"
+          % (len(seen_names), len(clashes)))
 
     if args.data_symbols:
         rows = json.loads(Path(args.data_symbols).read_text())
@@ -463,6 +544,7 @@ def main() -> int:
                 # Some signatures carry an unresolved IDA type reference
                 # (`#90 *this`) or other non-C constructs; skip the prototype
                 # rather than emit garbage.
+                sig = sanitize_symbol(sig)
                 if not sig_is_wellformed(sig):
                     continue
                 h.append("%s;" % sig)
@@ -487,3 +569,4 @@ def main() -> int:
 
 if __name__ == "__main__":
     raise SystemExit(main())
+
