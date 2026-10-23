@@ -29029,7 +29029,7 @@ MenuLayoutTable_init__LABEL_89:
   sub_6047ACD8__LABEL_100:
       v44 = (_WORD *)(a1 + 2 * v40);
       v45 = v14;
-      do
+      for ( ;; )
       {
         v46 = *v45;
         if ( v46 == 15 )

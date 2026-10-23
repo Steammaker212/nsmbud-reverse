@@ -193256,6 +193256,7 @@ sub_603F8408__LABEL_96:
             do
             {
               *(_DWORD *)(v26[49] + 4 * v38) = 1065353216;
+      ++v38; } while ( v38 < v37 );   /* reconstructed: the emitter dropped this loop's terminator */
 
   }
   }

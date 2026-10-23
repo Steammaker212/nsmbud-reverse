@@ -91230,7 +91230,7 @@ sub_6017D65C__LABEL_307:
             if ( !v11 )
               v50 = v48 + v47;
             if ( v47 < 0 )
-
+          v50 = 11778612;   /* reconstructed: mirrors the identical guard at L91192 */
   }
   }
   }
@@ -91468,14 +91468,14 @@ sub_6017D65C__LABEL_307:
         if ( a4 < 2 )
           v23 = a4;
         v109 = v23;
-        do
+        for ( ;; )
         {
           v24 = 0;
           v25 = 0;
           if ( v110 < 0x10 )
             v24 = v110;
           v111 = v24;
-          do
+          for ( ;; )
           {
             v26 = *v5;
             (*(void (__fastcall **)(_DWORD *))(*a2 + 12))(a2);
