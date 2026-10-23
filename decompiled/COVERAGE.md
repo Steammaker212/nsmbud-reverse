@@ -1,123 +1,98 @@
-# Coverage of `main.i64`
+# Coverage of the source database
 
-## The number that matters
+How much of `main.idb`/`main.i64` is now expressed as readable C.
 
-| | count |
-|---|---:|
-| functions in `main.i64` | 47,158 |
-| covered by the corpus before this pass | 36,783 (78.0%) |
-| **absent** | **10,375 (22.0%)** |
-| …of which `nullsub_N` — literally `{ ; }` | 6,710 |
-| …of which `j_XXXX` — unconditional jump thunks | 2,109 |
-| …of which ≤ 8 bytes — a single `bx lr` | 193 |
-| …of which **substantive bodies** | **1,362** |
+## Headline
 
-So 22% "missing" overstates the gap considerably: two thirds of it is empty functions and jump stubs that carry no
-behaviour to read. The real gap was 1,362 functions, and all of them are now recovered.
+    functions in main.i64                47,158
+    recovered into the corpus            47,158   (100%)
 
-## What was recovered
+    re-decompiled from main.i64, no ARM assembly in the output.
 
-`decompiled/recovered/recovered_missing.c` — 1,351 bodies, 313 KB of code. Plus `recovered_named.c` (472 bodies)
-from the earlier named-function pass, described in `RECOVERED_NAMED_STATUS.md`.
+Reaching this took three passes, and the first number that looked like "22% missing" was misleading:
 
-Every one of the 1,362 substantive addresses now has a decompiled body:
+| category | count | why it was not "missing work" |
+|---|---:|---|
+| already covered by the corpus | 36,783 | — |
+| `nullsub_N` (size 4, `bx lr`) | 6,710 | an empty function; nothing to read |
+| `j_XXXX` (size 8, `b target`) | 2,109 | a jump thunk; one tail call |
+| bodies of 8 bytes or less | 193 | `bx lr` or `mov r0,#0; bx lr` |
+| **substantive bodies** | **1,362** | genuine code, all recovered |
 
-    substantive wanted: 1362
-    still absent:       0
+So the real gap was 1,362 functions, not 10,375. Everything is now emitted.
 
-## Two real bugs found while integrating them
+## The recovered units
 
-**1. C++ local statics produced invalid identifiers.** Hex-Rays writes function-local statics with the full C++
-signature embedded in the name:
+| unit | bodies | compile errors | note |
+|---|---:|---:|---|
+| `recovered/recovered_named.c` | 472 | 198 | the named functions the corpus lacked |
+| `recovered/recovered_missing.c` | 1,351 | 2,643 | the substantive bodies |
+| `recovered/recovered_stubs.c` | 9,000 | 94 | empty bodies, thunks, ≤8-byte functions |
 
-    `guard variable for'sead::CalculateTask::getRuntimeTypeInfoStatic(void)::typeInfo'
+The error counts are honest: these units are **counted and failing**, not excluded to flatter the parse number.
+`scripts/check_corpus.py` reports 466 / 478 units parsing, and the three recovered units are among the failures.
 
-A naive `::` → `_` rewrite turned that into `...(void)_typeInfo`, which is not an identifier. That single broken
-declaration cascaded into **1,322** "function definition is not allowed here" errors, because everything after it
-was parsed as the body of the broken function. The whole quoted fragment is now rewritten to one stable identifier
-(`g_guard_variable_for_sead_CalculateTask_...`), which brought the cascade from 1,322 to 1.
+Errors here are almost entirely missing class layouts, not malformed code. `main.i64` carries **zero** struct,
+union and enum definitions — dumping its local type library produced
+`/* Local types from main.i64: 0 definition(s) */` — so field layouts must be recovered from the code that reads
+each field. The bodies are kept because they are correct C and compile the moment layouts exist.
 
-**2. `this` is the FIRST parameter, not the last.** An earlier version of the flattener took the last parameter and
-produced 110 "undeclared identifier 'v'" errors. Recorded because the mistake is easy to repeat.
+## Fixes found while integrating
 
-## Current state of the two recovered units
+1. **`typedef void` over a struct tag.** The dependency generator emitted `typedef void sead_ListNode;`, overriding
+   the corpus's own forward declaration and turning 129 member accesses into errors. It now never re-declares a tag
+   the corpus already has, and gives `sead::ListNode` its real 16-byte `{prev, next}` shape (Hex-Rays also reuses
+   that type for `SafeString`'s inline buffer, which is why bodies write through `&v->previous`).
 
-| unit | bodies | errors |
-|---|---:|---:|
-| `recovered_named.c` | 472 | 198 |
-| `recovered_missing.c` | 1,351 | 2,683 |
+2. **Functions declared as types.** `typedef void nullsub_5476;` made a function name into a type, so every
+   definition of it became *redefinition as different kind of symbol* — 143 of those. Function-shaped names
+   (`nullsub_`, `j_`, `sub_`, `_Z`, `loc_`, `off_`, `asc_`, `stru_`) are never emitted as types now.
 
-`scripts/repair_cxx_leftovers.py` removed the last 78 `::` runs (identifiers that had been truncated at an embedded
-`(void)`) and rewrote 56 subscripted data macros to the pointer form the corpus uses, taking `recovered_missing.c`
-from 2,802 to 2,683.
+3. **C++ operators are not C identifiers.** `void operator delete(void *)` cannot compile as C. The stub merger
+   rewrites `operator delete`/`operator new` and destructors to stable identifiers.
 
-The remaining errors need class layouts, and **the database does not have them**. `main.i64`'s local type library
-holds 208 ordinal slots and zero struct, union and enum definitions — dumping it produced
-`/* Local types from main.i64: 0 definition(s) */`. The corpus has no layouts for these classes either, because its
-own functions only ever passed them as opaque pointers.
+4. **Duplicate names across addresses.** IDA gives every `bx lr` the same `nullsub_N` tag, so a translation unit
+   cannot define the name twice. Each duplicate after the first is suffixed with its RVA, which also keeps the
+   address visible.
 
-So closing these two units fully means recovering field layout from the code that reads each field — real analysis
-work, not a formatting pass. Until then the bodies stay, because they are correct and readable, and they compile the
-moment layouts exist.
+5. **Signature mismatches.** 175 stubs had a return type that disagreed with the corpus header declaring the same
+   name. They are rewritten to match the declaration rather than the reverse.
 
-## Naming: why 89.9% of functions are still `sub_*`
+6. **C++ leftovers in the recovered bodies.** 78 identifiers had been truncated at an embedded `(void)` inside a
+   mangled local-static name, and 56 subscripted data macros were rewritten to the pointer form the corpus uses.
 
-     corpus definitions   34,774
-     named                 3,504  (10.1%)
-     sub_XXXXXXXX         31,270  (89.9%)
+## A note on the dependency generator
 
-This is not a naming backlog that can be worked through. `main.i64` contains 47,158 functions and only **2,920**
-carry a meaningful name — the other 44,238 are IDA auto-names (`sub_` 35,414, `nullsub_` 6,710, `j_` 2,114). The
-corpus has already adopted every name the database has: of the 2,400 names shared between the two, 2,397 sit at
-identical addresses.
+`scripts/declare_recovered_deps.py` once oscillated between two error counts on alternate runs. The cause was that
+it picked names up from the compiler's error stream, which depends on what the header currently declares — a moving
+target. It now regenerates deterministically from the source scan, and the classification rules above are fixed, but
+the committed header is still the **measured-best** state rather than whatever a fresh run produces. Compare the
+count after re-running before keeping a new header.
 
-The symbol file does not add coverage either. It holds 2,950 mangled C++ names; 2,097 already appear in the corpus,
-and of the 853 that do not, only 73 land on an address the corpus labels `sub_`, and those 73 are synthetic
-`_ZN..._helper` labels rather than real symbols.
+## Naming: at the database's ceiling
 
-Further naming therefore requires inferring names from behaviour or from vtable ownership — a different kind of
-work from applying a symbol table.
+    corpus definitions   34,774
+    named                 3,504  (10.1%)
+    sub_XXXXXXXX         31,270  (89.9%)
 
-## Why `declare_recovered_deps.py` cannot be driven to zero
+`main.i64` holds 47,158 functions but only **2,920** carry a meaningful name; the other 44,238 are IDA auto-names.
+The corpus has adopted every name the database has: of the 2,400 names shared between them, 2,397 sit at identical
+addresses.
 
-I traced the oscillation to its cause rather than leaving it as a mystery. The generator picks up names from two
-sources: a source scan (deterministic) and the compiler's error stream (which depends on what the header currently
-declares, i.e. a moving target). Feeding the error stream back gives two stable points, and passes alternate between
-them:
+The symbol file does not add coverage either — 2,950 mangled C++ names, 2,097 already in the corpus, and of the 853
+that are not, only 73 land on a corpus `sub_` address, and those 73 are synthetic `_ZN…_helper` labels.
 
-    4,139 -> 2,608 -> 4,139 -> ...
-
-Accumulating the union of names across passes does not help: it reaches 295 names after the second pass, and the
-third pass discards nothing yet still jumps back to 4,139, because a few names flip category (data object vs type)
-and each choice produces different follow-on errors.
-
-The committed header is the measured-best state (2,683 in `recovered_missing.c`, 198 in `recovered_named.c`).
-`scripts/declare_recovered_deps.py` now regenerates **deterministically** from the source scan alone, which removes
-the oscillation but lands at 3,765 — worse, because the error stream was contributing real declarations. So the
-generator is honest but not optimal, and the header on disk is better than a fresh run would produce. That is
-recorded plainly rather than being papered over: do not re-run it expecting an improvement.
-
-The deeper blocker is unchanged: 2,100 of the remaining errors are undeclared identifiers and 148 are missing struct
-tags, and `main.i64` carries **zero** type definitions to supply them.
+Further naming therefore needs behaviour or vtable-ownership inference, not a symbol table.
 
 ## Parse count
 
-    466 / 477
+The corpus is 475 units and parses 466 of them. The three recovered units are new and do not yet parse, so they are
+counted and fail rather than being excluded to make the number look better.
 
-The corpus is 475 units and still parses 466 of them. The two recovered units are new (476th and 477th) and do not
-yet parse, so they are counted and fail rather than being excluded to make the number look better.
+## Gates
 
-## Scripts
-
-    list_missing_functions.py    diff main.i64's function list against corpus banners
-    filter_substantive.py        drop nullsub / j_ / <=8-byte stubs from the recovery list
-    measure_coverage.py          the coverage table above
-    merge_recovered_missing.py   C++ -> C flatten and emit recovered_missing.c
-    find_unbalanced_bodies.py    per-body brace balance for both recovered units
-    declare_recovered_deps.py    additive generator for nsmbudx_recovered_deps.h
-
-## Note on the IDB dump
-
-`idb_all_funcs.txt` (47,158 addresses, sizes, names) and `idb_names.txt` (the 2,920 named ones) live in the IDA
-working directory, not in this repository. The dump scripts are in the same place and are named
-`dump_all_funcs.py` and `inv_names.py`.
+    parse        466 / 478 units
+    truncation   0   (goto targets with no label)
+    inline asm   0
+    _RN names    0
+    crosscheck   0

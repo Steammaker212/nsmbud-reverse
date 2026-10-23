@@ -16,7 +16,8 @@ import subprocess
 import sys
 
 ROOT = r"C:\Users\Saif Khan\Downloads\nsmbud-reverse\decompiled"
-TU = tuple(os.path.join(ROOT, "recovered", f) for f in ("recovered_named.c", "recovered_missing.c"))
+TU = tuple(os.path.join(ROOT, "recovered", f) for f in
+           ("recovered_named.c", "recovered_missing.c", "recovered_stubs.c"))
 OUT = os.path.join(ROOT, "include", "nsmbudx_recovered_deps.h")
 CLANG = r"C:\Program Files\LLVM\bin\clang.exe"
 INC = os.path.join(ROOT, "include")
@@ -129,6 +130,12 @@ def main(argv):
     lines += ["", "/* ---- opaque types: only ever used behind a pointer in these bodies ---- */"]
     for t in sorted(types):
         if t in ("v", "nn", "a2", "a3", "a4", "a1", "this"):
+            continue
+        # nullsub_/j_/sub_/_Z and the IDA label families are FUNCTIONS or data, never types. Emitting
+        # `typedef void nullsub_5476;` made the name a type, so every definition of it became
+        # "redefinition as different kind of symbol" (143 of those), and `typedef void sead_ListNode;`
+        # turned 129 accesses through it into "not a structure or union".
+        if re.match(r"(?:nullsub_|j_|sub_|_Z|loc_|off_|asc_|stru_|algn_|def_)\w*$", t):
             continue
         if t in tags or t[0].isupper():
             lines.append("typedef struct %s %s;" % (t, t))
