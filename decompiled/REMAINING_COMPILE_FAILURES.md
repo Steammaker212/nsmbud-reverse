@@ -1,71 +1,99 @@
 # Remaining compile failures — measured state
 
-Nine of 475 translation units do not parse. This note records what is actually known about them, after several
-rounds of measurement, including two hypotheses that turned out to be wrong.
+Nine of 475 translation units do not parse. This note records what is known about them after several rounds of
+measurement, including three hypotheses that turned out to be wrong.
 
 ## Current numbers
 
 | file | errors | of which "function definition is not allowed here" |
 |---|---:|---:|
-| `actors/actor_construction.c` | 2 036 | 1 687 |
+| `actors/actor_construction.c` | 872 | 376 |
 | `actors/actors_a.c` | 389 | 0 |
-| `actors/actors_b.c` | 746 | 341 |
+| `actors/actors_b.c` | 731 | 321 |
 | `libs/libs.c` | 609 | 0 |
 | `player/player.c` | 47 | 0 |
-| `powerup/powerup.c` | 130 | 71 |
+| `powerup/powerup.c` | 136 | 71 |
 | `systems/core.c` | 532 | 0 |
 | `systems/states.c` | 640 | 0 |
 | `systems/systems.c` | 372 | 0 |
 
-Total 5 502. The 2 099 cascade errors live in three files only.
+Total 4,328, down from 5,502 after the seven brace repairs described below.
 
-## What the cascade errors are, and are not
+## The cascade errors, and what actually caused them
 
 `function definition is not allowed here` means the compiler was already inside a function body when it reached
-the next function's definition. It is emitted once per following function, so 2 099 of these are a small number of
-real defects, not 2 099 bugs.
+the next definition. It is emitted once per following function, so the 2,099 originally present were a small number
+of real defects.
 
-They are **not** caused by the 15 functions whose per-function brace count is non-zero. I tested that directly:
-re-decompiling all 15 from `main.i.db` produced 11 brace-balanced bodies, and splicing them in left the same
-number of unbalanced functions per file and *raised* the aggregate error count from 5 420 to 5 601. That change was
-reverted.
+Seven bodies genuinely ended with blocks still open. Walking each file in order and measuring depth at every
+function banner finds them exactly:
 
-They are **not** caused by `sub_6011941C` or `sub_603F8408` either, which is what a first-pass depth scan
-suggested. A per-line depth trace shows depth is exactly 0 at line 22930 where `sub_6011941C` begins, so the
-cascade does not start there. The scan that pointed at it measured depth at definition boundaries using a regex
-that matched forward declarations as well as definitions, so its "first broken definition" result was not
-trustworthy.
+| file | banner line | braces missing |
+|---|---:|---:|
+| `actor_construction.c` | 23,377 (`sub_6011941C`) | 2 |
+| `actor_construction.c` | 87,887 | 6 |
+| `actor_construction.c` | 89,949 | 1 |
+| `actor_construction.c` | 110,429 | 7 |
+| `actors_b.c` | 150,634 | 2 |
+| `actors_b.c` | 199,207 | 1 |
+| `powerup.c` | 26,149 | 5 |
 
-The one solid measurement: `actor_construction.c` ends with a net depth of **+12**, meaning twelve `{` are never
-closed somewhere in 170 596 lines. The last line at which depth returns to 0 is 22930, so the imbalance
-accumulates after that point. Whether that is one truncated body or several is not yet established.
+`sub_6011941C` confirms it by inspection: the body ends
 
-## Why this is not being force-fixed
+    23374 |  }          <- closes the switch
+    23375 |}            <- closes the function
 
-Inserting the missing `}` mechanically is easy and I tried it: `close_truncated_bodies.py` repairs the first
-boundary per file (9 braces across 3 files) and reduced the cascade count in `actors_b.c` from 341 to 321 and
-`powerup.c` from 71 to 71. It is not a fix, it is a guess about where a body was supposed to end, and it is not
-idempotent — a second run inserted 8 more braces. Making the compiler accept a body that is still semantically
-wrong would hide the defect instead of repairing it.
+with two blocks still open, because Hex-Rays emitted the last arms of a nested if/switch chain without their
+closing braces.
 
-The correct repair is to re-decompile the owning function from `main.i64` and replace the body wholesale, which is
-what `splice_recovered.py` does. That needs the replacement to be strictly better per file, and so far it has not
-been.
+Inserting those 24 braces took the nine files from 5,502 errors to **4,328**, and `actor_construction.c` from 2,036
+to 872. No file got worse. That change is committed.
+
+## Why no further braces are inserted
+
+After a body has lost its closing braces, EVERY later banner reports depth > 0 — 2,770 of them in
+`actor_construction.c` alone. Those are consequences, not independent defects. Repairing them all inserted 1,131
+braces and took the aggregate from 4,328 back **up** to 5,192.
+
+Repairing them one at a time and keeping a step only if the error count fell gives the same answer:
+
+| file | first remaining leak | effect |
+|---|---|---|
+| `powerup.c` | line 26,155 (+5 braces) | 136 → 141 errors, no gain |
+| `actor_construction.c` | line 23,380 (+2 braces) | 872 → 874 errors, no gain |
+
+So the seven sites above are the complete set that brace insertion can honestly fix. What remains in these three
+files needs the owning functions re-decompiled and their bodies replaced.
+
+## Hypotheses that were tested and rejected
+
+1. **The 15 functions with non-zero per-function brace counts are the cause.** Re-decompiling all 15 from
+   `main.i64` produced 11 brace-balanced bodies; splicing them in left the same unbalanced-function count per file
+   and raised the aggregate from 5,420 to 5,601. Reverted.
+
+2. **The leak starts at `sub_6011941C`'s definition line.** Depth there is 0; it leaks at its END. A first-pass scan
+   said otherwise because its "definition" regex also matched forward declarations.
+
+3. **Brace padding can close these bodies completely.** It cannot: 16 braces inserted in
+   `actor_construction.c` still leave the file short. The body text is missing structure that padding does not
+   restore.
 
 ## Two functions that cannot be recovered from the database
 
 `sub_6082AC1C` and `sub_6082B1CC` have no function at their address in `main.i64` — `add_func` fails on both, so
 their bodies cannot be re-decompiled at all. They are in `libs/libs.c`.
 
-## Method note
+## Scripts, and which of them to trust
 
-Every claim above is from a command run against this repository, and the two negative results (the 15-function
-splice and the `sub_6011941C` attribution) are recorded because they were plausible and turned out to be wrong.
-The scripts that produced them are kept in `scripts/` so the measurements can be repeated:
-
-    find_unbalanced_braces.py      per-file net brace depth (its literal stripping skips comments incorrectly;
-                                   it reported core.c as +1 when a careful in-place scan gives 0 -- do not trust
-                                   this one's output, keep it only as a starting point)
+    report_brace_leaks.py          which banners report depth > 0 (accurate)
+    repair_leaks_verified.py       repair one leak, recompile, keep only if errors fall (accurate, and the reason
+                                   no further brace repair is done)
+    balance_function_braces.py     inserts braces at all positive banners -- CORRECT ONLY as a single pass after
+                                   reverting to the committed state; running it again is harmful
+    splice_recovered.py            replace a function with a fresh decompilation from main.i64
     locate_bad_funcs.py            per-function brace balance
-    splice_recovered.py            replace a function with a fresh decompilation
-    close_truncated_bodies.py      insert the first boundary's missing braces (a guess; measured, not a fix)
+    find_unbalanced_braces.py      per-file net depth; its literal stripping is wrong (reported core.c as +1 when a
+                                   careful in-place scan gives 0) -- do not trust its output
+
+Every claim above is from a command run against this repository. The negative results are recorded because they
+were plausible and cost real time to disprove.

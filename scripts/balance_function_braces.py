@@ -104,16 +104,19 @@ def repair(path, write, limit=None):
 def fixpoint(path, write, rounds=12):
     """Apply until nothing is left to insert.
 
-    A single pass is not enough: the braces inserted for one boundary land immediately before it, and a pass that
-    inserts there can leave a later span still short. Iterating to a fixpoint is deterministic and converges -- the
-    loop stops as soon as a pass reports nothing.
+    Each pass repairs the leaks it can see. A later pass is needed because a brace inserted for one boundary can
+    change the span measured for the next. The loop stops as soon as a pass reports nothing, which is the fixpoint.
+
+    (This function used to call ITSELF instead of `repair`, so it recursed without ever converging. That was the
+    real reason repeated runs kept re-inserting braces, not the depth accounting.)
     """
     total = 0
     for _ in range(rounds):
-        n, sites = fixpoint(path, write)
+        n, sites = repair(path, write)
         if n == 0:
             break
         total += n
+        # A dry run cannot converge: nothing is written, so every pass sees the same input.
         if not write:
             break
     return total, None
@@ -136,9 +139,9 @@ def main(argv):
     total = 0
     for rel in files:
         path = rel if os.path.isabs(rel) else os.path.join(ROOT, rel.replace("/", os.sep))
-        n, sites = repair(path, write)
+        n, sites = fixpoint(path, write)
         total += n
-        print("  %-32s %4d brace(s) at %d site(s)" % (os.path.basename(rel), n, len(sites)))
+        print("  %-32s %4d brace(s)" % (os.path.basename(rel), n))
         for line, want in (sites or [])[:8]:
             print("       line %6d needs %+d" % (line, want))
     print("total: %d (write=%s)" % (total, write))
