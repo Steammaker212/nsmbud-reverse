@@ -19,6 +19,6 @@ int __fastcall CircularCollider_init(CircularCollider *this, StageActor *owner, 
   ownerInfo._57Ptr = &FIELD_U8(owner, 0x57);
   ownerInfo.playerIdPtr = &FIELD_U8(owner, 0x54);
   result = CircularCollider_initImpl(this, &ownerInfo, info);
-  FIELD_U32(this, 0x0).owner = owner;
+  FIELD_U32(this, 0x90) = owner;
   return result;
 }

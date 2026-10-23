@@ -24,33 +24,33 @@ signed int __fastcall sub_605F3DC8(CollisionActor *a1)
   if ( LOBYTE(a1[1]._.field_64) != 255 )
   {
     SE_OBJ_GET_DRAGON_COIN_ref((int)a1);
-    (*(void (__fastcall **)(CollisionActor *))(FIELD_U32(a1, 0x0)._.vtable + 196))(a1);
+    (*(void (__fastcall **)(CollisionActor *))(FIELD_U32(a1, 0x0) + 196))(a1);
   }
   if ( LOBYTE(a1[1]._.position.y) )
   {
-    FIELD_U32(a1, 0x0).rotation.y += 0x3FD27D2;
+    FIELD_U32(a1, 0xA0) += 0x3FD27D2;
   }
   else
   {
-    FIELD_U32(a1, 0x0).rotation.y = FIELD_U32(dword_60CBD894, 32);
-    if ( FIELD_U32(a1, 0x0).rotation.z )
+    FIELD_U32(a1, 0xA0) = FIELD_U32(dword_60CBD894, 32);
+    if ( FIELD_U32(a1, 0xA4) )
     {
       v5 = 0x400;
       v6 = 0;
-      if ( sub_6083246C(&FIELD_U32(a1, 0x0).rotation.z, &v6, &v5) == 1 )
-        FIELD_U32(a1, 0x0).rotation.z = 0;
+      if ( sub_6083246C(&FIELD_U32(a1, 0xA4), &v6, &v5) == 1 )
+        FIELD_U32(a1, 0xA4) = 0;
     }
   }
   result = FIELD_U8(dword_60CC6D8C, 17);
   v4 = result == 0;
   if ( FIELD_U8(dword_60CC6D8C, 17) )
   {
-    result = BYTE1(FIELD_U32(a1, 0x0)._.settigns2);
+    result = BYTE1(FIELD_U32(a1, 0x18));
     v4 = (result & 0x10) == 0;
   }
   if ( !v4 )
   {
-    result = (float)(FIELD_U32(a1, 0x0).position.y - FIELD_U32(a1, 0x0).field_248.y) > 0.0;
+    result = (float)(FIELD_F32(a1, 0x70) - FIELD_F32(a1, 0x24C)) > 0.0;
     LOBYTE(a1[1]._.speed.x) = result;
   }
   return result;

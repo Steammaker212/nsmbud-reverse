@@ -77,7 +77,7 @@ bool __fastcall MovementHandler_findMovementController(MovementHandler *this)
     v3 = 0;
     if ( (**(int (__fastcall ***)(int, int *))v8)(v8, &StageActor_RTTI) != 1 )
       goto LABEL_29;
-    MovementHandler_findMovementController_helper(&FIELD_U32(this, 0x0).x, (float *)v8);
+    MovementHandler_findMovementController_helper(&FIELD_F32(this, 0x0), (float *)v8);
     goto LABEL_22;
   }
   if ( (typeMask & 2) != 0 )
@@ -134,9 +134,9 @@ bool __fastcall MovementHandler_findMovementController(MovementHandler *this)
         v3 = 1;
         if ( v22 && (**(int (__fastcall ***)(int, int *))v22)(v22, &dword_60C8DEC8) == 1 )
         {
-          *(float *)&v24 = FIELD_U32(this, 0xC).z - FIELD_F32(v22, 6108);
-          *(float *)&v25 = FIELD_U32(this, 0xC).y - FIELD_F32(v22, 6104);
-          *(float *)&FIELD_U32(this, 0x18) = FIELD_U32(this, 0xC).x - FIELD_F32(v22, 6100);
+          *(float *)&v24 = FIELD_F32(this, 0x14) - FIELD_F32(v22, 6108);
+          *(float *)&v25 = FIELD_F32(this, 0x10) - FIELD_F32(v22, 6104);
+          *(float *)&FIELD_U32(this, 0x18) = FIELD_F32(this, 0xC) - FIELD_F32(v22, 6100);
           FIELD_U32(this, 0x1C) = v25;
           FIELD_U32(this, 0x20) = v24;
           goto LABEL_30;
@@ -377,8 +377,8 @@ LABEL_22:
         v3 = 1;
         if ( v51 && (**(int (__fastcall ***)(int, int *))v51)(v51, &dword_60CB4230) == 1 )
         {
-          v53 = FIELD_F32(v51, 6508) - FIELD_U32(this, 0xC).x;
-          v54 = FIELD_F32(v51, 6512) - FIELD_U32(this, 0xC).y;
+          v53 = FIELD_F32(v51, 6508) - FIELD_F32(this, 0xC);
+          v54 = FIELD_F32(v51, 6512) - FIELD_F32(this, 0x10);
           FIELD_U32(this, 0x78) = sub_6000F7B8(-v54, -v53);
           *(float *)&FIELD_U32(this, 0x70) = sqrtf((float)(v54 * v54) + (float)(v53 * v53));
 LABEL_30:

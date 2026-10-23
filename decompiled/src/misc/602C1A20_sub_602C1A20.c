@@ -31,8 +31,8 @@ int __fastcall sub_602C1A20(int a1)
   j_ModelWrapper_setupModel((int)v5, (int)v2, 0, 0);
   FIELD_U32(a1, 6304) = v4;
   animations = (unsigned int)v4[1].texAnims.animations;
-  v7 = (int *)FIELD_U32(v4, 0x8).animations;
-  if ( FIELD_U32(v4, 0x8).count > animations )
+  v7 = (int *)FIELD_U32(v4, 0xC);
+  if ( FIELD_U32(v4, 0x8) > animations )
     v7 += animations;
   return SkeletalAnim_play(*v7, FIELD_U32(a1, 6300), (int)&dword_60C911F4);
 }

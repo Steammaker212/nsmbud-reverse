@@ -34,7 +34,7 @@ signed int __fastcall sub_605ED718(int a1)
           StageActor_RTTI = (int)&off_60BC0098;
           _cxa_guard_release(&dword_60C7B364);
         }
-        if ( v5 && (*(int (__fastcall **)(StageActor *, int *))FIELD_U32(v5, 0x0).vtable)(v5, &StageActor_RTTI) )
+        if ( v5 && (*(int (__fastcall **)(StageActor *, int *))FIELD_U32(v5, 0x0))(v5, &StageActor_RTTI) )
         {
           StageActor__cullCheck(v5, 2);
           if ( v7 != 1 )

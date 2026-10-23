@@ -43,7 +43,7 @@ signed int __fastcall sub_6008AA7C(StageActor *a1, int a2, int a3)
     v11 = (*((int (__fastcall **)(StateBase *))FIELD_U32(v10, 0x0) + 2))(v10);
     v7 = 0;
     if ( v11 == (*(int (**)(void))(stru_60C92684 + 8))() )
-      v7 = (*(int (__fastcall **)(StageActor *))(FIELD_U32(a1, 0x0).vtable + 884))(a1) ^ 1;
+      v7 = (*(int (__fastcall **)(StageActor *))(FIELD_U32(a1, 0x0) + 884))(a1) ^ 1;
     sub_602EE7B8(v3, FIELD_U32(v3, 80), FIELD_S8(v3, 84));
   }
   else
@@ -73,13 +73,13 @@ signed int __fastcall sub_6008AA7C(StageActor *a1, int a2, int a3)
           v15 == (*(int (**)(void))(dword_60C81D8C + 8))()) )
     {
       FIELD_U8(a1, 0x54) = FIELD_U8(v3, 84);
-      v16 = FIELD_F32(v3, 108) > FIELD_U32(a1, 0x6C).x;
+      v16 = FIELD_F32(v3, 108) > FIELD_F32(a1, 0x6C);
       v17 = (float)byte_60AFE3F4[v16];
       FIELD_U32(a1, 0x50) = v16;
-      FIELD_U32(a1, 0x78).x = v17 * 3.5;
-      FIELD_U32(a1, 0x78).y = 2.5;
-      FIELD_U32(a1, 0x78).z = 0.0;
-      (*(void (__fastcall **)(StageActor *, int *))(FIELD_U32(a1, 0x0).vtable + 192))(a1, &dword_60C81D8C);
+      FIELD_F32(a1, 0x78) = v17 * 3.5;
+      FIELD_F32(a1, 0x7C) = 2.5;
+      FIELD_F32(a1, 0x80) = 0.0;
+      (*(void (__fastcall **)(StageActor *, int *))(FIELD_U32(a1, 0x0) + 192))(a1, &dword_60C81D8C);
       return 1;
     }
   }
@@ -87,7 +87,7 @@ signed int __fastcall sub_6008AA7C(StageActor *a1, int a2, int a3)
   {
     v8 = 1;
     if ( v7 == 1 )
-      (*(void (__fastcall **)(StageActor *, int))(FIELD_U32(a1, 0x0).vtable + 804))(a1, v3);
+      (*(void (__fastcall **)(StageActor *, int))(FIELD_U32(a1, 0x0) + 804))(a1, v3);
   }
   return v8;
 }

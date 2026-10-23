@@ -25,7 +25,7 @@ void __fastcall block_ice_ref_60E028(int a1)
   v5 = ModelWrapper_ctor(v4, Model2, 1, 0, 1, 0, 0);
   ModelWrapper_setup(v5, ResArchiveById, 0, 0);
   FIELD_U32(a1, 6100) = v4;
-  v6 = (int)*FIELD_U32(v4, 0x18).animations;
+  v6 = (int)*FIELD_U32(v4, 0x1C);
   a2.vtable = &sead__SafeStringBase__vtable;
   a2.cstr = "block_ice";
   sub_60446088(v6, (int)ResArchiveById, &a2);

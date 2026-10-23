@@ -18,13 +18,13 @@ void __fastcall Kanibo__setTamaAction(Enemy *this, int tamaState)
   Enemy *v9; // r1
   char v10; // r12
 
-  if ( FIELD_U32(this, 0x0)._._._.childCount >= 1 )
+  if ( FIELD_U32(this, 0x28) >= 1 )
   {
-    next = FIELD_U32(this, 0x0)._._._.field_20.next;
+    next = FIELD_U32(this, 0x24);
     v6 = next == 0;
     if ( next )
     {
-      v7 = FIELD_U32(this, 0x0)._._._.field_2C;
+      v7 = FIELD_U32(this, 0x2C);
       tama = (Actor *)((char *)next - v7);
       v6 = next == (sead_ListNode *)v7;
     }
@@ -32,17 +32,17 @@ void __fastcall Kanibo__setTamaAction(Enemy *this, int tamaState)
     {
       while ( Actor__getProfileId(tama) != 520 )
       {
-        v8 = FIELD_U32(this, 0x0)._._._.field_2C;
+        v8 = FIELD_U32(this, 0x2C);
         v9 = *(Enemy **)((char *)&FIELD_U32(tama, 0x4) + v8);
-        tama = (Actor *)((char *)&FIELD_U32(v9, 0x0)._._._ - v8);
-        if ( v9 == (Enemy *)&FIELD_U32(this, 0x0)._._._.field_20 )
+        tama = (Actor *)((char *)&FIELD_U32(v9, 0x0) - v8);
+        if ( v9 == (Enemy *)&FIELD_U32(this, 0x20) )
           tama = 0;
         if ( !tama )
           return;
       }
       if ( tama )
       {
-        Actor__removeChild(&FIELD_U32(this, 0x0)._._._, tama);
+        Actor__removeChild(&FIELD_U32(this, 0x0), tama);
         if ( ((unsigned int)&dword_60C93258 & ~(1613823812 << v10) & 1) == 0 && _cxa_guard_acquire(&dword_60C93258) )
         {
           dword_60C93254 = (int)&off_60BC04AC;

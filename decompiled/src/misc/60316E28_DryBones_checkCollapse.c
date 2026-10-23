@@ -27,16 +27,16 @@ int __fastcall DryBones_checkCollapse(StageActor *a1)
   result = sub_60003AE0(a1);
   if ( result == 1 )
   {
-    y = FIELD_U32(a1, 0x6C).y;
-    x = FIELD_U32(a1, 0x248).x;
-    v8.x = FIELD_U32(a1, 0x6C).x;
+    y = FIELD_F32(a1, 0x70);
+    x = FIELD_F32(a1, 0x248);
+    v8.x = FIELD_F32(a1, 0x6C);
     v3 = v8.x;
     v8.y = y;
     v8.z = 0.0;
     sub_602A38A4((int)a1, &v8.x);
-    v6 = FIELD_U32(a1, 0x6C).y;
+    v6 = FIELD_F32(a1, 0x70);
     v7 = Global_BasicSoundActor1;
-    v8.x = FIELD_U32(a1, 0x6C).x;
+    v8.x = FIELD_F32(a1, 0x6C);
     v8.y = v6;
     mapPositionToScreen(&out, &v8);
     BasicSoundActor1_playSound(v7, "SE_EMY_DOWN", (int)&out, 0);

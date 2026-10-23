@@ -10,6 +10,6 @@
 
 StateMethodExecuter *__fastcall sub_603604F8(Enemy *a1)
 {
-  (*(void (__fastcall **)(Enemy *))(FIELD_U32(a1, 0x0)._._._.vtable + 640))(a1);
+  (*(void (__fastcall **)(Enemy *))(FIELD_U32(a1, 0x0) + 640))(a1);
   return Enemy__vfDC(a1);
 }

@@ -22,7 +22,7 @@ int __fastcall sub_6031D920(int a1, ActiveCollider *a2, ActiveCollider *a3)
   v8 = (*((int (__fastcall **)(StateBase *))FIELD_U32(CurrentState, 0x0) + 2))(CurrentState);
   if ( v8 == (*(int (**)(void))(dword_60C93710 + 8))() && FIELD_U8(a1, 12604) )
   {
-    result = (*(int (__fastcall **)(StageActor *))(FIELD_U32(owner, 0x0).vtable + 1156))(owner);
+    result = (*(int (__fastcall **)(StageActor *))(FIELD_U32(owner, 0x0) + 1156))(owner);
     if ( !result )
       return (*(int (__fastcall **)(int, ActiveCollider *, ActiveCollider *))(*(_DWORD *)a1 + 200))(a1, a2, a3);
   }

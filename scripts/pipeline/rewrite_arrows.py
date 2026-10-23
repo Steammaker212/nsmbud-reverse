@@ -21,6 +21,29 @@ import json
 import re
 
 ARROW = re.compile(r"\b([A-Za-z_]\w*)\s*->\s*([A-Za-z_]\w*)")
+# A chain such as `a1->_._._.vtable` walks through anonymous base-class unions.
+# Only the last member is a real access; every hop before it is a zero-offset
+# union member, so the chain resolves to a single offset from the base object.
+#
+# The chain MUST begin with `->`. A plain `a1.field_10` is an access on a real
+# struct object, not a pointer dereference, and rewriting it is neither needed
+# nor safe -- counting those as unresolved chains made 18,000 accesses look
+# like failures and dropped 996 functions from the corpus.
+CHAIN = re.compile(
+    r"\b([A-Za-z_]\w*)"
+    r"((?:\s*\[\s*[^\]]+\s*\])?)"
+    r"(\s*->\s*[A-Za-z_]\w*(?:\s*(?:->|\.)\s*[A-Za-z_]\w*)*)")
+
+
+def flatten_chain(chain: str):
+    """Split `->_._.vtable` into (prefix hops, final member).
+
+    Returns (hops, last) where hops is the list before the final member.
+    """
+    toks = [t for t in re.split(r"->|\.", chain) if t.strip()]
+    if not toks:
+        return [], ""
+    return toks[:-1], toks[-1]
 DECL = re.compile(r"\b([A-Za-z_]\w*)\s*\*\s*([A-Za-z_]\w*)\s*(?:[;=,)])")
 CASTASSIGN = re.compile(r"\b([A-Za-z_]\w*)\s*=\s*\(\s*([A-Za-z_]\w*)\s*\*\s*\)")
 
@@ -50,16 +73,21 @@ def width_macro(type_str: str) -> str:
     return "FIELD_U32"
 
 
-def load_types(path: str) -> dict[str, dict[str, tuple[int, str]]]:
-    """type -> {member: (byte offset, width macro)}.
+def load_types(path: str):
+    """type -> (size, {member: (byte offset, width macro, member type name)}).
+
+    The member's own type is kept so a chain can be walked hop by hop: the
+    offset of `m2` is relative to `m1`'s type, not to the base object. Without
+    that, `this->_.vtable` cannot be resolved (`_` is an anonymous base of type
+    Actor, and `vtable` lives on Actor, not on StageActor).
 
     Only members whose bit offset is byte-aligned can be expressed as a byte
     offset. A bitfield stays out of the rewrite rather than being rounded.
     """
     data = json.loads(open(path, encoding="utf-8").read())
-    out: dict[str, dict[str, tuple[int, str]]] = {}
+    out: dict[str, tuple[int, dict[str, tuple[int, str, str]]]] = {}
     for t in data.get("types", []):
-        members: dict[str, tuple[int, str]] = {}
+        members: dict[str, tuple[int, str, str]] = {}
         for m in t.get("members", []):
             name = m.get("name")
             if not name:
@@ -67,9 +95,13 @@ def load_types(path: str) -> dict[str, dict[str, tuple[int, str]]]:
             bit = m.get("bit_offset", 0)
             if bit % 8:
                 continue
-            members[name] = (bit // 8, width_macro(m.get("type", "")))
+            mt = (m.get("type") or "").strip()
+            # Strip pointer/array decoration: the pointee type is what a chain
+            # continues through.
+            mt = mt.replace("*", "").strip()
+            members[name] = (bit // 8, width_macro(m.get("type", "")), mt)
         if members:
-            out[t["name"]] = members
+            out[t["name"]] = (t.get("size") or 0, members)
     return out
 
 
@@ -79,27 +111,84 @@ def var_types(body: str) -> dict[str, set[str]]:
         types.setdefault(m.group(2), set()).add(m.group(1))
     for m in CASTASSIGN.finditer(body):
         types.setdefault(m.group(1), set()).add(m.group(2))
+    # `this->m` is common in the decompiler output. `this` is not declared in
+    # the body, so it has to be typed from the definition's own `Class *this`
+    # parameter, which appears in the signature line.
+    m = re.search(r"\b([A-Za-z_]\w*)\s*\*\s*this\b", body)
+    if m:
+        types.setdefault("this", set()).add(m.group(1))
     return types
 
 
-def rewrite_body(body: str, types: dict[str, dict[str, tuple[int, str]]]):
+def rewrite_body(body: str, types):
+    """Resolve `base->m1->m2`-style chains to a single FIELD_ access.
+
+    Only chains that start with `->` are touched: a plain `a.field` is an access
+    on a real struct object and needs no rewrite.
+
+    A chain resolves when every hop before the last is an anonymous base
+    (`_`, offset 0) and the last member's offset is known for the base's type.
+    Anything else is left exactly as it was, so a partial rewrite can never
+    produce a half-converted expression.
+    """
     vt = var_types(body)
     resolved = 0
     unresolved = 0
 
     def repl(m: re.Match) -> str:
         nonlocal resolved, unresolved
-        base, member = m.group(1), m.group(2)
+        base, index, chain = m.group(1), m.group(2) or "", m.group(3) or ""
+        toks = [t for t in re.split(r"->|\.", chain) if t.strip()]
+        if not toks:
+            unresolved += 1
+            return m.group(0)
+
+        last = toks[-1]
+        hops = toks[:-1]
+
         for t in vt.get(base, ()):
-            info = types.get(t, {}).get(member)
-            if info:
-                off, macro = info
+            cur = t
+            total = 0
+            ok = True
+            # Walk every hop, accumulating its offset within the previous type.
+            for h in hops:
+                info = types.get(cur, (0, {}))[1].get(h)
+                if not info:
+                    ok = False
+                    break
+                off, _macro, mt = info
+                total += off
+                cur = mt
+                if not cur:
+                    ok = False
+                    break
+            if not ok:
+                continue
+            info = types.get(cur, (0, {}))[1].get(last)
+            if not info:
+                continue
+            off, macro, _mt = info
+            total += off
+
+            size = types.get(t, (0, {}))[0]
+            idx = index.strip()
+            if idx:
+                if not size:
+                    unresolved += 1
+                    return m.group(0)
+                inner = idx[1:-1].strip()
                 resolved += 1
-                return "%s(%s, 0x%X)" % (macro, base, off)
+                return "%s(%s + (%s) * %d, 0x%X)" % (macro, base, inner, size, total)
+            resolved += 1
+            return "%s(%s, 0x%X)" % (macro, base, total)
+
         unresolved += 1
         return m.group(0)
 
-    new = ARROW.sub(repl, body)
+    new = CHAIN.sub(repl, body)
+    return new, resolved, unresolved
+
+    new = CHAIN.sub(repl, body)
     return new, resolved, unresolved
 
 
@@ -112,7 +201,7 @@ def main() -> int:
 
     types = load_types(args.types)
     print("types: %d, members: %d"
-          % (len(types), sum(len(v) for v in types.values())))
+          % (len(types), sum(len(v[1]) for v in types.values())))
 
     total = changed = fully = 0
     a_res = a_unres = 0

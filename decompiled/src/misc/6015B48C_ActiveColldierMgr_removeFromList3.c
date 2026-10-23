@@ -30,17 +30,17 @@ LABEL_5:
   }
   if ( v3 )
     goto LABEL_5;
-  if ( FIELD_U32(result, 0x28).first != v4 )
+  if ( FIELD_U32(result, 0x2C) != v4 )
     return result;
 LABEL_9:
-  p_first = &FIELD_U32(result, 0x28).first;
-  if ( FIELD_U32(result, 0x28).first != v4 )
+  p_first = &FIELD_U32(result, 0x2C);
+  if ( FIELD_U32(result, 0x2C) != v4 )
   {
     if ( v2 )
       goto LABEL_11;
 LABEL_13:
-    last = FIELD_U32(result, 0x28).last;
-    p_last = &FIELD_U32(result, 0x28).last;
+    last = FIELD_U32(result, 0x30);
+    p_last = &FIELD_U32(result, 0x30);
     if ( last != v4 )
       goto LABEL_14;
     goto LABEL_12;

@@ -15,7 +15,7 @@ StateActor *__fastcall Actor_fire_manage_obuje_build(ActorBuildInfo *a1)
 
   v2 = (StateActor *)operator_new(0x17F8u);
   result = StateActor_ctor(v2, a1);
-  FIELD_U32(result, 0x0)._._.vtable = (int)off_60C1251C;
+  FIELD_U32(result, 0x0) = (int)off_60C1251C;
   result[1]._._._.vtable = 0;
   *(_DWORD *)&result[1]._._._.movementId = 0;
   result[1]._._._.settigns2 = 0;

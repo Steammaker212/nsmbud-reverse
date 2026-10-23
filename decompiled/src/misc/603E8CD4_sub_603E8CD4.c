@@ -30,7 +30,7 @@ bool __fastcall sub_603E8CD4(int a1, StageActor *a2)
     }
     if ( !a2 )
       return 0;
-    if ( (*(int (__fastcall **)(StageActor *, int *))FIELD_U32(a2, 0x0).vtable)(a2, &dword_60C7B404) != 1 )
+    if ( (*(int (__fastcall **)(StageActor *, int *))FIELD_U32(a2, 0x0))(a2, &dword_60C7B404) != 1 )
       return 0;
     result = 1;
     if ( (unsigned __int8)FIELD_U8(a2, 0x54) == 255 )
@@ -45,7 +45,7 @@ bool __fastcall sub_603E8CD4(int a1, StageActor *a2)
       StageActor_RTTI = (int)&off_60BC0098;
       _cxa_guard_release(&dword_60C7B364);
     }
-    if ( !a2 || (*(int (__fastcall **)(StageActor *, int *))FIELD_U32(a2, 0x0).vtable)(a2, &StageActor_RTTI) != 1 )
+    if ( !a2 || (*(int (__fastcall **)(StageActor *, int *))FIELD_U32(a2, 0x0))(a2, &StageActor_RTTI) != 1 )
       goto LABEL_23;
     v7 = sub_600005D4(a2, 0);
     result = 1;

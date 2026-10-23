@@ -13,7 +13,7 @@ StateActor *__fastcall sub_606429C0(StateActor *a1, ActorBuildInfo *a2)
   StateActor *result; // r0
 
   result = StateActor_ctor(a1, a2);
-  FIELD_U32(result, 0x0)._._.vtable = (int)off_60C132C8;
+  FIELD_U32(result, 0x0) = (int)off_60C132C8;
   LOBYTE(result[1]._._._.vtable) = 0;
   return result;
 }

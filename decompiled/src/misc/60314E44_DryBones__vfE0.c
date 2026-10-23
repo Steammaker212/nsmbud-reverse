@@ -16,10 +16,10 @@ int __fastcall DryBones__vfE0(Enemy *a1)
   StateBase *CurrentState; // r0
   int v3; // r5
 
-  CurrentState = StateMgr__getCurrentState(&FIELD_U32(a1, 0x0).states.manager);
+  CurrentState = StateMgr__getCurrentState(&FIELD_U32(a1, 0x17C4));
   v3 = (*((int (__fastcall **)(StateBase *))FIELD_U32(CurrentState, 0x0) + 2))(CurrentState);
   if ( v3 == (*(int (**)(void))(dword_60C93500 + 8))() )
     return sub_60314EA0((int)a1);
   else
-    return sub_60315140((float *)&FIELD_U32(a1, 0x0)._._._.vtable);
+    return sub_60315140((float *)&FIELD_U32(a1, 0x0));
 }

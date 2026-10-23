@@ -41,8 +41,8 @@ void __fastcall BobOmb_setupModel(Enemy *a1)
   else
   {
     animations = (unsigned int)v5[1].texAnims.animations;
-    v11 = FIELD_U32(v5, 0x8).animations;
-    if ( FIELD_U32(v5, 0x8).count > animations )
+    v11 = FIELD_U32(v5, 0xC);
+    if ( FIELD_U32(v5, 0x8) > animations )
       v11 += animations;
     v12 = (char *)*v11;
     if ( *((float *)*v11 + 6) < 0.0 )

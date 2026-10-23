@@ -14,7 +14,7 @@
 //   - 0x60310024 : Kanibo
 Enemy *__fastcall Enemy__vf26C(Enemy *result)
 {
-  LOBYTE(FIELD_U32(result, 0x1808).field_44) = 0;
-  FIELD_U32(result, 0x0)._.field_17A7 = 0;
+  LOBYTE(FIELD_U32(result, 0x184C)) = 0;
+  FIELD_U8(result, 0x17A7) = 0;
   return result;
 }

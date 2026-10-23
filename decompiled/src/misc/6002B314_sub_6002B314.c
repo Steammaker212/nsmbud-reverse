@@ -53,11 +53,11 @@ int __fastcall sub_6002B314(CollisionActor *a1)
 
   CollisionActor__handleGravity(a1);
   CollisionActor__handleSpeed(a1);
-  x = FIELD_U32(a1, 0x0).position.x;
+  x = FIELD_F32(a1, 0x6C);
   if ( x < (float)(FIELD_F32(AreaTask_intance, 1812) + 80.0)
     || x > (float)(FIELD_F32(AreaTask_intance, 1820) + -80.0) )
   {
-    FIELD_U32(a1, 0x0).speed.x = 0.0;
+    FIELD_F32(a1, 0x78) = 0.0;
   }
   CollisionMgr_process(FIELD_U8(a1, 0x288));
   v4 = &a1[1].collisionMgr[715];
@@ -65,54 +65,54 @@ int __fastcall sub_6002B314(CollisionActor *a1)
   switch ( a1[1].collisionMgr[715] )
   {
     case 0:
-      y = FIELD_U32(a1, 0x0).speed.y;
+      y = FIELD_F32(a1, 0x7C);
       if ( y < 4.0 )
       {
         *(_DWORD *)&v37.field_0 = -1014089500;
         *(_DWORD *)&speed.field_0 = 0x8000000;
-        result = moveValueTo(&FIELD_U32(a1, 0x0).rotation.x, (int *)&v37.field_0, (int *)&speed.field_0);
-        y = FIELD_U32(a1, 0x0).speed.y;
+        result = moveValueTo(&FIELD_U32(a1, 0x9C), (int *)&v37.field_0, (int *)&speed.field_0);
+        y = FIELD_F32(a1, 0x7C);
       }
       if ( y < 0.0 )
         goto LABEL_39;
       break;
     case 1:
-      v6 = FIELD_U32(a1, 0x0).position.x;
-      v7 = FIELD_U32(a1, 0x0).position.y;
+      v6 = FIELD_F32(a1, 0x6C);
+      v7 = FIELD_F32(a1, 0x70);
       *(_WORD *)&v38.field_0 = 0;
       positionOffset.x = v6;
       a3.x = v6;
       positionOffset.y = v7;
       a3.y = v7 + -8.0;
       v39 = off_60BC1F98;
-      v38.field_2 = FIELD_U32(a1, 0x0).field_56;
-      v38.field_3 = FIELD_U32(a1, 0x0).field_57;
+      v38.field_2 = FIELD_U8(a1, 0x56);
+      v38.field_3 = FIELD_U8(a1, 0x57);
       v38.field_4 = 0;
       v38.field_8 = (int)&v39;
       v8 = TileCheck_ctor(&v37, &v38);
       speed.field_C = 0;
       speed.field_10 = 0;
       if ( TileCheck_check(v8, &speed, &a3, &positionOffset, 15) == 1 )
-        FIELD_U32(a1, 0x0).position.z = -2500.0;
+        FIELD_F32(a1, 0x74) = -2500.0;
       *(_DWORD *)&v37.field_0 = -1014089500;
       *(_DWORD *)&speed.field_0 = 0x8000000;
-      moveValueTo(&FIELD_U32(a1, 0x0).rotation.x, (int *)&v37.field_0, (int *)&speed.field_0);
+      moveValueTo(&FIELD_U32(a1, 0x9C), (int *)&v37.field_0, (int *)&speed.field_0);
       result = (unsigned __int8)FIELD_U8(a1, 0x288)[2224];
       if ( (result & 1) != 0 )
       {
-        FIELD_U32(a1, 0x0).aCollider.info.distToCenter.x = 0.0;
-        FIELD_U32(a1, 0x0).aCollider.info.distToCenter.y = 22.0;
-        FIELD_U32(a1, 0x0).aCollider.info.distToEdge.x = 20.0;
-        FIELD_U32(a1, 0x0).aCollider.info.distToEdge.y = 18.0;
+        FIELD_F32(a1, 0x130) = 0.0;
+        FIELD_F32(a1, 0x134) = 22.0;
+        FIELD_F32(a1, 0x138) = 20.0;
+        FIELD_F32(a1, 0x13C) = 18.0;
         *(_DWORD *)&FIELD_U8(a1, 0x288)[2532] &= ~4u;
         *(_DWORD *)&FIELD_U8(a1, 0x288)[2540] &= ~4u;
-        v9 = FIELD_U32(a1, 0x0).position.x;
-        v37.field_4 = LODWORD(FIELD_U32(a1, 0x0).position.y);
+        v9 = FIELD_F32(a1, 0x6C);
+        v37.field_4 = LODWORD(FIELD_F32(a1, 0x70));
         *(float *)&v37.field_0 = v9;
         v37.field_8 = 1166843904;
         EffectData_create(971, (Vec3 *)&v37, 0, 0);
-        y_low = LODWORD(FIELD_U32(a1, 0x0).position.y);
-        *(float *)&v37.field_0 = FIELD_U32(a1, 0x0).position.x;
+        y_low = LODWORD(FIELD_F32(a1, 0x70));
+        *(float *)&v37.field_0 = FIELD_F32(a1, 0x6C);
         v37.field_4 = y_low;
         v37.field_8 = 1166843904;
         EffectWrapper_update((EffectWrapper *)&a1[1].collisionMgr[396], 1007, (Vec3 *)&v37, 0, 0);
@@ -121,10 +121,10 @@ int __fastcall sub_6002B314(CollisionActor *a1)
         strcpy((char *)&v37.field_4, "333?");
         sub_60813430(&a1[1]._.aCollider.field_50, "SE_BOSS_KK_LAND", &v37);
         AreaRumbleMgr_rumble(AreaRumbleMgr_instance, 7, 1, 0, 0);
-        FIELD_U32(a1, 0x0).rotation.x = 0;
-        FIELD_U32(a1, 0x0).speed.x = 0.0;
-        FIELD_U32(a1, 0x0).speed.y = 0.0;
-        FIELD_U32(a1, 0x0).speed.z = 0.0;
+        FIELD_U32(a1, 0x9C) = 0;
+        FIELD_F32(a1, 0x78) = 0.0;
+        FIELD_F32(a1, 0x7C) = 0.0;
+        FIELD_F32(a1, 0x80) = 0.0;
         if ( a1[1].collisionMgr[714] != 14 )
         {
           v11 = &a1[1].collisionMgr[384];
@@ -142,11 +142,11 @@ int __fastcall sub_6002B314(CollisionActor *a1)
           *(_DWORD *)(*(_DWORD *)v15 + 24) = v12;
           a1[1].collisionMgr[714] = 14;
         }
-        v17 = (*(int (__fastcall **)(CollisionActor *))(FIELD_U32(a1, 0x0)._.vtable + 720))(a1);
+        v17 = (*(int (__fastcall **)(CollisionActor *))(FIELD_U32(a1, 0x0) + 720))(a1);
         v18 = 240;
         if ( !v17 )
         {
-          v19 = (*(int (__fastcall **)(CollisionActor *))(FIELD_U32(a1, 0x0)._.vtable + 724))(a1);
+          v19 = (*(int (__fastcall **)(CollisionActor *))(FIELD_U32(a1, 0x0) + 724))(a1);
           v18 = 300;
           if ( v19 )
             v18 = 180;
@@ -157,9 +157,9 @@ int __fastcall sub_6002B314(CollisionActor *a1)
       break;
     case 2:
       if ( (FIELD_U8(a1, 0x288)[2224] & 1) != 0 )
-        FIELD_U32(a1, 0x0).speed.y = 0.0;
-      v20 = FIELD_U32(a1, 0x0).position.x;
-      v37.field_4 = LODWORD(FIELD_U32(a1, 0x0).position.y);
+        FIELD_F32(a1, 0x7C) = 0.0;
+      v20 = FIELD_F32(a1, 0x6C);
+      v37.field_4 = LODWORD(FIELD_F32(a1, 0x70));
       *(float *)&v37.field_0 = v20;
       v37.field_8 = 1166843904;
       EffectWrapper_update((EffectWrapper *)&a1[1].collisionMgr[396], 1007, (Vec3 *)&v37, 0, 0);
@@ -184,7 +184,7 @@ int __fastcall sub_6002B314(CollisionActor *a1)
           *(_DWORD *)(*(_DWORD *)v25 + 24) = v22;
           a1[1].collisionMgr[714] = 16;
         }
-        FIELD_U32(a1, 0x0).position.z = 1500.0;
+        FIELD_F32(a1, 0x74) = 1500.0;
         sub_60813430(&a1[1]._.aCollider.field_50, "SE_VOC_BKK_RCV_JUMP", 0);
         goto LABEL_39;
       }
@@ -192,9 +192,9 @@ int __fastcall sub_6002B314(CollisionActor *a1)
     case 3:
       *(_DWORD *)&speed.field_0 = 0x4000000;
       *(_DWORD *)&v37.field_0 = 0;
-      moveValueTo(&FIELD_U32(a1, 0x0).rotation.y, (int *)&v37.field_0, (int *)&speed.field_0);
+      moveValueTo(&FIELD_U32(a1, 0xA0), (int *)&v37.field_0, (int *)&speed.field_0);
       if ( (FIELD_U8(a1, 0x288)[2224] & 1) != 0 )
-        FIELD_U32(a1, 0x0).speed.y = 0.0;
+        FIELD_F32(a1, 0x7C) = 0.0;
       v27 = *(_DWORD **)&a1[1].collisionMgr[384];
       v28 = v27[3];
       v29 = v27[2];
@@ -204,8 +204,8 @@ int __fastcall sub_6002B314(CollisionActor *a1)
       result = *(_DWORD *)v28;
       if ( *(float *)(*(_DWORD *)v28 + 20) >= 14.0 )
       {
-        v31 = FIELD_U32(a1, 0x0).position.x;
-        v37.field_4 = LODWORD(FIELD_U32(a1, 0x0).position.y);
+        v31 = FIELD_F32(a1, 0x6C);
+        v37.field_4 = LODWORD(FIELD_F32(a1, 0x70));
         *(float *)&v37.field_0 = v31;
         v37.field_8 = 1166843904;
         EffectData_create(971, (Vec3 *)&v37, 0, 0);
@@ -221,9 +221,9 @@ LABEL_39:
     case 4:
       *(_DWORD *)&speed.field_0 = 0x4000000;
       *(_DWORD *)&v37.field_0 = 0;
-      moveValueTo(&FIELD_U32(a1, 0x0).rotation.y, (int *)&v37.field_0, (int *)&speed.field_0);
+      moveValueTo(&FIELD_U32(a1, 0xA0), (int *)&v37.field_0, (int *)&speed.field_0);
       if ( (FIELD_U8(a1, 0x288)[2224] & 1) != 0 )
-        FIELD_U32(a1, 0x0).speed.y = 0.0;
+        FIELD_F32(a1, 0x7C) = 0.0;
       v32 = *(_DWORD **)&a1[1].collisionMgr[384];
       v33 = v32[3];
       v34 = v32[2];
@@ -232,10 +232,10 @@ LABEL_39:
         v33 += 4 * v35;
       result = *(unsigned __int8 *)(*(_DWORD *)v33 + 28);
       if ( (result & 0x20) != 0 )
-        result = (*(int (__fastcall **)(CollisionActor *, int *))(FIELD_U32(a1, 0x0)._.vtable + 192))(a1, &dword_60C7F928);
+        result = (*(int (__fastcall **)(CollisionActor *, int *))(FIELD_U32(a1, 0x0) + 192))(a1, &dword_60C7F928);
       break;
     default:
-      result = (*(int (__fastcall **)(CollisionActor *, int *))(FIELD_U32(a1, 0x0)._.vtable + 192))(a1, &dword_60C7F928);
+      result = (*(int (__fastcall **)(CollisionActor *, int *))(FIELD_U32(a1, 0x0) + 192))(a1, &dword_60C7F928);
       break;
   }
   return result;

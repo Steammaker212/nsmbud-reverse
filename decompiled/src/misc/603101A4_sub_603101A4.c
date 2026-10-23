@@ -36,7 +36,7 @@ Enemy *__fastcall sub_603101A4(Enemy *this, int a2, int a3)
     }
     if ( v8 )
     {
-      if ( (*(int (__fastcall **)(Enemy *, _DWORD))(FIELD_U32(this_1, 0x0)._._._.vtable + 204))(this_1, FIELD_S8(v7, 1313)) == 1 )
+      if ( (*(int (__fastcall **)(Enemy *, _DWORD))(FIELD_U32(this_1, 0x0) + 204))(this_1, FIELD_S8(v7, 1313)) == 1 )
         SE_SYS_NICE_S_ref();
       v9 = FIELD_U32(a2, 136);
       v10 = v9 == 0;
@@ -51,18 +51,18 @@ Enemy *__fastcall sub_603101A4(Enemy *this, int a2, int a3)
         }
         else
         {
-          (*(void (__fastcall **)(Enemy *, int))(FIELD_U32(this_1, 0x0)._._._.vtable + 376))(this_1, v7);
-          v11 = *(Vec2 *)&FIELD_U32(this_1, 0x0)._._.speed.x;
+          (*(void (__fastcall **)(Enemy *, int))(FIELD_U32(this_1, 0x0) + 376))(this_1, v7);
+          v11 = *(Vec2 *)&FIELD_F32(this_1, 0x78);
           Enemy_killWithState(this_1, (StageActor *)v7, &v11, (int)&stru_60C906EC);
         }
       }
       else if ( v9 == 2 )
       {
-        (*(void (__fastcall **)(Enemy *, int))(FIELD_U32(this_1, 0x0)._._._.vtable + 384))(this_1, v7);
+        (*(void (__fastcall **)(Enemy *, int))(FIELD_U32(this_1, 0x0) + 384))(this_1, v7);
         Enemy_killYoshi((int)this_1, v7);
       }
-      this = (Enemy *)((unsigned __int8)FIELD_U32(this_1, 0x0)._._.aCollider.field_6E | 2);
-      FIELD_U32(this_1, 0x0)._._.aCollider.field_6E = (char)this;
+      this = (Enemy *)((unsigned __int8)FIELD_U8(this_1, 0x12A) | 2);
+      FIELD_U8(this_1, 0x12A) = (char)this;
     }
   }
   return this;

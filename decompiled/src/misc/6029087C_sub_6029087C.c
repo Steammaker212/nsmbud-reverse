@@ -27,8 +27,8 @@ _DWORD *__fastcall sub_6029087C(StateActor *a1)
   v9[6] = 238609294;
   v9[7] = 1908874353;
   v2 = *(_DWORD *)&a1[1]._.collisionMgr[764];
-  direction = FIELD_U32(a1, 0x0)._.direction;
-  z = FIELD_U32(a1, 0x0)._.rotation.z;
+  direction = FIELD_U32(a1, 0x50);
+  z = FIELD_U32(a1, 0xA4);
   v5 = v9[2 * v2 + direction];
   profileFlags = a1[1]._._.profileFlags;
   memset(&v8.settings2, 0, 40);

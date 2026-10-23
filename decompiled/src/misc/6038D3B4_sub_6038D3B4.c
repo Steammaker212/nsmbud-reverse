@@ -28,9 +28,9 @@ bool __fastcall sub_6038D3B4(Enemy *a1, ActiveCollider *a2, ActiveCollider *a3)
   }
   if ( v8 )
   {
-    p_vtable = (float *)(*(int (__fastcall **)(StageActor *, int *))FIELD_U32(v8, 0x0).vtable)(v8, &dword_60C86B44);
+    p_vtable = (float *)(*(int (__fastcall **)(StageActor *, int *))FIELD_U32(v8, 0x0))(v8, &dword_60C86B44);
     if ( p_vtable )
-      p_vtable = (float *)&FIELD_U32(v8, 0x0).vtable;
+      p_vtable = (float *)&FIELD_U32(v8, 0x0);
   }
   else
   {
@@ -48,11 +48,11 @@ bool __fastcall sub_6038D3B4(Enemy *a1, ActiveCollider *a2, ActiveCollider *a3)
     v13 = 0;
     if ( owner )
     {
-      v13 = (*(int (__fastcall **)(StageActor *, int *))FIELD_U32(owner, 0x0).vtable)(owner, &dword_60C7B398);
+      v13 = (*(int (__fastcall **)(StageActor *, int *))FIELD_U32(owner, 0x0))(owner, &dword_60C7B398);
       if ( v13 )
         v13 = (int)owner;
     }
-    if ( p_vtable[27] >= (float)(FIELD_U32(owner, 0x6C).x + FIELD_U32(owner, 0x23C).x) )
+    if ( p_vtable[27] >= (float)(FIELD_F32(owner, 0x6C) + FIELD_F32(owner, 0x23C)) )
       v12 = 1;
     sub_602EE7B8(v13, v12, 0xFFFFFFFF);
     sub_602EE940(v13);
@@ -60,8 +60,8 @@ bool __fastcall sub_6038D3B4(Enemy *a1, ActiveCollider *a2, ActiveCollider *a3)
   }
   else if ( ProfileId == 309 )
   {
-    (*(void (__fastcall **)(StageActor *))(FIELD_U32(owner, 0x0).vtable + 104))(owner);
-    FIELD_U32(owner, 0x0).isDeleted = 1;
+    (*(void (__fastcall **)(StageActor *))(FIELD_U32(owner, 0x0) + 104))(owner);
+    FIELD_U8(owner, 0x13) = 1;
     (*(void (__fastcall **)(float *, int *))(*(_DWORD *)p_vtable + 192))(p_vtable, &dword_60C98504);
   }
   return Enemy__vf100(a1, a2, a3);

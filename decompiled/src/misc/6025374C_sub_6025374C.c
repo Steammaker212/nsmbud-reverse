@@ -17,14 +17,14 @@ float __fastcall sub_6025374C(CollisionActor *a1)
 
   v2 = -201326592;
   next = a1[1]._.aCollider.createNode.next;
-  direction = FIELD_U32(a1, 0x0).direction;
+  direction = FIELD_U32(a1, 0x50);
   if ( (ActiveColliderNode *)direction == next )
     v2 = 201326592;
-  FIELD_U32(a1, 0x0).rotation.x += v2;
+  FIELD_U32(a1, 0x9C) += v2;
   v5 = dword_60AF1F70[(_DWORD)next];
   if ( (ActiveColliderNode *)direction == next )
     v5 = -v5;
-  FIELD_U32(a1, 0x0).rotation.y += v5;
+  FIELD_U32(a1, 0xA0) += v5;
   CollisionActor__handleGravity(a1);
   return CollisionActor__handleSpeed(a1);
 }

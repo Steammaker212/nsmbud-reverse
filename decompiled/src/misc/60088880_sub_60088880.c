@@ -12,7 +12,7 @@ int __fastcall sub_60088880(BossBase *a1, int a2)
 {
   if ( a2 == 2 )
   {
-    (*(void (__fastcall **)(BossBase *))(FIELD_U32(a1, 0x0)._._._._.vtable + 1008))(a1);
+    (*(void (__fastcall **)(BossBase *))(FIELD_U32(a1, 0x0) + 1008))(a1);
     sub_600CE78C(a1);
     if ( (LOBYTE(a1[1]._._._._.field_20C) & 2) != 0 )
       sub_600888D4(a1);

@@ -45,7 +45,7 @@ void __fastcall pol_light_ref(int a1)
   ModelWrapper_setup(v7, (int)ResArchiveById, 0, 0);
   FIELD_U32(a1, 6300) = v6;
   v8 = off_60BF0850[FIELD_U32(a1, 6340)];
-  v9 = *FIELD_U32(v6, 0x18).animations;
+  v9 = *FIELD_U32(v6, 0x1C);
   a2.vtable = &sead__SafeStringBase__vtable;
   a2.cstr = v8;
   ShuAnim_play(v9, (int)ResArchiveById, (int)&a2);
@@ -71,7 +71,7 @@ void __fastcall pol_light_ref(int a1)
   FIELD_U32(a1, 6304) = v14;
   v16 = a1 + 6304;
   v17 = off_60BF0858[*v4];
-  v18 = (int)*FIELD_U32(v14, 0x8).animations;
+  v18 = (int)*FIELD_U32(v14, 0xC);
   a2.vtable = &sead__SafeStringBase__vtable;
   a2.cstr = v17;
   SkeletalAnim_play(v18, (int)ResArchiveById, (int)&a2);

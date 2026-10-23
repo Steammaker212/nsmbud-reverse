@@ -59,7 +59,7 @@ int __fastcall sub_60616B14(int a1)
       MovementHandler__execute(v4);
       if ( FIELD_U32(a1, 6856) == 1 && FIELD_U32(a1, 6876) != 1 )
       {
-        FIELD_F32(a1, 108) = FIELD_U32(v4, 0x0).x;
+        FIELD_F32(a1, 108) = FIELD_F32(v4, 0x0);
         FIELD_U32(a1, 112) = FIELD_U32(a1, 6812);
         FIELD_U32(a1, 164) = FIELD_U32(a1, 6888);
       }

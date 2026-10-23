@@ -12,15 +12,15 @@ bool __fastcall ActiveColliderMgr_isInActiveList(ActiveColliderMgr *this, Active
 {
   int ret; // r2
 
-  if ( FIELD_U32(node, 0x10).next || FIELD_U32(node, 0x10).prev || FIELD_U32(this, 0x10).first == &FIELD_U32(node, 0x10) )
+  if ( FIELD_U32(node, 0x14) || FIELD_U32(node, 0x18) || FIELD_U32(this, 0x14) == &FIELD_U32(node, 0x10) )
     return 1;
   ret = 0;
-  if ( (FIELD_U32(node, 0x74).field_1C & 0x800) == 0 )
+  if ( (FIELD_U32(node, 0x90) & 0x800) == 0 )
     return ret;
-  if ( FIELD_U32(node, 0x34).next )
+  if ( FIELD_U32(node, 0x38) )
     return 1;
   ret = 1;
-  if ( FIELD_U32(node, 0x34).prev )
+  if ( FIELD_U32(node, 0x3C) )
     return ret;
-  return FIELD_U32(this, 0x34).first == &FIELD_U32(node, 0x34);
+  return FIELD_U32(this, 0x38) == &FIELD_U32(node, 0x34);
 }

@@ -60,12 +60,12 @@ int __fastcall sub_6060CB44(int a1)
   *(float *)v13 = v14;
   FIELD_U32(v13, 4) = 0;
   v15 = *v8;
-  if ( FIELD_U32(v11, 0x0).vtable > 2u )
+  if ( FIELD_U32(v11, 0x0) > 2u )
     v15 += 16;
   *(float *)v15 = v10;
   FIELD_U32(v15, 4) = 0;
   v16 = *v8;
-  if ( FIELD_U32(v11, 0x0).vtable > 3u )
+  if ( FIELD_U32(v11, 0x0) > 3u )
     v16 += 24;
   *(float *)v16 = v10 + 8.0;
   FIELD_U32(v16, 4) = -1056964608;

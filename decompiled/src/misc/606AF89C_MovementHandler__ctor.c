@@ -19,12 +19,12 @@ MovementHandler *__fastcall MovementHandler__ctor(MovementHandler *this)
   FIELD_U32(this, 0x7C) = 0;
   FIELD_U32(this, 0x78) = 0;
   FIELD_U32(this, 0x74) = 0;
-  FIELD_U32(this, 0xD4).vtable = (int)&off_60C1AD6C;
-  FIELD_U32(this, 0xD4).executer.vtable = &off_60C1AD7C;
-  FIELD_U32(this, 0xD4).executer.methodExecuter.vtable = &off_60C1ADA0;
-  FIELD_U32(this, 0xD4).executer.methodExecuter.owner = this;
-  FIELD_U32(this, 0xD4).executer.methodExecuter.currentState = 0;
-  StateMgr_ctor(&FIELD_U32(this, 0xD4).manager, &FIELD_U32(this, 0xD4).executer, &NullState);
-  FIELD_U32(this, 0xD4).vtable = (int)&off_60C1AD5C;
+  FIELD_U32(this, 0xD4) = (int)&off_60C1AD6C;
+  FIELD_U32(this, 0xD8) = &off_60C1AD7C;
+  FIELD_U32(this, 0xDC) = &off_60C1ADA0;
+  FIELD_U32(this, 0xE0) = this;
+  FIELD_U32(this, 0xE4) = 0;
+  StateMgr_ctor(&FIELD_U32(this, 0xE8), &FIELD_U32(this, 0xD8), &NullState);
+  FIELD_U32(this, 0xD4) = (int)&off_60C1AD5C;
   return this;
 }

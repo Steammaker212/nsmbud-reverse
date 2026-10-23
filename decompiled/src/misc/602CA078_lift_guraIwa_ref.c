@@ -34,7 +34,7 @@ ModelWrapper *__fastcall lift_guraIwa_ref(int a1)
   ModelWrapper_setup(v5, (int)v2, 0, 0);
   *(v1 - 2) = (int)v4;
   v6 = *v1;
-  v7 = (int)*FIELD_U32(v4, 0x8).animations;
+  v7 = (int)*FIELD_U32(v4, 0xC);
   a2.vtable = &sead__SafeStringBase__vtable;
   a2.cstr = "wait";
   SkeletalAnim_play(v7, v6, (int)&a2);

@@ -13,7 +13,7 @@ StateActor *__fastcall sub_600271A0(StateActor *a1, ActorBuildInfo *a2)
   StateActor *result; // r0
 
   result = StateActor_ctor(a1, a2);
-  FIELD_U32(result, 0x0)._._.vtable = (int)off_60BC1A20;
+  FIELD_U32(result, 0x0) = (int)off_60BC1A20;
   result[1]._._._.vtable = 0;
   result[1]._._._.heap = 0;
   result[1]._._._.id = 1;

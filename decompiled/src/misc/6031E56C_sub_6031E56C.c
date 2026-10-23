@@ -22,7 +22,7 @@ int __fastcall sub_6031E56C(CollisionActor *a1)
     v2 = 1;
     if ( a1[2]._.aCollider.field_110 >= 1 )
     {
-      if ( LOBYTE(FIELD_U32(a1, 0x0)._.settings1) )
+      if ( LOBYTE(FIELD_U32(a1, 0x14)) )
       {
         CurrentState = StateMgr__getCurrentState((StateMgr *)&a1[1]._._.settings1);
         v4 = (*((int (__fastcall **)(StateBase *))FIELD_U32(CurrentState, 0x0) + 2))(CurrentState);
@@ -30,7 +30,7 @@ int __fastcall sub_6031E56C(CollisionActor *a1)
         {
           v5 = *(_DWORD *)&a1[2].collisionMgr[216];
           if ( !v5 || (v6 = v5 - 1, (*(_DWORD *)&a1[2].collisionMgr[216] = v6) == 0) )
-            (*(void (__fastcall **)(CollisionActor *, int *))(FIELD_U32(a1, 0x0)._.vtable + 192))(a1, &dword_60C937CC);
+            (*(void (__fastcall **)(CollisionActor *, int *))(FIELD_U32(a1, 0x0) + 192))(a1, &dword_60C937CC);
         }
       }
     }

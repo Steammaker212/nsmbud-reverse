@@ -15,6 +15,6 @@ StateActor *__fastcall Actor_RD33exclusive_resident_geyser_water_build(ActorBuil
 
   v2 = (StateActor *)operator_new(0x2020u);
   result = Actor_RD33exclusive_resident_geyser_water_build_helper(v2, a1);
-  FIELD_U32(result, 0x0)._._.vtable = (int)off_60C20A60;
+  FIELD_U32(result, 0x0) = (int)off_60C20A60;
   return result;
 }

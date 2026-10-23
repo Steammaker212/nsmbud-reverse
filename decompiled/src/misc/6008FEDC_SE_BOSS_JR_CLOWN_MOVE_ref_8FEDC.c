@@ -26,32 +26,32 @@ int __fastcall SE_BOSS_JR_CLOWN_MOVE_ref_8FEDC(CollisionActor *a1)
   StageActor__accelerateX(&FIELD_U32(a1, 0x0));
   v2 = CollisionActor__handleSpeed(a1);
   sub_601015CC(a1, v2);
-  if ( (*(int (__fastcall **)(CollisionActor *))(FIELD_U32(a1, 0x0)._.vtable + 896))(a1) == 4 )
+  if ( (*(int (__fastcall **)(CollisionActor *))(FIELD_U32(a1, 0x0) + 896))(a1) == 4 )
   {
     v3 = &a1[1].collisionMgr[2704];
     if ( !a1[1].collisionMgr[2704] )
     {
-      x = FIELD_U32(a1, 0x0).position.x;
+      x = FIELD_F32(a1, 0x6C);
       goto LABEL_10;
     }
   }
   else
   {
-    (*(void (__fastcall **)(CollisionActor *))(FIELD_U32(a1, 0x0)._.vtable + 900))(a1);
+    (*(void (__fastcall **)(CollisionActor *))(FIELD_U32(a1, 0x0) + 900))(a1);
     ((void (__fastcall *)(CollisionActor *))loc_601015AC)(a1);
     a1[1].collisionMgr[2704] = 1;
     v3 = &a1[1].collisionMgr[2704];
   }
-  v5 = FIELD_U32(a1, 0x0).position.x;
+  v5 = FIELD_F32(a1, 0x6C);
   v6 = FIELD_F32(dword_60CC6484, 116)
      + (float)((float)(FIELD_F32(dword_60CC6484, 56) + FIELD_F32(dword_60CC6484, 64)) * -0.5);
-  FIELD_U32(a1, 0x0).position.x = v5 + v6;
+  FIELD_F32(a1, 0x6C) = v5 + v6;
   x = v5 + v6;
-  v7 = FIELD_U32(a1, 0x0).speed.x;
-  if ( v7 < 0.0 && FIELD_U32(a1, 0x0).maxSpeed.x > 0.0 || v7 > 0.0 && FIELD_U32(a1, 0x0).maxSpeed.x < 0.0 )
+  v7 = FIELD_F32(a1, 0x78);
+  if ( v7 < 0.0 && FIELD_F32(a1, 0x84) > 0.0 || v7 > 0.0 && FIELD_F32(a1, 0x84) < 0.0 )
     *v3 = 0;
 LABEL_10:
-  y = FIELD_U32(a1, 0x0).position.y;
+  y = FIELD_F32(a1, 0x70);
   position.x = x;
   position.y = y;
   mapPositionToScreen(&v10, &position);

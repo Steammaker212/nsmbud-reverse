@@ -13,13 +13,13 @@ bool __fastcall sub_60123128(CollisionActor *a1)
   int v3; // [sp+0h] [bp-18h] BYREF
   int target[5]; // [sp+4h] [bp-14h] BYREF
 
-  FIELD_U32(a1, 0x0).rotation.z += dword_60AF1EC8[(int)a1[1]._.aCollider.createNode.next];
+  FIELD_U32(a1, 0xA4) += dword_60AF1EC8[(int)a1[1]._.aCollider.createNode.next];
   CollisionActor__handleGravity(a1);
   CollisionActor__handleSpeed(a1);
   target[0] = 0;
   v3 = 0x2000000;
-  moveValueTo(&FIELD_U32(a1, 0x0).rotation.x, target, &v3);
+  moveValueTo(&FIELD_U32(a1, 0x9C), target, &v3);
   target[0] = 0;
   v3 = 0x2000000;
-  return moveValueTo(&FIELD_U32(a1, 0x0).rotation.y, target, &v3);
+  return moveValueTo(&FIELD_U32(a1, 0xA0), target, &v3);
 }

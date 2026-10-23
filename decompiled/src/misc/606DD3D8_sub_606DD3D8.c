@@ -14,10 +14,10 @@ void __fastcall sub_606DD3D8(CollisionActor *a1)
   char v3; // r12
   int v4; // r6
 
-  FIELD_U32(a1, 0x0).rotation.y += 458752000;
+  FIELD_U32(a1, 0xA0) += 458752000;
   CollisionActor__handleGravity(a1);
   CollisionActor__handleSpeed(a1);
-  if ( FIELD_U32(a1, 0x0).speed.y < -3.0 )
+  if ( FIELD_F32(a1, 0x7C) < -3.0 )
   {
     for ( i = (int *)sub_60008598(ActorMgr__instance, 808, FIELD_U32(ActorMgr__instance, 27172));
           ;
@@ -33,6 +33,6 @@ void __fastcall sub_606DD3D8(CollisionActor *a1)
         break;
       FIELD_U8(v4, 6568) = 1;
     }
-    FIELD_U32(a1, 0x0)._.isDeleted = 1;
+    FIELD_U8(a1, 0x13) = 1;
   }
 }

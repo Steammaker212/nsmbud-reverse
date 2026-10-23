@@ -33,7 +33,7 @@ int __fastcall sub_602B584C(_DWORD *a1)
   ModelWrapper_setup(v5, (int)v2, 0, 0);
   a1[1575] = v4;
   a1 += 1575;
-  v6 = (int)*FIELD_U32(v4, 0x8).animations;
+  v6 = (int)*FIELD_U32(v4, 0xC);
   v11 = &sead__SafeStringBase__vtable;
   v12 = "fruit";
   v7 = LoadResource(ResourceMgrRelated_instance, &v11);

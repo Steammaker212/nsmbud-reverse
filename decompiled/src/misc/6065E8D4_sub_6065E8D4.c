@@ -14,7 +14,7 @@ StateActor *__fastcall sub_6065E8D4(StateActor *a1, ActorBuildInfo *a2)
   float y; // r1
 
   StateActor_ctor(a1, a2);
-  FIELD_U32(a1, 0x0)._._.vtable = (int)off_60C14A50;
+  FIELD_U32(a1, 0x0) = (int)off_60C14A50;
   a1[1]._._._.vtable = 0;
   a1[1]._._._.profile = 0;
   memset(&a1[1]._._.scale.y, 0, 92);

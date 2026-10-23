@@ -15,10 +15,10 @@ float __fastcall sub_603CC010(CollisionActor *a1)
 
   v2 = -83886080;
   p_next = &a1[1]._.aCollider.createNode.next;
-  if ( (ActiveColliderNode *)FIELD_U32(a1, 0x0).direction == a1[1]._.aCollider.createNode.next )
+  if ( (ActiveColliderNode *)FIELD_U32(a1, 0x50) == a1[1]._.aCollider.createNode.next )
     v2 = 83886080;
-  FIELD_U32(a1, 0x0).rotation.x += sub_602A7BAC((int)a1, v2);
-  FIELD_U32(a1, 0x0).rotation.y += (unsigned __int8)byte_60AFE3F4[*p_next] << 24;
+  FIELD_U32(a1, 0x9C) += sub_602A7BAC((int)a1, v2);
+  FIELD_U32(a1, 0xA0) += (unsigned __int8)byte_60AFE3F4[*p_next] << 24;
   CollisionActor__handleGravity(a1);
   return CollisionActor__handleSpeed(a1);
 }

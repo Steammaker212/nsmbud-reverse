@@ -47,26 +47,26 @@ bool __fastcall ActiveCollider_doOverlapMaybe(ActiveCollider *ac1, ActiveCollide
           v9 = (FIELD_U8(ac2, 0x6E) & 2) == 0;
         if ( v9 && (FIELD_U8(ac1, 0x6C) & FIELD_U8(ac2, 0x6C)) != 0 && FIELD_U8(ac1, 0x6D) == FIELD_U8(ac2, 0x6D) )
         {
-          v10 = FIELD_U32(ac2, 0x74).field_14;
-          v11 = FIELD_U32(ac1, 0x74).field_1C & (1 << v10);
+          v10 = FIELD_U32(ac2, 0x88);
+          v11 = FIELD_U32(ac1, 0x90) & (1 << v10);
           if ( !v11 )
             return FIELD_U32(ac1, 0x5C) != 0;
-          v12 = 1 << FIELD_U32(ac1, 0x74).field_14;
-          v13 = FIELD_U32(ac2, 0x74).field_1C;
+          v12 = 1 << FIELD_U32(ac1, 0x88);
+          v13 = FIELD_U32(ac2, 0x90);
           if ( (v13 & v12) == 0 )
             return FIELD_U32(ac1, 0x5C) != 0;
-          v18 = FIELD_U32(ac2, 0x74).field_24;
-          callback = (void (__fastcall *)(ActiveCollider *, ActiveCollider *))FIELD_U32(ac2, 0x74).callback;
-          v19 = FIELD_U32(ac1, 0x74).field_24;
-          v20 = (void (__fastcall *)(ActiveCollider *, ActiveCollider *))FIELD_U32(ac1, 0x74).callback;
-          v14 = FIELD_U32(ac1, 0x74).mask & (1 << FIELD_U32(ac2, 0x74).category);
+          v18 = FIELD_U32(ac2, 0x98);
+          callback = (void (__fastcall *)(ActiveCollider *, ActiveCollider *))FIELD_U32(ac2, 0x9C);
+          v19 = FIELD_U32(ac1, 0x98);
+          v20 = (void (__fastcall *)(ActiveCollider *, ActiveCollider *))FIELD_U32(ac1, 0x9C);
+          v14 = FIELD_U32(ac1, 0x94) & (1 << FIELD_U32(ac2, 0x8C));
           if ( (v11 & 2) == 0 || v14 )
           {
-            v15 = FIELD_U32(ac2, 0x74).mask & (1 << FIELD_U32(ac1, 0x74).category);
+            v15 = FIELD_U32(ac2, 0x94) & (1 << FIELD_U32(ac1, 0x8C));
             if ( v15 || ((unsigned __int8)v13 & (unsigned __int8)v12 & 2) == 0 )
             {
-              v16 = FIELD_U32(ac1, 0x74).field_10;
-              v17 = FIELD_U32(ac2, 0x74).field_10;
+              v16 = FIELD_U32(ac1, 0x84);
+              v17 = FIELD_U32(ac2, 0x84);
               if ( FIELD_U32(AreaTask_intance, 1828) )
               {
                 if ( !((int (__fastcall *)(ActiveCollider *, ActiveCollider *))*(&off_60BD4810 + 4 * v17 + v16))(

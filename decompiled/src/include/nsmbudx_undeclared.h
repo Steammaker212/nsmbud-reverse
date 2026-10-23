@@ -12,6 +12,7 @@
 
 extern unsigned char BoomBoomBase[1];
 extern unsigned char BoomBoomW1[1];
+extern unsigned char BowserJrBase__vf458__thunk_113B9C[1];
 extern unsigned char ColliderOwnerInfo[1];
 extern unsigned char EnemyFreezeMgr_Info[1];
 extern unsigned char LightMask[1];
@@ -2748,6 +2749,7 @@ extern unsigned char off_60BF78F0[1];
 extern unsigned char off_60BF79CC[1];
 extern unsigned char off_60BF7A58[1];
 extern unsigned char off_60BF7AE4[1];
+extern unsigned char off_60BF7B70[1];
 extern unsigned char off_60BF7C4C[1];
 extern unsigned char off_60BF7D28[1];
 extern unsigned char off_60BF7DB4[1];
@@ -4185,6 +4187,7 @@ extern unsigned char unk_60C263C4[1];
 extern unsigned char unk_60C263C8[1];
 extern unsigned char unk_60C263CC[1];
 extern unsigned char unk_60C263D0[1];
+extern unsigned char unk_60C263D4[1];
 extern unsigned char unk_60C263DC[1];
 extern unsigned char unk_60C263E0[1];
 extern unsigned char unk_60C263E8[1];

@@ -203,7 +203,7 @@ LABEL_39:
       if ( !v12 || v20 != 5 )
         goto LABEL_24;
     }
-    v23 = *FIELD_U32(v12, 0x8).animations;
+    v23 = *FIELD_U32(v12, 0xC);
     v24 = *((_DWORD *)v23 + 7);
     v25 = (v24 & 0x21) == 0;
     if ( (v24 & 0x21) != 0 )
@@ -242,7 +242,7 @@ LABEL_62:
         if ( LODWORD(y) == LODWORD(v38.y) )
         {
 LABEL_72:
-          if ( *((float *)*FIELD_U32(v12, 0x8).animations + 5) > 0.0 )
+          if ( *((float *)*FIELD_U32(v12, 0xC) + 5) > 0.0 )
           {
             (*(void (__fastcall **)(void *, _DWORD, Vec3 *))(*(_DWORD *)FIELD_U32(v12, 0x0) + 108))(
               FIELD_U32(v12, 0x0),
@@ -277,7 +277,7 @@ LABEL_72:
           if ( LODWORD(v32) == LODWORD(v38.y) )
           {
 LABEL_82:
-            if ( *((float *)*FIELD_U32(v12, 0x8).animations + 5) > 0.0 )
+            if ( *((float *)*FIELD_U32(v12, 0xC) + 5) > 0.0 )
             {
               (*(void (__fastcall **)(void *, _DWORD, Vec3 *))(*(_DWORD *)FIELD_U32(v12, 0x0) + 108))(
                 FIELD_U32(v12, 0x0),

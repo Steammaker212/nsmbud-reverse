@@ -19,11 +19,11 @@ void __fastcall sub_602C65E8(Enemy *a1, ActiveCollider *a2, ActiveCollider *a3)
 
   if ( FIELD_U8(dword_60CC6D8C, 17) )
   {
-    CurrentState = StateMgr__getCurrentState(&FIELD_U32(a1, 0x0).states.manager);
+    CurrentState = StateMgr__getCurrentState(&FIELD_U32(a1, 0x17C4));
     v7 = (*((int (__fastcall **)(StateBase *))FIELD_U32(CurrentState, 0x0) + 2))(CurrentState);
     v8 = (*(int (**)(void))(dword_60C91668 + 8))();
-    v9 = &FIELD_U32(a1, 0x0)._._.aCollider == a2;
-    if ( &FIELD_U32(a1, 0x0)._._.aCollider == a2 )
+    v9 = &FIELD_U32(a1, 0xBC) == a2;
+    if ( &FIELD_U32(a1, 0xBC) == a2 )
       v9 = v7 == v8;
     if ( v9 && !Enemy__processCollision(a1, a2, a3, 0) )
     {
@@ -35,8 +35,8 @@ void __fastcall sub_602C65E8(Enemy *a1, ActiveCollider *a2, ActiveCollider *a3)
       }
       if ( owner )
       {
-        if ( (*(int (__fastcall **)(StageActor *, int *))FIELD_U32(owner, 0x0).vtable)(owner, &dword_60C7B378) == 1 )
-          (*(void (__fastcall **)(StageActor *, ActiveCollider *, ActiveCollider *))(FIELD_U32(owner, 0x0).vtable + 1164))(
+        if ( (*(int (__fastcall **)(StageActor *, int *))FIELD_U32(owner, 0x0))(owner, &dword_60C7B378) == 1 )
+          (*(void (__fastcall **)(StageActor *, ActiveCollider *, ActiveCollider *))(FIELD_U32(owner, 0x0) + 1164))(
             owner,
             a2,
             a3);
@@ -45,6 +45,6 @@ void __fastcall sub_602C65E8(Enemy *a1, ActiveCollider *a2, ActiveCollider *a3)
   }
   else
   {
-    (*(void (__fastcall **)(Enemy *, ActiveCollider *, ActiveCollider *))(FIELD_U32(a1, 0x0)._._._.vtable + 200))(a1, a2, a3);
+    (*(void (__fastcall **)(Enemy *, ActiveCollider *, ActiveCollider *))(FIELD_U32(a1, 0x0) + 200))(a1, a2, a3);
   }
 }

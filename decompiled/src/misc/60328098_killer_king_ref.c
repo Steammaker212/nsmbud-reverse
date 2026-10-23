@@ -25,7 +25,7 @@ void __fastcall killer_king_ref(int a1)
   v5 = ModelWrapper_ctor(v4, Model2, 1, 0, 1, 0, 0);
   ModelWrapper_setup(v5, (int)ResArchiveById, 0, 0);
   FIELD_U32(a1, 6300) = v4;
-  v6 = *FIELD_U32(v4, 0x18).animations;
+  v6 = *FIELD_U32(v4, 0x1C);
   a2.vtable = &sead__SafeStringBase__vtable;
   a2.cstr = "killer_king";
   ShuAnim_play(v6, (int)ResArchiveById, (int)&a2);

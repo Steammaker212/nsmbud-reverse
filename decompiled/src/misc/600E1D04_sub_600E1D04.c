@@ -15,9 +15,9 @@ int __fastcall sub_600E1D04(CollisionActor *a1)
   CollisionActor__handleGravity(a1);
   CollisionActor__handleSpeed(a1);
   result = dword_60CC6484;
-  if ( (float)(FIELD_U32(a1, 0x0).position.y + 16.0) < (float)(FIELD_F32(dword_60CC6484, 124) - FIELD_F32(dword_60CC6484, 108)) )
+  if ( (float)(FIELD_F32(a1, 0x70) + 16.0) < (float)(FIELD_F32(dword_60CC6484, 124) - FIELD_F32(dword_60CC6484, 108)) )
   {
-    FIELD_U32(a1, 0x0)._.isDeleted = 1;
+    FIELD_U8(a1, 0x13) = 1;
     return 1;
   }
   return result;

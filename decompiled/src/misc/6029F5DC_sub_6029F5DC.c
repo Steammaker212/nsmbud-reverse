@@ -44,7 +44,7 @@ ModelWrapper *__fastcall sub_6029F5DC(_DWORD *a1)
   ModelWrapper_setup(v5, (int)v2, 0, 0);
   a1[1575] = v4;
   a1 += 1575;
-  v6 = (int)*FIELD_U32(v4, 0x8).animations;
+  v6 = (int)*FIELD_U32(v4, 0xC);
   v22 = &sead__SafeStringBase__vtable;
   v23 = "densen";
   v7 = LoadResource(ResourceMgrRelated_instance, &v22);
@@ -74,7 +74,7 @@ ModelWrapper *__fastcall sub_6029F5DC(_DWORD *a1)
   v13 = ModelWrapper_ctor(v12, v11, 1, 0, 0, 0, 0);
   ModelWrapper_setup(v13, (int)v10, 0, 0);
   a1[2] = v12;
-  v14 = (int)*FIELD_U32(v12, 0x8).animations;
+  v14 = (int)*FIELD_U32(v12, 0xC);
   v22 = &sead__SafeStringBase__vtable;
   v23 = "densen";
   v15 = LoadResource(ResourceMgrRelated_instance, &v22);

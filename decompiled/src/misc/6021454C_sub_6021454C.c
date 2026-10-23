@@ -40,7 +40,7 @@ int __fastcall sub_6021454C(_DWORD *a1, int a2)
   ModelWrapper_setup(v8, (int)Resource, 0, 0);
   a1[94] = v7;
   v9 = a1[93];
-  v10 = (int)*FIELD_U32(v7, 0x8).animations;
+  v10 = (int)*FIELD_U32(v7, 0xC);
   identifier.vtable = &sead__SafeStringBase__vtable;
   identifier.cstr = "wait2";
   SkeletalAnim_play(v10, v9, (int)&identifier);
@@ -74,7 +74,7 @@ int __fastcall sub_6021454C(_DWORD *a1, int a2)
   ModelWrapper_setup(v18, (int)v15, 0, 0);
   a1[96] = v17;
   v19 = a1[95];
-  v20 = (int)*FIELD_U32(v17, 0x8).animations;
+  v20 = (int)*FIELD_U32(v17, 0xC);
   identifier.vtable = &sead__SafeStringBase__vtable;
   identifier.cstr = "fly_normal";
   SkeletalAnim_play(v20, v19, (int)&identifier);

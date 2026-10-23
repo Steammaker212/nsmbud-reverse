@@ -45,7 +45,7 @@ int __fastcall sub_6056AF34(int a1)
   v6 = ModelWrapper_ctor(v5, Model2, 1, 0, 1, 0, 0);
   ModelWrapper_setup(v6, v3, 0, 0);
   FIELD_U32(a1, 7388) = v5;
-  v7 = *FIELD_U32(v5, 0x18).animations;
+  v7 = *FIELD_U32(v5, 0x1C);
   FIELD_U32(a1, 7392) = v7;
   v11 = &sead__SafeStringBase__vtable;
   v12 = v2;

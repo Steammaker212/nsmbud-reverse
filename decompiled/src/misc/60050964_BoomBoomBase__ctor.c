@@ -11,7 +11,7 @@
 BossBase *__fastcall BoomBoomBase__ctor(BossBase *a1, ActorBuildInfo *a2)
 {
   BossBase__ctor(a1, a2);
-  FIELD_U32(a1, 0x0)._._._._.vtable = (int)BoomBoomBase_vtable;
+  FIELD_U32(a1, 0x0) = (int)BoomBoomBase_vtable;
   a1[1]._._._._._.vtable = 0x3FB33333;
   a1[1]._._._._._.heap = dword_60C807F0;
   a1[1]._._._._._.id = dword_60C807F4;

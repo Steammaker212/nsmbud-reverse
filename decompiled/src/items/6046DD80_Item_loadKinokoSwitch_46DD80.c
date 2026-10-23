@@ -32,7 +32,7 @@ signed int __fastcall Item_loadKinokoSwitch_46DD80(int a1)
   v6 = ModelWrapper_ctor(v5, Model2, 1, 1, 0, 0, 0);
   ModelWrapper_setup(v6, Resource, 0, 0);
   *(v2 - 10) = v5;
-  v7 = (int)*FIELD_U32(v5, 0x8).animations;
+  v7 = (int)*FIELD_U32(v5, 0xC);
   v8 = LoadResource(ResourceMgrRelated_instance, (_DWORD *)&unk_60C9D720 + 2 * *v2);
   SkeletalAnim_play(v7, v8, (const char **)&dword_60C9D790[2 * *v2]);
   *(_DWORD *)(**(_DWORD **)(*(v2 - 10) + 12) + 24) = 1065353216;

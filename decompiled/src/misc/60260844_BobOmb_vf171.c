@@ -18,12 +18,12 @@ int __fastcall BobOmb_vf171(CarryableEnemy *a1)
   unsigned int v7; // r0
   int v8; // r5
 
-  FIELD_U32(a1, 0x0)._._._.speed.x = (float)byte_60AFE3F4[FIELD_U32(a1, 0x0)._._._.direction] * 4.0;
-  FIELD_U32(a1, 0x0)._._._.speed.y = 0.0;
-  FIELD_U32(a1, 0x0)._._._.speed.z = 0.0;
-  FIELD_U32(a1, 0x0)._._._.maxSpeed.x = 0.0;
-  FIELD_U32(a1, 0x0)._._._.xAcceleration = 0.0625;
-  FIELD_U32(a1, 0x0)._._._.field_64 = -0.1875;
+  FIELD_F32(a1, 0x78) = (float)byte_60AFE3F4[FIELD_U32(a1, 0x50)] * 4.0;
+  FIELD_F32(a1, 0x7C) = 0.0;
+  FIELD_F32(a1, 0x80) = 0.0;
+  FIELD_F32(a1, 0x84) = 0.0;
+  FIELD_F32(a1, 0x68) = 0.0625;
+  FIELD_F32(a1, 0x64) = -0.1875;
   v3 = *(int *)((char *)&a1[1]._._._._._.id + 2);
   v2 = (int *)((char *)&a1[1]._._._._._.id + 2);
   if ( v3 == 1 )
@@ -44,7 +44,7 @@ int __fastcall BobOmb_vf171(CarryableEnemy *a1)
     *v2 = 1;
     sub_60421AD4(*(int *)((char *)&a1[1]._._._._._.vtable + 2));
   }
-  FIELD_U32(a1, 0x0)._._._.rotation.y = Enemy_CommonRotations[FIELD_U32(a1, 0x0)._._._.direction];
+  FIELD_U32(a1, 0xA0) = Enemy_CommonRotations[FIELD_U32(a1, 0x50)];
   BYTE2(a1[1]._._._._.position.z) = 0;
   return CarryableEnemy__vf2AC((int)a1);
 }

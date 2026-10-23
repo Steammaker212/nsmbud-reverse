@@ -18,7 +18,7 @@ int __fastcall SE_BOSS_JR_CROWN_MOTIAGE_KOOPA_ref(CollisionActor *a1)
   _DWORD v7[2]; // [sp+0h] [bp-20h] BYREF
   Vec2 out; // [sp+8h] [bp-18h] BYREF
 
-  FIELD_U32(a1, 0x0).speed.y = FIELD_U32(a1, 0x0).field_64 + FIELD_U32(a1, 0x0).speed.y;
+  FIELD_F32(a1, 0x7C) = FIELD_F32(a1, 0x64) + FIELD_F32(a1, 0x7C);
   v2 = CollisionActor__handleSpeed(a1);
   ((void (__fastcall *)(CollisionActor *, float))loc_601005C0)(a1, v2);
   v3 = *(int (__fastcall ****)(_DWORD, int *))sub_60008598(

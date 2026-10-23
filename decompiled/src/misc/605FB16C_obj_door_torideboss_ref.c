@@ -26,7 +26,7 @@ void __fastcall obj_door_torideboss_ref(int a1)
   v5 = ModelWrapper_ctor(v4, Model2, 1, 1, 2, 1, 0);
   ModelWrapper_setup(v5, ResArchiveById, 0, 0);
   FIELD_U32(a1, 6300) = v4;
-  v6 = (int)*FIELD_U32(v4, 0x8).animations;
+  v6 = (int)*FIELD_U32(v4, 0xC);
   v7 = Profile__getResArchiveById(*(Profile **)(a1 + 12), 0);
   a2.vtable = &sead__SafeStringBase__vtable;
   a2.cstr = "obj_door_torideboss";

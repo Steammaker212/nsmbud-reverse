@@ -26,7 +26,7 @@ unsigned int __fastcall BoomBoomBase__collisionPlayer(Enemy *a1, ActiveCollider 
   float v16; // s16
   float v17; // s0
 
-  if ( (*(int (__fastcall **)(Enemy *))(FIELD_U32(a1, 0x0)._._._.vtable + 884))(a1) == 1 )
+  if ( (*(int (__fastcall **)(Enemy *))(FIELD_U32(a1, 0x0) + 884))(a1) == 1 )
     return Enemy__collisionPlayer((int)a1, (int)a2, (int)a3);
   result = Enemy__processCollision(a1, a2, a3, 2);
   switch ( result )
@@ -42,11 +42,11 @@ unsigned int __fastcall BoomBoomBase__collisionPlayer(Enemy *a1, ActiveCollider 
       {
         v9 = 0;
         v10 = 0;
-        if ( (*(int (__fastcall **)(StageActor *, int *))FIELD_U32(owner, 0x0).vtable)(owner, &dword_60C7B370) == 1 )
+        if ( (*(int (__fastcall **)(StageActor *, int *))FIELD_U32(owner, 0x0))(owner, &dword_60C7B370) == 1 )
         {
           playerId = FIELD_U8(owner, 0x54);
           v9 = 1;
-          if ( playerId > 3 || (v12 = &FIELD_U32(a1, 0x0)._._._.vtable + playerId, v12[1579] < 1) )
+          if ( playerId > 3 || (v12 = &FIELD_U32(a1, 0x0) + playerId, v12[1579] < 1) )
           {
             v10 = owner;
           }
@@ -56,8 +56,8 @@ unsigned int __fastcall BoomBoomBase__collisionPlayer(Enemy *a1, ActiveCollider 
             if ( owner[2]._.field_20.previous == (sead_ListNode *)3 )
             {
               sub_602A3178(owner, &dword_60CC4B7C);
-              (*(void (__fastcall **)(Enemy *))(FIELD_U32(a1, 0x0)._._._.vtable + 404))(a1);
-              (*(void (__fastcall **)(Enemy *, StageActor *))(FIELD_U32(a1, 0x0)._._._.vtable + 408))(a1, owner);
+              (*(void (__fastcall **)(Enemy *))(FIELD_U32(a1, 0x0) + 404))(a1);
+              (*(void (__fastcall **)(Enemy *, StageActor *))(FIELD_U32(a1, 0x0) + 408))(a1, owner);
               v12[1579] = 16;
               return 6316;
             }
@@ -69,7 +69,7 @@ unsigned int __fastcall BoomBoomBase__collisionPlayer(Enemy *a1, ActiveCollider 
         v9 = 0;
         v10 = 0;
       }
-      if ( FIELD_U32(a1, 0x0)._._.speed.y <= 1.0
+      if ( FIELD_F32(a1, 0x7C) <= 1.0
         || (ActiveCollider_getCenterY(a2), v16 = v15, ActiveCollider_getCenterY(a3), v16 >= v17) )
       {
         result = Enemy__collisionPlayer((int)a1, (int)a2, (int)a3);
@@ -89,27 +89,27 @@ unsigned int __fastcall BoomBoomBase__collisionPlayer(Enemy *a1, ActiveCollider 
       }
       else
       {
-        result = v9 & ((*(int (__fastcall **)(Enemy *))(FIELD_U32(a1, 0x0)._._._.vtable + 888))(a1) ^ 1);
+        result = v9 & ((*(int (__fastcall **)(Enemy *))(FIELD_U32(a1, 0x0) + 888))(a1) ^ 1);
         if ( result == 1 )
         {
           if ( v10[2]._.field_20.previous == (sead_ListNode *)3 )
           {
             sub_602A3178(v10, &dword_60CC4B7C);
-            (*(void (__fastcall **)(Enemy *))(FIELD_U32(a1, 0x0)._._._.vtable + 404))(a1);
-            (*(void (__fastcall **)(Enemy *, StageActor *))(FIELD_U32(a1, 0x0)._._._.vtable + 408))(a1, v10);
+            (*(void (__fastcall **)(Enemy *))(FIELD_U32(a1, 0x0) + 404))(a1);
+            (*(void (__fastcall **)(Enemy *, StageActor *))(FIELD_U32(a1, 0x0) + 408))(a1, v10);
             v13 = (unsigned __int8)FIELD_U8(v10, 0x54);
             goto LABEL_17;
           }
-          (*(void (__fastcall **)(Enemy *, StageActor *))(FIELD_U32(a1, 0x0)._._._.vtable + 804))(a1, FIELD_U32(a3, 0x40));
+          (*(void (__fastcall **)(Enemy *, StageActor *))(FIELD_U32(a1, 0x0) + 804))(a1, FIELD_U32(a3, 0x40));
           result = sub_602A3178(v10, &dword_60CC4B7C);
         }
       }
       break;
     case 1u:
     case 3u:
-      result = (*(int (__fastcall **)(Enemy *))(FIELD_U32(a1, 0x0)._._._.vtable + 888))(a1);
+      result = (*(int (__fastcall **)(Enemy *))(FIELD_U32(a1, 0x0) + 888))(a1);
       if ( !result )
-        result = (*(int (__fastcall **)(Enemy *, StageActor *))(FIELD_U32(a1, 0x0)._._._.vtable + 804))(a1, FIELD_U32(a3, 0x40));
+        result = (*(int (__fastcall **)(Enemy *, StageActor *))(FIELD_U32(a1, 0x0) + 804))(a1, FIELD_U32(a3, 0x40));
       break;
     case 2u:
       result = (unsigned int)FIELD_U32(a3, 0x40);

@@ -15,7 +15,7 @@ ModelWrapper *__fastcall sub_6029D468(ModelWrapper **a1)
 
   v2 = a1 + 1575;
   v1 = a1[1575];
-  if ( (*((_BYTE *)*FIELD_U32(v1, 0x20).animations + 28) & 0x20) != 0 )
+  if ( (*((_BYTE *)*FIELD_U32(v1, 0x24) + 28) & 0x20) != 0 )
   {
     ((void (__fastcall *)(ModelWrapper **, int *))(*a1)[4].model)(a1, &dword_60C90108);
     v1 = *v2;

@@ -82,7 +82,7 @@ LABEL_20:
           MovementHandler__execute(v8);
           if ( FIELD_U32(a1, 6236) == 1 && FIELD_U32(a1, 6256) != 1 )
           {
-            FIELD_F32(a1, 108) = FIELD_U32(v8, 0x0).x;
+            FIELD_F32(a1, 108) = FIELD_F32(v8, 0x0);
             FIELD_U32(a1, 112) = FIELD_U32(a1, 6192);
             if ( Actor__getProfileId((Actor *)a1) == 431 && (FIELD_U8(a1, 26) & 1) != 0 )
               v12 = 6316;

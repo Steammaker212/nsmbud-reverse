@@ -15,7 +15,7 @@ StateActor *__fastcall sub_60639704(StateActor *a1, ActorBuildInfo *a2)
   int v5; // r0
 
   StateActor_ctor(a1, a2);
-  FIELD_U32(a1, 0x0)._._.vtable = (int)off_60C12C18;
+  FIELD_U32(a1, 0x0) = (int)off_60C12C18;
   sead_IDisposer_ctor((sead_IDisposer *)&a1[1]);
   a1[1]._._._.vtable = (int)off_60BC6E38;
   *(_DWORD *)&a1[1]._._._.field_10 = 0;

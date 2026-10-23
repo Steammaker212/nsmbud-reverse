@@ -14,9 +14,9 @@ Enemy *__fastcall Kanibo__ctor(ActorBuildInfo *a1)
 
   this = (Enemy *)operator_new(0x1950u);
   Enemy__ctor(this, a1);
-  FIELD_U32(this, 0x0)._._._.vtable = (int)off_60BE9A30;
+  FIELD_U32(this, 0x0) = (int)off_60BE9A30;
   this[1]._._._._.vtable = 0;
-  this[1]._._._._.heap = ((unsigned int)FIELD_U32(this, 0x0)._._._.settings1 >> 8) & 1;
+  this[1]._._._._.heap = ((unsigned int)FIELD_U32(this, 0x14) >> 8) & 1;
   *(_DWORD *)&this[1]._._._._.field_10 = 0;
   this[1]._._._._.profile = 0;
   this[1]._._._._.id = 0;
@@ -31,8 +31,8 @@ Enemy *__fastcall Kanibo__ctor(ActorBuildInfo *a1)
   this[1]._._._._.field_34 = 0;
   LOBYTE(this[1]._._._._.parent) = 0;
   this[1]._._._._.field_3C = 0;
-  sub_602A8564(&this[1]._._._._.field_40, FIELD_U32(this, 0x0)._._._.id);
-  sub_602A40A0(&this[1]._._._.field_64, FIELD_U32(this, 0x0)._._._.id);
+  sub_602A8564(&this[1]._._._._.field_40, FIELD_U32(this, 0x8));
+  sub_602A40A0(&this[1]._._._.field_64, FIELD_U32(this, 0x8));
   LODWORD(this[1]._._._.maxSpeed.y) = &ActorScaler_vtable;
   this[1]._._._.maxSpeed.z = 1.0;
   this[1]._._._.scale.x = 1.0;
@@ -43,7 +43,7 @@ Enemy *__fastcall Kanibo__ctor(ActorBuildInfo *a1)
   this[1]._._._.rotation.z = (int)this;
   this[1]._._._.field_A8 = (int)&off_60BE9CD4;
   LOBYTE(this[1]._._._.field_AC) = 0;
-  FIELD_U32(this, 0x0)._._.direction = (FIELD_U32(this, 0x0)._._._.settings1 & 1) == 0;
+  FIELD_U32(this, 0x50) = (FIELD_U32(this, 0x14) & 1) == 0;
   FIELD_U8(this, 0x189A) = 4;
   return this;
 }

@@ -21,7 +21,7 @@ float __fastcall Enemy__executeState_DieFumi(CollisionActor *a1)
     v2 = (int)(float)(0.5 * 50332000.0);
   else
     v2 = 50331648;
-  FIELD_U32(a1, 0x0).rotation.x += v2;
+  FIELD_U32(a1, 0x9C) += v2;
   CollisionActor__handleGravity(a1);
   return CollisionActor__handleSpeed(a1);
 }

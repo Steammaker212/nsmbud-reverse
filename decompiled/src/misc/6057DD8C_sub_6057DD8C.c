@@ -16,7 +16,7 @@ int __fastcall sub_6057DD8C(CollisionActor *a1)
 
   CollisionActor__handleGravity(a1);
   CollisionActor__handleSpeed(a1);
-  FIELD_U32(a1, 0x0).rotation.y += 0x10000000;
+  FIELD_U32(a1, 0xA0) += 0x10000000;
   result = (int)&a1[1]._._.field_2C;
   v3 = a1[1]._._.field_2C;
   if ( v3 )
@@ -26,14 +26,14 @@ int __fastcall sub_6057DD8C(CollisionActor *a1)
   else
   {
     if ( a1[1]._._.parent == (Actor *)3 )
-      FIELD_U32(a1, 0x0).position.y = FIELD_U32(a1, 0x0).position.y + 12.0;
+      FIELD_F32(a1, 0x70) = FIELD_F32(a1, 0x70) + 12.0;
     v4 = a1[1]._._.field_30;
     if ( v4 != 15 )
     {
       sub_60584408(dword_60CAF15C, (char)v4, 0);
       sub_60022760(0.0, 0.0, dword_60C7F52C, (int)a1, 0, a1[1]._._.field_30);
     }
-    FIELD_U32(a1, 0x0)._.isDeleted = 1;
+    FIELD_U8(a1, 0x13) = 1;
     return 1;
   }
   return result;

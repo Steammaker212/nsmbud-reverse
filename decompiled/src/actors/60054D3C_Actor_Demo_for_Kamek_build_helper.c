@@ -11,7 +11,7 @@
 Enemy *__fastcall Actor_Demo_for_Kamek_build_helper(Enemy *a1, ActorBuildInfo *a2)
 {
   Enemy__ctor(a1, a2);
-  FIELD_U32(a1, 0x0)._._._.vtable = (int)off_60BC3DE8;
+  FIELD_U32(a1, 0x0) = (int)off_60BC3DE8;
   *(_DWORD *)&a1[1]._._._._.field_10 = 0;
   a1[1]._._._._.profile = 0;
   a1[1]._._._._.id = 0;
@@ -19,6 +19,6 @@ Enemy *__fastcall Actor_Demo_for_Kamek_build_helper(Enemy *a1, ActorBuildInfo *a
   a1[1]._._._._.vtable = 0;
   EffectWrapper_ctor((EffectWrapper *)&a1[1]._._._._.settings1);
   a1[1]._._._._.settings1 = (int)off_60BC1450;
-  PlayerLookTarget_ctor((PlayerLookTarget *)&a1[1]._._._.speed.y, FIELD_U32(a1, 0x0)._._._.id);
+  PlayerLookTarget_ctor((PlayerLookTarget *)&a1[1]._._._.speed.y, FIELD_U32(a1, 0x8));
   return a1;
 }

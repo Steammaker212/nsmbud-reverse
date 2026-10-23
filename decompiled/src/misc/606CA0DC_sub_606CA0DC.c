@@ -11,7 +11,7 @@
 StateActor *__fastcall sub_606CA0DC(StateActor *a1, ActorBuildInfo *a2)
 {
   StateActor_ctor(a1, a2);
-  FIELD_U32(a1, 0x0)._._.vtable = (int)off_60C1C864;
+  FIELD_U32(a1, 0x0) = (int)off_60C1C864;
   a1[1]._._._.field_30 = 0;
   memset(&a1[1], 0, 45);
   return a1;

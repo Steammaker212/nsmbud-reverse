@@ -93,7 +93,7 @@ int __fastcall Pokey__collisionThrowableObject(int a1, int a2, int a3)
   else
   {
     v17 = FIELD_F32(a1, 108);
-    x = FIELD_U32(v6, 0x6C).x;
+    x = FIELD_F32(v6, 0x6C);
     playerId = FIELD_U8(v6, 0x54);
     v23 = 0;
     memset(&position, 0, sizeof(position));

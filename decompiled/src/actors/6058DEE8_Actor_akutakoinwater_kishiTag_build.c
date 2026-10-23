@@ -15,7 +15,7 @@ MultiStateActor *__fastcall Actor_akutakoinwater_kishiTag_build(ActorBuildInfo *
 
   v2 = (MultiStateActor *)operator_new(0x17F0u);
   result = MultiStateActor__ctor(v2, a1);
-  FIELD_U32(result, 0x0)._._.vtable = (int)off_60C06EF4;
+  FIELD_U32(result, 0x0) = (int)off_60C06EF4;
   LOBYTE(result[1]._._._.settings1) = 0;
   *(_DWORD *)&result[1]._._._.field_10 = 0;
   result[1]._._._.profile = 0;

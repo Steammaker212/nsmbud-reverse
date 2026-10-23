@@ -15,7 +15,7 @@ StageActor *__fastcall Actor_shabonTag_build(ActorBuildInfo *a1)
 
   v2 = (StageActor *)operator_new(0x294u);
   result = StageActor__ctor(v2, a1);
-  FIELD_U32(result, 0x0).vtable = (int)off_60C2A7D0;
+  FIELD_U32(result, 0x0) = (int)off_60C2A7D0;
   result[1]._.vtable = 2139095039;
   result[1]._.heap = 2139095039;
   result[1]._.id = -8388609;

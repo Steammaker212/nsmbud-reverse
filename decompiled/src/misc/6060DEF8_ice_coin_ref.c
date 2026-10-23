@@ -32,7 +32,7 @@ int __fastcall ice_coin_ref(int a1)
   v5 = ModelWrapper_ctor(v4, Model2, 1, 0, 1, 0, 0);
   ModelWrapper_setup(v5, v2, 0, 0);
   FIELD_U32(a1, 6104) = v4;
-  animations = (int *)FIELD_U32(v4, 0x18).animations;
+  animations = (int *)FIELD_U32(v4, 0x1C);
   v7 = *animations;
   FIELD_U32(a1, 6108) = *animations;
   v11 = &sead__SafeStringBase__vtable;

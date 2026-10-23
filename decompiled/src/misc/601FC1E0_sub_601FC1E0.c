@@ -35,7 +35,7 @@ int __fastcall sub_601FC1E0(int a1)
   ModelWrapper_setup(v5, (int)ResArchiveById, 0, 0);
   FIELD_U32(a1, 268) = v4;
   v6 = FIELD_U32(a1, 272);
-  v7 = (int)*FIELD_U32(v4, 0x8).animations;
+  v7 = (int)*FIELD_U32(v4, 0xC);
   identifier.vtable = &sead__SafeStringBase__vtable;
   identifier.cstr = "cobSurrenderAppear";
   SkeletalAnim_play(v7, v6, (int)&identifier);

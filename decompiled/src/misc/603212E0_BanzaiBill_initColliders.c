@@ -32,11 +32,11 @@ signed int __fastcall BanzaiBill_initColliders(BulletBillTemp *this)
   int *v21; // r1
   int v22; // s2
 
-  (*(void (__fastcall **)(BulletBillTemp *))(FIELD_U32(this, 0x0)._._._._.vtable + 0x278))(this);
-  FIELD_U32(this, 0x0)._._._.field_1EC = 0.0;
-  FIELD_U32(this, 0x0)._._._.field_1F0 = 0;
-  FIELD_U32(this, 0x0).field_1804 |= 2u;
-  settings1 = FIELD_U32(this, 0x0)._._._._.settings1;
+  (*(void (__fastcall **)(BulletBillTemp *))(FIELD_U32(this, 0x0) + 0x278))(this);
+  FIELD_F32(this, 0x1EC) = 0.0;
+  FIELD_U32(this, 0x1F0) = 0;
+  FIELD_U32(this, 0x1804) |= 2u;
+  settings1 = FIELD_U32(this, 0x14);
   *(_DWORD *)FIELD_U8(this, 0x189C) = settings1 & 0xF;
   *(_DWORD *)&FIELD_U8(this, 0x189C)[4] = (unsigned __int8)settings1 >> 4;
   *(_DWORD *)&FIELD_U8(this, 0x189C)[60] = (settings1 >> 20) & 1;
@@ -44,16 +44,16 @@ signed int __fastcall BanzaiBill_initColliders(BulletBillTemp *this)
   *((_DWORD *)this + 1833) = (unsigned __int16)settings1 >> 12;
   *((_BYTE *)this + 0x32D8) = 0;
   v3 = &FIELD_U8(this, 0x189C)[8];
-  p_aCollider = &FIELD_U32(this, 0x0)._._._.aCollider;
+  p_aCollider = &FIELD_U32(this, 0xBC);
   if ( *(_DWORD *)&FIELD_U8(this, 0x189C)[8] )
   {
-    ActiveCollider__init(p_aCollider, &FIELD_U32(this, 0x0)._._._, &stru_60BEB334, (int)this + 0x32FC);
+    ActiveCollider__init(p_aCollider, &FIELD_U32(this, 0x0), &stru_60BEB334, (int)this + 0x32FC);
     goto LABEL_9;
   }
-  ActiveCollider__init(p_aCollider, &FIELD_U32(this, 0x0)._._._, &stru_60BEB284, (int)this + 0x32FC);
-  ActiveCollider__init(&FIELD_U32(this, 0x18E0), &FIELD_U32(this, 0x0)._._._, &stru_60BEB2B0, (int)this + 0x32FC);
-  ActiveCollider__init(&FIELD_U32(this, 0x1A14), &FIELD_U32(this, 0x0)._._._, &stru_60BEB2DC, 0);
-  ActiveCollider__init(&FIELD_U32(this, 0x1B44), &FIELD_U32(this, 0x0)._._._, &stru_60BEB308, 0);
+  ActiveCollider__init(p_aCollider, &FIELD_U32(this, 0x0), &stru_60BEB284, (int)this + 0x32FC);
+  ActiveCollider__init(&FIELD_U32(this, 0x18E0), &FIELD_U32(this, 0x0), &stru_60BEB2B0, (int)this + 0x32FC);
+  ActiveCollider__init(&FIELD_U32(this, 0x1A14), &FIELD_U32(this, 0x0), &stru_60BEB2DC, 0);
+  ActiveCollider__init(&FIELD_U32(this, 0x1B44), &FIELD_U32(this, 0x0), &stru_60BEB308, 0);
   v5 = *(_DWORD *)&FIELD_U8(this, 0x189C)[4];
   if ( !v5 )
   {
@@ -70,15 +70,15 @@ signed int __fastcall BanzaiBill_initColliders(BulletBillTemp *this)
     v8 = -27.0;
     v9 = 10.0;
 LABEL_7:
-    FIELD_U32(this, 0x0)._._._.aCollider.info.distToCenter.x = v9;
-    FIELD_U32(this, 0x18E0).info.distToCenter.x = v8;
-    FIELD_U32(this, 0x18E0).info.distToCenter.y = 0.0;
-    FIELD_U32(this, 0x1B44).info.distToCenter.x = v7;
-    FIELD_U32(this, 0x1A14).info.distToCenter.x = v6;
-    FIELD_U32(this, 0x1A14).info.distToEdge.x = 29.0;
-    FIELD_U32(this, 0x1A14).info.distToEdge.y = 29.0;
-    FIELD_U32(this, 0x1B44).info.distToEdge.x = 29.0;
-    FIELD_U32(this, 0x1B44).info.distToEdge.y = 31.0;
+    FIELD_F32(this, 0x130) = v9;
+    FIELD_F32(this, 0x1954) = v8;
+    FIELD_F32(this, 0x1958) = 0.0;
+    FIELD_F32(this, 0x1BB8) = v7;
+    FIELD_F32(this, 0x1A88) = v6;
+    FIELD_F32(this, 0x1A90) = 29.0;
+    FIELD_F32(this, 0x1A94) = 29.0;
+    FIELD_F32(this, 0x1BC0) = 29.0;
+    FIELD_F32(this, 0x1BC4) = 31.0;
   }
   BanzaiBill_initColliders_helper((int)this);
   *((_DWORD *)this + 1914) = 30;
@@ -120,7 +120,7 @@ LABEL_9:
     *v15 = v18 | 0x40000000;
     *v16 = v19 | 0x40000000;
   }
-  if ( (FIELD_U32(this, 0x0)._._._._.settigns2 & 0xF0) != 0 )
+  if ( (FIELD_U32(this, 0x18) & 0xF0) != 0 )
   {
     v20 = 3700.0;
   }
@@ -131,9 +131,9 @@ LABEL_9:
       v21 = &dword_60321664[1];
     v20 = *(float *)v21;
   }
-  FIELD_U32(this, 0x0)._._._.position.z = v20;
+  FIELD_F32(this, 0x74) = v20;
   *((double *)this + 0x65C) = ((double (__fastcall *)(char *))**((_DWORD **)this + 0xCB7))((char *)this + 0x32DC);
   *((_DWORD *)this + 0xCBA) = v22;
-  (*(void (__fastcall **)(BulletBillTemp *))(FIELD_U32(this, 0x0)._._._._.vtable + 640))(this);
+  (*(void (__fastcall **)(BulletBillTemp *))(FIELD_U32(this, 0x0) + 640))(this);
   return 1;
 }

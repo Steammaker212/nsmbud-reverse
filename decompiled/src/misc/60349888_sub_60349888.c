@@ -12,7 +12,7 @@ void __fastcall sub_60349888(CollisionActor *a1)
 {
   int y; // r5
 
-  y = FIELD_U32(a1, 0x0).rotation.y;
+  y = FIELD_U32(a1, 0xA0);
   Enemy__executeState_DieFall(a1);
-  FIELD_U32(a1, 0x0).rotation.y = y;
+  FIELD_U32(a1, 0xA0) = y;
 }

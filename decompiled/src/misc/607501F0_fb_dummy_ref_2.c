@@ -34,22 +34,22 @@ int __fastcall fb_dummy_ref_2(int **a1)
     v6 = ModelWrapper_ctor(v5, Model2, 1, 0, 2, 1, 0);
     ModelWrapper_setup(v6, Resource, 0, 0);
     a1[i] = (int *)v5;
-    v7 = (int)*FIELD_U32(v5, 0x8).animations;
+    v7 = (int)*FIELD_U32(v5, 0xC);
     SkeletalAnim_play(v7, (int)Resource, (const char **)v2);
     AnimationCtrl_setRepeat((ModelAnimation *)(v7 + 4), 0);
     FIELD_U32(v7, 24) = 1063675494;
-    v8 = (int)*FIELD_U32(v5, 0x18).animations;
+    v8 = (int)*FIELD_U32(v5, 0x1C);
     sub_60446088(v8, (int)Resource, v2);
     AnimationCtrl_setRepeat((ModelAnimation *)(v8 + 4), 0);
     FIELD_U32(v8, 24) = 1063675494;
-    animations = FIELD_U32(v5, 0x18).animations;
-    if ( FIELD_U32(v5, 0x18).count > 1u )
+    animations = FIELD_U32(v5, 0x1C);
+    if ( FIELD_U32(v5, 0x18) > 1u )
       ++animations;
     v10 = (char *)*animations;
     ShuAnim_play(*animations, (int)Resource, v2);
     AnimationCtrl_setRepeat((ModelAnimation *)(v10 + 4), 0);
     *((_DWORD *)v10 + 6) = 1063675494;
-    v11 = (int)*FIELD_U32(v5, 0x20).animations;
+    v11 = (int)*FIELD_U32(v5, 0x24);
     sub_6045195C(v11, (int)Resource, (const char **)v2);
     AnimationCtrl_setRepeat((ModelAnimation *)(v11 + 4), 0);
     ++v2;

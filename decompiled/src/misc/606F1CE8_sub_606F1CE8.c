@@ -15,7 +15,7 @@ CollisionActor *__fastcall sub_606F1CE8(ActorBuildInfo *a1)
 
   v2 = (CollisionActor *)operator_new(0x17B8u);
   result = CollisionActor__ctor(v2, a1);
-  FIELD_U32(result, 0x0)._.vtable = (int)&off_60C2034C;
+  FIELD_U32(result, 0x0) = (int)&off_60C2034C;
   result[1]._._.vtable = 0;
   result[1]._._.heap = 0;
   return result;

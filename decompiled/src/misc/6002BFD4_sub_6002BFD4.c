@@ -66,27 +66,27 @@ int __fastcall sub_6002BFD4(Enemy *a1)
   {
     if ( v5 == 30 )
     {
-      CollisionActor__handleGravity(&FIELD_U32(a1, 0x0)._);
-      CollisionActor__handleSpeed(&FIELD_U32(a1, 0x0)._);
-      x = FIELD_U32(a1, 0x0)._._.position.x;
-      y = FIELD_U32(a1, 0x0)._._.position.y;
+      CollisionActor__handleGravity(&FIELD_U32(a1, 0x0));
+      CollisionActor__handleSpeed(&FIELD_U32(a1, 0x0));
+      x = FIELD_F32(a1, 0x6C);
+      y = FIELD_F32(a1, 0x70);
       *(_WORD *)&v42.field_0 = 0;
       positionOffset.x = x;
       a3.x = x;
       positionOffset.y = y;
       a3.y = y + -5.0;
       v43 = off_60BC1F98;
-      v42.field_2 = FIELD_U32(a1, 0x0)._._.field_56;
-      v42.field_3 = FIELD_U32(a1, 0x0)._._.field_57;
+      v42.field_2 = FIELD_U8(a1, 0x56);
+      v42.field_3 = FIELD_U8(a1, 0x57);
       v42.field_4 = 0;
       v42.field_8 = (int)&v43;
       v18 = TileCheck_ctor(&target, &v42);
       speed.field_C = 0;
       speed.field_10 = 0;
       if ( !TileCheck_check(v18, &speed, &a3, &positionOffset, 15) )
-        FIELD_U32(a1, 0x0)._._.position.z = 1500.0;
-      CollisionMgr_process(FIELD_U32(a1, 0x0)._.collisionMgr);
-      if ( FIELD_U32(a1, 0x0)._._.speed.y < 0.0 )
+        FIELD_F32(a1, 0x74) = 1500.0;
+      CollisionMgr_process(FIELD_U8(a1, 0x288));
+      if ( FIELD_F32(a1, 0x7C) < 0.0 )
       {
 LABEL_24:
         *v6 = 100;
@@ -97,21 +97,21 @@ LABEL_24:
     {
       if ( v5 != 100 )
         goto LABEL_25;
-      CollisionActor__handleGravity(&FIELD_U32(a1, 0x0)._);
-      CollisionActor__handleSpeed(&FIELD_U32(a1, 0x0)._);
-      CollisionMgr_process(FIELD_U32(a1, 0x0)._.collisionMgr);
-      if ( FIELD_U32(a1, 0x0)._._.position.y < (float)(*(float *)&a1[1]._._.collisionMgr[420] + 10.0) )
-        *(_DWORD *)&FIELD_U32(a1, 0x0)._.collisionMgr[2556] &= ~4u;
-      if ( !*(_WORD *)&a1[1]._._.collisionMgr[468] && (FIELD_U32(a1, 0x0)._.collisionMgr[2224] & 1) != 0 )
+      CollisionActor__handleGravity(&FIELD_U32(a1, 0x0));
+      CollisionActor__handleSpeed(&FIELD_U32(a1, 0x0));
+      CollisionMgr_process(FIELD_U8(a1, 0x288));
+      if ( FIELD_F32(a1, 0x70) < (float)(*(float *)&a1[1]._._.collisionMgr[420] + 10.0) )
+        *(_DWORD *)&FIELD_U8(a1, 0x288)[2556] &= ~4u;
+      if ( !*(_WORD *)&a1[1]._._.collisionMgr[468] && (FIELD_U8(a1, 0x288)[2224] & 1) != 0 )
       {
-        FIELD_U32(a1, 0x0)._._.speed.x = 0.0;
-        FIELD_U32(a1, 0x0)._._.speed.y = 0.0;
-        FIELD_U32(a1, 0x0)._._.speed.z = 0.0;
-        *(_DWORD *)&FIELD_U32(a1, 0x0)._.collisionMgr[2532] &= ~4u;
-        *(_DWORD *)&FIELD_U32(a1, 0x0)._.collisionMgr[2540] &= ~4u;
-        *(_DWORD *)&FIELD_U32(a1, 0x0)._.collisionMgr[2556] &= ~4u;
-        v7 = FIELD_U32(a1, 0x0)._._.position.x;
-        target.field_4 = LODWORD(FIELD_U32(a1, 0x0)._._.position.y);
+        FIELD_F32(a1, 0x78) = 0.0;
+        FIELD_F32(a1, 0x7C) = 0.0;
+        FIELD_F32(a1, 0x80) = 0.0;
+        *(_DWORD *)&FIELD_U8(a1, 0x288)[2532] &= ~4u;
+        *(_DWORD *)&FIELD_U8(a1, 0x288)[2540] &= ~4u;
+        *(_DWORD *)&FIELD_U8(a1, 0x288)[2556] &= ~4u;
+        v7 = FIELD_F32(a1, 0x6C);
+        target.field_4 = LODWORD(FIELD_F32(a1, 0x70));
         *(float *)&target.field_0 = v7;
         target.field_8 = 1166843904;
         EffectData_create(971, (Vec3 *)&target, 0, 0);
@@ -122,7 +122,7 @@ LABEL_24:
         if ( !a1[1]._._.collisionMgr[485] )
         {
 LABEL_25:
-          (*(void (__fastcall **)(Enemy *, int *))(FIELD_U32(a1, 0x0)._._._.vtable + 192))(a1, &dword_60C7F868);
+          (*(void (__fastcall **)(Enemy *, int *))(FIELD_U32(a1, 0x0) + 192))(a1, &dword_60C7F868);
           goto LABEL_26;
         }
       }
@@ -133,12 +133,12 @@ LABEL_25:
   {
     if ( v5 == 10 )
     {
-      CollisionActor__handleGravity(&FIELD_U32(a1, 0x0)._);
-      CollisionActor__handleSpeed(&FIELD_U32(a1, 0x0)._);
-      CollisionMgr_process(FIELD_U32(a1, 0x0)._.collisionMgr);
-      if ( FIELD_U32(a1, 0x0)._._.speed.y >= 0.0 )
+      CollisionActor__handleGravity(&FIELD_U32(a1, 0x0));
+      CollisionActor__handleSpeed(&FIELD_U32(a1, 0x0));
+      CollisionMgr_process(FIELD_U8(a1, 0x288));
+      if ( FIELD_F32(a1, 0x7C) >= 0.0 )
         goto LABEL_26;
-      *(_DWORD *)&FIELD_U32(a1, 0x0)._.collisionMgr[2556] &= ~4u;
+      *(_DWORD *)&FIELD_U8(a1, 0x288)[2556] &= ~4u;
       goto LABEL_24;
     }
     goto LABEL_25;
@@ -173,11 +173,11 @@ LABEL_36:
     }
   }
 LABEL_37:
-  CollisionActor__handleGravity(&FIELD_U32(a1, 0x0)._);
-  CollisionActor__handleSpeed(&FIELD_U32(a1, 0x0)._);
-  CollisionMgr_process(FIELD_U32(a1, 0x0)._.collisionMgr);
-  if ( (FIELD_U32(a1, 0x0)._.collisionMgr[2224] & 1) != 0 )
-    FIELD_U32(a1, 0x0)._._.speed.y = 0.0;
+  CollisionActor__handleGravity(&FIELD_U32(a1, 0x0));
+  CollisionActor__handleSpeed(&FIELD_U32(a1, 0x0));
+  CollisionMgr_process(FIELD_U8(a1, 0x288));
+  if ( (FIELD_U8(a1, 0x288)[2224] & 1) != 0 )
+    FIELD_F32(a1, 0x7C) = 0.0;
   v23 = *(_DWORD **)&a1[1]._._.collisionMgr[148];
   v22 = &a1[1]._._.collisionMgr[148];
   v24 = (int *)v23[3];
@@ -190,12 +190,12 @@ LABEL_37:
     goto LABEL_26;
   sub_60813430(&a1[1]._._._._.field_20, "SE_VOC_BKK_JUMP", 0);
   sub_60813430(&a1[1]._._._._.field_20, "SE_BOSS_CMN_JUMP_L", 0);
-  *(_DWORD *)&FIELD_U32(a1, 0x0)._.collisionMgr[2532] |= 4u;
-  *(_DWORD *)&FIELD_U32(a1, 0x0)._.collisionMgr[2540] |= 4u;
-  *(_DWORD *)&FIELD_U32(a1, 0x0)._.collisionMgr[2556] |= 4u;
-  FIELD_U32(a1, 0x0)._._.position.z = 1500.0;
-  direction = FIELD_U32(a1, 0x0)._._.direction;
-  if ( FIELD_U32(a1, 0x0)._._.position.x < FIELD_F32(dword_60CC6484, 116) )
+  *(_DWORD *)&FIELD_U8(a1, 0x288)[2532] |= 4u;
+  *(_DWORD *)&FIELD_U8(a1, 0x288)[2540] |= 4u;
+  *(_DWORD *)&FIELD_U8(a1, 0x288)[2556] |= 4u;
+  FIELD_F32(a1, 0x74) = 1500.0;
+  direction = FIELD_U32(a1, 0x50);
+  if ( FIELD_F32(a1, 0x6C) < FIELD_F32(dword_60CC6484, 116) )
   {
     if ( !direction )
       goto LABEL_50;
@@ -203,14 +203,14 @@ LABEL_37:
   }
   if ( direction != 1 )
 LABEL_49:
-    FIELD_U32(a1, 0x0)._._.direction = direction ^ 1;
+    FIELD_U32(a1, 0x50) = direction ^ 1;
 LABEL_50:
   a1[1]._._.collisionMgr[485] = 1;
-  FIELD_U32(a1, 0x0)._._.aCollider.info.distToCenter.x = 0.0;
-  FIELD_U32(a1, 0x0)._._.aCollider.info.distToCenter.y = 18.0;
-  FIELD_U32(a1, 0x0)._._.aCollider.info.distToEdge.x = 18.0;
-  FIELD_U32(a1, 0x0)._._.aCollider.info.distToEdge.y = 18.0;
-  v29 = FIELD_U32(a1, 0x0)._._.position.y;
+  FIELD_F32(a1, 0x130) = 0.0;
+  FIELD_F32(a1, 0x134) = 18.0;
+  FIELD_F32(a1, 0x138) = 18.0;
+  FIELD_F32(a1, 0x13C) = 18.0;
+  v29 = FIELD_F32(a1, 0x70);
   if ( v29 >= -680.0 )
   {
     if ( v29 >= -560.0 )
@@ -218,11 +218,11 @@ LABEL_50:
     *(_DWORD *)&a1[1]._._.collisionMgr[452] = 2;
     *v6 = 30;
     *(_WORD *)&a1[1]._._.collisionMgr[468] = 36;
-    FIELD_U32(a1, 0x0)._._.speed.x = ((float (__fastcall *)(Enemy *, char *, int))loc_6002F720)(a1, &a1[1]._._.collisionMgr[416], 2);
+    FIELD_F32(a1, 0x78) = ((float (__fastcall *)(Enemy *, char *, int))loc_6002F720)(a1, &a1[1]._._.collisionMgr[416], 2);
     v30 = *(_DWORD *)&a1[1]._._.collisionMgr[452] > 2u
         ? 0.0
         : *(float *)&dword_60AF51A4[*(_DWORD *)&a1[1]._._.collisionMgr[452]];
-    FIELD_U32(a1, 0x0)._._.speed.y = v30;
+    FIELD_F32(a1, 0x7C) = v30;
     if ( *v8 == 6 )
       goto LABEL_26;
     v33 = *(_DWORD *)&a1[1]._._.collisionMgr[432];
@@ -234,7 +234,7 @@ LABEL_50:
     *(_DWORD *)&a1[1]._._.collisionMgr[452] = 0;
     v31 = &a1[1]._._.collisionMgr[452];
     *v6 = 10;
-    FIELD_U32(a1, 0x0)._._.speed.x = ((float (__fastcall *)(Enemy *, char *, _DWORD))loc_6002F720)(
+    FIELD_F32(a1, 0x78) = ((float (__fastcall *)(Enemy *, char *, _DWORD))loc_6002F720)(
                           a1,
                           &a1[1]._._.collisionMgr[416],
                           0);
@@ -242,7 +242,7 @@ LABEL_50:
       v32 = 0.0;
     else
       v32 = *(float *)&dword_60AF51A4[*(_DWORD *)v31];
-    FIELD_U32(a1, 0x0)._._.speed.y = v32;
+    FIELD_F32(a1, 0x7C) = v32;
     if ( *v8 == 6 )
       goto LABEL_26;
     v33 = *(_DWORD *)&a1[1]._._.collisionMgr[432];
@@ -267,9 +267,9 @@ LABEL_26:
   result = (unsigned __int8)a1[1]._._.collisionMgr[485];
   if ( a1[1]._._.collisionMgr[485] )
   {
-    *(_DWORD *)&target.field_0 = (int)(float)((float)(2147500000.0 * 35.0) / 180.0) * byte_60AFE3F4[FIELD_U32(a1, 0x0)._._.direction];
+    *(_DWORD *)&target.field_0 = (int)(float)((float)(2147500000.0 * 35.0) / 180.0) * byte_60AFE3F4[FIELD_U32(a1, 0x50)];
     *(_DWORD *)&speed.field_0 = 0x8000000;
-    result = moveValueTo(&FIELD_U32(a1, 0x0)._._.rotation.y, (int *)&target.field_0, (int *)&speed.field_0);
+    result = moveValueTo(&FIELD_U32(a1, 0xA0), (int *)&target.field_0, (int *)&speed.field_0);
     if ( result == 1 )
     {
       result = 0;

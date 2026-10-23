@@ -38,7 +38,7 @@ signed int __fastcall BooCircle_onCreate(MultiStateActor *a1)
   float v28; // [sp+14h] [bp-3Ch]
   float v29; // [sp+18h] [bp-38h]
 
-  settings1 = FIELD_U32(a1, 0x0)._._.settings1;
+  settings1 = FIELD_U32(a1, 0x14);
   v3 = &a1[1]._._.aCollider.field_B0;
   a1[1]._._.aCollider.info.callback = (void *)(settings1 & 0xF);
   LODWORD(a1[1]._._.aCollider.trapezoidOffsetTopLeft) = (unsigned __int8)settings1 >> 4;
@@ -47,7 +47,7 @@ signed int __fastcall BooCircle_onCreate(MultiStateActor *a1)
   a1[1]._._.aCollider.field_B0 = (HIWORD(settings1) & 0xF) + 1;
   a1[1]._._.aCollider.lastCollisionOffsetX = (float)((HIWORD(settings1) & 0xF0) + 16);
   *(float *)&a1[1]._._.aCollider.field_C0 = (float)(((settings1 >> 20) & 0xF0) + 16);
-  movementId = (unsigned __int8)FIELD_U32(a1, 0x0)._._.movementId;
+  movementId = (unsigned __int8)FIELD_U8(a1, 0x1C);
   a1[1]._._.aCollider.field_CC = movementId;
   a1[1]._._.aCollider.field_C8 = settings1 >> 28;
   if ( movementId )
@@ -55,8 +55,8 @@ signed int __fastcall BooCircle_onCreate(MultiStateActor *a1)
     v5 = sub_603B27D8(a1);
     if ( v5 )
     {
-      FIELD_U32(a1, 0x0)._.position.x = FIELD_F32(v5, 108) + 8.0;
-      FIELD_U32(a1, 0x0)._.position.y = FIELD_F32(v5, 112) + -16.0;
+      FIELD_F32(a1, 0x6C) = FIELD_F32(v5, 108) + 8.0;
+      FIELD_F32(a1, 0x70) = FIELD_F32(v5, 112) + -16.0;
     }
   }
   a1[1]._._.aCollider.field_C4 = LODWORD(a1[1]._._.aCollider.lastCollisionOffsetX);
@@ -85,9 +85,9 @@ signed int __fastcall BooCircle_onCreate(MultiStateActor *a1)
 LABEL_8:
         if ( v10 != v6 / 2 )
         {
-          y = FIELD_U32(a1, 0x0)._.position.y;
-          z = FIELD_U32(a1, 0x0)._.position.z;
-          x = FIELD_U32(a1, 0x0)._.position.x;
+          y = FIELD_F32(a1, 0x70);
+          z = FIELD_F32(a1, 0x74);
+          x = FIELD_F32(a1, 0x6C);
           v28 = y;
           v29 = z;
           v29 = sub_60007178(dword_60C7B3F8);
@@ -103,14 +103,14 @@ LABEL_8:
             v23 = v11;
           x = v21;
           v28 = v28 + (float)(v18 * (float)(v22 + (float)(v20 * 0.000000059605)));
-          v24 = &FIELD_U32(a1, 0x0)._._.vtable + v23;
-          (*(void (__fastcall **)(MultiStateActor *, float *, unsigned int))(FIELD_U32(a1, 0x0)._._.vtable + 196))(a1, &x, v11++);
+          v24 = &FIELD_U32(a1, 0x0) + v23;
+          (*(void (__fastcall **)(MultiStateActor *, float *, unsigned int))(FIELD_U32(a1, 0x0) + 196))(a1, &x, v11++);
           v24[1626] = v12;
           v13 = a1[1]._._.aCollider.field_B4;
         }
       }
     }
   }
-  (*(void (__fastcall **)(MultiStateActor *, int *, float))(FIELD_U32(a1, 0x0)._._.vtable + 192))(a1, &dword_60C97D38, *(float *)&v9);
+  (*(void (__fastcall **)(MultiStateActor *, int *, float))(FIELD_U32(a1, 0x0) + 192))(a1, &dword_60C97D38, *(float *)&v9);
   return 1;
 }

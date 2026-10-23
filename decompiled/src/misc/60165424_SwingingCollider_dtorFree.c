@@ -12,7 +12,7 @@ void __fastcall SwingingCollider_dtorFree(ColliderBase *a1)
 {
   _DWORD *v2; // r0
 
-  FIELD_U32(a1, 0x0).vtable = (int)SwingingCollider_vtable;
+  FIELD_U32(a1, 0x0) = (int)SwingingCollider_vtable;
   (*(void (__fastcall **)(int *))(a1[1]._.vtable + 16))(&a1[1]._.vtable);
   v2 = ColliderBase_dtor(a1);
   operator_delete(v2);

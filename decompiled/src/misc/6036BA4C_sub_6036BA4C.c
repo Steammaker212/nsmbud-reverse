@@ -15,7 +15,7 @@ void __fastcall sub_6036BA4C(CooliganSunglasses *this)
 
   if ( FIELD_U8(this, 0x288) )
     JUMPOUT(0x6000100C);
-  parent = FIELD_U32(this, 0x0)._.parent;
+  parent = FIELD_U32(this, 0x38);
   if ( ((unsigned int)&dword_60C95E08 & ~(1614199588 << v1) & 1) == 0 && _cxa_guard_acquire(&dword_60C95E08) )
   {
     dword_60C95E04 = (int)&off_60BC04AC;
@@ -26,9 +26,9 @@ void __fastcall sub_6036BA4C(CooliganSunglasses *this)
     if ( (*(int (__fastcall **)(Actor *, int *))FIELD_U32(parent, 0x0))(parent, &dword_60C95E04) == 1 )
     {
       sub_6036A318((int)parent, (int)&FIELD_U32(this, 0x28C));
-      LODWORD(FIELD_U32(this, 0x0).position.x) = FIELD_U32(this, 0x298);
-      LODWORD(FIELD_U32(this, 0x0).position.y) = FIELD_U32(this, 0x2A8);
-      LODWORD(FIELD_U32(this, 0x0).position.z) = FIELD_U32(this, 0x2B8);
+      LODWORD(FIELD_F32(this, 0x6C)) = FIELD_U32(this, 0x298);
+      LODWORD(FIELD_F32(this, 0x70)) = FIELD_U32(this, 0x2A8);
+      LODWORD(FIELD_F32(this, 0x74)) = FIELD_U32(this, 0x2B8);
     }
   }
 }

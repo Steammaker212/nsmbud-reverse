@@ -41,7 +41,7 @@ int __fastcall Goomba__vf270(Enemy *a1)
   Vec2 a3; // [sp+94h] [bp-2Ch] BYREF
 
   v2 = (char *)&a1[1]._._._.aCollider.field_D8 + 1;
-  ProfileId = Actor__getProfileId(&FIELD_U32(a1, 0x0)._._._);
+  ProfileId = Actor__getProfileId(&FIELD_U32(a1, 0x0));
   v4 = 0;
   if ( ProfileId == 468 )
   {
@@ -60,34 +60,34 @@ int __fastcall Goomba__vf270(Enemy *a1)
   TexAnim_play(v6, vtable, &v24);
   if ( *v2 )
     sub_6033A26C((int)a1, 1);
-  FIELD_U32(a1, 0x0)._._.scale.x = 1.0;
-  FIELD_U32(a1, 0x0)._._.scale.y = 1.0;
-  FIELD_U32(a1, 0x0)._._.scale.z = 1.0;
+  FIELD_F32(a1, 0x90) = 1.0;
+  FIELD_F32(a1, 0x94) = 1.0;
+  FIELD_F32(a1, 0x98) = 1.0;
   CollisionMgr_init(
-    (CollisionMgr *)FIELD_U32(a1, 0x0)._.collisionMgr,
+    (CollisionMgr *)FIELD_U8(a1, 0x288),
     (StateActor *)a1,
     &stru_60AFFAC0,
     &stru_60AFFACC,
     &stru_60AFFAD8);
-  *(_DWORD *)&FIELD_U32(a1, 0x0)._.collisionMgr[2552] |= 0x20000u;
+  *(_DWORD *)&FIELD_U8(a1, 0x288)[2552] |= 0x20000u;
   a1[1]._._._.aCollider._.containingHeap = (int)&a1[1]._._._.field_208;
-  (*(void (__fastcall **)(Enemy *))(FIELD_U32(a1, 0x0)._._._.vtable + 752))(a1);
+  (*(void (__fastcall **)(Enemy *))(FIELD_U32(a1, 0x0) + 752))(a1);
   v9 = 2;
-  FIELD_U32(a1, 0x0)._._.effectOffset.x = 0.0;
-  FIELD_U32(a1, 0x0)._._.effectOffset.y = 8.0;
-  FIELD_U32(a1, 0x0)._._.effectOffset.z = 0.0;
-  FIELD_U32(a1, 0x0)._._.field_1EC = 0.0;
-  FIELD_U32(a1, 0x0)._._.field_1F0 = 1090519040;
-  FIELD_U32(a1, 0x0)._._.field_1F4 = 16.0;
-  FIELD_U32(a1, 0x0)._._.field_1F8 = 16.0;
-  FIELD_U32(a1, 0x0)._._.field_1FC = 16.0;
-  FIELD_U32(a1, 0x0)._._.field_200 = 1098907648;
-  FIELD_U32(a1, 0x0)._._.field_26C = (int)&a1[1]._._._.aCollider.field_E4;
+  FIELD_F32(a1, 0x23C) = 0.0;
+  FIELD_F32(a1, 0x240) = 8.0;
+  FIELD_F32(a1, 0x244) = 0.0;
+  FIELD_F32(a1, 0x1EC) = 0.0;
+  FIELD_U32(a1, 0x1F0) = 1090519040;
+  FIELD_F32(a1, 0x1F4) = 16.0;
+  FIELD_F32(a1, 0x1F8) = 16.0;
+  FIELD_F32(a1, 0x1FC) = 16.0;
+  FIELD_U32(a1, 0x200) = 1098907648;
+  FIELD_U32(a1, 0x26C) = (int)&a1[1]._._._.aCollider.field_E4;
   a1[1]._._._.aCollider.field_F4 = 3;
-  FIELD_U32(a1, 0x0)._._.field_270 = (int)&a1[1]._._._.aCollider.field_108;
+  FIELD_U32(a1, 0x270) = (int)&a1[1]._._._.aCollider.field_108;
   a1[1]._._._.aCollider.field_124 = 1;
   FIELD_U32(a1, 0x1864) = 1;
-  settings1 = FIELD_U32(a1, 0x0)._._._.settings1;
+  settings1 = FIELD_U32(a1, 0x14);
   a1[1]._._._.field_218 = settings1 & 0xF;
   if ( (settings1 & 0x10000) == 0 )
     v9 = 1;
@@ -100,30 +100,30 @@ int __fastcall Goomba__vf270(Enemy *a1)
         a1[1]._._._.field_210 = 0.0;
         *(_DWORD *)&a1[1]._._._.zoneId = 0;
         CollisionMgr_init(
-          (CollisionMgr *)FIELD_U32(a1, 0x0)._.collisionMgr,
+          (CollisionMgr *)FIELD_U8(a1, 0x288),
           (StateActor *)a1,
           (CollisionMgr_Sensor *)&a1[1]._._._.field_20C,
           0,
           &stru_60AFFAD8);
       }
       FIELD_U32(a1, 0x1804) |= 0x10000u;
-      (*(void (__fastcall **)(Enemy *, int *))(FIELD_U32(a1, 0x0)._._._.vtable + 192))(a1, &dword_60C942DC);
+      (*(void (__fastcall **)(Enemy *, int *))(FIELD_U32(a1, 0x0) + 192))(a1, &dword_60C942DC);
       break;
     case 2u:
       a1[1]._._._.field_22C = (settings1 >> 4) & 3;
-      sub_6015913C(&FIELD_U32(a1, 0x0)._._.aCollider, 8);
-      sub_6015913C(&FIELD_U32(a1, 0x0)._._.aCollider, 512);
-      sub_6015913C(&FIELD_U32(a1, 0x0)._._.aCollider, 64);
+      sub_6015913C(&FIELD_U32(a1, 0xBC), 8);
+      sub_6015913C(&FIELD_U32(a1, 0xBC), 512);
+      sub_6015913C(&FIELD_U32(a1, 0xBC), 64);
       FIELD_U32(a1, 0x1804) |= 0x10000u;
-      (*(void (__fastcall **)(Enemy *, int *))(FIELD_U32(a1, 0x0)._._._.vtable + 192))(a1, &dword_60C942FC);
+      (*(void (__fastcall **)(Enemy *, int *))(FIELD_U32(a1, 0x0) + 192))(a1, &dword_60C942FC);
       break;
     case 3u:
       v24.field_0 = v9;
-      FIELD_U32(a1, 0x0)._._.position.z = sub_60022B80(&v24);
-      (*(void (__fastcall **)(Enemy *, void *))(FIELD_U32(a1, 0x0)._._._.vtable + 192))(a1, &unk_60C9433C);
+      FIELD_F32(a1, 0x74) = sub_60022B80(&v24);
+      (*(void (__fastcall **)(Enemy *, void *))(FIELD_U32(a1, 0x0) + 192))(a1, &unk_60C9433C);
       break;
     case 4u:
-      parent = FIELD_U32(a1, 0x0)._._._.parent;
+      parent = FIELD_U32(a1, 0x38);
       if ( ((unsigned int)&dword_60C7B364 & ~(1613993944 << v8) & 1) == 0 && _cxa_guard_acquire(&dword_60C7B364) )
       {
         StageActor_RTTI = (int)&off_60BC0098;
@@ -142,17 +142,17 @@ int __fastcall Goomba__vf270(Enemy *a1)
         a1[1]._._._._.field_4C = v17;
       }
       v24.field_0 = v9;
-      FIELD_U32(a1, 0x0)._._.position.z = sub_60022B80(&v24);
-      FIELD_U32(a1, 0x0)._._.position.z = FIELD_U32(a1, 0x0)._._.position.z
+      FIELD_F32(a1, 0x74) = sub_60022B80(&v24);
+      FIELD_F32(a1, 0x74) = FIELD_F32(a1, 0x74)
                            + (float)((float)(int)(((10
                                                   * (unsigned __int64)sead__Random__getU32((void *)(dword_60C9CF0C + 1340))) >> 32)
                                                 - 5)
                                    * 16.0);
-      LOBYTE(a1[1]._._._.aCollider.field_DC) = (FIELD_U32(a1, 0x0)._._._.settings1 & 0x1000) != 0;
-      (*(void (__fastcall **)(Enemy *, int *))(FIELD_U32(a1, 0x0)._._._.vtable + 192))(a1, &dword_60C9435C);
+      LOBYTE(a1[1]._._._.aCollider.field_DC) = (FIELD_U32(a1, 0x14) & 0x1000) != 0;
+      (*(void (__fastcall **)(Enemy *, int *))(FIELD_U32(a1, 0x0) + 192))(a1, &dword_60C9435C);
       break;
     case 5u:
-      v18 = FIELD_U32(a1, 0x0)._._._.parent;
+      v18 = FIELD_U32(a1, 0x38);
       if ( ((unsigned int)&dword_60C7B364 & ~(1613994296 << v8) & 1) == 0 && _cxa_guard_acquire(&dword_60C7B364) )
       {
         StageActor_RTTI = (int)&off_60BC0098;
@@ -171,23 +171,23 @@ int __fastcall Goomba__vf270(Enemy *a1)
         a1[1]._._._._.field_4C = v20;
       }
       v24.field_0 = v9;
-      FIELD_U32(a1, 0x0)._._.position.z = sub_60022B80(&v24);
-      FIELD_U32(a1, 0x0)._._.position.z = FIELD_U32(a1, 0x0)._._.position.z
+      FIELD_F32(a1, 0x74) = sub_60022B80(&v24);
+      FIELD_F32(a1, 0x74) = FIELD_F32(a1, 0x74)
                            + (float)((float)(int)(((10
                                                   * (unsigned __int64)sead__Random__getU32((void *)(dword_60C9CF0C + 1340))) >> 32)
                                                 - 5)
                                    * 16.0);
-      LOBYTE(a1[1]._._._.aCollider.field_DC) = (FIELD_U32(a1, 0x0)._._._.settings1 & 0x1000) != 0;
-      (*(void (__fastcall **)(Enemy *, int *))(FIELD_U32(a1, 0x0)._._._.vtable + 192))(a1, &dword_60C9437C);
+      LOBYTE(a1[1]._._._.aCollider.field_DC) = (FIELD_U32(a1, 0x14) & 0x1000) != 0;
+      (*(void (__fastcall **)(Enemy *, int *))(FIELD_U32(a1, 0x0) + 192))(a1, &dword_60C9437C);
       break;
     case 6u:
       v24.field_0 = v9;
-      FIELD_U32(a1, 0x0)._._.position.z = sub_60022B80(&v24);
-      (*(void (__fastcall **)(Enemy *, void *))(FIELD_U32(a1, 0x0)._._._.vtable + 192))(a1, &unk_60C9439C);
+      FIELD_F32(a1, 0x74) = sub_60022B80(&v24);
+      (*(void (__fastcall **)(Enemy *, void *))(FIELD_U32(a1, 0x0) + 192))(a1, &unk_60C9439C);
       break;
     case 7u:
-      FIELD_U32(a1, 0x0)._._.position.z = 2300.0;
-      (*(void (__fastcall **)(Enemy *, int *))(FIELD_U32(a1, 0x0)._._._.vtable + 192))(a1, &dword_60C943BC);
+      FIELD_F32(a1, 0x74) = 2300.0;
+      (*(void (__fastcall **)(Enemy *, int *))(FIELD_U32(a1, 0x0) + 192))(a1, &dword_60C943BC);
       break;
     case 8u:
       if ( sub_608FBB8C(FIELD_U16(PlayerMgr_instance, 66)) <= 1 )
@@ -196,25 +196,25 @@ int __fastcall Goomba__vf270(Enemy *a1)
         a1[1]._._._.field_210 = 0.0;
         *(_DWORD *)&a1[1]._._._.zoneId = 0;
         CollisionMgr_init(
-          (CollisionMgr *)FIELD_U32(a1, 0x0)._.collisionMgr,
+          (CollisionMgr *)FIELD_U8(a1, 0x288),
           (StateActor *)a1,
           (CollisionMgr_Sensor *)&a1[1]._._._.field_20C,
           0,
           &stru_60AFFAD8);
       }
       FIELD_U32(a1, 0x1804) |= 0x10000u;
-      (*(void (__fastcall **)(Enemy *, int *))(FIELD_U32(a1, 0x0)._._._.vtable + 192))(a1, &dword_60C943DC);
+      (*(void (__fastcall **)(Enemy *, int *))(FIELD_U32(a1, 0x0) + 192))(a1, &dword_60C943DC);
       break;
     default:
-      y = FIELD_U32(a1, 0x0)._._.position.y;
-      x = FIELD_U32(a1, 0x0)._._.position.x;
+      y = FIELD_F32(a1, 0x70);
+      x = FIELD_F32(a1, 0x6C);
       *(_WORD *)&v25.field_0 = 0;
       a3.x = x;
       a3.y = y;
       positionOffset.x = x;
       positionOffset.y = y + -500.0;
-      v25.field_2 = FIELD_U32(a1, 0x0)._._.field_56;
-      v25.field_3 = FIELD_U32(a1, 0x0)._._.field_57;
+      v25.field_2 = FIELD_U8(a1, 0x56);
+      v25.field_3 = FIELD_U8(a1, 0x57);
       v25.field_4 = 0;
       v25.field_8 = 0;
       v13 = TileCheck_ctor(&v24, &v25);
@@ -222,22 +222,22 @@ int __fastcall Goomba__vf270(Enemy *a1)
       v23.field_10 = 0;
       if ( TileCheck_check(v13, &v23, &a3, &positionOffset, 8) == 1 )
       {
-        a1[1]._._._.effectOffset.x = FIELD_U32(a1, 0x0)._._.position.y - v23.field_8;
+        a1[1]._._._.effectOffset.x = FIELD_F32(a1, 0x70) - v23.field_8;
         sub_60003D80();
       }
       v24.field_0 = v9;
-      FIELD_U32(a1, 0x0)._._.position.z = sub_60022B80(&v24);
+      FIELD_F32(a1, 0x74) = sub_60022B80(&v24);
       if ( *v2 )
         v14 = &dword_60C94278;
       else
         v14 = &dword_60C94470;
-      (*(void (__fastcall **)(Enemy *, int *))(FIELD_U32(a1, 0x0)._._._.vtable + 192))(a1, v14);
+      (*(void (__fastcall **)(Enemy *, int *))(FIELD_U32(a1, 0x0) + 192))(a1, v14);
       break;
   }
   if ( a1[1]._._._.field_218 == 2 )
-    *(float *)&a1[1]._._._.aCollider.field_C8 = (float)(HIBYTE(FIELD_U32(a1, 0x0)._._._.settings1) & 0xF) * 16.0;
+    *(float *)&a1[1]._._._.aCollider.field_C8 = (float)(HIBYTE(FIELD_U32(a1, 0x14)) & 0xF) * 16.0;
   sub_6033D008(a1, a1[1]._._._._.heap);
-  LOBYTE(FIELD_U32(a1, 0x0)._.field_17A8) = 1;
+  LOBYTE(FIELD_U32(a1, 0x17A8)) = 1;
   v21 = (_DWORD *)(EnemyCounterMaybe_instance + 176);
   if ( !*v2 )
     v21 = (_DWORD *)(EnemyCounterMaybe_instance + 172);

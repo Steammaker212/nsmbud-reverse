@@ -14,6 +14,6 @@ void __fastcall Kanibo__beginState_RockUp(Enemy *this)
 
   *((_DWORD *)this + 1588) = 0;
   v1 = (Enemy *)((char *)this + 6344);
-  FIELD_U32(v1, 0x0)._._._.vtable = 1;
+  FIELD_U32(v1, 0x0) = 1;
   sub_60421AD4(v1[-1].field_1870);
 }

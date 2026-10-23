@@ -36,8 +36,8 @@ void __fastcall sub_602E5FF0(int a1)
   j_ModelWrapper_setupModel((int)v6, (int)v3, 0, 0);
   *(_DWORD *)a1 = v5;
   animations = (unsigned int)v5[1].texAnims.animations;
-  v8 = (int *)FIELD_U32(v5, 0x8).animations;
-  if ( FIELD_U32(v5, 0x8).count > animations )
+  v8 = (int *)FIELD_U32(v5, 0xC);
+  if ( FIELD_U32(v5, 0x8) > animations )
     v8 += animations;
   v9 = *v8;
   a2.vtable = &sead__SafeStringBase__vtable;
@@ -56,7 +56,7 @@ void __fastcall sub_602E5FF0(int a1)
   v12 = sub_60421830(v11, v10, 0, 1, 1, 0, 0);
   j_ModelWrapper_setupModel((int)v12, (int)v3, 0, 0);
   FIELD_U32(a1, 4) = v11;
-  TexAnim_play(*FIELD_U32(v11, 0x10).animations, v3, &dword_60C9236C);
+  TexAnim_play(*FIELD_U32(v11, 0x14), v3, &dword_60C9236C);
   *(_DWORD *)(**(_DWORD **)(FIELD_U32(a1, 4) + 20) + 24) = 0;
   AnimationCtrl_setRepeat((ModelAnimation *)(**(_DWORD **)(FIELD_U32(a1, 4) + 20) + 4), 0);
   sub_60446088(**(_DWORD **)(FIELD_U32(a1, 4) + 28), (int)v3, (int)&dword_60C9236C);

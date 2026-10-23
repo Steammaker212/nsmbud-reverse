@@ -31,16 +31,16 @@ signed int __fastcall SE_EMY_MECHAKOOPA_DAMAGE_ref(StageActor *a1)
   v5 = (float)byte_60AFE3F4[direction];
   if ( v2 == v3 )
   {
-    FIELD_U32(a1, 0x78).x = v5 * 4.0;
-    FIELD_U32(a1, 0x78).y = 0.0;
-    FIELD_U32(a1, 0x78).z = 0.0;
+    FIELD_F32(a1, 0x78) = v5 * 4.0;
+    FIELD_F32(a1, 0x7C) = 0.0;
+    FIELD_F32(a1, 0x80) = 0.0;
     v6 = 10;
   }
   else
   {
-    FIELD_U32(a1, 0x78).x = v5 * 2.5;
-    FIELD_U32(a1, 0x78).y = 2.0;
-    FIELD_U32(a1, 0x78).z = 0.0;
+    FIELD_F32(a1, 0x78) = v5 * 2.5;
+    FIELD_F32(a1, 0x7C) = 2.0;
+    FIELD_F32(a1, 0x80) = 0.0;
     a1[9].profileFlags = 511;
     LODWORD(a1[9].effectOffset.x) = 1;
     v7 = **(_DWORD **)(a1[9].field_230 + 12);
@@ -50,17 +50,17 @@ signed int __fastcall SE_EMY_MECHAKOOPA_DAMAGE_ref(StageActor *a1)
     TexAnim_play(v8, a1[9].field_22C, &dword_60C94A78);
     AnimationCtrl_setRepeat((ModelAnimation *)(v8 + 4), dword_60C94A80);
     v9 = Global_BasicSoundActor1;
-    y = FIELD_U32(a1, 0x6C).y;
-    position.x = FIELD_U32(a1, 0x6C).x;
+    y = FIELD_F32(a1, 0x70);
+    position.x = FIELD_F32(a1, 0x6C);
     position.y = y;
     mapPositionToScreen(&v13, &position);
     BasicSoundActor1_playSound(v9, "SE_EMY_MECHAKOOPA_DAMAGE", (int)&v13, 0);
     direction = FIELD_U32(a1, 0x50);
     v6 = 16;
   }
-  FIELD_U32(a1, 0x84).x = 0.0;
+  FIELD_F32(a1, 0x84) = 0.0;
   FIELD_F32(a1, 0x68) = 0.0625;
-  FIELD_U32(a1, 0x9C).y = Enemy_CommonRotations[direction];
+  FIELD_U32(a1, 0xA0) = Enemy_CommonRotations[direction];
   playerId = FIELD_U8(a1, 0x54);
   if ( playerId <= 3 )
   {

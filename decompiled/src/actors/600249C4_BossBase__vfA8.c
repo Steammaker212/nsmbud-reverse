@@ -16,8 +16,8 @@
 //   - 0x600CF790 : BowserJrBase
 int __fastcall BossBase__vfA8(BossBase *a1)
 {
-  if ( (*(int (__fastcall **)(BossBase *))(FIELD_U32(a1, 0x0)._._._._.vtable + 0x2C4))(a1) == 1 )
-    return (*(int (__fastcall **)(BossBase *))(FIELD_U32(a1, 0x0)._._._._.vtable + 0x368))(a1);
+  if ( (*(int (__fastcall **)(BossBase *))(FIELD_U32(a1, 0x0) + 0x2C4))(a1) == 1 )
+    return (*(int (__fastcall **)(BossBase *))(FIELD_U32(a1, 0x0) + 0x368))(a1);
   else
     return 1;
 }

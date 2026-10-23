@@ -15,7 +15,7 @@ StateActor *__fastcall Actor_neshikuwaiya_build(ActorBuildInfo *a1)
 
   v2 = (StateActor *)operator_new(0x17F0u);
   result = sub_606D8E08(v2, a1);
-  FIELD_U32(result, 0x0)._._.vtable = (int)off_60C1E798;
+  FIELD_U32(result, 0x0) = (int)off_60C1E798;
   result[1]._._._.settings1 = 0;
   result[1]._._._.settigns2 = 0;
   return result;

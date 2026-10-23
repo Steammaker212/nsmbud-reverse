@@ -24,17 +24,17 @@ int *__fastcall Kanibo__executeState_Jump(Enemy *this)
 
   v2 = this + 1;
   j_ModelWrapper_updateAnims(*((_DWORD *)this + 1575));
-  sub_604218E0(FIELD_U32(v2, 0x0)._._._.vtable);
-  CollisionActor__handleGravity(&FIELD_U32(this, 0x0)._);
-  CollisionActor__handleSpeed(&FIELD_U32(this, 0x0)._);
-  v3 = CollisionActor__sub_600034C8(&FIELD_U32(this, 0x0)._);
+  sub_604218E0(FIELD_U32(v2, 0x0));
+  CollisionActor__handleGravity(&FIELD_U32(this, 0x0));
+  CollisionActor__handleSpeed(&FIELD_U32(this, 0x0));
+  v3 = CollisionActor__sub_600034C8(&FIELD_U32(this, 0x0));
   if ( *((_BYTE *)this + 6472) )
   {
-    if ( (FIELD_U32(this, 0x0)._.collisionMgr[2232] & 1) == 0 && (FIELD_U32(this, 0x0)._.collisionMgr[2224] & 1) != 0 )
+    if ( (FIELD_U8(this, 0x288)[2232] & 1) == 0 && (FIELD_U8(this, 0x288)[2224] & 1) != 0 )
     {
-      y = FIELD_U32(this, 0x0)._._.position.y;
-      v5 = *(_DWORD *)&FIELD_U32(this, 0x0)._.collisionMgr[5308];
-      v12.x = FIELD_U32(this, 0x0)._._.position.x;
+      y = FIELD_F32(this, 0x70);
+      v5 = *(_DWORD *)&FIELD_U8(this, 0x288)[5308];
+      v12.x = FIELD_F32(this, 0x6C);
       v12.y = y;
       v12.z = 4500.0;
       EffectData_create(dword_60AFF324[BYTE1(v5)], &v12, 0, 0);
@@ -52,9 +52,9 @@ int *__fastcall Kanibo__executeState_Jump(Enemy *this)
 LABEL_8:
   if ( *((_DWORD *)this + 1586) == 1 )
   {
-    vtable = FIELD_U32(v2, 0x0)._._._.vtable;
-    v7 = *(_DWORD *)(FIELD_U32(v2, 0x0)._._._.vtable + 8);
-    v8 = *(_DWORD *)(FIELD_U32(v2, 0x0)._._._.vtable + 0x44);
+    vtable = FIELD_U32(v2, 0x0);
+    v7 = *(_DWORD *)(FIELD_U32(v2, 0x0) + 8);
+    v8 = *(_DWORD *)(FIELD_U32(v2, 0x0) + 0x44);
     v9 = FIELD_U32(vtable, 0xC);
     if ( v7 > v8 )
       v9 += 4 * v8;
@@ -62,14 +62,14 @@ LABEL_8:
     {
       *((_DWORD *)this + 1586) = 2;
       sub_60421AD4(vtable);
-      return (*(int *(__fastcall **)(Enemy *, State *))(FIELD_U32(this, 0x0)._._._.vtable + 192))(this, &Kanibo__StateID_Wait);
+      return (*(int *(__fastcall **)(Enemy *, State *))(FIELD_U32(this, 0x0) + 192))(this, &Kanibo__StateID_Wait);
     }
   }
 LABEL_13:
   result = (int *)((char *)this + 6360);
-  v11 = FIELD_U32(this, 0x0)._._.speed.y + *((float *)this + 1590);
+  v11 = FIELD_F32(this, 0x7C) + *((float *)this + 1590);
   *((float *)this + 1590) = v11;
   if ( v11 >= 16.0 )
-    return (*(int *(__fastcall **)(Enemy *, State *))(FIELD_U32(this, 0x0)._._._.vtable + 192))(this, &Kanibo__StateID_BackMove);
+    return (*(int *(__fastcall **)(Enemy *, State *))(FIELD_U32(this, 0x0) + 192))(this, &Kanibo__StateID_BackMove);
   return result;
 }

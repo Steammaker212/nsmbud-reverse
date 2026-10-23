@@ -34,7 +34,7 @@ signed int __fastcall BossBase__collisionPenguinSlide(BossBase *a1, int a2, int 
     v9 = v7[84];
     if ( v9 < 4 )
       v8 = (char)v9;
-    *(&FIELD_U32(a1, 0x0).field_17FC + v8) = 32;
+    *(&FIELD_U32(a1, 0x17FC) + v8) = 32;
   }
   return 1;
 }

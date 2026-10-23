@@ -33,7 +33,7 @@ bool __fastcall sub_606DFBE4(int a1)
   ModelWrapper_setup(v5, v2, 0, 0);
   FIELD_U32(a1, 6104) = v4;
   a1 += 6104;
-  v6 = (int)*FIELD_U32(v4, 0x8).animations;
+  v6 = (int)*FIELD_U32(v4, 0xC);
   v12 = &sead__SafeStringBase__vtable;
   v13 = "switch_koopa";
   v7 = LoadResource(ResourceMgrRelated_instance, &v12);

@@ -32,7 +32,7 @@ int __fastcall sub_60468324(int a1)
   v5 = ModelWrapper_ctor(v4, Model2, 1, 1, 0, 0, 0);
   ModelWrapper_setup(v5, v2, 0, 0);
   FIELD_U32(a1, 6160) = v4;
-  v6 = (int)*FIELD_U32(v4, 0x10).animations;
+  v6 = (int)*FIELD_U32(v4, 0x14);
   FIELD_U32(a1, 6164) = v6;
   v11 = &sead__SafeStringBase__vtable;
   v12 = "I_kinoko";

@@ -22,7 +22,7 @@ signed int __fastcall Seaweed_onExecute(Seaweed *this)
       v3 = 0;
       if ( (unsigned int)v2 < 3 )
         v3 = v2;
-      v4 = (ModelWrapper **)(&FIELD_U32(this, 0x0)._.vtable + v3);
+      v4 = (ModelWrapper **)(&FIELD_U32(this, 0x0) + v3);
       ModelWrapper_updateAnims(v4[0xA1]);
       ModelWrapper_updateModel(v4[0xA1]);
       ++v2;

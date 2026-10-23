@@ -32,9 +32,9 @@ ColliderListNode *__fastcall sub_606D16EC(int a1)
     v8[0].bottomRight.y = v6;
     v8[0].rotation = 0;
     ShapedCollider_init(v3, (StageActor *)a1, v8);
-    FIELD_U32(v3, 0x0).field_138 = FIELD_U32(v4, 16);
-    FIELD_U32(v3, 0x0).field_13C = FIELD_U32(v4, 20);
-    FIELD_U32(v3, 0x0).field_140 = FIELD_U32(v4, 24);
+    FIELD_U32(v3, 0x138) = FIELD_U32(v4, 16);
+    FIELD_U32(v3, 0x13C) = FIELD_U32(v4, 20);
+    FIELD_U32(v3, 0x140) = FIELD_U32(v4, 24);
     result = ColliderMgr_add(ColliderMgr_instance, &FIELD_U32(v3, 0x0));
     v3 = (ShapedCollider *)((char *)v3 + 656);
     v4 += 28;

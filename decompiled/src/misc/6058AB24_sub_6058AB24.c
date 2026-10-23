@@ -23,7 +23,7 @@ int __fastcall sub_6058AB24(StageActor *a1)
   StateBase *v12; // r0
   int v13; // r5
 
-  if ( (FIELD_U32(a1, 0x0).settigns2 & 1) != 0 )
+  if ( (FIELD_U32(a1, 0x18) & 1) != 0 )
   {
     v2 = (StateMgr *)&a1[9].aCollider.field_64;
     CurrentState = StateMgr__getCurrentState((StateMgr *)&a1[9].aCollider.field_64);
@@ -50,7 +50,7 @@ int __fastcall sub_6058AB24(StageActor *a1)
       MovementHandler__execute((MovementHandler *)&a1[10].field_228);
       if ( LODWORD(a1[10].field_254.y) == 1 && a1[10].field_26C != 1 )
       {
-        if ( (FIELD_U32(a1, 0x0).settigns2 & 1) != 0 )
+        if ( (FIELD_U32(a1, 0x18) & 1) != 0 )
         {
           v9 = StateMgr__getCurrentState(v2);
           v10 = (*((int (__fastcall **)(StateBase *))FIELD_U32(v9, 0x0) + 2))(v9);
@@ -61,21 +61,21 @@ int __fastcall sub_6058AB24(StageActor *a1)
               a1[11].aCollider._.field_8 = 1124073472;
               a1[11].aCollider._.field_C = 1132462080;
               sub_605D0024(a1);
-              (*(void (__fastcall **)(StageActor *, int *))(FIELD_U32(a1, 0x0).vtable + 192))(a1, &dword_60CB10FC);
+              (*(void (__fastcall **)(StageActor *, int *))(FIELD_U32(a1, 0x0) + 192))(a1, &dword_60CB10FC);
             }
           }
         }
-        FIELD_U32(a1, 0x6C).x = *(float *)&a1[10].field_228;
-        FIELD_U32(a1, 0x6C).y = *(float *)&a1[10].field_22C + a1[10].aCollider.trapezoidOffsetBottomLeft;
-        if ( (FIELD_U32(a1, 0x0).settings1 & 0x2000000) != 0 )
+        FIELD_F32(a1, 0x6C) = *(float *)&a1[10].field_228;
+        FIELD_F32(a1, 0x70) = *(float *)&a1[10].field_22C + a1[10].aCollider.trapezoidOffsetBottomLeft;
+        if ( (FIELD_U32(a1, 0x14) & 0x2000000) != 0 )
           v11 = 0;
         else
           v11 = a1[10].field_278;
-        FIELD_U32(a1, 0x9C).z = v11;
+        FIELD_U32(a1, 0xA4) = v11;
       }
     }
   }
-  a1[9].profileFlags = FIELD_U32(a1, 0x9C).z;
+  a1[9].profileFlags = FIELD_U32(a1, 0xA4);
   ShapedCollider_execute((ColliderBase *)&a1[9].aCollider.info.field_14);
   sub_605B2D70(a1);
   v12 = StateMgr__getCurrentState(v2);

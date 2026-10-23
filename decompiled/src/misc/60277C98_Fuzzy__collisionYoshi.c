@@ -27,8 +27,8 @@ int __fastcall Fuzzy__collisionYoshi(Enemy *a1, ActiveCollider *a2, ActiveCollid
     owner = FIELD_U32(a3, 0x40);
     if ( owner )
     {
-      sub_602A3520((float *)&FIELD_U32(a1, 0x0)._._._.vtable, "SE_EMY_YOSHI_STEP", 0);
-      return (*(int (__fastcall **)(Enemy *, StageActor *))(FIELD_U32(a1, 0x0)._._._.vtable + 380))(a1, owner);
+      sub_602A3520((float *)&FIELD_U32(a1, 0x0), "SE_EMY_YOSHI_STEP", 0);
+      return (*(int (__fastcall **)(Enemy *, StageActor *))(FIELD_U32(a1, 0x0) + 380))(a1, owner);
     }
   }
   return result;

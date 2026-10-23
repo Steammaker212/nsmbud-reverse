@@ -15,8 +15,8 @@ int __fastcall SE_VOC_ROY_JUMP_L_ref(CollisionActor *a1)
   float v4; // s0
 
   sub_60421AE4(*(_DWORD *)&a1[1].collisionMgr[384], *(_DWORD *)&a1[1].collisionMgr[396] + 8, 0);
-  if ( (*(int (__fastcall **)(CollisionActor *))(FIELD_U32(a1, 0x0)._.vtable + 716))(a1) == 1
-    || (*(int (__fastcall **)(CollisionActor *))(FIELD_U32(a1, 0x0)._.vtable + 720))(a1) == 1 )
+  if ( (*(int (__fastcall **)(CollisionActor *))(FIELD_U32(a1, 0x0) + 716))(a1) == 1
+    || (*(int (__fastcall **)(CollisionActor *))(FIELD_U32(a1, 0x0) + 720))(a1) == 1 )
   {
     v2 = &dword_60C86720;
     v3 = &dword_60C86708;
@@ -26,14 +26,14 @@ int __fastcall SE_VOC_ROY_JUMP_L_ref(CollisionActor *a1)
     v2 = &dword_60C86724;
     v3 = &dword_60C8670C;
   }
-  LODWORD(FIELD_U32(a1, 0x0).field_64) = *v3;
-  FIELD_U32(a1, 0x0).speed.x = 0.0;
-  LODWORD(FIELD_U32(a1, 0x0).speed.y) = *v2;
-  if ( FIELD_U32(a1, 0x0).direction == 1 )
-    FIELD_U32(a1, 0x0).speed.x = -0.0;
+  LODWORD(FIELD_F32(a1, 0x64)) = *v3;
+  FIELD_F32(a1, 0x78) = 0.0;
+  LODWORD(FIELD_F32(a1, 0x7C)) = *v2;
+  if ( FIELD_U32(a1, 0x50) == 1 )
+    FIELD_F32(a1, 0x78) = -0.0;
   CollisionActor__handleGravity(a1);
   v4 = CollisionActor__handleSpeed(a1);
-  (*(void (__fastcall **)(CollisionActor *, float))(FIELD_U32(a1, 0x0)._.vtable + 1232))(a1, v4);
-  (*(void (__fastcall **)(CollisionActor *))(FIELD_U32(a1, 0x0)._.vtable + 1284))(a1);
+  (*(void (__fastcall **)(CollisionActor *, float))(FIELD_U32(a1, 0x0) + 1232))(a1, v4);
+  (*(void (__fastcall **)(CollisionActor *))(FIELD_U32(a1, 0x0) + 1284))(a1);
   return sub_608134CC(&a1[1]._.aCollider.field_50, "SE_VOC_ROY_JUMP_L", SLOWORD(a1[1]._.effectOffset.y), 0);
 }

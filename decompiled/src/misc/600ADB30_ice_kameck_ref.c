@@ -29,7 +29,7 @@ void *__fastcall ice_kameck_ref(int a1)
     v6 = ModelWrapper_ctor(v5, Model2, 1, 0, 1, 0, 0);
     ModelWrapper_setup(v6, v3, 0, 0);
     FIELD_U32(a1, 6104) = v5;
-    v7 = (int)*FIELD_U32(v5, 0x18).animations;
+    v7 = (int)*FIELD_U32(v5, 0x1C);
     a2.vtable = &sead__SafeStringBase__vtable;
     a2.cstr = "ice_kameck";
     return (void *)sub_60446088(v7, v3, (int)&a2);

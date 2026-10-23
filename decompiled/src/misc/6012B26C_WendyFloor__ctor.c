@@ -14,7 +14,7 @@ StageActor *__fastcall WendyFloor__ctor(ActorBuildInfo *a1)
 
   v2 = (StageActor *)operator_new(0x5B8u);
   StageActor__ctor(v2, a1);
-  FIELD_U32(v2, 0x0).vtable = (int)off_60BD1818;
+  FIELD_U32(v2, 0x0) = (int)off_60BD1818;
   v2[1]._.vtable = 0;
   sub_6012B2C0(&v2[1]._.heap);
   v2[2].rotation.y = 0;

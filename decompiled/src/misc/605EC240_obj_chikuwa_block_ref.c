@@ -33,7 +33,7 @@ int __fastcall obj_chikuwa_block_ref(int a1)
   v5 = ModelWrapper_ctor(v4, Model2, 1, 1, 0, 0, 0);
   ModelWrapper_setup(v5, v2, 0, 0);
   FIELD_U32(a1, 6552) = v4;
-  animations = (int *)FIELD_U32(v4, 0x10).animations;
+  animations = (int *)FIELD_U32(v4, 0x14);
   v7 = *animations;
   FIELD_U32(a1, 6556) = *animations;
   v12 = &sead__SafeStringBase__vtable;

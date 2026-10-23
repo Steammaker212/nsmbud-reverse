@@ -31,7 +31,7 @@ signed int __fastcall BossBase__collisionThrowableObject(BossBase *a1, int a2, i
   v5 = 0;
   if ( !v3
     || FIELD_U8(v3, 19)
-    || LOBYTE(FIELD_U32(a1, 0x0).freezeMgr.field_44)
+    || LOBYTE(FIELD_U32(a1, 0x184C))
     || Actor__getProfileId(*(Actor **)(a3 + 64)) != 392 )
   {
     return v5;
@@ -53,29 +53,29 @@ signed int __fastcall BossBase__collisionThrowableObject(BossBase *a1, int a2, i
   {
     sub_602EE940(v7);
     sub_602EE7B8(v7, FIELD_U32(v7, 80), FIELD_S8(v7, 84));
-    v12 = *(void (__fastcall **)(BossBase *, int))(FIELD_U32(a1, 0x0)._._._._.vtable + 0x2DC);
-    v13 = (*(int (__fastcall **)(BossBase *))(FIELD_U32(a1, 0x0)._._._._.vtable + 760))(a1);
+    v12 = *(void (__fastcall **)(BossBase *, int))(FIELD_U32(a1, 0x0) + 0x2DC);
+    v13 = (*(int (__fastcall **)(BossBase *))(FIELD_U32(a1, 0x0) + 760))(a1);
     v12(a1, v13);
-    FIELD_U32(a1, 0x18A4) = (*(int (__fastcall **)(BossBase *))(FIELD_U32(a1, 0x0)._._._._.vtable + 788))(a1);
-    (*(void (__fastcall **)(BossBase *))(FIELD_U32(a1, 0x0)._._._._.vtable + 0x300))(a1);
+    FIELD_U32(a1, 0x18A4) = (*(int (__fastcall **)(BossBase *))(FIELD_U32(a1, 0x0) + 788))(a1);
+    (*(void (__fastcall **)(BossBase *))(FIELD_U32(a1, 0x0) + 0x300))(a1);
     v14 = FIELD_U32(a1, 0x189C);
-    (*(void (__fastcall **)(BossBase *))(FIELD_U32(a1, 0x0)._._._._.vtable + 916))(a1);
-    vtable = FIELD_U32(a1, 0x0)._._._._.vtable;
+    (*(void (__fastcall **)(BossBase *))(FIELD_U32(a1, 0x0) + 916))(a1);
+    vtable = FIELD_U32(a1, 0x0);
     if ( v14 <= 0 )
     {
       (*(void (__fastcall **)(BossBase *))(vtable + 912))(a1);
-      (*(void (__fastcall **)(BossBase *))(FIELD_U32(a1, 0x0)._._._._.vtable + 952))(a1);
-      (*(void (__fastcall **)(BossBase *))(FIELD_U32(a1, 0x0)._._._._.vtable + 980))(a1);
+      (*(void (__fastcall **)(BossBase *))(FIELD_U32(a1, 0x0) + 952))(a1);
+      (*(void (__fastcall **)(BossBase *))(FIELD_U32(a1, 0x0) + 980))(a1);
       FIELD_U32(a1, 0x189C) = 0;
-      (*(void (__fastcall **)(BossBase *, int))(FIELD_U32(a1, 0x0)._._._._.vtable + 0x35C))(a1, v3);
-      (*(void (__fastcall **)(BossBase *))(FIELD_U32(a1, 0x0)._._._._.vtable + 0x370))(a1);
-      (*(void (__fastcall **)(BossBase *))(FIELD_U32(a1, 0x0)._._._._.vtable + 0x320))(a1);
+      (*(void (__fastcall **)(BossBase *, int))(FIELD_U32(a1, 0x0) + 0x35C))(a1, v3);
+      (*(void (__fastcall **)(BossBase *))(FIELD_U32(a1, 0x0) + 0x370))(a1);
+      (*(void (__fastcall **)(BossBase *))(FIELD_U32(a1, 0x0) + 0x320))(a1);
     }
     else
     {
       (*(void (__fastcall **)(BossBase *))(vtable + 0x3A4))(a1);
-      (*(void (__fastcall **)(BossBase *, int))(FIELD_U32(a1, 0x0)._._._._.vtable + 0x358))(a1, v3);
-      (*(void (__fastcall **)(BossBase *))(FIELD_U32(a1, 0x0)._._._._.vtable + 0x36C))(a1);
+      (*(void (__fastcall **)(BossBase *, int))(FIELD_U32(a1, 0x0) + 0x358))(a1, v3);
+      (*(void (__fastcall **)(BossBase *))(FIELD_U32(a1, 0x0) + 0x36C))(a1);
     }
     return 1;
   }

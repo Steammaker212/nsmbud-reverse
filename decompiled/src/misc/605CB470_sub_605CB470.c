@@ -15,7 +15,7 @@ void __fastcall sub_605CB470(int a1)
 
   v1 = (StageActor *)a1;
   sub_605C9CA0(a1);
-  FIELD_U32(v1, 0x9C).z = 0x40000000;
+  FIELD_U32(v1, 0xA4) = 0x40000000;
   ActiveCollider__init(
     &FIELD_U32(v1, 0xBC),
     v1,

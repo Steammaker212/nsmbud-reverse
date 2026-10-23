@@ -20,42 +20,42 @@ int __fastcall ShapedCollider_init(ShapedCollider *this, StageActor *owner, Shap
   float v13; // r2
   int result; // r0
 
-  FIELD_U32(this, 0x0).ownerPositionPtr = &FIELD_U32(owner, 0x6C);
-  FIELD_U32(this, 0x0).owner248Ptr = &FIELD_U32(owner, 0x248);
-  FIELD_U32(this, 0x0).owner56Ptr = &FIELD_U8(owner, 0x56);
-  FIELD_U32(this, 0x0).owner57Ptr = &FIELD_U8(owner, 0x57);
-  FIELD_U32(this, 0x0).ownerPlayerIdPtr = &FIELD_U8(owner, 0x54);
-  FIELD_U32(this, 0x0).distToCenter = FIELD_U32(info, 0x0);
-  FIELD_U32(this, 0x0).field_BC = FIELD_F32(info, 0x8);
-  FIELD_U32(this, 0x0).field_C0 = FIELD_F32(info, 0xC);
-  FIELD_U32(this, 0x0).rotation = FIELD_U32(info, 0x20);
+  FIELD_U32(this, 0x98) = &FIELD_U32(owner, 0x6C);
+  FIELD_U32(this, 0x9C) = &FIELD_U32(owner, 0x248);
+  FIELD_U32(this, 0xA0) = &FIELD_U8(owner, 0x56);
+  FIELD_U32(this, 0xA4) = &FIELD_U8(owner, 0x57);
+  FIELD_U32(this, 0xA8) = &FIELD_U8(owner, 0x54);
+  FIELD_U32(this, 0xAC) = FIELD_U32(info, 0x0);
+  FIELD_F32(this, 0xBC) = FIELD_F32(info, 0x8);
+  FIELD_F32(this, 0xC0) = FIELD_F32(info, 0xC);
+  FIELD_U32(this, 0xF4) = FIELD_U32(info, 0x20);
   ColliderBase_setSolidity(&FIELD_U32(this, 0x0), 1);
   v6 = FIELD_U32(this, 0x158);
-  y = FIELD_U32(info, 0x10).y;
-  *(float *)v6 = FIELD_U32(info, 0x10).x;
+  y = FIELD_F32(info, 0x14);
+  *(float *)v6 = FIELD_F32(info, 0x10);
   FIELD_F32(v6, 4) = y;
   v8 = FIELD_U32(this, 0x158);
-  v9 = FIELD_U32(info, 0x10).y;
+  v9 = FIELD_F32(info, 0x14);
   if ( FIELD_U32(this, 0x154) > 1u )
     v8 += 8;
-  *(float *)v8 = FIELD_U32(info, 0x18).x;
+  *(float *)v8 = FIELD_F32(info, 0x18);
   FIELD_F32(v8, 4) = v9;
   v10 = FIELD_U32(this, 0x158);
-  v11 = FIELD_U32(info, 0x18).y;
+  v11 = FIELD_F32(info, 0x1C);
   if ( FIELD_U32(this, 0x154) > 2u )
     v10 += 16;
-  *(float *)v10 = FIELD_U32(info, 0x18).x;
+  *(float *)v10 = FIELD_F32(info, 0x18);
   FIELD_F32(v10, 4) = v11;
   v12 = FIELD_U32(this, 0x158);
-  v13 = FIELD_U32(info, 0x18).y;
+  v13 = FIELD_F32(info, 0x1C);
   if ( FIELD_U32(this, 0x154) > 3u )
     v12 += 24;
-  *(float *)v12 = FIELD_U32(info, 0x10).x;
+  *(float *)v12 = FIELD_F32(info, 0x10);
   FIELD_F32(v12, 4) = v13;
-  FIELD_U32(this, 0x0).owner = 0;
-  (*(void (__fastcall **)(ShapedCollider *))(FIELD_U32(this, 0x0)._.vtable + 64))(this);
-  (*(void (__fastcall **)(ShapedCollider *))(FIELD_U32(this, 0x0)._.vtable + 48))(this);
-  result = (*(int (__fastcall **)(ShapedCollider *))(FIELD_U32(this, 0x0)._.vtable + 52))(this);
-  FIELD_U32(this, 0x0).owner = owner;
+  FIELD_U32(this, 0x90) = 0;
+  (*(void (__fastcall **)(ShapedCollider *))(FIELD_U32(this, 0x0) + 64))(this);
+  (*(void (__fastcall **)(ShapedCollider *))(FIELD_U32(this, 0x0) + 48))(this);
+  result = (*(int (__fastcall **)(ShapedCollider *))(FIELD_U32(this, 0x0) + 52))(this);
+  FIELD_U32(this, 0x90) = owner;
   return result;
 }

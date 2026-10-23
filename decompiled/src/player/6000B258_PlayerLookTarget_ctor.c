@@ -13,10 +13,10 @@ PlayerLookTarget *__fastcall PlayerLookTarget_ctor(PlayerLookTarget *this, int i
   PlayerLookTarget *this_1; // r0
 
   this_1 = (PlayerLookTarget *)sead_IDisposer_ctor(&FIELD_U32(this, 0x0));
-  FIELD_U32(this_1, 0x0).vtable = (int)PlayerLookTarget_vtable;
+  FIELD_U32(this_1, 0x0) = (int)PlayerLookTarget_vtable;
   FIELD_U32(this_1, 0x10) = id;
-  FIELD_U32(this_1, 0x14).x = 0.0;
-  FIELD_U32(this_1, 0x14).y = 0.0;
+  FIELD_F32(this_1, 0x14) = 0.0;
+  FIELD_F32(this_1, 0x18) = 0.0;
   FIELD_U32(this_1, 0x1C) = 0;
   FIELD_U32(this_1, 0x20) = 0;
   FIELD_U32(this_1, 0x24) = 0;

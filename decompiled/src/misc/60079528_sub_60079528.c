@@ -12,7 +12,7 @@ void __fastcall sub_60079528(StageActor *a1)
 {
   _DWORD *v2; // r0
 
-  FIELD_U32(a1, 0x0).vtable = (int)off_60BC6E38;
+  FIELD_U32(a1, 0x0) = (int)off_60BC6E38;
   sub_60002B6C(a1);
   v2 = sead__IDisposer__dtor(a1);
   operator_delete(v2);

@@ -13,8 +13,8 @@ int __fastcall StateVirtual_Enemy_getId(StateVirtual *this)
   StateVirtual *baseState; // r0
 
   baseState = (StateVirtual *)FIELD_U32(this, 0x20);
-  if ( FIELD_U32(baseState, 0x0)._.id == -1 )
-    return FIELD_U32(this, 0x0)._.id;
+  if ( FIELD_U32(baseState, 0x4) == -1 )
+    return FIELD_U32(this, 0x4);
   else
-    return (*((int (__fastcall **)(StateVirtual *))FIELD_U32(baseState, 0x0)._.vtable + 2))(baseState);
+    return (*((int (__fastcall **)(StateVirtual *))FIELD_U32(baseState, 0x0) + 2))(baseState);
 }

@@ -24,20 +24,20 @@ signed int __fastcall Enemy__collisionIceball(Enemy *this, int a2, int a3)
   int v4; // r5
   _DWORD *v5; // r0
 
-  if ( !LOBYTE(FIELD_U32(this, 0x1808).field_44) )
+  if ( !LOBYTE(FIELD_U32(this, 0x184C)) )
   {
     v4 = FIELD_U32(a3, 64);
     FIELD_U8(this, 0x1890) = FIELD_F32(v4, 120) < 0.0;
     v5 = *(_DWORD **)(PlayerMgr_instance + 32);
-    if ( v5 && v5[2852] == FIELD_U32(this, 0x0)._._._.id
-      || (v5 = *(_DWORD **)(PlayerMgr_instance + 36)) != 0 && v5[2852] == FIELD_U32(this, 0x0)._._._.id
-      || (v5 = *(_DWORD **)(PlayerMgr_instance + 40)) != 0 && v5[2852] == FIELD_U32(this, 0x0)._._._.id
-      || (v5 = *(_DWORD **)(PlayerMgr_instance + 44)) != 0 && v5[2852] == FIELD_U32(this, 0x0)._._._.id )
+    if ( v5 && v5[2852] == FIELD_U32(this, 0x8)
+      || (v5 = *(_DWORD **)(PlayerMgr_instance + 36)) != 0 && v5[2852] == FIELD_U32(this, 0x8)
+      || (v5 = *(_DWORD **)(PlayerMgr_instance + 40)) != 0 && v5[2852] == FIELD_U32(this, 0x8)
+      || (v5 = *(_DWORD **)(PlayerMgr_instance + 44)) != 0 && v5[2852] == FIELD_U32(this, 0x8) )
     {
       Player_ReleaseCarryableEnemy(v5, (int)this);
     }
-    FIELD_U32(this, 0x1808).field_4B = FIELD_U8(v4, 84);
-    StateMgrExt_changeState(&FIELD_U32(this, 0x0).states.manager, &Enemy_StateId_Frozen._._);
+    FIELD_U8(this, 0x1853) = FIELD_U8(v4, 84);
+    StateMgrExt_changeState(&FIELD_U32(this, 0x17C4), &Enemy_StateId_Frozen._._);
   }
   return 1;
 }

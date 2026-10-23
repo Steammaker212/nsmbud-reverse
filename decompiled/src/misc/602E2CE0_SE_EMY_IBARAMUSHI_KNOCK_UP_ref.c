@@ -42,8 +42,8 @@ int __fastcall SE_EMY_IBARAMUSHI_KNOCK_UP_ref(Enemy *a1)
     LODWORD(a3.y) = next;
     LODWORD(positionOffset.x) = owner;
     positionOffset.y = *(float *)&next + -1.0;
-    checkStructPram.field_2 = FIELD_U32(a1, 0x0)._._.field_56;
-    checkStructPram.field_3 = FIELD_U32(a1, 0x0)._._.field_57;
+    checkStructPram.field_2 = FIELD_U8(a1, 0x56);
+    checkStructPram.field_3 = FIELD_U8(a1, 0x57);
     checkStructPram.field_4 = 0;
     checkStructPram.field_8 = 0;
     checkStructPtr = TileCheck_ctor(&checkStruct, &checkStructPram);
@@ -68,8 +68,8 @@ int __fastcall SE_EMY_IBARAMUSHI_KNOCK_UP_ref(Enemy *a1)
     LODWORD(a3.y) = v9;
     LODWORD(positionOffset.x) = v10;
     positionOffset.y = *(float *)&v9 + -1.0;
-    checkStructPram.field_2 = FIELD_U32(a1, 0x0)._._.field_56;
-    checkStructPram.field_3 = FIELD_U32(a1, 0x0)._._.field_57;
+    checkStructPram.field_2 = FIELD_U8(a1, 0x56);
+    checkStructPram.field_3 = FIELD_U8(a1, 0x57);
     checkStructPram.field_4 = 0;
     checkStructPram.field_8 = 0;
     v11 = TileCheck_ctor(&checkStruct, &checkStructPram);
@@ -91,18 +91,18 @@ LABEL_13:
           a1[2]._._.collisionMgr[2128] = 8;
           if ( *(_DWORD *)&a1[2]._._.collisionMgr[2140] )
           {
-            y_low = LODWORD(FIELD_U32(a1, 0x0)._._.position.y);
+            y_low = LODWORD(FIELD_F32(a1, 0x70));
             v14 = Global_BasicSoundActor1;
-            *(float *)&checkStruct.field_0 = FIELD_U32(a1, 0x0)._._.position.x;
+            *(float *)&checkStruct.field_0 = FIELD_F32(a1, 0x6C);
             checkStruct.field_4 = y_low;
             mapPositionToScreen((Vec2 *)&checkStructPram, (Vec3 *)&checkStruct);
             sub_60813810(v14, (int)"SE_EMY_IBARAMUSHI_KNOCK_UP", (int)&checkStructPram, 1, 0);
             sub_602E4BC8(a1);
           }
           *v3 = 1;
-          *(float *)&a1[2]._._.collisionMgr[2148] = FIELD_U32(a1, 0x0)._._.position.y;
-          FIELD_U32(a1, 0x0)._._.speed.y = 3.2;
-          FIELD_U32(a1, 0x0)._._.field_64 = -0.33;
+          *(float *)&a1[2]._._.collisionMgr[2148] = FIELD_F32(a1, 0x70);
+          FIELD_F32(a1, 0x7C) = 3.2;
+          FIELD_F32(a1, 0x64) = -0.33;
           return -1096223293;
         }
       }

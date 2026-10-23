@@ -14,9 +14,9 @@ int __fastcall StageActor__distanceToPlayer(StateActor *this, Vec2 *out)
   float _240; // s6
   Vec2 pos_offset; // [sp+0h] [bp-10h] BYREF
 
-  yPos = FIELD_U32(this, 0x0)._.position.y;
-  _240 = FIELD_U32(this, 0x0)._.effectOffset.y;
-  pos_offset.x = FIELD_U32(this, 0x0)._.position.x + FIELD_U32(this, 0x0)._.effectOffset.x;
+  yPos = FIELD_F32(this, 0x70);
+  _240 = FIELD_F32(this, 0x240);
+  pos_offset.x = FIELD_F32(this, 0x6C) + FIELD_F32(this, 0x23C);
   pos_offset.y = yPos + _240;
   return distanceToPLayer(out, &pos_offset);
 }

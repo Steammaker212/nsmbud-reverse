@@ -31,7 +31,7 @@ unsigned int __fastcall Enemy__collisionCallback(ActiveCollider *acSelf, ActiveC
   }
   if ( self )
   {
-    selfEnemy = (Enemy *)(*(int (__fastcall **)(Enemy *, int *))FIELD_U32(self, 0x0)._._._.vtable)(self, &Enemy_RTTI);
+    selfEnemy = (Enemy *)(*(int (__fastcall **)(Enemy *, int *))FIELD_U32(self, 0x0))(self, &Enemy_RTTI);
     if ( selfEnemy )
       selfEnemy = self;
   }
@@ -55,7 +55,7 @@ LABEL_10:
     }
     if ( owner )
     {
-      oterhStageActor = (StageActor *)(*(int (__fastcall **)(StageActor *, int *))FIELD_U32(owner, 0x0).vtable)(
+      oterhStageActor = (StageActor *)(*(int (__fastcall **)(StageActor *, int *))FIELD_U32(owner, 0x0))(
                                         owner,
                                         &StageActor_RTTI);
       if ( oterhStageActor )
@@ -71,14 +71,14 @@ LABEL_10:
       case 1:                                   // Player
         if ( (FIELD_U32(selfEnemy, 0x1804) & 0x1000000) != 0
           || (result = dword_60CC6484,
-              (float)((float)(FIELD_U32(selfEnemy, 0x0)._._.position.y + FIELD_U32(acSelf, 0x74).distToCenter.y) - FIELD_U32(acSelf, 0x74).distToEdge.y) <= FIELD_F32(dword_60CC6484, 124)) )
+              (float)((float)(FIELD_F32(selfEnemy, 0x70) + FIELD_F32(acSelf, 0x78)) - FIELD_F32(acSelf, 0x80)) <= FIELD_F32(dword_60CC6484, 124)) )
         {
-          if ( (*(int (__fastcall **)(Enemy *, ActiveCollider *, ActiveCollider *))(FIELD_U32(selfEnemy, 0x0)._._._.vtable + 0xEC))(
+          if ( (*(int (__fastcall **)(Enemy *, ActiveCollider *, ActiveCollider *))(FIELD_U32(selfEnemy, 0x0) + 0xEC))(
                  selfEnemy,
                  acSelf,
                  acOther) == 1 )
             goto LABEL_41;
-          result = FIELD_U32(acOther, 0x74).field_14;
+          result = FIELD_U32(acOther, 0x88);
           if ( result != 1 )
           {
             result = FIELD_U8(oterhStageActor, 0x54);
@@ -90,7 +90,7 @@ LABEL_10:
               if ( !v11 )
               {
                 *(_WORD *)result = 5;
-                result = (*(unsigned int (__fastcall **)(Enemy *, ActiveCollider *, ActiveCollider *))(FIELD_U32(selfEnemy, 0x0)._._._.vtable + 0x108))(
+                result = (*(unsigned int (__fastcall **)(Enemy *, ActiveCollider *, ActiveCollider *))(FIELD_U32(selfEnemy, 0x0) + 0x108))(
                            selfEnemy,
                            acSelf,
                            acOther);
@@ -103,9 +103,9 @@ LABEL_10:
         otherPlayerId_ = FIELD_U8(oterhStageActor, 0x54);
         if ( otherPlayerId_ <= 3 )
         {
-          if ( FIELD_U32(acOther, 0x74).category == 15 )
+          if ( FIELD_U32(acOther, 0x8C) == 15 )
           {
-            result = (*(unsigned int (__fastcall **)(Enemy *, ActiveCollider *, ActiveCollider *))(FIELD_U32(selfEnemy, 0x0)._._._.vtable
+            result = (*(unsigned int (__fastcall **)(Enemy *, ActiveCollider *, ActiveCollider *))(FIELD_U32(selfEnemy, 0x0)
                                                                                                  + 0xF4))(
                        selfEnemy,
                        acSelf,
@@ -114,9 +114,9 @@ LABEL_10:
           else
           {
             result = dword_60CC6484;
-            if ( (float)((float)(FIELD_U32(selfEnemy, 0x0)._._.position.y + FIELD_U32(acSelf, 0x74).distToCenter.y) - FIELD_U32(acSelf, 0x74).distToEdge.y) <= FIELD_F32(dword_60CC6484, 124) )
+            if ( (float)((float)(FIELD_F32(selfEnemy, 0x70) + FIELD_F32(acSelf, 0x78)) - FIELD_F32(acSelf, 0x80)) <= FIELD_F32(dword_60CC6484, 124) )
             {
-              if ( (*(int (__fastcall **)(Enemy *, ActiveCollider *, ActiveCollider *))(FIELD_U32(selfEnemy, 0x0)._._._.vtable + 0xF8))(
+              if ( (*(int (__fastcall **)(Enemy *, ActiveCollider *, ActiveCollider *))(FIELD_U32(selfEnemy, 0x0) + 0xF8))(
                      selfEnemy,
                      acSelf,
                      acOther) == 1 )
@@ -127,7 +127,7 @@ LABEL_10:
               if ( !v14 )
               {
                 *(_WORD *)result = 5;
-                result = (*(unsigned int (__fastcall **)(Enemy *, ActiveCollider *, ActiveCollider *))(FIELD_U32(selfEnemy, 0x0)._._._.vtable + 0x10C))(
+                result = (*(unsigned int (__fastcall **)(Enemy *, ActiveCollider *, ActiveCollider *))(FIELD_U32(selfEnemy, 0x0) + 0x10C))(
                            selfEnemy,
                            acSelf,
                            acOther);
@@ -138,7 +138,7 @@ LABEL_10:
         break;
       case 3:                                   // Enemy
         v15 = 0;
-        if ( (*(int (__fastcall **)(Enemy *, unsigned __int8 *, ActiveCollider *, ActiveCollider *))(FIELD_U32(selfEnemy, 0x0)._._._.vtable + 0xF0))(
+        if ( (*(int (__fastcall **)(Enemy *, unsigned __int8 *, ActiveCollider *, ActiveCollider *))(FIELD_U32(selfEnemy, 0x0) + 0xF0))(
                selfEnemy,
                &v15,
                acSelf,
@@ -150,12 +150,12 @@ LABEL_10:
         }
         else
         {
-          if ( (*(int (__fastcall **)(Enemy *, ActiveCollider *, ActiveCollider *))(FIELD_U32(selfEnemy, 0x0)._._._.vtable + 0xE8))(
+          if ( (*(int (__fastcall **)(Enemy *, ActiveCollider *, ActiveCollider *))(FIELD_U32(selfEnemy, 0x0) + 0xE8))(
                  selfEnemy,
                  acSelf,
                  acOther) == 1 )
             goto LABEL_41;
-          result = (*(unsigned int (__fastcall **)(Enemy *, ActiveCollider *, ActiveCollider *))(FIELD_U32(selfEnemy, 0x0)._._._.vtable
+          result = (*(unsigned int (__fastcall **)(Enemy *, ActiveCollider *, ActiveCollider *))(FIELD_U32(selfEnemy, 0x0)
                                                                                                + 0x104))(
                      selfEnemy,
                      acSelf,
@@ -164,16 +164,16 @@ LABEL_10:
         break;
       case 4:
         result = dword_60CC6484;
-        if ( (float)((float)(FIELD_U32(selfEnemy, 0x0)._._.position.y + FIELD_U32(acSelf, 0x74).distToCenter.y) - FIELD_U32(acSelf, 0x74).distToEdge.y) <= FIELD_F32(dword_60CC6484, 124) )
+        if ( (float)((float)(FIELD_F32(selfEnemy, 0x70) + FIELD_F32(acSelf, 0x78)) - FIELD_F32(acSelf, 0x80)) <= FIELD_F32(dword_60CC6484, 124) )
         {
-          if ( (*(int (__fastcall **)(Enemy *, ActiveCollider *, ActiveCollider *))(FIELD_U32(selfEnemy, 0x0)._._._.vtable + 0xFC))(
+          if ( (*(int (__fastcall **)(Enemy *, ActiveCollider *, ActiveCollider *))(FIELD_U32(selfEnemy, 0x0) + 0xFC))(
                  selfEnemy,
                  acSelf,
                  acOther) == 1 )
             goto LABEL_41;
-          result = FIELD_U32(acOther, 0x74).category;
+          result = FIELD_U32(acOther, 0x8C);
           if ( !result )
-            result = (*(unsigned int (__fastcall **)(Enemy *, ActiveCollider *, ActiveCollider *))(FIELD_U32(selfEnemy, 0x0)._._._.vtable
+            result = (*(unsigned int (__fastcall **)(Enemy *, ActiveCollider *, ActiveCollider *))(FIELD_U32(selfEnemy, 0x0)
                                                                                                  + 0x110))(
                        selfEnemy,
                        acSelf,
@@ -181,7 +181,7 @@ LABEL_10:
         }
         break;
       default:
-        result = (*(int (__fastcall **)(Enemy *, ActiveCollider *, ActiveCollider *))(FIELD_U32(selfEnemy, 0x0)._._._.vtable + 256))(
+        result = (*(int (__fastcall **)(Enemy *, ActiveCollider *, ActiveCollider *))(FIELD_U32(selfEnemy, 0x0) + 256))(
                    selfEnemy,
                    acSelf,
                    acOther);

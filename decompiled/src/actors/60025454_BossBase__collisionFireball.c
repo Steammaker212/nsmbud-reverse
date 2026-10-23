@@ -27,18 +27,18 @@ signed int __fastcall BossBase__collisionFireball(BossBase *this, ActiveCollider
   Vec2 screenPos; // [sp+0h] [bp-28h] BYREF
   Vec3 position; // [sp+8h] [bp-20h] BYREF
 
-  if ( (*(int (__fastcall **)(BossBase *))(FIELD_U32(this, 0x0)._._._._.vtable + 0x380))(this) == 1
+  if ( (*(int (__fastcall **)(BossBase *))(FIELD_U32(this, 0x0) + 0x380))(this) == 1
     || (v5 = &FIELD_U32(this, 0x189C),
         v6 = FIELD_U32(this, 0x189C),
-        v7 = *(void (__fastcall **)(BossBase *, int))(FIELD_U32(this, 0x0)._._._._.vtable + 0x2DC),
-        v8 = (*(int (__fastcall **)(BossBase *))(FIELD_U32(this, 0x0)._._._._.vtable + 0x2E0))(this),
+        v7 = *(void (__fastcall **)(BossBase *, int))(FIELD_U32(this, 0x0) + 0x2DC),
+        v8 = (*(int (__fastcall **)(BossBase *))(FIELD_U32(this, 0x0) + 0x2E0))(this),
         v7(this, v8),
         FIELD_U32(this, 0x189C) >= v6) )
   {
     v10 = Global_BasicSoundActor2;
     other_1 = FIELD_U32(acOther, 0x40);
-    otherPosX = FIELD_U32(other_1, 0x6C).x;
-    otherPosY = FIELD_U32(other_1, 0x6C).y;
+    otherPosX = FIELD_F32(other_1, 0x6C);
+    otherPosY = FIELD_F32(other_1, 0x70);
     position.x = otherPosX;
     position.y = otherPosY;
     mapPositionToScreen(&screenPos, &position);
@@ -46,24 +46,24 @@ signed int __fastcall BossBase__collisionFireball(BossBase *this, ActiveCollider
   }
   else
   {
-    FIELD_U32(this, 0x18A4) = (*(int (__fastcall **)(BossBase *))(FIELD_U32(this, 0x0)._._._._.vtable + 0x30C))(this);
-    (*(void (__fastcall **)(BossBase *))(FIELD_U32(this, 0x0)._._._._.vtable + 0x300))(this);
+    FIELD_U32(this, 0x18A4) = (*(int (__fastcall **)(BossBase *))(FIELD_U32(this, 0x0) + 0x30C))(this);
+    (*(void (__fastcall **)(BossBase *))(FIELD_U32(this, 0x0) + 0x300))(this);
     other_2 = FIELD_U32(acOther, 0x40);
     if ( *v5 <= 0 )
     {
       *v5 = 0;
-      (*(void (__fastcall **)(BossBase *))(FIELD_U32(this, 0x0)._._._._.vtable + 0x398))(this);
-      (*(void (__fastcall **)(BossBase *))(FIELD_U32(this, 0x0)._._._._.vtable + 0x3C0))(this);
-      (*(void (__fastcall **)(BossBase *, StageActor *))(FIELD_U32(this, 0x0)._._._._.vtable + 0x334))(this, other_2);
-      (*(void (__fastcall **)(BossBase *))(FIELD_U32(this, 0x0)._._._._.vtable + 0x370))(this);
-      (*(void (__fastcall **)(BossBase *))(FIELD_U32(this, 0x0)._._._._.vtable + 0x320))(this);
+      (*(void (__fastcall **)(BossBase *))(FIELD_U32(this, 0x0) + 0x398))(this);
+      (*(void (__fastcall **)(BossBase *))(FIELD_U32(this, 0x0) + 0x3C0))(this);
+      (*(void (__fastcall **)(BossBase *, StageActor *))(FIELD_U32(this, 0x0) + 0x334))(this, other_2);
+      (*(void (__fastcall **)(BossBase *))(FIELD_U32(this, 0x0) + 0x370))(this);
+      (*(void (__fastcall **)(BossBase *))(FIELD_U32(this, 0x0) + 0x320))(this);
     }
     else
     {
-      (*(void (__fastcall **)(BossBase *))(FIELD_U32(this, 0x0)._._._._.vtable + 0x398))(this);
-      (*(void (__fastcall **)(BossBase *))(FIELD_U32(this, 0x0)._._._._.vtable + 0x3BC))(this);
-      (*(void (__fastcall **)(BossBase *, StageActor *))(FIELD_U32(this, 0x0)._._._._.vtable + 0x330))(this, other_2);
-      (*(void (__fastcall **)(BossBase *))(FIELD_U32(this, 0x0)._._._._.vtable + 0x36C))(this);
+      (*(void (__fastcall **)(BossBase *))(FIELD_U32(this, 0x0) + 0x398))(this);
+      (*(void (__fastcall **)(BossBase *))(FIELD_U32(this, 0x0) + 0x3BC))(this);
+      (*(void (__fastcall **)(BossBase *, StageActor *))(FIELD_U32(this, 0x0) + 0x330))(this, other_2);
+      (*(void (__fastcall **)(BossBase *))(FIELD_U32(this, 0x0) + 0x36C))(this);
     }
   }
   return 1;

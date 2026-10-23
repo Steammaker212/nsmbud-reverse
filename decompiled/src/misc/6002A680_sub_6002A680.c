@@ -20,7 +20,7 @@ int __fastcall sub_6002A680(CollisionActor *a1, int a2)
   CollisionActor__handleSpeed(a1);
   CollisionMgr_process(FIELD_U8(a1, 0x288));
   if ( (FIELD_U8(a1, 0x288)[2224] & 1) != 0 )
-    FIELD_U32(a1, 0x0).speed.y = 0.0;
+    FIELD_F32(a1, 0x7C) = 0.0;
   v3 = *(_DWORD **)&a1[1].collisionMgr[384];
   v4 = v3[3];
   v5 = v3[2];
@@ -33,15 +33,15 @@ int __fastcall sub_6002A680(CollisionActor *a1, int a2)
     if ( a1[1].collisionMgr[723] )
     {
       if ( *(_DWORD *)&a1[1].collisionMgr[380] == 3
-        && (*(int (__fastcall **)(CollisionActor *))(FIELD_U32(a1, 0x0)._.vtable + 724))(a1) == 1 )
+        && (*(int (__fastcall **)(CollisionActor *))(FIELD_U32(a1, 0x0) + 724))(a1) == 1 )
       {
         *(_DWORD *)&a1[1].collisionMgr[668] = 1067869798;
       }
-      return (*(int (__fastcall **)(CollisionActor *, int *))(FIELD_U32(a1, 0x0)._.vtable + 192))(a1, &dword_60C7F8A8);
+      return (*(int (__fastcall **)(CollisionActor *, int *))(FIELD_U32(a1, 0x0) + 192))(a1, &dword_60C7F8A8);
     }
     else
     {
-      return (*(int (__fastcall **)(CollisionActor *, int *))(FIELD_U32(a1, 0x0)._.vtable + 192))(a1, &dword_60C7F7E8);
+      return (*(int (__fastcall **)(CollisionActor *, int *))(FIELD_U32(a1, 0x0) + 192))(a1, &dword_60C7F7E8);
     }
   }
   return result;

@@ -13,8 +13,8 @@
 // Overridden by: None
 BrosBase *__fastcall FireBros__setWalkingSpeed(BrosBase *result)
 {
-  FIELD_U32(result, 0x0)._._._.speed.x = flt_60AF1F80[(unsigned __int8)FIELD_U8(result, 0x189C)[304]];
-  FIELD_U32(result, 0x0)._._._.speed.y = 0.0;
-  FIELD_U32(result, 0x0)._._._.speed.z = 0.0;
+  FIELD_F32(result, 0x78) = flt_60AF1F80[(unsigned __int8)FIELD_U8(result, 0x189C)[304]];
+  FIELD_F32(result, 0x7C) = 0.0;
+  FIELD_F32(result, 0x80) = 0.0;
   return result;
 }

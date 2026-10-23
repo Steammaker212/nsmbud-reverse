@@ -55,7 +55,7 @@ int __fastcall sub_6029DDD8(int a1)
   v8 = ModelWrapper_ctor(v7, Model2, 0, 0, 0, 1, 0);
   ModelWrapper_setup(v8, (int)ResArchiveById, 0, 0);
   *(v4 - 1) = v7;
-  sub_6045195C(*FIELD_U32(v7, 0x20).animations, ResArchiveById, &dword_60C901C0[2 * *v4 + 11]);
+  sub_6045195C(*FIELD_U32(v7, 0x24), ResArchiveById, &dword_60C901C0[2 * *v4 + 11]);
   AnimationCtrl_setRepeat((ModelAnimation *)(**(_DWORD **)(*(v4 - 1) + 36) + 4), 0);
   *(_DWORD *)(**(_DWORD **)(*(v4 - 1) + 36) + 24) = 0;
   result = **(_DWORD **)(*(v4 - 1) + 36);

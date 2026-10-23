@@ -18,20 +18,20 @@ ActiveColliderMgr *__fastcall sub_6015AE88(int a1)
   {
     v3 = (_DWORD *)operator_new_8DE2C8(0x40u, a1, 4);
     result = (ActiveColliderMgr *)sead__IDisposer__ctor(v3, a1, 3u);
-    FIELD_U32(result, 0x0).vtable = (int)off_60BD4868;
+    FIELD_U32(result, 0x0) = (int)off_60BD4868;
     dword_60C88230 = (int)result;
-    FIELD_U32(result, 0x10).vtable = (int)ActiveColliderMgrList_vtable;
-    FIELD_U32(result, 0x10).first = 0;
-    FIELD_U32(result, 0x10).last = 0;
-    FIELD_U32(result, 0x1C).vtable = (int)ActiveColliderMgrList_vtable;
-    FIELD_U32(result, 0x1C).first = 0;
-    FIELD_U32(result, 0x1C).last = 0;
-    FIELD_U32(result, 0x28).vtable = (int)ActiveColliderMgrList_vtable;
-    FIELD_U32(result, 0x28).first = 0;
-    FIELD_U32(result, 0x28).last = 0;
-    FIELD_U32(result, 0x34).vtable = (int)ActiveColliderMgrList_vtable;
-    FIELD_U32(result, 0x34).first = 0;
-    FIELD_U32(result, 0x34).last = 0;
+    FIELD_U32(result, 0x10) = (int)ActiveColliderMgrList_vtable;
+    FIELD_U32(result, 0x14) = 0;
+    FIELD_U32(result, 0x18) = 0;
+    FIELD_U32(result, 0x1C) = (int)ActiveColliderMgrList_vtable;
+    FIELD_U32(result, 0x20) = 0;
+    FIELD_U32(result, 0x24) = 0;
+    FIELD_U32(result, 0x28) = (int)ActiveColliderMgrList_vtable;
+    FIELD_U32(result, 0x2C) = 0;
+    FIELD_U32(result, 0x30) = 0;
+    FIELD_U32(result, 0x34) = (int)ActiveColliderMgrList_vtable;
+    FIELD_U32(result, 0x38) = 0;
+    FIELD_U32(result, 0x3C) = 0;
     ActiveColliderMgr_instance = result;
   }
   return result;

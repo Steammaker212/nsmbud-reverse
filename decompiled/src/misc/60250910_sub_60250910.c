@@ -20,7 +20,7 @@ int __fastcall sub_60250910(CollisionActor *a1)
   v2 = a1[1]._.aCollider.field_4C;
   *v3 = v2 - 1;
   if ( v2 >= 2 )
-    FIELD_U32(a1, 0x0).rotation.x += 0x4000000;
+    FIELD_U32(a1, 0x9C) += 0x4000000;
   CollisionActor__handleGravity(a1);
   CollisionActor__handleSpeed(a1);
   v4 = -322437120;
@@ -32,7 +32,7 @@ int __fastcall sub_60250910(CollisionActor *a1)
   }
   if ( FIELD_U8(a1, 0x17A6) )
     v5 = v4;
-  result = v5 + FIELD_U32(a1, 0x0).rotation.z;
-  FIELD_U32(a1, 0x0).rotation.z = result;
+  result = v5 + FIELD_U32(a1, 0xA4);
+  FIELD_U32(a1, 0xA4) = result;
   return result;
 }

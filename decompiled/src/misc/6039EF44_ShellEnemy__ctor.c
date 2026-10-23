@@ -15,7 +15,7 @@ CarryableEnemy *__fastcall ShellEnemy__ctor(CarryableEnemy *a1, ActorBuildInfo *
   int v10; // s2
 
   CarryableEnemy__ctor(a1, a2);
-  FIELD_U32(a1, 0x0)._._._._.vtable = (int)ShellEnemy_vtable;
+  FIELD_U32(a1, 0x0) = (int)ShellEnemy_vtable;
   *(int *)((char *)&a1[1]._._._._._.vtable + 2) = a3;
   *(int *)((char *)&a1[1]._._._._._.heap + 2) = a3;
   HIWORD(a1[1]._._._._._.field_20.previous) = 0;
@@ -42,11 +42,11 @@ CarryableEnemy *__fastcall ShellEnemy__ctor(CarryableEnemy *a1, ActorBuildInfo *
   *(int *)((char *)&a1[1]._._._._._.field_44 + 2) = 0;
   *(int *)((char *)&a1[1]._._._._._.field_40 + 2) = 0;
   *(int *)((char *)&a1[1]._._._._._.field_3C + 2) = 0;
-  sub_602A8564((int *)((char *)&a1[1]._._._._.field_5C + 2), FIELD_U32(a1, 0x0)._._._._.id);
+  sub_602A8564((int *)((char *)&a1[1]._._._._.field_5C + 2), FIELD_U32(a1, 0x8));
   *(int *)((char *)&a1[1]._._._._.field_5C + 2) = (int)off_60BF43A0;
   *(_DWORD *)((char *)&a1[1]._._._._.position.x + 2) = 1;
   *(_DWORD *)((char *)&a1[1]._._._._.speed.y + 2) = 2;
-  sub_602A40A0((float *)((char *)&a1[1]._._._._.speed.z + 2), FIELD_U32(a1, 0x0)._._._._.id);
+  sub_602A40A0((float *)((char *)&a1[1]._._._._.speed.z + 2), FIELD_U32(a1, 0x8));
   *(int *)((char *)&a1[1]._._._._.rotation.z + 2) = (int)off_60BF471C;
   *(int *)((char *)&a1[1]._._._._.field_A8 + 2) = 0;
   *(int *)((char *)&a1[1]._._._._.field_AC + 2) = (int)&ActorScaler_vtable;
@@ -76,18 +76,18 @@ CarryableEnemy *__fastcall ShellEnemy__ctor(CarryableEnemy *a1, ActorBuildInfo *
   *(int *)((char *)&a1[1]._._._._.aCollider.field_48 + 2) = (int)off_60BC1450;
   EffectWrapper_ctor((EffectWrapper *)((char *)&a1[1]._._._._.aCollider.field_B0 + 2));
   *(int *)((char *)&a1[1]._._._._.aCollider.field_B0 + 2) = (int)off_60BC1450;
-  FIELD_U32(a1, 0x0).field_187C = (int)off_60BE2BE4;
-  FIELD_U32(a1, 0x0).field_1804 = 3;
+  FIELD_U32(a1, 0x187C) = (int)off_60BE2BE4;
+  FIELD_U32(a1, 0x1804) = 3;
   v8 = BYTE2(a1[1]._._._._._.childCount);
   *(_DWORD *)((char *)&a1[1]._._._._.position.x + 2) = v8 ^ 1;
-  FIELD_U32(a1, 0x0)._._._.field_26C = (int)&a1[1]._._._._.field_5C + 2;
+  FIELD_U32(a1, 0x26C) = (int)&a1[1]._._._._.field_5C + 2;
   *(int *)((char *)&a1[1]._._._._.rotation.x + 2) = v8 ^ 1;
-  FIELD_U32(a1, 0x0)._._._.field_270 = (int)&a1[1]._._._._.speed.z + 2;
+  FIELD_U32(a1, 0x270) = (int)&a1[1]._._._._.speed.z + 2;
   v9 = 2;
   if ( !v8 )
     v9 = 1;
-  FIELD_U32(a1, 0x0).field_1864 = v9;
-  FIELD_U32(a1, 0x0)._._._.field_280 = (int)&FIELD_U32(a1, 0x0).field_1858;
+  FIELD_U32(a1, 0x1864) = v9;
+  FIELD_U32(a1, 0x280) = (int)&FIELD_U32(a1, 0x1858);
   *(double *)((char *)&a1[1]._._._._.field_B0 + 2) = ((double (__fastcall *)(char *))**(_DWORD **)((char *)&a1[1]._._._._.field_AC
                                                                                                  + 2))((char *)&a1[1]._._._._.field_AC + 2);
   *(int *)((char *)&a1[1]._._._._.field_B8 + 2) = v10;

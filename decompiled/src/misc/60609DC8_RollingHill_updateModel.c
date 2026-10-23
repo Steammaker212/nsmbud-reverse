@@ -42,10 +42,10 @@ int __fastcall RollingHill_updateModel(RollingHill *this)
   float v32[34]; // [sp+0h] [bp-88h] BYREF
 
   v2 = *((_DWORD *)this + 273);
-  x = FIELD_U32(this, 0x0).rotation.x;
-  z = FIELD_U32(this, 0x0).rotation.z;
-  v5 = FIELD_U32(this, 0x0).position.x;
-  y = FIELD_U32(this, 0x0).position.y;
+  x = FIELD_U32(this, 0x9C);
+  z = FIELD_U32(this, 0xA4);
+  v5 = FIELD_F32(this, 0x6C);
+  y = FIELD_F32(this, 0x70);
   v7 = (float *)((char *)sinLutTable + ((v2 >> 20) & 0xFF0));
   v8 = (float *)((char *)sinLutTable + ((x >> 20) & 0xFF0));
   v9 = (z >> 20) & 0xFF0;
@@ -53,9 +53,9 @@ int __fastcall RollingHill_updateModel(RollingHill *this)
   v11 = v7[1];
   v12 = v7[2];
   v13 = v7[3];
-  v14 = FIELD_U32(this, 0x0).rotation.y;
+  v14 = FIELD_U32(this, 0xA0);
   v15 = z & 0xFFFFFF;
-  v16 = FIELD_U32(this, 0x0).position.z;
+  v16 = FIELD_F32(this, 0x74);
   v17 = y - *(float *)&FIELD_U32(this, 0x424);
   v18 = *((float *)this + 272);
   v19 = (float *)((char *)sinLutTable + ((v14 >> 20) & 0xFF0));
@@ -82,7 +82,7 @@ int __fastcall RollingHill_updateModel(RollingHill *this)
   v32[3] = v5 + (float)(v29 * (float)(v10 + (float)(v11 * v30)));
   v32[7] = v17 + (float)(v29 * (float)(v12 + (float)(v30 * v13)));
   v32[11] = v16;
-  (*(void (__fastcall **)(int, Vec3 *))(*(_DWORD *)FIELD_U32(this, 0x284) + 68))(FIELD_U32(this, 0x284), &FIELD_U32(this, 0x0).scale);
+  (*(void (__fastcall **)(int, Vec3 *))(*(_DWORD *)FIELD_U32(this, 0x284) + 68))(FIELD_U32(this, 0x284), &FIELD_U32(this, 0x90));
   (*(void (__fastcall **)(int, float *))(*(_DWORD *)FIELD_U32(this, 0x284) + 60))(FIELD_U32(this, 0x284), v32);
   return (*(int (__fastcall **)(int))(*(_DWORD *)FIELD_U32(this, 0x284) + 56))(FIELD_U32(this, 0x284));
 }

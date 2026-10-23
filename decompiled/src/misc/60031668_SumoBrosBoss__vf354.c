@@ -22,9 +22,9 @@ int __fastcall SumoBrosBoss__vf354(StateActor *a1)
   signed int v9; // [sp+18h] [bp-20h]
   char v10; // [sp+1Ch] [bp-1Ch]
 
-  p_position = &FIELD_U32(a1, 0x0)._.position;
-  v3 = StageActor__directionToPlayerX(a1, &FIELD_U32(a1, 0x0)._.position);
-  (*(void (__fastcall **)(StateActor *))(FIELD_U32(a1, 0x0)._._.vtable + 72))(a1);
+  p_position = &FIELD_U32(a1, 0x6C);
+  v3 = StageActor__directionToPlayerX(a1, &FIELD_U32(a1, 0x6C));
+  (*(void (__fastcall **)(StateActor *))(FIELD_U32(a1, 0x0) + 72))(a1);
   v4 = *(_DWORD *)&a1[1]._.collisionMgr[568];
   if ( v4 )
   {

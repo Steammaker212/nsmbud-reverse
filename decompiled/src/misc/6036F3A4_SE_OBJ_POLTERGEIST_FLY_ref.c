@@ -51,48 +51,48 @@ signed int __fastcall SE_OBJ_POLTERGEIST_FLY_ref(Enemy *a1)
   ActorScaler_execute((ActorScaler *)&a1[1]._._.collisionMgr[32]);
   Animation_update(**(_DWORD **)(a1[1]._._._._.heap + 12));
   Animation_update(**(_DWORD **)(a1[1]._._._._.heap + 28));
-  p_manager = &FIELD_U32(a1, 0x0).states.manager;
-  StateMgr__execute(&FIELD_U32(a1, 0x0).states.manager);
-  CurrentState = StateMgr__getCurrentState(&FIELD_U32(a1, 0x0).states.manager);
+  p_manager = &FIELD_U32(a1, 0x17C4);
+  StateMgr__execute(&FIELD_U32(a1, 0x17C4));
+  CurrentState = StateMgr__getCurrentState(&FIELD_U32(a1, 0x17C4));
   v4 = (*((int (__fastcall **)(StateBase *))FIELD_U32(CurrentState, 0x0) + 2))(CurrentState);
   if ( v4 == (*(int (**)(void))(dword_60C95F20 + 8))() )
     goto LABEL_9;
-  v5 = StateMgr__getCurrentState(&FIELD_U32(a1, 0x0).states.manager);
+  v5 = StateMgr__getCurrentState(&FIELD_U32(a1, 0x17C4));
   v6 = (*((int (__fastcall **)(StateBase *))FIELD_U32(v5, 0x0) + 2))(v5);
   if ( v6 == (*(int (**)(void))(dword_60C95F00 + 8))() )
     goto LABEL_9;
-  v7 = StateMgr__getCurrentState(&FIELD_U32(a1, 0x0).states.manager);
+  v7 = StateMgr__getCurrentState(&FIELD_U32(a1, 0x17C4));
   v8 = (*((int (__fastcall **)(StateBase *))FIELD_U32(v7, 0x0) + 2))(v7);
   if ( v8 == (*(int (**)(void))(dword_60C95F20 + 8))() )
     goto LABEL_9;
-  v9 = StateMgr__getCurrentState(&FIELD_U32(a1, 0x0).states.manager);
+  v9 = StateMgr__getCurrentState(&FIELD_U32(a1, 0x17C4));
   v10 = (*((int (__fastcall **)(StateBase *))FIELD_U32(v9, 0x0) + 2))(v9);
   if ( v10 == (*(int (**)(void))(dword_60C95F40 + 8))() )
     goto LABEL_9;
-  v11 = StateMgr__getCurrentState(&FIELD_U32(a1, 0x0).states.manager);
+  v11 = StateMgr__getCurrentState(&FIELD_U32(a1, 0x17C4));
   v12 = (*((int (__fastcall **)(StateBase *))FIELD_U32(v11, 0x0) + 2))(v11);
   if ( v12 == (*(int (**)(void))(dword_60C95F60 + 8))()
-    || (v13 = StateMgr__getCurrentState(&FIELD_U32(a1, 0x0).states.manager),
+    || (v13 = StateMgr__getCurrentState(&FIELD_U32(a1, 0x17C4)),
         v14 = (*((int (__fastcall **)(StateBase *))FIELD_U32(v13, 0x0) + 2))(v13),
         v14 == (*(int (**)(void))(dword_60C95F80 + 8))())
-    || (v15 = StateMgr__getCurrentState(&FIELD_U32(a1, 0x0).states.manager),
+    || (v15 = StateMgr__getCurrentState(&FIELD_U32(a1, 0x17C4)),
         v16 = (*((int (__fastcall **)(StateBase *))FIELD_U32(v15, 0x0) + 2))(v15),
         v16 == (*(int (**)(void))(dword_60C95FA0 + 8))())
-    || (v17 = StateMgr__getCurrentState(&FIELD_U32(a1, 0x0).states.manager),
+    || (v17 = StateMgr__getCurrentState(&FIELD_U32(a1, 0x17C4)),
         v18 = (*((int (__fastcall **)(StateBase *))FIELD_U32(v17, 0x0) + 2))(v17),
         v18 == (*(int (**)(void))(dword_60C95FC0 + 8))()) )
   {
 LABEL_9:
-    y = FIELD_U32(a1, 0x0)._._.position.y;
-    id = FIELD_U32(a1, 0x0)._._._.id;
+    y = FIELD_F32(a1, 0x70);
+    id = FIELD_U32(a1, 0x8);
     v21 = Global_BasicSoundActor2;
-    position.x = FIELD_U32(a1, 0x0)._._.position.x;
+    position.x = FIELD_F32(a1, 0x6C);
     position.y = y;
     mapPositionToScreen(&out, &position);
     SE_OBJ_FIRE_CANNON_BLAZE_ref_2(v21, "SE_OBJ_POLTERGEIST_FLY", id, &out, 0);
   }
   sub_6036F208((ModelWrapper **)a1);
-  StageActor__cullCheck(&FIELD_U32(a1, 0x0)._._, 0);
+  StageActor__cullCheck(&FIELD_U32(a1, 0x0), 0);
   v22 = StateMgr__getCurrentState(p_manager);
   v23 = (*((int (__fastcall **)(StateBase *))FIELD_U32(v22, 0x0) + 2))(v22);
   if ( v23 == (*(int (**)(void))(dword_60C95F20 + 8))() )
@@ -115,10 +115,10 @@ LABEL_9:
         v33 == (*(int (**)(void))(dword_60C95FC0 + 8))()) )
   {
 LABEL_16:
-    position.x = FIELD_U32(a1, 0x0)._._.position.x + FIELD_U32(a1, 0x0)._._.effectOffset.x;
-    position.y = FIELD_U32(a1, 0x0)._._.position.y + FIELD_U32(a1, 0x0)._._.effectOffset.y;
-    z = FIELD_U32(a1, 0x0)._._.position.z;
-    v35 = FIELD_U32(a1, 0x0)._._.effectOffset.z;
+    position.x = FIELD_F32(a1, 0x6C) + FIELD_F32(a1, 0x23C);
+    position.y = FIELD_F32(a1, 0x70) + FIELD_F32(a1, 0x240);
+    z = FIELD_F32(a1, 0x74);
+    v35 = FIELD_F32(a1, 0x244);
     v36 = (LightSource *)&a1[1]._._._.field_5C;
     position.z = z + v35;
     LightSource_update1(v36, 15, &position, 0, 0, 0, 0, 0, 0);

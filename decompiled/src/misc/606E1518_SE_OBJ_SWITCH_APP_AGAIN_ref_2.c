@@ -63,7 +63,7 @@ LABEL_11:
       if ( !FIELD_U8(a1, 6963) )
       {
         v8 = *(ModelWrapper **)(a1 + 6104);
-        if ( (*((_BYTE *)*FIELD_U32(v8, 0x8).animations + 28) & 0x20) != 0 )
+        if ( (*((_BYTE *)*FIELD_U32(v8, 0xC) + 28) & 0x20) != 0 )
         {
           FIELD_U8(a1, 6958) = -1;
           (*(void (__fastcall **)(int, int *))(*(_DWORD *)a1 + 192))(a1, &dword_60CBBD54);

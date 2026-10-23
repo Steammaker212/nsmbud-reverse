@@ -15,10 +15,10 @@ signed int __fastcall sub_600005D4(StageActor *this, signed int *smthOut)
   signed int v4; // r2
 
   v2 = FIELD_U32(PlayerMgr_instance, 32);
-  if ( v2 && FIELD_U32(v2, 11408) == FIELD_U32(this, 0x0).id
-    || (v2 = FIELD_U32(PlayerMgr_instance, 36)) != 0 && FIELD_U32(v2, 11408) == FIELD_U32(this, 0x0).id
-    || (v2 = FIELD_U32(PlayerMgr_instance, 40)) != 0 && FIELD_U32(v2, 11408) == FIELD_U32(this, 0x0).id
-    || (v2 = FIELD_U32(PlayerMgr_instance, 44)) != 0 && FIELD_U32(v2, 11408) == FIELD_U32(this, 0x0).id )
+  if ( v2 && FIELD_U32(v2, 11408) == FIELD_U32(this, 0x8)
+    || (v2 = FIELD_U32(PlayerMgr_instance, 36)) != 0 && FIELD_U32(v2, 11408) == FIELD_U32(this, 0x8)
+    || (v2 = FIELD_U32(PlayerMgr_instance, 40)) != 0 && FIELD_U32(v2, 11408) == FIELD_U32(this, 0x8)
+    || (v2 = FIELD_U32(PlayerMgr_instance, 44)) != 0 && FIELD_U32(v2, 11408) == FIELD_U32(this, 0x8) )
   {
     result = 1;
     if ( !smthOut )

@@ -34,12 +34,12 @@ int __fastcall sub_60263968(Enemy *a1)
   int v24; // [sp+34h] [bp-24h] BYREF
   int v25; // [sp+38h] [bp-20h] BYREF
 
-  x = FIELD_U32(a1, 0x0)._._.rotation.x;
-  y = FIELD_U32(a1, 0x0)._._.rotation.y;
-  z = FIELD_U32(a1, 0x0)._._.rotation.z;
-  v5 = FIELD_U32(a1, 0x0)._._.position.y;
-  v6 = FIELD_U32(a1, 0x0)._._.position.z;
-  v7 = FIELD_U32(a1, 0x0)._._.position.x;
+  x = FIELD_U32(a1, 0x9C);
+  y = FIELD_U32(a1, 0xA0);
+  z = FIELD_U32(a1, 0xA4);
+  v5 = FIELD_F32(a1, 0x70);
+  v6 = FIELD_F32(a1, 0x74);
+  v7 = FIELD_F32(a1, 0x6C);
   v25 = z;
   v24 = y;
   v23 = x;
@@ -55,12 +55,12 @@ int __fastcall sub_60263968(Enemy *a1)
   v18 = v5;
   v22 = v6;
   Mtx34_rotateY(&v12, (unsigned int *)&v24);
-  v8 = FIELD_U32(a1, 0x0)._._.effectOffset.y;
+  v8 = FIELD_F32(a1, 0x240);
   v14 = v14 + (float)((float)((float)(v8 * v12.n64_f32[1]) + (float)(v12.n64_f32[0] * 0.0)) + (float)(v13 * 0.0));
   v18 = v18 + (float)((float)((float)(v8 * v16) + (float)(v15 * 0.0)) + (float)(v17 * 0.0));
   v22 = v22 + (float)((float)((float)(v8 * v20) + (float)(v19 * 0.0)) + (float)(v21 * 0.0));
   Mtx34_rotateX(&v12, (unsigned int *)&v23);
-  v9 = FIELD_U32(a1, 0x0)._._.effectOffset.y;
+  v9 = FIELD_F32(a1, 0x240);
   v14 = v14 + (float)((float)((float)(v12.n64_f32[0] * 0.0) - (float)(v12.n64_f32[1] * v9)) + (float)(v13 * 0.0));
   v18 = v18 + (float)((float)((float)(v15 * 0.0) - (float)(v16 * v9)) + (float)(v17 * 0.0));
   v22 = v22 + (float)((float)((float)(v19 * 0.0) - (float)(v20 * v9)) + (float)(v21 * 0.0));
@@ -69,11 +69,11 @@ int __fastcall sub_60263968(Enemy *a1)
   (*(void (__fastcall **)(_DWORD, float32x2_t *))(**(_DWORD **)a1[1]._._._._.vtable + 60))(
     *(_DWORD *)a1[1]._._._._.vtable,
     &v12);
-  (*(void (__fastcall **)(_DWORD, char *))(**(_DWORD **)FIELD_U32(v10, 0x0)._._._.vtable + 68))(
-    *(_DWORD *)FIELD_U32(v10, 0x0)._._._.vtable,
+  (*(void (__fastcall **)(_DWORD, char *))(**(_DWORD **)FIELD_U32(v10, 0x0) + 68))(
+    *(_DWORD *)FIELD_U32(v10, 0x0),
     &a1[1].field_17F8);
   sub_604218E0((_DWORD *)a1[1]._._._._.vtable);
-  (*(void (__fastcall **)(_DWORD))(**(_DWORD **)FIELD_U32(v10, 0x0)._._._.vtable + 52))(*(_DWORD *)FIELD_U32(v10, 0x0)._._._.vtable);
+  (*(void (__fastcall **)(_DWORD))(**(_DWORD **)FIELD_U32(v10, 0x0) + 52))(*(_DWORD *)FIELD_U32(v10, 0x0));
   sub_602640A0(a1);
-  return (*(int (__fastcall **)(_DWORD))(**(_DWORD **)FIELD_U32(v10, 0x0)._._._.vtable + 56))(*(_DWORD *)FIELD_U32(v10, 0x0)._._._.vtable);
+  return (*(int (__fastcall **)(_DWORD))(**(_DWORD **)FIELD_U32(v10, 0x0) + 56))(*(_DWORD *)FIELD_U32(v10, 0x0));
 }

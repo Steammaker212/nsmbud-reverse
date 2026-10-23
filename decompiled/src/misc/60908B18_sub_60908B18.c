@@ -45,11 +45,11 @@ _DWORD *__fastcall sub_60908B18(_DWORD *a1)
       v6 = (unsigned __int8)v6 & ((unsigned int)(FIELD_U32(v7, 120) - 3) < 2);
     }
     while ( v5 != v4 );
-    nn__os__YieldThread(v5);
+    nn__os__YieldThread__thunk(v5);
     if ( v6 )
       goto LABEL_9;
   }
-  nn__os__YieldThread(v5);
+  nn__os__YieldThread__thunk(v5);
 LABEL_9:
   for ( i = a1[6]; (nn__os *)i != v4; i = FIELD_U32(i, 4) )
     (*(void (__fastcall **)(_DWORD))(**(_DWORD **)(i + 8) + 32))(FIELD_U32(i, 8));

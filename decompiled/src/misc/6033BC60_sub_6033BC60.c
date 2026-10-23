@@ -19,7 +19,7 @@ unsigned int __fastcall sub_6033BC60(ActiveCollider *a1, ActiveCollider *a2)
     dword_60C830DC = (int)&off_60BC04AC;
     _cxa_guard_release(&dword_60C830E0);
   }
-  if ( owner && (*(int (__fastcall **)(StageActor *, int *))FIELD_U32(owner, 0x0).vtable)(owner, &dword_60C830DC) == 1 )
-    (*(void (__fastcall **)(StageActor *, ActiveCollider *))(FIELD_U32(owner, 0x0).vtable + 668))(owner, a2);
+  if ( owner && (*(int (__fastcall **)(StageActor *, int *))FIELD_U32(owner, 0x0))(owner, &dword_60C830DC) == 1 )
+    (*(void (__fastcall **)(StageActor *, ActiveCollider *))(FIELD_U32(owner, 0x0) + 668))(owner, a2);
   return Enemy__collisionCallback(a1, a2);
 }

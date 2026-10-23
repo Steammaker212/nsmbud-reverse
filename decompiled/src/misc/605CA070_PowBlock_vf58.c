@@ -14,8 +14,8 @@ int __fastcall PowBlock_vf58(CollisionActor *a1)
   int direction; // r0
   int result; // r0
 
-  FIELD_U32(a1, 0x0).aCollider.info.category = 9;
-  sub_6015907C(&FIELD_U32(a1, 0x0).aCollider, 16);
+  FIELD_U32(a1, 0x148) = 9;
+  sub_6015907C(&FIELD_U32(a1, 0xBC), 16);
   *(_DWORD *)&FIELD_U8(a1, 0x288)[2544] |= 0x60u;
   v2 = *(_DWORD *)&FIELD_U8(a1, 0x288)[2536];
   *(_DWORD *)&FIELD_U8(a1, 0x288)[2528] |= 0x60u;
@@ -24,7 +24,7 @@ int __fastcall PowBlock_vf58(CollisionActor *a1)
   if ( direction )
     FIELD_U32(direction, 136) |= 0x1000u;
   sub_605CCAB0(a1);
-  FIELD_U32(a1, 0x0).aCollider.field_44 = 0;
+  FIELD_U32(a1, 0x100) = 0;
   result = a1[1]._._.field_3C | 8;
   a1[1]._._.field_3C = result;
   return result;

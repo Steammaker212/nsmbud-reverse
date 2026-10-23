@@ -13,7 +13,7 @@ StageActor *__fastcall Actor_pipe_big_RDash_build_helper_6946F8(StageActor *a1, 
   StageActor *result; // r0
 
   result = StageActor__ctor(a1, a2);
-  FIELD_U32(result, 0x0).vtable = (int)off_60C17C30;
+  FIELD_U32(result, 0x0) = (int)off_60C17C30;
   result[1].aCollider.field_5C = 0;
   result[1].aCollider.field_64 = 0;
   *(_DWORD *)&result[1].aCollider.field_6C = 0;

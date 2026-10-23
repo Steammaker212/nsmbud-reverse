@@ -10,9 +10,9 @@
 
 void __fastcall sub_605F3C48(CollisionActor *a1)
 {
-  FIELD_U32(a1, 0x0).rotation.y += dword_60CB21DC;
+  FIELD_U32(a1, 0xA0) += dword_60CB21DC;
   CollisionActor__handleGravity(a1);
   CollisionActor__handleSpeed(a1);
-  if ( FIELD_U32(a1, 0x0).speed.y < -3.0 )
-    FIELD_U32(a1, 0x0)._.isDeleted = 1;
+  if ( FIELD_F32(a1, 0x7C) < -3.0 )
+    FIELD_U8(a1, 0x13) = 1;
 }

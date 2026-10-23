@@ -47,10 +47,10 @@ signed int __fastcall Enemy__collisionHammer(Enemy *a1, int a2, int a3)
   v7 = FIELD_U32(a3, 64);
   v8 = sub_6000ADDC((int)a1, v7);
   v9 = FIELD_U8(v7, 84);
-  (*(void (__fastcall **)(Enemy *))(FIELD_U32(a1, 0x0)._._._.vtable + 364))(a1);
-  v15[0] = FIELD_U32(a1, 0x0)._._.position.x + FIELD_U32(a1, 0x0)._._.effectOffset.x;
-  v15[1] = FIELD_U32(a1, 0x0)._._.position.y + FIELD_U32(a1, 0x0)._._.effectOffset.y;
-  v15[2] = FIELD_U32(a1, 0x0)._._.position.z + FIELD_U32(a1, 0x0)._._.effectOffset.z;
+  (*(void (__fastcall **)(Enemy *))(FIELD_U32(a1, 0x0) + 364))(a1);
+  v15[0] = FIELD_F32(a1, 0x6C) + FIELD_F32(a1, 0x23C);
+  v15[1] = FIELD_F32(a1, 0x70) + FIELD_F32(a1, 0x240);
+  v15[2] = FIELD_F32(a1, 0x74) + FIELD_F32(a1, 0x244);
   LODWORD(v15[3]) = v8;
   v16 = 1;
   v17 = 0;

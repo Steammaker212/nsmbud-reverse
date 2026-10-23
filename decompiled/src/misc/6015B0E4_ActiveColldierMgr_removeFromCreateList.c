@@ -17,8 +17,8 @@ ActiveColliderMgr *__fastcall ActiveColldierMgr_removeFromCreateList(ActiveColli
   ActiveColliderNode **p_last; // r0
   ActiveColliderNode *last; // t1
 
-  next = FIELD_U32(aCollider, 0x1C).next;
-  prev = FIELD_U32(aCollider, 0x1C).prev;
+  next = FIELD_U32(aCollider, 0x20);
+  prev = FIELD_U32(aCollider, 0x24);
   p_createNode = &FIELD_U32(aCollider, 0x1C);
   if ( next )
   {
@@ -30,32 +30,32 @@ LABEL_5:
   }
   if ( prev )
     goto LABEL_5;
-  if ( FIELD_U32(mgr, 0x1C).first != p_createNode )
+  if ( FIELD_U32(mgr, 0x20) != p_createNode )
     return mgr;
 LABEL_9:
-  p_next = &FIELD_U32(mgr, 0x1C).first;
-  if ( FIELD_U32(mgr, 0x1C).first != p_createNode )
+  p_next = &FIELD_U32(mgr, 0x20);
+  if ( FIELD_U32(mgr, 0x20) != p_createNode )
   {
     if ( next )
       goto LABEL_11;
 LABEL_13:
-    last = FIELD_U32(mgr, 0x1C).last;
-    p_last = &FIELD_U32(mgr, 0x1C).last;
+    last = FIELD_U32(mgr, 0x24);
+    p_last = &FIELD_U32(mgr, 0x24);
     if ( last != p_createNode )
       goto LABEL_14;
     goto LABEL_12;
   }
 LABEL_6:
   *p_next = next;
-  next = FIELD_U32(aCollider, 0x1C).next;
+  next = FIELD_U32(aCollider, 0x20);
   if ( !next )
     goto LABEL_13;
 LABEL_11:
   p_last = &FIELD_U32(next, 0x8);
 LABEL_12:
-  *p_last = FIELD_U32(aCollider, 0x1C).prev;
+  *p_last = FIELD_U32(aCollider, 0x24);
 LABEL_14:
-  FIELD_U32(aCollider, 0x1C).next = 0;
-  FIELD_U32(aCollider, 0x1C).prev = 0;
+  FIELD_U32(aCollider, 0x20) = 0;
+  FIELD_U32(aCollider, 0x24) = 0;
   return 0;
 }

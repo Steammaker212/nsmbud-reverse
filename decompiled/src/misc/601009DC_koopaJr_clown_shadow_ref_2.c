@@ -58,9 +58,9 @@ int __fastcall koopaJr_clown_shadow_ref_2(int a1)
   j_ModelWrapper_setupModel((int)v6, (int)v2, 0, 0);
   FIELD_U32(a1, 6304) = v5;
   animations = (unsigned int)v5[1].texAnims.animations;
-  v8 = (int *)FIELD_U32(v5, 0x8).animations;
+  v8 = (int *)FIELD_U32(v5, 0xC);
   v9 = FIELD_U32(a1, 6300);
-  if ( FIELD_U32(v5, 0x8).count > animations )
+  if ( FIELD_U32(v5, 0x8) > animations )
     v8 += animations;
   v10 = *v8;
   a2.vtable = &sead__SafeStringBase__vtable;

@@ -15,7 +15,7 @@ StageActor *__fastcall Actor_shadou_read_Tag_2_build(ActorBuildInfo *a1)
 
   v2 = (StageActor *)operator_new(0x298u);
   result = StageActor__ctor(v2, a1);
-  FIELD_U32(result, 0x0).vtable = (int)off_60C2AE44;
+  FIELD_U32(result, 0x0) = (int)off_60C2AE44;
   LOBYTE(result[1]._.heap) = 0;
   result[1]._.id = 0;
   LOBYTE(result[1]._.profile) = 0;

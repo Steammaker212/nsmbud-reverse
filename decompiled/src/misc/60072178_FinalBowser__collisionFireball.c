@@ -22,9 +22,9 @@ signed int __fastcall FinalBowser__collisionFireball(BossBase *a1, ActiveCollide
     dword_60C81734 = (int)&off_60BC1FA8;
     _cxa_guard_release(&dword_60C81738);
   }
-  if ( !owner || (*(int (__fastcall **)(StageActor *, int *))FIELD_U32(owner, 0x0).vtable)(owner, &dword_60C81734) != 1 )
+  if ( !owner || (*(int (__fastcall **)(StageActor *, int *))FIELD_U32(owner, 0x0))(owner, &dword_60C81734) != 1 )
     return 0;
-  if ( !(*(int (__fastcall **)(BossBase *))(FIELD_U32(a1, 0x0)._._._._.vtable + 896))(a1) )
+  if ( !(*(int (__fastcall **)(BossBase *))(FIELD_U32(a1, 0x0) + 896))(a1) )
     koopa_damage_ice_ref((int)owner, (float *)(a3 + 84), 0);
   return BossBase__collisionFireball(a1, a2, (ActiveCollider *)a3);
 }

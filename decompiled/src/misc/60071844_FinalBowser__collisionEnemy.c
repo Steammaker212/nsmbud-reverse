@@ -90,7 +90,7 @@ void __fastcall FinalBowser__collisionEnemy(int a1, ActiveCollider *a2, int a3)
   }
   if ( owner )
   {
-    v9 = (*(int (__fastcall **)(StageActor *, int *))FIELD_U32(owner, 0x0).vtable)(owner, &dword_60C81734);
+    v9 = (*(int (__fastcall **)(StageActor *, int *))FIELD_U32(owner, 0x0))(owner, &dword_60C81734);
     if ( v9 )
       v9 = (int)owner;
     v10 = v8 == 0;

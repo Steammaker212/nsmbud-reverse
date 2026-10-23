@@ -61,7 +61,7 @@ LABEL_16:
         FIELD_U32(a1, 644) = v8;
         v10 = 1;
 LABEL_17:
-        v13 = (int)*FIELD_U32(v8, 0x8).animations;
+        v13 = (int)*FIELD_U32(v8, 0xC);
         v14 = Profile__getResArchiveById(*(Profile **)(a1 + 12), v10);
         a2.vtable = &sead__SafeStringBase__vtable;
         a2.cstr = v5;

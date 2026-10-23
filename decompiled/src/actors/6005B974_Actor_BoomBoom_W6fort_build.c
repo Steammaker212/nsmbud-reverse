@@ -15,7 +15,7 @@ BossBase *__fastcall Actor_BoomBoom_W6fort_build(ActorBuildInfo *a1)
 
   v2 = (BossBase *)operator_new(0x1F08u);
   result = BoomBoomBase__ctor(v2, a1);
-  FIELD_U32(result, 0x0)._._._._.vtable = (int)off_60BC56B4;
+  FIELD_U32(result, 0x0) = (int)off_60BC56B4;
   *(_DWORD *)&result[1]._._._.collisionMgr[96] = 0;
   result[1]._._._.collisionMgr[100] = 0;
   *(_DWORD *)&result[1]._._._.collisionMgr[116] = 0;

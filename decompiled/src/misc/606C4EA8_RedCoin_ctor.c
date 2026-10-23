@@ -15,6 +15,6 @@ MultiStateActor *__fastcall RedCoin_ctor(ActorBuildInfo *a1)
 
   v2 = (MultiStateActor *)operator_new(0x1C10u);
   result = sub_606C70B4(v2, a1);
-  FIELD_U32(result, 0x0)._._.vtable = (int)RedCoin_vtable;
+  FIELD_U32(result, 0x0) = (int)RedCoin_vtable;
   return result;
 }

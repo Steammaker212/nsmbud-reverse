@@ -15,6 +15,6 @@ StateActor *__fastcall Actor_BossKK_Demo_manage_Tag_build(ActorBuildInfo *a1)
 
   v2 = (StateActor *)operator_new(0x17F0u);
   result = sub_600271A0(v2, a1);
-  FIELD_U32(result, 0x0)._._.vtable = (int)off_60BC1FF4;
+  FIELD_U32(result, 0x0) = (int)off_60BC1FF4;
   return result;
 }

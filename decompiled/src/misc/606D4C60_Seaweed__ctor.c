@@ -15,7 +15,7 @@ Seaweed *__fastcall Seaweed__ctor(ActorBuildInfo *a1)
 
   this = (Seaweed *)operator_new(0x298u);
   result = (Seaweed *)StageActor__ctor(&FIELD_U32(this, 0x0), a1);
-  FIELD_U32(result, 0x0)._.vtable = (int)Seaweed_vtable;
+  FIELD_U32(result, 0x0) = (int)Seaweed_vtable;
   FIELD_U32(result, 0x284)[0] = 0;
   FIELD_U32(result, 0x284)[1] = 0;
   FIELD_U32(result, 0x284)[2] = 0;

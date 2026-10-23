@@ -23,13 +23,13 @@ signed int __fastcall StageActor__beforeExecute(StageActor *this)
   result = 0;
   if ( v2 == 1 && FIELD_U8(this, 0x216) )
   {
-    FIELD_U32(this, 0x6C).x = *(float *)&FIELD_U32(this, 0xB4) + FIELD_U32(this, 0x6C).x;
-    FIELD_U32(this, 0x6C).y = *(float *)&FIELD_U32(this, 0xB8) + FIELD_U32(this, 0x6C).y;
+    FIELD_F32(this, 0x6C) = *(float *)&FIELD_U32(this, 0xB4) + FIELD_F32(this, 0x6C);
+    FIELD_F32(this, 0x70) = *(float *)&FIELD_U32(this, 0xB8) + FIELD_F32(this, 0x70);
     v4 = FIELD_U32(this, 0x220);
     if ( v4 == 8 )
     {
       sub_6040A81C(dword_60C9A1F0);
-      (*(void (__fastcall **)(StageActor *))(FIELD_U32(this, 0x0).vtable + 128))(this);
+      (*(void (__fastcall **)(StageActor *))(FIELD_U32(this, 0x0) + 128))(this);
       v4 = FIELD_U32(this, 0x220);
     }
     result = 1;

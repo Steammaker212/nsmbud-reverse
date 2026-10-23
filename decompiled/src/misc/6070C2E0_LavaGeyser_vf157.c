@@ -31,7 +31,7 @@ void __fastcall LavaGeyser_vf157(_DWORD *a1)
   ModelWrapper_setup(v5, v2, 0, 0);
   a1[1575] = v4;
   a1 += 1575;
-  v6 = (int)*FIELD_U32(v4, 0x18).animations;
+  v6 = (int)*FIELD_U32(v4, 0x1C);
   ResArchiveById = Profile__getResArchiveById((Profile *)*(a1 - 1572), 0);
   v9 = &sead__SafeStringBase__vtable;
   v10 = "firepillar_loop";

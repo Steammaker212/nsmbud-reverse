@@ -16,8 +16,8 @@ ActiveColliderMgr *__fastcall sub_6057A360(StateActor *a1, unsigned __int8 a2)
   unsigned __int8 v5; // [sp+4h] [bp-14h] BYREF
 
   v5 = a2;
-  p_aCollider = &FIELD_U32(a1, 0x0)._.aCollider;
-  ActiveCollider_init2(&FIELD_U32(a1, 0x0)._.aCollider, a1, &stru_60B047A4, &v5, 0);
+  p_aCollider = &FIELD_U32(a1, 0xBC);
+  ActiveCollider_init2(&FIELD_U32(a1, 0xBC), a1, &stru_60B047A4, &v5, 0);
   v3 = ActiveColliderMgr_instance;
   result = (ActiveColliderMgr *)ActiveColliderMgr_isInActiveList(ActiveColliderMgr_instance, p_aCollider);
   if ( !result )

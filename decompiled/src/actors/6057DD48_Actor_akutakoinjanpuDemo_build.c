@@ -15,7 +15,7 @@ MultiStateActor *__fastcall Actor_akutakoinjanpuDemo_build(ActorBuildInfo *a1)
 
   v2 = (MultiStateActor *)operator_new(0x17F0u);
   result = sub_6057D92C(v2, a1);
-  FIELD_U32(result, 0x0)._._.vtable = (int)off_60C04EF0;
+  FIELD_U32(result, 0x0) = (int)off_60C04EF0;
   *(_DWORD *)&result[1]._._._.field_10 = 0;
   return result;
 }

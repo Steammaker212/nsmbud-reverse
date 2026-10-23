@@ -28,7 +28,7 @@ unsigned int __fastcall BossBase__collisionPlayer(BossBase *a1, ActiveCollider *
   unsigned int v13; // r0
   int v14; // r1
 
-  if ( (*(int (__fastcall **)(BossBase *))(FIELD_U32(a1, 0x0)._._._._.vtable + 0x374))(a1) == 1 )
+  if ( (*(int (__fastcall **)(BossBase *))(FIELD_U32(a1, 0x0) + 0x374))(a1) == 1 )
     return Enemy__collisionPlayer((int)a1, (int)a2, (int)a3);
   result = Enemy__processCollision(&FIELD_U32(a1, 0x0), a2, a3, 2);
   switch ( result )
@@ -40,16 +40,16 @@ unsigned int __fastcall BossBase__collisionPlayer(BossBase *a1, ActiveCollider *
         dword_60C7B370 = (int)&off_60BC00B0;
         _cxa_guard_release(&dword_60C7B374);
       }
-      if ( !owner || (*(int (__fastcall **)(StageActor *, int *))FIELD_U32(owner, 0x0).vtable)(owner, &dword_60C7B370) != 1 )
+      if ( !owner || (*(int (__fastcall **)(StageActor *, int *))FIELD_U32(owner, 0x0))(owner, &dword_60C7B370) != 1 )
         return Enemy__collisionPlayer((int)a1, (int)a2, (int)a3);
       playerId = FIELD_U8(owner, 0x54);
       if ( playerId <= 3
-        && (v10 = &FIELD_U32(a1, 0x0)._._._._.vtable + playerId, v12 = v10[1579], v11 = v10 + 1579, v12 >= 1)
+        && (v10 = &FIELD_U32(a1, 0x0) + playerId, v12 = v10[1579], v11 = v10 + 1579, v12 >= 1)
         && owner[2]._.field_20.previous == (sead_ListNode *)3 )
       {
         sub_602A3178(owner, &dword_60CC4B7C);
-        (*(void (__fastcall **)(BossBase *))(FIELD_U32(a1, 0x0)._._._._.vtable + 0x194))(a1);
-        (*(void (__fastcall **)(BossBase *, StageActor *))(FIELD_U32(a1, 0x0)._._._._.vtable + 0x198))(a1, owner);
+        (*(void (__fastcall **)(BossBase *))(FIELD_U32(a1, 0x0) + 0x194))(a1);
+        (*(void (__fastcall **)(BossBase *, StageActor *))(FIELD_U32(a1, 0x0) + 0x198))(a1, owner);
         *v11 = 16;
         result = 16;
       }
@@ -70,9 +70,9 @@ unsigned int __fastcall BossBase__collisionPlayer(BossBase *a1, ActiveCollider *
       break;
     case 1u:
     case 3u:
-      result = (*(int (__fastcall **)(BossBase *))(FIELD_U32(a1, 0x0)._._._._.vtable + 0x378))(a1);
+      result = (*(int (__fastcall **)(BossBase *))(FIELD_U32(a1, 0x0) + 0x378))(a1);
       if ( !result )
-        result = (*(unsigned int (__fastcall **)(BossBase *, StageActor *))(FIELD_U32(a1, 0x0)._._._._.vtable + 0x324))(
+        result = (*(unsigned int (__fastcall **)(BossBase *, StageActor *))(FIELD_U32(a1, 0x0) + 0x324))(
                    a1,
                    FIELD_U32(a3, 0x40));
       break;

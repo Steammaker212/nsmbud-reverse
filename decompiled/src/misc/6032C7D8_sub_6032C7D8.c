@@ -43,7 +43,7 @@ int __fastcall sub_6032C7D8(int a1)
   ModelWrapper_setup(v6, v3, 0, 0);
   FIELD_U32(a1, 13064) = v5;
   v7 = a1 + 13064;
-  v8 = (int)*FIELD_U32(v5, 0x8).animations;
+  v8 = (int)*FIELD_U32(v5, 0xC);
   a2.vtable = &sead__SafeStringBase__vtable;
   a2.cstr = "search";
   SkeletalAnim_play(v8, v3, (int)&a2);

@@ -14,6 +14,6 @@ float __fastcall sub_60373CE4(Enemy *a1)
 
   Enemy__beginState_DieFall(a1);
   result = (float)byte_60AFE3F4[FIELD_U32(a1, 0x17F0)] * 0.5;
-  FIELD_U32(a1, 0x0)._._.speed.x = result;
+  FIELD_F32(a1, 0x78) = result;
   return result;
 }

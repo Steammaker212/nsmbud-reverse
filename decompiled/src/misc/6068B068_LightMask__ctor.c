@@ -13,9 +13,9 @@ RevealMaskRelated *__fastcall LightMask__ctor(RevealMaskRelated *this)
   FIELD_U32(this, 0x0) = (int)&RevealMaskRelated_vtable;
   FIELD_U32(this, 0x4) = 0;
   FIELD_U32(this, 0x8) = 0;
-  FIELD_U32(this, 0xC).x = 0.0;
-  FIELD_U32(this, 0xC).y = 0.0;
-  FIELD_U32(this, 0xC).z = 0.0;
+  FIELD_F32(this, 0xC) = 0.0;
+  FIELD_F32(this, 0x10) = 0.0;
+  FIELD_F32(this, 0x14) = 0.0;
   FIELD_U32(this, 0x18) = 0;
   FIELD_U32(this, 0x1C) = 0;
   return this;

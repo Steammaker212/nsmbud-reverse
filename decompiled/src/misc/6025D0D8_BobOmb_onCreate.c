@@ -24,66 +24,66 @@ signed int __fastcall BobOmb_onCreate(Enemy *a1)
     ++FIELD_U32(EnemyCounterMaybe_instance, 224);
   BobOmb_setupModel(a1);
   LightMask__init((RevealMaskRelated *)&a1[1]._._._.aCollider._.containingHeap, 0, 2);
-  FIELD_U32(a1, 0x0)._._.effectOffset.x = 0.0;
-  FIELD_U32(a1, 0x0)._._.effectOffset.y = 8.0;
-  FIELD_U32(a1, 0x0)._._.effectOffset.z = 0.0;
-  FIELD_U32(a1, 0x0)._._.field_1EC = 0.0;
-  FIELD_U32(a1, 0x0)._._.field_1F0 = 1090519040;
-  FIELD_U32(a1, 0x0)._._.field_1F4 = 16.0;
-  FIELD_U32(a1, 0x0)._._.field_1F8 = 16.0;
+  FIELD_F32(a1, 0x23C) = 0.0;
+  FIELD_F32(a1, 0x240) = 8.0;
+  FIELD_F32(a1, 0x244) = 0.0;
+  FIELD_F32(a1, 0x1EC) = 0.0;
+  FIELD_U32(a1, 0x1F0) = 1090519040;
+  FIELD_F32(a1, 0x1F4) = 16.0;
+  FIELD_F32(a1, 0x1F8) = 16.0;
   ActiveCollider__init(
-    &FIELD_U32(a1, 0x0)._._.aCollider,
-    &FIELD_U32(a1, 0x0)._._,
+    &FIELD_U32(a1, 0xBC),
+    &FIELD_U32(a1, 0x0),
     (ActiveColliderInfo *)&unk_60BDB18C,
     (int)&a1[1]._._._.aCollider.field_FC);
-  if ( (FIELD_U32(v2, 0x0)._._._.vtable | 4) != 6 )
+  if ( (FIELD_U32(v2, 0x0) | 4) != 6 )
   {
     v3 = ActiveColliderMgr_instance;
-    if ( !ActiveColliderMgr_isInActiveList(ActiveColliderMgr_instance, &FIELD_U32(a1, 0x0)._._.aCollider)
-      && !ActiveColliderMgr_isInCreateList(v3, &FIELD_U32(a1, 0x0)._._.aCollider) )
+    if ( !ActiveColliderMgr_isInActiveList(ActiveColliderMgr_instance, &FIELD_U32(a1, 0xBC))
+      && !ActiveColliderMgr_isInCreateList(v3, &FIELD_U32(a1, 0xBC)) )
     {
-      ActiveColliderMgr_addToCreateList(v3, &FIELD_U32(a1, 0x0)._._.aCollider);
+      ActiveColliderMgr_addToCreateList(v3, &FIELD_U32(a1, 0xBC));
     }
   }
-  CollisionMgr_init((CollisionMgr *)FIELD_U32(a1, 0x0)._.collisionMgr, (StateActor *)a1, 0, 0, 0);
-  if ( FIELD_U32(v2, 0x0)._._._.vtable == 3 )
+  CollisionMgr_init((CollisionMgr *)FIELD_U8(a1, 0x288), (StateActor *)a1, 0, 0, 0);
+  if ( FIELD_U32(v2, 0x0) == 3 )
   {
-    CollisionMgr_setSensor((CollisionMgr *)FIELD_U32(a1, 0x0)._.collisionMgr, &stru_60AFD8D8, 3);
-    CollisionMgr_setSensor((CollisionMgr *)FIELD_U32(a1, 0x0)._.collisionMgr, &stru_60AFD8E4, 2);
-    CollisionMgr_setSensor((CollisionMgr *)FIELD_U32(a1, 0x0)._.collisionMgr, &stru_60AFD8F0, 0);
+    CollisionMgr_setSensor((CollisionMgr *)FIELD_U8(a1, 0x288), &stru_60AFD8D8, 3);
+    CollisionMgr_setSensor((CollisionMgr *)FIELD_U8(a1, 0x288), &stru_60AFD8E4, 2);
+    CollisionMgr_setSensor((CollisionMgr *)FIELD_U8(a1, 0x288), &stru_60AFD8F0, 0);
     sensor.b = 14.0;
     sensor.a = 3.0;
     sensor.c = -8.0;
-    CollisionMgr_setSensor((CollisionMgr *)FIELD_U32(a1, 0x0)._.collisionMgr, &sensor, 1);
-    v4 = &FIELD_U32(a1, 0x0)._.collisionMgr[2536];
-    v5 = *(_DWORD *)&FIELD_U32(a1, 0x0)._.collisionMgr[2536] | 0x4C000600;
-    v6 = *(_DWORD *)&FIELD_U32(a1, 0x0)._.collisionMgr[2544] | 0x4C000600;
-    v7 = *(_DWORD *)&FIELD_U32(a1, 0x0)._.collisionMgr[2528] | 0x4C000600;
-    *(_DWORD *)&FIELD_U32(a1, 0x0)._.collisionMgr[2552] |= 0x4C000600u;
-    *(_DWORD *)&FIELD_U32(a1, 0x0)._.collisionMgr[2544] = v6;
-    *(_DWORD *)&FIELD_U32(a1, 0x0)._.collisionMgr[2528] = v7;
+    CollisionMgr_setSensor((CollisionMgr *)FIELD_U8(a1, 0x288), &sensor, 1);
+    v4 = &FIELD_U8(a1, 0x288)[2536];
+    v5 = *(_DWORD *)&FIELD_U8(a1, 0x288)[2536] | 0x4C000600;
+    v6 = *(_DWORD *)&FIELD_U8(a1, 0x288)[2544] | 0x4C000600;
+    v7 = *(_DWORD *)&FIELD_U8(a1, 0x288)[2528] | 0x4C000600;
+    *(_DWORD *)&FIELD_U8(a1, 0x288)[2552] |= 0x4C000600u;
+    *(_DWORD *)&FIELD_U8(a1, 0x288)[2544] = v6;
+    *(_DWORD *)&FIELD_U8(a1, 0x288)[2528] = v7;
   }
   else
   {
-    CollisionMgr_setSensor((CollisionMgr *)FIELD_U32(a1, 0x0)._.collisionMgr, &stru_60AFD8B4, 3);
-    CollisionMgr_setSensor((CollisionMgr *)FIELD_U32(a1, 0x0)._.collisionMgr, &stru_60AFD8C0, 2);
-    CollisionMgr_setSensor((CollisionMgr *)FIELD_U32(a1, 0x0)._.collisionMgr, &stru_60AFD8CC, 0);
+    CollisionMgr_setSensor((CollisionMgr *)FIELD_U8(a1, 0x288), &stru_60AFD8B4, 3);
+    CollisionMgr_setSensor((CollisionMgr *)FIELD_U8(a1, 0x288), &stru_60AFD8C0, 2);
+    CollisionMgr_setSensor((CollisionMgr *)FIELD_U8(a1, 0x288), &stru_60AFD8CC, 0);
     sensor.b = 9.0;
     sensor.a = 5.0;
     sensor.c = -6.0;
-    CollisionMgr_setSensor((CollisionMgr *)FIELD_U32(a1, 0x0)._.collisionMgr, &sensor, 1);
-    v4 = &FIELD_U32(a1, 0x0)._.collisionMgr[2552];
-    v5 = *(_DWORD *)&FIELD_U32(a1, 0x0)._.collisionMgr[2552] | 0x20000;
+    CollisionMgr_setSensor((CollisionMgr *)FIELD_U8(a1, 0x288), &sensor, 1);
+    v4 = &FIELD_U8(a1, 0x288)[2552];
+    v5 = *(_DWORD *)&FIELD_U8(a1, 0x288)[2552] | 0x20000;
   }
   *(_DWORD *)v4 = v5;
   *(_DWORD *)&a1[1]._._._.playerId = 3;
-  FIELD_U32(a1, 0x0)._._.field_26C = (int)&a1[1]._._._._.field_44;
+  FIELD_U32(a1, 0x26C) = (int)&a1[1]._._._._.field_44;
   LODWORD(a1[1]._._._.maxSpeed.x) = 1;
-  FIELD_U32(a1, 0x0)._._.field_270 = (int)&a1[1]._._._.xAcceleration;
+  FIELD_U32(a1, 0x270) = (int)&a1[1]._._._.xAcceleration;
   FIELD_U32(a1, 0x1804) = 2;
   BobOmb_decideFirstState(a1);
   *(double *)&a1[1]._._._.aCollider.field_E0 = ((double (__fastcall *)(int *))*(_DWORD *)a1[1]._._._.aCollider.field_DC)(&a1[1]._._._.aCollider.field_DC);
   a1[1]._._._.aCollider.field_E8 = v8;
-  BobOmb_onCreate_helper((float *)&FIELD_U32(a1, 0x0)._._._.vtable);
+  BobOmb_onCreate_helper((float *)&FIELD_U32(a1, 0x0));
   return 1;
 }

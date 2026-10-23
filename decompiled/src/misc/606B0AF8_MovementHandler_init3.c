@@ -36,14 +36,14 @@ StateMethodExecuter *__fastcall MovementHandler_init3(
   FIELD_U8(this, 0x87) = 0;
   FIELD_U8(this, 0x88) = 0;
   v10 = *a2;
-  FIELD_U32(this, 0xC).x = *a2;
+  FIELD_F32(this, 0xC) = *a2;
   v11 = a2[1];
-  FIELD_U32(this, 0xC).y = v11;
+  FIELD_F32(this, 0x10) = v11;
   v12 = a2[2];
-  FIELD_U32(this, 0xC).z = v12;
-  FIELD_U32(this, 0x0).x = v10;
-  FIELD_U32(this, 0x0).y = v11;
-  FIELD_U32(this, 0x0).z = v12;
+  FIELD_F32(this, 0x14) = v12;
+  FIELD_F32(this, 0x0) = v10;
+  FIELD_F32(this, 0x4) = v11;
+  FIELD_F32(this, 0x8) = v12;
   FIELD_U32(this, 0x48) = a3;
   FIELD_U8(this, 0x4C) = a4;
   FIELD_U32(this, 0x38) = 0;
@@ -65,5 +65,5 @@ StateMethodExecuter *__fastcall MovementHandler_init3(
     v13 = &MovementHandler_StateID_Linked;
   else
     v13 = &MovementHandler_StateID_FindController;
-  return StateMgr__changeState(&FIELD_U32(this, 0xD4).manager, &FIELD_U32(v13, 0x0));
+  return StateMgr__changeState(&FIELD_U32(this, 0xE8), &FIELD_U32(v13, 0x0));
 }

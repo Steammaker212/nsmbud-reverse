@@ -13,7 +13,7 @@ int __fastcall SE_OBJ_CMN_SPLASH_LAVA_ref_13B584(StageActor *a1, float s0_0)
   Vec2 a2; // [sp+4h] [bp-14h] BYREF
   int v4; // [sp+Ch] [bp-Ch]
 
-  a2.x = FIELD_U32(a1, 0x6C).x;
+  a2.x = FIELD_F32(a1, 0x6C);
   a2.y = s0_0;
   v4 = 1166843904;
   return StageActor__createWaterSplash(a1, &a2, 837, 18, "SE_OBJ_CMN_SPLASH_LAVA");

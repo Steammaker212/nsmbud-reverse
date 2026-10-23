@@ -18,7 +18,7 @@ int __fastcall sub_60273B70(CollisionActor *a1)
   CollisionActor__handleSpeed(a1);
   v2 = &a1[1]._.field_200;
   nullsub_7();
-  result = FIELD_U32(a1, 0x0).direction;
+  result = FIELD_U32(a1, 0x50);
   if ( (*(_DWORD *)&a1[1].collisionMgr[4 * ((result + 18) >> 5) + 2088] & (1 << ((result + 18) & 0x1F))) != 0
     || (v2[((result + 22) >> 5) + 556] & (1 << ((result + 22) & 0x1F))) != 0 )
   {
@@ -26,7 +26,7 @@ int __fastcall sub_60273B70(CollisionActor *a1)
     v5 = v4 >> 5;
     result = v4 & 0x1F;
     if ( (v2[v5 + 556] & (1 << result)) == 0 )
-      return (*(int (__fastcall **)(CollisionActor *, int *))(FIELD_U32(a1, 0x0)._.vtable + 192))(a1, &dword_60C8EB88);
+      return (*(int (__fastcall **)(CollisionActor *, int *))(FIELD_U32(a1, 0x0) + 192))(a1, &dword_60C8EB88);
   }
   return result;
 }

@@ -76,5 +76,5 @@ bool __fastcall sub_60763F08(StageActor *a1)
       *(_DWORD *)(a1[10].field_280 + 4 * v17) = v15;
     }
   }
-  return (*(int (__fastcall **)(StageActor *, int, int))(FIELD_U32(a1, 0x0).vtable + 1184))(a1, 1, 1) != 0;
+  return (*(int (__fastcall **)(StageActor *, int, int))(FIELD_U32(a1, 0x0) + 1184))(a1, 1, 1) != 0;
 }

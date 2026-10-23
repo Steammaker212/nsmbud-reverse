@@ -11,6 +11,6 @@
 int __fastcall sub_600DA348(CollisionActor *a1)
 {
   if ( (FIELD_U8(a1, 0x288)[2224] & 1) == 0 )
-    (*(void (__fastcall **)(CollisionActor *, void *))(FIELD_U32(a1, 0x0)._.vtable + 192))(a1, &unk_60C84498);
+    (*(void (__fastcall **)(CollisionActor *, void *))(FIELD_U32(a1, 0x0) + 192))(a1, &unk_60C84498);
   return KoopalingBase__vf5C8(a1);
 }

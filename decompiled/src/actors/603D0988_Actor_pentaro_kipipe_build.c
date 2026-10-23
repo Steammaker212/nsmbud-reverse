@@ -15,7 +15,7 @@ StageActor *__fastcall Actor_pentaro_kipipe_build(ActorBuildInfo *a1)
 
   v2 = (StageActor *)operator_new(0x288u);
   result = StageActor__ctor(v2, a1);
-  FIELD_U32(result, 0x0).vtable = (int)off_60BF7AE4;
+  FIELD_U32(result, 0x0) = (int)off_60BF7AE4;
   LOBYTE(result[1]._.vtable) = 30;
   return result;
 }

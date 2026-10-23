@@ -150,7 +150,7 @@ LABEL_14:
         MovementHandler__execute(v10);
         if ( FIELD_U32(a1, 7532) == 1 && FIELD_U32(a1, 7552) != 1 )
         {
-          FIELD_F32(a1, 108) = FIELD_U32(v10, 0x0).x;
+          FIELD_F32(a1, 108) = FIELD_F32(v10, 0x0);
           FIELD_U32(a1, 112) = FIELD_U32(a1, 7488);
           FIELD_U32(a1, 164) = FIELD_U32(a1, 7564);
         }

@@ -27,7 +27,7 @@ int __fastcall sub_60106C90(StateActor *a1, int a2, float *a3, unsigned int *a4)
   v10.cells[11] = a3[2];
   Mtx34_rotateY((float32x2_t *)&v10, a4 + 1);
   Mtx34_rotateX((float32x2_t *)&v10, a4);
-  v8 = (float)(FIELD_U32(a1, 0x0)._.position.x + *(float *)&a1[1]._._.field_60) - *a3;
+  v8 = (float)(FIELD_F32(a1, 0x6C) + *(float *)&a1[1]._._.field_60) - *a3;
   v10.cells[3] = v10.cells[3]
                + (float)((float)((float)(v10.cells[1] * 0.0) + (float)(v10.cells[0] * v8)) + (float)(v10.cells[2] * 0.0));
   v10.cells[7] = v10.cells[7]
@@ -44,7 +44,7 @@ int __fastcall sub_60106C90(StateActor *a1, int a2, float *a3, unsigned int *a4)
                 + (float)((float)((float)(v10.cells[9] * 0.0) - (float)(v10.cells[8] * v8))
                         + (float)(v10.cells[10] * 0.0));
   (*(void (__fastcall **)(int, Mtx34 *))(*(_DWORD *)a2 + 60))(a2, &v10);
-  (*(void (__fastcall **)(int, Vec3 *))(*(_DWORD *)a2 + 68))(a2, &FIELD_U32(a1, 0x0)._.scale);
+  (*(void (__fastcall **)(int, Vec3 *))(*(_DWORD *)a2 + 68))(a2, &FIELD_U32(a1, 0x90));
   (*(void (__fastcall **)(int))(*(_DWORD *)a2 + 52))(a2);
   return (*(int (__fastcall **)(int))(*(_DWORD *)a2 + 56))(a2);
 }

@@ -14,7 +14,7 @@ StateActor *__fastcall Actor_final_Bowser_Demo_manage_Tag_build(ActorBuildInfo *
 
   v2 = (StateActor *)operator_new(0x1850u);
   sub_600271A0(v2, a1);
-  FIELD_U32(v2, 0x0)._._.vtable = (int)off_60BC6EA0;
+  FIELD_U32(v2, 0x0) = (int)off_60BC6EA0;
   memset(&v2[1]._._._.settigns2, 0, 44);
   v2[1]._._._.field_44 = 0x40000000;
   v2[1]._._._.field_48 = 1056964608;

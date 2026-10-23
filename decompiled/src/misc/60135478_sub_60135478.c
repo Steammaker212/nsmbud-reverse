@@ -14,6 +14,6 @@ int __fastcall sub_60135478(CollisionActor *a1)
 
   CollisionActor__handleGravity(a1);
   v2 = CollisionActor__handleSpeed(a1);
-  (*(void (__fastcall **)(CollisionActor *, float))(FIELD_U32(a1, 0x0)._.vtable + 344))(a1, v2);
-  return (*(int (__fastcall **)(CollisionActor *))(FIELD_U32(a1, 0x0)._.vtable + 196))(a1);
+  (*(void (__fastcall **)(CollisionActor *, float))(FIELD_U32(a1, 0x0) + 344))(a1, v2);
+  return (*(int (__fastcall **)(CollisionActor *))(FIELD_U32(a1, 0x0) + 196))(a1);
 }

@@ -22,7 +22,7 @@ int __fastcall sub_603900A4(Enemy *a1, ActiveCollider *a2, ActiveCollider *a3)
     case 3:
       return Enemy_killSpin(a1, owner);
     case 1:
-      v8.x = *(float *)&dword_60AFE3F8[FIELD_U32(a1, 0x0)._._.direction] * 0.5;
+      v8.x = *(float *)&dword_60AFE3F8[FIELD_U32(a1, 0x50)] * 0.5;
       v8.y = 2.0;
       return Enemy_killWithState(a1, owner, &v8, (int)&stru_60C906EC);
     case 0:

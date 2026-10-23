@@ -11,9 +11,9 @@
 int __fastcall sub_6065306C(StageActor *a1)
 {
   StateMgr__execute((StateMgr *)&a1[9].aCollider.field_64);
-  (*(void (__fastcall **)(StageActor *))(FIELD_U32(a1, 0x0).vtable + 200))(a1);
-  (*(void (__fastcall **)(StageActor *))(FIELD_U32(a1, 0x0).vtable + 208))(a1);
+  (*(void (__fastcall **)(StageActor *))(FIELD_U32(a1, 0x0) + 200))(a1);
+  (*(void (__fastcall **)(StageActor *))(FIELD_U32(a1, 0x0) + 208))(a1);
   StageActor__cullCheck(a1, 0);
-  (*(void (__fastcall **)(StageActor *))(FIELD_U32(a1, 0x0).vtable + 212))(a1);
+  (*(void (__fastcall **)(StageActor *))(FIELD_U32(a1, 0x0) + 212))(a1);
   return 1;
 }

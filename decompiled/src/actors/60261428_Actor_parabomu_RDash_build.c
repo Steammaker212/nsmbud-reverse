@@ -17,7 +17,7 @@ CarryableEnemy *__fastcall Actor_parabomu_RDash_build(int a1)
 
   v2 = (CarryableEnemy *)operator_new(0x1BD8u);
   result = BobOmb_ctor(v2, (ActorBuildInfo *)a1);
-  FIELD_U32(result, 0x0)._._._._.vtable = (int)&off_60BDB280;
+  FIELD_U32(result, 0x0) = (int)&off_60BDB280;
   *(_DWORD *)&result[1]._._._.collisionMgr[70] = 0;
   v4 = FIELD_U32(a1, 16);
   v5 = FIELD_U32(a1, 20);

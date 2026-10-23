@@ -11,7 +11,7 @@
 StateActor *__fastcall sub_6068D194(StateActor *a1, ActorBuildInfo *a2)
 {
   sub_606CA0DC(a1, a2);
-  FIELD_U32(a1, 0x0)._._.vtable = (int)StoneEye_vtable;
+  FIELD_U32(a1, 0x0) = (int)StoneEye_vtable;
   BYTE2(a1[1]._._._.field_3C) = 0;
   LOWORD(a1[1]._._._.field_3C) = 0;
   a1[1]._._._.parent = 0;

@@ -16,7 +16,7 @@ StateActor *__fastcall Actor_IceBall_build(ActorBuildInfo *a1)
 
   v2 = (StateActor *)operator_new(0x1A70u);
   result = sub_601424B4(v2, a1);
-  FIELD_U32(result, 0x0)._._.vtable = (int)off_60BD3440;
+  FIELD_U32(result, 0x0) = (int)off_60BD3440;
   *(_DWORD *)&result[1]._.collisionMgr[12] = 0;
   *(_DWORD *)&result[1]._.collisionMgr[8] = 0;
   *(_DWORD *)&result[1]._.collisionMgr[4] = 0;
@@ -24,8 +24,8 @@ StateActor *__fastcall Actor_IceBall_build(ActorBuildInfo *a1)
   result[1]._._.field_280 = 0;
   result[1]._._.field_27C = 0.0;
   result[1]._.field_284 = 0;
-  v4 = FIELD_U32(result, 0x0)._._.settings1 & 0xF;
+  v4 = FIELD_U32(result, 0x14) & 0xF;
   result[1]._.field_284 = v4;
-  FIELD_U32(result, 0x0)._.playerId = v4;
+  FIELD_U8(result, 0x54) = v4;
   return result;
 }

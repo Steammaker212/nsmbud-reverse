@@ -26,10 +26,10 @@ int __fastcall MtxTranslateGetItFromHere(StateActor *a1)
   mtx.cells[8] = 0.0;
   mtx.cells[9] = 0.0;
   mtx.cells[10] = 1.0;
-  mtx.cells[3] = FIELD_U32(a1, 0x0)._.position.x;
-  mtx.cells[7] = FIELD_U32(a1, 0x0)._.position.y;
-  mtx.cells[11] = FIELD_U32(a1, 0x0)._.position.z;
-  Mtx34_rotateY((float32x2_t *)&mtx, (unsigned int *)&FIELD_U32(a1, 0x0)._.rotation.y);
+  mtx.cells[3] = FIELD_F32(a1, 0x6C);
+  mtx.cells[7] = FIELD_F32(a1, 0x70);
+  mtx.cells[11] = FIELD_F32(a1, 0x74);
+  Mtx34_rotateY((float32x2_t *)&mtx, (unsigned int *)&FIELD_U32(a1, 0xA0));
   mtx.cells[3] = mtx.cells[3]
                + (float)((float)((float)(mtx.cells[1] * 7.0) + (float)(mtx.cells[0] * 0.0)) + (float)(mtx.cells[2] * 0.0));
   mtx.cells[7] = mtx.cells[7]
@@ -37,7 +37,7 @@ int __fastcall MtxTranslateGetItFromHere(StateActor *a1)
   mtx.cells[11] = mtx.cells[11]
                 + (float)((float)((float)(mtx.cells[9] * 7.0) + (float)(mtx.cells[8] * 0.0))
                         + (float)(mtx.cells[10] * 0.0));
-  Mtx34_rotateX((float32x2_t *)&mtx, (unsigned int *)&FIELD_U32(a1, 0x0)._.rotation);
+  Mtx34_rotateX((float32x2_t *)&mtx, (unsigned int *)&FIELD_U32(a1, 0x9C));
   mtx.cells[3] = mtx.cells[3]
                + (float)((float)((float)(mtx.cells[0] * 0.0) - (float)(mtx.cells[1] * 7.0)) + (float)(mtx.cells[2] * 0.0));
   mtx.cells[7] = mtx.cells[7]
@@ -45,18 +45,18 @@ int __fastcall MtxTranslateGetItFromHere(StateActor *a1)
   mtx.cells[11] = mtx.cells[11]
                 + (float)((float)((float)(mtx.cells[8] * 0.0) - (float)(mtx.cells[9] * 7.0))
                         + (float)(mtx.cells[10] * 0.0));
-  Mtx34_rotateZ((float32x2_t *)&mtx, (unsigned int *)&FIELD_U32(a1, 0x0)._.rotation.z);
+  Mtx34_rotateZ((float32x2_t *)&mtx, (unsigned int *)&FIELD_U32(a1, 0xA4));
   v2 = &a1[1]._.collisionMgr[352];
   (*(void (__fastcall **)(_DWORD, Mtx34 *))(***(_DWORD ***)&a1[1]._.collisionMgr[352] + 0x3C))(
     **(_DWORD **)&a1[1]._.collisionMgr[352],
     &mtx);
-  scale = FIELD_U32(a1, 0x0)._.scale;
+  scale = FIELD_U32(a1, 0x90);
   if ( !BYTE1(a1[1]._._.aCollider.activeNode.prev) )
   {
-    z = FIELD_U32(a1, 0x0)._.scale.z;
+    z = FIELD_F32(a1, 0x98);
     y = a1[1]._._.field_254.y;
-    v5 = a1[1]._._.field_254.x - FIELD_U32(a1, 0x0)._.scale.y;
-    scale.x = (float)(a1[1]._._.field_248.z - FIELD_U32(a1, 0x0)._.scale.x) + scale.x;
+    v5 = a1[1]._._.field_254.x - FIELD_F32(a1, 0x94);
+    scale.x = (float)(a1[1]._._.field_248.z - FIELD_F32(a1, 0x90)) + scale.x;
     scale.y = v5 + scale.y;
     scale.z = (float)(y - z) + scale.z;
   }

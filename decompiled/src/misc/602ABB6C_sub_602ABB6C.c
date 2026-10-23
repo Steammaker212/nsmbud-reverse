@@ -12,7 +12,7 @@ StateActor *__fastcall sub_602ABB6C(StateActor *result)
 {
   if ( !LOWORD(result[1]._._.field_B0) )
   {
-    FIELD_U32(result, 0x0)._.field_218 = 1;
+    FIELD_U8(result, 0x218) = 1;
     return (StateActor *)StageActor__delete(result, 1);
   }
   return result;

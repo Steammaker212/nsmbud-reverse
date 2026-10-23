@@ -18,7 +18,7 @@ ColliderMgr *__fastcall ColliderMgr_createInstance(int a1)
   {
     v3 = (_DWORD *)operator_new_8DE2C8(0x64u, a1, 4);
     result = (ColliderMgr *)sead__IDisposer__ctor(v3, a1, 3u);
-    FIELD_U32(result, 0x0).vtable = (int)ColliderMgr_vtable;
+    FIELD_U32(result, 0x0) = (int)ColliderMgr_vtable;
     dword_60C88208 = result;
     FIELD_U32(result, 0x10)[0].vtable = (int)ColliderList_vtable;
     FIELD_U32(result, 0x10)[0].first = 0;

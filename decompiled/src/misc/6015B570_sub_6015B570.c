@@ -55,7 +55,7 @@ int *__fastcall sub_6015B570(_DWORD *a1)
             v6 = *(_DWORD *)(*(_DWORD *)v4 + 64);
             if ( FIELD_U8(v6, 534) )
             {
-              if ( !FIELD_U32(owner, 0x0).isDeleted && !FIELD_U8(v6, 19) )
+              if ( !FIELD_U8(owner, 0x13) && !FIELD_U8(v6, 19) )
                 ActiveCollider_doOverlapMaybe(v3, *(ActiveCollider **)v4);
             }
           }

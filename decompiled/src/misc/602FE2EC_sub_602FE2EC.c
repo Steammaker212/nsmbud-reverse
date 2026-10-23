@@ -27,8 +27,8 @@ int __fastcall sub_602FE2EC(CollisionActor *a1)
   v7 = prev[5].prev;
   if ( v6 > v7 )
     owner = (ActiveCollider *)((char *)owner + 4 * (_DWORD)v7);
-  result = *(unsigned __int8 *)(FIELD_U32(owner, 0x0).vtable + 28);
+  result = *(unsigned __int8 *)(FIELD_U32(owner, 0x0) + 28);
   if ( (result & 0x20) != 0 )
-    return (*(int (__fastcall **)(CollisionActor *, int *, float))(FIELD_U32(a1, 0x0)._.vtable + 192))(a1, &dword_60C92C1C, v3);
+    return (*(int (__fastcall **)(CollisionActor *, int *, float))(FIELD_U32(a1, 0x0) + 192))(a1, &dword_60C92C1C, v3);
   return result;
 }

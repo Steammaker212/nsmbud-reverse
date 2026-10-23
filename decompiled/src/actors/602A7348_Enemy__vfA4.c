@@ -22,7 +22,7 @@ int __fastcall Enemy__vfA4(Enemy *a1, int a2)
 
   p_playerId = (char *)(a2 + 0x54);
   if ( !a2 )
-    p_playerId = &FIELD_U32(a1, 0x0)._._.playerId;
+    p_playerId = &FIELD_U8(a1, 0x54);
   v3 = *p_playerId;
   memset(v5, 0, 16);
   v5[4] = &stru_60C90758;

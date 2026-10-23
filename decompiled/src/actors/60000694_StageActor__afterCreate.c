@@ -20,15 +20,15 @@ void __fastcall StageActor__afterCreate(StageActor *this, unsigned int onCreateV
 
   if ( onCreateVal == 2 )
   {
-    posX = FIELD_U32(this, 0x6C).x;
-    FIELD_U32(this, 0x248).x = posX;
-    y = FIELD_U32(this, 0x6C).y;
-    FIELD_U32(this, 0x248).y = y;
-    z = FIELD_U32(this, 0x6C).z;
-    FIELD_U32(this, 0x248).z = z;
-    FIELD_U32(this, 0x260).x = posX;
-    FIELD_U32(this, 0x260).y = y;
-    FIELD_U32(this, 0x260).z = z;
+    posX = FIELD_F32(this, 0x6C);
+    FIELD_F32(this, 0x248) = posX;
+    y = FIELD_F32(this, 0x70);
+    FIELD_F32(this, 0x24C) = y;
+    z = FIELD_F32(this, 0x74);
+    FIELD_F32(this, 0x250) = z;
+    FIELD_F32(this, 0x260) = posX;
+    FIELD_F32(this, 0x264) = y;
+    FIELD_F32(this, 0x268) = z;
   }
   Actor__afterCreate();
 }

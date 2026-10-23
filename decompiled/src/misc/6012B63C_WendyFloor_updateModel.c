@@ -33,9 +33,9 @@ int __fastcall WendyFloor_updateModel(StateActor *this_)
   float v22; // s9
   Mtx34 mtx; // [sp+0h] [bp-38h] BYREF
 
-  rotY = FIELD_U32(this_, 0x0)._.rotation.y;
-  rotZ = FIELD_U32(this_, 0x0)._.rotation.z;
-  rotX = FIELD_U32(this_, 0x0)._.rotation.x;
+  rotY = FIELD_U32(this_, 0xA0);
+  rotZ = FIELD_U32(this_, 0xA4);
+  rotX = FIELD_U32(this_, 0x9C);
   v5 = rotZ & 0xFFFFFF;
   v6 = rotX & 0xFFFFFF;
   v7 = (float *)((char *)sinLutTable + ((rotZ >> 20) & 0xFF0));
@@ -63,11 +63,11 @@ int __fastcall WendyFloor_updateModel(StateActor *this_)
   mtx.cells[2] = (float)(v20 * (float)(v21 * v17)) + (float)(v22 * v18);
   mtx.cells[6] = (float)(v20 * (float)(v21 * v18)) - (float)(v22 * v17);
   mtx.cells[10] = v21 * v19;
-  mtx.cells[3] = FIELD_U32(this_, 0x0)._.position.x;         // Translate
-  mtx.cells[7] = FIELD_U32(this_, 0x0)._.position.y;
-  mtx.cells[11] = FIELD_U32(this_, 0x0)._.position.z;
-  (*(void (__fastcall **)(_DWORD, Mtx34 *))(**(_DWORD **)FIELD_U32(this_, 0x0).field_284 + 0x3C))(
-    *(_DWORD *)FIELD_U32(this_, 0x0).field_284,
+  mtx.cells[3] = FIELD_F32(this_, 0x6C);         // Translate
+  mtx.cells[7] = FIELD_F32(this_, 0x70);
+  mtx.cells[11] = FIELD_F32(this_, 0x74);
+  (*(void (__fastcall **)(_DWORD, Mtx34 *))(**(_DWORD **)FIELD_U32(this_, 0x284) + 0x3C))(
+    *(_DWORD *)FIELD_U32(this_, 0x284),
     &mtx);
-  return ModelWrapper_updateModel((ModelWrapper *)FIELD_U32(this_, 0x0).field_284);
+  return ModelWrapper_updateModel((ModelWrapper *)FIELD_U32(this_, 0x284));
 }

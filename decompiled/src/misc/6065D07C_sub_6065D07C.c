@@ -14,7 +14,7 @@ void __fastcall sub_6065D07C(CollisionActor *a1)
   CollisionActor__handleSpeed(a1);
   if ( a1[1].collisionMgr[206] == 1 )
   {
-    if ( FIELD_U32(a1, 0x0).position.y < (float)(FIELD_F32(dword_60CC6484, 132) + -32.0) )
+    if ( FIELD_F32(a1, 0x70) < (float)(FIELD_F32(dword_60CC6484, 132) + -32.0) )
       a1[1].collisionMgr[232] = 1;
   }
   else

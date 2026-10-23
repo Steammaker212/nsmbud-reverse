@@ -23,24 +23,24 @@ int __fastcall KoopalingBase__beforeExecute(BossBase *a1)
   v2 = 0;
   if ( BossBase__beforeExecute(a1) == 1 )
   {
-    CurrentState = StateMgr__getCurrentState(&FIELD_U32(a1, 0x0)._.states.manager);
+    CurrentState = StateMgr__getCurrentState(&FIELD_U32(a1, 0x17C4));
     v4 = (*((int (__fastcall **)(StateBase *))FIELD_U32(CurrentState, 0x0) + 2))(CurrentState);
     if ( v4 != (*(int (**)(void))(dword_60C832FC + 8))() )
     {
-      v5 = StateMgr__getCurrentState(&FIELD_U32(a1, 0x0)._.states.manager);
+      v5 = StateMgr__getCurrentState(&FIELD_U32(a1, 0x17C4));
       v6 = (*((int (__fastcall **)(StateBase *))FIELD_U32(v5, 0x0) + 2))(v5);
       if ( v6 != (*(int (**)(void))(dword_60C83440 + 8))() )
       {
-        v7 = (*(float (__fastcall **)(BossBase *))(FIELD_U32(a1, 0x0)._._._._.vtable + 1096))(a1);
-        FIELD_U32(a1, 0x0)._._._.scale.x = v7;
-        FIELD_U32(a1, 0x0)._._._.scale.y = v7;
-        FIELD_U32(a1, 0x0)._._._.scale.z = v7;
+        v7 = (*(float (__fastcall **)(BossBase *))(FIELD_U32(a1, 0x0) + 1096))(a1);
+        FIELD_F32(a1, 0x90) = v7;
+        FIELD_F32(a1, 0x94) = v7;
+        FIELD_F32(a1, 0x98) = v7;
       }
     }
-    (*(void (__fastcall **)(BossBase *))(FIELD_U32(a1, 0x0)._._._._.vtable + 1064))(a1);
+    (*(void (__fastcall **)(BossBase *))(FIELD_U32(a1, 0x0) + 1064))(a1);
     v2 = 1;
     if ( FIELD_U32(a1, 0x189C) >= 1 )
-      (*(void (__fastcall **)(BossBase *))(FIELD_U32(a1, 0x0)._._._._.vtable + 1136))(a1);
+      (*(void (__fastcall **)(BossBase *))(FIELD_U32(a1, 0x0) + 1136))(a1);
   }
   return v2;
 }

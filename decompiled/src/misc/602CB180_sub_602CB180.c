@@ -28,13 +28,13 @@ signed int __fastcall sub_602CB180(int a1, int a2, unsigned int a3)
   v3 = a3;
   v6 = *(StageActor **)a1;
   v7 = (float)((float)a3 * 0.1) + 1.0;
-  FIELD_U32(v6, 0x90).x = v7;
-  FIELD_U32(v6, 0x90).y = v7;
-  FIELD_U32(v6, 0x90).z = v7;
+  FIELD_F32(v6, 0x90) = v7;
+  FIELD_F32(v6, 0x94) = v7;
+  FIELD_F32(v6, 0x98) = v7;
   v8 = 0;
   FIELD_F64(a1, 12) = ((double (__fastcall *)(int))**(_DWORD **)(a1 + 8))(a1 + 8);
   FIELD_U32(a1, 20) = v9;
-  ResArchiveById = (void *)Profile__getResArchiveById(FIELD_U32(v6, 0x0).profile, 0);
+  ResArchiveById = (void *)Profile__getResArchiveById(FIELD_U32(v6, 0xC), 0);
   Model2 = (void *)Resource_getModel2(
                      ResArchiveById,
                      (sead__SafeString *)((char *)&dword_60C918C0 + (v3 & 8) + 20),
@@ -49,15 +49,15 @@ signed int __fastcall sub_602CB180(int a1, int a2, unsigned int a3)
   v13 = ModelWrapper_ctor(v12, Model2, 1, 0, 0, 0, 0);
   ModelWrapper_setup(v13, (int)ResArchiveById, 0, 0);
   FIELD_U32(a1, 4) = v12;
-  SkeletalAnim_play((int)*FIELD_U32(v12, 0x8).animations, (int)ResArchiveById, (int)&dword_60C918C0);
+  SkeletalAnim_play((int)*FIELD_U32(v12, 0xC), (int)ResArchiveById, (int)&dword_60C918C0);
   (*(void (__fastcall **)(void *, int))(*(_DWORD *)FIELD_U32(v12, 0x0) + 68))(FIELD_U32(v12, 0x0), a1 + 12);
   FIELD_F32(v6, 0x1EC) = 0.0;
   FIELD_U32(v6, 0x1F0) = 0;
   ActiveCollider__init(&FIELD_U32(v6, 0xBC), v6, (ActiveColliderInfo *)&unk_60BE5C6C, a2);
   v14 = v7 * 16.0;
   v15 = v7 * 3.0;
-  FIELD_U32(v6, 0xBC).info.distToEdge.x = v14;
-  FIELD_U32(v6, 0xBC).info.distToEdge.y = v14;
+  FIELD_F32(v6, 0x138) = v14;
+  FIELD_F32(v6, 0x13C) = v14;
   v16 = *(StageActor **)a1;
   do
   {

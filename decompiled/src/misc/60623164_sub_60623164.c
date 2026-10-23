@@ -24,7 +24,7 @@ float __fastcall sub_60623164(CollisionActor *a1)
     v4 = -dword_60CB3A70;
     v3 = dword_60CB3A70;
   }
-  v5 = FIELD_U32(a1, 0x0).direction == (_DWORD)next;
+  v5 = FIELD_U32(a1, 0x50) == (_DWORD)next;
   v6 = -100663296;
   if ( v5 )
   {
@@ -33,8 +33,8 @@ float __fastcall sub_60623164(CollisionActor *a1)
   }
   if ( FIELD_U8(a1, 0x17A6) )
     v6 = (int)(float)((float)v6 * 0.5);
-  FIELD_U32(a1, 0x0).rotation.x += v6;
-  FIELD_U32(a1, 0x0).rotation.y += v3;
+  FIELD_U32(a1, 0x9C) += v6;
+  FIELD_U32(a1, 0xA0) += v3;
   CollisionActor__handleGravity(a1);
   return CollisionActor__handleSpeed(a1);
 }

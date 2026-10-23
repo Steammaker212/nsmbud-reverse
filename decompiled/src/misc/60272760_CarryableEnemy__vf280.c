@@ -26,9 +26,9 @@ int __fastcall CarryableEnemy__vf280(Enemy *a1, ActiveCollider *a2, int a3)
   if ( !(**v7)(v7, &dword_60C7B370) )
     v8 = 1212;
   if ( (*(_BYTE *)v8 & 0x40) != 0 && Enemy__processCollision(a1, a2, (ActiveCollider *)a3, 0) == 3 )
-    return (*(int (__fastcall **)(Enemy *, _DWORD))(FIELD_U32(a1, 0x0)._._._.vtable + 632))(a1, v7);
+    return (*(int (__fastcall **)(Enemy *, _DWORD))(FIELD_U32(a1, 0x0) + 632))(a1, v7);
   result = sub_60271EF4((int)a1, FIELD_U32(a3, 64));
   if ( !result )
-    return (*(int (__fastcall **)(Enemy *, ActiveCollider *, int))(FIELD_U32(a1, 0x0)._._._.vtable + 648))(a1, a2, a3);
+    return (*(int (__fastcall **)(Enemy *, ActiveCollider *, int))(FIELD_U32(a1, 0x0) + 648))(a1, a2, a3);
   return result;
 }

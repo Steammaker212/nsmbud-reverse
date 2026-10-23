@@ -139,9 +139,9 @@ int __fastcall sub_60686F98(int a1)
     FIELD_U32(a1, 6116) = v54;
     v27 = a1 + 6116;
     animations = (unsigned int)v54[1].texAnims.animations;
-    v57 = (int *)FIELD_U32(v54, 0x8).animations;
+    v57 = (int *)FIELD_U32(v54, 0xC);
     v30 = *v34;
-    if ( FIELD_U32(v54, 0x8).count > animations )
+    if ( FIELD_U32(v54, 0x8) > animations )
       v57 += animations;
     v31 = *v57;
     a2.vtable = &sead__SafeStringBase__vtable;
@@ -211,9 +211,9 @@ int __fastcall sub_60686F98(int a1)
     FIELD_U32(a1, 6116) = v25;
     v27 = a1 + 6116;
     v28 = (unsigned int)v25[1].texAnims.animations;
-    v29 = (int *)FIELD_U32(v25, 0x8).animations;
+    v29 = (int *)FIELD_U32(v25, 0xC);
     v30 = *v5;
-    if ( FIELD_U32(v25, 0x8).count > v28 )
+    if ( FIELD_U32(v25, 0x8) > v28 )
       v29 += v28;
     v31 = *v29;
     a2.vtable = &sead__SafeStringBase__vtable;

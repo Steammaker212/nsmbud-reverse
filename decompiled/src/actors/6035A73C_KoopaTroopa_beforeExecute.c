@@ -23,23 +23,23 @@ signed int __fastcall KoopaTroopa_beforeExecute(Enemy *a1)
   if ( ShellEnemy__beforeExecute(a1) != 1 )
     return v2;
   a1[1]._._.collisionMgr[548] = 0;
-  if ( (*(int (__fastcall **)(Enemy *))(FIELD_U32(a1, 0x0)._._._.vtable + 848))(a1) == 1 )
+  if ( (*(int (__fastcall **)(Enemy *))(FIELD_U32(a1, 0x0) + 848))(a1) == 1 )
   {
     if ( (FIELD_U8(dword_60C9CF0C, 1361) & 2) != 0 )
     {
-      vtable = FIELD_U32(a1, 0x0)._._._.vtable;
+      vtable = FIELD_U32(a1, 0x0);
       v4 = 1;
       goto LABEL_9;
     }
     if ( (FIELD_U8(dword_60C9CF0C, 1361) & 4) != 0 )
     {
-      vtable = FIELD_U32(a1, 0x0)._._._.vtable;
+      vtable = FIELD_U32(a1, 0x0);
       v4 = 2;
       goto LABEL_9;
     }
     if ( (FIELD_U8(dword_60C9CF0C, 1361) & 8) != 0 )
     {
-      vtable = FIELD_U32(a1, 0x0)._._._.vtable;
+      vtable = FIELD_U32(a1, 0x0);
       v4 = 3;
 LABEL_9:
       (*(void (__fastcall **)(Enemy *, int))(vtable + 852))(a1, v4);

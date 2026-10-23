@@ -13,7 +13,7 @@ MultiStateActor *__fastcall sub_60618BBC(MultiStateActor *a1, ActorBuildInfo *a2
   MultiStateActor *result; // r0
 
   result = MultiStateActor__ctor(a1, a2);
-  FIELD_U32(result, 0x0)._._.vtable = (int)off_60C1057C;
+  FIELD_U32(result, 0x0) = (int)off_60C1057C;
   result[1]._._._.vtable = 0;
   result[1]._._._.heap = 0;
   LOBYTE(result[1]._._._.id) = 0;

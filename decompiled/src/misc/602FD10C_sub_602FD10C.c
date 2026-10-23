@@ -10,8 +10,8 @@
 
 int __fastcall sub_602FD10C(StateActor *a1)
 {
-  FIELD_U32(a1, 0x0)._.direction = StageActor__directionToPlayerX(a1, &FIELD_U32(a1, 0x0)._.position);
+  FIELD_U32(a1, 0x50) = StageActor__directionToPlayerX(a1, &FIELD_U32(a1, 0x6C));
   *(_DWORD *)&a1[1]._.collisionMgr[1752] = 120;
   sub_603005F4(a1, 15);
-  return (*(int (__fastcall **)(StateActor *, int *))(FIELD_U32(a1, 0x0)._._.vtable + 192))(a1, &dword_60C92B3C);
+  return (*(int (__fastcall **)(StateActor *, int *))(FIELD_U32(a1, 0x0) + 192))(a1, &dword_60C92B3C);
 }

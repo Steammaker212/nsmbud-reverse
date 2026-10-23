@@ -15,16 +15,16 @@ Actor *__fastcall Amp__dtor(Amp *a1)
 {
   LightSource *lightRelated3; // r5
 
-  FIELD_U32(a1, 0x0)._._._._.vtable = (int)Amp_vtable;
+  FIELD_U32(a1, 0x0) = (int)Amp_vtable;
   lightRelated3 = &FIELD_U32(a1, 0x1968);
   ActiveCollider_dtor(&FIELD_U32(a1, 0x19B4));
   LightSource__dtor(lightRelated3);
-  FIELD_U32(a1, 0x18AC)._.vtable = (int)EffectWrapper_vtable;
+  FIELD_U32(a1, 0x18AC) = (int)EffectWrapper_vtable;
   sub_60237560((int)&FIELD_U32(a1, 0x18AC));
-  sead__IDisposer__dtor(&FIELD_U32(a1, 0x18AC)._.vtable);
-  FIELD_U32(a1, 0x0)._._._._.vtable = (int)&Enemy__vtable;
-  sub_602F36E0(&FIELD_U32(a1, 0x0).freezeMgr);
-  FIELD_U32(a1, 0x0)._._._._.vtable = (int)&CollisionActor__vtable;
-  CollisionMgr_dtor((int)FIELD_U32(a1, 0x0)._._.collisionMgr);
-  return StageActor__dtor(&FIELD_U32(a1, 0x0)._._._._);
+  sead__IDisposer__dtor(&FIELD_U32(a1, 0x18AC));
+  FIELD_U32(a1, 0x0) = (int)&Enemy__vtable;
+  sub_602F36E0(&FIELD_U32(a1, 0x1808));
+  FIELD_U32(a1, 0x0) = (int)&CollisionActor__vtable;
+  CollisionMgr_dtor((int)FIELD_U8(a1, 0x288));
+  return StageActor__dtor(&FIELD_U32(a1, 0x0));
 }

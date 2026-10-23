@@ -35,7 +35,7 @@ int __fastcall block_jump_ref(_DWORD *a1)
   v6 = ModelWrapper_ctor(v5, Model2, 1, 0, 1, 0, 0);
   ModelWrapper_setup(v6, v2, 0, 0);
   a1[1847] = v5;
-  v7 = (int)*FIELD_U32(v5, 0x18).animations;
+  v7 = (int)*FIELD_U32(v5, 0x1C);
   a1[1848] = v7;
   v13 = &sead__SafeStringBase__vtable;
   v14 = "block_jump";

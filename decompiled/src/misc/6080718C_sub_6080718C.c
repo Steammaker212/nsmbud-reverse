@@ -108,7 +108,7 @@ int __fastcall sub_6080718C(int a1, void **a2)
   do
   {
     v25 = MovingSoundActor_ctor(v22, 2, 1);
-    *(_DWORD *)FIELD_U32(v25, 0x0)._.nn_atk_SoundActor_data = off_60C28128;
+    *(_DWORD *)FIELD_U8(v25, 0x0) = off_60C28128;
     v25[1].handles[0]._.containingHeap = 0;
     v25[1].handles[0].handle = 0;
     v25[1].handles[0].unk = 0.0;

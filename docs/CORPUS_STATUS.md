@@ -8,24 +8,27 @@ Measured, not asserted. Every number below comes from a script in
 | Measure | Value |
 | --- | --- |
 | Functions in the database | 47,153 |
-| Carrying a real name | 7,522 (15.95%) |
-| Still `sub_`/`nullsub_` | 39,631 |
-| Code bytes under a real name | 24.20% |
+| Carrying a readable name | 9,671 (20.51%) |
+| Still `sub_`/`nullsub_` | 37,482 |
+| Compiling clean, `clang -std=gnu89` | 37,787 / 46,879 (80.61%) |
 
 Names come from the Deluxe database itself. Neither the shipped symbol file
 (`sweetdx/symbols/nsmbudx.sym`) nor codedx's `main.sym` adds a name that the
 database does not already carry: the symbol file lands on 7,536 function starts
-but contributes 0 new names, and codedx's 413 entries contribute 0. Their value
-is in headers and the `ProfileId` enum, not in naming.
+but contributes 0 new names, and codedx's 413 entries contribute 0 function
+names. Their value is in headers, the `ProfileId` table, and 31 data symbols.
 
 ### How names are earned
 
-Only two sources have produced new names so far, both measured:
+Three measured sources, no guesses:
 
-1. **The database's own analysis.** 7,466 names carried over from IDA and the
-   symbol file.
+1. **The database's own analysis.** Names carried over from IDA and the symbol
+   file.
 2. **Vtable slot ownership.** 55 names, from reading the vtable words out of the
    ELF and recording which class owns each slot (`Class__vf<byte offset>`).
+3. **Itanium demangling.** 1,881 names, from decoding the mangled names the
+   database kept verbatim: `j__ZdlPv_1` becomes `operator_delete_9700`,
+   `j__ZN12BowserJrBase6onDrawEv` becomes `BowserJrBase__onDraw__thunk`.
 
 A function keeps its `sub_` name until evidence arrives. There is no
 `sub_XXXXXXXX` renaming for cosmetic reasons.
@@ -37,25 +40,35 @@ readable C:
 
 | Measure | Value |
 | --- | --- |
-| Functions in the corpus | 46,831 |
-| Compiling clean, `clang -std=gnu89` | 37,492 (80.06%) |
-| Excluded: no recoverable body | 322 |
+| Functions in the corpus | 46,879 |
+| Compiling clean, `clang -std=gnu89` | 37,787 (80.61%) |
+| Excluded: no recoverable body | 274 |
 
-The corpus grew from 44,054 to 46,831 units by recovering the functions that
-were previously held back for using `->`. Those arrows were the one thing
-blocking them, and the layouts were in the database all along: `export_types.py`
-reads the local type library and gets 176 types and 1,294 members at exact bit
-offsets (`StageActor` 60 members, `ColliderBase` 58, `FireballBase` 40).
+Verified independently by re-running `verify_all.py` against the published
+directory, not just self-reported by the build.
 
-`rewrite_arrows.py` replaces each `base->member` with `FIELD_U32(base, 0xNN)`,
-the same macro the rest of the corpus uses for offset access. Measured coverage:
-3,055 of 3,097 arrow-using functions (98.6%) resolve completely, 11,935 of
-12,006 accesses (99.4%). No file in the corpus contains `->` any more.
+### The `->` problem, and how it was solved
 
-The clean percentage is lower than the previous 83.35% because the newly
-included functions are the harder ones — but the absolute number of compiling
-functions rose from 36,720 to 37,492, and 46,831 functions are now present as
-readable C rather than 44,054.
+Hex-Rays emits `base->member` because the database has struct types. Those types
+are in the local type library, so `export_types.py` reads them out: 176 types,
+1,294 members at exact bit offsets.
+
+`rewrite_arrows.py` replaces each access with `FIELD_U32(base, 0xNN)`, walking
+multi-hop chains like `this->_.vtable` by accumulating each hop's offset within
+the previous hop's type (`StageActor.field_248` at 0x248 plus `.y` at 4 =
+`FIELD_F32(this, 0x24C)`). Measured coverage: 11,934 of 12,058 accesses (98.9%).
+
+Three defects were found and fixed by measuring rather than assuming:
+
+- A chain pattern that also matched plain `a.field` accesses counted 18,000
+  non-problems as failures and silently dropped 996 functions from the corpus.
+  A chain must begin with `->`.
+- `this` is not declared in a function body, so its type had to be taken from
+  the definition's own `StageActor *this` parameter. Without that, the whole
+  StageActor family looked unresolvable.
+- An earlier version rewrote only the first arrow of `a1->_._._.vtable`,
+  emitting 984 malformed expressions like `FIELD_U32(a1, 0x0)._._._`. The
+  published corpus is now checked for this pattern and contains 0.
 
 ## What is still not decompiled to a clean compile
 

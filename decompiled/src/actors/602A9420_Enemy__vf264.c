@@ -15,11 +15,11 @@
 signed int __fastcall Enemy__vf264(Enemy *this)
 {
   SE_OBJ_PNGN_ICE_FREEZE_ref(&FIELD_U32(this, 0x1808));
-  (*(void (__fastcall **)(Enemy *))(FIELD_U32(this, 0x0)._._._.vtable + 0xD0))(this);// Freeze
-  CollisionMgr_vf14((int)FIELD_U32(this, 0x0)._.collisionMgr);
-  (*(void (__fastcall **)(Enemy *))(FIELD_U32(this, 0x0)._._._.vtable + 0xD4))(this);
-  (*(void (__fastcall **)(Enemy *))(FIELD_U32(this, 0x0)._._._.vtable + 72))(this);// Remove Colliders
-  LOBYTE(FIELD_U32(this, 0x1808).field_44) = 1;
-  FIELD_U32(this, 0x0)._.field_17A7 = 1;
+  (*(void (__fastcall **)(Enemy *))(FIELD_U32(this, 0x0) + 0xD0))(this);// Freeze
+  CollisionMgr_vf14((int)FIELD_U8(this, 0x288));
+  (*(void (__fastcall **)(Enemy *))(FIELD_U32(this, 0x0) + 0xD4))(this);
+  (*(void (__fastcall **)(Enemy *))(FIELD_U32(this, 0x0) + 72))(this);// Remove Colliders
+  LOBYTE(FIELD_U32(this, 0x184C)) = 1;
+  FIELD_U8(this, 0x17A7) = 1;
   return 1;
 }

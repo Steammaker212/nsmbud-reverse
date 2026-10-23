@@ -19,17 +19,17 @@ StateMethodExecuter *__fastcall sub_600EDF20(BossBase *a1)
   {
     case 3:
       *v1 = 0;
-      return (StateMethodExecuter *)(*(int (__fastcall **)(BossBase *, int *))(FIELD_U32(a1, 0x0)._._._._.vtable + 192))(
+      return (StateMethodExecuter *)(*(int (__fastcall **)(BossBase *, int *))(FIELD_U32(a1, 0x0) + 192))(
                                       a1,
                                       &dword_60C850CC);
     case 2:
       *v1 = 0;
-      return (StateMethodExecuter *)(*(int (__fastcall **)(BossBase *, int *))(FIELD_U32(a1, 0x0)._._._._.vtable + 192))(
+      return (StateMethodExecuter *)(*(int (__fastcall **)(BossBase *, int *))(FIELD_U32(a1, 0x0) + 192))(
                                       a1,
                                       &dword_60C851F4);
     case 1:
       *v1 = 0;
-      return (StateMethodExecuter *)(*(int (__fastcall **)(BossBase *, int *))(FIELD_U32(a1, 0x0)._._._._.vtable + 192))(
+      return (StateMethodExecuter *)(*(int (__fastcall **)(BossBase *, int *))(FIELD_U32(a1, 0x0) + 192))(
                                       a1,
                                       &dword_60C8503C);
     default:

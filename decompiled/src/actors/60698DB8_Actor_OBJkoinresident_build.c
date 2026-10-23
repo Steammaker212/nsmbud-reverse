@@ -14,7 +14,7 @@ MultiStateActor *__fastcall Actor_OBJkoinresident_build(ActorBuildInfo *a1)
 
   v2 = (MultiStateActor *)operator_new(0x1800u);
   MultiStateActor__ctor(v2, a1);
-  FIELD_U32(v2, 0x0)._._.vtable = (int)off_60C17FF0;
+  FIELD_U32(v2, 0x0) = (int)off_60C17FF0;
   memset(&v2[1], 0, 38);
   return v2;
 }

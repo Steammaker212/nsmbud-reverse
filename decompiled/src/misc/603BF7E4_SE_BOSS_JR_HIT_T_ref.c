@@ -57,9 +57,9 @@ int __fastcall SE_BOSS_JR_HIT_T_ref(StageActor *a1, int a2, int a3)
       v11 = &v18;
     v24.y = v11[1] + (float)(v15 * 0.5);
     v24.z = 4500.0;
-    y = FIELD_U32(a1, 0x6C).y;
+    y = FIELD_F32(a1, 0x70);
     v17 = Global_BasicSoundActor1;
-    position.x = FIELD_U32(a1, 0x6C).x;
+    position.x = FIELD_F32(a1, 0x6C);
     position.y = y;
     mapPositionToScreen(&out, &position);
     BasicSoundActor1_playSound(v17, "SE_BOSS_JR_HIT_T", (int)&out, 0);

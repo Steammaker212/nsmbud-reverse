@@ -22,7 +22,7 @@ void __fastcall BrosBase__beginState_Move(StateActor *a1)
   const char *v10; // [sp+Ch] [bp-14h]
 
   a1[1]._._.aCollider.field_118 = 0;
-  a1[1]._._.aCollider.field_10C = LOBYTE(a1[1]._._.field_1F8) != FIELD_U32(a1, 0x0)._.direction;
+  a1[1]._._.aCollider.field_10C = LOBYTE(a1[1]._._.field_1F8) != FIELD_U32(a1, 0x50);
   a1[1]._._.aCollider.field_110 = 0;
   v9 = &sead__SafeStringBase__vtable;
   v10 = "bros";
@@ -42,7 +42,7 @@ void __fastcall BrosBase__beginState_Move(StateActor *a1)
   if ( *(_DWORD *)(*v4 + 8) > v8 )
     v7 += 4 * v8;
   *(_DWORD *)(*(_DWORD *)v7 + 24) = 1065353216;
-  (*(void (__fastcall **)(StateActor *))(FIELD_U32(a1, 0x0)._._.vtable + 720))(a1);
-  (*(void (__fastcall **)(StateActor *))(FIELD_U32(a1, 0x0)._._.vtable + 732))(a1);
-  CollisionMgr_init((CollisionMgr *)FIELD_U32(a1, 0x0).collisionMgr, a1, &stru_60AFD9D8, &stru_60AFD9E4, &stru_60AFD9F0);
+  (*(void (__fastcall **)(StateActor *))(FIELD_U32(a1, 0x0) + 720))(a1);
+  (*(void (__fastcall **)(StateActor *))(FIELD_U32(a1, 0x0) + 732))(a1);
+  CollisionMgr_init((CollisionMgr *)FIELD_U8(a1, 0x288), a1, &stru_60AFD9D8, &stru_60AFD9E4, &stru_60AFD9F0);
 }

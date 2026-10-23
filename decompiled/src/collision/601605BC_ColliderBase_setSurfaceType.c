@@ -19,7 +19,7 @@ int __fastcall ColliderBase_setSurfaceType(ColliderBase *this, int surfaceType)
   v4 = FIELD_U32(this, 0x134) & 0xFFFF00FF;
   LODWORD(v6[0]) = *(_DWORD *)v3;
   HIDWORD(v6[0]) = v4 | (surfaceType << 8);
-  (*(void (__fastcall **)(ColliderBase *, _QWORD *))(FIELD_U32(this, 0x0).vtable + 0x38))(this, v6);
+  (*(void (__fastcall **)(ColliderBase *, _QWORD *))(FIELD_U32(this, 0x0) + 0x38))(this, v6);
   sub_60153898(ColliderMgr_instance, this, v3, v6);
   result = v6[0];
   *v3 = v6[0];

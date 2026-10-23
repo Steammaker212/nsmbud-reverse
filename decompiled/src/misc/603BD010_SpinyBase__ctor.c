@@ -21,7 +21,7 @@ CarryableEnemy *__fastcall SpinyBase__ctor(CarryableEnemy *a1, ActorBuildInfo *a
   if ( !v2 )
     v3 = 1;
   result = ShellEnemy__ctor(a1, a2, v3, v2 == 3, 0);
-  FIELD_U32(result, 0x0)._._._._.vtable = (int)off_60BF6040;
+  FIELD_U32(result, 0x0) = (int)off_60BF6040;
   BYTE2(result[1]._._._._.aCollider.field_118) = 0;
   *(float *)((char *)&result[1]._._._._.field_1F8 + 2) = 0.0;
   *(float *)((char *)&result[1]._._._._.field_1FC + 2) = 0.0;

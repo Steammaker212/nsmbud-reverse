@@ -27,10 +27,10 @@ Actor *__fastcall Actor_zumu_build(ActorBuildInfo *a1)
     HIBYTE(settings1) & 3,
     v4,
     settings1 >> 31,
-    FIELD_U32(a1, 0x10).x,
-    FIELD_U32(a1, 0x10).x + (float)((float)(unsigned __int8)settings1 * 16.0),
-    FIELD_U32(a1, 0x10).y + (float)((float)BYTE1(settings1) * 16.0),
-    FIELD_U32(a1, 0x10).y,
+    FIELD_F32(a1, 0x10),
+    FIELD_F32(a1, 0x10) + (float)((float)(unsigned __int8)settings1 * 16.0),
+    FIELD_F32(a1, 0x14) + (float)((float)BYTE1(settings1) * 16.0),
+    FIELD_F32(a1, 0x14),
     1);
   sub_607FC24C(dword_60CC6484, v6);
   FIELD_U8(v2, 0x13) = 1;

@@ -45,18 +45,18 @@ signed int __fastcall CollisionActor__beforeExecute(StageActor *a1)
       *p_next = 0;
     }
     v2 = 1;
-    if ( !FIELD_U8(a1, 0x218) && (*(int (__fastcall **)(StageActor *))(FIELD_U32(a1, 0x0).vtable + 156))(a1) == 1 )
+    if ( !FIELD_U8(a1, 0x218) && (*(int (__fastcall **)(StageActor *))(FIELD_U32(a1, 0x0) + 156))(a1) == 1 )
     {
       v6 = FIELD_U32(AreaRumbleMgr_instance, 56);
       if ( (v6 & 2) != 0 )
       {
-        vtable = FIELD_U32(a1, 0x0).vtable;
+        vtable = FIELD_U32(a1, 0x0);
         v8 = 0;
         goto LABEL_13;
       }
       if ( (v6 & 4) != 0 )
       {
-        vtable = FIELD_U32(a1, 0x0).vtable;
+        vtable = FIELD_U32(a1, 0x0);
         v2 = 1;
         v8 = 1;
 LABEL_13:

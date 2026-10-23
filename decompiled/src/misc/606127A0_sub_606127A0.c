@@ -74,7 +74,7 @@ int __fastcall sub_606127A0(int a1)
   v9 = ModelWrapper_ctor(v8, Model2, 1, 1, 0, 0, 0);
   ModelWrapper_setup(v9, Resource, 0, 0);
   FIELD_U32(a1, 6760) = v8;
-  v10 = (int)*FIELD_U32(v8, 0x10).animations;
+  v10 = (int)*FIELD_U32(v8, 0x14);
   FIELD_U32(a1, 6776) = v10;
   a2.vtable = &sead__SafeStringBase__vtable;
   a2.cstr = "baseA";
@@ -92,7 +92,7 @@ int __fastcall sub_606127A0(int a1)
   v15 = ModelWrapper_ctor(v14, v13, 1, 1, 1, 0, 0);
   ModelWrapper_setup(v15, Resource, 0, 0);
   FIELD_U32(a1, 6764) = v14;
-  v16 = (int)*FIELD_U32(v14, 0x8).animations;
+  v16 = (int)*FIELD_U32(v14, 0xC);
   a2.vtable = &sead__SafeStringBase__vtable;
   a2.cstr = "wait";
   SkeletalAnim_play(v16, (int)Resource, (const char **)&a2);
@@ -123,7 +123,7 @@ int __fastcall sub_606127A0(int a1)
   v22 = ModelWrapper_ctor(v21, v20, 1, 1, 1, 0, 0);
   ModelWrapper_setup(v22, Resource, 0, 0);
   FIELD_U32(a1, 6772) = v21;
-  v23 = (int)*FIELD_U32(v21, 0x8).animations;
+  v23 = (int)*FIELD_U32(v21, 0xC);
   a2.vtable = &sead__SafeStringBase__vtable;
   a2.cstr = "goal_flag_player_wait";
   SkeletalAnim_play(v23, (int)Resource, (const char **)&a2);
@@ -154,7 +154,7 @@ int __fastcall sub_606127A0(int a1)
   v29 = ModelWrapper_ctor(v28, v27, 1, 1, 0, 1, 0);
   ModelWrapper_setup(v29, Resource, 0, 0);
   FIELD_U32(a1, 6768) = v28;
-  v30 = (int)*FIELD_U32(v28, 0x10).animations;
+  v30 = (int)*FIELD_U32(v28, 0x14);
   FIELD_U32(a1, 6784) = v30;
   a2.vtable = &sead__SafeStringBase__vtable;
   a2.cstr = "toride_std";

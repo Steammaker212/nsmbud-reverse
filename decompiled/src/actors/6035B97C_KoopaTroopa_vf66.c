@@ -56,7 +56,7 @@ unsigned int __fastcall KoopaTroopa_vf66(int a1, ActiveCollider *a2, ActiveColli
     v9 = (*((int (__fastcall **)(StateBase *))FIELD_U32(CurrentState, 0x0) + 2))(CurrentState);
     if ( v9 == (*(int (**)(void))(dword_60C8EA94 + 8))() && !FIELD_U32(a1, 6352) )
     {
-      v13 = FIELD_U32(a3, 0x74).field_14;
+      v13 = FIELD_U32(a3, 0x88);
       v14 = v13 == 15;
       if ( v13 != 15 )
         v14 = v13 == 0;
@@ -69,7 +69,7 @@ unsigned int __fastcall KoopaTroopa_vf66(int a1, ActiveCollider *a2, ActiveColli
           _cxa_guard_release(&dword_60C7B37C);
         }
         if ( !owner
-          || (*(int (__fastcall **)(StageActor *, int *))FIELD_U32(owner, 0x0).vtable)(owner, &dword_60C7B378) != 1
+          || (*(int (__fastcall **)(StageActor *, int *))FIELD_U32(owner, 0x0))(owner, &dword_60C7B378) != 1
           || (owner[1].profileFlags & 0x40) == 0 )
         {
           goto LABEL_25;

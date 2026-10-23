@@ -68,8 +68,8 @@ int __fastcall FinalBowser__vf3EC(int *a1)
   j_ModelWrapper_setupModel((int)v7, (int)v2, (int)&v28, (int)heap);
   a1[1778] = (int)v6;
   animations = (unsigned int)v6[1].texAnims.animations;
-  v9 = (int *)FIELD_U32(v6, 0x8).animations;
-  if ( FIELD_U32(v6, 0x8).count > animations )
+  v9 = (int *)FIELD_U32(v6, 0xC);
+  if ( FIELD_U32(v6, 0x8) > animations )
     v9 += animations;
   v10 = *v9;
   a2.vtable = &sead__SafeStringBase__vtable;
@@ -86,7 +86,7 @@ int __fastcall FinalBowser__vf3EC(int *a1)
   v14 = ModelWrapper_ctor(v13, Model2, 1, 0, 0, 0, 0);
   ModelWrapper_setup(v14, (int)v2, (int)&v28, 0);
   a1[1779] = (int)v13;
-  v15 = (int)*FIELD_U32(v13, 0x8).animations;
+  v15 = (int)*FIELD_U32(v13, 0xC);
   a2.vtable = &sead__SafeStringBase__vtable;
   a2.cstr = "lkp_shell_model_in";
   SkeletalAnim_play(v15, v3, (int)&a2);
@@ -110,7 +110,7 @@ int __fastcall FinalBowser__vf3EC(int *a1)
     v23 = ModelWrapper_ctor(v22, v21, 0, 0, 1, 0, 0);
     ModelWrapper_setup(v23, (int)v2, 0, 0);
     v26[v20] = (int)v22;
-    v24 = *FIELD_U32(v22, 0x18).animations;
+    v24 = *FIELD_U32(v22, 0x1C);
     a2.vtable = &sead__SafeStringBase__vtable;
     a2.cstr = "koopa_damage";
     result = ShuAnim_play(v24, (int)v2, (int)&a2);

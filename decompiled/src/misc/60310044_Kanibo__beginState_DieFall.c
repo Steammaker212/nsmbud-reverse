@@ -15,9 +15,9 @@ signed int __fastcall Kanibo__beginState_DieFall(Enemy *a1)
 
   a1[1]._._._._.field_2C = 3;
   sub_60421AD4(a1[1]._._._._.vtable);
-  y = FIELD_U32(a1, 0x0)._._.rotation.y;
-  FIELD_U32(a1, 0x0)._._.rotation.y = Enemy_CommonRotations[FIELD_U32(a1, 0x0)._._.direction];
+  y = FIELD_U32(a1, 0xA0);
+  FIELD_U32(a1, 0xA0) = Enemy_CommonRotations[FIELD_U32(a1, 0x50)];
   result = Enemy__beginState_DieFumi(a1);
-  FIELD_U32(a1, 0x0)._._.rotation.y = y;
+  FIELD_U32(a1, 0xA0) = y;
   return result;
 }

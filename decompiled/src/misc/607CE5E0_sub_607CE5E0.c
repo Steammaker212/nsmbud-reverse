@@ -14,7 +14,7 @@ unsigned int __fastcall sub_607CE5E0(StageActor *a1, int *a2, int a3, int a4)
   char v9; // r12
   unsigned int result; // r0
 
-  (*(void (__fastcall **)(StageActor *, sead_ListNode *, int))(FIELD_U32(a1, 0x0).vtable + 144))(a1, a1[2]._.field_20.previous, 1);
+  (*(void (__fastcall **)(StageActor *, sead_ListNode *, int))(FIELD_U32(a1, 0x0) + 144))(a1, a1[2]._.field_20.previous, 1);
   sub_60767F80(a1, a2, a4);
   a1[1].field_230 |= 0x40u;
   sub_60767E04(a1, (int)a2, a3);

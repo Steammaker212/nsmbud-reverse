@@ -15,7 +15,7 @@ StateActor *__fastcall sub_606F4044(StateActor *a1, ActorBuildInfo *a2)
   int v5; // r0
 
   StateActor_ctor(a1, a2);
-  FIELD_U32(a1, 0x0)._._.vtable = (int)off_60C20600;
+  FIELD_U32(a1, 0x0) = (int)off_60C20600;
   a1[1]._._._.vtable = 0;
   a1[1]._._._.id = 1137122418;
   a1[1]._._._.heap = 0;

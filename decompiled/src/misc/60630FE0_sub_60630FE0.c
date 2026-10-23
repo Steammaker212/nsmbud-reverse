@@ -27,7 +27,7 @@ int __fastcall sub_60630FE0(int a1, void *a2, float a3)
   result = 0;
   if ( *v6[3].cstr )
   {
-    v11 = (int)*FIELD_U32(v8, 0x10).animations;
+    v11 = (int)*FIELD_U32(v8, 0x14);
     TexAnim_play(v11, (int)a2, &v6[3].vtable);
     FIELD_F32(v11, 20) = a3;
     result = FIELD_U32(v11, 28) | 2;

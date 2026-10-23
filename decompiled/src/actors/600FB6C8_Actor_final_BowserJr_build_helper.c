@@ -13,7 +13,7 @@ BossBase *__fastcall Actor_final_BowserJr_build_helper(BossBase *a1, ActorBuildI
   BossBase *result; // r0
 
   result = BowserJrBase__ctor(a1, a2);
-  FIELD_U32(result, 0x0)._._._._.vtable = (int)off_60BCF214;
+  FIELD_U32(result, 0x0) = (int)off_60BCF214;
   result[1]._._._._.field_200 = 0;
   LOBYTE(result[1]._._._._.field_204) = 1;
   return result;

@@ -34,7 +34,7 @@ int __fastcall block_ice_hard_ref(_DWORD *a1)
   ModelWrapper_setup(v5, v2, 0, 0);
   a1[1699] = v4;
   a1 += 1699;
-  v6 = (int)*FIELD_U32(v4, 0x8).animations;
+  v6 = (int)*FIELD_U32(v4, 0xC);
   v12 = &sead__SafeStringBase__vtable;
   v13 = "block_ice_hard";
   v7 = LoadResource(ResourceMgrRelated_instance, &v12);

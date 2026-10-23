@@ -15,7 +15,7 @@ StageActor *__fastcall Actor_kishijugemu_maruchipureifor_build(ActorBuildInfo *a
 
   v2 = (StageActor *)operator_new(0x2B4u);
   result = StageActor__ctor(v2, a1);
-  FIELD_U32(result, 0x0).vtable = (int)off_60BF79CC;
+  FIELD_U32(result, 0x0) = (int)off_60BF79CC;
   result[1]._.vtable = 2139095039;
   result[1]._.heap = 2139095039;
   result[1]._.id = -8388609;

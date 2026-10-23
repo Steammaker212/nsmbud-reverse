@@ -32,10 +32,10 @@ ActiveColliderNode *__fastcall sub_605875E8(StateActor *a1)
     v13 = 0;
     child = 0;
     a2 = 0;
-    next = (StateActor *)FIELD_U32(a1, 0x0)._._.field_20.next;
-    if ( next != (StateActor *)&FIELD_U32(a1, 0x0)._._.field_20 )
+    next = (StateActor *)FIELD_U32(a1, 0x24);
+    if ( next != (StateActor *)&FIELD_U32(a1, 0x20) )
     {
-      v8 = FIELD_U32(a1, 0x0)._._.field_2C;
+      v8 = FIELD_U32(a1, 0x2C);
       v9 = (int)next - v8;
       do
       {
@@ -44,17 +44,17 @@ ActiveColliderNode *__fastcall sub_605875E8(StateActor *a1)
           v10 = v6;
         ++v6;
         *(&a2 + v10) = v9;
-        next = (StateActor *)FIELD_U32(next, 0x0)._._.heap;
+        next = (StateActor *)FIELD_U32(next, 0x4);
         v9 = (int)next - v8;
       }
-      while ( (char *)next - v8 != (char *)&FIELD_U32(a1, 0x0)._._.field_20 - v8 );
+      while ( (char *)next - v8 != (char *)&FIELD_U32(a1, 0x20) - v8 );
       if ( a2 )
-        Actor__removeChild(&FIELD_U32(a1, 0x0)._._, (Actor *)a2);
+        Actor__removeChild(&FIELD_U32(a1, 0x0), (Actor *)a2);
     }
     if ( child )
-      Actor__removeChild(&FIELD_U32(a1, 0x0)._._, child);
+      Actor__removeChild(&FIELD_U32(a1, 0x0), child);
     if ( v13 )
-      Actor__removeChild(&FIELD_U32(a1, 0x0)._._, v13);
+      Actor__removeChild(&FIELD_U32(a1, 0x0), v13);
     return (ActiveColliderNode *)StageActor__delete(a1, 1);
   }
   return result;

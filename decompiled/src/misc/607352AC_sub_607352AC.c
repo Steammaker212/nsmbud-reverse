@@ -49,7 +49,7 @@ int __fastcall sub_607352AC(int a1)
   v7 = sub_60421830(v6, Model2, 2, 2, 0, 0, 0);
   j_ModelWrapper_setupModel(v7, v3, 0, v4);
   FIELD_U32(a1, 6100) = v6;
-  v8 = (int)*FIELD_U32(v6, 0x8).animations;
+  v8 = (int)*FIELD_U32(v6, 0xC);
   a2.vtable = &sead__SafeStringBase__vtable;
   a2.cstr = "shufflePanel_wait";
   SkeletalAnim_play(v8, (int)v3, (const char **)&a2);

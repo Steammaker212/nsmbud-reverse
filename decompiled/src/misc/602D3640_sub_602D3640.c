@@ -35,7 +35,7 @@ int __fastcall sub_602D3640(CollisionActor *a1)
   v2 = CollisionActor__handleSpeed(a1);
   CollisionMgr_process(FIELD_U8(a1, 0x288), v2);
   if ( (FIELD_U8(a1, 0x288)[2224] & 1) != 0 )
-    FIELD_U32(a1, 0x0).speed.y = 0.0;
+    FIELD_F32(a1, 0x7C) = 0.0;
   v3 = &a1[1].collisionMgr[144];
   j_ModelWrapper_updateAnims(*(_DWORD *)&a1[1].collisionMgr[144]);
   v4 = *(_DWORD **)(*(_DWORD *)&a1[1].collisionMgr[144] + 12);
@@ -51,11 +51,11 @@ int __fastcall sub_602D3640(CollisionActor *a1)
       v6 += v7;
     if ( sub_60418548(*v6 + 4) )
     {
-      direction = FIELD_U32(a1, 0x0).direction;
+      direction = FIELD_U32(a1, 0x50);
       v9 = 0;
       if ( direction < 2 )
-        v9 = FIELD_U32(a1, 0x0).direction;
-      v10 = (float *)(&FIELD_U32(a1, 0x0)._.vtable + 12 * v9);
+        v9 = FIELD_U32(a1, 0x50);
+      v10 = (float *)(&FIELD_U32(a1, 0x0) + 12 * v9);
       v11 = v10[1700];
       v12 = v10[1696];
       v13 = v10[1692];
@@ -65,7 +65,7 @@ int __fastcall sub_602D3640(CollisionActor *a1)
       v21.position.x = v13;
       v21.position.y = v12;
       v21.position.z = v11;
-      v21.field_1C = FIELD_U32(a1, 0x0).rotation.y;
+      v21.field_1C = FIELD_U32(a1, 0xA0);
       v21.field_20 = 0;
       v14 = ActorMgr__create((void *)ActorMgr__instance, &v21, 0);
       if ( ((unsigned int)&dword_60C88030 & ~(1613576072 << v15) & 1) == 0 && _cxa_guard_acquire(&dword_60C88030) )
@@ -75,7 +75,7 @@ int __fastcall sub_602D3640(CollisionActor *a1)
       }
       if ( v14 && (**(int (__fastcall ***)(_BYTE *, int *))v14)(v14, &dword_60C8802C) == 1 )
       {
-        *((_DWORD *)v14 + 1619) = FIELD_U32(a1, 0x0)._.id;
+        *((_DWORD *)v14 + 1619) = FIELD_U32(a1, 0x8);
         *(_DWORD *)&a1[1].collisionMgr[140] = *((_DWORD *)v14 + 2);
         BYTE1(a1[1]._.field_260.x) = 1;
       }
@@ -98,7 +98,7 @@ int __fastcall sub_602D3640(CollisionActor *a1)
       v20 = &dword_60C91B80;
     else
       v20 = &dword_60C91B40;
-    return (*(int (__fastcall **)(CollisionActor *, int *))(FIELD_U32(a1, 0x0)._.vtable + 192))(a1, v20);
+    return (*(int (__fastcall **)(CollisionActor *, int *))(FIELD_U32(a1, 0x0) + 192))(a1, v20);
   }
   return result;
 }

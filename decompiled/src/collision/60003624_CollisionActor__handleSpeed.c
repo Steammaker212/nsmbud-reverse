@@ -26,9 +26,9 @@ float __fastcall CollisionActor__handleSpeed(CollisionActor *this)
 
   v2 = sub_6014C4A4((int)FIELD_U8(this, 0x288));
   v3 = (v2 >> 20) & 0xFF0;
-  x = FIELD_U32(this, 0x0).speed.x;
+  x = FIELD_F32(this, 0x78);
   v5 = (float)(v2 & 0xFFFFFF) * 0.000000059605;
-  v6 = FIELD_U32(this, 0x0).speed.y
+  v6 = FIELD_F32(this, 0x7C)
      + (float)(x * (float)(*(float *)((char *)sinLutTable + v3) + (float)(*(float *)((char *)&sinLutTable[1] + v3) * v5)));
   v7 = x * (float)(*(float *)((char *)&sinLutTable[2] + v3) + (float)(v5 * *(float *)((char *)&sinLutTable[3] + v3)));
   if ( FIELD_U8(this, 0x17A6) || FIELD_U8(this, 0x17A5) )
@@ -74,8 +74,8 @@ LABEL_14:
   if ( v12 == 0.0 )
     goto LABEL_15;
 LABEL_16:
-  FIELD_U32(this, 0x0).position.x = FIELD_U32(this, 0x0).position.x + (float)(v10 + v12);
-  result = v9 + FIELD_U32(this, 0x0).position.y;
-  FIELD_U32(this, 0x0).position.y = result;
+  FIELD_F32(this, 0x6C) = FIELD_F32(this, 0x6C) + (float)(v10 + v12);
+  result = v9 + FIELD_F32(this, 0x70);
+  FIELD_F32(this, 0x70) = result;
   return result;
 }

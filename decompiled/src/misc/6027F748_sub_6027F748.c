@@ -317,11 +317,11 @@ LABEL_14:
           v32 += v22;
         *v32 = (float)(v31 * 1.5) + 4.0;
         v33 = *v23;
-        y = FIELD_U32(v158, 0x0)._.position.y;
-        z = FIELD_U32(v158, 0x0)._.position.z;
+        y = FIELD_F32(v158, 0x70);
+        z = FIELD_F32(v158, 0x74);
         if ( *v147 > v22 )
           v33 += 3 * v22;
-        *v33 = FIELD_U32(v158, 0x0)._.position.x;
+        *v33 = FIELD_F32(v158, 0x6C);
         v33[1] = y;
         v33[2] = z;
         v36 = sead__Random__getU32((void *)(dword_60C9CF0C + 1340));
@@ -348,12 +348,12 @@ LABEL_14:
         HIWORD(v42) = 16656;
         *v41 = v42;
         v41[1] = v42;
-        v43 = &FIELD_U32(v158, 0x0)._._.vtable + v22;
+        v43 = &FIELD_U32(v158, 0x0) + v22;
         v43[2127] = 0;
         v44 = v43 + 2127;
         v43[1627] = 0;
         v45 = v43 + 1627;
-        v46 = &FIELD_U32(v158, 0x0)._._.vtable + 3 * v22;
+        v46 = &FIELD_U32(v158, 0x0) + 3 * v22;
         v46[2627] = 0;
         v46[2628] = 0;
         v46[2629] = 0;
@@ -407,7 +407,7 @@ LABEL_67:
         v61 = *v60;
         v62 = v60[1];
         *v53 = v57 + v55;
-        v63 = &FIELD_U32(v158, 0x0)._._.vtable + v22;
+        v63 = &FIELD_U32(v158, 0x0) + v22;
         v64 = (int)(float)((float)((float)(v61 + (float)((float)((float)(v55 & 0xFFFFFF) * v62) * 0.000000059605))
                                  * 600.0)
                          * 65536.0)
@@ -451,7 +451,7 @@ LABEL_67:
         v86 = *v85;
         if ( *v85 == 10 )
         {
-          v96 = (float *)(&FIELD_U32(v158, 0x0)._._.vtable + 3 * v22);
+          v96 = (float *)(&FIELD_U32(v158, 0x0) + 3 * v22);
           v97 = v96[2628] - v84;
           v98 = v96[2627] - v83;
           v99 = sqrtf(
@@ -657,9 +657,9 @@ LABEL_67:
   }
   while ( v22 != 150 );
   v136 = *(float *)&v158[2]._.collisionMgr[3668];
-  FIELD_U32(v158, 0x0)._.position.x = 0.0;
-  FIELD_U32(v158, 0x0)._.position.y = 0.0;
-  FIELD_U32(v158, 0x0)._.position.z = v136;
+  FIELD_F32(v158, 0x6C) = 0.0;
+  FIELD_F32(v158, 0x70) = 0.0;
+  FIELD_F32(v158, 0x74) = v136;
   LODWORD(v162) = 1065353216;
   *((float *)&v162 + 1) = v136;
   *(_QWORD *)&v158[1]._._.aCollider.activeNode.next = 1065353216;

@@ -21,20 +21,20 @@ int __fastcall sub_606A94C0(StageActor *a1)
   ModelWrapper *v10; // r6
   ModelWrapper *v11; // r0
 
-  settings1 = FIELD_U32(a1, 0x0).settings1;
-  v3 = (*(int (__fastcall **)(StageActor *))(FIELD_U32(a1, 0x0).vtable + 228))(a1);
-  (*(void (__fastcall **)(StageActor *))(FIELD_U32(a1, 0x0).vtable + 224))(a1);
+  settings1 = FIELD_U32(a1, 0x14);
+  v3 = (*(int (__fastcall **)(StageActor *))(FIELD_U32(a1, 0x0) + 228))(a1);
+  (*(void (__fastcall **)(StageActor *))(FIELD_U32(a1, 0x0) + 224))(a1);
   v4 = settings1 & 7;
   if ( v4 >= v3 )
     LOWORD(v4) = 0;
-  v5 = 52 * (__int16)v4 + (*(int (__fastcall **)(StageActor *))(FIELD_U32(a1, 0x0).vtable + 224))(a1);
-  FIELD_U32(a1, 0x6C).x = FIELD_F32(v5, 8) + FIELD_U32(a1, 0x6C).x;
-  FIELD_U32(a1, 0x6C).y = FIELD_F32(v5, 12) + FIELD_U32(a1, 0x6C).y;
-  v6 = (_DWORD *)(*(int (__fastcall **)(StageActor *))(FIELD_U32(a1, 0x0).vtable + 232))(a1);
+  v5 = 52 * (__int16)v4 + (*(int (__fastcall **)(StageActor *))(FIELD_U32(a1, 0x0) + 224))(a1);
+  FIELD_F32(a1, 0x6C) = FIELD_F32(v5, 8) + FIELD_F32(a1, 0x6C);
+  FIELD_F32(a1, 0x70) = FIELD_F32(v5, 12) + FIELD_F32(a1, 0x70);
+  v6 = (_DWORD *)(*(int (__fastcall **)(StageActor *))(FIELD_U32(a1, 0x0) + 232))(a1);
   *(float *)&v7 = (float)-(v6[1] + v6[3]) - FIELD_F32(v5, 12);
   FIELD_F32(a1, 0x1EC) = (float)(v6[2] - *v6) - FIELD_F32(v5, 8);
   FIELD_U32(a1, 0x1F0) = v7;
-  v8 = (void *)(*(int (__fastcall **)(StageActor *))(FIELD_U32(a1, 0x0).vtable + 220))(a1);
+  v8 = (void *)(*(int (__fastcall **)(StageActor *))(FIELD_U32(a1, 0x0) + 220))(a1);
   Model2 = (void *)Resource_getModel2(v8, (sead__SafeString *)v5, 0, 0, 0, 0, 0, 0, 0);
   v10 = (ModelWrapper *)operator_new_8DE25C(0x30u, 0, 4);
   v11 = ModelWrapper_ctor(v10, Model2, 0, 0, 0, 0, 0);

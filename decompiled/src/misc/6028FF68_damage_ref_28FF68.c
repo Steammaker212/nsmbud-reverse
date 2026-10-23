@@ -58,7 +58,7 @@ signed int __fastcall damage_ref_28FF68(int *a1)
     AnimationCtrl_setRepeat((ModelAnimation *)(*(_DWORD *)v12 + 4), dword_60C8F5A4[4 * a1[12] + 3]);
     v5 = (ModelWrapper *)a1[10];
   }
-  v15 = *FIELD_U32(v5, 0x18).animations;
+  v15 = *FIELD_U32(v5, 0x1C);
   a1[11] = (int)v15;
   v16 = a1[9];
   v19[0] = &sead__SafeStringBase__vtable;

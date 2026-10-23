@@ -39,8 +39,8 @@ int __fastcall sub_602740AC(int a1)
   v5 = ModelWrapper_ctor(v4, Model2, 3, 0, 0, 0, 0);
   ModelWrapper_setup(v5, (int)v2, 0, 0);
   v1[1] = (int)v4;
-  animations = (int *)FIELD_U32(v4, 0x8).animations;
-  count = FIELD_U32(v4, 0x8).count;
+  animations = (int *)FIELD_U32(v4, 0xC);
+  count = FIELD_U32(v4, 0x8);
   v8 = animations + 2;
   v9 = *animations;
   if ( count <= 2 )

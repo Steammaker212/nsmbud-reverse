@@ -20,26 +20,26 @@ int __fastcall BossBase__vf15C(BossBase *a1)
   int (__fastcall *v5)(BossBase *); // r1
 
   FIELD_U8(a1, 0x18A8) = 1;
-  FIELD_U32(a1, 0x18A4) = (*(int (__fastcall **)(BossBase *))(FIELD_U32(a1, 0x0)._._._._.vtable + 0x314))(a1);
-  (*(void (__fastcall **)(BossBase *))(FIELD_U32(a1, 0x0)._._._._.vtable + 0x300))(a1);
-  v2 = *(void (__fastcall **)(BossBase *, int))(FIELD_U32(a1, 0x0)._._._._.vtable + 0x2DC);
-  v3 = (*(int (__fastcall **)(BossBase *))(FIELD_U32(a1, 0x0)._._._._.vtable + 0x2FC))(a1);
+  FIELD_U32(a1, 0x18A4) = (*(int (__fastcall **)(BossBase *))(FIELD_U32(a1, 0x0) + 0x314))(a1);
+  (*(void (__fastcall **)(BossBase *))(FIELD_U32(a1, 0x0) + 0x300))(a1);
+  v2 = *(void (__fastcall **)(BossBase *, int))(FIELD_U32(a1, 0x0) + 0x2DC);
+  v3 = (*(int (__fastcall **)(BossBase *))(FIELD_U32(a1, 0x0) + 0x2FC))(a1);
   v2(a1, v3);
   v4 = FIELD_U32(a1, 0x189C);
-  (*(void (__fastcall **)(BossBase *))(FIELD_U32(a1, 0x0)._._._._.vtable + 0x3A0))(a1);
+  (*(void (__fastcall **)(BossBase *))(FIELD_U32(a1, 0x0) + 0x3A0))(a1);
   if ( v4 <= 0 )
   {
     FIELD_U32(a1, 0x189C) = 0;
-    (*(void (__fastcall **)(BossBase *))(FIELD_U32(a1, 0x0)._._._._.vtable + 0x3D0))(a1);
-    (*(void (__fastcall **)(BossBase *))(FIELD_U32(a1, 0x0)._._._._.vtable + 0x354))(a1);
-    (*(void (__fastcall **)(BossBase *))(FIELD_U32(a1, 0x0)._._._._.vtable + 0x370))(a1);
-    v5 = *(int (__fastcall **)(BossBase *))(FIELD_U32(a1, 0x0)._._._._.vtable + 0x320);
+    (*(void (__fastcall **)(BossBase *))(FIELD_U32(a1, 0x0) + 0x3D0))(a1);
+    (*(void (__fastcall **)(BossBase *))(FIELD_U32(a1, 0x0) + 0x354))(a1);
+    (*(void (__fastcall **)(BossBase *))(FIELD_U32(a1, 0x0) + 0x370))(a1);
+    v5 = *(int (__fastcall **)(BossBase *))(FIELD_U32(a1, 0x0) + 0x320);
   }
   else
   {
-    (*(void (__fastcall **)(BossBase *))(FIELD_U32(a1, 0x0)._._._._.vtable + 0x3CC))(a1);
-    (*(void (__fastcall **)(BossBase *))(FIELD_U32(a1, 0x0)._._._._.vtable + 0x350))(a1);
-    v5 = *(int (__fastcall **)(BossBase *))(FIELD_U32(a1, 0x0)._._._._.vtable + 0x36C);
+    (*(void (__fastcall **)(BossBase *))(FIELD_U32(a1, 0x0) + 0x3CC))(a1);
+    (*(void (__fastcall **)(BossBase *))(FIELD_U32(a1, 0x0) + 0x350))(a1);
+    v5 = *(int (__fastcall **)(BossBase *))(FIELD_U32(a1, 0x0) + 0x36C);
   }
   return v5(a1);
 }

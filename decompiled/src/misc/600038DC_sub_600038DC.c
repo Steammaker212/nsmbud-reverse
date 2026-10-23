@@ -14,18 +14,18 @@ Enemy *__fastcall sub_600038DC(Enemy *result)
   float v2; // s0
   float v3; // s0
 
-  y = FIELD_U32(result, 0x0)._._.speed.y;
-  v2 = FIELD_U32(result, 0x0)._.field_179C;
+  y = FIELD_F32(result, 0x7C);
+  v2 = FIELD_F32(result, 0x179C);
   if ( y >= v2 )
   {
-    v3 = FIELD_U32(result, 0x0)._.field_1798;
+    v3 = FIELD_F32(result, 0x1798);
     if ( y > v3 )
-      FIELD_U32(result, 0x0)._._.speed.y = v3;
+      FIELD_F32(result, 0x7C) = v3;
   }
   else
   {
-    FIELD_U32(result, 0x0)._._.speed.y = v2;
+    FIELD_F32(result, 0x7C) = v2;
   }
-  FIELD_U32(result, 0x0)._.field_17A6 = 1;
+  FIELD_U8(result, 0x17A6) = 1;
   return result;
 }

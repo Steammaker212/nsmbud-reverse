@@ -23,7 +23,7 @@ unsigned int __fastcall sub_605CCA10(StageActor *a1)
     if ( v2 )
       Player_ReleaseCarryableEnemy(v2, (int)a1);
   }
-  LODWORD(FIELD_U32(a1, 0x6C).z) = a1[9].aCollider.info.field_14;
+  LODWORD(FIELD_F32(a1, 0x74)) = a1[9].aCollider.info.field_14;
   FIELD_U8(a1, 0x21A) &= 0xF8u;
   category = a1[9].aCollider.info.category;
   p_category = &a1[9].aCollider.info.category;

@@ -13,22 +13,22 @@ ActiveColliderMgr *__fastcall ActiveColliderMgr_addToCreateList(ActiveColliderMg
   ActiveColliderNode *pCreateNode; // r2
   ActiveColliderNode *last; // r3
 
-  if ( !FIELD_U32(aCollider, 0x1C).next && !FIELD_U32(aCollider, 0x1C).prev )
+  if ( !FIELD_U32(aCollider, 0x20) && !FIELD_U32(aCollider, 0x24) )
   {
     pCreateNode = &FIELD_U32(aCollider, 0x1C);
-    if ( FIELD_U32(this, 0x1C).first != &FIELD_U32(aCollider, 0x1C) )
+    if ( FIELD_U32(this, 0x20) != &FIELD_U32(aCollider, 0x1C) )
     {
-      last = FIELD_U32(this, 0x1C).last;
+      last = FIELD_U32(this, 0x24);
       if ( last )
       {
         FIELD_U32(last, 0x4) = pCreateNode;
-        FIELD_U32(aCollider, 0x1C).prev = FIELD_U32(this, 0x1C).last;
+        FIELD_U32(aCollider, 0x24) = FIELD_U32(this, 0x24);
       }
       else
       {
-        FIELD_U32(this, 0x1C).first = pCreateNode;
+        FIELD_U32(this, 0x20) = pCreateNode;
       }
-      FIELD_U32(this, 0x1C).last = pCreateNode;
+      FIELD_U32(this, 0x24) = pCreateNode;
       FIELD_U8(aCollider, 0x6E) &= ~2u;
       return (ActiveColliderMgr *)ActiveCollider_reset(aCollider);
     }

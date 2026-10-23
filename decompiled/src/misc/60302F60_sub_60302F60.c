@@ -31,7 +31,7 @@ ModelAnimation *__fastcall sub_60302F60(_DWORD *a1)
   ModelWrapper_setup(v6, v3, 0, 0);
   a1[1738] = v5;
   a1 += 1738;
-  v7 = (int)*FIELD_U32(v5, 0x8).animations;
+  v7 = (int)*FIELD_U32(v5, 0xC);
   a2.vtable = &sead__SafeStringBase__vtable;
   a2.cstr = "wait";
   SkeletalAnim_play(v7, v3, (int)&a2);

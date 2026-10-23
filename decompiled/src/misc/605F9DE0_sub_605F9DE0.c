@@ -14,8 +14,8 @@ ActiveColliderMgr *__fastcall sub_605F9DE0(StateActor *a1)
   ActiveColliderMgr *result; // r0
   ActiveColliderMgr *v3; // r5
 
-  p_aCollider = &FIELD_U32(a1, 0x0)._.aCollider;
-  ActiveCollider__init(&FIELD_U32(a1, 0x0)._.aCollider, &FIELD_U32(a1, 0x0)._, &stru_60C0D648, 0);
+  p_aCollider = &FIELD_U32(a1, 0xBC);
+  ActiveCollider__init(&FIELD_U32(a1, 0xBC), &FIELD_U32(a1, 0x0), &stru_60C0D648, 0);
   result = *(ActiveColliderMgr **)(dword_60C99DD4 + 764);
   if ( result != (ActiveColliderMgr *)4 )
   {

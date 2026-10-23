@@ -15,7 +15,7 @@ int __fastcall KoopalingBase__vf5C8(CollisionActor *a1)
   int result; // r0
 
   j_ModelWrapper_updateAnims(*(_DWORD *)&a1[1].collisionMgr[384]);
-  (*(void (__fastcall **)(CollisionActor *))(FIELD_U32(a1, 0x0)._.vtable + 1040))(a1);
+  (*(void (__fastcall **)(CollisionActor *))(FIELD_U32(a1, 0x0) + 1040))(a1);
   CollisionActor__handleGravity(a1);
   v2 = CollisionActor__handleSpeed(a1);
   result = *(_DWORD *)&a1[1].collisionMgr[380];
@@ -23,14 +23,14 @@ int __fastcall KoopalingBase__vf5C8(CollisionActor *a1)
   {
     result = LOWORD(a1[1]._.aCollider.activeNode.prev);
     if ( !LOWORD(a1[1]._.aCollider.activeNode.prev) )
-      return (*(int (__fastcall **)(CollisionActor *, float))(FIELD_U32(a1, 0x0)._.vtable + 1060))(a1, v2);
+      return (*(int (__fastcall **)(CollisionActor *, float))(FIELD_U32(a1, 0x0) + 1060))(a1, v2);
   }
   else if ( result == 1 )
   {
     result = LOWORD(a1[1]._.aCollider.activeNode.prev);
     if ( !LOWORD(a1[1]._.aCollider.activeNode.prev) )
     {
-      LOWORD(a1[1]._.aCollider.activeNode.prev) = (*(int (__fastcall **)(CollisionActor *, float))(FIELD_U32(a1, 0x0)._.vtable + 1072))(
+      LOWORD(a1[1]._.aCollider.activeNode.prev) = (*(int (__fastcall **)(CollisionActor *, float))(FIELD_U32(a1, 0x0) + 1072))(
                                                     a1,
                                                     v2);
       *(_DWORD *)&a1[1].collisionMgr[460] = 0;

@@ -11,12 +11,12 @@
 FireballBase *__fastcall FireballBase_ctor(FireballBase *this, ActorBuildInfo *buildInfo)
 {
   StateActor_ctor(&FIELD_U32(this, 0x0), buildInfo);
-  FIELD_U32(this, 0x0)._._._.vtable = (int)FireballBase_vtable;
+  FIELD_U32(this, 0x0) = (int)FireballBase_vtable;
   LightMask__ctor(&FIELD_U32(this, 0x17D4));
   FIELD_U32(this, 0x17FC) = 0;
-  sub_6000BAC8(&FIELD_U32(this, 0x1800), FIELD_U32(this, 0x0)._._._.id);
+  sub_6000BAC8(&FIELD_U32(this, 0x1800), FIELD_U32(this, 0x8));
   FIELD_U32(this, 0x1800) = (int)off_60BD23D8;
-  sub_6000B63C(&FIELD_U32(this, 0x1824), FIELD_U32(this, 0x0)._._._.id);
+  sub_6000B63C(&FIELD_U32(this, 0x1824), FIELD_U32(this, 0x8));
   FIELD_U32(this, 0x1824) = (int)off_60BD240C;
   FIELD_U32(this, 0x1848) = 0;
   FIELD_U32(this, 0x184C) = 0;
@@ -29,7 +29,7 @@ FireballBase *__fastcall FireballBase_ctor(FireballBase *this, ActorBuildInfo *b
   FIELD_U32(this, 0x1868) = 0;
   FIELD_U32(this, 0x1864) = 0;
   EffectWrapper_ctor(&FIELD_U32(this, 0x1874));
-  FIELD_U32(this, 0x1874)._.vtable = (int)off_60BC1450;
+  FIELD_U32(this, 0x1874) = (int)off_60BC1450;
   LightSource__ctor(&FIELD_U32(this, 0x18DC));
   ActiveCollider_ctor(&FIELD_U32(this, 0x1924));
   FIELD_U32(this, 0x1A54) = (int)off_60BD2430;

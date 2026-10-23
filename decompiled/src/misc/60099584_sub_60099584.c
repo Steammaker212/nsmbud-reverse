@@ -32,10 +32,10 @@ int __fastcall sub_60099584(StateActor *a1)
     v3 += 4 * v4;
   if ( *(float *)(*(_DWORD *)v3 + 20) >= 25.0 )
   {
-    (*(void (__fastcall **)(StateActor *))(FIELD_U32(a1, 0x0)._._.vtable + 1312))(a1);
+    (*(void (__fastcall **)(StateActor *))(FIELD_U32(a1, 0x0) + 1312))(a1);
     v5 = **(_DWORD **)v2;
     v6 = *(void (__fastcall **)(int, int, int *))(*(_DWORD *)v5 + 108);
-    v7 = (*(int (__fastcall **)(StateActor *))(FIELD_U32(a1, 0x0)._._.vtable + 1120))(a1);
+    v7 = (*(int (__fastcall **)(StateActor *))(FIELD_U32(a1, 0x0) + 1120))(a1);
     v6(v5, v7, target);
     LODWORD(speed[0].x) = target[3];
     LODWORD(speed[0].y) = target[7];
@@ -43,18 +43,18 @@ int __fastcall sub_60099584(StateActor *a1)
     EffectWrapper_update((EffectWrapper *)&a1[1]._.collisionMgr[1580], 1020, speed, 0, 0);
   }
   *(_DWORD *)&a1[1]._.collisionMgr[376] = sub_600B2FD4(a1);
-  v8 = StageActor__directionToPlayerX(a1, &FIELD_U32(a1, 0x0)._.position);
-  FIELD_U32(a1, 0x0)._.direction = v8;
+  v8 = StageActor__directionToPlayerX(a1, &FIELD_U32(a1, 0x6C));
+  FIELD_U32(a1, 0x50) = v8;
   v9 = -byte_60AFE3F4[v8];
-  target[0] = (*(int (__fastcall **)(StateActor *))(FIELD_U32(a1, 0x0)._._.vtable + 1216))(a1) * v9;
-  LODWORD(speed[0].x) = (*(int (__fastcall **)(StateActor *))(FIELD_U32(a1, 0x0)._._.vtable + 1108))(a1);
-  moveValueTo(&FIELD_U32(a1, 0x0)._.rotation.y, target, (int *)speed);
+  target[0] = (*(int (__fastcall **)(StateActor *))(FIELD_U32(a1, 0x0) + 1216))(a1) * v9;
+  LODWORD(speed[0].x) = (*(int (__fastcall **)(StateActor *))(FIELD_U32(a1, 0x0) + 1108))(a1);
+  moveValueTo(&FIELD_U32(a1, 0xA0), target, (int *)speed);
   v10 = *(_DWORD *)(*(_DWORD *)v2 + 12);
   v11 = *(_DWORD *)(*(_DWORD *)v2 + 68);
   if ( *(_DWORD *)(*(_DWORD *)v2 + 8) > v11 )
     v10 += 4 * v11;
   result = *(unsigned __int8 *)(*(_DWORD *)v10 + 28);
   if ( (result & 0x20) != 0 )
-    return (*(int (__fastcall **)(StateActor *, void *))(FIELD_U32(a1, 0x0)._._.vtable + 192))(a1, &unk_60C825F8);
+    return (*(int (__fastcall **)(StateActor *, void *))(FIELD_U32(a1, 0x0) + 192))(a1, &unk_60C825F8);
   return result;
 }

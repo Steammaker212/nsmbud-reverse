@@ -15,7 +15,7 @@ StageActor *__fastcall CooliganSunglasses__ctor(ActorBuildInfo *buildInfo)
 
   this = (CooliganSunglasses *)operator_new(0x2ECu);
   this_ = (CooliganSunglasses *)StageActor__ctor(&FIELD_U32(this, 0x0), buildInfo);
-  FIELD_U32(this_, 0x0)._.vtable = (int)off_60BF03F8;
+  FIELD_U32(this_, 0x0) = (int)off_60BF03F8;
   FIELD_U32(this_, 0x284) = 0;
   FIELD_U8(this_, 0x288) = 0;
   *(_QWORD *)&FIELD_U32(this_, 0x28C) = 1065353216;

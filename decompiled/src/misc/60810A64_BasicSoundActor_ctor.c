@@ -14,7 +14,7 @@ SoundActor *__fastcall BasicSoundActor_ctor(SoundActor *a1, int a2)
 
   SoundArchivePlayer = (int (__fastcall ***)(_DWORD, int *))SoundSystem_getSoundArchivePlayer(SoundSystem_instance);
   SoundActor_ctor(a1, 1, SoundArchivePlayer);
-  *(_DWORD *)FIELD_U32(a1, 0x0).nn_atk_SoundActor_data = BasicSoundActor_vtable;
+  *(_DWORD *)FIELD_U8(a1, 0x0) = BasicSoundActor_vtable;
   *(_DWORD *)a1[1]._.nn_atk_SoundActor_data = 0;
   *(_DWORD *)&a1[1]._.nn_atk_SoundActor_data[4] = -1;
   *(_DWORD *)&a1[1]._.nn_atk_SoundActor_data[12] = 1065353216;
@@ -72,7 +72,7 @@ SoundActor *__fastcall BasicSoundActor_ctor(SoundActor *a1, int a2)
   a1[2].field_84 = 1065353216;
   a1[2].field_88 = 64;
   nn__atk__SoundActor__SetPlayableSoundCount((int)a1, 0, 12);
-  *(_DWORD *)&FIELD_U32(a1, 0x0).nn_atk_SoundActor_data[120] = 14;
+  *(_DWORD *)&FIELD_U8(a1, 0x0)[120] = 14;
   FIELD_U32(a1, 0x80) = a2;
   return a1;
 }

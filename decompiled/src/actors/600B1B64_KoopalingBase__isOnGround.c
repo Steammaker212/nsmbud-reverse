@@ -23,11 +23,11 @@ bool __fastcall KoopalingBase__isOnGround(BossBase *a1)
   if ( BossBase__isOnGround(a1) == 1 )
   {
     v3 = ActiveColliderMgr_instance;
-    if ( (ActiveColliderMgr_isInActiveList(ActiveColliderMgr_instance, &FIELD_U32(a1, 0x0)._._._.aCollider)
-       || ActiveColliderMgr_isInCreateList(v3, &FIELD_U32(a1, 0x0)._._._.aCollider) == 1)
+    if ( (ActiveColliderMgr_isInActiveList(ActiveColliderMgr_instance, &FIELD_U32(a1, 0xBC))
+       || ActiveColliderMgr_isInCreateList(v3, &FIELD_U32(a1, 0xBC)) == 1)
       && (a1[1]._._._._.playerId & 2) == 0 )
     {
-      CurrentState = StateMgr__getCurrentState(&FIELD_U32(a1, 0x0)._.states.manager);
+      CurrentState = StateMgr__getCurrentState(&FIELD_U32(a1, 0x17C4));
       v5 = (*((int (__fastcall **)(StateBase *))FIELD_U32(CurrentState, 0x0) + 2))(CurrentState);
       return v5 != (*(int (**)(void))(dword_60C8341C + 8))();
     }

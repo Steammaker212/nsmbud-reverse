@@ -31,13 +31,13 @@ signed int __fastcall Seaweed_onCreate(Seaweed *this)
   int *v20; // r1
   sead__SafeString identifier; // [sp+24h] [bp-2Ch] BYREF
 
-  settins1 = FIELD_U32(this, 0x0)._.settings1;
+  settins1 = FIELD_U32(this, 0x14);
   FIELD_U32(this, 0x290) = settins1 & 0xF;
   numLeafs = ((settins1 >> 4) & 3) + 1;
   if ( numLeafs >= 3 )
     numLeafs = 3;
   FIELD_U32(this, 0x294) = numLeafs;
-  resource = (void *)Profile__getResArchiveById(FIELD_U32(this, 0x0)._.profile, 0);
+  resource = (void *)Profile__getResArchiveById(FIELD_U32(this, 0xC), 0);
   numLeafs_ = FIELD_U32(this, 0x294);
   if ( numLeafs_ >= 1 )
   {
@@ -52,10 +52,10 @@ signed int __fastcall Seaweed_onCreate(Seaweed *this)
       leafId_ = 0;
       if ( leafId < 3 )
         leafId_ = leafId;
-      v11 = &FIELD_U32(this, 0x0)._.vtable + leafId_;
+      v11 = &FIELD_U32(this, 0x0) + leafId_;
       v11[161] = (int)modelWrapper_;
-      v12 = (int)*FIELD_U32(modelWrapper_, 0x8).animations;
-      resource_ = Profile__getResArchiveById(FIELD_U32(this, 0x0)._.profile, 0);
+      v12 = (int)*FIELD_U32(modelWrapper_, 0xC);
+      resource_ = Profile__getResArchiveById(FIELD_U32(this, 0xC), 0);
       identifier.vtable = &sead__SafeStringBase__vtable;
       identifier.cstr = "wait";
       SkeletalAnim_play(v12, resource_, (const char **)&identifier);
@@ -66,8 +66,8 @@ signed int __fastcall Seaweed_onCreate(Seaweed *this)
       numLeafs_ = FIELD_U32(this, 0x294);
     }
   }
-  FIELD_U32(this, 0x0).position.x = FIELD_U32(this, 0x0).position.x + 8.0;
-  FIELD_U32(this, 0x0).position.y = FIELD_U32(this, 0x0).position.y + -16.0;
+  FIELD_F32(this, 0x6C) = FIELD_F32(this, 0x6C) + 8.0;
+  FIELD_F32(this, 0x70) = FIELD_F32(this, 0x70) + -16.0;
   scaleIdx = FIELD_U32(this, 0x290);
   if ( scaleIdx > 4 )
   {
@@ -79,9 +79,9 @@ signed int __fastcall Seaweed_onCreate(Seaweed *this)
     v16 = flt_60B08E20[scaleIdx];
     v17 = flt_60B08E00[scaleIdx];
   }
-  FIELD_U32(this, 0x0).scale.x = v16;
-  FIELD_U32(this, 0x0).scale.y = v16;
-  FIELD_U32(this, 0x0).scale.z = v16;
+  FIELD_F32(this, 0x90) = v16;
+  FIELD_F32(this, 0x94) = v16;
+  FIELD_F32(this, 0x98) = v16;
   if ( numLeafs_ >= 1 )
   {
     v18 = 0;
@@ -91,7 +91,7 @@ signed int __fastcall Seaweed_onCreate(Seaweed *this)
       if ( (unsigned int)v18 < 3 )
         v19 = v18;
       ++v18;
-      v20 = &FIELD_U32(this, 0x0)._.vtable + v19;
+      v20 = &FIELD_U32(this, 0x0) + v19;
       *(float *)(**(_DWORD **)(v20[161] + 12) + 24) = v17;
       *(float *)(**(_DWORD **)(v20[161] + 28) + 24) = v17;
     }

@@ -52,12 +52,12 @@ int __fastcall sub_6008A214(Enemy *a1, ActiveCollider *a2, ActiveCollider *a3)
         dword_60C7B370 = (int)&off_60BC00B0;
         _cxa_guard_release(&dword_60C7B374);
       }
-      if ( owner && (*(int (__fastcall **)(StageActor *, int *))FIELD_U32(owner, 0x0).vtable)(owner, &dword_60C7B370) == 1 )
+      if ( owner && (*(int (__fastcall **)(StageActor *, int *))FIELD_U32(owner, 0x0))(owner, &dword_60C7B370) == 1 )
       {
         if ( a1[1]._._.collisionMgr[300] )
-          y = FIELD_U32(a1, 0x0)._._.position.y - FIELD_U32(a1, 0x0)._._.field_248.y;
+          y = FIELD_F32(a1, 0x70) - FIELD_F32(a1, 0x24C);
         else
-          y = FIELD_U32(a1, 0x0)._._.speed.y;
+          y = FIELD_F32(a1, 0x7C);
         if ( y > 0.0 )
         {
           ActiveCollider_getCenterY(a3);
@@ -68,12 +68,12 @@ int __fastcall sub_6008A214(Enemy *a1, ActiveCollider *a2, ActiveCollider *a3)
             if ( owner[2]._.field_20.previous == (sead_ListNode *)3 )
             {
               sub_602A3178(owner, &dword_60CC4B7C);
-              (*(void (__fastcall **)(Enemy *))(FIELD_U32(a1, 0x0)._._._.vtable + 404))(a1);
-              (*(void (__fastcall **)(Enemy *, StageActor *))(FIELD_U32(a1, 0x0)._._._.vtable + 408))(a1, owner);
+              (*(void (__fastcall **)(Enemy *))(FIELD_U32(a1, 0x0) + 404))(a1);
+              (*(void (__fastcall **)(Enemy *, StageActor *))(FIELD_U32(a1, 0x0) + 408))(a1, owner);
               playerId = (unsigned __int8)FIELD_U8(owner, 0x54);
               goto LABEL_24;
             }
-            (*(void (__fastcall **)(Enemy *, StageActor *))(FIELD_U32(a1, 0x0)._._._.vtable + 804))(a1, owner);
+            (*(void (__fastcall **)(Enemy *, StageActor *))(FIELD_U32(a1, 0x0) + 804))(a1, owner);
             sub_602A3178(owner, &dword_60CC4B7C);
             goto LABEL_28;
           }
@@ -81,7 +81,7 @@ int __fastcall sub_6008A214(Enemy *a1, ActiveCollider *a2, ActiveCollider *a3)
         v37 = FIELD_U8(owner, 0x54);
         if ( v37 <= 3 )
         {
-          v31 = &FIELD_U32(a1, 0x0)._._._.vtable + v37;
+          v31 = &FIELD_U32(a1, 0x0) + v37;
           if ( v31[1579] >= 1 && owner[2]._.field_20.previous == (sead_ListNode *)3 )
             goto LABEL_27;
         }
@@ -89,21 +89,21 @@ int __fastcall sub_6008A214(Enemy *a1, ActiveCollider *a2, ActiveCollider *a3)
       break;
     case 1:
       v10 = FIELD_U32(a3, 0x40);
-      CurrentState = StateMgr__getCurrentState(&FIELD_U32(a1, 0x0).states.manager);
+      CurrentState = StateMgr__getCurrentState(&FIELD_U32(a1, 0x17C4));
       v12 = (*((int (__fastcall **)(StateBase *))FIELD_U32(CurrentState, 0x0) + 2))(CurrentState);
       if ( v12 == (*(int (**)(void))(dword_60C81D4C + 8))() )
       {
-        FIELD_U32(a1, 0x0)._._.playerId = FIELD_U8(v10, 0x54);
-        v13 = FIELD_U32(v10, 0x6C).x > FIELD_U32(a1, 0x0)._._.position.x;
+        FIELD_U8(a1, 0x54) = FIELD_U8(v10, 0x54);
+        v13 = FIELD_F32(v10, 0x6C) > FIELD_F32(a1, 0x6C);
         v14 = (float)byte_60AFE3F4[v13];
-        FIELD_U32(a1, 0x0)._._.direction = v13;
-        FIELD_U32(a1, 0x0)._._.speed.x = v14 * 3.5;
-        FIELD_U32(a1, 0x0)._._.speed.y = 2.5;
-        FIELD_U32(a1, 0x0)._._.speed.z = 0.0;
-        (*(void (__fastcall **)(Enemy *, int *))(FIELD_U32(a1, 0x0)._._._.vtable + 192))(a1, &dword_60C81D8C);
+        FIELD_U32(a1, 0x50) = v13;
+        FIELD_F32(a1, 0x78) = v14 * 3.5;
+        FIELD_F32(a1, 0x7C) = 2.5;
+        FIELD_F32(a1, 0x80) = 0.0;
+        (*(void (__fastcall **)(Enemy *, int *))(FIELD_U32(a1, 0x0) + 192))(a1, &dword_60C81D8C);
         goto LABEL_28;
       }
-      (*(void (__fastcall **)(Enemy *, StageActor *))(FIELD_U32(a1, 0x0)._._._.vtable + 804))(a1, v10);
+      (*(void (__fastcall **)(Enemy *, StageActor *))(FIELD_U32(a1, 0x0) + 804))(a1, v10);
       v27 = FIELD_U32(a3, 0x40);
       if ( ((unsigned int)&dword_60C7B374 & ~(1611179320 << v28) & 1) == 0 && _cxa_guard_acquire(&dword_60C7B374) )
       {
@@ -111,25 +111,25 @@ int __fastcall sub_6008A214(Enemy *a1, ActiveCollider *a2, ActiveCollider *a3)
         _cxa_guard_release(&dword_60C7B374);
       }
       v6 = 1;
-      if ( v27 && (*(int (__fastcall **)(StageActor *, int *))FIELD_U32(v27, 0x0).vtable)(v27, &dword_60C7B370) == 1 )
+      if ( v27 && (*(int (__fastcall **)(StageActor *, int *))FIELD_U32(v27, 0x0))(v27, &dword_60C7B370) == 1 )
         goto LABEL_35;
       break;
     case 2:
       v15 = FIELD_U32(a3, 0x40);
-      v16 = StateMgr__getCurrentState(&FIELD_U32(a1, 0x0).states.manager);
+      v16 = StateMgr__getCurrentState(&FIELD_U32(a1, 0x17C4));
       v17 = (*((int (__fastcall **)(StateBase *))FIELD_U32(v16, 0x0) + 2))(v16);
       if ( v17 == (*(int (**)(void))(dword_60C81D4C + 8))() )
       {
         v19 = FIELD_U8(v15, 0x54);
         p_playerId = (float *)&FIELD_U8(v15, 0x54);
-        FIELD_U32(a1, 0x0)._._.playerId = v19;
-        v20 = p_playerId[6] > FIELD_U32(a1, 0x0)._._.position.x;
+        FIELD_U8(a1, 0x54) = v19;
+        v20 = p_playerId[6] > FIELD_F32(a1, 0x6C);
         v21 = (float)byte_60AFE3F4[v20];
-        FIELD_U32(a1, 0x0)._._.direction = v20;
-        FIELD_U32(a1, 0x0)._._.speed.x = v21 * 3.5;
-        FIELD_U32(a1, 0x0)._._.speed.y = 2.5;
-        FIELD_U32(a1, 0x0)._._.speed.z = 0.0;
-        (*(void (__fastcall **)(Enemy *, int *))(FIELD_U32(a1, 0x0)._._._.vtable + 192))(a1, &dword_60C81D8C);
+        FIELD_U32(a1, 0x50) = v20;
+        FIELD_F32(a1, 0x78) = v21 * 3.5;
+        FIELD_F32(a1, 0x7C) = 2.5;
+        FIELD_F32(a1, 0x80) = 0.0;
+        (*(void (__fastcall **)(Enemy *, int *))(FIELD_U32(a1, 0x0) + 192))(a1, &dword_60C81D8C);
       }
       else
       {
@@ -142,30 +142,30 @@ LABEL_24:
       v30 = 0;
       if ( playerId < 4 )
         v30 = (char)playerId;
-      v31 = &FIELD_U32(a1, 0x0)._._._.vtable + v30;
+      v31 = &FIELD_U32(a1, 0x0) + v30;
 LABEL_27:
       v31[1579] = 16;
       goto LABEL_28;
     case 3:
       v22 = FIELD_U32(a3, 0x40);
-      v23 = StateMgr__getCurrentState(&FIELD_U32(a1, 0x0).states.manager);
+      v23 = StateMgr__getCurrentState(&FIELD_U32(a1, 0x17C4));
       v24 = (*((int (__fastcall **)(StateBase *))FIELD_U32(v23, 0x0) + 2))(v23);
       if ( v24 == (*(int (**)(void))(dword_60C81D4C + 8))() )
       {
-        FIELD_U32(a1, 0x0)._._.playerId = FIELD_U8(v22, 0x54);
-        v25 = FIELD_U32(v22, 0x6C).x > FIELD_U32(a1, 0x0)._._.position.x;
+        FIELD_U8(a1, 0x54) = FIELD_U8(v22, 0x54);
+        v25 = FIELD_F32(v22, 0x6C) > FIELD_F32(a1, 0x6C);
         v26 = (float)byte_60AFE3F4[v25];
-        FIELD_U32(a1, 0x0)._._.direction = v25;
-        FIELD_U32(a1, 0x0)._._.speed.x = (float)(v26 * 3.5) * 1.5;
-        FIELD_U32(a1, 0x0)._._.speed.y = 2.5;
-        FIELD_U32(a1, 0x0)._._.speed.z = 0.0;
-        (*(void (__fastcall **)(Enemy *, int *))(FIELD_U32(a1, 0x0)._._._.vtable + 192))(a1, &dword_60C81D8C);
+        FIELD_U32(a1, 0x50) = v25;
+        FIELD_F32(a1, 0x78) = (float)(v26 * 3.5) * 1.5;
+        FIELD_F32(a1, 0x7C) = 2.5;
+        FIELD_F32(a1, 0x80) = 0.0;
+        (*(void (__fastcall **)(Enemy *, int *))(FIELD_U32(a1, 0x0) + 192))(a1, &dword_60C81D8C);
 LABEL_28:
         v6 = 1;
       }
       else
       {
-        (*(void (__fastcall **)(Enemy *, StageActor *))(FIELD_U32(a1, 0x0)._._._.vtable + 804))(a1, v22);
+        (*(void (__fastcall **)(Enemy *, StageActor *))(FIELD_U32(a1, 0x0) + 804))(a1, v22);
         v27 = FIELD_U32(a3, 0x40);
         if ( ((unsigned int)&dword_60C7B374 & ~(1611179544 << v33) & 1) == 0 && _cxa_guard_acquire(&dword_60C7B374) )
         {
@@ -173,7 +173,7 @@ LABEL_28:
           _cxa_guard_release(&dword_60C7B374);
         }
         v6 = 1;
-        if ( v27 && (*(int (__fastcall **)(StageActor *, int *))FIELD_U32(v27, 0x0).vtable)(v27, &dword_60C7B370) == 1 )
+        if ( v27 && (*(int (__fastcall **)(StageActor *, int *))FIELD_U32(v27, 0x0))(v27, &dword_60C7B370) == 1 )
 LABEL_35:
           sub_602A3178(v27, &dword_60CC4B7C);
       }

@@ -11,6 +11,6 @@
 void __fastcall sub_605D79F8(CollisionActor *a1, unsigned int a2)
 {
   if ( a2 == 2 && a1[1]._.aCollider._.containingHeap != 1 )
-    (*(void (__fastcall **)(CollisionActor *))(FIELD_U32(a1, 0x0)._.vtable + 200))(a1);
+    (*(void (__fastcall **)(CollisionActor *))(FIELD_U32(a1, 0x0) + 200))(a1);
   CollisionActor__afterCreate(a1, a2);
 }

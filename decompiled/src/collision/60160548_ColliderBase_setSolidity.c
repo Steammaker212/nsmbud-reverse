@@ -19,7 +19,7 @@ int __fastcall ColliderBase_setSolidity(ColliderBase *a1, int a2)
   v4 = FIELD_U32(a1, 0x134) & 0xFFFFFFF0;
   LODWORD(v6[0]) = *(_DWORD *)v3;
   HIDWORD(v6[0]) = v4 | a2;
-  (*(void (__fastcall **)(ColliderBase *, _QWORD *))(FIELD_U32(a1, 0x0).vtable + 0x38))(a1, v6);
+  (*(void (__fastcall **)(ColliderBase *, _QWORD *))(FIELD_U32(a1, 0x0) + 0x38))(a1, v6);
   sub_60153898(ColliderMgr_instance, a1, v3, v6);
   result = v6[0];
   *v3 = v6[0];

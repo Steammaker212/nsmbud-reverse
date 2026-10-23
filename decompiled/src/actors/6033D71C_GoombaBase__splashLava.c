@@ -30,8 +30,8 @@ int __fastcall GoombaBase__splashLava(StageActor *a1, float *r1_0)
   v8 = 1170939904;
   if ( (a1[4].aCollider.field_6C & 1) != 0 )
     return StageActor__createWaterSplash(a1, &a2, 273, 16, "SE_OBJ_CMN_SPLASH_LAVA");
-  y = FIELD_U32(a1, 0x6C).y;
-  a3.x = FIELD_U32(a1, 0x6C).x;
+  y = FIELD_F32(a1, 0x70);
+  a3.x = FIELD_F32(a1, 0x6C);
   a3.y = y;
   positionOffset.x = a3.x;
   *(_WORD *)&v10.field_0 = 0;

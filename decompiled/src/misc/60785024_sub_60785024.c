@@ -30,7 +30,7 @@ signed int __fastcall sub_60785024(int a1)
   v5 = ModelWrapper_ctor(v4, Model2, 0, 0, 1, 0, 0);
   ModelWrapper_setup(v5, ResArchiveById, 0, 0);
   FIELD_U32(a1, 644) = v4;
-  v6 = (int)*FIELD_U32(v4, 0x18).animations;
+  v6 = (int)*FIELD_U32(v4, 0x1C);
   sub_60446088(v6, (int)ResArchiveById, &dword_60CC430C);
   AnimationCtrl_setRepeat((ModelAnimation *)(v6 + 4), 1);
   FIELD_U32(v6, 20) = 0;

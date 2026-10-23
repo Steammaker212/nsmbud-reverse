@@ -43,7 +43,7 @@ int __fastcall Pokey__collisionFireballYoshi(int a1, int a2, float *a3)
   v14 = v5;
   v15 = v6;
   v16 = v7;
-  v17 = FIELD_U32(v4, 0x78).x < 0.0;
+  v17 = FIELD_F32(v4, 0x78) < 0.0;
   v18 = 1;
   v19 = 0;
   v21 = 0;
@@ -54,7 +54,7 @@ int __fastcall Pokey__collisionFireballYoshi(int a1, int a2, float *a3)
   sub_60000A18(v4);
   v8 = sub_602856EC((int *)(a1 + 6292), FIELD_U32(v4, 0x234));
   v9 = FIELD_F32(a1, 108);
-  x = FIELD_U32(v4, 0x6C).x;
+  x = FIELD_F32(v4, 0x6C);
   playerId = FIELD_U8(v4, 0x54);
   v17 = 0;
   v16 = 0.0;

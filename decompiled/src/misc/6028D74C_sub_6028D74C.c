@@ -37,19 +37,19 @@ int __fastcall sub_6028D74C(Enemy *a1)
   v16[0] = &sead__SafeStringBase__vtable;
   v16[1] = "dead";
   SkeletalAnim_play(v7, heap, (int)v16);
-  v9 = *(_DWORD *)(FIELD_U32(v3, 0x0)._._._.vtable + 12);
-  v10 = *(_DWORD *)(FIELD_U32(v3, 0x0)._._._.vtable + 68);
-  if ( *(_DWORD *)(FIELD_U32(v3, 0x0)._._._.vtable + 8) > v10 )
+  v9 = *(_DWORD *)(FIELD_U32(v3, 0x0) + 12);
+  v10 = *(_DWORD *)(FIELD_U32(v3, 0x0) + 68);
+  if ( *(_DWORD *)(FIELD_U32(v3, 0x0) + 8) > v10 )
     v9 += 4 * v10;
   *(_DWORD *)(*(_DWORD *)v9 + 24) = 1065353216;
-  v11 = *(_DWORD *)(FIELD_U32(v3, 0x0)._._._.vtable + 12);
-  v12 = *(_DWORD *)(FIELD_U32(v3, 0x0)._._._.vtable + 68);
-  if ( *(_DWORD *)(FIELD_U32(v3, 0x0)._._._.vtable + 8) > v12 )
+  v11 = *(_DWORD *)(FIELD_U32(v3, 0x0) + 12);
+  v12 = *(_DWORD *)(FIELD_U32(v3, 0x0) + 68);
+  if ( *(_DWORD *)(FIELD_U32(v3, 0x0) + 8) > v12 )
     v11 += 4 * v12;
   AnimationCtrl_setRepeat((ModelAnimation *)(*(_DWORD *)v11 + 4), 1);
-  v13 = *(_DWORD *)(FIELD_U32(v3, 0x0)._._._.vtable + 12);
-  v14 = *(_DWORD *)(FIELD_U32(v3, 0x0)._._._.vtable + 68);
-  if ( *(_DWORD *)(FIELD_U32(v3, 0x0)._._._.vtable + 8) > v14 )
+  v13 = *(_DWORD *)(FIELD_U32(v3, 0x0) + 12);
+  v14 = *(_DWORD *)(FIELD_U32(v3, 0x0) + 68);
+  if ( *(_DWORD *)(FIELD_U32(v3, 0x0) + 8) > v14 )
     v13 += 4 * v14;
   sub_6041838C((ModelAnimation *)(*(_DWORD *)v13 + 4));
   Enemy__beginState_DieFumi(a1);

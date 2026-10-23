@@ -51,7 +51,7 @@ sead_IDisposer *__fastcall sub_6075B604(sead_IDisposer *a1, int r1_0, int a3)
   ModelWrapper_setup(v9, vtable, (int *)v20, 0);
   a1[1].field_8 = (int)v8;
   containingHeap = a1[1].containingHeap;
-  v11 = (int)*FIELD_U32(v8, 0x8).animations;
+  v11 = (int)*FIELD_U32(v8, 0xC);
   LODWORD(v20[0]) = &sead__SafeStringBase__vtable;
   HIDWORD(v20[0]) = "capture_pose";
   SkeletalAnim_play(v11, containingHeap, (const char **)v20);

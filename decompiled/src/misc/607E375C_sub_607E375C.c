@@ -344,7 +344,7 @@ int __fastcall sub_607E375C(_DWORD *a1)
   v48 = ModelWrapper_ctor(v47, v46, 1, 1, 2, 1, 1);
   ModelWrapper_setup(v48, v36, 0, 0);
   a1[646] = v47;
-  v49 = (int)*FIELD_U32(v47, 0x18).animations;
+  v49 = (int)*FIELD_U32(v47, 0x1C);
   identifier.vtable = &sead__SafeStringBase__vtable;
   identifier.cstr = "CS_W8a_Ocean";
   sub_60446088(v49, (int)v36, &identifier);
@@ -371,7 +371,7 @@ int __fastcall sub_607E375C(_DWORD *a1)
   v56 = ModelWrapper_ctor(v55, v54, 1, 1, 2, 1, 1);
   ModelWrapper_setup(v56, v36, 0, 0);
   a1[648] = v55;
-  v57 = (int)*FIELD_U32(v55, 0x18).animations;
+  v57 = (int)*FIELD_U32(v55, 0x1C);
   identifier.vtable = &sead__SafeStringBase__vtable;
   identifier.cstr = "CS_W8a_CloudBG";
   sub_60446088(v57, (int)v36, &identifier);

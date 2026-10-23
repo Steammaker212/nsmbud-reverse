@@ -57,7 +57,7 @@ void __fastcall sub_603B0CC0(int *a1)
   ModelWrapper_setup(v11, (int)v8, 0, 0);
   a1[1577] = (int)v10;
   v12 = a1[1575];
-  v13 = (int)*FIELD_U32(v10, 0x8).animations;
+  v13 = (int)*FIELD_U32(v10, 0xC);
   a2.vtable = &sead__SafeStringBase__vtable;
   a2.cstr = "fog";
   SkeletalAnim_play(v13, v12, (int)&a2);
@@ -78,7 +78,7 @@ void __fastcall sub_603B0CC0(int *a1)
   ModelWrapper_setup(v19, (int)v16, 0, 0);
   a1[1578] = (int)v18;
   v20 = a1[1575];
-  v21 = (int)*FIELD_U32(v18, 0x8).animations;
+  v21 = (int)*FIELD_U32(v18, 0xC);
   a2.vtable = &sead__SafeStringBase__vtable;
   a2.cstr = "shay_teresaB_wait";
   SkeletalAnim_play(v21, v20, (int)&a2);

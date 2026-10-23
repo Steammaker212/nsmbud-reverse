@@ -20,8 +20,8 @@ sead_ListNode *__fastcall sub_600F885C(StateActor *a1)
   int speed; // [sp+Ch] [bp-Ch] BYREF
 
   j_ModelWrapper_updateAnims(a1[1]._._._.vtable);
-  v2 = StageActor__directionToPlayerX(a1, &FIELD_U32(a1, 0x0)._.position);
-  FIELD_U32(a1, 0x0)._.direction = v2;
+  v2 = StageActor__directionToPlayerX(a1, &FIELD_U32(a1, 0x6C));
+  FIELD_U32(a1, 0x50) = v2;
   speed = 35791394;
   if ( v2 )
   {
@@ -33,7 +33,7 @@ sead_ListNode *__fastcall sub_600F885C(StateActor *a1)
     target = dword_60C85BBC;
     p_target = &target;
   }
-  moveValueTo(&FIELD_U32(a1, 0x0)._.rotation.y, p_target, &speed);
+  moveValueTo(&FIELD_U32(a1, 0xA0), p_target, &speed);
   result = (sead_ListNode *)&a1[1]._._._.settings1;
   settings1 = a1[1]._._._.settings1;
   if ( settings1 >= 1 )

@@ -75,7 +75,7 @@ int __fastcall sub_60374514(int a1)
       v31 = 0;
       do
       {
-        if ( !FIELD_U32(v12, 0x0).isDeleted )
+        if ( !FIELD_U8(v12, 0x13) )
         {
           ProfileId = Actor__getProfileId(&FIELD_U32(v12, 0x0));
           if ( ProfileId == 531 || FIELD_U8(dword_60CC6D8C, 17) && ProfileId == 533 )

@@ -31,7 +31,7 @@ int __fastcall Fuzzy_setupModel(int *a1)
   ModelWrapper_setup(v5, (int)v2, 0, 0);
   *(a1 - 1) = (int)v4;
   a1[1] = (int)FIELD_U32(v4, 0x0);
-  v6 = (int)*FIELD_U32(v4, 0x8).animations;
+  v6 = (int)*FIELD_U32(v4, 0xC);
   a1[2] = v6;
   v7 = *a1;
   a2.vtable = &sead__SafeStringBase__vtable;

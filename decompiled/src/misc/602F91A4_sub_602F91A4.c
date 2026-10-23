@@ -75,7 +75,7 @@ signed int __fastcall sub_602F91A4(int a1)
   ModelWrapper_setup(v16, (int)v13, 0, 0);
   FIELD_U32(v1, 8) = v15;
   v17 = *(_DWORD *)v1;
-  v18 = (char *)*FIELD_U32(v15, 0x18).animations;
+  v18 = (char *)*FIELD_U32(v15, 0x1C);
   a2.vtable = &sead__SafeStringBase__vtable;
   a2.cstr = "kurage_light_fog";
   ShuAnim_play(v18, v17, (int)&a2);

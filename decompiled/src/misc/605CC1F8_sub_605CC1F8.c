@@ -14,13 +14,13 @@ StateActor *__fastcall sub_605CC1F8(StateActor *a1, ActorBuildInfo *a2, void **a
   void *v5; // r1
 
   result = StateActor_ctor(a1, a2);
-  FIELD_U32(result, 0x0)._._.vtable = (int)off_60C0A8A4;
+  FIELD_U32(result, 0x0) = (int)off_60C0A8A4;
   result[1]._._._.vtable = (int)*a3;
   v5 = a3[1];
   result[1]._._._.id = (int)a3[2];
   result[1]._._._.heap = (int)v5;
   LOBYTE(result[1]._._._.profile) = 0;
-  FIELD_U32(result, 0x0)._.type = 0;
+  FIELD_U8(result, 0x215) = 0;
   result[1]._._._.field_20.previous = 0;
   *(_DWORD *)&result[1]._._._.movementId = 0;
   result[1]._._._.settigns2 = 0;

@@ -17,9 +17,9 @@ int __fastcall sub_60565680(ColliderBase *a1)
   a1[19].field_150 = 0;
   p_next = &a1[20].nodes[3].next;
   if ( a1[20].nodes[3].next == (ColliderListNode *)21
-    || (sub_60564834(&FIELD_U32(a1, 0x0).vtable), *p_next != (ColliderListNode *)13) )
+    || (sub_60564834(&FIELD_U32(a1, 0x0)), *p_next != (ColliderListNode *)13) )
   {
-    (*(void (__fastcall **)(ColliderBase *, int *))(FIELD_U32(a1, 0x0).vtable + 192))(a1, &dword_60CAE31C);
+    (*(void (__fastcall **)(ColliderBase *, int *))(FIELD_U32(a1, 0x0) + 192))(a1, &dword_60CAE31C);
     a1[21].field_E4 = 2;
     a1[18].field_138 = (int)sub_605B3700;
     a1[18].field_13C = (int)sub_605B4010;
@@ -32,6 +32,6 @@ int __fastcall sub_60565680(ColliderBase *a1)
       v3 = &dword_60CB057C;
     else
       v3 = &dword_60CAE2F8;
-    return (*(int (__fastcall **)(ColliderBase *, int *))(FIELD_U32(a1, 0x0).vtable + 192))(a1, v3);
+    return (*(int (__fastcall **)(ColliderBase *, int *))(FIELD_U32(a1, 0x0) + 192))(a1, v3);
   }
 }

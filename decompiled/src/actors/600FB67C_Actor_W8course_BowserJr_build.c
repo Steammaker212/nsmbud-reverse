@@ -15,7 +15,7 @@ BossBase *__fastcall Actor_W8course_BowserJr_build(ActorBuildInfo *a1)
 
   v2 = (BossBase *)operator_new(0x1DC0u);
   result = BowserJrBase__ctor(v2, a1);
-  FIELD_U32(result, 0x0)._._._._.vtable = (int)off_60BCF214;
+  FIELD_U32(result, 0x0) = (int)off_60BCF214;
   result[1]._._._._.field_200 = 0;
   LOBYTE(result[1]._._._._.field_204) = 1;
   return result;

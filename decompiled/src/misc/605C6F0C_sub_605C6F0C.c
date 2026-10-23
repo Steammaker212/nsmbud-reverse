@@ -50,10 +50,10 @@ int __fastcall sub_605C6F0C(LightSource *a1, float *a2, float *a3)
     v16 = a2[3];
     v20 = a2[7];
     v24 = a2[11];
-    sub_602372C0((int)&FIELD_U32(a1, 0x0).field_8, 605, &v14, 1);
+    sub_602372C0((int)&FIELD_U32(a1, 0x8), 605, &v14, 1);
     v9 = a2[7];
-    vtable = FIELD_U32(a1, 0x0).vtable;
-    containingHeap = FIELD_U32(a1, 0x0).containingHeap;
+    vtable = FIELD_U32(a1, 0x0);
+    containingHeap = FIELD_U32(a1, 0x4);
     v12 = Global_BasicSoundActor2;
     position.x = a2[3];
     position.y = v9;
@@ -65,7 +65,7 @@ int __fastcall sub_605C6F0C(LightSource *a1, float *a2, float *a3)
     position.y = v20 + (float)((float)((float)(v18 * 8.0) + (float)(v17 * 0.0)) + (float)(v19 * 0.0));
     position.z = v24 + (float)((float)((float)(v22 * 8.0) + (float)(v21 * 0.0)) + (float)(v23 * 0.0));
     a1[4]._.containingHeap = a1[4]._.vtable - 0x40000000;
-    LightSource_update1(a1 + 3, 23, &position, &a1[4]._.containingHeap, &flt_60B056FC[FIELD_U32(a1, 0x0).containingHeap], 0, 0, 0, 0);
+    LightSource_update1(a1 + 3, 23, &position, &a1[4]._.containingHeap, &flt_60B056FC[FIELD_U32(a1, 0x4)], 0, 0, 0, 0);
     result = LOBYTE(a1[4]._.field_8);
   }
   if ( (result & 2) != 0 )

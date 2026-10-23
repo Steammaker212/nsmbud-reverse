@@ -30,8 +30,8 @@ int __fastcall sub_60297420(Actor *a1)
   j_ModelWrapper_setupModel((int)v5, (int)ResArchiveById, 0, 0);
   a1[78].field_3C = (int)v4;
   animations = (unsigned int)v4[1].texAnims.animations;
-  v7 = (int *)FIELD_U32(v4, 0x8).animations;
-  if ( FIELD_U32(v4, 0x8).count > animations )
+  v7 = (int *)FIELD_U32(v4, 0xC);
+  if ( FIELD_U32(v4, 0x8) > animations )
     v7 += animations;
   v8 = *v7;
   v12 = &sead__SafeStringBase__vtable;

@@ -11,11 +11,11 @@
 CollisionActor *__fastcall CollisionActor__ctor(CollisionActor *this, ActorBuildInfo *buildInfo)
 {
   StageActor__ctor(&FIELD_U32(this, 0x0), buildInfo);
-  FIELD_U32(this, 0x0)._.vtable = (int)&CollisionActor__vtable;
+  FIELD_U32(this, 0x0) = (int)&CollisionActor__vtable;
   ActorCollisionMgr_ctor(FIELD_U8(this, 0x288));
   FIELD_U32(this, 0x1770) = 0;
   FIELD_U32(this, 0x1774) = 0;
-  FIELD_U32(this, 0x1778) = &FIELD_U32(this, 0x0).position;
+  FIELD_U32(this, 0x1778) = &FIELD_U32(this, 0x6C);
   FIELD_U8(this, 0x177C) = 0;
   FIELD_U32(this, 0x1780) = 0;
   FIELD_F32(this, 0x1784) = 1.0;

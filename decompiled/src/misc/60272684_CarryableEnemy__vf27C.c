@@ -18,13 +18,13 @@ int __fastcall CarryableEnemy__vf27C(Enemy *a1, ActiveCollider *a2, ActiveCollid
   switch ( v6 )
   {
     case 3:
-      v7 = *(int (__fastcall **)(Enemy *, StageActor *))(FIELD_U32(a1, 0x0)._._._.vtable + 632);
+      v7 = *(int (__fastcall **)(Enemy *, StageActor *))(FIELD_U32(a1, 0x0) + 632);
       return v7(a1, FIELD_U32(a3, 0x40));
     case 2:
-      v7 = *(int (__fastcall **)(Enemy *, StageActor *))(FIELD_U32(a1, 0x0)._._._.vtable + 628);
+      v7 = *(int (__fastcall **)(Enemy *, StageActor *))(FIELD_U32(a1, 0x0) + 628);
       return v7(a1, FIELD_U32(a3, 0x40));
     case 1:
-      v7 = *(int (__fastcall **)(Enemy *, StageActor *))(FIELD_U32(a1, 0x0)._._._.vtable + 624);
+      v7 = *(int (__fastcall **)(Enemy *, StageActor *))(FIELD_U32(a1, 0x0) + 624);
       return v7(a1, FIELD_U32(a3, 0x40));
   }
   return Enemy__collisionPlayer((int)a1, (int)a2, (int)a3);

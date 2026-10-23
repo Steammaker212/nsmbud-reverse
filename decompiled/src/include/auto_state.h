@@ -14,6 +14,10 @@ typedef struct StateBase { unsigned char _unknown[]; } StateBase;
 #define NSMBUDX_LAYOUT_STATEEXECUTER
 typedef struct StateExecuter { unsigned char _unknown[]; } StateExecuter;
 #endif
+#ifndef NSMBUDX_LAYOUT_STATEMETHODEXECUTER
+#define NSMBUDX_LAYOUT_STATEMETHODEXECUTER
+typedef struct StateMethodExecuter { unsigned char _unknown[]; } StateMethodExecuter;
+#endif
 #ifndef NSMBUDX_LAYOUT_STATEMGR
 #define NSMBUDX_LAYOUT_STATEMGR
 typedef struct StateMgr { unsigned char _unknown[]; } StateMgr;

@@ -36,14 +36,14 @@ int __fastcall Enemy__damageFromUnder(Enemy *this)
   char v16; // [sp+1Ch] [bp-1Ch]
   Vec2 screenPos; // [sp+20h] [bp-18h] BYREF
 
-  y = FIELD_U32(this, 0x0)._._.position.y;
-  pos.x = FIELD_U32(this, 0x0)._._.position.x;
+  y = FIELD_F32(this, 0x70);
+  pos.x = FIELD_F32(this, 0x6C);
   pos.y = y;
   pos.z = 4500.0;
   EffectData_create(21, &pos, 0, 0);            // This is Effect__spawn, Lord copy to paste
-  y_ = FIELD_U32(this, 0x0)._._.position.y;
+  y_ = FIELD_F32(this, 0x70);
   soundRelated = Global_BasicSoundActor1;
-  pos.x = FIELD_U32(this, 0x0)._._.position.x;
+  pos.x = FIELD_F32(this, 0x6C);
   pos.y = y_;
   mapPositionToScreen(&screenPos, &pos);
   BasicSoundActor1_playSound(soundRelated, "SE_EMY_DOWN", (int)&screenPos, 0);
@@ -55,8 +55,8 @@ int __fastcall Enemy__damageFromUnder(Enemy *this)
     dword_60C9039C = 1077936128;
     _cxa_guard_release(dword_60C90380);
   }
-  v6 = FIELD_U32(this, 0x0)._._.field_224;
-  playerId = FIELD_U32(this, 0x0)._._.playerId;
+  v6 = FIELD_U32(this, 0x224);
+  playerId = FIELD_U8(this, 0x54);
   v8 = (float *)&dword_60C90380[2 * v6];
   v9 = v8[4];
   pos.y = v8[5];

@@ -15,7 +15,7 @@ StateActor *__fastcall sub_606EB9D4(StateActor *a1, ActorBuildInfo *a2)
   int v5; // r0
 
   StateActor_ctor(a1, a2);
-  FIELD_U32(a1, 0x0)._._.vtable = (int)off_60C1FCD8;
+  FIELD_U32(a1, 0x0) = (int)off_60C1FCD8;
   a1[1]._._._.vtable = 0;
   a1[1]._._._.heap = 0;
   *(_WORD *)&a1[1]._._.playerId = 0;

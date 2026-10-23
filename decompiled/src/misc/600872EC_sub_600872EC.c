@@ -31,13 +31,13 @@ int __fastcall sub_600872EC(CollisionActor *a1)
     }
     if ( v5 || Actor__getProfileId(collisionMgr) != 392 )
     {
-      return (*(int (__fastcall **)(CollisionActor *, int *))(FIELD_U32(a1, 0x0)._.vtable + 192))(a1, &dword_60C81B2C);
+      return (*(int (__fastcall **)(CollisionActor *, int *))(FIELD_U32(a1, 0x0) + 192))(a1, &dword_60C81B2C);
     }
     else
     {
       result = sub_602EE904(collisionMgr);
       if ( !result )
-        return sub_602EE7B8(collisionMgr, FIELD_U32(a1, 0x0).direction, -1);
+        return sub_602EE7B8(collisionMgr, FIELD_U32(a1, 0x50), -1);
     }
   }
   return result;

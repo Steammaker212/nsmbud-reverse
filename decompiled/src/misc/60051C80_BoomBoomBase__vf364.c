@@ -24,7 +24,7 @@ int __fastcall BoomBoomBase__vf364(StateActor *a1)
   v3[3] = -1103101952;
   v3[4] = &stru_60C7F63C;
   v4 = -1;
-  v5 = StageActor__directionToPlayerX(a1, &FIELD_U32(a1, 0x0)._.position);
+  v5 = StageActor__directionToPlayerX(a1, &FIELD_U32(a1, 0x6C));
   v6 = -1;
   return sub_602A852C((int)&a1[1]._._._.heap, v3);
 }

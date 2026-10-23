@@ -15,6 +15,6 @@ MultiStateActor *__fastcall Actor_range_koin_build(ActorBuildInfo *a1)
 
   v2 = (MultiStateActor *)operator_new(0x17D8u);
   result = MultiStateActor__ctor(v2, a1);
-  FIELD_U32(result, 0x0)._._.vtable = (int)off_60C17F24;
+  FIELD_U32(result, 0x0) = (int)off_60C17F24;
   return result;
 }

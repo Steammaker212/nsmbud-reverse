@@ -13,9 +13,9 @@ float __fastcall sub_603DBD04(CollisionActor *a1)
   float result; // s0
 
   CollisionActor__handleGravity(a1);
-  FIELD_U32(a1, 0x0).position.x = FIELD_U32(a1, 0x0).position.x + FIELD_U32(a1, 0x0).speed.x;
-  FIELD_U32(a1, 0x0).position.y = FIELD_U32(a1, 0x0).position.y + FIELD_U32(a1, 0x0).speed.y;
-  result = FIELD_U32(a1, 0x0).position.z + FIELD_U32(a1, 0x0).speed.z;
-  FIELD_U32(a1, 0x0).position.z = result;
+  FIELD_F32(a1, 0x6C) = FIELD_F32(a1, 0x6C) + FIELD_F32(a1, 0x78);
+  FIELD_F32(a1, 0x70) = FIELD_F32(a1, 0x70) + FIELD_F32(a1, 0x7C);
+  result = FIELD_F32(a1, 0x74) + FIELD_F32(a1, 0x80);
+  FIELD_F32(a1, 0x74) = result;
   return result;
 }

@@ -17,7 +17,7 @@ Enemy *__fastcall Bowser__ctor(Enemy *a1, ActorBuildInfo *a2)
   int v8; // r3
 
   BossBase__ctor((BossBase *)a1, a2);
-  FIELD_U32(a1, 0x0)._._._.vtable = (int)off_60BCA3E4;
+  FIELD_U32(a1, 0x0) = (int)off_60BCA3E4;
   *(_DWORD *)&a1[1]._._.collisionMgr[144] = LoadResource(ResourceMgrRelated_instance, &dword_60C83C30);
   *(_DWORD *)&a1[1]._._.collisionMgr[148] = LoadResource(ResourceMgrRelated_instance, &dword_60C83C38);
   *(_DWORD *)&a1[1]._._.collisionMgr[152] = 0;
@@ -35,9 +35,9 @@ Enemy *__fastcall Bowser__ctor(Enemy *a1, ActorBuildInfo *a2)
   *(_DWORD *)&a1[1]._._.collisionMgr[188] = 0;
   *(_WORD *)&a1[1]._._.collisionMgr[204] = 1;
   a1[1]._._.collisionMgr[206] = 0;
-  x = FIELD_U32(a2, 0x10).x;
-  y = FIELD_U32(a2, 0x10).y;
-  *(float *)&a1[1]._._.collisionMgr[216] = FIELD_U32(a2, 0x10).z;
+  x = FIELD_F32(a2, 0x10);
+  y = FIELD_F32(a2, 0x14);
+  *(float *)&a1[1]._._.collisionMgr[216] = FIELD_F32(a2, 0x18);
   *(float *)&a1[1]._._.collisionMgr[212] = y;
   *(float *)&a1[1]._._.collisionMgr[208] = x;
   *(_DWORD *)&a1[1]._._.collisionMgr[220] = 0;

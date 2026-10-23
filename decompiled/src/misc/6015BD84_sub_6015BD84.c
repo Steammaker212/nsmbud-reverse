@@ -11,7 +11,7 @@
 ColliderBase *__fastcall sub_6015BD84(ColliderBase *a1)
 {
   ColliderBase_ctor(a1);
-  FIELD_U32(a1, 0x0).vtable = (int)&off_60BD4894;
+  FIELD_U32(a1, 0x0) = (int)&off_60BD4894;
   memset(&a1[1], 0, 40);
   return a1;
 }

@@ -19,14 +19,14 @@ int *__fastcall sub_6025A60C(CollisionActor *a1)
   result = &a1[1]._.aCollider.field_C8;
   v4 = a1[1]._.aCollider.field_C8;
   if ( !v4 )
-    return (int *)(*(int (__fastcall **)(CollisionActor *, State *, float))(FIELD_U32(a1, 0x0)._.vtable + 192))(
+    return (int *)(*(int (__fastcall **)(CollisionActor *, State *, float))(FIELD_U32(a1, 0x0) + 192))(
                     a1,
                     &BobOmb_StateID_Walk,
                     v2);
   v5 = v4 - 1;
   *result = v5;
   if ( !v5 )
-    return (int *)(*(int (__fastcall **)(CollisionActor *, State *, float))(FIELD_U32(a1, 0x0)._.vtable + 192))(
+    return (int *)(*(int (__fastcall **)(CollisionActor *, State *, float))(FIELD_U32(a1, 0x0) + 192))(
                     a1,
                     &BobOmb_StateID_Walk,
                     v2);

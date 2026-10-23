@@ -45,16 +45,16 @@ LABEL_9:
     target = 0;
     speed = 0x1000000;
     v16 = 0x100000;
-    sub_608322C0(&FIELD_U32(v2, 0x0)._.rotation.x, &target, &speed, &v16);
+    sub_608322C0(&FIELD_U32(v2, 0x9C), &target, &speed, &v16);
     target = 0;
     speed = 0x1000000;
     v16 = 0x100000;
-    return (StateActor *)sub_608322C0(&FIELD_U32(v2, 0x0)._.rotation.y, &target, &speed, &v16);
+    return (StateActor *)sub_608322C0(&FIELD_U32(v2, 0xA0), &target, &speed, &v16);
   }
   if ( v3 > 3 )
     goto LABEL_9;
 LABEL_10:
-  CurrentState = StateMgr__getCurrentState(&FIELD_U32(v2, 0x17B0).manager);
+  CurrentState = StateMgr__getCurrentState(&FIELD_U32(v2, 0x17C4));
   (*((void (__fastcall **)(StateBase *))FIELD_U32(CurrentState, 0x0) + 2))(CurrentState);
   (*(void (**)(void))(dword_60C98A74 + 8))();
   if ( v4 )
@@ -75,7 +75,7 @@ LABEL_10:
   target = (int)(float)((float)(2147500000.0
                               * (float)((float)(out.y * -0.020833) * (float)((float)(v13 * 3.1416) / 2147500000.0)))
                       / 3.1416);
-  moveValueTo(&FIELD_U32(v2, 0x0)._.rotation.x, &target, &speed);
+  moveValueTo(&FIELD_U32(v2, 0x9C), &target, &speed);
   v14 = dword_603CB5D8;
   if ( !v4 )
     v14 = &dword_603CB5D8[1];
@@ -84,5 +84,5 @@ LABEL_10:
   target = (int)(float)((float)(2147500000.0
                               * (float)((float)(out.x * 0.020833) * (float)((float)(v15 * 3.1416) / 2147500000.0)))
                       / 3.1416);
-  return (StateActor *)moveValueTo(&FIELD_U32(v2, 0x0)._.rotation.y, &target, &speed);
+  return (StateActor *)moveValueTo(&FIELD_U32(v2, 0xA0), &target, &speed);
 }

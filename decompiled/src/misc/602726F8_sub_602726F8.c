@@ -20,13 +20,13 @@ int __fastcall sub_602726F8(Enemy *a1, ActiveCollider *a2, ActiveCollider *a3)
   switch ( v6 )
   {
     case 3:
-      (*(void (__fastcall **)(Enemy *, StageActor *))(FIELD_U32(a1, 0x0)._._._.vtable + 632))(a1, owner);
+      (*(void (__fastcall **)(Enemy *, StageActor *))(FIELD_U32(a1, 0x0) + 632))(a1, owner);
       return 1;
     case 2:
-      (*(void (__fastcall **)(Enemy *, StageActor *))(FIELD_U32(a1, 0x0)._._._.vtable + 628))(a1, owner);
+      (*(void (__fastcall **)(Enemy *, StageActor *))(FIELD_U32(a1, 0x0) + 628))(a1, owner);
       return 1;
     case 1:
-      (*(void (__fastcall **)(Enemy *, StageActor *))(FIELD_U32(a1, 0x0)._._._.vtable + 624))(a1, owner);
+      (*(void (__fastcall **)(Enemy *, StageActor *))(FIELD_U32(a1, 0x0) + 624))(a1, owner);
       return 1;
   }
   return v5;

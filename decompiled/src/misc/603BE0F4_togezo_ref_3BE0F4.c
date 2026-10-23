@@ -25,7 +25,7 @@ int __fastcall togezo_ref_3BE0F4(StateActor *a1)
   {
     a1[1]._._.aCollider.field_44 = v3;
     *p_owner = (StageActor *)1;
-    (*(void (__fastcall **)(StateActor *))(FIELD_U32(a1, 0x0)._._.vtable + 696))(a1);
+    (*(void (__fastcall **)(StateActor *))(FIELD_U32(a1, 0x0) + 696))(a1);
   }
   v5 = **(_DWORD **)(*(_DWORD *)&a1[1]._.collisionMgr[76] + 12);
   v9[0] = &sead__SafeStringBase__vtable;
@@ -34,10 +34,10 @@ int __fastcall togezo_ref_3BE0F4(StateActor *a1)
   v8[0] = &sead__SafeStringBase__vtable;
   v8[1] = "walk";
   SkeletalAnim_play(v5, Resource, (int)v8);
-  FIELD_U32(a1, 0x0)._.speed.x = 0.0;
-  FIELD_U32(a1, 0x0)._.speed.y = 2.5;
-  FIELD_U32(a1, 0x0)._.speed.z = 0.0;
-  FIELD_U32(a1, 0x0)._.direction = StageActor__directionToPlayerX(a1, &FIELD_U32(a1, 0x0)._.position);
+  FIELD_F32(a1, 0x78) = 0.0;
+  FIELD_F32(a1, 0x7C) = 2.5;
+  FIELD_F32(a1, 0x80) = 0.0;
+  FIELD_U32(a1, 0x50) = StageActor__directionToPlayerX(a1, &FIELD_U32(a1, 0x6C));
   a1[1]._._.aCollider.info.field_24 = 1;
   return 6440;
 }

@@ -28,7 +28,7 @@ int __fastcall ParaGoomba__vf270(int a1)
   FIELD_U32(a1, 6300) = Resource;
   v4 = sub_6033CF5C(Resource, (sead__SafeString *)&dword_60C9594C[2 * *v2], FIELD_U8(a1, 6844));
   FIELD_U32(a1, 6304) = v4;
-  v5 = *FIELD_U32(v4, 0x10).animations;
+  v5 = *FIELD_U32(v4, 0x14);
   FIELD_U32(a1, 6308) = v5;
   v6 = FIELD_U32(a1, 6300);
   v10[0] = &sead__SafeStringBase__vtable;

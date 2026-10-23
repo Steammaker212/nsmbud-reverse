@@ -36,23 +36,23 @@ int __fastcall Enemy__processCollision(Enemy *this, ActiveCollider *acSelf, Acti
     {
       if ( unk == 1 )
       {
-        v14 = FIELD_U32(this, 0x0)._._.position.y + FIELD_U32(this, 0x0)._._.effectOffset.y;
+        v14 = FIELD_F32(this, 0x70) + FIELD_F32(this, 0x240);
         v15 = Global_BasicSoundActor1;
-        position.x = FIELD_U32(this, 0x0)._._.position.x + FIELD_U32(this, 0x0)._._.effectOffset.x;
+        position.x = FIELD_F32(this, 0x6C) + FIELD_F32(this, 0x23C);
         position.y = v14;
         mapPositionToScreen(&out, &position);
         BasicSoundActor1_playSound(v15, "SE_EMY_CMN_STEP", (int)&out, 0);
       }
       else if ( !unk )
       {
-        (*(void (__fastcall **)(Enemy *, StageActor *))(FIELD_U32(this, 0x0)._._._.vtable + 400))(this, owner);
-        y = FIELD_U32(owner, 0x6C).y;
-        position.x = FIELD_U32(owner, 0x6C).x;
+        (*(void (__fastcall **)(Enemy *, StageActor *))(FIELD_U32(this, 0x0) + 400))(this, owner);
+        y = FIELD_F32(owner, 0x70);
+        position.x = FIELD_F32(owner, 0x6C);
         position.y = y;
         position.z = 4500.0;
         EffectData_create(21, &position, 0, 0);
       }
-      (*(void (__fastcall **)(Enemy *, StageActor *))(FIELD_U32(this, 0x0)._._._.vtable + 372))(this, owner);
+      (*(void (__fastcall **)(Enemy *, StageActor *))(FIELD_U32(this, 0x0) + 372))(this, owner);
       *(_WORD *)&FIELD_U8(this, 0x1898) = 257;
       goto LABEL_22;
     }
@@ -61,9 +61,9 @@ int __fastcall Enemy__processCollision(Enemy *this, ActiveCollider *acSelf, Acti
   {
     if ( !sub_6076E35C((int)owner) )
     {
-      (*(void (__fastcall **)(Enemy *, StageActor *))(FIELD_U32(this, 0x0)._._._.vtable + 388))(this, owner);
-      (*(void (__fastcall **)(Enemy *))(FIELD_U32(this, 0x0)._._._.vtable + 404))(this);
-      (*(void (__fastcall **)(Enemy *, StageActor *))(FIELD_U32(this, 0x0)._._._.vtable + 408))(this, owner);
+      (*(void (__fastcall **)(Enemy *, StageActor *))(FIELD_U32(this, 0x0) + 388))(this, owner);
+      (*(void (__fastcall **)(Enemy *))(FIELD_U32(this, 0x0) + 404))(this);
+      (*(void (__fastcall **)(Enemy *, StageActor *))(FIELD_U32(this, 0x0) + 408))(this, owner);
     }
   }
   else if ( v7 == 1 && !sub_6076E35C((int)owner) )
@@ -74,9 +74,9 @@ int __fastcall Enemy__processCollision(Enemy *this, ActiveCollider *acSelf, Acti
       {
         if ( unk == 1 )
         {
-          v9 = FIELD_U32(this, 0x0)._._.position.y + FIELD_U32(this, 0x0)._._.effectOffset.y;
+          v9 = FIELD_F32(this, 0x70) + FIELD_F32(this, 0x240);
           v10 = Global_BasicSoundActor1;
-          position.x = FIELD_U32(this, 0x0)._._.position.x + FIELD_U32(this, 0x0)._._.effectOffset.x;
+          position.x = FIELD_F32(this, 0x6C) + FIELD_F32(this, 0x23C);
           position.y = v9;
           mapPositionToScreen(&out, &position);
           BasicSoundActor1_playSound(v10, "SE_EMY_CMN_STEP", (int)&out, 0);
@@ -84,21 +84,21 @@ int __fastcall Enemy__processCollision(Enemy *this, ActiveCollider *acSelf, Acti
       }
       else
       {
-        (*(void (__fastcall **)(Enemy *, StageActor *))(FIELD_U32(this, 0x0)._._._.vtable + 0x188))(this, owner);
-        (*(void (__fastcall **)(Enemy *, StageActor *))(FIELD_U32(this, 0x0)._._._.vtable + 0x18C))(this, owner);
+        (*(void (__fastcall **)(Enemy *, StageActor *))(FIELD_U32(this, 0x0) + 0x188))(this, owner);
+        (*(void (__fastcall **)(Enemy *, StageActor *))(FIELD_U32(this, 0x0) + 0x18C))(this, owner);
       }
-      (*(void (__fastcall **)(Enemy *, StageActor *))(FIELD_U32(this, 0x0)._._._.vtable + 372))(this, owner);
+      (*(void (__fastcall **)(Enemy *, StageActor *))(FIELD_U32(this, 0x0) + 372))(this, owner);
 LABEL_22:
-      (*(void (__fastcall **)(Enemy *, StageActor *))(FIELD_U32(this, 0x0)._._._.vtable + 376))(this, owner);
+      (*(void (__fastcall **)(Enemy *, StageActor *))(FIELD_U32(this, 0x0) + 376))(this, owner);
       return v8;
     }
     if ( unk )
     {
       if ( unk == 1 )
       {
-        v12 = FIELD_U32(this, 0x0)._._.position.y + FIELD_U32(this, 0x0)._._.effectOffset.y;
+        v12 = FIELD_F32(this, 0x70) + FIELD_F32(this, 0x240);
         v13 = Global_BasicSoundActor1;
-        position.x = FIELD_U32(this, 0x0)._._.position.x + FIELD_U32(this, 0x0)._._.effectOffset.x;
+        position.x = FIELD_F32(this, 0x6C) + FIELD_F32(this, 0x23C);
         position.y = v12;
         mapPositionToScreen(&out, &position);
         BasicSoundActor1_playSound(v13, "SE_EMY_YOSHI_STEP", (int)&out, 0);
@@ -106,10 +106,10 @@ LABEL_22:
     }
     else
     {
-      (*(void (__fastcall **)(Enemy *, StageActor *))(FIELD_U32(this, 0x0)._._._.vtable + 412))(this, owner);
+      (*(void (__fastcall **)(Enemy *, StageActor *))(FIELD_U32(this, 0x0) + 412))(this, owner);
     }
-    (*(void (__fastcall **)(Enemy *, StageActor *))(FIELD_U32(this, 0x0)._._._.vtable + 380))(this, owner);
-    (*(void (__fastcall **)(Enemy *, StageActor *))(FIELD_U32(this, 0x0)._._._.vtable + 384))(this, owner);
+    (*(void (__fastcall **)(Enemy *, StageActor *))(FIELD_U32(this, 0x0) + 380))(this, owner);
+    (*(void (__fastcall **)(Enemy *, StageActor *))(FIELD_U32(this, 0x0) + 384))(this, owner);
   }
   return v8;
 }

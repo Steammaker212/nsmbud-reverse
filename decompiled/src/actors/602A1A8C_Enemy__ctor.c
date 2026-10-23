@@ -11,7 +11,7 @@
 Enemy *__fastcall Enemy__ctor(Enemy *this, ActorBuildInfo *buildInfo)
 {
   MultiStateActor__ctor(&FIELD_U32(this, 0x0), buildInfo);
-  FIELD_U32(this, 0x0)._._._.vtable = (int)&Enemy__vtable;
+  FIELD_U32(this, 0x0) = (int)&Enemy__vtable;
   FIELD_F32(this, 0x17D8) = 1.5;
   FIELD_F32(this, 0x17DC) = 3.9;
   FIELD_F32(this, 0x17E0) = -4.0;
@@ -39,11 +39,11 @@ Enemy *__fastcall Enemy__ctor(Enemy *this, ActorBuildInfo *buildInfo)
   FIELD_U8(this, 0x1898) = 0;
   FIELD_U8(this, 0x1899) = 0;
   FIELD_U8(this, 0x189A) = 8;
-  FIELD_U32(this, 0x0)._._.field_64 = -0.1875;
-  FIELD_U32(this, 0x0)._._.maxSpeed.x = 0.0;
-  FIELD_U32(this, 0x0)._._.maxSpeed.y = -4.0;
-  FIELD_U32(this, 0x0)._._.maxSpeed.z = 0.0;
-  FIELD_U32(this, 0x0)._._.type = 3;
-  FIELD_U32(this, 0x0)._._.field_280 = (int)&FIELD_U32(this, 0x1858);
+  FIELD_F32(this, 0x64) = -0.1875;
+  FIELD_F32(this, 0x84) = 0.0;
+  FIELD_F32(this, 0x88) = -4.0;
+  FIELD_F32(this, 0x8C) = 0.0;
+  FIELD_U8(this, 0x215) = 3;
+  FIELD_U32(this, 0x280) = (int)&FIELD_U32(this, 0x1858);
   return this;
 }

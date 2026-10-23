@@ -18,8 +18,8 @@ signed int __fastcall sub_600E2170(EffectWrapper *a1)
 
   v2 = *(float *)&a1[1]._.field_8;
   v3 = *(float *)&a1[1]._.containingHeap;
-  v4 = (*(float (__fastcall **)(EffectWrapper *))(FIELD_U32(a1, 0x0).vtable + 204))(a1);
-  v5 = (*(float (__fastcall **)(EffectWrapper *, float))(FIELD_U32(a1, 0x0).vtable + 200))(a1, v4);
+  v4 = (*(float (__fastcall **)(EffectWrapper *))(FIELD_U32(a1, 0x0) + 204))(a1);
+  v5 = (*(float (__fastcall **)(EffectWrapper *, float))(FIELD_U32(a1, 0x0) + 200))(a1, v4);
   v7.x = v3;
   v7.y = v2 - (float)(v4 * v5);
   v7.z = 4500.0;

@@ -45,7 +45,7 @@ float __fastcall sub_606BD814(ActiveCollider *a1, int a2)
     v8 = (*((int (__fastcall **)(StateBase *))FIELD_U32(CurrentState, 0x0) + 2))(CurrentState);
     if ( v8 != (*(int (**)(void))(dword_60CBA6CC + 8))() && Actor__getProfileId(v2) != 520 )
     {
-      if ( FIELD_U32(a1, 0x74).category == 9
+      if ( FIELD_U32(a1, 0x8C) == 9
         && (FIELD_U8(a2, 149) & 2) != 0
         && BYTE1(v2[6].field_34) == 3
         && (FIELD_U8(owner, 6124) & 4) != 0 )
@@ -101,7 +101,7 @@ LABEL_35:
                 if ( v20 <= 0.0 )
                 {
 LABEL_37:
-                  v23 = (float *)(&FIELD_U32(a1, 0x0).vtable + FIELD_U32(a2, 136));
+                  v23 = (float *)(&FIELD_U32(a1, 0x0) + FIELD_U32(a2, 136));
                   v24 = v23[60];
                   *(float *)&v2[16].settings1 = *(float *)&v2[16].settings1 - (float)(v23[44] * 0.5);
                   *(float *)&v2[16].settigns2 = *(float *)&v2[16].settigns2 - (float)(v24 * 0.5);

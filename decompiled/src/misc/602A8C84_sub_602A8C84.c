@@ -13,7 +13,7 @@ Enemy *__fastcall sub_602A8C84(Enemy *a1, ActorBuildInfo *a2)
   Enemy *result; // r0
 
   result = Enemy__ctor(a1, a2);
-  FIELD_U32(result, 0x0)._._._.vtable = (int)off_60BE2BF4;
+  FIELD_U32(result, 0x0) = (int)off_60BE2BF4;
   LOWORD(result[1]._._._._.settings1) = 0;
   *(_DWORD *)&result[1]._._._._.field_10 = 0;
   result[1]._._._._.profile = 0;

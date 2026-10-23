@@ -10,7 +10,7 @@
 
 StateActor *__fastcall sub_6060EBE8(StateActor *result)
 {
-  if ( (*(_BYTE *)(**(_DWORD **)(FIELD_U32(result, 0x0).field_284 + 12) + 28) & 0x20) != 0 )
+  if ( (*(_BYTE *)(**(_DWORD **)(FIELD_U32(result, 0x284) + 12) + 28) & 0x20) != 0 )
     return (StateActor *)StageActor__delete(result, 1);
   return result;
 }

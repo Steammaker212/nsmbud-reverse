@@ -11,10 +11,10 @@
 MultiStateActor *__fastcall sub_606C70B4(MultiStateActor *a1, ActorBuildInfo *a2)
 {
   MultiStateActor__ctor(a1, a2);
-  FIELD_U32(a1, 0x0)._._.vtable = (int)off_60C1C644;
+  FIELD_U32(a1, 0x0) = (int)off_60C1C644;
   RectCollider_ctor((RectCollider *)&a1[1]._._._.id);
   a1[1]._._._.id = (int)off_60BC30D8;
-  sub_6000BAC8(&a1[1]._.collisionMgr[16], FIELD_U32(a1, 0x0)._._.id);
+  sub_6000BAC8(&a1[1]._.collisionMgr[16], FIELD_U32(a1, 0x8));
   *(_DWORD *)&a1[1]._.collisionMgr[16] = off_60C1C730;
   *(_DWORD *)&a1[1]._.collisionMgr[52] = a1;
   MovementHandler__ctor((MovementHandler *)&a1[1]._.collisionMgr[56]);

@@ -11,6 +11,6 @@
 StageActor *__fastcall sub_60002B6C(StageActor *result)
 {
   if ( ActorMgr__instance )
-    return (StageActor *)ActorMgr_unk((void *)ActorMgr__instance, &FIELD_U32(result, 0x0).field_10);
+    return (StageActor *)ActorMgr_unk((void *)ActorMgr__instance, &FIELD_U8(result, 0x10));
   return result;
 }

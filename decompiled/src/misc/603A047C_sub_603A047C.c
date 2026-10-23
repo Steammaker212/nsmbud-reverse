@@ -18,7 +18,7 @@ int __fastcall sub_603A047C(Enemy *a1, int a2, int a3)
   int v11; // r6
 
   v6 = 0;
-  if ( !a2 || (*(int (__fastcall **)(Enemy *))(FIELD_U32(a1, 0x0)._._._.vtable + 736))(a1) )
+  if ( !a2 || (*(int (__fastcall **)(Enemy *))(FIELD_U32(a1, 0x0) + 736))(a1) )
     return v6;
   v7 = FIELD_U32(a3, 136);
   v8 = FIELD_U32(a3, 64);
@@ -29,7 +29,7 @@ int __fastcall sub_603A047C(Enemy *a1, int a2, int a3)
   {
     if ( a2 == 1 )
     {
-      CurrentState = StateMgr__getCurrentState(&FIELD_U32(a1, 0x0).states.manager);
+      CurrentState = StateMgr__getCurrentState(&FIELD_U32(a1, 0x17C4));
       v11 = (*((int (__fastcall **)(StateBase *))FIELD_U32(CurrentState, 0x0) + 2))(CurrentState);
       if ( v11 != (*((int (**)(void))stru_60C8EA70._.vtable + 2))() )
       {

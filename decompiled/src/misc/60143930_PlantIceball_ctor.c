@@ -15,7 +15,7 @@ StateActor *__fastcall PlantIceball_ctor(int a1)
 
   v2 = (StateActor *)operator_new(0x1A60u);
   result = sub_601424B4(v2, (ActorBuildInfo *)a1);
-  FIELD_U32(result, 0x0)._._.vtable = (int)off_60BD38D8;
+  FIELD_U32(result, 0x0) = (int)off_60BD38D8;
   LOBYTE(result[1]._._.field_27C) = 0;
   result[1]._._.field_280 = 0;
   result[1]._.field_284 = 0;

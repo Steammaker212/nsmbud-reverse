@@ -32,7 +32,7 @@ int __fastcall koopaJr_clown_sphere_ref(int *a1)
   v5 = ModelWrapper_ctor(v4, Model2, 1, 0, 1, 0, 0);
   ModelWrapper_setup(v5, (int)v2, 0, 0);
   a1[1] = (int)v4;
-  v6 = (int)*FIELD_U32(v4, 0x18).animations;
+  v6 = (int)*FIELD_U32(v4, 0x1C);
   a1[2] = v6;
   v7 = *a1;
   a2.vtable = &sead__SafeStringBase__vtable;

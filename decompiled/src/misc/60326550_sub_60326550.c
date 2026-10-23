@@ -44,7 +44,7 @@ ModelWrapper *__fastcall sub_60326550(int a1)
   v6 = ModelWrapper_ctor(v5, Model2, 1, 0, 0, 0, 0);
   ModelWrapper_setup(v6, (int)ResArchiveById, 0, 0);
   *(v1 - 387) = v5;
-  v7 = (int)*FIELD_U32(v5, 0x8).animations;
+  v7 = (int)*FIELD_U32(v5, 0xC);
   v15[0] = &sead__SafeStringBase__vtable;
   v15[1] = "shot";
   SkeletalAnim_play(v7, (int)ResArchiveById, (int)v15);

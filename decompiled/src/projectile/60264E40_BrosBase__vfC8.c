@@ -32,18 +32,18 @@ signed int __fastcall BrosBase__vfC8(Enemy *a1, int a2, int a3)
       && (*(int (__fastcall **)(int, int, int))(*(_DWORD *)v8 + 0x48C))(v8, a2, a3) == 1 )
     {
       if ( !sub_6000AED0((int)a1, v8) )
-        FIELD_U32(a1, 0x0)._._.direction = 0;
+        FIELD_U32(a1, 0x50) = 0;
       if ( sub_6000AED0((int)a1, v8) )
       {
         direction = 1;
-        FIELD_U32(a1, 0x0)._._.direction = 1;
+        FIELD_U32(a1, 0x50) = 1;
       }
       else
       {
-        direction = FIELD_U32(a1, 0x0)._._.direction;
+        direction = FIELD_U32(a1, 0x50);
       }
       v7 = 1;
-      FIELD_U32(a1, 0x0)._._.rotation.y = Enemy_CommonRotations[direction];
+      FIELD_U32(a1, 0xA0) = Enemy_CommonRotations[direction];
     }
   }
   return v7;

@@ -22,17 +22,17 @@ StageActor *__fastcall sub_60748A1C(StageActor *a1, ActorBuildInfo *a2, int a3)
   _DWORD v16[9]; // [sp+4h] [bp-24h] BYREF
 
   StageActor__ctor(a1, a2);
-  FIELD_U32(a1, 0x0).vtable = (int)off_60C235CC;
+  FIELD_U32(a1, 0x0) = (int)off_60C235CC;
   v6 = operator_new(0xBCu);
   a1[1]._.vtable = sub_605EA200(v6, a3, 0);
-  y_low = LODWORD(FIELD_U32(a2, 0x10).y);
-  z = FIELD_U32(a2, 0x10).z;
-  a1[1]._.heap = LODWORD(FIELD_U32(a2, 0x10).x);
+  y_low = LODWORD(FIELD_F32(a2, 0x14));
+  z = FIELD_F32(a2, 0x18);
+  a1[1]._.heap = LODWORD(FIELD_F32(a2, 0x10));
   a1[1]._.id = y_low;
   *(float *)&a1[1]._.profile = z;
-  x = FIELD_U32(a2, 0x10).x;
-  v10 = LODWORD(FIELD_U32(a2, 0x10).y);
-  z_low = LODWORD(FIELD_U32(a2, 0x10).z);
+  x = FIELD_F32(a2, 0x10);
+  v10 = LODWORD(FIELD_F32(a2, 0x14));
+  z_low = LODWORD(FIELD_F32(a2, 0x18));
   a1[1]._.field_2C = 0;
   a1[1]._.childCount = 0;
   a1[1]._.field_20.next = 0;
@@ -56,11 +56,11 @@ StageActor *__fastcall sub_60748A1C(StageActor *a1, ActorBuildInfo *a2, int a3)
   v16[1] = 1077936128;
   v16[2] = 1077936128;
   v13(v12, v16);
-  FIELD_U32(a1, 0x9C).y = FIELD_U32(a2, 0x1C);
+  FIELD_U32(a1, 0xA0) = FIELD_U32(a2, 0x1C);
   ((void (__fastcall *)(int, _DWORD, float, float, float))loc_605EA46C)(a1[1]._.vtable, 0, 0.0, 1.0, 0.0);
   if ( dword_60CC6484 )
   {
-    v14 = FIELD_F32(dword_60CC6484, 116) < FIELD_U32(a1, 0x6C).x;
+    v14 = FIELD_F32(dword_60CC6484, 116) < FIELD_F32(a1, 0x6C);
     FIELD_U32(a1, 0x50) = v14;
     *(_DWORD *)&a1[1]._.movementId = v14;
   }

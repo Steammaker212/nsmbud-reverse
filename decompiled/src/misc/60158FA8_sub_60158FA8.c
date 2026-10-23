@@ -17,7 +17,7 @@ signed int __fastcall sub_60158FA8(ActiveCollider *a1, int a2)
   bool v8; // zf
   ActiveColliderMgr *v9; // r6
 
-  v4 = FIELD_U32(a1, 0x74).field_1C;
+  v4 = FIELD_U32(a1, 0x90);
   result = (a2 & 0x800) == 0;
   v6 = v4 & 0x800;
   v7 = (v6 == 0) | ((unsigned __int16)(a2 & 0x800) >> 11);
@@ -45,6 +45,6 @@ signed int __fastcall sub_60158FA8(ActiveCollider *a1, int a2)
       }
     }
   }
-  FIELD_U32(a1, 0x74).field_1C = a2;
+  FIELD_U32(a1, 0x90) = a2;
   return result;
 }

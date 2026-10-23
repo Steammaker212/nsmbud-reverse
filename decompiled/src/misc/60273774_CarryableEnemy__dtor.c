@@ -16,10 +16,10 @@ void __fastcall CarryableEnemy__dtor(CarryableEnemy *this)
 {
   Actor *v2; // r0
 
-  FIELD_U32(this, 0x0)._._._._.vtable = (int)&Enemy__vtable;
-  sub_602F36E0(&FIELD_U32(this, 0x0).freezeMgr);
-  FIELD_U32(this, 0x0)._._._._.vtable = (int)&CollisionActor__vtable;
-  CollisionMgr_dtor((int)FIELD_U32(this, 0x0)._._.collisionMgr);
-  v2 = StageActor__dtor(&FIELD_U32(this, 0x0)._._._._);
+  FIELD_U32(this, 0x0) = (int)&Enemy__vtable;
+  sub_602F36E0(&FIELD_U32(this, 0x1808));
+  FIELD_U32(this, 0x0) = (int)&CollisionActor__vtable;
+  CollisionMgr_dtor((int)FIELD_U8(this, 0x288));
+  v2 = StageActor__dtor(&FIELD_U32(this, 0x0));
   operator_delete(v2);
 }

@@ -20,7 +20,7 @@ void __fastcall sub_600ED464(Enemy *a1, ActiveCollider *a2, ActiveCollider *a3)
   char v13; // r12
   unsigned int v14; // r0
 
-  if ( (*(int (__fastcall **)(Enemy *))(FIELD_U32(a1, 0x0)._._._.vtable + 884))(a1) == 1 )
+  if ( (*(int (__fastcall **)(Enemy *))(FIELD_U32(a1, 0x0) + 884))(a1) == 1 )
   {
     Enemy__collisionPlayer((int)a1, (int)a2, (int)a3);
     return;
@@ -30,7 +30,7 @@ void __fastcall sub_600ED464(Enemy *a1, ActiveCollider *a2, ActiveCollider *a3)
   {
     if ( v6 != 2 )
     {
-      (*(void (__fastcall **)(Enemy *))(FIELD_U32(a1, 0x0)._._._.vtable + 1708))(a1);
+      (*(void (__fastcall **)(Enemy *))(FIELD_U32(a1, 0x0) + 1708))(a1);
       return;
     }
     owner = FIELD_U32(a3, 0x40);
@@ -41,7 +41,7 @@ void __fastcall sub_600ED464(Enemy *a1, ActiveCollider *a2, ActiveCollider *a3)
     }
     if ( owner )
     {
-      if ( (*(int (__fastcall **)(StageActor *, int *))FIELD_U32(owner, 0x0).vtable)(owner, &dword_60C7B378) == 1 )
+      if ( (*(int (__fastcall **)(StageActor *, int *))FIELD_U32(owner, 0x0))(owner, &dword_60C7B378) == 1 )
       {
         playerId = FIELD_U8(owner, 0x54);
         if ( playerId <= 3 )
@@ -65,7 +65,7 @@ LABEL_20:
     }
     if ( v12 )
     {
-      if ( (*(int (__fastcall **)(StageActor *, int *))FIELD_U32(v12, 0x0).vtable)(v12, &dword_60C7B378) == 1
+      if ( (*(int (__fastcall **)(StageActor *, int *))FIELD_U32(v12, 0x0))(v12, &dword_60C7B378) == 1
         && (BYTE1(v12[1].effectOffset.x) & 1) != 0 )
       {
         v14 = FIELD_U8(v12, 0x54);

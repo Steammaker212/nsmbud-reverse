@@ -25,7 +25,7 @@ int __fastcall LargeGoomba_vf66(Enemy *a1, ActiveCollider *a2, ActiveCollider *a
   }
   if ( owner )
   {
-    v8 = (StageActor *)(*(int (__fastcall **)(StageActor *, int *))FIELD_U32(owner, 0x0).vtable)(owner, &StageActor_RTTI);
+    v8 = (StageActor *)(*(int (__fastcall **)(StageActor *, int *))FIELD_U32(owner, 0x0))(owner, &StageActor_RTTI);
     if ( v8 )
       v8 = owner;
   }
@@ -40,7 +40,7 @@ int __fastcall LargeGoomba_vf66(Enemy *a1, ActiveCollider *a2, ActiveCollider *a
   }
   if ( v8 )
   {
-    v9 = (*(int (__fastcall **)(StageActor *, int *))FIELD_U32(v8, 0x0).vtable)(v8, &dword_60C7B378);
+    v9 = (*(int (__fastcall **)(StageActor *, int *))FIELD_U32(v8, 0x0))(v8, &dword_60C7B378);
     if ( v9 )
       v9 = (int)v8;
   }
@@ -56,10 +56,10 @@ int __fastcall LargeGoomba_vf66(Enemy *a1, ActiveCollider *a2, ActiveCollider *a
     v11 = result == 1;
   if ( v11 )
   {
-    (*(void (__fastcall **)(Enemy *, _DWORD))(FIELD_U32(a1, 0x0)._._._.vtable + 660))(a1, FIELD_S8(v9, 84));
-    (*(void (__fastcall **)(Enemy *))(FIELD_U32(a1, 0x0)._._._.vtable + 672))(a1);
+    (*(void (__fastcall **)(Enemy *, _DWORD))(FIELD_U32(a1, 0x0) + 660))(a1, FIELD_S8(v9, 84));
+    (*(void (__fastcall **)(Enemy *))(FIELD_U32(a1, 0x0) + 672))(a1);
     FIELD_U8(a2, 0x6E) |= 2u;
-    return (*(int (__fastcall **)(Enemy *, int *))(FIELD_U32(a1, 0x0)._._._.vtable + 192))(a1, &dword_60C945FC);
+    return (*(int (__fastcall **)(Enemy *, int *))(FIELD_U32(a1, 0x0) + 192))(a1, &dword_60C945FC);
   }
   return result;
 }

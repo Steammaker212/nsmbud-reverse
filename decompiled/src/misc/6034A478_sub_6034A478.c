@@ -21,10 +21,10 @@ int __fastcall sub_6034A478(CollisionActor *a1)
   result = (unsigned __int8)FIELD_U8(a1, 0x288)[2224];
   if ( (result & 1) != 0 )
   {
-    v4 = (float)byte_60AFE3F4[FIELD_U32(a1, 0x0).direction];
-    FIELD_U32(a1, 0x0).speed.x = v4 * 2.5;
-    FIELD_U32(a1, 0x0).maxSpeed.x = v4 * 2.5;
-    return (*(int (__fastcall **)(CollisionActor *, int *))(FIELD_U32(a1, 0x0)._.vtable + 192))(a1, &dword_60C94BF0);
+    v4 = (float)byte_60AFE3F4[FIELD_U32(a1, 0x50)];
+    FIELD_F32(a1, 0x78) = v4 * 2.5;
+    FIELD_F32(a1, 0x84) = v4 * 2.5;
+    return (*(int (__fastcall **)(CollisionActor *, int *))(FIELD_U32(a1, 0x0) + 192))(a1, &dword_60C94BF0);
   }
   return result;
 }

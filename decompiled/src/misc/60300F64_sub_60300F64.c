@@ -20,10 +20,10 @@ Enemy *__fastcall sub_60300F64(Enemy *this, ActiveCollider *acSelf, ActiveCollid
   if ( !result )
   {
     Enemy__vfC8(this, (int)acSelf, (int)acOther);
-    result = (Enemy *)FIELD_U32(acOther, 0x74).category;
+    result = (Enemy *)FIELD_U32(acOther, 0x8C);
     if ( result == (Enemy *)10 )
     {
-      playerId = (unsigned __int8)FIELD_U32(owner, 0x0)._._.playerId;
+      playerId = (unsigned __int8)FIELD_U8(owner, 0x54);
       v9 = 0;
       if ( playerId < 4 )
         v9 = (char)playerId;

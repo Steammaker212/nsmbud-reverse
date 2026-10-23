@@ -28,58 +28,58 @@ signed int __fastcall BobOmb_onExecute(Enemy *a1)
   __int64 v18; // [sp+10h] [bp-48h] BYREF
   int v19; // [sp+18h] [bp-40h]
 
-  HIBYTE(FIELD_U32(a1, 0x0)._.field_17A8) = *(_DWORD *)&FIELD_U32(a1, 0x0)._.collisionMgr[0x8B0] & 1;
-  p_manager = &FIELD_U32(a1, 0x0).states.manager;
-  StateMgr__execute(&FIELD_U32(a1, 0x0).states.manager);
+  HIBYTE(FIELD_U32(a1, 0x17A8)) = *(_DWORD *)&FIELD_U8(a1, 0x288)[0x8B0] & 1;
+  p_manager = &FIELD_U32(a1, 0x17C4);
+  StateMgr__execute(&FIELD_U32(a1, 0x17C4));
   v3 = &a1[1]._._._._.field_40;
   if ( (a1[1]._._._._.field_40 & 0xA) == 0 && !sub_602A588C((int)a1) && !sub_600025B8((int)a1) )
   {
-    if ( sub_60003AE0(&FIELD_U32(a1, 0x0)._._) == 1 )
+    if ( sub_60003AE0(&FIELD_U32(a1, 0x0)) == 1 )
     {
       CurrentState = StateMgr__getCurrentState(p_manager);
       v5 = (*((int (__fastcall **)(StateBase *))FIELD_U32(CurrentState, 0x0) + 2))(CurrentState);
       if ( v5 != (*((int (**)(void))stru_60C8E1CC._.vtable + 2))() )
-        (*(void (__fastcall **)(Enemy *, State *))(FIELD_U32(a1, 0x0)._._._.vtable + 192))(a1, &stru_60C8E1CC);
+        (*(void (__fastcall **)(Enemy *, State *))(FIELD_U32(a1, 0x0) + 192))(a1, &stru_60C8E1CC);
     }
     else
     {
       ((void (__fastcall *)(int *, float *, Vec3 *, _DWORD))checkLiquidCollisions)(
         &v16,
         v17,
-        &FIELD_U32(a1, 0x0)._._.position,
-        (unsigned __int8)FIELD_U32(a1, 0x0)._._.field_56);
+        &FIELD_U32(a1, 0x6C),
+        (unsigned __int8)FIELD_U8(a1, 0x56));
       v6 = v16;
       if ( v16 )
       {
         sub_600038DC(a1);
         if ( (unsigned int)(v6 - 3) > 1 )
         {
-          if ( v6 == 5 && (*(int (__fastcall **)(Enemy *, float))(FIELD_U32(a1, 0x0)._._._.vtable + 184))(a1, v17[0]) == 1 )
+          if ( v6 == 5 && (*(int (__fastcall **)(Enemy *, float))(FIELD_U32(a1, 0x0) + 184))(a1, v17[0]) == 1 )
           {
-            v10 = *(void (__fastcall **)(Enemy *, __int64 *))(FIELD_U32(a1, 0x0)._._._.vtable + 120);
-            *(float *)&v18 = FIELD_U32(a1, 0x0)._._.position.x;
+            v10 = *(void (__fastcall **)(Enemy *, __int64 *))(FIELD_U32(a1, 0x0) + 120);
+            *(float *)&v18 = FIELD_F32(a1, 0x6C);
             *((float *)&v18 + 1) = v17[0];
             v19 = 1170939904;
             v10(a1, &v18);
-            (*(void (__fastcall **)(Enemy *, _DWORD))(FIELD_U32(a1, 0x0)._._._.vtable + 164))(a1, 0);
+            (*(void (__fastcall **)(Enemy *, _DWORD))(FIELD_U32(a1, 0x0) + 164))(a1, 0);
           }
         }
         else
         {
-          v7 = *(void (__fastcall **)(Enemy *, __int64 *))(FIELD_U32(a1, 0x0)._._._.vtable + 112);
-          *(float *)&v18 = FIELD_U32(a1, 0x0)._._.position.x;
+          v7 = *(void (__fastcall **)(Enemy *, __int64 *))(FIELD_U32(a1, 0x0) + 112);
+          *(float *)&v18 = FIELD_F32(a1, 0x6C);
           *((float *)&v18 + 1) = v17[0];
           v19 = 1170939904;
           v7(a1, &v18);
           v8 = StateMgr__getCurrentState(p_manager);
           v9 = (*((int (__fastcall **)(StateBase *))FIELD_U32(v8, 0x0) + 2))(v8);
           if ( v9 != (*((int (**)(void))stru_60C8E1CC._.vtable + 2))() )
-            (*(void (__fastcall **)(Enemy *, State *))(FIELD_U32(a1, 0x0)._._._.vtable + 192))(a1, &stru_60C8E1CC);
+            (*(void (__fastcall **)(Enemy *, State *))(FIELD_U32(a1, 0x0) + 192))(a1, &stru_60C8E1CC);
         }
       }
       else
       {
-        FIELD_U32(a1, 0x0)._.field_17A6 = 0;
+        FIELD_U8(a1, 0x17A6) = 0;
       }
     }
   }
@@ -107,9 +107,9 @@ signed int __fastcall BobOmb_onExecute(Enemy *a1)
     v13(v11, v14, &v18);
     sub_602372C0((int)&a1[1]._._._.aCollider.info, 640, &v18, 0);
   }
-  if ( BYTE1(a1[1]._._._.field_A8) && (FIELD_U32(a1, 0x0)._.collisionMgr[2224] & 1) != 0 )
+  if ( BYTE1(a1[1]._._._.field_A8) && (FIELD_U8(a1, 0x288)[2224] & 1) != 0 )
     BYTE1(a1[1]._._._.field_A8) = 0;
-  StageActor__cullCheck(&FIELD_U32(a1, 0x0)._._, 0);
+  StageActor__cullCheck(&FIELD_U32(a1, 0x0), 0);
   sub_60003840((int)a1);
   return 1;
 }

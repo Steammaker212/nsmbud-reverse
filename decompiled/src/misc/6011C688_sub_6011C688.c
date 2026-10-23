@@ -79,9 +79,9 @@ int __fastcall sub_6011C688(int *a1)
   j_ModelWrapper_setupModel((int)v5, (int)v2, 0, 0);
   a1[1576] = (int)v4;
   animations = (unsigned int)v4[1].texAnims.animations;
-  v7 = (int *)FIELD_U32(v4, 0x8).animations;
+  v7 = (int *)FIELD_U32(v4, 0xC);
   v8 = a1[1575];
-  if ( FIELD_U32(v4, 0x8).count > animations )
+  if ( FIELD_U32(v4, 0x8) > animations )
     v7 += animations;
   v9 = *v7;
   a2.vtable = &sead__SafeStringBase__vtable;
@@ -144,9 +144,9 @@ int __fastcall sub_6011C688(int *a1)
   j_ModelWrapper_setupModel((int)v32, (int)v29, 0, 0);
   a1[1914] = (int)v31;
   v33 = (unsigned int)v31[1].texAnims.animations;
-  v34 = (int *)FIELD_U32(v31, 0x8).animations;
+  v34 = (int *)FIELD_U32(v31, 0xC);
   v35 = a1[1915];
-  if ( FIELD_U32(v31, 0x8).count > v33 )
+  if ( FIELD_U32(v31, 0x8) > v33 )
     v34 += v33;
   v36 = *v34;
   a2.vtable = &sead__SafeStringBase__vtable;

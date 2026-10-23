@@ -18,24 +18,24 @@ float __fastcall sub_600E6D80(CollisionActor *a1)
   int *v7; // r1
 
   j_ModelWrapper_updateAnims(*(_DWORD *)&a1[1].collisionMgr[384]);
-  y = FIELD_U32(a1, 0x0).rotation.y;
+  y = FIELD_U32(a1, 0xA0);
   v3 = *(_DWORD *)&a1[1].collisionMgr[1456];
   *(_DWORD *)&a1[1].collisionMgr[1412] = y;
   v4 = y + v3;
-  FIELD_U32(a1, 0x0).rotation.y = y + v3;
+  FIELD_U32(a1, 0xA0) = y + v3;
   v5 = *(_DWORD *)&a1[1].collisionMgr[380];
   if ( v5 != 2 )
   {
     if ( v5 == 1 )
     {
       ((void (__fastcall *)(Vec3 *, float, float, float, float))loc_60832560)(
-        &FIELD_U32(a1, 0x0).position,
+        &FIELD_U32(a1, 0x6C),
         *(float *)&a1[1].collisionMgr[1444],
         0.1,
         *(float *)&a1[1].collisionMgr[1448],
         0.1);
-      EffectWrapper_update((EffectWrapper *)&a1[1].collisionMgr[1092], 1051, &FIELD_U32(a1, 0x0).position, 0, 0);
-      if ( FIELD_U32(a1, 0x0).position.x == *(float *)&a1[1].collisionMgr[1444] )
+      EffectWrapper_update((EffectWrapper *)&a1[1].collisionMgr[1092], 1051, &FIELD_U32(a1, 0x6C), 0, 0);
+      if ( FIELD_F32(a1, 0x6C) == *(float *)&a1[1].collisionMgr[1444] )
         *(_DWORD *)&a1[1].collisionMgr[380] = 2;
     }
     goto LABEL_19;
@@ -52,12 +52,12 @@ float __fastcall sub_600E6D80(CollisionActor *a1)
   if ( v6 )
   {
 LABEL_15:
-    FIELD_U32(a1, 0x0).rotation.y = 0;
+    FIELD_U32(a1, 0xA0) = 0;
     if ( a1[1].collisionMgr[1420] )
       v7 = &dword_60C85234;
     else
       v7 = &dword_60C851D4;
-    (*(void (__fastcall **)(CollisionActor *, int *))(FIELD_U32(a1, 0x0)._.vtable + 192))(a1, v7);
+    (*(void (__fastcall **)(CollisionActor *, int *))(FIELD_U32(a1, 0x0) + 192))(a1, v7);
   }
 LABEL_19:
   CollisionActor__handleGravity(a1);

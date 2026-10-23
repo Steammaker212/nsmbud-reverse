@@ -67,7 +67,7 @@ int __fastcall sub_60612DB4(_DWORD *a1)
   v5 = ModelWrapper_ctor(v4, Model2, 1, 1, 0, 0, 0);
   ModelWrapper_setup(v5, Resource, 0, 0);
   *(v1 - 216) = (int)v4;
-  v6 = (int)*FIELD_U32(v4, 0x10).animations;
+  v6 = (int)*FIELD_U32(v4, 0x14);
   *(v1 - 212) = v6;
   v7 = LoadResource(ResourceMgrRelated_instance, &dword_60CB31FC[2 * *v1]);
   a2.vtable = &sead__SafeStringBase__vtable;
@@ -87,7 +87,7 @@ int __fastcall sub_60612DB4(_DWORD *a1)
   v13 = ModelWrapper_ctor(v12, v11, 1, 1, 1, 0, 0);
   ModelWrapper_setup(v13, v10, 0, 0);
   *(v1 - 215) = (int)v12;
-  v14 = (int)*FIELD_U32(v12, 0x8).animations;
+  v14 = (int)*FIELD_U32(v12, 0xC);
   v15 = LoadResource(ResourceMgrRelated_instance, &dword_60CB31FC[2 * *v1]);
   a2.vtable = &sead__SafeStringBase__vtable;
   a2.cstr = "wait";
@@ -122,7 +122,7 @@ int __fastcall sub_60612DB4(_DWORD *a1)
   v24 = ModelWrapper_ctor(v23, v22, 1, 1, 1, 0, 0);
   ModelWrapper_setup(v24, v21, 0, 0);
   *(v1 - 213) = (int)v23;
-  v25 = (int)*FIELD_U32(v23, 0x8).animations;
+  v25 = (int)*FIELD_U32(v23, 0xC);
   v26 = LoadResource(ResourceMgrRelated_instance, &dword_60CB31FC[2 * *v1]);
   a2.vtable = &sead__SafeStringBase__vtable;
   a2.cstr = "goal_flag_player_wait";
@@ -157,7 +157,7 @@ int __fastcall sub_60612DB4(_DWORD *a1)
   v35 = ModelWrapper_ctor(v34, v33, 1, 1, 0, 1, 0);
   ModelWrapper_setup(v35, v32, 0, 0);
   *(v1 - 214) = (int)v34;
-  v36 = (int)*FIELD_U32(v34, 0x10).animations;
+  v36 = (int)*FIELD_U32(v34, 0x14);
   *(v1 - 210) = v36;
   v37 = LoadResource(ResourceMgrRelated_instance, &dword_60CB31FC[2 * *v1]);
   a2.vtable = &sead__SafeStringBase__vtable;

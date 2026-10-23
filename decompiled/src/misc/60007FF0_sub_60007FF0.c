@@ -27,7 +27,7 @@ sead_ListNode *__fastcall sub_60007FF0(sead_ListNode *a1, Actor *a2)
   sead__ListNode__insertFront(a1 + 2867, (sead_ListNode *)((char *)a1[2868].next + (unsigned int)a2));
   ++a1[2868].previous;
   result = &FIELD_U32(a2, 0x20);
-  next = (Actor *)FIELD_U32(a2, 0x20).next;
+  next = (Actor *)FIELD_U32(a2, 0x24);
   if ( next != (Actor *)&FIELD_U32(a2, 0x20) )
   {
     v7 = FIELD_U32(a2, 0x2C);

@@ -22,7 +22,7 @@ signed int __fastcall BossBase__beforeExecute(BossBase *a1)
   int v5; // r1
   int vtable; // r0
 
-  v2 = Enemy__beforeExecute(&FIELD_U32(a1, 0x0)._._);
+  v2 = Enemy__beforeExecute(&FIELD_U32(a1, 0x0));
   result = 0;
   if ( v2 == 1 )
   {
@@ -31,7 +31,7 @@ signed int __fastcall BossBase__beforeExecute(BossBase *a1)
     {
       v5 = v4 - 1;
       FIELD_U32(a1, 0x18A4) = v5;
-      vtable = FIELD_U32(a1, 0x0)._._._._.vtable;
+      vtable = FIELD_U32(a1, 0x0);
       if ( v5 )
         (*(void (__fastcall **)(BossBase *))(vtable + 0x304))(a1);
       else

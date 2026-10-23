@@ -33,7 +33,7 @@ int __fastcall sub_601A5468(int a1)
   ModelWrapper_setup(v5, (int)v2, 0, 0);
   FIELD_U32(a1, 304) = v4;
   v6 = FIELD_U32(a1, 300);
-  v7 = (int)*FIELD_U32(v4, 0x8).animations;
+  v7 = (int)*FIELD_U32(v4, 0xC);
   identifier.vtable = &sead__SafeStringBase__vtable;
   identifier.cstr = "appear";
   SkeletalAnim_play(v7, v6, (int)&identifier);

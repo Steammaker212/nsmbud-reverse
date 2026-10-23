@@ -12,7 +12,7 @@ signed int __fastcall sub_60130EA8(StageActor *a1)
 {
   if ( (FIELD_U8(AreaRumbleMgr_instance, 56) & 2) == 0 )
     return CollisionActor__beforeExecute(a1);
-  (*(void (__fastcall **)(StageActor *))(FIELD_U32(a1, 0x0).vtable + 104))(a1);
-  FIELD_U32(a1, 0x0).isDeleted = 1;
+  (*(void (__fastcall **)(StageActor *))(FIELD_U32(a1, 0x0) + 104))(a1);
+  FIELD_U8(a1, 0x13) = 1;
   return 1;
 }

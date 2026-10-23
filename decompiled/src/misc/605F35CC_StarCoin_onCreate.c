@@ -23,28 +23,28 @@ signed int __fastcall StarCoin_onCreate(StarCoin *a1)
   int v12; // [sp+0h] [bp-18h] BYREF
   float v13; // [sp+4h] [bp-14h] BYREF
 
-  v2 = sub_605F43EC((int)a1, (FIELD_U32(a1, 0x0)._._._._.settings1 & 0x10000000) != 0 || (FIELD_U32(a1, 0x0)._._._._.settings1 & 0x20000000) != 0);
+  v2 = sub_605F43EC((int)a1, (FIELD_U32(a1, 0x14) & 0x10000000) != 0 || (FIELD_U32(a1, 0x14) & 0x20000000) != 0);
   result = 2;
   if ( v2 == 1 )
   {
-    y = FIELD_U32(a1, 0x0)._._._.position.y;
-    FIELD_U32(a1, 0x0).field_1804 = 1;
-    settings1 = FIELD_U32(a1, 0x0)._._._._.settings1;
+    y = FIELD_F32(a1, 0x70);
+    FIELD_U32(a1, 0x1804) = 1;
+    settings1 = FIELD_U32(a1, 0x14);
     v6 = y + 3.0;
     v7 = (settings1 & 0x20000000) == 0;
-    FIELD_U32(a1, 0x0).field_1808 = (settings1 >> 18) & 3;
+    FIELD_U32(a1, 0x1808) = (settings1 >> 18) & 3;
     v8 = (settings1 >> 17) & 1;
     v9 = 6156;
     if ( (settings1 & 0x20000000) != 0 )
       settings1 = 0;
-    FIELD_U32(a1, 0x0).field_180C = v8;
+    FIELD_U32(a1, 0x180C) = v8;
     if ( !v7 )
-      v9 = (int)&FIELD_U32(a1, 0x0).field_180C;
+      v9 = (int)&FIELD_U32(a1, 0x180C);
     v10 = v6 + -16.0;
-    v11 = ((unsigned int)FIELD_U32(a1, 0x0)._._._._.settigns2 >> 28) & 1;
+    v11 = ((unsigned int)FIELD_U32(a1, 0x18) >> 28) & 1;
     FIELD_U32(a1, 0x1834) = v11;
-    FIELD_U32(a1, 0x0)._._._.position.x = FIELD_U32(a1, 0x0)._._._.position.x + 16.0;
-    FIELD_U32(a1, 0x0)._._._.position.y = v10;
+    FIELD_F32(a1, 0x6C) = FIELD_F32(a1, 0x6C) + 16.0;
+    FIELD_F32(a1, 0x70) = v10;
     *(float *)&FIELD_U32(a1, 0x182C) = v10;
     if ( !v7 )
       *(_DWORD *)v9 = settings1;
@@ -55,11 +55,11 @@ signed int __fastcall StarCoin_onCreate(StarCoin *a1)
       ((void (__fastcall *)(int *, float *, Vec3 *, _DWORD))checkLiquidCollisions)(
         &v12,
         &v13,
-        &FIELD_U32(a1, 0x0)._._._.position,
-        (unsigned __int8)FIELD_U32(a1, 0x0)._._._.field_56);
-      FIELD_U32(a1, 0x0)._._._.position.y = *(float *)&FIELD_U32(a1, 0x182C) + (float)(v13 - *(float *)&FIELD_U32(a1, 0x1830));
+        &FIELD_U32(a1, 0x6C),
+        (unsigned __int8)FIELD_U8(a1, 0x56));
+      FIELD_F32(a1, 0x70) = *(float *)&FIELD_U32(a1, 0x182C) + (float)(v13 - *(float *)&FIELD_U32(a1, 0x1830));
     }
-    (*(void (__fastcall **)(StarCoin *, int *))(FIELD_U32(a1, 0x0)._._._._.vtable + 192))(a1, &dword_60CB21E0);
+    (*(void (__fastcall **)(StarCoin *, int *))(FIELD_U32(a1, 0x0) + 192))(a1, &dword_60CB21E0);
     StarCoinBase_updateModel((ModelWrapper **)a1);
     return 1;
   }

@@ -19,8 +19,8 @@ int __fastcall SE_EMY_BUBBLE_EXTINCT_ref(StateActor *a1, int a2, int a3)
 
   SE_OBJ_PNGN_ICEBALL_DISAPP_ref_2A2DA0(a3);
   v5 = Global_BasicSoundActor1;
-  y = FIELD_U32(a1, 0x0)._.position.y;
-  position.x = FIELD_U32(a1, 0x0)._.position.x;
+  y = FIELD_F32(a1, 0x70);
+  position.x = FIELD_F32(a1, 0x6C);
   position.y = y;
   mapPositionToScreen(&out, &position);
   BasicSoundActor1_playSound(v5, "SE_EMY_BUBBLE_EXTINCT", (int)&out, 0);
@@ -32,11 +32,11 @@ int __fastcall SE_EMY_BUBBLE_EXTINCT_ref(StateActor *a1, int a2, int a3)
   }
   else
   {
-    sub_60022540(dword_60C7F52C, (int)&FIELD_U32(a1, 0x0)._.position, 1u, v7, 1);
+    sub_60022540(dword_60C7F52C, (int)&FIELD_U32(a1, 0x6C), 1u, v7, 1);
   }
   sub_60001688((int)a1, 17, -1);
-  x = FIELD_U32(a1, 0x0)._.position.x;
-  position.y = FIELD_U32(a1, 0x0)._.position.y;
+  x = FIELD_F32(a1, 0x6C);
+  position.y = FIELD_F32(a1, 0x70);
   position.x = x;
   position.z = 4500.0;
   EffectData_create(656, &position, 0, 0);

@@ -10,6 +10,6 @@
 
 signed int __fastcall sub_60301F18(Enemy *a1)
 {
-  (*(void (__fastcall **)(Enemy *))(FIELD_U32(a1, 0x0)._._._.vtable + 660))(a1);
+  (*(void (__fastcall **)(Enemy *))(FIELD_U32(a1, 0x0) + 660))(a1);
   return Enemy__vf264(a1);
 }

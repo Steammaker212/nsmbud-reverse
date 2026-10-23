@@ -10,7 +10,7 @@
 
 int __fastcall SumoBroLightning_vf7(MultiStateActor *a1)
 {
-  if ( (FIELD_U32(a1, 0x0)._._.settings1 & 0x100) != 0 )
-    FIELD_U32(a1, 0x0)._.field_B4 = 0;
-  return CollisionActor__beforeExecute(&FIELD_U32(a1, 0x0)._);
+  if ( (FIELD_U32(a1, 0x14) & 0x100) != 0 )
+    FIELD_U32(a1, 0xB4) = 0;
+  return CollisionActor__beforeExecute(&FIELD_U32(a1, 0x0));
 }

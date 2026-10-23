@@ -16,7 +16,7 @@ int __fastcall sub_60375FB0(StateActor *a1)
   _BYTE *v5; // r0
   Vec2 v7; // [sp+0h] [bp-18h] BYREF
 
-  eventId1 = (unsigned __int8)FIELD_U32(a1, 0x0)._.eventId1;
+  eventId1 = (unsigned __int8)FIELD_U8(a1, 0x21B);
   if ( eventId1 )
   {
     v3 = eventId1 - 33;
@@ -29,7 +29,7 @@ int __fastcall sub_60375FB0(StateActor *a1)
     }
     if ( (FIELD_U64(EventMgr__instance, 16) & v4) != 0 )
     {
-      v5 = (_BYTE *)FIELD_U32(a1, 0x0)._.field_278;
+      v5 = (_BYTE *)FIELD_U32(a1, 0x278);
       if ( v5 )
         *v5 = 1;
       return sub_60373B78((int)a1);
@@ -40,5 +40,5 @@ int __fastcall sub_60375FB0(StateActor *a1)
   {
     return sub_60373B78((int)a1);
   }
-  return (*(int (__fastcall **)(StateActor *, void *))(FIELD_U32(a1, 0x0)._._.vtable + 192))(a1, &unk_60C963A8);
+  return (*(int (__fastcall **)(StateActor *, void *))(FIELD_U32(a1, 0x0) + 192))(a1, &unk_60C963A8);
 }

@@ -10,7 +10,7 @@
 
 char *__fastcall sub_60367A78(StageActor *a1)
 {
-  FIELD_U32(a1, 0x6C).z = sub_60007178(dword_60C7B3F8);
+  FIELD_F32(a1, 0x74) = sub_60007178(dword_60C7B3F8);
   ActiveCollider__init(&FIELD_U32(a1, 0xBC), a1, (ActiveColliderInfo *)&unk_60BF036C, (int)&a1[10].speed.z);
   FIELD_U32(a1, 0x270) = (int)&a1[10].maxSpeed.y;
   return (char *)&a1[10].maxSpeed.y;

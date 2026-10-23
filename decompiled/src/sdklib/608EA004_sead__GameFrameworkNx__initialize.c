@@ -13,5 +13,5 @@ int __fastcall sead__GameFrameworkNx__initialize(_DWORD *a1)
   nn__oe *v1; // r0
 
   v1 = (nn__oe *)sead__GameFramework__initialize(a1);
-  return nn__oe__Initialize(v1);
+  return nn__oe__Initialize__thunk(v1);
 }

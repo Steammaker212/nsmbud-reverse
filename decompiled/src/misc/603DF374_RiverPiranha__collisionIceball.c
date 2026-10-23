@@ -13,7 +13,7 @@
 // Overridden by: None
 int __fastcall RiverPiranha__collisionIceball(Enemy *a1, int a2, int a3)
 {
-  FIELD_U32(a1, 0x0)._._.position.y = FIELD_U32(a1, 0x0)._._.position.y + 3.5;
+  FIELD_F32(a1, 0x70) = FIELD_F32(a1, 0x70) + 3.5;
   Enemy__collisionIceball(a1, a2, a3);
   return 1;
 }

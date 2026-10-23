@@ -35,8 +35,8 @@ Actor *__fastcall sub_6082ED70(Actor *a1, ActorBuildInfo *a2)
   FIELD_U32(a1, 0x0) = (int)off_60C2ABB8;
   settings1 = FIELD_U32(a1, 0x14);
   settigns2 = FIELD_U32(a1, 0x18);
-  x = FIELD_U32(a2, 0x10).x;
-  y = FIELD_U32(a2, 0x10).y;
+  x = FIELD_F32(a2, 0x10);
+  y = FIELD_F32(a2, 0x14);
   v21 = 0.0;
   v22 = 0.0;
   v23 = x;

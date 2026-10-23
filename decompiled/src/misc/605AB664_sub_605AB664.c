@@ -97,7 +97,7 @@ int __fastcall sub_605AB664(int a1)
     ModelWrapper_setup(v5, v2, 0, 0);
     FIELD_U32(a1, 6104) = v4;
     v6 = (_DWORD **)(a1 + 6104);
-    v7 = (int)*FIELD_U32(v4, 0x18).animations;
+    v7 = (int)*FIELD_U32(v4, 0x1C);
     v6[1] = (_DWORD *)v7;
     a2.vtable = &sead__SafeStringBase__vtable;
     a2.cstr = "obj_waterhalf_under";
@@ -128,7 +128,7 @@ int __fastcall sub_605AB664(int a1)
     v16 = ModelWrapper_ctor(v15, v14, 1, 0, 1, 0, 0);
     ModelWrapper_setup(v16, v2, 0, 0);
     v6[16557] = &FIELD_U32(v15, 0x0);
-    v17 = (int)*FIELD_U32(v15, 0x18).animations;
+    v17 = (int)*FIELD_U32(v15, 0x1C);
     a2.vtable = &sead__SafeStringBase__vtable;
     a2.cstr = "obj_waterhalf_middle";
     sub_60446088(v17, (int)v2, &a2);
@@ -160,7 +160,7 @@ int __fastcall sub_605AB664(int a1)
     v26 = ModelWrapper_ctor(v25, v24, 1, 0, 1, 0, 0);
     ModelWrapper_setup(v26, v2, 0, 0);
     v6[16556] = &FIELD_U32(v25, 0x0);
-    v27 = (int)*FIELD_U32(v25, 0x18).animations;
+    v27 = (int)*FIELD_U32(v25, 0x1C);
     a2.vtable = &sead__SafeStringBase__vtable;
     a2.cstr = "obj_waterhalf_behind";
     sub_60446088(v27, (int)v2, &a2);
@@ -183,7 +183,7 @@ int __fastcall sub_605AB664(int a1)
     v33 = ModelWrapper_ctor(v32, v31, 1, 0, 1, 0, 0);
     ModelWrapper_setup(v33, v2, 0, 0);
     v6[16558] = &FIELD_U32(v32, 0x0);
-    v34 = (int)*FIELD_U32(v32, 0x18).animations;
+    v34 = (int)*FIELD_U32(v32, 0x1C);
     a2.vtable = &sead__SafeStringBase__vtable;
     a2.cstr = "obj_waterhalf_behind_middle";
     sub_60446088(v34, (int)v2, &a2);
@@ -213,7 +213,7 @@ int __fastcall sub_605AB664(int a1)
     ModelWrapper_setup(v42, v39, 0, 0);
     FIELD_U32(a1, 6104) = v41;
     v43 = (int **)(a1 + 6104);
-    v44 = (int)*FIELD_U32(v41, 0x18).animations;
+    v44 = (int)*FIELD_U32(v41, 0x1C);
     v43[1] = (int *)v44;
     a2.vtable = &sead__SafeStringBase__vtable;
     a2.cstr = "obj_waterfull_caustics";

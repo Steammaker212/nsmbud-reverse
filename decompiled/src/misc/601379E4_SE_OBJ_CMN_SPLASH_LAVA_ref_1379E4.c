@@ -15,7 +15,7 @@ int __fastcall SE_OBJ_CMN_SPLASH_LAVA_ref_1379E4(StageActor *a1, float s0_0)
 
   if ( !FIELD_U8(dword_60CC6D8C, 17) )
     return PlantFireball_vf75((int)a1);
-  a2.x = FIELD_U32(a1, 0x6C).x;
+  a2.x = FIELD_F32(a1, 0x6C);
   a2.y = s0_0;
   v4 = 1166843904;
   return StageActor__createWaterSplash(a1, &a2, 836, 18, "SE_OBJ_CMN_SPLASH_LAVA");

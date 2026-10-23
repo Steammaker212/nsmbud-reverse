@@ -10,6 +10,6 @@
 
 Enemy *__fastcall sub_603B5D48(Enemy *a1)
 {
-  FIELD_U32(a1, 0x0)._._.position.z = FIELD_U32(a1, 0x0)._._.position.z + 500.0;
+  FIELD_F32(a1, 0x74) = FIELD_F32(a1, 0x74) + 500.0;
   return Enemy__vf26C(a1);
 }

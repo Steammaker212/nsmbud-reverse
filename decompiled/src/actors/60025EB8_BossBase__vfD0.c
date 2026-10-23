@@ -19,16 +19,16 @@ signed int __fastcall BossBase__vfD0(BossBase *a1)
   float z; // s0
   EnemyFreezeMgr_Info v7; // [sp+0h] [bp-30h] BYREF
 
-  p_y = &FIELD_U32(a1, 0x1B80).y;
-  (*(void (__fastcall **)(BossBase *))(FIELD_U32(a1, 0x0)._._._._.vtable + 0x2C8))(a1);
+  p_y = &FIELD_F32(a1, 0x1B84);
+  (*(void (__fastcall **)(BossBase *))(FIELD_U32(a1, 0x0) + 0x2C8))(a1);
   v3 = *p_y;
-  x = FIELD_U32(a1, 0x1B80).x;
-  z = FIELD_U32(a1, 0x1B80).z;
+  x = FIELD_F32(a1, 0x1B80);
+  z = FIELD_F32(a1, 0x1B88);
   v7.settings = 0x1103;
   v7.position = FIELD_U32(a1, 0x1B74);
   v7.scale.x = x * 0.015625;
   v7.scale.y = v3 * 0.015625;
   v7.scale.z = z * 0.015625;
   v7.field_1C = 0;
-  return EnemyFreezeMgr_freeze(&FIELD_U32(a1, 0x0).freezeMgr, &v7, 1u);
+  return EnemyFreezeMgr_freeze(&FIELD_U32(a1, 0x1808), &v7, 1u);
 }

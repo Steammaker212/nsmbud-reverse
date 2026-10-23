@@ -31,8 +31,8 @@ void __fastcall sub_6028D2D4(Enemy *a1, ActiveCollider *a2, ActiveCollider *a3)
       _cxa_guard_release(&dword_60C7B408);
     }
     if ( v8
-      && (*(int (__fastcall **)(StageActor *, int *))FIELD_U32(v8, 0x0).vtable)(v8, &dword_60C7B404) == 1
-      && !(*(int (__fastcall **)(StageActor *))(FIELD_U32(v8, 0x0).vtable + 1156))(v8) )
+      && (*(int (__fastcall **)(StageActor *, int *))FIELD_U32(v8, 0x0))(v8, &dword_60C7B404) == 1
+      && !(*(int (__fastcall **)(StageActor *))(FIELD_U32(v8, 0x0) + 1156))(v8) )
     {
       Enemy__collisionYoshi(a1, a2, a3);
     }

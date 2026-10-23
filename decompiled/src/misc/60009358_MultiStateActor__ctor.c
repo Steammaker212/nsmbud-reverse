@@ -11,14 +11,14 @@
 MultiStateActor *__fastcall MultiStateActor__ctor(MultiStateActor *this, ActorBuildInfo *buildInfo)
 {
   CollisionActor__ctor(&FIELD_U32(this, 0x0), buildInfo);
-  FIELD_U32(this, 0x0)._._.vtable = (int)&MultiStateActor__vtable;
-  FIELD_U32(this, 0x17B0).vtable = (int)&off_60BC0450;
-  FIELD_U32(this, 0x17B0).executer.vtable = &off_60BC0460;
-  FIELD_U32(this, 0x17B0).executer.methodExecuter.vtable = &off_60BC0484;
-  FIELD_U32(this, 0x17B0).executer.methodExecuter.owner = this;
-  FIELD_U32(this, 0x17B0).executer.methodExecuter.currentState = 0;
-  StateMgr_ctor(&FIELD_U32(this, 0x17B0).manager, &FIELD_U32(this, 0x17B0).executer, &NullState);
+  FIELD_U32(this, 0x0) = (int)&MultiStateActor__vtable;
+  FIELD_U32(this, 0x17B0) = (int)&off_60BC0450;
+  FIELD_U32(this, 0x17B4) = &off_60BC0460;
+  FIELD_U32(this, 0x17B8) = &off_60BC0484;
+  FIELD_U32(this, 0x17BC) = this;
+  FIELD_U32(this, 0x17C0) = 0;
+  StateMgr_ctor(&FIELD_U32(this, 0x17C4), &FIELD_U32(this, 0x17B4), &NullState);
   FIELD_U32(this, 0x17D4) = 0;
-  FIELD_U32(this, 0x17B0).vtable = (int)&off_60BC0440;
+  FIELD_U32(this, 0x17B0) = (int)&off_60BC0440;
   return this;
 }

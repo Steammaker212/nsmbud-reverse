@@ -26,7 +26,7 @@ int __fastcall sub_602DC130(int a1, ActiveCollider *a2, ActiveCollider *a3)
   {
     if ( a3 )
     {
-      category = FIELD_U32(a3, 0x74).category;
+      category = FIELD_U32(a3, 0x8C);
       if ( category )
       {
         v8 = category == 13;

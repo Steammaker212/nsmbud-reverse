@@ -24,8 +24,8 @@ int __fastcall sub_6005BA70(StateActor *a1)
   _DWORD v14[2]; // [sp+0h] [bp-38h] BYREF
   Vec2 out; // [sp+8h] [bp-30h] BYREF
 
-  if ( !(*(int (__fastcall **)(StateActor *))(FIELD_U32(a1, 0x0)._._.vtable + 716))(a1) )
-    (*(int (__fastcall **)(StateActor *))(FIELD_U32(a1, 0x0)._._.vtable + 720))(a1);
+  if ( !(*(int (__fastcall **)(StateActor *))(FIELD_U32(a1, 0x0) + 716))(a1) )
+    (*(int (__fastcall **)(StateActor *))(FIELD_U32(a1, 0x0) + 720))(a1);
   v2 = 0.0;
   v3 = *(_DWORD *)&a1[1]._.collisionMgr[456];
   LODWORD(out.x) = &sead__SafeStringBase__vtable;
@@ -38,22 +38,22 @@ int __fastcall sub_6005BA70(StateActor *a1)
   LODWORD(out.x) = &sead__SafeStringBase__vtable;
   LODWORD(out.y) = "fly_wing_wait";
   sub_60421AD4(v4);
-  (*(void (__fastcall **)(StateActor *))(FIELD_U32(a1, 0x0)._._.vtable + 1188))(a1);
+  (*(void (__fastcall **)(StateActor *))(FIELD_U32(a1, 0x0) + 1188))(a1);
   StageActor__distanceToPlayer(a1, &out);
   if ( *(_DWORD *)&a1[1]._.collisionMgr[1112] == 1
-    && (*(int (__fastcall **)(StateActor *))(FIELD_U32(a1, 0x0)._._.vtable + 724))(a1) == 1 )
+    && (*(int (__fastcall **)(StateActor *))(FIELD_U32(a1, 0x0) + 724))(a1) == 1 )
   {
     x = out.x;
     v6 = out.x;
-    v7 = FIELD_U32(a1, 0x0)._.position.x - *(float *)&a1[1]._.collisionMgr[1140];
+    v7 = FIELD_F32(a1, 0x6C) - *(float *)&a1[1]._.collisionMgr[1140];
   }
   else
   {
     v6 = out.x;
     x = out.x;
-    v7 = FIELD_U32(a1, 0x0)._.position.x + out.x;
+    v7 = FIELD_F32(a1, 0x6C) + out.x;
   }
-  z = FIELD_U32(a1, 0x0)._.position.z;
+  z = FIELD_F32(a1, 0x74);
   v9 = *(_DWORD *)&a1[1]._.collisionMgr[1108];
   *(float *)&a1[1]._.collisionMgr[1128] = v7;
   *(_DWORD *)&a1[1]._.collisionMgr[1132] = v9;
@@ -67,13 +67,13 @@ int __fastcall sub_6005BA70(StateActor *a1)
     y = out.y * v12;
     x = v6 * v12;
   }
-  FIELD_U32(a1, 0x0)._.speed.x = x;
-  FIELD_U32(a1, 0x0)._.speed.y = y;
-  FIELD_U32(a1, 0x0)._.speed.z = v2;
-  FIELD_U32(a1, 0x0)._.field_64 = 0.0;
-  FIELD_U32(a1, 0x0)._.maxSpeed.x = 0.0;
-  FIELD_U32(a1, 0x0)._.maxSpeed.y = 0.0;
-  FIELD_U32(a1, 0x0)._.maxSpeed.z = 0.0;
+  FIELD_F32(a1, 0x78) = x;
+  FIELD_F32(a1, 0x7C) = y;
+  FIELD_F32(a1, 0x80) = v2;
+  FIELD_F32(a1, 0x64) = 0.0;
+  FIELD_F32(a1, 0x84) = 0.0;
+  FIELD_F32(a1, 0x88) = 0.0;
+  FIELD_F32(a1, 0x8C) = 0.0;
   LOWORD(a1[1]._._.field_B0) = 30;
   return 6276;
 }

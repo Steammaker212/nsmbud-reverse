@@ -17,7 +17,7 @@ int __fastcall KoopaTroopa_vf50(Enemy *a1, int a2, int a3)
   result = 0;
   if ( v5 == 1 )
   {
-    (*(void (__fastcall **)(Enemy *, _DWORD))(FIELD_U32(a1, 0x0)._._._.vtable + 836))(a1, FIELD_U32(a3, 64));
+    (*(void (__fastcall **)(Enemy *, _DWORD))(FIELD_U32(a1, 0x0) + 836))(a1, FIELD_U32(a3, 64));
     return 1;
   }
   return result;

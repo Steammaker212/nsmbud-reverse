@@ -135,20 +135,20 @@ LABEL_25:
   }
   if ( v11 == 1 )
   {
-    v28 = &FIELD_U32(a1, 0x0).field_130;
+    v28 = &FIELD_U32(a1, 0x130);
     v29 = 0;
     v30 = 0;
     do
     {
       v31 = FIELD_U32(a1, 0x160);
-      v32 = FIELD_U32(a1, 0x0).field_134;
+      v32 = FIELD_U32(a1, 0x134);
       if ( FIELD_U32(a1, 0x15C) > v30 )
         v31 += v29;
       FIELD_U32(v31, 24) = *v28;
       FIELD_U32(v31, 28) = v32;
       v33 = FIELD_U32(a1, 0x168);
       v34 = FIELD_U32(a1, 0x164) > v30;
-      v35 = FIELD_U32(a1, 0x0).field_134;
+      v35 = FIELD_U32(a1, 0x134);
       ++v30;
       if ( v34 )
         v33 += v29;
@@ -164,5 +164,5 @@ LABEL_25:
   a2a._57Ptr = &FIELD_U8(owner, 0x57);
   a2a.playerIdPtr = &FIELD_U8(owner, 0x54);
   SolidOnTopCollider_initImpl(a1, &a2a, info);
-  FIELD_U32(a1, 0x0).owner = owner;
+  FIELD_U32(a1, 0x90) = owner;
 }

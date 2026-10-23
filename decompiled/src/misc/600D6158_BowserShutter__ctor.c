@@ -18,9 +18,9 @@ int __fastcall BowserShutter__ctor(ActorBuildInfo *buildInfo)
   StageActor__ctor((StageActor *)this, buildInfo);
   *(_DWORD *)this = off_60BCBB48;
   FIELD_U32(this, 644) = 0;
-  y = FIELD_U32(buildInfo, 0x10).y;
-  z = FIELD_U32(buildInfo, 0x10).z;
-  FIELD_F32(this, 648) = FIELD_U32(buildInfo, 0x10).x;
+  y = FIELD_F32(buildInfo, 0x14);
+  z = FIELD_F32(buildInfo, 0x18);
+  FIELD_F32(this, 648) = FIELD_F32(buildInfo, 0x10);
   FIELD_F32(this, 652) = y;
   FIELD_F32(this, 656) = z;
   RectCollider_ctor((RectCollider *)(this + 664));

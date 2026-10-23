@@ -32,7 +32,7 @@ int __fastcall killer_mag_ref_2(_DWORD *a1)
   ModelWrapper_setup(v5, (int)v2, 0, 0);
   a1[3264] = v4;
   a1 += 3264;
-  v6 = *FIELD_U32(v4, 0x18).animations;
+  v6 = *FIELD_U32(v4, 0x1C);
   v10 = &sead__SafeStringBase__vtable;
   v11 = "killer_mag";
   v7 = LoadResource(ResourceMgrRelated_instance, &v10);

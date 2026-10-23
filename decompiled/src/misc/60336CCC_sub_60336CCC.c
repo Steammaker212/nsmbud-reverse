@@ -14,21 +14,21 @@ int __fastcall sub_60336CCC(StateActor *a1)
   ActiveColliderMgr *v3; // r6
   ActiveColliderMgr *v4; // r6
 
-  p_aCollider = &FIELD_U32(a1, 0x0)._.aCollider;
-  ActiveCollider__init(&FIELD_U32(a1, 0x0)._.aCollider, &FIELD_U32(a1, 0x0)._, &stru_60BECD18, 0);
+  p_aCollider = &FIELD_U32(a1, 0xBC);
+  ActiveCollider__init(&FIELD_U32(a1, 0xBC), &FIELD_U32(a1, 0x0), &stru_60BECD18, 0);
   v3 = ActiveColliderMgr_instance;
   if ( !ActiveColliderMgr_isInActiveList(ActiveColliderMgr_instance, p_aCollider)
     && !ActiveColliderMgr_isInCreateList(v3, p_aCollider) )
   {
     ActiveColliderMgr_addToCreateList(v3, p_aCollider);
   }
-  CollisionMgr_init((CollisionMgr *)FIELD_U32(a1, 0x0).collisionMgr, a1, &stru_60AFFA9C, &stru_60AFFAA8, &stru_60AFFAB4);
-  FIELD_U32(a1, 0x0)._.scale.x = 1.0;
-  FIELD_U32(a1, 0x0)._.scale.y = 1.0;
-  FIELD_U32(a1, 0x0)._.scale.z = 1.0;
+  CollisionMgr_init((CollisionMgr *)FIELD_U8(a1, 0x288), a1, &stru_60AFFA9C, &stru_60AFFAA8, &stru_60AFFAB4);
+  FIELD_F32(a1, 0x90) = 1.0;
+  FIELD_F32(a1, 0x94) = 1.0;
+  FIELD_F32(a1, 0x98) = 1.0;
   ActiveCollider__init(
     (ActiveCollider *)&a1[1]._._.field_210,
-    &FIELD_U32(a1, 0x0)._,
+    &FIELD_U32(a1, 0x0),
     &stru_60AFFA70,
     (int)&a1[1]._.collisionMgr[184]);
   v4 = ActiveColliderMgr_instance;
@@ -37,5 +37,5 @@ int __fastcall sub_60336CCC(StateActor *a1)
   {
     ActiveColliderMgr_addToCreateList(v4, (ActiveCollider *)&a1[1]._._.field_210);
   }
-  return (*(int (__fastcall **)(StateActor *, int *))(FIELD_U32(a1, 0x0)._._.vtable + 192))(a1, &dword_60C9419C);
+  return (*(int (__fastcall **)(StateActor *, int *))(FIELD_U32(a1, 0x0) + 192))(a1, &dword_60C9419C);
 }

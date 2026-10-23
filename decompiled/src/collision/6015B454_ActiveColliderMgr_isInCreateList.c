@@ -13,7 +13,7 @@ bool __fastcall ActiveColliderMgr_isInCreateList(_DWORD *a1, ActiveCollider *a2)
   _BOOL4 result; // r0
 
   result = 1;
-  if ( !FIELD_U32(a2, 0x1C).next && !FIELD_U32(a2, 0x1C).prev )
+  if ( !FIELD_U32(a2, 0x20) && !FIELD_U32(a2, 0x24) )
     return a1[8] == (_DWORD)&FIELD_U32(a2, 0x1C);
   return result;
 }

@@ -13,7 +13,7 @@ void __fastcall ActiveCollider_dtorFree(ActiveCollider *a1)
   ActiveColliderMgr *v2; // r5
   _DWORD *v3; // r0
 
-  FIELD_U32(a1, 0x0).vtable = (int)ActiveCollider_vtable;
+  FIELD_U32(a1, 0x0) = (int)ActiveCollider_vtable;
   v2 = ActiveColliderMgr_instance;
   ActiveColldierMgr_removeFromActiveList(ActiveColliderMgr_instance, a1);
   ActiveColldierMgr_removeFromCreateList(v2, a1);

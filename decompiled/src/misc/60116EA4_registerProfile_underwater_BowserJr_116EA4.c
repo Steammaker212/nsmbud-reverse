@@ -90,7 +90,7 @@ void (*registerProfile_underwater_BowserJr_116EA4())()
   dword_60C86A70 = 0;
   dword_60C86A74 = (int)jcm_damage_ref;
   dword_60C86A78 = 0;
-  dword_60C86A7C = (int)BowserJrBase__vf458;
+  dword_60C86A7C = (int)BowserJrBase__vf458__thunk_113B9C;
   dword_60C86A80 = 0;
   unk_60C86A84 = &off_60BD0C90;
   unk_60C86A88 = CurrentStateID + 10;

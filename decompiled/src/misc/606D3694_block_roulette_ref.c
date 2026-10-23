@@ -39,7 +39,7 @@ ModelWrapper *__fastcall block_roulette_ref(_DWORD *a1)
   ModelWrapper_setup(v5, v2, 0, 0);
   a1[1847] = v4;
   a1 += 1847;
-  v6 = (int)*FIELD_U32(v4, 0x10).animations;
+  v6 = (int)*FIELD_U32(v4, 0x14);
   a1[2] = v6;
   v17 = &sead__SafeStringBase__vtable;
   v18 = "block_roulette";

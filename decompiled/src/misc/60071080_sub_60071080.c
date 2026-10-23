@@ -22,9 +22,9 @@ void __fastcall sub_60071080(ActiveCollider *a1, ActiveCollider *a2)
   }
   if ( owner )
   {
-    if ( (*(int (__fastcall **)(StageActor *, int *))FIELD_U32(owner, 0x0).vtable)(owner, &dword_60C81734) == 1 )
+    if ( (*(int (__fastcall **)(StageActor *, int *))FIELD_U32(owner, 0x0))(owner, &dword_60C81734) == 1 )
     {
-      x = FIELD_U32(owner, 0x6C).x;
+      x = FIELD_F32(owner, 0x6C);
       if ( (float)(x + 240.0) >= FIELD_F32(dword_60CC6484, 112)
         && (float)(x + -240.0) <= FIELD_F32(dword_60CC6484, 120) )
       {

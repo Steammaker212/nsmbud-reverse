@@ -26,14 +26,14 @@ signed int __fastcall FinalBowser__vf100(Enemy *a1, ActiveCollider *a2, ActiveCo
     dword_60C81734 = (int)&off_60BC1FA8;
     _cxa_guard_release(&dword_60C81738);
   }
-  if ( !owner || (*(int (__fastcall **)(StageActor *, int *))FIELD_U32(owner, 0x0).vtable)(owner, &dword_60C81734) != 1 )
+  if ( !owner || (*(int (__fastcall **)(StageActor *, int *))FIELD_U32(owner, 0x0))(owner, &dword_60C81734) != 1 )
     return 0;
   if ( v8 )
   {
     ProfileId = Actor__getProfileId(&FIELD_U32(v8, 0x0));
     v10 = ProfileId == 392;
     if ( ProfileId == 392 )
-      v10 = (FIELD_U32(v8, 0x0).settings1 & 0x100) == 0;
+      v10 = (FIELD_U32(v8, 0x14) & 0x100) == 0;
     if ( v10 && (LOBYTE(v8[11].aCollider.trapezoidOffsetBottomLeft) & 1) != 0 )
     {
       sub_602EE7B8(v8, FIELD_U32(v8, 0x50), FIELD_U8(v8, 0x54));

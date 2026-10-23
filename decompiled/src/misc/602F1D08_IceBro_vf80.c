@@ -25,7 +25,7 @@ int __fastcall IceBro_vf80(Enemy *a1, int a2, int a3)
   v8 = (int)&v6[84].field_10;
   if ( !(*(int (__fastcall **)(Actor *, int *))FIELD_U32(v6, 0x0))(v6, &dword_60C87EB8) )
     v8 = 6736;
-  if ( FIELD_U32(a1, 0x0)._._._.id == *(_DWORD *)v8 )
+  if ( FIELD_U32(a1, 0x8) == *(_DWORD *)v8 )
     return 1;
   else
     return Enemy__collisionIceball(a1, a2, a3);

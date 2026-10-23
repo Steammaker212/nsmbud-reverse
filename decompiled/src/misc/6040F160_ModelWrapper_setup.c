@@ -40,11 +40,11 @@ ModelWrapper *__fastcall ModelWrapper_setup(ModelWrapper *this, void *archive, i
 
   this_ = (int *)this;
   FIELD_U32(this, 0x4) = archive;
-  animations = FIELD_U32(this, 0x8).animations;
+  animations = FIELD_U32(this, 0xC);
   hasSklAnims = animations == 0;
   if ( animations )
   {
-    count = FIELD_U32(this, 0x8).count;
+    count = FIELD_U32(this, 0x8);
     hasSklAnims = count == 0;
   }
   if ( !hasSklAnims )

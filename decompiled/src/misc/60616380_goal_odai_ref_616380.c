@@ -34,7 +34,7 @@ int __fastcall goal_odai_ref_616380(_DWORD *a1)
   ModelWrapper_setup(v5, v2, 0, 0);
   a1[1526] = v4;
   a1 += 1526;
-  v6 = (int)*FIELD_U32(v4, 0x8).animations;
+  v6 = (int)*FIELD_U32(v4, 0xC);
   v12 = &sead__SafeStringBase__vtable;
   v13 = "goal_odai";
   v7 = LoadResource(ResourceMgrRelated_instance, &v12);

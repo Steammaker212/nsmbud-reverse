@@ -16,7 +16,7 @@ int __fastcall Kanibo__collisionYoshi(Enemy *a1, ActiveCollider *a2, int a3)
   int result; // r0
 
   if ( Enemy__processCollision(a1, a2, (ActiveCollider *)a3, 0) != 1 )
-    return (*(int (__fastcall **)(Enemy *, ActiveCollider *, int))(FIELD_U32(a1, 0x0)._._._.vtable + 200))(a1, a2, a3);
+    return (*(int (__fastcall **)(Enemy *, ActiveCollider *, int))(FIELD_U32(a1, 0x0) + 200))(a1, a2, a3);
   Enemy_killYoshi((int)a1, FIELD_U32(a3, 64));
   result = (unsigned __int8)FIELD_U8(a2, 0x6E) | 2;
   FIELD_U8(a2, 0x6E) = result;

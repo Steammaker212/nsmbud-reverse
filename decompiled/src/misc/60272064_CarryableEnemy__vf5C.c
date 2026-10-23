@@ -25,7 +25,7 @@ int __fastcall CarryableEnemy__vf5C(CarryableEnemy *this, StageActor *other)
   FIELD_U8(this, 0x18CD) = 1;
   FIELD_U8(this, 0x18C4) = FIELD_U8(other, 0x54);
   v6 = &FIELD_U32(this, 0x18C8);
-  (*(void (__fastcall **)(CarryableEnemy *, _DWORD))(FIELD_U32(this, 0x0)._._._._.vtable + 68))(this, FIELD_U8(other, 0x54));
-  *v6 = FIELD_U32(other, 0x0).id;
-  return (*(int (__fastcall **)(CarryableEnemy *, State *))(FIELD_U32(this, 0x0)._._._._.vtable + 0xC0))(this, &stru_60C8EA70);
+  (*(void (__fastcall **)(CarryableEnemy *, _DWORD))(FIELD_U32(this, 0x0) + 68))(this, FIELD_U8(other, 0x54));
+  *v6 = FIELD_U32(other, 0x8);
+  return (*(int (__fastcall **)(CarryableEnemy *, State *))(FIELD_U32(this, 0x0) + 0xC0))(this, &stru_60C8EA70);
 }

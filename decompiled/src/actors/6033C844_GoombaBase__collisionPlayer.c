@@ -22,7 +22,7 @@ int __fastcall GoombaBase__collisionPlayer(Enemy *this, ActiveCollider *self, Ac
   collisionType = Enemy__processCollision(this, self, other, 0);
   if ( collisionType == 3 )
   {
-    collisionType = (*(int (__fastcall **)(Enemy *, StageActor *))(FIELD_U32(this, 0x0)._._._.vtable + 660))(this, otherActor);
+    collisionType = (*(int (__fastcall **)(Enemy *, StageActor *))(FIELD_U32(this, 0x0) + 660))(this, otherActor);
     owner = FIELD_U32(self, 0x40);
     if ( owner )
     {
@@ -39,7 +39,7 @@ int __fastcall GoombaBase__collisionPlayer(Enemy *this, ActiveCollider *self, Ac
   {
     if ( collisionType == 1 )
     {
-      collisionType = (*(int (__fastcall **)(Enemy *, StageActor *))(FIELD_U32(this, 0x0)._._._.vtable + 652))(this, otherActor);
+      collisionType = (*(int (__fastcall **)(Enemy *, StageActor *))(FIELD_U32(this, 0x0) + 652))(this, otherActor);
       v8 = FIELD_U32(self, 0x40);
       if ( v8 )
       {

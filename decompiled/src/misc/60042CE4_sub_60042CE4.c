@@ -53,7 +53,7 @@ signed int __fastcall sub_60042CE4(Enemy *a1, ActiveCollider *a2, ActiveCollider
   }
   if ( v8 )
   {
-    v9 = (*(int (__fastcall **)(StageActor *, int *))FIELD_U32(v8, 0x0).vtable)(v8, &dword_60C80054);
+    v9 = (*(int (__fastcall **)(StageActor *, int *))FIELD_U32(v8, 0x0))(v8, &dword_60C80054);
     if ( v9 )
       v9 = (int)v8;
   }
@@ -91,7 +91,7 @@ signed int __fastcall sub_60042CE4(Enemy *a1, ActiveCollider *a2, ActiveCollider
             v31 = (*((int (__fastcall **)(StateBase *))FIELD_U32(v30, 0x0) + 2))(v30),
             v31 == (*(int (**)(void))(dword_60C80188 + 8))()) )
       {
-        sub_602EE7B8(v12, FIELD_U32(v8, 0x6C).x > FIELD_F32(owner, 108), -1);
+        sub_602EE7B8(v12, FIELD_F32(v8, 0x6C) > FIELD_F32(owner, 108), -1);
         sub_602EE940(v12);
       }
       return Enemy__vf100(a1, a2, a3);

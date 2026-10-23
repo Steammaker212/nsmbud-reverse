@@ -14,8 +14,8 @@ Enemy *__fastcall SledgeBro_ctor(Enemy *a1, ActorBuildInfo *a2)
   Enemy *v4; // r0
 
   Enemy__ctor(a1, a2);
-  FIELD_U32(a1, 0x0)._._._.vtable = (int)SledgeBro_vtable;
-  sub_6000BAC8(&a1[1]._._._._.vtable, FIELD_U32(a1, 0x0)._._._.id);
+  FIELD_U32(a1, 0x0) = (int)SledgeBro_vtable;
+  sub_6000BAC8(&a1[1]._._._._.vtable, FIELD_U32(a1, 0x8));
   ActiveCollider_ctor((ActiveCollider *)&a1[1]._._._._.field_3C);
   LOWORD(a1[1]._._._.aCollider.field_B8) = 0;
   a1[1]._._._.aCollider.field_B4 = 0;
@@ -36,7 +36,7 @@ Enemy *__fastcall SledgeBro_ctor(Enemy *a1, ActorBuildInfo *a2)
     StageActor_RTTI = (int)&off_60BC0098;
     _cxa_guard_release(&dword_60C7B364);
   }
-  v4 = (Enemy *)(*(int (__fastcall **)(Enemy *, int *))FIELD_U32(a1, 0x0)._._._.vtable)(a1, &StageActor_RTTI);
+  v4 = (Enemy *)(*(int (__fastcall **)(Enemy *, int *))FIELD_U32(a1, 0x0))(a1, &StageActor_RTTI);
   if ( v4 )
     v4 = a1;
   *(_DWORD *)&a1[1]._._.collisionMgr[436] = &ActorScaler_vtable;

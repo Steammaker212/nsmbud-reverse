@@ -15,7 +15,7 @@ StageActor *__fastcall Actor_chibiyoshi_light_StaffRoll_for_build(ActorBuildInfo
 
   v2 = (StageActor *)operator_new(0x2DCu);
   result = sub_60748A1C(v2, a1, 2);
-  FIELD_U32(result, 0x0).vtable = (int)&off_60C23810;
+  FIELD_U32(result, 0x0) = (int)&off_60C23810;
   *(_DWORD *)&result[1].playerId = 0;
   return result;
 }

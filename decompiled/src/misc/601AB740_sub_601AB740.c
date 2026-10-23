@@ -100,7 +100,7 @@ LABEL_13:
   v25 = ModelWrapper_ctor(v24, v23, 1, 0, 0, 0, 0);
   ModelWrapper_setup(v25, (int)v22, 0, 0);
   FIELD_U32(a1, 272) = v24;
-  v26 = (int)*FIELD_U32(v24, 0x8).animations;
+  v26 = (int)*FIELD_U32(v24, 0xC);
   v27 = sub_6019A628(7u, 0x29u);
   v28 = FIELD_U32(a1, 280);
   if ( v27 <= 4 && ((1 << v27) & 0x16) != 0 )

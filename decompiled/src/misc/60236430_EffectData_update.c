@@ -54,14 +54,14 @@ signed int __fastcall EffectData_update(EffectData *this, Vec3 *position, Vec3i 
   v7 = FIELD_U32(this, 0x38);
   if ( v7 != FIELD_U32(_34, 32) )
     return ret;
-  *(_QWORD *)FIELD_U32(this, 0x0).cells = 1065353216;
-  *(_QWORD *)&FIELD_U32(this, 0x0).cells[2] = 0;
-  v38 = (int32x4_t *)&FIELD_U32(this, 0x0).cells[4];
-  *(_QWORD *)&FIELD_U32(this, 0x0).cells[4] = 0x3F80000000000000LL;
-  *(_QWORD *)&FIELD_U32(this, 0x0).cells[6] = 0;
-  v39 = (int32x4_t *)&FIELD_U32(this, 0x0).cells[8];
-  *(_QWORD *)&FIELD_U32(this, 0x0).cells[8] = 0;
-  *(_QWORD *)&FIELD_U32(this, 0x0).cells[10] = 1065353216;
+  *(_QWORD *)FIELD_F32(this, 0x0) = 1065353216;
+  *(_QWORD *)&FIELD_F32(this, 0x0)[2] = 0;
+  v38 = (int32x4_t *)&FIELD_F32(this, 0x0)[4];
+  *(_QWORD *)&FIELD_F32(this, 0x0)[4] = 0x3F80000000000000LL;
+  *(_QWORD *)&FIELD_F32(this, 0x0)[6] = 0;
+  v39 = (int32x4_t *)&FIELD_F32(this, 0x0)[8];
+  *(_QWORD *)&FIELD_F32(this, 0x0)[8] = 0;
+  *(_QWORD *)&FIELD_F32(this, 0x0)[10] = 1065353216;
   FIELD_U8(this, 0x30) = 0;
   if ( rotation )
   {
@@ -80,18 +80,18 @@ signed int __fastcall EffectData_update(EffectData *this, Vec3 *position, Vec3i 
     v20 = *v11 + (float)(v15 * v11[1]);
     v21 = *v13 + (float)(v16 * v13[1]);
     v22 = v13[2] + (float)(v16 * v13[3]);
-    FIELD_U32(this, 0x0).cells[0] = (float)(v18 * v17) + (float)(v21 * (float)(v20 * v19));
-    FIELD_U32(this, 0x0).cells[4] = v22 * v19;
-    FIELD_U32(this, 0x0).cells[8] = (float)(v21 * (float)(v18 * v19)) - (float)(v20 * v17);
-    FIELD_U32(this, 0x0).cells[1] = (float)(v21 * (float)(v20 * v17)) - (float)(v18 * v19);
-    FIELD_U32(this, 0x0).cells[5] = v22 * v17;
-    FIELD_U32(this, 0x0).cells[9] = (float)(v20 * v19) + (float)(v21 * (float)(v18 * v17));
-    FIELD_U32(this, 0x0).cells[2] = v22 * v20;
-    FIELD_U32(this, 0x0).cells[6] = -v21;
-    FIELD_U32(this, 0x0).cells[10] = v22 * v18;
-    FIELD_U32(this, 0x0).cells[3] = 0.0;
-    FIELD_U32(this, 0x0).cells[7] = 0.0;
-    FIELD_U32(this, 0x0).cells[11] = 0.0;
+    FIELD_F32(this, 0x0)[0] = (float)(v18 * v17) + (float)(v21 * (float)(v20 * v19));
+    FIELD_F32(this, 0x0)[4] = v22 * v19;
+    FIELD_F32(this, 0x0)[8] = (float)(v21 * (float)(v18 * v19)) - (float)(v20 * v17);
+    FIELD_F32(this, 0x0)[1] = (float)(v21 * (float)(v20 * v17)) - (float)(v18 * v19);
+    FIELD_F32(this, 0x0)[5] = v22 * v17;
+    FIELD_F32(this, 0x0)[9] = (float)(v20 * v19) + (float)(v21 * (float)(v18 * v17));
+    FIELD_F32(this, 0x0)[2] = v22 * v20;
+    FIELD_F32(this, 0x0)[6] = -v21;
+    FIELD_F32(this, 0x0)[10] = v22 * v18;
+    FIELD_F32(this, 0x0)[3] = 0.0;
+    FIELD_F32(this, 0x0)[7] = 0.0;
+    FIELD_F32(this, 0x0)[11] = 0.0;
   }
   if ( scale )
   {
@@ -115,15 +115,15 @@ signed int __fastcall EffectData_update(EffectData *this, Vec3 *position, Vec3i 
   }
   if ( v25 != 1.0 || v23 != 1.0 )
   {
-    FIELD_U32(this, 0x0).cells[0] = v23 * FIELD_U32(this, 0x0).cells[0];
-    FIELD_U32(this, 0x0).cells[4] = v23 * FIELD_U32(this, 0x0).cells[4];
-    FIELD_U32(this, 0x0).cells[8] = v23 * FIELD_U32(this, 0x0).cells[8];
-    FIELD_U32(this, 0x0).cells[1] = v24 * FIELD_U32(this, 0x0).cells[1];
-    FIELD_U32(this, 0x0).cells[5] = v24 * FIELD_U32(this, 0x0).cells[5];
-    FIELD_U32(this, 0x0).cells[9] = v24 * FIELD_U32(this, 0x0).cells[9];
-    FIELD_U32(this, 0x0).cells[2] = v25 * FIELD_U32(this, 0x0).cells[2];
-    FIELD_U32(this, 0x0).cells[6] = v25 * FIELD_U32(this, 0x0).cells[6];
-    FIELD_U32(this, 0x0).cells[10] = v25 * FIELD_U32(this, 0x0).cells[10];
+    FIELD_F32(this, 0x0)[0] = v23 * FIELD_F32(this, 0x0)[0];
+    FIELD_F32(this, 0x0)[4] = v23 * FIELD_F32(this, 0x0)[4];
+    FIELD_F32(this, 0x0)[8] = v23 * FIELD_F32(this, 0x0)[8];
+    FIELD_F32(this, 0x0)[1] = v24 * FIELD_F32(this, 0x0)[1];
+    FIELD_F32(this, 0x0)[5] = v24 * FIELD_F32(this, 0x0)[5];
+    FIELD_F32(this, 0x0)[9] = v24 * FIELD_F32(this, 0x0)[9];
+    FIELD_F32(this, 0x0)[2] = v25 * FIELD_F32(this, 0x0)[2];
+    FIELD_F32(this, 0x0)[6] = v25 * FIELD_F32(this, 0x0)[6];
+    FIELD_F32(this, 0x0)[10] = v25 * FIELD_F32(this, 0x0)[10];
     FIELD_U8(this, 0x30) = 1;
   }
   if ( !position )
@@ -152,9 +152,9 @@ LABEL_17:
     v28 = v33 + v26[2];
   }
 LABEL_18:
-  FIELD_U32(this, 0x0).cells[3] = v28;
-  FIELD_U32(this, 0x0).cells[7] = v29;
-  FIELD_U32(this, 0x0).cells[11] = v30;
+  FIELD_F32(this, 0x0)[3] = v28;
+  FIELD_F32(this, 0x0)[7] = v29;
+  FIELD_F32(this, 0x0)[11] = v30;
   ret = 1;
   if ( v7 == FIELD_U32(_34, 32) )
   {
@@ -168,7 +168,7 @@ LABEL_18:
       else
       {
         ret = 1;
-        v40 = vzipq_s32(*(int32x4_t *)FIELD_U32(this, 0x0).cells, *v38);
+        v40 = vzipq_s32(*(int32x4_t *)FIELD_F32(this, 0x0), *v38);
         v41 = vzipq_s32(*v39, (int32x4_t)0);
         v35 = vextq_s8(v41.val[0], v40.val[0], 8u);
         v41.val[0] = vextq_s8(vextq_s8(v40.val[0], v40.val[0], 8u), v41.val[0], 8u);

@@ -43,7 +43,7 @@ unsigned int __fastcall block_slide_ref_2(int a1)
         v8 = 0;
       v9 = a1 + 4 * v8;
       FIELD_U32(v9, 6104) = v6;
-      animations = (int *)FIELD_U32(v6, 0x10).animations;
+      animations = (int *)FIELD_U32(v6, 0x14);
       ResArchiveById = v5;
       v11 = *animations;
       a2.vtable = &sead__SafeStringBase__vtable;

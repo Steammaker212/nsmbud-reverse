@@ -17,10 +17,10 @@ void __fastcall SE_BOSS_KOOPA_L_FIRE_CONTINUE_ref_2(CollisionActor *a1)
   Vec3 position; // [sp+10h] [bp-20h] BYREF
 
   CollisionActor__handleSpeed(a1);
-  y = FIELD_U32(a1, 0x0).position.y;
-  id = FIELD_U32(a1, 0x0)._.id;
+  y = FIELD_F32(a1, 0x70);
+  id = FIELD_U32(a1, 0x8);
   v4 = Global_BasicSoundActor1;
-  position.x = FIELD_U32(a1, 0x0).position.x;
+  position.x = FIELD_F32(a1, 0x6C);
   position.y = y;
   mapPositionToScreen(&out, &position);
   SE_EMY_LIFT_LINE_MOVE_ref_2(v4, "SE_BOSS_KOOPA_L_FIRE_CONTINUE", id, &out, 0, 0);

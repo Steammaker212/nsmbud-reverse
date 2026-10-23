@@ -28,7 +28,7 @@ int __fastcall bunbun_wing_ref(int a1)
   v5 = sub_60421830(v4, Model2, 2, 0, 1, 0, 0);
   j_ModelWrapper_setupModel((int)v5, (int)ResArchiveById, 0, 0);
   FIELD_U32(a1, 7836) = v4;
-  v6 = *FIELD_U32(v4, 0x18).animations;
+  v6 = *FIELD_U32(v4, 0x1C);
   a2.vtable = &sead__SafeStringBase__vtable;
   a2.cstr = "damage_s";
   ShuAnim_play(v6, (int)ResArchiveById, (int)&a2);

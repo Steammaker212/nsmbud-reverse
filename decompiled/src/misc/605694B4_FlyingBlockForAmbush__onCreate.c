@@ -64,7 +64,7 @@ signed int __fastcall FlyingBlockForAmbush__onCreate(ColliderBase *a1)
     a1[21].field_8C = 1115684864;
     a1[21].owner = (StageActor *)1115684864;
     sub_605D0024(a1);
-    (*(void (__fastcall **)(ColliderBase *, int *))(FIELD_U32(a1, 0x0).vtable + 192))(a1, &dword_60CAE2F8);
+    (*(void (__fastcall **)(ColliderBase *, int *))(FIELD_U32(a1, 0x0) + 192))(a1, &dword_60CAE2F8);
     return 1;
   }
   return result;

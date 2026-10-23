@@ -20,7 +20,7 @@ int __fastcall ColliderBase_setType(ColliderBase *this, int type)
     FIELD_U32(this, 0x12C) = type;
     v4 = &byte_60AF77B8[8 * type];
     v5 = *(_DWORD *)v4;
-    (*(void (__fastcall **)(ColliderBase *, char *))(FIELD_U32(this, 0x0).vtable + 0x38))(this, v4);
+    (*(void (__fastcall **)(ColliderBase *, char *))(FIELD_U32(this, 0x0) + 0x38))(this, v4);
     sub_60153898(ColliderMgr_instance, this, (__int64 *)&FIELD_U32(this, 0x130), v4);
     currentTpye = *((_DWORD *)v4 + 1);
     FIELD_U32(this, 0x130) = v5;

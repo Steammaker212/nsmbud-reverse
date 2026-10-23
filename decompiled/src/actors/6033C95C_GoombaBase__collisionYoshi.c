@@ -27,7 +27,7 @@ int __fastcall GoombaBase__collisionYoshi(Enemy *a1, ActiveCollider *a2, ActiveC
   }
   if ( owner )
   {
-    v8 = (*(int (__fastcall **)(StageActor *, int *))FIELD_U32(owner, 0x0).vtable)(owner, &dword_60C7B378);
+    v8 = (*(int (__fastcall **)(StageActor *, int *))FIELD_U32(owner, 0x0))(owner, &dword_60C7B378);
     if ( v8 )
       v8 = (int)owner;
   }
@@ -41,7 +41,7 @@ int __fastcall GoombaBase__collisionYoshi(Enemy *a1, ActiveCollider *a2, ActiveC
     return Enemy__collisionYoshi((int)a1, (int)a2, (int)a3);
   if ( result == 1 )
   {
-    result = (*(int (__fastcall **)(Enemy *, int))(FIELD_U32(a1, 0x0)._._._.vtable + 664))(a1, v8);
+    result = (*(int (__fastcall **)(Enemy *, int))(FIELD_U32(a1, 0x0) + 664))(a1, v8);
     if ( v9 )
     {
       result = Actor__getProfileId(&FIELD_U32(v9, 0x0));

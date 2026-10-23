@@ -42,12 +42,12 @@ int __fastcall BossBase__afterExecute(BossBase *this, int arg)
     FIELD_U32(this, 0x18B8) = v9 - 1;
   if ( arg == 2 )
   {
-    y = FIELD_U32(this, 0x0)._._._.position.y;
-    position.x = FIELD_U32(this, 0x0)._._._.position.x;
+    y = FIELD_F32(this, 0x70);
+    position.x = FIELD_F32(this, 0x6C);
     position.y = y;
     mapPositionToScreen(&screenPos, &position);
     MovingSoundActor_setPosition(&FIELD_U32(this, 0x18BC), &screenPos);
   }
-  CollisionActor__afterExecute(&FIELD_U32(this, 0x0)._._, arg);
-  return (*(int (__fastcall **)(BossBase *))(FIELD_U32(this, 0x0)._._._._.vtable + 0x3E0))(this);
+  CollisionActor__afterExecute(&FIELD_U32(this, 0x0), arg);
+  return (*(int (__fastcall **)(BossBase *))(FIELD_U32(this, 0x0) + 0x3E0))(this);
 }

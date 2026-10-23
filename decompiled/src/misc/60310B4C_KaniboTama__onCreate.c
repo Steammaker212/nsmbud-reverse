@@ -29,26 +29,26 @@ int __fastcall KaniboTama__onCreate(Enemy *a1)
     a2.cstr = "kanibo_rock";
     a1[1]._._._._.vtable = Resource_getModel2(Resource, &a2, 0, 0, 0, 0, 0, 0, 0);
   }
-  FIELD_U32(a1, 0x0)._._.scale.z = 1.0;
-  FIELD_U32(a1, 0x0)._._.scale.y = 1.0;
-  FIELD_U32(a1, 0x0)._._.scale.x = 1.0;
-  FIELD_U32(a1, 0x0)._._.field_1EC = 0.0;
-  FIELD_U32(a1, 0x0)._._.field_1F0 = 0;
-  FIELD_U32(a1, 0x0)._._.field_1F4 = 32.0;
-  FIELD_U32(a1, 0x0)._._.field_1F8 = 32.0;
-  FIELD_U32(a1, 0x0)._._.field_219 = 0;
+  FIELD_F32(a1, 0x98) = 1.0;
+  FIELD_F32(a1, 0x94) = 1.0;
+  FIELD_F32(a1, 0x90) = 1.0;
+  FIELD_F32(a1, 0x1EC) = 0.0;
+  FIELD_U32(a1, 0x1F0) = 0;
+  FIELD_F32(a1, 0x1F4) = 32.0;
+  FIELD_F32(a1, 0x1F8) = 32.0;
+  FIELD_U8(a1, 0x219) = 0;
   LODWORD(a1[1]._._._.scale.x) = 3;
   a1[1]._._._.rotation.y = 2;
   a1[1]._._._.aCollider._.containingHeap = 1;
   a1[1]._._._.aCollider._.field_8 = 2;
-  FIELD_U32(a1, 0x0)._._.field_280 = 0;
-  CollisionMgr_init((CollisionMgr *)FIELD_U32(a1, 0x0)._.collisionMgr, (StateActor *)a1, &stru_60AFF358, 0, &stru_60AFF364);
+  FIELD_U32(a1, 0x280) = 0;
+  CollisionMgr_init((CollisionMgr *)FIELD_U8(a1, 0x288), (StateActor *)a1, &stru_60AFF358, 0, &stru_60AFF364);
   v4 = &stru_60BE9FC8;
-  *(_DWORD *)&FIELD_U32(a1, 0x0)._.collisionMgr[2552] |= 0x40000000u;
-  if ( !FIELD_U32(v2, 0x0)._._._.vtable )
+  *(_DWORD *)&FIELD_U8(a1, 0x288)[2552] |= 0x40000000u;
+  if ( !FIELD_U32(v2, 0x0) )
     v4 = &stru_60BE9F9C;
-  ActiveCollider__init(&FIELD_U32(a1, 0x0)._._.aCollider, &FIELD_U32(a1, 0x0)._._, v4, (int)&a1[1]._._._.aCollider._.field_C);
-  (*(void (__fastcall **)(Enemy *, State *))(FIELD_U32(a1, 0x0)._._._.vtable + 192))(a1, &KaniboTama__StateID_Unk3);
+  ActiveCollider__init(&FIELD_U32(a1, 0xBC), &FIELD_U32(a1, 0x0), v4, (int)&a1[1]._._._.aCollider._.field_C);
+  (*(void (__fastcall **)(Enemy *, State *))(FIELD_U32(a1, 0x0) + 192))(a1, &KaniboTama__StateID_Unk3);
   KaniboTama__updateModel((int)a1);
   return 1;
 }

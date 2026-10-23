@@ -31,7 +31,7 @@ void __fastcall shinkai_light_ref(int a1)
   v5 = ModelWrapper_ctor(v4, Model2, 1, 0, 2, 0, 0);
   ModelWrapper_setup(v5, ResArchiveById, 0, 0);
   FIELD_U32(a1, 6100) = v4;
-  v6 = *FIELD_U32(v4, 0x18).animations;
+  v6 = *FIELD_U32(v4, 0x1C);
   v7 = Profile__getResArchiveById(*(Profile **)(a1 + 12), 0);
   a2.vtable = &sead__SafeStringBase__vtable;
   a2.cstr = "shinkai_light";

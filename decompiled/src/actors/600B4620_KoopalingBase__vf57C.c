@@ -51,7 +51,7 @@ int __fastcall KoopalingBase__vf57C(CollisionActor *a1)
     if ( v6 > v7 )
       v5 += v7;
     v8 = *v5;
-    ResArchiveById = Profile__getResArchiveById(FIELD_U32(a1, 0x0)._.profile, 0);
+    ResArchiveById = Profile__getResArchiveById(FIELD_U32(a1, 0xC), 0);
     SkeletalAnim_play(v8, ResArchiveById, *(_DWORD *)v2 + 24);
     v10 = *(_DWORD *)(*(_DWORD *)v4 + 12);
     v11 = *(_DWORD *)(*(_DWORD *)v4 + 68);
@@ -64,13 +64,13 @@ int __fastcall KoopalingBase__vf57C(CollisionActor *a1)
       v12 += 4 * v13;
     *(_DWORD *)(*(_DWORD *)v12 + 24) = 1065353216;
   }
-  if ( (*(int (__fastcall **)(CollisionActor *))(FIELD_U32(a1, 0x0)._.vtable + 716))(a1) == 1 )
+  if ( (*(int (__fastcall **)(CollisionActor *))(FIELD_U32(a1, 0x0) + 716))(a1) == 1 )
   {
     v14 = *(_DWORD *)v2 + 48;
   }
   else
   {
-    v15 = (*(int (__fastcall **)(CollisionActor *))(FIELD_U32(a1, 0x0)._.vtable + 720))(a1);
+    v15 = (*(int (__fastcall **)(CollisionActor *))(FIELD_U32(a1, 0x0) + 720))(a1);
     v16 = *(_DWORD *)v2;
     if ( v15 == 1 )
       v14 = v16 + 48;
@@ -79,10 +79,10 @@ int __fastcall KoopalingBase__vf57C(CollisionActor *a1)
   }
   v17 = *(float *)v14;
   v18 = FIELD_F32(v14, 4);
-  v19 = byte_60AFE3F4[FIELD_U32(a1, 0x0).direction];
-  v20 = (*(float (__fastcall **)(CollisionActor *))(FIELD_U32(a1, 0x0)._.vtable + 1148))(a1);
-  direction = FIELD_U32(a1, 0x0).direction;
-  x = FIELD_U32(a1, 0x0).position.x;
+  v19 = byte_60AFE3F4[FIELD_U32(a1, 0x50)];
+  v20 = (*(float (__fastcall **)(CollisionActor *))(FIELD_U32(a1, 0x0) + 1148))(a1);
+  direction = FIELD_U32(a1, 0x50);
+  x = FIELD_F32(a1, 0x6C);
   v23 = direction;
   if ( direction >= 2 )
     v23 = 0;
@@ -107,10 +107,10 @@ int __fastcall KoopalingBase__vf57C(CollisionActor *a1)
   else
     v26 = -1.0;
 LABEL_24:
-  FIELD_U32(a1, 0x0).speed.x = v17 * (float)((float)v19 * v26);
-  FIELD_U32(a1, 0x0).speed.y = v18;
+  FIELD_F32(a1, 0x78) = v17 * (float)((float)v19 * v26);
+  FIELD_F32(a1, 0x7C) = v18;
   CollisionActor__handleGravity(a1);
   v28 = CollisionActor__handleSpeed(a1);
-  (*(void (__fastcall **)(CollisionActor *, float))(FIELD_U32(a1, 0x0)._.vtable + 1232))(a1, v28);
-  return (*(int (__fastcall **)(CollisionActor *))(FIELD_U32(a1, 0x0)._.vtable + 1284))(a1);
+  (*(void (__fastcall **)(CollisionActor *, float))(FIELD_U32(a1, 0x0) + 1232))(a1, v28);
+  return (*(int (__fastcall **)(CollisionActor *))(FIELD_U32(a1, 0x0) + 1284))(a1);
 }

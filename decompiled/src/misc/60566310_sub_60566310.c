@@ -25,10 +25,10 @@ signed int __fastcall sub_60566310(ColliderBase *a1)
   }
   else if ( next == (ColliderListNode *)21 )
   {
-    (*(void (__fastcall **)(ColliderBase *, int *))(FIELD_U32(a1, 0x0).vtable + 192))(a1, &dword_60CAE3A8);
+    (*(void (__fastcall **)(ColliderBase *, int *))(FIELD_U32(a1, 0x0) + 192))(a1, &dword_60CAE3A8);
     goto LABEL_15;
   }
-  sub_60564834(&FIELD_U32(a1, 0x0).vtable);
+  sub_60564834(&FIELD_U32(a1, 0x0));
   if ( *p_next == (ColliderListNode *)14 )
   {
     if ( a1[21].field_F0 == 1 )
@@ -37,7 +37,7 @@ signed int __fastcall sub_60566310(ColliderBase *a1)
       goto LABEL_15;
     }
 LABEL_12:
-    (*(void (__fastcall **)(ColliderBase *, int *))(FIELD_U32(a1, 0x0).vtable + 192))(a1, &dword_60CAE31C);
+    (*(void (__fastcall **)(ColliderBase *, int *))(FIELD_U32(a1, 0x0) + 192))(a1, &dword_60CAE31C);
     a1[21].field_E4 = 2;
     a1[18].field_138 = (int)sub_605B3700;
     a1[18].field_13C = (int)sub_605B4010;
@@ -51,7 +51,7 @@ LABEL_12:
     v4 = &dword_60CB057C;
   else
     v4 = &dword_60CAE2F8;
-  (*(void (__fastcall **)(ColliderBase *, int *))(FIELD_U32(a1, 0x0).vtable + 192))(a1, v4);
+  (*(void (__fastcall **)(ColliderBase *, int *))(FIELD_U32(a1, 0x0) + 192))(a1, v4);
 LABEL_15:
   BYTE2(a1[20].nodes[2].next) = 0;
   return 6846;

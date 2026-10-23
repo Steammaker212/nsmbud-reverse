@@ -24,7 +24,7 @@ StateActor *__fastcall sub_606686DC(StateActor *a1, ActorBuildInfo *a2)
   int v14; // r0
 
   StateActor_ctor(a1, a2);
-  FIELD_U32(a1, 0x0)._._.vtable = (int)off_60C15048;
+  FIELD_U32(a1, 0x0) = (int)off_60C15048;
   SolidOnTopCollider_ctor((SolidOnTopCollider *)&a1[1]._._._.settings1);
   a1[1]._._._.settings1 = (int)SolidOnTopColliderWrapper_vtable;
   memset(&a1[1]._._.aCollider.field_C8, 0, 48);

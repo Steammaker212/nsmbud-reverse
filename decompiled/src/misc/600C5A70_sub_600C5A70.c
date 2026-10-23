@@ -52,7 +52,7 @@ int __fastcall sub_600C5A70(StateActor *a1, int a2, unsigned int a3, int *a4)
       v12 = FIELD_U8(a2, 84);
     else
       v12 = 255;
-    (*(void (__fastcall **)(StateActor *, _DWORD))(FIELD_U32(a1, 0x0)._._.vtable + 68))(a1, (char)v12);
+    (*(void (__fastcall **)(StateActor *, _DWORD))(FIELD_U32(a1, 0x0) + 68))(a1, (char)v12);
     if ( v12 > 3 )
     {
       if ( a3 == 5 || (sub_600229B0(0.0, 24.0, dword_60C7F52C, (int)a1, 6), a3 != 3) )
@@ -61,7 +61,7 @@ LABEL_14:
         if ( a2 )
           direction = sub_6000AED0((int)a1, a2);
         else
-          direction = FIELD_U32(a1, 0x0)._.direction;
+          direction = FIELD_U32(a1, 0x50);
         if ( (a3 | 4) == 5 )
         {
           v17[0] = &sead__SafeStringBase__vtable;
@@ -72,7 +72,7 @@ LABEL_14:
           v18.x = v22;
           v18.y = v26;
           v18.z = 4500.0;
-          EffectData_create(1173, &v18, 0, (int)&FIELD_U32(a1, 0x0)._.scale);
+          EffectData_create(1173, &v18, 0, (int)&FIELD_U32(a1, 0x90));
           v14 = &dword_60C83A98;
         }
         else
@@ -88,7 +88,7 @@ LABEL_14:
       if ( a3 != 3 )
         goto LABEL_14;
     }
-    direction = StageActor__directionToPlayerX(a1, &FIELD_U32(a1, 0x0)._.position);
+    direction = StageActor__directionToPlayerX(a1, &FIELD_U32(a1, 0x6C));
     v14 = &dword_60C83A74;
 LABEL_20:
     v19 = 0;

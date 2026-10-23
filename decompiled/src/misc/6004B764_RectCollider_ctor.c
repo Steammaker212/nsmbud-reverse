@@ -14,7 +14,7 @@ RectCollider *__fastcall RectCollider_ctor(RectCollider *this)
   int v3; // r1
 
   ShapedCollider_ctor(&FIELD_U32(this, 0x0));
-  FIELD_U32(this, 0x0)._._.vtable = (int)RectCollider_vtable;
+  FIELD_U32(this, 0x0) = (int)RectCollider_vtable;
   FIELD_U32(this, 0x170) = 0;
   FIELD_U32(this, 0x174) = 0;
   FIELD_U32(this, 0x178) = 0;
@@ -41,8 +41,8 @@ RectCollider *__fastcall RectCollider_ctor(RectCollider *this)
   FIELD_U32(this, 0x174) = 0;
   FIELD_U32(this, 0x170) = 0;
   FIELD_U32(this, 0x16C) = 0;
-  v2 = FIELD_U32(this, 0x0)._.field_130;
-  v3 = FIELD_U32(this, 0x0)._.field_134;
+  v2 = FIELD_U32(this, 0x130);
+  v3 = FIELD_U32(this, 0x134);
   FIELD_U32(this, 0x190)[0].field_1C = v3;
   FIELD_U32(this, 0x190)[0].field_18 = v2;
   FIELD_U32(this, 0x190)[4].field_1C = v3;

@@ -17,7 +17,7 @@ Enemy *__fastcall Goomba__collisionEnemy(Enemy *a1, ActiveCollider *a2, ActiveCo
   int v7; // r7
   Enemy *result; // r0
 
-  CurrentState = StateMgr__getCurrentState(&FIELD_U32(a1, 0x0).states.manager);
+  CurrentState = StateMgr__getCurrentState(&FIELD_U32(a1, 0x17C4));
   v7 = (*((int (__fastcall **)(StateBase *))FIELD_U32(CurrentState, 0x0) + 2))(CurrentState);
   result = (Enemy *)(*(int (**)(void))(dword_60C943BC + 8))();
   if ( (Enemy *)v7 != result )

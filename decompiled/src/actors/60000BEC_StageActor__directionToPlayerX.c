@@ -24,14 +24,14 @@ signed int __fastcall StageActor__directionToPlayerX(StateActor *this, Vec3 *pos
   x_.y = y;
   if ( (unsigned int)distanceToPLayer(&a1, &x_) <= 3 )
     return a1.x < 0.0;
-  v6 = FIELD_U32(this, 0x0)._.position.x;
+  v6 = FIELD_F32(this, 0x6C);
   result = 1;
   v7 = FIELD_F32(dword_60CC6484, 116);
   if ( v6 <= (float)(v7 + 96.0) )
   {
     result = 0;
     if ( v6 >= (float)(v7 + -96.0) )
-      return FIELD_U32(this, 0x0)._.direction;
+      return FIELD_U32(this, 0x50);
   }
   return result;
 }

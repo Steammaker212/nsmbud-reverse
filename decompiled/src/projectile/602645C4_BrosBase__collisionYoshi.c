@@ -26,7 +26,7 @@ int __fastcall BrosBase__collisionYoshi(Enemy *a1, ActiveCollider *a2, ActiveCol
   }
   if ( owner )
   {
-    v8 = (*(int (__fastcall **)(StageActor *, int *))FIELD_U32(owner, 0x0).vtable)(owner, &dword_60C7B404);
+    v8 = (*(int (__fastcall **)(StageActor *, int *))FIELD_U32(owner, 0x0))(owner, &dword_60C7B404);
     if ( v8 )
       v8 = (int)owner;
   }

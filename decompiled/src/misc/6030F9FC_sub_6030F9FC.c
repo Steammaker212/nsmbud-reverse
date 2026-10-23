@@ -22,7 +22,7 @@ int __fastcall sub_6030F9FC(Enemy *a1)
   Enemy *v11; // r1
   _DWORD v12[17]; // [sp+4h] [bp-44h] BYREF
 
-  CurrentState = StateMgr__getCurrentState(&FIELD_U32(a1, 0x0).states.manager);
+  CurrentState = StateMgr__getCurrentState(&FIELD_U32(a1, 0x17C4));
   v3 = (Actor *)(*((int (__fastcall **)(StateBase *))FIELD_U32(CurrentState, 0x0) + 2))(CurrentState);
   p_parent = &a1[1]._._._._.parent;
   if ( v3 == (Actor *)(*((int (**)(void))Enemy_StateId_Frozen._._.vtable + 2))() )
@@ -36,27 +36,27 @@ int __fastcall sub_6030F9FC(Enemy *a1)
     {
       v3 = (Actor *)v12;
       memset(&v12[1], 0, 40);
-      v12[0] = FIELD_U32(a1, 0x0)._._.direction | (16 * dword_60AF1F38[a1[1]._._._._.heap]);
+      v12[0] = FIELD_U32(a1, 0x50) | (16 * dword_60AF1F38[a1[1]._._._._.heap]);
       v12[3] = Profile__get(520u);
-      v12[7] = FIELD_U32(a1, 0x0)._._.rotation.y;
-      z = FIELD_U32(a1, 0x0)._._.position.z;
+      v12[7] = FIELD_U32(a1, 0xA0);
+      z = FIELD_F32(a1, 0x74);
       v7 = *(_DWORD *)&a1[1]._._._._.movementId;
       v12[4] = a1[1]._._._._.settings1;
       v12[5] = v7;
       *(float *)&v12[6] = z + -100.0;
-      LOBYTE(v12[8]) = FIELD_U32(a1, 0x0)._._.field_56;
-      v12[2] = FIELD_U32(a1, 0x0)._._._.id;
+      LOBYTE(v12[8]) = FIELD_U8(a1, 0x56);
+      v12[2] = FIELD_U32(a1, 0x8);
       sub_600080BC((_DWORD *)ActorMgr__instance, v12);
       *(_BYTE *)p_parent = 0;
     }
-    result = FIELD_U32(a1, 0x0)._._._.childCount;
+    result = FIELD_U32(a1, 0x28);
     if ( result >= 1 )
     {
-      result = (int)FIELD_U32(a1, 0x0)._._._.field_20.next;
+      result = (int)FIELD_U32(a1, 0x24);
       v8 = result == 0;
       if ( result )
       {
-        v9 = (sead_ListNode *)FIELD_U32(a1, 0x0)._._._.field_2C;
+        v9 = (sead_ListNode *)FIELD_U32(a1, 0x2C);
         v3 = (Actor *)(result - (_DWORD)v9);
         v8 = result == (_DWORD)v9;
       }
@@ -67,10 +67,10 @@ int __fastcall sub_6030F9FC(Enemy *a1)
           result = Actor__getProfileId(v3);
           if ( result == 520 )
             break;
-          result = FIELD_U32(a1, 0x0)._._._.field_2C;
+          result = FIELD_U32(a1, 0x2C);
           v11 = *(Enemy **)((char *)&FIELD_U32(v3, 0x4) + result);
-          v3 = (Actor *)((char *)&FIELD_U32(v11, 0x0)._._._ - result);
-          if ( v11 == (Enemy *)&FIELD_U32(a1, 0x0)._._._.field_20 )
+          v3 = (Actor *)((char *)&FIELD_U32(v11, 0x0) - result);
+          if ( v11 == (Enemy *)&FIELD_U32(a1, 0x20) )
             v3 = 0;
           if ( !v3 )
             return result;

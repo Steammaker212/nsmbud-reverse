@@ -11,7 +11,7 @@
 BossBase *__fastcall FinalBowser__ctor(BossBase *a1, ActorBuildInfo *a2)
 {
   BossBase__ctor(a1, a2);
-  FIELD_U32(a1, 0x0)._._._._.vtable = (int)off_60BC68D0;
+  FIELD_U32(a1, 0x0) = (int)off_60BC68D0;
   sead_IDisposer_ctor((sead_IDisposer *)&a1[1]);
   a1[1]._._._._._.vtable = (int)off_60BC6E38;
   a1[1]._._._._._.field_20.previous = 0;

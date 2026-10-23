@@ -47,9 +47,9 @@ LABEL_9:
     }
   }
   if ( !*(_DWORD *)&a1[1]._._.field_228 )
-    return (ActiveColliderNode *)(*(int (__fastcall **)(StateActor *, int *))(FIELD_U32(a1, 0x0)._._.vtable + 192))(
+    return (ActiveColliderNode *)(*(int (__fastcall **)(StateActor *, int *))(FIELD_U32(a1, 0x0) + 192))(
                                    a1,
                                    &dword_60CB391C);
-  FIELD_U32(a1, 0x0)._.field_218 = 1;
+  FIELD_U8(a1, 0x218) = 1;
   return (ActiveColliderNode *)StageActor__delete(a1, 1);
 }

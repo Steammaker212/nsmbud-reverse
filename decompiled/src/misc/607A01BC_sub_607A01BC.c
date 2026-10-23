@@ -40,9 +40,9 @@ bool __fastcall sub_607A01BC(int a1, ActiveCollider *a2)
     dword_60C7B378 = (int)&off_60BC00BC;
     _cxa_guard_release(&dword_60C7B37C);
   }
-  if ( !owner || (*(int (__fastcall **)(StageActor *, int *))FIELD_U32(owner, 0x0).vtable)(owner, &dword_60C7B378) != 1 )
+  if ( !owner || (*(int (__fastcall **)(StageActor *, int *))FIELD_U32(owner, 0x0))(owner, &dword_60C7B378) != 1 )
     return 0;
-  v9 = (*(int (__fastcall **)(StageActor *, int, ActiveCollider *))(FIELD_U32(owner, 0x0).vtable + 1032))(owner, a1, a2);
+  v9 = (*(int (__fastcall **)(StageActor *, int, ActiveCollider *))(FIELD_U32(owner, 0x0) + 1032))(owner, a1, a2);
   result = 1;
   if ( v9 )
     return result;
@@ -53,7 +53,7 @@ bool __fastcall sub_607A01BC(int a1, ActiveCollider *a2)
     dword_60C7B404 = (int)&off_60BC00B0;
     _cxa_guard_release(&dword_60C7B408);
   }
-  if ( (*(int (__fastcall **)(StageActor *, int *))FIELD_U32(owner, 0x0).vtable)(owner, &dword_60C7B404) == 1
+  if ( (*(int (__fastcall **)(StageActor *, int *))FIELD_U32(owner, 0x0))(owner, &dword_60C7B404) == 1
     && !owner[17].aCollider.field_E0 )
   {
     CenterY = ActiveCollider_getCenterY((ActiveCollider *)a1);
@@ -69,11 +69,11 @@ bool __fastcall sub_607A01BC(int a1, ActiveCollider *a2)
   }
   if ( sub_6076598C(v5, a1, (int)a2) != 1 || owner[14].field_234 )
     return 0;
-  if ( (owner[1].field_230 & 0x2000000) != 0 && FIELD_U32(owner, 0x78).y > 0.0 )
+  if ( (owner[1].field_230 & 0x2000000) != 0 && FIELD_F32(owner, 0x7C) > 0.0 )
   {
     v13 = 1;
     ((void (__fastcall *)(int, int, float))loc_60765E78)(v5, 1, FIELD_F32(a1, 240));
-    sub_60765DD0((float *)&FIELD_U32(owner, 0x0).vtable, v5);
+    sub_60765DD0((float *)&FIELD_U32(owner, 0x0), v5);
     return v13;
   }
   return ((int (__fastcall *)(int, StageActor *))loc_60770484)(v5, owner) == 1;

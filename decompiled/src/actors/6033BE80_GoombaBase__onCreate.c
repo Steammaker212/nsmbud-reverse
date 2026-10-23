@@ -21,28 +21,28 @@ signed int __fastcall GoombaBase__onCreate(Enemy *a1)
   double (__fastcall **v7)(int *); // t1
   int v8; // s2
 
-  p_aCollider = &FIELD_U32(a1, 0x0)._._.aCollider;
-  ActiveCollider__init(&FIELD_U32(a1, 0x0)._._.aCollider, &FIELD_U32(a1, 0x0)._._, &stru_60BED0A4, 0);
+  p_aCollider = &FIELD_U32(a1, 0xBC);
+  ActiveCollider__init(&FIELD_U32(a1, 0xBC), &FIELD_U32(a1, 0x0), &stru_60BED0A4, 0);
   v3 = ActiveColliderMgr_instance;
   if ( !ActiveColliderMgr_isInActiveList(ActiveColliderMgr_instance, p_aCollider)
     && !ActiveColliderMgr_isInCreateList(v3, p_aCollider) )
   {
     ActiveColliderMgr_addToCreateList(v3, p_aCollider);
   }
-  ActiveCollider__init((ActiveCollider *)&a1[1]._._._.direction, &FIELD_U32(a1, 0x0)._._, &stru_60AFFB18, 0);
+  ActiveCollider__init((ActiveCollider *)&a1[1]._._._.direction, &FIELD_U32(a1, 0x0), &stru_60AFFB18, 0);
   v4 = ActiveColliderMgr_instance;
   if ( !ActiveColliderMgr_isInActiveList(ActiveColliderMgr_instance, (ActiveCollider *)&a1[1]._._._.direction)
     && !ActiveColliderMgr_isInCreateList(v4, (ActiveCollider *)&a1[1]._._._.direction) )
   {
     ActiveColliderMgr_addToCreateList(v4, (ActiveCollider *)&a1[1]._._._.direction);
   }
-  FIELD_U32(a1, 0x0)._._.maxSpeed.y = -4.0;
-  v5 = StageActor__directionToPlayerX((StateActor *)a1, &FIELD_U32(a1, 0x0)._._.position);
-  FIELD_U32(a1, 0x0)._._.direction = v5;
-  FIELD_U32(a1, 0x0)._._.rotation.y = Enemy_CommonRotations[v5];
+  FIELD_F32(a1, 0x88) = -4.0;
+  v5 = StageActor__directionToPlayerX((StateActor *)a1, &FIELD_U32(a1, 0x6C));
+  FIELD_U32(a1, 0x50) = v5;
+  FIELD_U32(a1, 0xA0) = Enemy_CommonRotations[v5];
   a1[1]._._._.aCollider.field_C8 = 0;
   FIELD_U8(a1, 0x1880) = 0;
-  (*(void (__fastcall **)(Enemy *))(FIELD_U32(a1, 0x0)._._._.vtable + 0x270))(a1);
+  (*(void (__fastcall **)(Enemy *))(FIELD_U32(a1, 0x0) + 0x270))(a1);
   v7 = (double (__fastcall **)(int *))a1[1]._._._.aCollider.field_12C;
   v6 = &a1[1]._._._.aCollider.field_12C;
   FIELD_F64(v6, 1) = (*v7)(v6);

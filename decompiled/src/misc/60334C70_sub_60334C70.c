@@ -10,10 +10,10 @@
 
 MultiStateActor *__fastcall sub_60334C70(MultiStateActor *result)
 {
-  FIELD_U32(result, 0x0)._.speed.y = -2.0;
-  *(_DWORD *)&FIELD_U32(result, 0x0).collisionMgr[2528] |= 0x40000000u;
-  *(_DWORD *)&FIELD_U32(result, 0x0).collisionMgr[2536] |= 0x40000000u;
-  *(_DWORD *)&FIELD_U32(result, 0x0).collisionMgr[2532] |= 4u;
-  *(_DWORD *)&FIELD_U32(result, 0x0).collisionMgr[2540] |= 4u;
+  FIELD_F32(result, 0x7C) = -2.0;
+  *(_DWORD *)&FIELD_U8(result, 0x288)[2528] |= 0x40000000u;
+  *(_DWORD *)&FIELD_U8(result, 0x288)[2536] |= 0x40000000u;
+  *(_DWORD *)&FIELD_U8(result, 0x288)[2532] |= 4u;
+  *(_DWORD *)&FIELD_U8(result, 0x288)[2540] |= 4u;
   return result;
 }

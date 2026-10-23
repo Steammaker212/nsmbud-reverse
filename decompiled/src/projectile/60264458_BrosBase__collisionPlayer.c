@@ -29,7 +29,7 @@ int __fastcall BrosBase__collisionPlayer(Enemy *a1, ActiveCollider *a2, ActiveCo
   }
   if ( owner )
   {
-    v8 = (StageActor *)(*(int (__fastcall **)(StageActor *, int *))FIELD_U32(owner, 0x0).vtable)(owner, &dword_60C7B370);
+    v8 = (StageActor *)(*(int (__fastcall **)(StageActor *, int *))FIELD_U32(owner, 0x0))(owner, &dword_60C7B370);
     if ( v8 )
       v8 = owner;
   }

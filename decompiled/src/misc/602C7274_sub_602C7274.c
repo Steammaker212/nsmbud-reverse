@@ -16,16 +16,16 @@ int __fastcall sub_602C7274(CollisionActor *a1)
   int result; // r0
 
   CollisionActor__handleGravity(a1);
-  v2 = FIELD_U32(a1, 0x0).speed.y + FIELD_U32(a1, 0x0).position.y;
-  FIELD_U32(a1, 0x0).position.y = v2;
+  v2 = FIELD_F32(a1, 0x7C) + FIELD_F32(a1, 0x70);
+  FIELD_F32(a1, 0x70) = v2;
   CollisionMgr_process(FIELD_U8(a1, 0x288), v2);
   result = (unsigned __int8)FIELD_U8(a1, 0x288)[2224];
   if ( (result & 1) != 0 )
   {
     v4.n64_u32[0] = 2.0;
-    v3.n64_f32[0] = FIELD_U32(a1, 0x0).speed.y * -0.5;
-    LODWORD(FIELD_U32(a1, 0x0).speed.y) = vmin_f32(v3, v4).n64_u32[0];
-    return (*(int (__fastcall **)(CollisionActor *, int *))(FIELD_U32(a1, 0x0)._.vtable + 192))(a1, &dword_60C91668);
+    v3.n64_f32[0] = FIELD_F32(a1, 0x7C) * -0.5;
+    LODWORD(FIELD_F32(a1, 0x7C)) = vmin_f32(v3, v4).n64_u32[0];
+    return (*(int (__fastcall **)(CollisionActor *, int *))(FIELD_U32(a1, 0x0) + 192))(a1, &dword_60C91668);
   }
   return result;
 }

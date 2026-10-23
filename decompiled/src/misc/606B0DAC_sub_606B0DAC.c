@@ -18,14 +18,14 @@ StateMethodExecuter *__fastcall sub_606B0DAC(MovementHandler *a1, float *a2, int
   *(float *)&FIELD_U32(a1, 0xD0) = a5;
   FIELD_U32(a1, 0x74) = a6;
   v7 = *a2;
-  FIELD_U32(a1, 0xC).x = *a2;
+  FIELD_F32(a1, 0xC) = *a2;
   v8 = *((_DWORD *)a2 + 1);
-  LODWORD(FIELD_U32(a1, 0xC).y) = v8;
+  LODWORD(FIELD_F32(a1, 0x10)) = v8;
   v9 = *((_DWORD *)a2 + 2);
-  LODWORD(FIELD_U32(a1, 0xC).z) = v9;
-  FIELD_U32(a1, 0x0).x = v7;
-  LODWORD(FIELD_U32(a1, 0x0).y) = v8;
-  LODWORD(FIELD_U32(a1, 0x0).z) = v9;
+  LODWORD(FIELD_F32(a1, 0x14)) = v9;
+  FIELD_F32(a1, 0x0) = v7;
+  LODWORD(FIELD_F32(a1, 0x4)) = v8;
+  LODWORD(FIELD_F32(a1, 0x8)) = v9;
   FIELD_U32(a1, 0x48) = a3;
   FIELD_U8(a1, 0x4C) = a4;
   FIELD_U32(a1, 0x38) = 0;
@@ -47,5 +47,5 @@ StateMethodExecuter *__fastcall sub_606B0DAC(MovementHandler *a1, float *a2, int
     v10 = &MovementHandler_StateID_Linked;
   else
     v10 = &MovementHandler_StateID_FindController;
-  return StateMgr__changeState(&FIELD_U32(a1, 0xD4).manager, &FIELD_U32(v10, 0x0));
+  return StateMgr__changeState(&FIELD_U32(a1, 0xE8), &FIELD_U32(v10, 0x0));
 }

@@ -29,8 +29,8 @@ int __fastcall musasabi_ref(int a1, int r1_0)
   j_ModelWrapper_setupModel((int)v7, (int)v4, 0, 0);
   *(v3 - 20) = (int)v6;
   animations = (unsigned int)v6[1].texAnims.animations;
-  v9 = (int *)FIELD_U32(v6, 0x8).animations;
-  if ( FIELD_U32(v6, 0x8).count > animations )
+  v9 = (int *)FIELD_U32(v6, 0xC);
+  if ( FIELD_U32(v6, 0x8) > animations )
     v9 += animations;
   SkeletalAnim_play(*v9, *v3, (int)&dword_60C952A0[4 * r1_0 + 2 * *((unsigned __int8 *)v3 + 20)]);
   TexAnim_play(**(_DWORD **)(*(v3 - 20) + 20), *v3, &dword_60C95250[2 * r1_0 + 6]);

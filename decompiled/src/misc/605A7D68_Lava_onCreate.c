@@ -29,15 +29,15 @@ signed int __fastcall Lava_onCreate(MultiStateActor *a1)
   if ( v2 == 1 )
   {
     ++FIELD_U32(EnemyCounterMaybe_instance, 32);
-    if ( (FIELD_U32(a1, 0x0)._._.settigns2 & 0x10000000) != 0 )
+    if ( (FIELD_U32(a1, 0x18) & 0x10000000) != 0 )
       a1[1]._.collisionMgr[143] = 1;
-    settings1 = FIELD_U32(a1, 0x0)._._.settings1;
+    settings1 = FIELD_U32(a1, 0x14);
     if ( (settings1 & 0x800) == 0 )
     {
       *(float *)&a1[1]._.collisionMgr[104] = *(float *)&a1[1]._.collisionMgr[104] - 8.0;
       a1[1]._.collisionMgr[142] = 1;
       sub_60002B50((int)&a1[0xB]._.collisionMgr[0x1170]);
-      settings1 = FIELD_U32(a1, 0x0)._._.settings1;
+      settings1 = FIELD_U32(a1, 0x14);
     }
     v5 = settings1 & 0x400;
     if ( *(_DWORD *)&a1[1]._.collisionMgr[84] == 1 )
@@ -46,12 +46,12 @@ signed int __fastcall Lava_onCreate(MultiStateActor *a1)
       v7 = *(float *)&a1[1]._.collisionMgr[100];
       *(float *)&v8 = v6 * -0.5;
       v9 = v6 + 48.0;
-      FIELD_U32(a1, 0x0)._.field_1EC = v7 * 0.5;
-      FIELD_U32(a1, 0x0)._.field_1F0 = v8;
-      FIELD_U32(a1, 0x0)._.field_1F4 = v7;
-      FIELD_U32(a1, 0x0)._.field_1F8 = v9;
-      FIELD_U32(a1, 0x0)._.field_1FC = v7;
-      *(float *)&FIELD_U32(a1, 0x0)._.field_200 = v9;
+      FIELD_F32(a1, 0x1EC) = v7 * 0.5;
+      FIELD_U32(a1, 0x1F0) = v8;
+      FIELD_F32(a1, 0x1F4) = v7;
+      FIELD_F32(a1, 0x1F8) = v9;
+      FIELD_F32(a1, 0x1FC) = v7;
+      *(float *)&FIELD_U32(a1, 0x200) = v9;
       ColliderBase_setType((ColliderBase *)&a1[1]._._._.field_20, 20);
       ColliderMgr_add(ColliderMgr_instance, (ColliderBase *)&a1[1]._._._.field_20);
       a1[1]._.collisionMgr[141] = 1;
@@ -65,7 +65,7 @@ signed int __fastcall Lava_onCreate(MultiStateActor *a1)
       FIELD_U32(TileMgr_instance, 0x2824) = 3;
       if ( a1[1]._.collisionMgr[0x8E] )
       {
-        if ( (FIELD_U32(a1, 0x0)._._.settigns2 & 1) != 0 )
+        if ( (FIELD_U32(a1, 0x18) & 1) != 0 )
           v10 = 3;
         else
           v10 = 1;
@@ -74,24 +74,24 @@ signed int __fastcall Lava_onCreate(MultiStateActor *a1)
       sub_605A512C((int)a1, *(float *)&a1[1]._.collisionMgr[92] - *(float *)&a1[1]._.collisionMgr[120]);
     }
     v11 = 0;
-    if ( (FIELD_U32(a1, 0x0)._._.settings1 & 0x100) != 0 )
+    if ( (FIELD_U32(a1, 0x14) & 0x100) != 0 )
     {
       v11 = 1;
       FIELD_U8(dword_60CBD830, 1509) = 1;
     }
     sub_605A51B0((int)a1, v11);
-    CurrentState = StateMgr__getCurrentState(&FIELD_U32(a1, 0x17B0).manager);
+    CurrentState = StateMgr__getCurrentState(&FIELD_U32(a1, 0x17C4));
     v13 = (*((int (__fastcall **)(StateBase *))FIELD_U32(CurrentState, 0x0) + 2))(CurrentState);
     if ( v13 == (*(int (**)(void))(dword_60CAFEE8 + 8))() )
       sub_605A512C((int)a1, *(float *)&a1[1]._.collisionMgr[0x5C]);
     sub_605A53E4((int)a1);
     Lava_onCreate_helper(a1);
     ((void (__fastcall *)(MultiStateActor *))loc_605A4EAC)(a1);
-    (*(void (__fastcall **)(MultiStateActor *))(FIELD_U32(a1, 0x0)._._.vtable + 204))(a1);
+    (*(void (__fastcall **)(MultiStateActor *))(FIELD_U32(a1, 0x0) + 204))(a1);
     sub_605A8604(a1);
     if ( a1[1]._.collisionMgr[0x8E] )
     {
-      settigns2 = FIELD_U32(a1, 0x0)._._.settigns2;
+      settigns2 = FIELD_U32(a1, 0x18);
       if ( (settigns2 & 1) != 0 )
       {
         TerrainEffects_setWaveValues(
@@ -106,8 +106,8 @@ signed int __fastcall Lava_onCreate(MultiStateActor *a1)
       }
       TerrainEffects_update((int)&a1[1]._.collisionMgr[0x94]);
     }
-    FIELD_U32(a1, 0x0)._._.field_4C |= 2u;
-    FIELD_F32(EnemyCounterMaybe_instance, 0x3AC) = FIELD_U32(a1, 0x0)._.position.y;
+    FIELD_U32(a1, 0x4C) |= 2u;
+    FIELD_F32(EnemyCounterMaybe_instance, 0x3AC) = FIELD_F32(a1, 0x70);
     return 1;
   }
   return result;

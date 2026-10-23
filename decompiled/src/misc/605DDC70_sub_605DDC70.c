@@ -31,12 +31,12 @@ int __fastcall sub_605DDC70(_BYTE *a1, ActiveCollider *a2, ActiveCollider *a3)
       v10 = (v7[2] & 2) == 0;
     if ( !v10 )
     {
-      v11 = FIELD_U32(a3, 0x74).field_14;
+      v11 = FIELD_U32(a3, 0x88);
       CenterY = ActiveCollider_getCenterY(a2);
       if ( ActiveCollider_getBottom(a3) > CenterY )
       {
         owner = FIELD_U32(a3, 0x40);
-        if ( FIELD_U32(owner, 0x78).y <= 0.0 && v11 <= 0xF && ((1 << v11) & 0x8005) != 0 )
+        if ( FIELD_F32(owner, 0x7C) <= 0.0 && v11 <= 0xF && ((1 << v11) & 0x8005) != 0 )
         {
           playerId = FIELD_U8(owner, 0x54);
           if ( playerId <= 3 && !*(_WORD *)&a1[4 * playerId + 6928] )
@@ -46,7 +46,7 @@ int __fastcall sub_605DDC70(_BYTE *a1, ActiveCollider *a2, ActiveCollider *a3)
               dword_60C7B378 = (int)&off_60BC00BC;
               _cxa_guard_release(&dword_60C7B37C);
             }
-            if ( (*(int (__fastcall **)(StageActor *, int *))FIELD_U32(owner, 0x0).vtable)(owner, &dword_60C7B378) == 1 )
+            if ( (*(int (__fastcall **)(StageActor *, int *))FIELD_U32(owner, 0x0))(owner, &dword_60C7B378) == 1 )
             {
               v16 = (HIBYTE(owner[1].field_248.y) & 0x20) == 0;
               if ( (HIBYTE(owner[1].field_248.y) & 0x20) == 0 )

@@ -17,7 +17,7 @@ int __fastcall sub_606A9094(StageActor *a1)
     goto LABEL_4;
   if ( ActorMgrRelated_getById(ActorMgr__instance + 27168, x_low) )
   {
-    (*(void (__fastcall **)(StageActor *))(FIELD_U32(a1, 0x0).vtable + 200))(a1);
+    (*(void (__fastcall **)(StageActor *))(FIELD_U32(a1, 0x0) + 200))(a1);
 LABEL_4:
     StateMgr__execute((StateMgr *)&a1[9].aCollider.field_64);
     StageActor__cullCheck(a1, 16);

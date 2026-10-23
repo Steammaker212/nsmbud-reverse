@@ -15,13 +15,13 @@ unsigned int __fastcall sub_6009AE00(StateActor *a1)
   float v4; // s0
   int *v5; // r0
 
-  if ( !(*(int (__fastcall **)(StateActor *))(FIELD_U32(a1, 0x0)._._.vtable + 716))(a1) )
-    (*(int (__fastcall **)(StateActor *))(FIELD_U32(a1, 0x0)._._.vtable + 720))(a1);
+  if ( !(*(int (__fastcall **)(StateActor *))(FIELD_U32(a1, 0x0) + 716))(a1) )
+    (*(int (__fastcall **)(StateActor *))(FIELD_U32(a1, 0x0) + 720))(a1);
   v2 = 0.0;
   sub_60421AD4(*(_DWORD *)&a1[1]._.collisionMgr[348]);
-  FIELD_U32(a1, 0x0)._.direction = StageActor__directionToPlayerX(a1, &FIELD_U32(a1, 0x0)._.position);
-  if ( (*(int (__fastcall **)(StateActor *))(FIELD_U32(a1, 0x0)._._.vtable + 716))(a1)
-    || (*(int (__fastcall **)(StateActor *))(FIELD_U32(a1, 0x0)._._.vtable + 720))(a1) == 1 )
+  FIELD_U32(a1, 0x50) = StageActor__directionToPlayerX(a1, &FIELD_U32(a1, 0x6C));
+  if ( (*(int (__fastcall **)(StateActor *))(FIELD_U32(a1, 0x0) + 716))(a1)
+    || (*(int (__fastcall **)(StateActor *))(FIELD_U32(a1, 0x0) + 720))(a1) == 1 )
   {
     v3 = 1029785518;
     v4 = 2.5;
@@ -34,17 +34,17 @@ unsigned int __fastcall sub_6009AE00(StateActor *a1)
     v2 = 1.0;
     v5 = &dword_60C82880;
   }
-  LODWORD(FIELD_U32(a1, 0x0)._.xAcceleration) = v3;
-  FIELD_U32(a1, 0x0)._.speed.x = v2;
-  FIELD_U32(a1, 0x0)._.maxSpeed.x = v4;
+  LODWORD(FIELD_F32(a1, 0x68)) = v3;
+  FIELD_F32(a1, 0x78) = v2;
+  FIELD_F32(a1, 0x84) = v4;
   *(_DWORD *)&a1[1]._.collisionMgr[1392] = *v5;
-  if ( FIELD_U32(a1, 0x0)._.direction == 1 )
+  if ( FIELD_U32(a1, 0x50) == 1 )
   {
-    FIELD_U32(a1, 0x0)._.speed.x = -v2;
-    FIELD_U32(a1, 0x0)._.maxSpeed.x = -v4;
+    FIELD_F32(a1, 0x78) = -v2;
+    FIELD_F32(a1, 0x84) = -v4;
   }
-  FIELD_U32(a1, 0x0)._.speed.y = 0.0;
-  FIELD_U32(a1, 0x0)._.field_64 = 0.0;
-  FIELD_U32(a1, 0x0)._.rotation.z = 0x80000000;
+  FIELD_F32(a1, 0x7C) = 0.0;
+  FIELD_F32(a1, 0x64) = 0.0;
+  FIELD_U32(a1, 0xA4) = 0x80000000;
   return 0x80000000;
 }

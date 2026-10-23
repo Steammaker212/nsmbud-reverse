@@ -41,9 +41,9 @@ signed int __fastcall sandpillar_ref(int a1, unsigned int r1_0)
   v8 = ModelWrapper_ctor(v7, Model2, 0, 0, 2, 0, 0);
   ModelWrapper_setup(v8, v5, 0, 0);
   FIELD_U32(a1, 6132) = v7;
-  FIELD_U32(a1, 6136) = *FIELD_U32(v7, 0x18).animations;
-  animations = FIELD_U32(v7, 0x18).animations;
-  if ( FIELD_U32(v7, 0x18).count > 1u )
+  FIELD_U32(a1, 6136) = *FIELD_U32(v7, 0x1C);
+  animations = FIELD_U32(v7, 0x1C);
+  if ( FIELD_U32(v7, 0x18) > 1u )
     ++animations;
   FIELD_U32(a1, 6140) = *animations;
   FIELD_U32(a1, 144) = 1065353216;

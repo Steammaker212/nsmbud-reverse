@@ -63,21 +63,21 @@ signed int __fastcall Seaweed_setupModels(Seaweed *this)
 
   v2 = dword_606D5338;
   v3 = FIELD_U32(this, 0x284)[0];
-  z = FIELD_U32(this, 0x0).rotation.z;
-  y = FIELD_U32(this, 0x0).rotation.y;
+  z = FIELD_U32(this, 0xA4);
+  y = FIELD_U32(this, 0xA0);
   v6 = v3[3];
   v7 = v3[7];
-  v8 = FIELD_U32(this, 0x0).field_56 == 0;
-  result = FIELD_U32(this, 0x0).rotation.x;
+  v8 = FIELD_U8(this, 0x56) == 0;
+  result = FIELD_U32(this, 0x9C);
   if ( v8 )
     v2 = &dword_606D5338[1];
   v10 = *(float *)(*(_DWORD *)v7 + 20);
   v11 = *(float *)(*(_DWORD *)v6 + 20);
-  LODWORD(FIELD_U32(this, 0x0).position.z) = *v2;
+  LODWORD(FIELD_F32(this, 0x74)) = *v2;
   if ( FIELD_U32(this, 0x294) >= 1 )
   {
     v12 = 0;
-    v49 = FIELD_U32(this, 0x0).position.y;
+    v49 = FIELD_F32(this, 0x70);
     v13 = y & 0xFFFFFF;
     v14 = (float *)((char *)sinLutTable + ((z >> 20) & 0xFF0));
     v15 = (y >> 20) & 0xFF0;
@@ -99,7 +99,7 @@ signed int __fastcall Seaweed_setupModels(Seaweed *this)
       v24 = *v18;
       if ( v12 < 3 )
         v23 = v12;
-      v25 = &FIELD_U32(this, 0x0)._.vtable + v23;
+      v25 = &FIELD_U32(this, 0x0) + v23;
       v26 = v25[161];
       v27 = **(_DWORD **)(v26 + 12);
       v28 = *(float *)(**(_DWORD **)(v26 + 28) + 8);
@@ -108,12 +108,12 @@ signed int __fastcall Seaweed_setupModels(Seaweed *this)
       v29 = **(_DWORD **)(v25[161] + 28);
       FIELD_F32(v29, 20) = (float)((int)(float)(v10 + v24) % (int)v28);
       FIELD_U32(v29, 28) |= 2u;
-      x = FIELD_U32(this, 0x0).scale.x;
-      v31 = FIELD_U32(this, 0x0).position.z;
+      x = FIELD_F32(this, 0x90);
+      v31 = FIELD_F32(this, 0x74);
       v32 = v16 + FIELD_U32(this, 0x294);
-      v33 = *v17 * FIELD_U32(this, 0x0).scale.y;
-      v34 = *v17 * FIELD_U32(this, 0x0).scale.z;
-      v35 = FIELD_U32(this, 0x0).position.x + (float)(*v19 * x);
+      v33 = *v17 * FIELD_F32(this, 0x94);
+      v34 = *v17 * FIELD_F32(this, 0x98);
+      v35 = FIELD_F32(this, 0x6C) + (float)(*v19 * x);
       v50[0] = *v17 * x;
       v50[1] = v33;
       v36 = v14[3];

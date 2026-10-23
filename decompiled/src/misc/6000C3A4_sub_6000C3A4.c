@@ -14,14 +14,14 @@ int __fastcall sub_6000C3A4(LineFollower *this, double a2, float a3, float a4, f
   int result; // r0
 
   a5.n64_u32[0] = -4.0;
-  FIELD_U32(this, 0x64).x = FIELD_U32(this, 0x5C).x + FIELD_U32(this, 0x64).x;
-  *(float *)&a2 = FIELD_U32(this, 0x5C).y + -0.0625;
+  FIELD_F32(this, 0x64) = FIELD_F32(this, 0x5C) + FIELD_F32(this, 0x64);
+  *(float *)&a2 = FIELD_F32(this, 0x60) + -0.0625;
   v6 = vmax_f32(*(float32x2_t *)&a2, a5).n64_f32[0];
-  FIELD_U32(this, 0x5C).y = v6;
-  FIELD_U32(this, 0x64).y = FIELD_U32(this, 0x64).y + v6;
+  FIELD_F32(this, 0x60) = v6;
+  FIELD_F32(this, 0x68) = FIELD_F32(this, 0x68) + v6;
   ((void (*)(void))loc_6000FD08)();
-  FIELD_U32(this, 0x6C).x = FIELD_U32(this, 0x64).x;
-  result = LODWORD(FIELD_U32(this, 0x64).y);
-  LODWORD(FIELD_U32(this, 0x6C).y) = result;
+  FIELD_F32(this, 0x6C) = FIELD_F32(this, 0x64);
+  result = LODWORD(FIELD_F32(this, 0x68));
+  LODWORD(FIELD_F32(this, 0x70)) = result;
   return result;
 }

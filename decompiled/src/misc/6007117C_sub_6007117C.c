@@ -39,7 +39,7 @@ void __fastcall sub_6007117C(ActiveCollider *a1, int a2)
   }
   if ( owner )
   {
-    v7 = (*(int (__fastcall **)(StageActor *, int *))FIELD_U32(owner, 0x0).vtable)(owner, &dword_60C81734);
+    v7 = (*(int (__fastcall **)(StageActor *, int *))FIELD_U32(owner, 0x0))(owner, &dword_60C81734);
     if ( v7 )
       v7 = (int)owner;
     v9 = v6 == 0;

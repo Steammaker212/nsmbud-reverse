@@ -15,6 +15,6 @@ MultiStateActor *__fastcall Actor_Flag_Switch_4Switch_OR_build(ActorBuildInfo *a
 
   v2 = (MultiStateActor *)operator_new(0x17F0u);
   result = FlagSwitchBase__ctor(v2, a1);
-  FIELD_U32(result, 0x0)._._.vtable = (int)off_60C0F3B8;
+  FIELD_U32(result, 0x0) = (int)off_60C0F3B8;
   return result;
 }

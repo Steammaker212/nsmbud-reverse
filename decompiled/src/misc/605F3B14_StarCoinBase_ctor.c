@@ -11,7 +11,7 @@
 StarCoinBase *__fastcall StarCoinBase_ctor(StarCoinBase *a1, ActorBuildInfo *a2)
 {
   MultiStateActor__ctor(&FIELD_U32(a1, 0x0), a2);
-  FIELD_U32(a1, 0x0)._._._.vtable = (int)StarCoinBase_vtable;
+  FIELD_U32(a1, 0x0) = (int)StarCoinBase_vtable;
   memset(&FIELD_U32(a1, 0x17DC), 0, 0x38);
   FIELD_U8(a1, 0x1814) = -1;
   FIELD_U8(a1, 0x1815) = 0;

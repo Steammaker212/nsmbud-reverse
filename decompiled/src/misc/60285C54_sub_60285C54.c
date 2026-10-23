@@ -40,7 +40,7 @@ int __fastcall sub_60285C54(int a1)
   j_ModelWrapper_setupModel((int)v6, (int)ResArchiveById, 0, 0);
   FIELD_U32(a1, 6300) = v5;
   v7 = (_DWORD **)(a1 + 6300);
-  v8 = *FIELD_U32(v5, 0x18).animations;
+  v8 = *FIELD_U32(v5, 0x1C);
   a2.vtable = &sead__SafeStringBase__vtable;
   a2.cstr = "cookie";
   ShuAnim_play(v8, (int)ResArchiveById, (int)&a2);

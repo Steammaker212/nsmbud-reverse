@@ -18,10 +18,10 @@ int __fastcall sub_60362EB4(CollisionActor *a1)
   CollisionActor__handleGravity(a1);
   v2 = CollisionActor__handleSpeed(a1);
   CollisionMgr_process(FIELD_U8(a1, 0x288), v2);
-  direction = FIELD_U32(a1, 0x0).direction;
+  direction = FIELD_U32(a1, 0x50);
   speed = 0x8000000;
-  result = moveValueTo(&FIELD_U32(a1, 0x0).rotation.y, (int *)&Enemy_CommonRotations[direction], &speed);
+  result = moveValueTo(&FIELD_U32(a1, 0xA0), (int *)&Enemy_CommonRotations[direction], &speed);
   if ( result == 1 )
-    return (*(int (__fastcall **)(CollisionActor *, int *))(FIELD_U32(a1, 0x0)._.vtable + 192))(a1, &dword_60C958F0);
+    return (*(int (__fastcall **)(CollisionActor *, int *))(FIELD_U32(a1, 0x0) + 192))(a1, &dword_60C958F0);
   return result;
 }

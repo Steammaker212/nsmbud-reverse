@@ -24,22 +24,22 @@ int __fastcall sub_603479F0(CollisionActor *a1)
   collisionMgr = FIELD_U8(a1, 0x288);
   v4 = CollisionMgr_process(FIELD_U8(a1, 0x288), v2);
   SE_EMY_MECHAKOOPA_BOUND_ref(a1, v4);
-  direction = FIELD_U32(a1, 0x0).direction;
+  direction = FIELD_U32(a1, 0x50);
   if ( ((*(_DWORD *)&FIELD_U8(a1, 0x288)[4 * ((direction + 18) >> 5) + 2224] & (1 << ((direction + 18) & 0x1F))) != 0
      || (*(_DWORD *)&collisionMgr[4 * ((direction + 22) >> 5) + 2224] & (1 << ((direction + 22) & 0x1F))) != 0)
     && (*(_DWORD *)&collisionMgr[4 * ((direction + 28) >> 5) + 2224] & (1 << ((direction + 28) & 0x1F))) == 0 )
   {
     v6 = direction ^ 1;
-    FIELD_U32(a1, 0x0).direction = v6;
-    FIELD_U32(a1, 0x0).rotation.y = Enemy_CommonRotations[v6];
-    FIELD_U32(a1, 0x0).speed.x = FIELD_U32(a1, 0x0).speed.x * -0.5;
-    FIELD_U32(a1, 0x0).maxSpeed.x = -FIELD_U32(a1, 0x0).maxSpeed.x;
+    FIELD_U32(a1, 0x50) = v6;
+    FIELD_U32(a1, 0xA0) = Enemy_CommonRotations[v6];
+    FIELD_F32(a1, 0x78) = FIELD_F32(a1, 0x78) * -0.5;
+    FIELD_F32(a1, 0x84) = -FIELD_F32(a1, 0x84);
   }
   result = SE_EMY_MECHAKOOPA_RESTART_ref(a1);
   if ( result == 1 )
-    return (*(int (__fastcall **)(CollisionActor *, int *))(FIELD_U32(a1, 0x0)._.vtable + 192))(a1, &dword_60C949F0);
-  x = FIELD_U32(a1, 0x0).speed.x;
+    return (*(int (__fastcall **)(CollisionActor *, int *))(FIELD_U32(a1, 0x0) + 192))(a1, &dword_60C949F0);
+  x = FIELD_F32(a1, 0x78);
   if ( x <= 0.00000011921 && x >= -0.00000011921 )
-    return (*(int (__fastcall **)(CollisionActor *, int *))(FIELD_U32(a1, 0x0)._.vtable + 192))(a1, &dword_60C94988);
+    return (*(int (__fastcall **)(CollisionActor *, int *))(FIELD_U32(a1, 0x0) + 192))(a1, &dword_60C94988);
   return result;
 }

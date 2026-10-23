@@ -29,8 +29,8 @@ int __fastcall happy_end_st_wait_ref(int a1)
   j_ModelWrapper_setupModel((int)v5, (int)ResArchiveById, 0, 0);
   FIELD_U32(a1, 6100) = v4;
   animations = (unsigned int)v4[1].texAnims.animations;
-  v7 = (int *)FIELD_U32(v4, 0x8).animations;
-  if ( FIELD_U32(v4, 0x8).count > animations )
+  v7 = (int *)FIELD_U32(v4, 0xC);
+  if ( FIELD_U32(v4, 0x8) > animations )
     v7 += animations;
   v8 = *v7;
   a2.vtable = &sead__SafeStringBase__vtable;

@@ -15,6 +15,6 @@ StageActor *__fastcall Actor_Quest_for_Demo_rokeshonTag_build(ActorBuildInfo *a1
 
   v2 = (StageActor *)operator_new(0x284u);
   result = StageActor__ctor(v2, a1);
-  FIELD_U32(result, 0x0).vtable = (int)off_60C2AC90;
+  FIELD_U32(result, 0x0) = (int)off_60C2AC90;
   return result;
 }

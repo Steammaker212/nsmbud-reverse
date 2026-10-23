@@ -39,7 +39,7 @@ int __fastcall sub_6008ADA4(int a1, ActiveCollider *a2, ActiveCollider *a3)
   v9 = 0;
   if ( owner )
   {
-    v10 = (*(int (__fastcall **)(StageActor *, int *))FIELD_U32(owner, 0x0).vtable)(owner, &dword_60C8175C);
+    v10 = (*(int (__fastcall **)(StageActor *, int *))FIELD_U32(owner, 0x0))(owner, &dword_60C8175C);
     if ( v10 )
       v10 = (int)owner;
     v12 = v8 == 0;
@@ -53,7 +53,7 @@ int __fastcall sub_6008ADA4(int a1, ActiveCollider *a2, ActiveCollider *a3)
         _cxa_guard_release(&dword_60C7B374);
       }
       v9 = 1;
-      if ( (*(int (__fastcall **)(StageActor *, int *))FIELD_U32(v8, 0x0).vtable)(v8, &dword_60C7B370) == 1 )
+      if ( (*(int (__fastcall **)(StageActor *, int *))FIELD_U32(v8, 0x0))(v8, &dword_60C7B370) == 1 )
       {
         v13 = 0;
         FIELD_U8(a3, 0x6E) |= 2u;
@@ -79,7 +79,7 @@ int __fastcall sub_6008ADA4(int a1, ActiveCollider *a2, ActiveCollider *a3)
                 v21 == (*(int (**)(void))(dword_60C81D6C + 8))()) )
           {
             FIELD_U8(a1, 84) = FIELD_U8(v8, 0x54);
-            v22 = FIELD_U32(v8, 0x6C).x > FIELD_F32(a1, 108);
+            v22 = FIELD_F32(v8, 0x6C) > FIELD_F32(a1, 108);
             v23 = (float)byte_60AFE3F4[v22];
             FIELD_U32(a1, 80) = v22;
             FIELD_F32(a1, 120) = (float)(v23 * 3.5) * 1.5;
@@ -89,7 +89,7 @@ int __fastcall sub_6008ADA4(int a1, ActiveCollider *a2, ActiveCollider *a3)
           }
           else
           {
-            (*(void (__fastcall **)(StageActor *, StageActor *, int))(FIELD_U32(v8, 0x0).vtable + 1168))(v8, FIELD_U32(a2, 0x40), 4);
+            (*(void (__fastcall **)(StageActor *, StageActor *, int))(FIELD_U32(v8, 0x0) + 1168))(v8, FIELD_U32(a2, 0x40), 4);
           }
         }
       }

@@ -26,8 +26,8 @@ int __fastcall sub_60161E68(ColliderBase *a1, Vec3 **a2, float *a3)
   FIELD_U32(a1, 0xA0) = (char *)a2[2];
   FIELD_U32(a1, 0xA4) = (char *)a2[3];
   FIELD_U32(a1, 0xA8) = (char *)a2[4];
-  FIELD_U32(a1, 0xAC).x = *a3;
-  FIELD_U32(a1, 0xAC).y = a3[1];
+  FIELD_F32(a1, 0xAC) = *a3;
+  FIELD_F32(a1, 0xB0) = a3[1];
   FIELD_F32(a1, 0xBC) = a3[2];
   FIELD_F32(a1, 0xC0) = a3[3];
   FIELD_U32(a1, 0xF4) = (int)a3[5];
@@ -56,7 +56,7 @@ int __fastcall sub_60161E68(ColliderBase *a1, Vec3 **a2, float *a3)
     while ( v8 < vtable );
   }
   FIELD_U32(a1, 0x90) = 0;
-  (*(void (__fastcall **)(ColliderBase *))(FIELD_U32(a1, 0x0).vtable + 64))(a1);
-  (*(void (__fastcall **)(ColliderBase *))(FIELD_U32(a1, 0x0).vtable + 48))(a1);
-  return (*(int (__fastcall **)(ColliderBase *))(FIELD_U32(a1, 0x0).vtable + 52))(a1);
+  (*(void (__fastcall **)(ColliderBase *))(FIELD_U32(a1, 0x0) + 64))(a1);
+  (*(void (__fastcall **)(ColliderBase *))(FIELD_U32(a1, 0x0) + 48))(a1);
+  return (*(int (__fastcall **)(ColliderBase *))(FIELD_U32(a1, 0x0) + 52))(a1);
 }

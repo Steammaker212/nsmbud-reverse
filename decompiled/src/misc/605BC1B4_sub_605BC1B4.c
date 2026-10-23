@@ -37,7 +37,7 @@ int __fastcall sub_605BC1B4(_DWORD *a1)
   ModelWrapper_setup(v5, v2, 0, 0);
   a1[1694] = v4;
   v6 = a1 + 1694;
-  v7 = (int)*FIELD_U32(v4, 0x8).animations;
+  v7 = (int)*FIELD_U32(v4, 0xC);
   if ( a1[1696] )
   {
     v15 = &sead__SafeStringBase__vtable;

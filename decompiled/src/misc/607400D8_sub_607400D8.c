@@ -38,7 +38,7 @@ int __fastcall sub_607400D8(int a1)
   v6 = sub_60421830(v5, Model2, 2, 2, 0, 0, 0);
   j_ModelWrapper_setupModel(v6, v2, 0, 0);
   FIELD_U32(a1, 6300) = v5;
-  v7 = (int)*FIELD_U32(v5, 0x8).animations;
+  v7 = (int)*FIELD_U32(v5, 0xC);
   a2.vtable = &sead__SafeStringBase__vtable;
   a2.cstr = "slotPanel_wait";
   SkeletalAnim_play(v7, (int)v2, (const char **)&a2);

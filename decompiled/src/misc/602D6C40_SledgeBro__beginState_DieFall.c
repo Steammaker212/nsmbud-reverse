@@ -26,7 +26,7 @@ ActiveColliderMgr *__fastcall SledgeBro__beginState_DieFall(Enemy *a1)
 
   v3 = &a1[1]._._._.field_22C;
   v2 = (_DWORD *)a1[1]._._._.field_22C;
-  ResArchiveById = Profile__getResArchiveById(FIELD_U32(a1, 0x0)._._._.profile, 0);
+  ResArchiveById = Profile__getResArchiveById(FIELD_U32(a1, 0xC), 0);
   v12[0] = &sead__SafeStringBase__vtable;
   v12[1] = "dead";
   sub_60421938(v2, ResArchiveById, (int)v12);

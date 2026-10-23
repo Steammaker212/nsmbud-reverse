@@ -10,13 +10,13 @@
 
 LineFollower *__fastcall LineFollower_ctor(LineFollower *this)
 {
-  FIELD_U32(this, 0x0).vtable = (int)&off_60BC0570;
-  FIELD_U32(this, 0x0).executer.vtable = &off_60BC0580;
-  FIELD_U32(this, 0x0).executer.methodExecuter.vtable = &off_60BC05A4;
-  FIELD_U32(this, 0x0).executer.methodExecuter.owner = this;
-  FIELD_U32(this, 0x0).executer.methodExecuter.currentState = 0;
-  StateMgr_ctor(&FIELD_U32(this, 0x0).manager, &FIELD_U32(this, 0x0).executer, &NullState);
-  FIELD_U32(this, 0x0).vtable = (int)&off_60BC0560;
+  FIELD_U32(this, 0x0) = (int)&off_60BC0570;
+  FIELD_U32(this, 0x4) = &off_60BC0580;
+  FIELD_U32(this, 0x8) = &off_60BC05A4;
+  FIELD_U32(this, 0xC) = this;
+  FIELD_U32(this, 0x10) = 0;
+  StateMgr_ctor(&FIELD_U32(this, 0x14), &FIELD_U32(this, 0x4), &NullState);
+  FIELD_U32(this, 0x0) = (int)&off_60BC0560;
   memset(FIELD_U32(this, 0x24), 0, 0x6C);
   return this;
 }

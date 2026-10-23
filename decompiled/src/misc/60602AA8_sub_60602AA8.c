@@ -69,9 +69,9 @@ char *__fastcall sub_60602AA8(int a1, _DWORD *a2, int a3)
       v11[1717] = *v9;
       HIDWORD(v7) = owner;
       v11[1718] = v8;
-      v11[1714] = LODWORD(FIELD_U32(owner, 0x0)._.position.x);
-      v11[1715] = LODWORD(FIELD_U32(owner, 0x0)._.position.y);
-      v11[1716] = LODWORD(FIELD_U32(owner, 0x0)._.position.z);
+      v11[1714] = LODWORD(FIELD_F32(owner, 0x6C));
+      v11[1715] = LODWORD(FIELD_F32(owner, 0x70));
+      v11[1716] = LODWORD(FIELD_F32(owner, 0x74));
       v13 = v4 * v7;
       ++v4;
       v11[1720] = v13;
@@ -85,8 +85,8 @@ char *__fastcall sub_60602AA8(int a1, _DWORD *a2, int a3)
     (ShapedCollider *)(HIDWORD(v7) + 6160),
     (StageActor *)HIDWORD(v7),
     (ShapedColliderInfo *)(HIDWORD(v7) + 6816));
-  owner[1]._._.aCollider.createNode.prev = (ActiveColliderNode *)&FIELD_U32(owner, 0x0)._.field_57;
-  owner[1]._._.aCollider.createNode.next = (ActiveColliderNode *)&FIELD_U32(owner, 0x0)._.field_56;
+  owner[1]._._.aCollider.createNode.prev = (ActiveColliderNode *)&FIELD_U8(owner, 0x57);
+  owner[1]._._.aCollider.createNode.next = (ActiveColliderNode *)&FIELD_U8(owner, 0x56);
   owner[1]._._.aCollider.field_D0 = (int)&owner[1]._.collisionMgr[104];
   ColliderMgr_add(ColliderMgr_instance, v14);
   v15 = owner;
@@ -117,7 +117,7 @@ char *__fastcall sub_60602AA8(int a1, _DWORD *a2, int a3)
           if ( v39 + v24 >= 0x40 )
             v25 = 0;
           v26 = (char *)v15 + 304 * v25;
-          ActiveCollider__init((ActiveCollider *)(v26 + 7736), &FIELD_U32(v15, 0x0)._, &stru_60C0EC84, 0);
+          ActiveCollider__init((ActiveCollider *)(v26 + 7736), &FIELD_U32(v15, 0x0), &stru_60C0EC84, 0);
           v27 = *v17;
           v28 = v17;
           *((_DWORD *)v26 + 1966) = v17[1];

@@ -14,11 +14,11 @@ Enemy *__fastcall Enemy__vf238(Enemy *result)
 {
   int v1; // r1
 
-  v1 = FIELD_U32(result, 0x0)._._.field_270;
+  v1 = FIELD_U32(result, 0x270);
   if ( v1 )
   {
     if ( FIELD_U32(v1, 24) == 2 )
-      return (*(Enemy *(__fastcall **)(Enemy *, StateVirtual *))(FIELD_U32(result, 0x0)._._._.vtable + 0xC0))(result, &stru_60C90974);
+      return (*(Enemy *(__fastcall **)(Enemy *, StateVirtual *))(FIELD_U32(result, 0x0) + 0xC0))(result, &stru_60C90974);
   }
   return result;
 }

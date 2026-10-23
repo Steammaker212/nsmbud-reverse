@@ -36,7 +36,7 @@ int __fastcall light_search_ref(int a1)
     ModelWrapper_setup(v11, ResArchiveById, 0, 0);
     FIELD_U32(a1, 6136) = v10;
     v6 = a1 + 6136;
-    animations = (int *)FIELD_U32(v10, 0x18).animations;
+    animations = (int *)FIELD_U32(v10, 0x1C);
     v8 = "light_search_obake_fog";
   }
   else
@@ -49,7 +49,7 @@ int __fastcall light_search_ref(int a1)
     ModelWrapper_setup(v5, ResArchiveById, 0, 0);
     FIELD_U32(a1, 6136) = v4;
     v6 = a1 + 6136;
-    animations = (int *)FIELD_U32(v4, 0x18).animations;
+    animations = (int *)FIELD_U32(v4, 0x1C);
     v8 = "light_search_fog";
   }
   v12 = *animations;

@@ -11,9 +11,9 @@
 void __fastcall sub_606578F0(CollisionActor *a1)
 {
   CollisionActor__handleGravity(a1);
-  FIELD_U32(a1, 0x0).position.y = FIELD_U32(a1, 0x0).speed.y + FIELD_U32(a1, 0x0).position.y;
-  (*(void (__fastcall **)(CollisionActor *, float))(FIELD_U32(a1, 0x0)._.vtable + 192))(
+  FIELD_F32(a1, 0x70) = FIELD_F32(a1, 0x7C) + FIELD_F32(a1, 0x70);
+  (*(void (__fastcall **)(CollisionActor *, float))(FIELD_U32(a1, 0x0) + 192))(
     a1,
-    FIELD_U32(a1, 0x0).position.x + (float)((float)((float)(((unsigned int)(FIELD_U32(a1, 0x0)._.settings1 + 1) >> 8) & 0xF) * 16.0) * 0.5));
+    FIELD_F32(a1, 0x6C) + (float)((float)((float)(((unsigned int)(FIELD_U32(a1, 0x14) + 1) >> 8) & 0xF) * 16.0) * 0.5));
   JUMPOUT(0x60000CD0);
 }

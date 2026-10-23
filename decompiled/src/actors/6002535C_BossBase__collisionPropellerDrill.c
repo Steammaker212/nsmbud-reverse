@@ -13,5 +13,5 @@
 // Overridden by: None
 int __fastcall BossBase__collisionPropellerDrill(BossBase *a1)
 {
-  return (*(int (__fastcall **)(BossBase *))(FIELD_U32(a1, 0x0)._._._._.vtable + 0x124))(a1);
+  return (*(int (__fastcall **)(BossBase *))(FIELD_U32(a1, 0x0) + 0x124))(a1);
 }

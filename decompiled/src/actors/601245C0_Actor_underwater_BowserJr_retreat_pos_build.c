@@ -15,7 +15,7 @@ StageActor *__fastcall Actor_underwater_BowserJr_retreat_pos_build(ActorBuildInf
 
   v2 = (StageActor *)operator_new(0x290u);
   result = StageActor__ctor(v2, a1);
-  FIELD_U32(result, 0x0).vtable = (int)off_60BD1088;
+  FIELD_U32(result, 0x0) = (int)off_60BD1088;
   result[1]._.vtable = 0;
   result[1]._.heap = 0;
   LOBYTE(result[1]._.id) = 0;

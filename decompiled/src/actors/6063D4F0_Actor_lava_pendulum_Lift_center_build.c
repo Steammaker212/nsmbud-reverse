@@ -15,6 +15,6 @@ MultiStateActor *__fastcall Actor_lava_pendulum_Lift_center_build(ActorBuildInfo
 
   v2 = (MultiStateActor *)operator_new(0x17E0u);
   result = MultiStateActor__ctor(v2, a1);
-  FIELD_U32(result, 0x0)._._.vtable = (int)off_60C1303C;
+  FIELD_U32(result, 0x0) = (int)off_60C1303C;
   return result;
 }

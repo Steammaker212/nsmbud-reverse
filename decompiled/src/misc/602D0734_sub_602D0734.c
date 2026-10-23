@@ -40,7 +40,7 @@ LABEL_6:
         return result;
     }
     FIELD_U32(a1, 80) = result;
-    FIELD_U32(a1, 6592) = FIELD_U32(owner, 0x0).id;
+    FIELD_U32(a1, 6592) = FIELD_U32(owner, 0x8);
     FIELD_U32(a1, 6596) = 30;
     FIELD_U8(a1, 6710) |= 2u;
     FIELD_U8(a1, 7014) |= 2u;

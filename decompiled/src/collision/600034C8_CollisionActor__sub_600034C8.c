@@ -22,11 +22,11 @@ int __fastcall CollisionActor__sub_600034C8(CollisionActor *this)
   result = 0;
   if ( (v2 & 1) != 0 )
   {
-    FIELD_U32(this, 0x0).speed.y = 0.0;
+    FIELD_F32(this, 0x7C) = 0.0;
     result = 1;
   }
   v4 = 0x40000;
-  x = FIELD_U32(this, 0x0).speed.x;
+  x = FIELD_F32(this, 0x78);
   if ( (v2 & 0x10400) == 0x400 )
     result |= 2u;
   if ( x < 0.0 )

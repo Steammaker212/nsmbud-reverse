@@ -15,7 +15,7 @@ StateActor *__fastcall Actor_parentchild_obuje_child_castle_build(ActorBuildInfo
 
   v2 = (StateActor *)operator_new(0x17E8u);
   result = StateActor_ctor(v2, a1);
-  FIELD_U32(result, 0x0)._._.vtable = (int)off_60C158FC;
+  FIELD_U32(result, 0x0) = (int)off_60C158FC;
   *(_WORD *)&result[1]._._._.field_10 = 0;
   result[1]._._._.profile = 0;
   result[1]._._._.id = 0;

@@ -37,8 +37,8 @@ Vec3 *__fastcall ActorScaler_execute(ActorScaler *this)
   {
     FIELD_F32(this, 0x10) = 1.0;
   }
-  FIELD_U32(this, 0x4).x = v2;
-  FIELD_U32(this, 0x4).y = v3;
-  FIELD_U32(this, 0x4).z = v4;
+  FIELD_F32(this, 0x4) = v2;
+  FIELD_F32(this, 0x8) = v3;
+  FIELD_F32(this, 0xC) = v4;
   return &FIELD_U32(this, 0x4);
 }

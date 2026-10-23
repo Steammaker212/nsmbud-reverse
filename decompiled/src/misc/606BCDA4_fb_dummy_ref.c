@@ -51,22 +51,22 @@ int __fastcall fb_dummy_ref(int a1)
       v13 = a1 + 4 * i;
       FIELD_U32(v13, 6156) = v11;
       v14 = (int **)(v13 + 6156);
-      v15 = (int)*FIELD_U32(v11, 0x8).animations;
+      v15 = (int)*FIELD_U32(v11, 0xC);
       SkeletalAnim_play(v15, (int)v7, (const char **)v9 + 17);
       AnimationCtrl_setRepeat((ModelAnimation *)(v15 + 4), 0);
       FIELD_U32(v15, 24) = 1063675494;
-      v16 = (int)*FIELD_U32(v11, 0x18).animations;
+      v16 = (int)*FIELD_U32(v11, 0x1C);
       sub_60446088(v16, (int)v7, v9 + 17);
       AnimationCtrl_setRepeat((ModelAnimation *)(v16 + 4), 0);
       FIELD_U32(v16, 24) = 1063675494;
-      animations = FIELD_U32(v11, 0x18).animations;
-      if ( FIELD_U32(v11, 0x18).count > 1u )
+      animations = FIELD_U32(v11, 0x1C);
+      if ( FIELD_U32(v11, 0x18) > 1u )
         ++animations;
       v18 = (char *)*animations;
       ShuAnim_play(*animations, (int)v7, v9 + 17);
       AnimationCtrl_setRepeat((ModelAnimation *)(v18 + 4), 0);
       *((_DWORD *)v18 + 6) = 1063675494;
-      v19 = (int)*FIELD_U32(v11, 0x20).animations;
+      v19 = (int)*FIELD_U32(v11, 0x24);
       sub_6045195C(v19, (int)v7, (const char **)v9 + 17);
       AnimationCtrl_setRepeat((ModelAnimation *)(v19 + 4), 0);
       FIELD_U32(v19, 24) = 1063675494;

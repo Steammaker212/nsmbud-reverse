@@ -23,9 +23,9 @@ _DWORD *__fastcall PowBlock_ctor(ActorBuildInfo *a1)
   FIELD_U32(v2, 6156) = 0;
   RectCollider_ctor((RectCollider *)(v2 + 0x1818));
   FIELD_U32(v2, 0x1818) = off_60BC30D8;
-  x = FIELD_U32(a1, 0x10).x;
-  y = FIELD_U32(a1, 0x10).y;
-  FIELD_F32(v2, 6832) = FIELD_U32(a1, 0x10).z;
+  x = FIELD_F32(a1, 0x10);
+  y = FIELD_F32(a1, 0x14);
+  FIELD_F32(v2, 6832) = FIELD_F32(a1, 0x18);
   FIELD_F32(v2, 6828) = y;
   FIELD_F32(v2, 6824) = x;
   FIELD_U32(v2, 6844) = 0;

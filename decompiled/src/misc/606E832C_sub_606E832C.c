@@ -36,7 +36,7 @@ int __fastcall sub_606E832C(int a1)
     v10 = ModelWrapper_ctor(v9, Model2, 0, 0, 2, 0, 0);
     ModelWrapper_setup(v10, ResArchiveById, 0, 0);
     FIELD_U32(a1, 644) = v9;
-    animations = (int *)FIELD_U32(v9, 0x18).animations;
+    animations = (int *)FIELD_U32(v9, 0x1C);
     v7 = "obj_torch_obake";
   }
   else
@@ -48,7 +48,7 @@ int __fastcall sub_606E832C(int a1)
     v5 = ModelWrapper_ctor(v4, v3, 0, 0, 2, 0, 0);
     ModelWrapper_setup(v5, ResArchiveById, 0, 0);
     FIELD_U32(a1, 644) = v4;
-    animations = (int *)FIELD_U32(v4, 0x18).animations;
+    animations = (int *)FIELD_U32(v4, 0x1C);
     v7 = "obj_torch";
   }
   v11 = *animations;

@@ -16,9 +16,9 @@ StageActor *__fastcall Actor_banamanage_OBJ_build(ActorBuildInfo *a1)
 
   v2 = (StageActor *)operator_new(0x298u);
   result = StageActor__ctor(v2, a1);
-  FIELD_U32(result, 0x0).vtable = (int)off_60C07D1C;
+  FIELD_U32(result, 0x0) = (int)off_60C07D1C;
   result[1]._.vtable = 0;
-  settings1 = FIELD_U32(result, 0x0).settings1;
+  settings1 = FIELD_U32(result, 0x14);
   result[1]._.heap = HIBYTE(settings1) & 0xF;
   result[1]._.id = ((settings1 >> 4) & 7) + 1;
   result[1]._.profile = (Profile *)BYTE1(settings1);

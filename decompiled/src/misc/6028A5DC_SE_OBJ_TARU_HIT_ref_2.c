@@ -48,7 +48,7 @@ signed int __fastcall SE_OBJ_TARU_HIT_ref_2(int a1, ActiveCollider *a2, ActiveCo
     }
     if ( owner )
     {
-      v8 = (*(int (__fastcall **)(StageActor *, int *))FIELD_U32(owner, 0x0).vtable)(owner, &dword_60C8F380);
+      v8 = (*(int (__fastcall **)(StageActor *, int *))FIELD_U32(owner, 0x0))(owner, &dword_60C8F380);
       if ( v8 )
         v8 = (int)owner;
     }
@@ -72,19 +72,19 @@ signed int __fastcall SE_OBJ_TARU_HIT_ref_2(int a1, ActiveCollider *a2, ActiveCo
         v20 = v19 == 0;
       if ( v20 && v8 && SE_OBJ_TARU_HIT_ref_2_helper(v8, v9, COERCE_FLOAT((int)*(float *)(*(_DWORD *)v16 + 20))) == 1 )
       {
-        y = FIELD_U32(v28, 0x6C).y;
+        y = FIELD_F32(v28, 0x70);
         v22 = Global_BasicSoundActor2;
-        position.x = FIELD_U32(v28, 0x6C).x;
+        position.x = FIELD_F32(v28, 0x6C);
         position.y = y;
         mapPositionToScreen(&out, &position);
         BasicSoundActor2_play(v22, "SE_OBJ_TARU_HIT", &out.x, 0);
-        v23 = FIELD_U32(v28, 0x6C).y;
-        position.x = FIELD_U32(v28, 0x6C).x + (float)((float)byte_60AFE3F4[v9] * 12.0);
+        v23 = FIELD_F32(v28, 0x70);
+        position.x = FIELD_F32(v28, 0x6C) + (float)((float)byte_60AFE3F4[v9] * 12.0);
         position.y = v23 + 16.0;
         position.z = 4500.0;
         EffectData_create(660, &position, 0, 0);
         v24 = 4;
-        if ( (float)(FIELD_U32(v28, 0x6C).y + 16.0) < FIELD_U32(owner, 0x6C).y )
+        if ( (float)(FIELD_F32(v28, 0x70) + 16.0) < FIELD_F32(owner, 0x70) )
           v24 = 12;
         FIELD_U32(a1, 6580) = v24;
         FIELD_U16(a1, 6598) = 8;

@@ -35,27 +35,27 @@ int __fastcall sub_6034CCA8(Enemy *a1, int a2, int a3)
       if ( (**v7)(v7, &dword_60C7B378) == 1 )
       {
         v8 = sub_6000AED0((int)a1, (int)v7);
-        if ( v8 != FIELD_U32(a1, 0x0)._._.direction )
+        if ( v8 != FIELD_U32(a1, 0x50) )
         {
           v9 = (int *)&Enemy_CommonRotations[v8];
           if ( a1[1]._._._.field_56 )
             v9 = &dword_60C94CE0[v8 + 20];
-          FIELD_U32(a1, 0x0)._._.rotation.y = *v9;
-          FIELD_U32(a1, 0x0)._._.direction = v8;
-          FIELD_U32(a1, 0x0)._._.speed.x = -FIELD_U32(a1, 0x0)._._.speed.x;
-          FIELD_U32(a1, 0x0)._._.maxSpeed.x = -FIELD_U32(a1, 0x0)._._.maxSpeed.x;
-          CurrentState = StateMgr__getCurrentState(&FIELD_U32(a1, 0x0).states.manager);
+          FIELD_U32(a1, 0xA0) = *v9;
+          FIELD_U32(a1, 0x50) = v8;
+          FIELD_F32(a1, 0x78) = -FIELD_F32(a1, 0x78);
+          FIELD_F32(a1, 0x84) = -FIELD_F32(a1, 0x84);
+          CurrentState = StateMgr__getCurrentState(&FIELD_U32(a1, 0x17C4));
           v11 = (*((int (__fastcall **)(StateBase *))FIELD_U32(CurrentState, 0x0) + 2))(CurrentState);
           if ( v11 == (*(int (**)(void))(dword_60C94B70 + 8))() )
           {
-            (*(void (__fastcall **)(Enemy *, int *))(FIELD_U32(a1, 0x0)._._._.vtable + 192))(a1, &dword_60C94B50);
+            (*(void (__fastcall **)(Enemy *, int *))(FIELD_U32(a1, 0x0) + 192))(a1, &dword_60C94B50);
           }
           else
           {
-            v12 = StateMgr__getCurrentState(&FIELD_U32(a1, 0x0).states.manager);
+            v12 = StateMgr__getCurrentState(&FIELD_U32(a1, 0x17C4));
             v13 = (*((int (__fastcall **)(StateBase *))FIELD_U32(v12, 0x0) + 2))(v12);
             if ( v13 == (*(int (**)(void))(dword_60C94BB0 + 8))() )
-              (*(void (__fastcall **)(Enemy *, int *))(FIELD_U32(a1, 0x0)._._._.vtable + 192))(a1, &dword_60C94B90);
+              (*(void (__fastcall **)(Enemy *, int *))(FIELD_U32(a1, 0x0) + 192))(a1, &dword_60C94B90);
           }
           sub_6034CE90(a1);
         }

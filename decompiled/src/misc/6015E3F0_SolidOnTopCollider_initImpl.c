@@ -24,12 +24,12 @@ int __fastcall SolidOnTopCollider_initImpl(
   float x; // t1
 
   sub_601603E8(&FIELD_U32(this, 0x0));
-  *(ColliderOwnerInfo *)&FIELD_U32(this, 0x0).ownerPositionPtr = *ownerInfo;
-  FIELD_U32(this, 0x0).distToCenter.x = FIELD_F32(info, 0x0);
-  LODWORD(FIELD_U32(this, 0x0).distToCenter.y) = FIELD_U32(info, 0x4);
-  LODWORD(FIELD_U32(this, 0x0).field_BC) = FIELD_U32(info, 0x8);
-  FIELD_U32(this, 0x0).field_C0 = FIELD_F32(info, 0xC);
-  FIELD_U32(this, 0x0).rotation = FIELD_U32(info, 0x14);
+  *(ColliderOwnerInfo *)&FIELD_U32(this, 0x98) = *ownerInfo;
+  FIELD_F32(this, 0xAC) = FIELD_F32(info, 0x0);
+  LODWORD(FIELD_F32(this, 0xB0)) = FIELD_U32(info, 0x4);
+  LODWORD(FIELD_F32(this, 0xBC)) = FIELD_U32(info, 0x8);
+  FIELD_F32(this, 0xC0) = FIELD_F32(info, 0xC);
+  FIELD_U32(this, 0xF4) = FIELD_U32(info, 0x14);
   FIELD_F32(this, 0x16C) = 4.0;
   ColliderBase_setSolidity(&FIELD_U32(this, 0x0), 2);
   numPoints = FIELD_U32(this, 0x154);
@@ -55,8 +55,8 @@ int __fastcall SolidOnTopCollider_initImpl(
     }
     while ( v8 < numPoints );
   }
-  FIELD_U32(this, 0x0).owner = 0;
+  FIELD_U32(this, 0x90) = 0;
   sub_6015E4F0((int)this);
-  (*(void (__fastcall **)(SolidOnTopCollider *))(FIELD_U32(this, 0x0)._.vtable + 48))(this);
-  return (*(int (__fastcall **)(SolidOnTopCollider *))(FIELD_U32(this, 0x0)._.vtable + 52))(this);
+  (*(void (__fastcall **)(SolidOnTopCollider *))(FIELD_U32(this, 0x0) + 48))(this);
+  return (*(int (__fastcall **)(SolidOnTopCollider *))(FIELD_U32(this, 0x0) + 52))(this);
 }

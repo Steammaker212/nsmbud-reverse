@@ -13,7 +13,7 @@ ColliderListNode *__fastcall sub_605BE52C(ShapedCollider *a1, StageActor *a2)
   ColliderListNode *result; // r0
 
   ShapedCollider_init(a1, a2, &stru_60B05588);
-  FIELD_U32(a1, 0x0).field_150 = &a1[1]._.field_124;
+  FIELD_U32(a1, 0x150) = &a1[1]._.field_124;
   ColliderBase_setSolidity(&FIELD_U32(a1, 0x0), 0);
   result = ColliderMgr_add(ColliderMgr_instance, &FIELD_U32(a1, 0x0));
   a1[1]._.field_128 = 0;

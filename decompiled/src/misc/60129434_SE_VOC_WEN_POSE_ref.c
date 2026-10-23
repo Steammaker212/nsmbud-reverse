@@ -25,8 +25,8 @@ int __fastcall SE_VOC_WEN_POSE_ref(CollisionActor *a1)
   v2 = &a1[1].collisionMgr[384];
   j_ModelWrapper_updateAnims(*(_DWORD *)&a1[1].collisionMgr[384]);
   Animation_update(**(_DWORD **)(*(_DWORD *)v2 + 20));
-  (*(void (__fastcall **)(CollisionActor *))(FIELD_U32(a1, 0x0)._.vtable + 1364))(a1);
-  (*(void (__fastcall **)(CollisionActor *))(FIELD_U32(a1, 0x0)._.vtable + 1320))(a1);
+  (*(void (__fastcall **)(CollisionActor *))(FIELD_U32(a1, 0x0) + 1364))(a1);
+  (*(void (__fastcall **)(CollisionActor *))(FIELD_U32(a1, 0x0) + 1320))(a1);
   CollisionActor__handleGravity(a1);
   CollisionActor__handleSpeed(a1);
   v3 = *(_DWORD **)(*(_DWORD *)v2 + 12);
@@ -41,12 +41,12 @@ int __fastcall SE_VOC_WEN_POSE_ref(CollisionActor *a1)
     v5 += v6;
   if ( sub_60418548(*v5 + 4) )
   {
-    y = FIELD_U32(a1, 0x0).position.y;
-    v12.x = FIELD_U32(a1, 0x0).position.x;
+    y = FIELD_F32(a1, 0x70);
+    v12.x = FIELD_F32(a1, 0x6C);
     v12.y = y + -2.0;
     v12.z = 4500.0;
     EffectData_create(788, &v12, 0, 0);
-    (*(void (__fastcall **)(CollisionActor *))(FIELD_U32(a1, 0x0)._.vtable + 1288))(a1);
+    (*(void (__fastcall **)(CollisionActor *))(FIELD_U32(a1, 0x0) + 1288))(a1);
   }
   v8 = *(_DWORD *)(*(_DWORD *)v2 + 12);
   v9 = *(_DWORD *)(*(_DWORD *)v2 + 68);
@@ -58,7 +58,7 @@ int __fastcall SE_VOC_WEN_POSE_ref(CollisionActor *a1)
     v11 = FIELD_U32(EnemyCounterMaybe_instance, 24);
     if ( v11 )
       FIELD_U8(v11, 6136) = 1;
-    return (*(int (__fastcall **)(CollisionActor *, void *))(FIELD_U32(a1, 0x0)._.vtable + 192))(a1, &unk_60C87020);
+    return (*(int (__fastcall **)(CollisionActor *, void *))(FIELD_U32(a1, 0x0) + 192))(a1, &unk_60C87020);
   }
   return result;
 }

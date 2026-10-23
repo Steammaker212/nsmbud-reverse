@@ -12,7 +12,7 @@ int __fastcall sub_60575B34(ColliderBase *a1)
 {
   FIELD_F32(a1, 0x74) = a1[21].field_D0;
   a1[19].field_150 = 0;
-  (*(void (__fastcall **)(ColliderBase *, int *))(FIELD_U32(a1, 0x0).vtable + 192))(a1, &dword_60CAE31C);
+  (*(void (__fastcall **)(ColliderBase *, int *))(FIELD_U32(a1, 0x0) + 192))(a1, &dword_60CAE31C);
   ((void (__fastcall *)(ColliderBase *, int))loc_6057589C)(a1, 1);
   a1[21].field_E4 = 2;
   a1[21].owner248Ptr = (Vec3 *)50;

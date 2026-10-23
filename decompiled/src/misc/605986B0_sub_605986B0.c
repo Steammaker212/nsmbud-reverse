@@ -13,7 +13,7 @@ CollisionActor *__fastcall sub_605986B0(CollisionActor *a1, ActorBuildInfo *a2)
   int v3; // r0
 
   BabyYoshiBaseProbably_ctor(a1, a2, 1);
-  FIELD_U32(a1, 0x0)._.vtable = (int)off_60C075E0;
+  FIELD_U32(a1, 0x0) = (int)off_60C075E0;
   sub_6059B720((void ***)&a1[1].collisionMgr[1324], (void **)&a1[1]);
   ActorCollisionMgr_ctor((CollisionMgr *)&a1[1].collisionMgr[1368]);
   *(_DWORD *)&a1[2].collisionMgr[656] = &off_60C07814;

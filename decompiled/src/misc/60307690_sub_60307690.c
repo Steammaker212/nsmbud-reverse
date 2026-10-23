@@ -31,19 +31,19 @@ int __fastcall sub_60307690(StateActor *a1)
   {
     x = out.x;
     y = out.y;
-    StageActor__accelerateX(&FIELD_U32(a1, 0x0)._);
-    v6 = FIELD_U32(a1, 0x0)._.position.x + FIELD_U32(a1, 0x0)._.speed.x;
-    FIELD_U32(a1, 0x0)._.position.x = v6;
-    FIELD_U32(a1, 0x0)._.position.y = FIELD_U32(a1, 0x0)._.position.y + FIELD_U32(a1, 0x0)._.speed.y;
-    FIELD_U32(a1, 0x0)._.position.z = FIELD_U32(a1, 0x0)._.position.z + FIELD_U32(a1, 0x0)._.speed.z;
+    StageActor__accelerateX(&FIELD_U32(a1, 0x0));
+    v6 = FIELD_F32(a1, 0x6C) + FIELD_F32(a1, 0x78);
+    FIELD_F32(a1, 0x6C) = v6;
+    FIELD_F32(a1, 0x70) = FIELD_F32(a1, 0x70) + FIELD_F32(a1, 0x7C);
+    FIELD_F32(a1, 0x74) = FIELD_F32(a1, 0x74) + FIELD_F32(a1, 0x80);
     v7 = v6
        + (float)(FIELD_F32(dword_60CC6484, 116)
                + (float)((float)(FIELD_F32(dword_60CC6484, 56) + FIELD_F32(dword_60CC6484, 64)) * -0.5));
-    FIELD_U32(a1, 0x0)._.position.x = v7;
-    CollisionMgr_process(FIELD_U32(a1, 0x0).collisionMgr, v7);
+    FIELD_F32(a1, 0x6C) = v7;
+    CollisionMgr_process(FIELD_U8(a1, 0x288), v7);
     LODWORD(out.x) = sub_6000F7B8(x, -y);
     v9 = 0x2000000;
-    sub_6083224C(&FIELD_U32(a1, 0x0)._.rotation.y, (int *)&out, &v9);
+    sub_6083224C(&FIELD_U32(a1, 0xA0), (int *)&out, &v9);
     return sub_60309604(a1);
   }
   return result;

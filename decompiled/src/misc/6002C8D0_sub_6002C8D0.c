@@ -32,16 +32,16 @@ char *__fastcall sub_6002C8D0(CollisionActor *a1)
   v3 = (unsigned __int8)a1[1].collisionMgr[715];
   if ( v3 == 2 )
   {
-    x = FIELD_U32(a1, 0x0).position.x;
-    y = FIELD_U32(a1, 0x0).position.y;
+    x = FIELD_F32(a1, 0x6C);
+    y = FIELD_F32(a1, 0x70);
     *(_WORD *)&v12.field_0 = 0;
     positionOffset.x = x;
     a3.x = x;
     positionOffset.y = y;
     a3.y = y + -5.0;
     v13 = off_60BC1F98;
-    v12.field_2 = FIELD_U32(a1, 0x0).field_56;
-    v12.field_3 = FIELD_U32(a1, 0x0).field_57;
+    v12.field_2 = FIELD_U8(a1, 0x56);
+    v12.field_3 = FIELD_U8(a1, 0x57);
     v12.field_4 = 0;
     v12.field_8 = (int)&v13;
     v8 = TileCheck_ctor(&v11, &v12);
@@ -51,35 +51,35 @@ char *__fastcall sub_6002C8D0(CollisionActor *a1)
     if ( !result )
     {
       result = (char *)1153138688;
-      FIELD_U32(a1, 0x0).position.z = 1500.0;
+      FIELD_F32(a1, 0x74) = 1500.0;
     }
-    if ( FIELD_U32(a1, 0x0).speed.y < 0.0 )
-      return (*(char *(__fastcall **)(CollisionActor *, int *))(FIELD_U32(a1, 0x0)._.vtable + 192))(a1, &dword_60C7F908);
+    if ( FIELD_F32(a1, 0x7C) < 0.0 )
+      return (*(char *(__fastcall **)(CollisionActor *, int *))(FIELD_U32(a1, 0x0) + 192))(a1, &dword_60C7F908);
   }
   else if ( v3 == 1 )
   {
     if ( (FIELD_U8(a1, 0x288)[2224] & 1) != 0 )
-      FIELD_U32(a1, 0x0).speed.y = 0.0;
-    FIELD_U32(a1, 0x0).scale.x = FIELD_U32(a1, 0x0).scale.x + *(float *)&a1[1].collisionMgr[640];
-    v9 = FIELD_U32(a1, 0x0).scale.y + *(float *)&a1[1].collisionMgr[644];
-    FIELD_U32(a1, 0x0).scale.y = v9;
-    FIELD_U32(a1, 0x0).scale.z = FIELD_U32(a1, 0x0).scale.z + *(float *)&a1[1].collisionMgr[648];
+      FIELD_F32(a1, 0x7C) = 0.0;
+    FIELD_F32(a1, 0x90) = FIELD_F32(a1, 0x90) + *(float *)&a1[1].collisionMgr[640];
+    v9 = FIELD_F32(a1, 0x94) + *(float *)&a1[1].collisionMgr[644];
+    FIELD_F32(a1, 0x94) = v9;
+    FIELD_F32(a1, 0x98) = FIELD_F32(a1, 0x98) + *(float *)&a1[1].collisionMgr[648];
     if ( v9 >= 2.5 )
     {
-      FIELD_U32(a1, 0x0).scale.x = 2.5;
-      FIELD_U32(a1, 0x0).scale.y = 2.5;
-      FIELD_U32(a1, 0x0).scale.z = 2.5;
-      FIELD_U32(a1, 0x0).speed.y = 8.0;
+      FIELD_F32(a1, 0x90) = 2.5;
+      FIELD_F32(a1, 0x94) = 2.5;
+      FIELD_F32(a1, 0x98) = 2.5;
+      FIELD_F32(a1, 0x7C) = 8.0;
       *(_DWORD *)&FIELD_U8(a1, 0x288)[2556] |= 4u;
       *result = 2;
     }
     return (*(char *(__fastcall **)(_DWORD, Vec3 *))(***(_DWORD ***)&a1[1].collisionMgr[384] + 68))(
              **(_DWORD **)&a1[1].collisionMgr[384],
-             &FIELD_U32(a1, 0x0).scale);
+             &FIELD_U32(a1, 0x90));
   }
   else if ( a1[1].collisionMgr[715] )
   {
-    return (*(char *(__fastcall **)(CollisionActor *, int *))(FIELD_U32(a1, 0x0)._.vtable + 192))(a1, &dword_60C7F908);
+    return (*(char *(__fastcall **)(CollisionActor *, int *))(FIELD_U32(a1, 0x0) + 192))(a1, &dword_60C7F908);
   }
   else if ( !LOWORD(a1[1]._.aCollider.activeNode.prev) )
   {

@@ -37,7 +37,7 @@ int __fastcall sub_6072AF7C(_DWORD *a1)
   v7 = ModelWrapper_ctor(v6, Model2, 1, 0, 0, 0, 0);
   ModelWrapper_setup(v7, v4, 0, 0);
   a1[1575] = v6;
-  v8 = (int)*FIELD_U32(v6, 0x8).animations;
+  v8 = (int)*FIELD_U32(v6, 0xC);
   a2.vtable = &sead__SafeStringBase__vtable;
   a2.cstr = "mochimakiCannon_ready";
   SkeletalAnim_play(v8, (int)v4, (const char **)&a2);

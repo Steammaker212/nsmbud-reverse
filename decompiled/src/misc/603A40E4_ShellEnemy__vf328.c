@@ -13,8 +13,8 @@ signed int __fastcall ShellEnemy__vf328(StateActor *a1)
 {
   signed int result; // r0
 
-  FIELD_U32(a1, 0x0)._.profileFlags &= ~4u;
-  result = StageActor__directionToPlayerX(a1, &FIELD_U32(a1, 0x0)._.position);
-  FIELD_U32(a1, 0x0)._.direction = result;
+  FIELD_U32(a1, 0x238) &= ~4u;
+  result = StageActor__directionToPlayerX(a1, &FIELD_U32(a1, 0x6C));
+  FIELD_U32(a1, 0x50) = result;
   return result;
 }

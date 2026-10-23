@@ -15,7 +15,7 @@ MultiStateActor *__fastcall Actor_koinchild_build(ActorBuildInfo *a1)
 
   v2 = (MultiStateActor *)operator_new(0x1C18u);
   result = sub_606C70B4(v2, a1);
-  FIELD_U32(result, 0x0)._._.vtable = (int)off_60C102C0;
+  FIELD_U32(result, 0x0) = (int)off_60C102C0;
   *(_DWORD *)&result[1]._.collisionMgr[428] = 0;
   result[1]._.collisionMgr[432] = 0;
   return result;

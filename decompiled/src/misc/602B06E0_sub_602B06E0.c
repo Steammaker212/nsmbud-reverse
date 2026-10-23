@@ -27,7 +27,7 @@ int __fastcall sub_602B06E0(int *a1)
   v5 = sub_60421830(v4, Model2, 2, 0, 1, 0, 0);
   j_ModelWrapper_setupModel((int)v5, (int)Resource, 0, 0);
   a1[1575] = (int)v4;
-  v6 = (char *)*FIELD_U32(v4, 0x18).animations;
+  v6 = (char *)*FIELD_U32(v4, 0x1C);
   ShuAnim_play(v6, (int)Resource, (int)&dword_60C90CA8);
   AnimationCtrl_setRepeat((ModelAnimation *)(v6 + 4), 0);
   *((_DWORD *)v6 + 6) = 0;

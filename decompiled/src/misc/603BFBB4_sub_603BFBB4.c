@@ -20,9 +20,9 @@ float __fastcall sub_603BFBB4(CollisionActor *a1)
     _cxa_guard_release(&dword_60C98534[1]);
   }
   v3 = -201326592;
-  if ( (ActiveColliderNode *)FIELD_U32(a1, 0x0).direction == a1[1]._.aCollider.createNode.next )
+  if ( (ActiveColliderNode *)FIELD_U32(a1, 0x50) == a1[1]._.aCollider.createNode.next )
     v3 = 201326592;
-  FIELD_U32(a1, 0x0).rotation.x += sub_602A7BAC((int)a1, v3);
+  FIELD_U32(a1, 0x9C) += sub_602A7BAC((int)a1, v3);
   CollisionActor__handleGravity(a1);
   return CollisionActor__handleSpeed(a1);
 }

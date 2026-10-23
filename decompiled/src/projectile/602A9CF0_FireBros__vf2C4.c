@@ -41,7 +41,7 @@ __n64 __fastcall FireBros__vf2C4(BrosBase *this)
   v7.n64_u32[0] = 0;
   v16.n64_u32[0] = 0;
   v17.n64_u32[0] = 0;
-  if ( FIELD_U32(this, 0x0)._._._.direction == 1 )
+  if ( FIELD_U32(this, 0x50) == 1 )
     v6 = dword_60C90A0C ^ 0x80000000;
   v16.n64_u32[1] = v6;
   v17.n64_u32[1] = 0x3F800000;

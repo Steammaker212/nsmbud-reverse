@@ -15,7 +15,7 @@ StageActor *__fastcall Actor_pipe_kishi_build(ActorBuildInfo *a1)
 
   v2 = (StageActor *)operator_new(0x2B4u);
   result = StageActor__ctor(v2, a1);
-  FIELD_U32(result, 0x0).vtable = (int)&off_60C1FFF0;
+  FIELD_U32(result, 0x0) = (int)&off_60C1FFF0;
   result[1]._.settings1 = 0;
   result[1]._.settigns2 = 0;
   *(_DWORD *)&result[1]._.movementId = 0;

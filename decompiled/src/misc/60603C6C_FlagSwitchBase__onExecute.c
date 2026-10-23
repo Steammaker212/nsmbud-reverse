@@ -13,7 +13,7 @@
 // Overridden by: None
 int __fastcall FlagSwitchBase__onExecute(StateActor *a1)
 {
-  StateMgr__execute(&FIELD_U32(a1, 0x17B0).manager);
+  StateMgr__execute(&FIELD_U32(a1, 0x17C4));
   sub_60603C90(a1);
   return 1;
 }

@@ -11,23 +11,23 @@
 BossBase *__fastcall BossBase__ctor(BossBase *this, ActorBuildInfo *buildInfo)
 {
   Enemy__ctor(&FIELD_U32(this, 0x0), buildInfo);
-  FIELD_U32(this, 0x0)._._._._.vtable = (int)&BossBase_vtable;
+  FIELD_U32(this, 0x0) = (int)&BossBase_vtable;
   FIELD_U32(this, 0x189C) = 1;
   FIELD_U32(this, 0x18A0) = 1;
   FIELD_U32(this, 0x18A4) = 0;
   *(_WORD *)&FIELD_U8(this, 0x18A8) = 0;
   MovingSoundActor_ctor(&FIELD_U32(this, 0x18BC), 0, 1);
-  *(_DWORD *)FIELD_U32(this, 0x18BC)._._.nn_atk_SoundActor_data = off_60BC19B4;
+  *(_DWORD *)FIELD_U8(this, 0x18BC) = off_60BC19B4;
   FIELD_U32(this, 0x19F0) = 0;
-  PlayerLookTarget_ctor(&FIELD_U32(this, 0x19F4), FIELD_U32(this, 0x0)._._._._.id);
-  FIELD_U32(this, 0x1A20).vtable = (int)&ActorScaler_vtable;
-  FIELD_U32(this, 0x1A20).scale.x = 1.0;
-  FIELD_U32(this, 0x1A20).scale.y = 1.0;
-  FIELD_U32(this, 0x1A20).scale.z = 1.0;
-  FIELD_U32(this, 0x1A20).field_10 = 1.0;
-  FIELD_U32(this, 0x1A20).field_14 = 0.0;
-  FIELD_U32(this, 0x1A20).field_18 = 0;
-  FIELD_U32(this, 0x1A20).owner = &FIELD_U32(this, 0x0)._._._;
+  PlayerLookTarget_ctor(&FIELD_U32(this, 0x19F4), FIELD_U32(this, 0x8));
+  FIELD_U32(this, 0x1A20) = (int)&ActorScaler_vtable;
+  FIELD_F32(this, 0x1A24) = 1.0;
+  FIELD_F32(this, 0x1A28) = 1.0;
+  FIELD_F32(this, 0x1A2C) = 1.0;
+  FIELD_F32(this, 0x1A30) = 1.0;
+  FIELD_F32(this, 0x1A34) = 0.0;
+  FIELD_U32(this, 0x1A38) = 0;
+  FIELD_U32(this, 0x1A3C) = &FIELD_U32(this, 0x0);
   ActiveCollider_ctor(&FIELD_U32(this, 0x1A40));
   FIELD_U32(this, 0x1B70) = (int)off_60BC1984;
   FIELD_U32(this, 0x18B8) = 0;

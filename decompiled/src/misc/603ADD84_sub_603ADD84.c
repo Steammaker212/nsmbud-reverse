@@ -46,8 +46,8 @@ int __fastcall sub_603ADD84(StateActor *a1)
     v5 = (FIELD_U8(PlayerMgr_instance, 66) & 1) == 0;
   if ( !v5 )
   {
-    direction = FIELD_U32(a1, 0x0)._.direction;
-    v17 = FIELD_U32(a1, 0x0)._.position.x - (float)(FIELD_F32(v4, 108) + FIELD_F32(v4, 572));
+    direction = FIELD_U32(a1, 0x50);
+    v17 = FIELD_F32(a1, 0x6C) - (float)(FIELD_F32(v4, 108) + FIELD_F32(v4, 572));
     if ( direction == 1 )
     {
       if ( v17 <= 0.0 )
@@ -75,8 +75,8 @@ LABEL_5:
     v7 = (FIELD_U8(PlayerMgr_instance, 66) & 2) == 0;
   if ( !v7 )
   {
-    v18 = FIELD_U32(a1, 0x0)._.direction;
-    v19 = FIELD_U32(a1, 0x0)._.position.x - (float)(FIELD_F32(v6, 108) + FIELD_F32(v6, 572));
+    v18 = FIELD_U32(a1, 0x50);
+    v19 = FIELD_F32(a1, 0x6C) - (float)(FIELD_F32(v6, 108) + FIELD_F32(v6, 572));
     if ( v18 == 1 )
     {
       if ( v19 <= 0.0 )
@@ -103,8 +103,8 @@ LABEL_9:
     v9 = (FIELD_U8(PlayerMgr_instance, 66) & 4) == 0;
   if ( !v9 )
   {
-    v20 = FIELD_U32(a1, 0x0)._.direction;
-    v21 = FIELD_U32(a1, 0x0)._.position.x - (float)(FIELD_F32(v8, 108) + FIELD_F32(v8, 572));
+    v20 = FIELD_U32(a1, 0x50);
+    v21 = FIELD_F32(a1, 0x6C) - (float)(FIELD_F32(v8, 108) + FIELD_F32(v8, 572));
     if ( v20 == 1 )
     {
       if ( v21 <= 0.0 )
@@ -131,8 +131,8 @@ LABEL_13:
     v11 = (FIELD_U8(PlayerMgr_instance, 66) & 8) == 0;
   if ( !v11 )
   {
-    v22 = FIELD_U32(a1, 0x0)._.direction;
-    v23 = FIELD_U32(a1, 0x0)._.position.x - (float)(FIELD_F32(v10, 108) + FIELD_F32(v10, 572));
+    v22 = FIELD_U32(a1, 0x50);
+    v23 = FIELD_F32(a1, 0x6C) - (float)(FIELD_F32(v10, 108) + FIELD_F32(v10, 572));
     if ( v22 == 1 )
     {
       if ( v23 > 0.0 )

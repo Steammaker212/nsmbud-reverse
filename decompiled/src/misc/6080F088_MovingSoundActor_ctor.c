@@ -14,7 +14,7 @@ MovingSoundActor *__fastcall MovingSoundActor_ctor(MovingSoundActor *a1, int a2,
 
   SoundArchivePlayer = (int (__fastcall ***)(_DWORD, int *))SoundSystem_getSoundArchivePlayer(SoundSystem_instance);
   SoundActor_ctor(&FIELD_U32(a1, 0x0), a2, SoundArchivePlayer);
-  *(_DWORD *)FIELD_U32(a1, 0x0)._.nn_atk_SoundActor_data = off_60C28A60;
+  *(_DWORD *)FIELD_U8(a1, 0x0) = off_60C28A60;
   FIELD_F32(a1, 0x8C) = 1.0;
   FIELD_U32(a1, 0x90) = 0;
   FIELD_F32(a1, 0x94) = 1.0;
@@ -44,7 +44,7 @@ MovingSoundActor *__fastcall MovingSoundActor_ctor(MovingSoundActor *a1, int a2,
   FIELD_U32(a1, 0x9C)[5].handle = 0;
   FIELD_U32(a1, 0x9C)[5].unk = 1.0;
   nn__atk__SoundActor__SetPlayableSoundCount((int)a1, 0, 4);
-  *(_DWORD *)&FIELD_U32(a1, 0x0)._.nn_atk_SoundActor_data[0x78] = 6;
-  FIELD_U32(a1, 0x0).field_80 = a3;
+  *(_DWORD *)&FIELD_U8(a1, 0x0)[0x78] = 6;
+  FIELD_U32(a1, 0x80) = a3;
   return a1;
 }

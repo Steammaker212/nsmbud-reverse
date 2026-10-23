@@ -13,7 +13,7 @@ StateActor *__fastcall sub_606AAF6C(StateActor *a1, ActorBuildInfo *a2)
   StateActor *result; // r0
 
   result = sub_606A8EC4(a1, a2);
-  FIELD_U32(result, 0x0)._._.vtable = (int)off_60C1A458;
+  FIELD_U32(result, 0x0) = (int)off_60C1A458;
   LOWORD(result[1]._._._.childCount) = 0;
   result[1]._._._.field_20.next = 0;
   result[1]._._._.field_20.previous = 0;

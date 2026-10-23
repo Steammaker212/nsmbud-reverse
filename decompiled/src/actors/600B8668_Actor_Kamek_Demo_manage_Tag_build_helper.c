@@ -13,7 +13,7 @@ StateActor *__fastcall Actor_Kamek_Demo_manage_Tag_build_helper(StateActor *a1, 
   StateActor *result; // r0
 
   result = sub_600271A0(a1, a2);
-  FIELD_U32(result, 0x0)._._.vtable = (int)off_60BC9898;
+  FIELD_U32(result, 0x0) = (int)off_60BC9898;
   LOBYTE(result[1]._._._.field_20.next) = 0;
   result[1]._._._.field_20.previous = 0;
   result[1]._._._.settigns2 = 0;

@@ -36,8 +36,8 @@ int __fastcall Kanibo__collisionPlayer(Enemy *this, ActiveCollider *acSelf, Acti
     }
     else
     {
-      y = FIELD_U32(this, 0x0)._._.speed.y;
-      v10.x = FIELD_U32(this, 0x0)._._.speed.x;
+      y = FIELD_F32(this, 0x7C);
+      v10.x = FIELD_F32(this, 0x78);
       v10.y = y;
       Enemy_killWithState(this, owner, &v10, (int)&stru_60C906EC);
     }

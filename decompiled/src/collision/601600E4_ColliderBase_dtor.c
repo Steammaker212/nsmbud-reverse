@@ -12,7 +12,7 @@ _DWORD *__fastcall ColliderBase_dtor(ColliderBase *this)
 {
   ColliderMgr *colliderMgr; // r5
 
-  FIELD_U32(this, 0x0).vtable = (int)ColliderBase_vtable;
+  FIELD_U32(this, 0x0) = (int)ColliderBase_vtable;
   colliderMgr = ColliderMgr_instance;
   if ( ColliderMgr_instance )
   {

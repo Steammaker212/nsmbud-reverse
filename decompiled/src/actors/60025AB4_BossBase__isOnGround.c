@@ -24,6 +24,6 @@ int __fastcall BossBase__isOnGround(BossBase *a1)
   isRumbleActive = (unsigned __int8)FIELD_U8(a1, 0x18A8);
   result = 0;
   if ( !isRumbleActive && !*(&FIELD_U8(a1, 0x18A8) + 1) && FIELD_U32(a1, 0x189C) >= 1 )
-    return FIELD_U32(a1, 0x0)._._.collisionMgr[2224] & 1;
+    return FIELD_U8(a1, 0x288)[2224] & 1;
   return result;
 }

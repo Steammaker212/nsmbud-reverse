@@ -12,8 +12,8 @@ _BYTE *__fastcall StageActor__delete(StateActor *this, int unk)
 {
   _BYTE *_278ptr; // r0
 
-  FIELD_U32(this, 0x0)._._.isDeleted = 1;
-  _278ptr = (_BYTE *)FIELD_U32(this, 0x0)._.field_278;
+  FIELD_U8(this, 0x13) = 1;
+  _278ptr = (_BYTE *)FIELD_U32(this, 0x278);
   if ( _278ptr )
   {
     if ( (unk ^ 1) == 1 )

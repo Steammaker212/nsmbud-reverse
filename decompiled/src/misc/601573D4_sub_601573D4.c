@@ -27,6 +27,6 @@ int __fastcall sub_601573D4(
   ownerInfo._57Ptr = &FIELD_U8(a2, 0x57);
   ownerInfo.playerIdPtr = &FIELD_U8(a2, 0x54);
   result = CircularCollider_initImpl(a1, &ownerInfo, a3);
-  FIELD_U32(a1, 0x0).owner = a2;
+  FIELD_U32(a1, 0x90) = a2;
   return result;
 }

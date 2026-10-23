@@ -29,9 +29,9 @@ int __fastcall SE_OBJ_TEKKYU_CRASH_ref(StageActor *a1)
       v6[1] = unk_60C26388;
       v7 = 1;
       v3 = ((int (__fastcall *)(StageActor *))loc_606E74C4)(a1);
-      y = FIELD_U32(a1, 0x6C).y;
+      y = FIELD_F32(a1, 0x70);
       v5 = Global_BasicSoundActor2;
-      position.x = FIELD_U32(a1, 0x6C).x;
+      position.x = FIELD_F32(a1, 0x6C);
       position.y = y;
       mapPositionToScreen(&out, &position);
       return sub_60813BDC(v5, "SE_OBJ_TEKKYU_CRASH", &out, v3, v6);

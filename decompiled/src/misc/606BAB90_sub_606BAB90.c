@@ -17,7 +17,7 @@ StageActor *__fastcall sub_606BAB90(StageActor *a1, ActorBuildInfo *a2)
 
   v6 = StageActor__ctor(a1, a2);
   v3 = 12;
-  FIELD_U32(v6, 0x0).vtable = (int)off_60C1B3FC;
+  FIELD_U32(v6, 0x0) = (int)off_60C1B3FC;
   do
   {
     v4 = *(_DWORD *)(PlayerMgr_instance + 4 * v3);
@@ -42,6 +42,6 @@ StageActor *__fastcall sub_606BAB90(StageActor *a1, ActorBuildInfo *a2)
     ++v3;
   }
   while ( v3 != 16 );
-  FIELD_U32(v6, 0x0).isDeleted = 1;
+  FIELD_U8(v6, 0x13) = 1;
   return v6;
 }

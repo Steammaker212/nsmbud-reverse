@@ -26,9 +26,9 @@ int __fastcall Enemy__vfD0(Enemy *this)
   EnemyFreezeMgr_Info info; // [sp+0h] [bp-28h] BYREF
 
   info.settings = 0;
-  x = FIELD_U32(this, 0x0)._._.position.x;
-  y = FIELD_U32(this, 0x0)._._.position.y;
-  info.position.z = FIELD_U32(this, 0x0)._._.position.z;
+  x = FIELD_F32(this, 0x6C);
+  y = FIELD_F32(this, 0x70);
+  info.position.z = FIELD_F32(this, 0x74);
   info.position.x = x;
   info.position.y = y;
   info.scale.x = 1.0;

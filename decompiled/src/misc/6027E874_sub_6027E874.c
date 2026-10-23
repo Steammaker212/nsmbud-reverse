@@ -304,11 +304,11 @@ LABEL_14:
           v27 += v20;
         *v27 = (float)(v26 * 1.5) + 0.75;
         v28 = *v152;
-        y = FIELD_U32(v14, 0x0)._.position.y;
-        z = FIELD_U32(v14, 0x0)._.position.z;
+        y = FIELD_F32(v14, 0x70);
+        z = FIELD_F32(v14, 0x74);
         if ( *v21 > v20 )
           v28 += 3 * v20;
-        *v28 = FIELD_U32(v14, 0x0)._.position.x;
+        *v28 = FIELD_F32(v14, 0x6C);
         v28[1] = y;
         v28[2] = z;
         v31 = sead__Random__getU32((void *)(dword_60C9CF0C + 1340));
@@ -336,8 +336,8 @@ LABEL_14:
         *v36 = v37;
         v36[1] = v37;
         v38 = v14;
-        v39 = &FIELD_U32(v14, 0x0)._._.vtable + v20;
-        v40 = &FIELD_U32(v38, 0x0)._._.vtable + 3 * v20;
+        v39 = &FIELD_U32(v14, 0x0) + v20;
+        v40 = &FIELD_U32(v38, 0x0) + 3 * v20;
         v39[2127] = 0;
         v41 = v39 + 2127;
         v39[1627] = 0;
@@ -396,7 +396,7 @@ LABEL_56:
         v59 = *v58;
         v60 = v58[1];
         *v52 = v55 + v53;
-        v61 = &FIELD_U32(v14, 0x0)._._.vtable + v20;
+        v61 = &FIELD_U32(v14, 0x0) + v20;
         v62 = (int)(float)((float)((float)(v59 + (float)((float)((float)(v53 & 0xFFFFFF) * v60) * 0.000000059605))
                                  * 4800.0)
                          * 65536.0)
@@ -509,7 +509,7 @@ LABEL_56:
         v23 = v94 / 255.0;
 LABEL_102:
         v102 = 0;
-        v103 = (float *)(&FIELD_U32(v153, 0x0)._._.vtable + 3 * v20);
+        v103 = (float *)(&FIELD_U32(v153, 0x0) + 3 * v20);
         v104 = (float)(v157 - v157) * (float)(v157 - v157);
         v19 = *v145;
         v105 = v103 + 2629;
@@ -628,9 +628,9 @@ LABEL_137:
         if ( v20 != 150 )
           continue;
         v127 = *(float *)&v14[2]._.collisionMgr[3668];
-        FIELD_U32(v14, 0x0)._.position.x = 0.0;
-        FIELD_U32(v14, 0x0)._.position.y = 0.0;
-        FIELD_U32(v14, 0x0)._.position.z = v127;
+        FIELD_F32(v14, 0x6C) = 0.0;
+        FIELD_F32(v14, 0x70) = 0.0;
+        FIELD_F32(v14, 0x74) = v127;
         LODWORD(v161) = 1065353216;
         *((float *)&v161 + 1) = v127;
         *(_QWORD *)&v14[1]._._.aCollider.activeNode.next = 1065353216;

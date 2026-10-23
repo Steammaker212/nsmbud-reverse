@@ -30,7 +30,7 @@ int __fastcall pakkun_ref(int a1)
   FIELD_U32(a1, 372) = v4;
   if ( FIELD_U8(a1, 404) )
   {
-    SkeletalAnim_play((int)*FIELD_U32(v4, 0x8).animations, FIELD_U32(a1, 376), (int)&dword_60C8A3C4);
+    SkeletalAnim_play((int)*FIELD_U32(v4, 0xC), FIELD_U32(a1, 376), (int)&dword_60C8A3C4);
     AnimationCtrl_setRepeat((ModelAnimation *)(**(_DWORD **)(FIELD_U32(a1, 372) + 12) + 4), 1);
     *(_DWORD *)(**(_DWORD **)(FIELD_U32(a1, 372) + 12) + 24) = 1065353216;
     FIELD_U8(a1, 404) = 0;

@@ -41,12 +41,12 @@ StateMethodExecuter *__fastcall LineFollower_init(
   FIELD_U32(this, 0x24)[4] = *(Vec2 *)&qword_60C7B79C;
   FIELD_U32(this, 0x24)[5] = *(Vec2 *)&qword_60C7B7A4;
   FIELD_U32(this, 0x24)[6] = *(Vec2 *)&qword_60C7B7AC;
-  FIELD_U32(this, 0x5C).x = 0.0;
-  FIELD_U32(this, 0x5C).y = 0.0;
+  FIELD_F32(this, 0x5C) = 0.0;
+  FIELD_F32(this, 0x60) = 0.0;
   FIELD_U32(this, 0x64) = *position;
   FIELD_U32(this, 0x6C) = *position;
-  FIELD_U32(this, 0x74).x = (float)(int)(float)(FIELD_F32(position, 0x0) * 0.0625) * 16.0;
-  FIELD_U32(this, 0x74).y = (float)(int)(float)(FIELD_F32(position, 0x4) * 0.0625) * 16.0;
+  FIELD_F32(this, 0x74) = (float)(int)(float)(FIELD_F32(position, 0x0) * 0.0625) * 16.0;
+  FIELD_F32(this, 0x78) = (float)(int)(float)(FIELD_F32(position, 0x4) * 0.0625) * 16.0;
   FIELD_F32(this, 0x88) = v8;
   FIELD_U32(this, 0x84) = 0;
   FIELD_U8(this, 0x8D) = layer_1;
@@ -57,5 +57,5 @@ StateMethodExecuter *__fastcall LineFollower_init(
     FIELD_F32(this, 0x88) = -v8;
     FIELD_U8(this, 0x8E) = 1;
   }
-  return StateMgr__changeState(&FIELD_U32(this, 0x0).manager, &LineFollower_StateID_Idle._);
+  return StateMgr__changeState(&FIELD_U32(this, 0x14), &LineFollower_StateID_Idle._);
 }

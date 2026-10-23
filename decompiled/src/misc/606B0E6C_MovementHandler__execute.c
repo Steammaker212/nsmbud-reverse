@@ -11,5 +11,5 @@
 StateMethodExecuter *__fastcall MovementHandler__execute(MovementHandler *a1)
 {
   FIELD_U32(a1, 0x34) = FIELD_U32(a1, 0x30);
-  return StateMgr__execute(&FIELD_U32(a1, 0xD4).manager);
+  return StateMgr__execute(&FIELD_U32(a1, 0xE8));
 }

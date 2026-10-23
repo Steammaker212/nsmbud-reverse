@@ -18,7 +18,7 @@ int __fastcall sub_60593B3C(CollisionActor *a1)
     CollisionMgr_process(FIELD_U8(a1, 0x288), v2);
     if ( sub_6000346C((int)a1) == 1 )
     {
-      FIELD_U32(a1, 0x0).speed.x = -FIELD_U32(a1, 0x0).speed.x;
+      FIELD_F32(a1, 0x78) = -FIELD_F32(a1, 0x78);
       a1[1].collisionMgr[1501] = 1;
     }
   }

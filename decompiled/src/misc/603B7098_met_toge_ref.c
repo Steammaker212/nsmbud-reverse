@@ -36,7 +36,7 @@ int __fastcall met_toge_ref(int a1)
   v5 = ModelWrapper_ctor(v4, Model2, 1, 0, 0, 0, 0);
   ModelWrapper_setup(v5, (int)ResArchiveById, 0, 0);
   FIELD_U32(a1, 6300) = v4;
-  v6 = (int)*FIELD_U32(v4, 0x8).animations;
+  v6 = (int)*FIELD_U32(v4, 0xC);
   v7 = Profile__getResArchiveById(*(Profile **)(a1 + 12), 0);
   a2.vtable = &sead__SafeStringBase__vtable;
   a2.cstr = "walk";
@@ -55,7 +55,7 @@ int __fastcall met_toge_ref(int a1)
   v13 = ModelWrapper_ctor(v12, v11, 1, 0, 0, 0, 0);
   ModelWrapper_setup(v13, (int)ResArchiveById, 0, 0);
   FIELD_U32(a1, 6308) = v12;
-  v14 = (int)*FIELD_U32(v12, 0x8).animations;
+  v14 = (int)*FIELD_U32(v12, 0xC);
   v15 = Profile__getResArchiveById(*(Profile **)(a1 + 12), 0);
   a2.vtable = &sead__SafeStringBase__vtable;
   a2.cstr = "met_toge_eye_light";

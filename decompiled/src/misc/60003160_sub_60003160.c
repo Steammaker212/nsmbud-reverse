@@ -48,21 +48,21 @@ int __fastcall sub_60003160(CollisionActor *a1)
           &v16,
           0,
           FIELD_U32(a1, 0x1778),
-          (unsigned __int8)FIELD_U32(a1, 0x0).field_56);
+          (unsigned __int8)FIELD_U8(a1, 0x56));
         if ( !v16 )
           goto LABEL_17;
       }
-      y = FIELD_U32(a1, 0x0).speed.y;
+      y = FIELD_F32(a1, 0x7C);
       v13 = FIELD_F32(a1, 0x179C);
       if ( y >= v13 )
       {
         v14 = FIELD_F32(a1, 0x1798);
         if ( y > v14 )
-          FIELD_U32(a1, 0x0).speed.y = v14;
+          FIELD_F32(a1, 0x7C) = v14;
       }
       else
       {
-        FIELD_U32(a1, 0x0).speed.y = v13;
+        FIELD_F32(a1, 0x7C) = v13;
       }
       v5 = 1;
       goto LABEL_5;
@@ -73,15 +73,15 @@ LABEL_11:
     {
       if ( v7 != 5 )
         goto LABEL_17;
-      v8 = (*(int (__fastcall **)(CollisionActor *, float))(FIELD_U32(a1, 0x0)._.vtable + 184))(a1, v15);
+      v8 = (*(int (__fastcall **)(CollisionActor *, float))(FIELD_U32(a1, 0x0) + 184))(a1, v15);
     }
     else
     {
-      v8 = (*(int (__fastcall **)(CollisionActor *, float))(FIELD_U32(a1, 0x0)._.vtable + 180))(a1, v15);
+      v8 = (*(int (__fastcall **)(CollisionActor *, float))(FIELD_U32(a1, 0x0) + 180))(a1, v15);
     }
     if ( v8 == 1 )
     {
-      (*(void (__fastcall **)(CollisionActor *, _DWORD))(FIELD_U32(a1, 0x0)._.vtable + 164))(a1, 0);
+      (*(void (__fastcall **)(CollisionActor *, _DWORD))(FIELD_U32(a1, 0x0) + 164))(a1, 0);
       *v6 = 0;
       FIELD_U8(a1, 0x17A6) = 0;
     }

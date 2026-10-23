@@ -20,7 +20,7 @@ int __fastcall sub_6013483C(StageActor *a1)
     v2 = 1;
     if ( LODWORD(a1[9].aCollider.info.distToEdge.x) )
     {
-      (*(void (__fastcall **)(StageActor *))(FIELD_U32(a1, 0x0).vtable + 72))(a1);
+      (*(void (__fastcall **)(StageActor *))(FIELD_U32(a1, 0x0) + 72))(a1);
       switch ( LODWORD(a1[9].aCollider.info.distToEdge.x) )
       {
         case 1:

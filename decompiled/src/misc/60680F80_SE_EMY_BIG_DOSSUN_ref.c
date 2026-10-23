@@ -37,13 +37,13 @@ char *__fastcall SE_EMY_BIG_DOSSUN_ref(CollisionActor *a1)
   sub_60718220(TileMgr_instance, v3, 2, 0);
   v4 = CollisionActor__handleSpeed(a1);
   v5 = CollisionMgr_process(FIELD_U8(a1, 0x288), v4);
-  (*(void (__fastcall **)(CollisionActor *, float))(FIELD_U32(a1, 0x0)._.vtable + 232))(a1, v5);
+  (*(void (__fastcall **)(CollisionActor *, float))(FIELD_U32(a1, 0x0) + 232))(a1, v5);
   v6 = *(_DWORD *)(a1[1]._._.field_30 + 12);
   v7 = *(_DWORD *)(a1[1]._._.field_30 + 68);
   if ( *(_DWORD *)(a1[1]._._.field_30 + 8) > v7 )
     v6 += 4 * v7;
   if ( (*(_BYTE *)(*(_DWORD *)v6 + 28) & 0x20) != 0 )
-    (*(void (__fastcall **)(CollisionActor *))(FIELD_U32(a1, 0x0)._.vtable + 212))(a1);
+    (*(void (__fastcall **)(CollisionActor *))(FIELD_U32(a1, 0x0) + 212))(a1);
   *(_DWORD *)&a1[1].collisionMgr[844] = 2;
   if ( *(_DWORD *)v2 )
   {
@@ -55,23 +55,23 @@ char *__fastcall SE_EMY_BIG_DOSSUN_ref(CollisionActor *a1)
   {
 LABEL_11:
     result = &a1[1].collisionMgr[764];
-    if ( FIELD_U32(a1, 0x0).position.y <= (float)(*(float *)&a1[1].collisionMgr[764]
+    if ( FIELD_F32(a1, 0x70) <= (float)(*(float *)&a1[1].collisionMgr[764]
                                    + (float)((float)(FIELD_F32(dword_60CC6484, 124) - FIELD_F32(dword_60CC6484, 108))
                                            + -32.0)) )
-      return (char *)(*(int (__fastcall **)(CollisionActor *, int *))(FIELD_U32(a1, 0x0)._.vtable + 192))(a1, &dword_60CB81D8);
+      return (char *)(*(int (__fastcall **)(CollisionActor *, int *))(FIELD_U32(a1, 0x0) + 192))(a1, &dword_60CB81D8);
     return result;
   }
   v10 = 0;
   if ( (v8 & 0x20) == 0 )
   {
-    FIELD_U32(a1, 0x0).speed.y = 0.0;
+    FIELD_F32(a1, 0x7C) = 0.0;
     AreaRumbleMgr_rumble(AreaRumbleMgr_instance, 0, 3, 0, 0);
-    (*(void (__fastcall **)(CollisionActor *, int *))(FIELD_U32(a1, 0x0)._.vtable + 192))(a1, &dword_60CB81D8);
+    (*(void (__fastcall **)(CollisionActor *, int *))(FIELD_U32(a1, 0x0) + 192))(a1, &dword_60CB81D8);
     v10 = *(_DWORD *)v2;
   }
   *(_DWORD *)&a1[1].collisionMgr[844] = 16;
-  y = FIELD_U32(a1, 0x0).position.y;
-  position.z = FIELD_U32(a1, 0x0).position.x;
+  y = FIELD_F32(a1, 0x70);
+  position.z = FIELD_F32(a1, 0x6C);
   v12 = flt_60AF2218[v10];
   v19 = 1166843904;
   v13 = dword_60AF2210[v10];
@@ -82,9 +82,9 @@ LABEL_11:
   LODWORD(position.z) = 15;
   v18 = unk_60C26394;
   LOBYTE(v19) = 0;
-  v14 = FIELD_U32(a1, 0x0).position.y;
+  v14 = FIELD_F32(a1, 0x70);
   v15 = Global_BasicSoundActor1;
-  position.x = FIELD_U32(a1, 0x0).position.x;
+  position.x = FIELD_F32(a1, 0x6C);
   position.y = v14;
   mapPositionToScreen(&out, &position);
   return (char *)BasicSoundActor1_playSound(v15, "SE_EMY_BIG_DOSSUN", (int)&out, (int)&position.z);

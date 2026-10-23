@@ -15,6 +15,6 @@ StageActor *__fastcall Actor_Boxing_BowserJr_exclusive_floor_Manager_build(Actor
 
   v2 = (StageActor *)operator_new(0x284u);
   result = StageActor__ctor(v2, a1);
-  FIELD_U32(result, 0x0).vtable = (int)off_60C12AB4;
+  FIELD_U32(result, 0x0) = (int)off_60C12AB4;
   return result;
 }

@@ -14,7 +14,7 @@ MultiStateActor *__fastcall Actor_rotate_big_build(ActorBuildInfo *a1)
 
   v2 = (MultiStateActor *)operator_new(0x2570u);
   Actor_rotate_big_build_helper(v2, a1);
-  FIELD_U32(v2, 0x0)._._.vtable = (int)off_60BDC730;
+  FIELD_U32(v2, 0x0) = (int)off_60BDC730;
   memset(&v2[1]._.collisionMgr[2776], 0, 52);
   return v2;
 }

@@ -20,8 +20,8 @@ int __fastcall BoomBoomBase__vf354(StateActor *a1)
   signed int v7; // [sp+18h] [bp-18h]
   char v8; // [sp+1Ch] [bp-14h]
 
-  p_position = (int)&FIELD_U32(a1, 0x0)._.position;
-  v3 = StageActor__directionToPlayerX(a1, &FIELD_U32(a1, 0x0)._.position);
+  p_position = (int)&FIELD_U32(a1, 0x6C);
+  v3 = StageActor__directionToPlayerX(a1, &FIELD_U32(a1, 0x6C));
   sub_600228F4(dword_60C7F52C, p_position, 6);
   v5[0] = 0;
   v5[1] = 1077936128;

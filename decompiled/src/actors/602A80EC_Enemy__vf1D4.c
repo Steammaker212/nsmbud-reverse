@@ -13,9 +13,9 @@ int __fastcall Enemy__vf1D4(Enemy *a1)
 {
   Vec3 effectPos; // [sp+4h] [bp-14h] BYREF
 
-  effectPos.x = FIELD_U32(a1, 0x0)._._.position.x + FIELD_U32(a1, 0x0)._._.effectOffset.x;
-  effectPos.y = FIELD_U32(a1, 0x0)._._.position.y + FIELD_U32(a1, 0x0)._._.effectOffset.y;
-  effectPos.z = FIELD_U32(a1, 0x0)._._.position.z + FIELD_U32(a1, 0x0)._._.effectOffset.z;
+  effectPos.x = FIELD_F32(a1, 0x6C) + FIELD_F32(a1, 0x23C);
+  effectPos.y = FIELD_F32(a1, 0x70) + FIELD_F32(a1, 0x240);
+  effectPos.z = FIELD_F32(a1, 0x74) + FIELD_F32(a1, 0x244);
   EffectData_create(431, &effectPos, 0, 0);
-  return (*(int (__fastcall **)(Enemy *))(FIELD_U32(a1, 0x0)._._._.vtable + 0x48))(a1);
+  return (*(int (__fastcall **)(Enemy *))(FIELD_U32(a1, 0x0) + 0x48))(a1);
 }

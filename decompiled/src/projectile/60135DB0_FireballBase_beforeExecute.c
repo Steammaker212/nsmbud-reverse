@@ -17,17 +17,17 @@ signed int __fastcall FireballBase_beforeExecute(FireballBase *a1)
   StateBase *CurrentState; // r0
   int v8; // r6
 
-  v2 = StageActor__beforeExecute(&FIELD_U32(a1, 0x0)._._);
+  v2 = StageActor__beforeExecute(&FIELD_U32(a1, 0x0));
   v3 = v2 == 1;
   v4 = 0;
   if ( v2 == 1 )
-    v3 = FIELD_U32(a1, 0x0)._._._.isDeleted == 0;
+    v3 = FIELD_U8(a1, 0x13) == 0;
   if ( !v3 )
     return v4;
   v4 = 1;
   if ( !FIELD_U8(a1, 0x1860) )
     return v4;
-  p_manager = &FIELD_U32(a1, 0x0).states.manager;
+  p_manager = &FIELD_U32(a1, 0x17C4);
   CurrentState = StateMgr__getCurrentState(p_manager);
   v8 = (*((int (__fastcall **)(StateBase *))FIELD_U32(CurrentState, 0x0) + 2))(CurrentState);
   if ( v8 == (*((int (**)(void))stru_60C877FC._._.vtable + 2))() )

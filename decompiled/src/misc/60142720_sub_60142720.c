@@ -31,7 +31,7 @@ signed int __fastcall sub_60142720(StageActor *a1)
     v6 = (*((int (__fastcall **)(StateBase *))FIELD_U32(v5, 0x0) + 2))(v5);
     if ( v6 != (*(int (**)(void))(dword_60C87DEC + 8))() )
     {
-      (*(void (__fastcall **)(StageActor *))(FIELD_U32(a1, 0x0).vtable + 256))(a1);
+      (*(void (__fastcall **)(StageActor *))(FIELD_U32(a1, 0x0) + 256))(a1);
       LightSource_update1((LightSource *)&a1[9].field_230, 1, &FIELD_U32(a1, 0x6C), 0, 0, 0, 0, 0, 0);
       LightSource_unkUpdate3((LightSource *)&a1[9].field_230);
     }
@@ -39,11 +39,11 @@ signed int __fastcall sub_60142720(StageActor *a1)
     if ( v7 < 1 )
       v8 = 1.0;
     else
-      v8 = (float)v7 / (float)(*(int (__fastcall **)(StageActor *))(FIELD_U32(a1, 0x0).vtable + 260))(a1);
+      v8 = (float)v7 / (float)(*(int (__fastcall **)(StageActor *))(FIELD_U32(a1, 0x0) + 260))(a1);
     *(float *)&a1[9].aCollider.field_D8 = v8 * *(float *)&a1[9].aCollider.field_FC;
-    a1[9].aCollider.field_E0 = LODWORD(FIELD_U32(a1, 0x6C).x);
-    a1[9].aCollider.field_E4 = LODWORD(FIELD_U32(a1, 0x6C).y);
-    a1[9].aCollider.field_E8 = LODWORD(FIELD_U32(a1, 0x6C).z);
+    a1[9].aCollider.field_E0 = LODWORD(FIELD_F32(a1, 0x6C));
+    a1[9].aCollider.field_E4 = LODWORD(FIELD_F32(a1, 0x70));
+    a1[9].aCollider.field_E8 = LODWORD(FIELD_F32(a1, 0x74));
     LightMask__update((LightMask *)&a1[9].aCollider.field_D4);
   }
   v9 = StateMgr__getCurrentState(v2);

@@ -28,7 +28,7 @@ int __fastcall sub_603AB0A4(_DWORD *a1)
     a1[1526] = v5;
     if ( v5 )
     {
-      a1[1527] = *FIELD_U32(v5, 0x10).animations;
+      a1[1527] = *FIELD_U32(v5, 0x14);
       sub_603AB2E0(a1, 0, 0.0);
       return 1;
     }

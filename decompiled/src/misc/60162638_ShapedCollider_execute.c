@@ -11,8 +11,8 @@
 int __fastcall ShapedCollider_execute(ColliderBase *a1)
 {
   sub_601603E8(a1);
-  (*(void (__fastcall **)(ColliderBase *))(FIELD_U32(a1, 0x0).vtable + 64))(a1);
-  (*(void (__fastcall **)(ColliderBase *))(FIELD_U32(a1, 0x0).vtable + 52))(a1);
+  (*(void (__fastcall **)(ColliderBase *))(FIELD_U32(a1, 0x0) + 64))(a1);
+  (*(void (__fastcall **)(ColliderBase *))(FIELD_U32(a1, 0x0) + 52))(a1);
   ((void (__fastcall *)(ColliderBase *, int *, int))loc_60164DF0)(a1, &FIELD_U32(a1, 0xFC), 3);
   ((void (__fastcall *)(ColliderBase *, int *, int))loc_60164DF0)(a1, &FIELD_U32(a1, 0x108), 2);
   ((void (__fastcall *)(ColliderBase *, int *, _DWORD))loc_60164DF0)(a1, &FIELD_U32(a1, 0x114), 0);

@@ -11,7 +11,7 @@
 BossBase *__fastcall KoopalingBase__ctor(BossBase *a1, ActorBuildInfo *a2)
 {
   BossBase__ctor(a1, a2);
-  FIELD_U32(a1, 0x0)._._._._.vtable = (int)off_60BC91CC;
+  FIELD_U32(a1, 0x0) = (int)off_60BC91CC;
   a1[1]._._._._._.vtable = 0;
   memset(&a1[1]._._._._._.profile, 0, 72);
   *(_DWORD *)&a1[1]._._._._.playerId = 1;
@@ -43,10 +43,10 @@ BossBase *__fastcall KoopalingBase__ctor(BossBase *a1, ActorBuildInfo *a2)
   *(_DWORD *)&a1[1]._._._.collisionMgr[272] = off_60BC1450;
   *(_DWORD *)&a1[1]._._._.collisionMgr[376] = 0;
   a1[1]._._._._._.field_2C = 0;
-  *(Vec3 *)&a1[1]._._._._._.field_40 = FIELD_U32(a1, 0x0)._._._.position;
+  *(Vec3 *)&a1[1]._._._._._.field_40 = FIELD_U32(a1, 0x6C);
   a1[1]._._._._.aCollider.field_D0 = 0;
   a1[1]._._._._.aCollider.field_D4 = 0;
   *(_DWORD *)&a1[1]._._._.collisionMgr[16] = 5;
-  FIELD_U32(a1, 0x19F4).field_1C = 2;
+  FIELD_U32(a1, 0x1A10) = 2;
   return a1;
 }

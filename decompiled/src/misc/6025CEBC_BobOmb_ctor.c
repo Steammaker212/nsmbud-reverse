@@ -14,14 +14,14 @@ CarryableEnemy *__fastcall BobOmb_ctor(CarryableEnemy *a1, ActorBuildInfo *a2)
   float v4; // r1
 
   CarryableEnemy__ctor(a1, a2);
-  FIELD_U32(a1, 0x0)._._._._.vtable = (int)BobOmb_vtable;
+  FIELD_U32(a1, 0x0) = (int)BobOmb_vtable;
   *(int *)((char *)&a1[1]._._._._._.vtable + 2) = 0;
   *(int *)((char *)&a1[1]._._._._._.heap + 2) = LoadResource(ResourceMgrRelated_instance, &dword_60C8E35C);
   *(int *)((char *)&a1[1]._._._._._.id + 2) = 4;
   HIWORD(a1[1]._._._._._.profile) = 0;
-  sub_602A8564(&a1[1]._._._._._.field_12, FIELD_U32(a1, 0x0)._._._._.id);
-  sub_602A40A0((char *)&a1[1]._._._._._.field_34 + 2, FIELD_U32(a1, 0x0)._._._._.id);
-  settings1 = FIELD_U32(a1, 0x0)._._._._.settings1;
+  sub_602A8564(&a1[1]._._._._._.field_12, FIELD_U32(a1, 0x8));
+  sub_602A40A0((char *)&a1[1]._._._._._.field_34 + 2, FIELD_U32(a1, 0x8));
+  settings1 = FIELD_U32(a1, 0x14);
   v4 = 0.0;
   if ( settings1 < 0x70000000 )
     LODWORD(v4) = settings1 >> 28;
@@ -56,6 +56,6 @@ CarryableEnemy *__fastcall BobOmb_ctor(CarryableEnemy *a1, ActorBuildInfo *a2)
   *(int *)((char *)&a1[1]._._._._.aCollider.field_D4 + 2) = 0;
   ActiveCollider_ctor((ActiveCollider *)((char *)&a1[1]._._._._.aCollider.field_D8 + 2));
   *(_WORD *)&a1[1]._._._.collisionMgr[62] = 0;
-  *(_DWORD *)&a1[1]._._._.collisionMgr[66] = ((unsigned int)FIELD_U32(a1, 0x0)._._._._.settings1 >> 20) & 0xF;
+  *(_DWORD *)&a1[1]._._._.collisionMgr[66] = ((unsigned int)FIELD_U32(a1, 0x14) >> 20) & 0xF;
   return a1;
 }

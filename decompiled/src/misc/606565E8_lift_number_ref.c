@@ -27,7 +27,7 @@ int __fastcall lift_number_ref(int a1, void *a2, sead__SafeString *a3, char a4)
   FIELD_U32(a1, 4) = v7;
   model = FIELD_U32(v7, 0x0);
   FIELD_U32(a1, 8) = FIELD_U32(v7, 0x0);
-  v10 = (int)*FIELD_U32(v7, 0x10).animations;
+  v10 = (int)*FIELD_U32(v7, 0x14);
   v12[0] = &sead__SafeStringBase__vtable;
   v12[1] = "lift_number";
   TexAnim_play(v10, (int)a2, v12);

@@ -31,7 +31,7 @@ int __fastcall SE_OBJ_ITEM_APPEAR_ref_576A00(ColliderBase *a1)
   }
   else
   {
-    v10 = (*(float (__fastcall **)(ColliderBase *))(FIELD_U32(a1, 0x0).vtable + 368))(a1);
+    v10 = (*(float (__fastcall **)(ColliderBase *))(FIELD_U32(a1, 0x0) + 368))(a1);
     v12 = v4;
     v2 = (char *)&a1[20].nodes[2].next + 2;
     v5 = BYTE2(a1[20].nodes[2].next);
@@ -51,7 +51,7 @@ int __fastcall SE_OBJ_ITEM_APPEAR_ref_576A00(ColliderBase *a1)
     BasicSoundActor2_play(v8, "SE_OBJ_ITEM_APPEAR", &out.x, 0);
   }
   *v2 = 0;
-  (*(void (__fastcall **)(ColliderBase *, int *))(FIELD_U32(a1, 0x0).vtable + 192))(a1, &dword_60CAE31C);
+  (*(void (__fastcall **)(ColliderBase *, int *))(FIELD_U32(a1, 0x0) + 192))(a1, &dword_60CAE31C);
   a1[21].field_E4 = 2;
   a1[21].owner248Ptr = (Vec3 *)50;
   a1[18].field_138 = (int)sub_605B3700;

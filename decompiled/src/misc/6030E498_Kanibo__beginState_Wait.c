@@ -10,8 +10,8 @@
 
 Enemy *__fastcall Kanibo__beginState_Wait(Enemy *result)
 {
-  FIELD_U32(result, 0x0)._._.speed.x = 0.0;
-  FIELD_U32(result, 0x0)._._.speed.y = 0.0;
-  FIELD_U32(result, 0x0)._._.speed.z = 0.0;
+  FIELD_F32(result, 0x78) = 0.0;
+  FIELD_F32(result, 0x7C) = 0.0;
+  FIELD_F32(result, 0x80) = 0.0;
   return result;
 }

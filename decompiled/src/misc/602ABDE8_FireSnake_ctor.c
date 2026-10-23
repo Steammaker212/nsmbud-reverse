@@ -15,7 +15,7 @@ Enemy *__fastcall FireSnake_ctor(Enemy *a1, ActorBuildInfo *a2)
   char *v5; // r6
 
   Enemy__ctor(a1, a2);
-  FIELD_U32(a1, 0x0)._._._.vtable = (int)off_60BE3208;
+  FIELD_U32(a1, 0x0) = (int)off_60BE3208;
   a1[1]._._._._.vtable = 0;
   LOBYTE(a1[1]._._._._.heap) = 1;
   memset(&a1[1]._._._._.id, 0, 0x1EC);
@@ -38,9 +38,9 @@ Enemy *__fastcall FireSnake_ctor(Enemy *a1, ActorBuildInfo *a2)
   *(_DWORD *)&a1[1]._._.collisionMgr[184] = 0;
   *(_DWORD *)&a1[1]._._.collisionMgr[188] = -1;
   EffectData_ctor((EffectData *)&a1[1]._._.collisionMgr[132]);
-  sub_602A8564(&a1[1]._._.collisionMgr[196], FIELD_U32(a1, 0x0)._._._.id);
+  sub_602A8564(&a1[1]._._.collisionMgr[196], FIELD_U32(a1, 0x8));
   *(_DWORD *)&a1[1]._._.collisionMgr[196] = off_60BE34AC;
-  sub_602A40A0(&a1[1]._._.collisionMgr[232], FIELD_U32(a1, 0x0)._._._.id);
+  sub_602A40A0(&a1[1]._._.collisionMgr[232], FIELD_U32(a1, 0x8));
   *(_DWORD *)&a1[1]._._.collisionMgr[232] = off_60BE34E0;
   *(_DWORD *)&a1[1]._._.collisionMgr[280] = 0;
   *(_DWORD *)&a1[1]._._.collisionMgr[284] = 0;

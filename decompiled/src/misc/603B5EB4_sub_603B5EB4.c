@@ -10,7 +10,7 @@
 
 signed int __fastcall sub_603B5EB4(Enemy *a1, ActiveCollider *a2, ActiveCollider *a3)
 {
-  if ( FIELD_U32(a3, 0x74).category == 7 && SE_EMY_DOWN_ref_3B565C((int)a1, (int)a2, (int)a3) )
+  if ( FIELD_U32(a3, 0x8C) == 7 && SE_EMY_DOWN_ref_3B565C((int)a1, (int)a2, (int)a3) )
     return 1;
   else
     return Enemy__vfEC(a1, a2, a3);

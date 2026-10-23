@@ -33,8 +33,8 @@ int __fastcall wing_kuri_ref_2(int a1)
   j_ModelWrapper_setupModel((int)v5, (int)v2, 0, 0);
   FIELD_U32(a1, 6824) = v4;
   animations = (unsigned int)v4[1].texAnims.animations;
-  v7 = (int *)FIELD_U32(v4, 0x8).animations;
-  if ( FIELD_U32(v4, 0x8).count > animations )
+  v7 = (int *)FIELD_U32(v4, 0xC);
+  if ( FIELD_U32(v4, 0x8) > animations )
     v7 += animations;
   v8 = *v7;
   v12 = &sead__SafeStringBase__vtable;

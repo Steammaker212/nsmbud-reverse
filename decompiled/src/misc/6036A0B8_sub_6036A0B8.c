@@ -34,7 +34,7 @@ signed int __fastcall sub_6036A0B8(int a1, int a2, ActiveCollider *a3)
     owner = FIELD_U32(a3, 0x40);
     if ( !owner
       || (v13 = FIELD_F32(a1, 120), (float)(v13 * FIELD_F32(a2, 180)) <= 0.0)
-      || (float)(v13 * FIELD_U32(owner, 0x78).x) <= 0.0 )
+      || (float)(v13 * FIELD_F32(owner, 0x78)) <= 0.0 )
     {
       SE_EMY_PENGUIN_DAMAGE_ref_2(a1, (ActiveCollider *)a2, a3);
       return 0;

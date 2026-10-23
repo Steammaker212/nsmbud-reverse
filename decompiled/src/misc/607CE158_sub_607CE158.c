@@ -14,10 +14,10 @@ signed int __fastcall sub_607CE158(Enemy *a1, int a2, int a3)
   char playerId; // r8
 
   v6 = 0;
-  if ( !(*(int (__fastcall **)(Enemy *))(FIELD_U32(a1, 0x0)._._._.vtable + 1156))(a1) )
+  if ( !(*(int (__fastcall **)(Enemy *))(FIELD_U32(a1, 0x0) + 1156))(a1) )
   {
-    playerId = FIELD_U32(a1, 0x0)._._.playerId;
-    if ( (*(int (__fastcall **)(Enemy *, int, int))(FIELD_U32(a1, 0x0)._._._.vtable + 1180))(a1, a2, a3) == 1 )
+    playerId = FIELD_U8(a1, 0x54);
+    if ( (*(int (__fastcall **)(Enemy *, int, int))(FIELD_U32(a1, 0x0) + 1180))(a1, a2, a3) == 1 )
     {
       AreaRumbleMgr_rumbleForPlayer(AreaRumbleMgr_instance, playerId, 4, 0, 0);
       return 1;

@@ -47,14 +47,14 @@ int __fastcall sub_600E180C(CollisionActor *a1)
       next = (sead_ListNode *)((char *)next + 4 * (_DWORD)v11);
     FIELD_U32(next, 0x0)[3].previous = v12;
   }
-  FIELD_U32(a1, 0x0).speed.x = FIELD_U32(a1, 0x0).position.x - FIELD_U32(a1, 0x0).field_248.x;
+  FIELD_F32(a1, 0x78) = FIELD_F32(a1, 0x6C) - FIELD_F32(a1, 0x248);
   CollisionActor__handleGravity(a1);
-  FIELD_U32(a1, 0x0).position.y = FIELD_U32(a1, 0x0).speed.y + FIELD_U32(a1, 0x0).position.y;
+  FIELD_F32(a1, 0x70) = FIELD_F32(a1, 0x7C) + FIELD_F32(a1, 0x70);
   CollisionMgr_process(FIELD_U8(a1, 0x288));
   result = (unsigned __int8)FIELD_U8(a1, 0x288)[2224];
   if ( (result & 1) != 0 )
   {
-    FIELD_U32(a1, 0x0).speed.y = 0.0;
+    FIELD_F32(a1, 0x7C) = 0.0;
     return 0;
   }
   return result;

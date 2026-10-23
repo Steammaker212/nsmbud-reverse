@@ -13,17 +13,17 @@ Enemy *__fastcall KaniboTama__executeState_Unk2(Enemy *a1)
   Enemy *result; // r0
   int v3; // [sp+4h] [bp-Ch] BYREF
 
-  CollisionActor__handleGravity(&FIELD_U32(a1, 0x0)._);
-  CollisionActor__handleSpeed(&FIELD_U32(a1, 0x0)._);
-  CollisionActor__sub_600034C8(&FIELD_U32(a1, 0x0)._);
-  if ( (FIELD_U32(a1, 0x0)._.collisionMgr[2224] & 1) != 0 )
+  CollisionActor__handleGravity(&FIELD_U32(a1, 0x0));
+  CollisionActor__handleSpeed(&FIELD_U32(a1, 0x0));
+  CollisionActor__sub_600034C8(&FIELD_U32(a1, 0x0));
+  if ( (FIELD_U8(a1, 0x288)[2224] & 1) != 0 )
     return (Enemy *)KaniboTama__sub_60310F74((int)a1, 0);
-  FIELD_U32(a1, 0x0)._.field_17A6 = 0;
+  FIELD_U8(a1, 0x17A6) = 0;
   ((void (__fastcall *)(int *, _DWORD, Vec3 *, _DWORD))checkLiquidCollisions)(
     &v3,
     0,
-    &FIELD_U32(a1, 0x0)._._.position,
-    (unsigned __int8)FIELD_U32(a1, 0x0)._._.field_56);
+    &FIELD_U32(a1, 0x6C),
+    (unsigned __int8)FIELD_U8(a1, 0x56));
   result = (Enemy *)v3;
   if ( v3 )
     return sub_600038DC(a1);

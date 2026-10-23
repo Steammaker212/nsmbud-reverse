@@ -43,14 +43,14 @@ unsigned int __fastcall SE_OBJ_FIREBALL_DISAPP_ref_3111B8(unsigned int result, A
   }
   if ( !v6 )
   {
-    CurrentState = StateMgr__getCurrentState(&FIELD_U32(v5, 0x0).states.manager);
+    CurrentState = StateMgr__getCurrentState(&FIELD_U32(v5, 0x17C4));
     v8 = (*((int (__fastcall **)(StateBase *))FIELD_U32(CurrentState, 0x0) + 2))(CurrentState);
     if ( v8 != (*((int (**)(void))KaniboTama__StateID_Unk2._.vtable + 2))() )
     {
       if ( Actor__getProfileId(&FIELD_U32(owner, 0x0)) != 520 )
       {
-        category = FIELD_U32(a2, 0x74).category;
-        if ( (FIELD_U32(v3, 0x74).mask & (1 << category)) != 0 )
+        category = FIELD_U32(a2, 0x8C);
+        if ( (FIELD_U32(v3, 0x94) & (1 << category)) != 0 )
         {
           result = category - 1;
           switch ( result )
@@ -58,8 +58,8 @@ unsigned int __fastcall SE_OBJ_FIREBALL_DISAPP_ref_3111B8(unsigned int result, A
             case 0u:
               v10 = Global_BasicSoundActor2;
               v11 = FIELD_U32(a2, 0x40);
-              x = FIELD_U32(v11, 0x6C).x;
-              y = FIELD_U32(v11, 0x6C).y;
+              x = FIELD_F32(v11, 0x6C);
+              y = FIELD_F32(v11, 0x70);
               position.x = x;
               position.y = y;
               mapPositionToScreen(&v23, &position);
@@ -74,8 +74,8 @@ unsigned int __fastcall SE_OBJ_FIREBALL_DISAPP_ref_3111B8(unsigned int result, A
             case 0x10u:
               goto LABEL_25;
             case 6u:
-              (*(void (__fastcall **)(Enemy *))(FIELD_U32(v5, 0x0)._._._.vtable + 368))(v5);
-              (*(void (__fastcall **)(Enemy *, Vec3 *))(FIELD_U32(v5, 0x0)._._._.vtable + 416))(v5, &FIELD_U32(owner, 0x6C));
+              (*(void (__fastcall **)(Enemy *))(FIELD_U32(v5, 0x0) + 368))(v5);
+              (*(void (__fastcall **)(Enemy *, Vec3 *))(FIELD_U32(v5, 0x0) + 416))(v5, &FIELD_U32(owner, 0x6C));
               goto LABEL_25;
             case 0xEu:
               return result;
@@ -85,7 +85,7 @@ unsigned int __fastcall SE_OBJ_FIREBALL_DISAPP_ref_3111B8(unsigned int result, A
           return result;
         }
 LABEL_9:
-        result = FIELD_U32(a2, 0x74).field_14;
+        result = FIELD_U32(a2, 0x88);
         if ( result > 0xF )
           return result;
         v14 = ((1 << result) & 0x8005) == 0;
@@ -96,7 +96,7 @@ LABEL_9:
         }
         if ( v14 )
           return result;
-        result = sub_602A25C0((int)v3, FIELD_U32(v5, 0x0)._._.position.y);
+        result = sub_602A25C0((int)v3, FIELD_F32(v5, 0x70));
         if ( result )
           return result;
         result = Enemy__processCollision(v5, v3, a2, 0);
@@ -105,21 +105,21 @@ LABEL_9:
         {
           if ( result == 2 )
             return result;
-          v17 = StateMgr__getCurrentState(&FIELD_U32(v5, 0x0).states.manager);
+          v17 = StateMgr__getCurrentState(&FIELD_U32(v5, 0x17C4));
           v18 = (*((int (__fastcall **)(StateBase *))FIELD_U32(v17, 0x0) + 2))(v17);
           if ( v18 == (*((int (**)(void))KaniboTama__StateID_Unk3._.vtable + 2))() )
           {
-            parent = (Enemy *)FIELD_U32(v5, 0x0)._._._.parent;
+            parent = (Enemy *)FIELD_U32(v5, 0x38);
             if ( parent )
             {
-              Actor__removeChild(FIELD_U32(v5, 0x0)._._._.parent, &FIELD_U32(v5, 0x0)._._._);
+              Actor__removeChild(FIELD_U32(v5, 0x38), &FIELD_U32(v5, 0x0));
               if ( ((unsigned int)&dword_60C93250 & ~(1613829044 << v20) & 1) == 0
                 && _cxa_guard_acquire(&dword_60C93250) )
               {
                 dword_60C9324C = (int)&off_60BC04AC;
                 _cxa_guard_release(&dword_60C93250);
               }
-              if ( (*(int (__fastcall **)(Enemy *, int *))FIELD_U32(parent, 0x0)._._._.vtable)(parent, &dword_60C9324C) == 1 )
+              if ( (*(int (__fastcall **)(Enemy *, int *))FIELD_U32(parent, 0x0))(parent, &dword_60C9324C) == 1 )
                 sub_603101A4(parent, (int)a2, v16);
             }
           }
@@ -131,21 +131,21 @@ LABEL_9:
             dword_60C7B378 = (int)&off_60BC00BC;
             _cxa_guard_release(&dword_60C7B37C);
           }
-          if ( (*(int (__fastcall **)(StageActor *, int *))FIELD_U32(owner, 0x0).vtable)(owner, &dword_60C7B378) == 1 )
+          if ( (*(int (__fastcall **)(StageActor *, int *))FIELD_U32(owner, 0x0))(owner, &dword_60C7B378) == 1 )
           {
             result = sub_6075EDF8(owner);
             if ( result )
               return result;
           }
-          result = FIELD_U32(a2, 0x74).field_14;
+          result = FIELD_U32(a2, 0x88);
           if ( result == 15 )
             return result;
-          v21 = StateMgr__getCurrentState(&FIELD_U32(v5, 0x0).states.manager);
+          v21 = StateMgr__getCurrentState(&FIELD_U32(v5, 0x17C4));
           v22 = (*((int (__fastcall **)(StateBase *))FIELD_U32(v21, 0x0) + 2))(v21);
           result = (*((int (**)(void))KaniboTama__StateID_Unk1._.vtable + 2))();
           if ( v22 != result )
             return result;
-          (*(void (__fastcall **)(Enemy *, ActiveCollider *, ActiveCollider *))(FIELD_U32(v5, 0x0)._._._.vtable + 200))(v5, v3, a2);
+          (*(void (__fastcall **)(Enemy *, ActiveCollider *, ActiveCollider *))(FIELD_U32(v5, 0x0) + 200))(v5, v3, a2);
         }
       }
 LABEL_25:

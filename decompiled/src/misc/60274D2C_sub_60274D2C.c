@@ -19,10 +19,10 @@ int __fastcall sub_60274D2C(CollisionActor *a1)
   CollisionActor__handleSpeed(a1);
   v2 = -26214400;
   next = a1[1]._.aCollider.createNode.next;
-  if ( (ActiveColliderNode *)FIELD_U32(a1, 0x0).direction == next )
+  if ( (ActiveColliderNode *)FIELD_U32(a1, 0x50) == next )
     v2 = 26214400;
-  FIELD_U32(a1, 0x0).rotation.x += v2;
-  result = FIELD_U32(a1, 0x0).rotation.y + 1966080 * byte_60AFE3F4[(_DWORD)next];
-  FIELD_U32(a1, 0x0).rotation.y = result;
+  FIELD_U32(a1, 0x9C) += v2;
+  result = FIELD_U32(a1, 0xA0) + 1966080 * byte_60AFE3F4[(_DWORD)next];
+  FIELD_U32(a1, 0xA0) = result;
   return result;
 }

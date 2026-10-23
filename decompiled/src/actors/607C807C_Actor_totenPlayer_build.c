@@ -15,7 +15,7 @@ StateActor *__fastcall Actor_totenPlayer_build(ActorBuildInfo *a1)
 
   v2 = (StateActor *)operator_new(0x3B30u);
   result = Player_ctor(v2, a1);
-  FIELD_U32(result, 0x0)._._.vtable = (int)off_60C253D4;
+  FIELD_U32(result, 0x0) = (int)off_60C253D4;
   *(_DWORD *)&result[2]._.collisionMgr[2248] = 0;
   *(_DWORD *)&result[2]._.collisionMgr[2252] = (char *)result + 15116;
   *(_DWORD *)&result[2]._.collisionMgr[2264] = 0;

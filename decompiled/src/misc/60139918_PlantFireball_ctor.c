@@ -15,7 +15,7 @@ FireballBase *__fastcall PlantFireball_ctor(ActorBuildInfo *a1)
 
   v2 = (FireballBase *)operator_new(0x1A80u);
   result = FireballBase_ctor(v2, a1);
-  FIELD_U32(result, 0x0)._._._.vtable = (int)PlantFireball_vtable;
+  FIELD_U32(result, 0x0) = (int)PlantFireball_vtable;
   *(_DWORD *)&result[1]._._._._.field_10 = 0;
   result[1]._._._._.profile = 0;
   result[1]._._._._.id = 0;

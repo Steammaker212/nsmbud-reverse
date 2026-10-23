@@ -14,7 +14,7 @@ Enemy *__fastcall Actor_fire_spawn_build(ActorBuildInfo *a1)
 
   v2 = (Enemy *)operator_new(0x1E20u);
   Enemy__ctor(v2, a1);
-  FIELD_U32(v2, 0x0)._._._.vtable = (int)off_60C195A0;
+  FIELD_U32(v2, 0x0) = (int)off_60C195A0;
   sub_60448BFC(&v2[1]._._._._.id);
   memset(&v2[1]._._._._.field_48, 0, 88);
   v2[1]._._._._.heap = (int)&off_60C19818;
@@ -22,6 +22,6 @@ Enemy *__fastcall Actor_fire_spawn_build(ActorBuildInfo *a1)
   v2[1]._._._.field_B8 = 1065353216;
   v2[1]._._._.rotation.y = -1;
   v2[1]._._._.rotation.z = 255;
-  FIELD_U32(v2, 0x0)._._.type = 0;
+  FIELD_U8(v2, 0x215) = 0;
   return v2;
 }

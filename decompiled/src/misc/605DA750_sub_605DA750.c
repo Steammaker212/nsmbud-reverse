@@ -14,8 +14,8 @@ void __fastcall sub_605DA750(StateActor *a1)
   CollisionMgr_Sensor *v3; // r6
   CollisionMgr_Sensor *v4; // r0
 
-  v2 = (CollisionMgr_Sensor *)(*(int (__fastcall **)(StateActor *))(FIELD_U32(a1, 0x0)._._.vtable + 392))(a1);
-  v3 = (CollisionMgr_Sensor *)(*(int (__fastcall **)(StateActor *))(FIELD_U32(a1, 0x0)._._.vtable + 392))(a1);
-  v4 = (CollisionMgr_Sensor *)(*(int (__fastcall **)(StateActor *))(FIELD_U32(a1, 0x0)._._.vtable + 392))(a1);
-  CollisionMgr_init((CollisionMgr *)FIELD_U32(a1, 0x0).collisionMgr, a1, v2, v3 + 1, v4 + 2);
+  v2 = (CollisionMgr_Sensor *)(*(int (__fastcall **)(StateActor *))(FIELD_U32(a1, 0x0) + 392))(a1);
+  v3 = (CollisionMgr_Sensor *)(*(int (__fastcall **)(StateActor *))(FIELD_U32(a1, 0x0) + 392))(a1);
+  v4 = (CollisionMgr_Sensor *)(*(int (__fastcall **)(StateActor *))(FIELD_U32(a1, 0x0) + 392))(a1);
+  CollisionMgr_init((CollisionMgr *)FIELD_U8(a1, 0x288), a1, v2, v3 + 1, v4 + 2);
 }

@@ -38,7 +38,7 @@ int __fastcall Item_loadMusasabi_470B10(int a1)
   ModelWrapper_setup(v5, v2, 0, 0);
   FIELD_U32(a1, 6104) = v4;
   v6 = a1 + 6104;
-  v7 = (int)*FIELD_U32(v4, 0x8).animations;
+  v7 = (int)*FIELD_U32(v4, 0xC);
   if ( FIELD_U32(a1, 20) )
   {
     v17 = &sead__SafeStringBase__vtable;

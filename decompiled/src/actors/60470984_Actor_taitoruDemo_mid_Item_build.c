@@ -15,7 +15,7 @@ MultiStateActor *__fastcall Actor_taitoruDemo_mid_Item_build(ActorBuildInfo *a1)
 
   v2 = (MultiStateActor *)operator_new(0x17E0u);
   result = MultiStateActor__ctor(v2, a1);
-  FIELD_U32(result, 0x0)._._.vtable = (int)off_60BFC810;
+  FIELD_U32(result, 0x0) = (int)off_60BFC810;
   result[1]._._._.vtable = 0;
   result[1]._._._.heap = 0;
   return result;

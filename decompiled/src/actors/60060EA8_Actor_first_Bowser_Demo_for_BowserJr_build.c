@@ -15,6 +15,6 @@ BossBase *__fastcall Actor_first_Bowser_Demo_for_BowserJr_build(ActorBuildInfo *
 
   v2 = (BossBase *)operator_new(0x1DB8u);
   result = BowserJrBase__ctor(v2, a1);
-  FIELD_U32(result, 0x0)._._._._.vtable = (int)&off_60BC5BB4;
+  FIELD_U32(result, 0x0) = (int)&off_60BC5BB4;
   return result;
 }

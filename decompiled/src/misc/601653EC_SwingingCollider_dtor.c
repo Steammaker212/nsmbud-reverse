@@ -10,7 +10,7 @@
 
 _DWORD *__fastcall SwingingCollider_dtor(ColliderBase *a1)
 {
-  FIELD_U32(a1, 0x0).vtable = (int)SwingingCollider_vtable;
+  FIELD_U32(a1, 0x0) = (int)SwingingCollider_vtable;
   (*(void (__fastcall **)(int *))(a1[1]._.vtable + 16))(&a1[1]._.vtable);
   return ColliderBase_dtor(a1);
 }

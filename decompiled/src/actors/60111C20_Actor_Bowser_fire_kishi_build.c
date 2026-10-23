@@ -15,7 +15,7 @@ StageActor *__fastcall Actor_Bowser_fire_kishi_build(ActorBuildInfo *a1)
 
   v2 = (StageActor *)operator_new(0x2A4u);
   result = StageActor__ctor(v2, a1);
-  FIELD_U32(result, 0x0).vtable = (int)off_60BD073C;
+  FIELD_U32(result, 0x0) = (int)off_60BD073C;
   result[1]._.vtable = 0;
   result[1]._.heap = 2139095039;
   result[1]._.id = 2139095039;

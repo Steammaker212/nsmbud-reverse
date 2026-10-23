@@ -10,7 +10,7 @@
 
 int __fastcall sub_60345CAC(Enemy *a1, int a2, int a3)
 {
-  a1[2]._._._.aCollider.field_68 = (int)StateMgr__getCurrentState(&FIELD_U32(a1, 0x0).states.manager);
+  a1[2]._._._.aCollider.field_68 = (int)StateMgr__getCurrentState(&FIELD_U32(a1, 0x17C4));
   Enemy__collisionIceball(a1, a2, a3);
   return 1;
 }

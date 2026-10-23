@@ -45,7 +45,7 @@ int __fastcall sub_6035B2D0(_WORD *a1, ActiveCollider *a2, ActiveCollider *a3)
               v12 = (FIELD_U8(owner, 1217) & 0x10) == 0;
             if ( v12 && (FIELD_U8(owner, 6900) & 1) == 0 )
             {
-              if ( FIELD_U32(a3, 0x74).field_14 != 2 )
+              if ( FIELD_U32(a3, 0x88) != 2 )
               {
                 v13 = sub_6075F914(owner);
                 v14 = v13 == 1;

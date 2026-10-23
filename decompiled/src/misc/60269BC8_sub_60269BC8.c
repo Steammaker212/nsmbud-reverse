@@ -31,9 +31,9 @@ int __fastcall sub_60269BC8(StateActor *a1, int a2, int a3)
     if ( playerId > 3 )
     {
       v9 = Global_BasicSoundActor1;
-      p_x = &FIELD_U32(a1, 0x0)._.position.x;
-      y = FIELD_U32(a1, 0x0)._.position.y;
-      position.x = FIELD_U32(a1, 0x0)._.position.x;
+      p_x = &FIELD_F32(a1, 0x6C);
+      y = FIELD_F32(a1, 0x70);
+      position.x = FIELD_F32(a1, 0x6C);
       position.y = y;
       mapPositionToScreen(&out, &position);
       BasicSoundActor1_playSound(v9, "SE_EMY_DOWN", (int)&out, 0);
@@ -43,12 +43,12 @@ int __fastcall sub_60269BC8(StateActor *a1, int a2, int a3)
       SE_EMY_KAME_HIT_ref((int)v3, FIELD_U32(v3, 0x234), a1[1]._._.aCollider._.containingHeap == 2);
       sub_60000A18(v3);
       v7 = sub_602856EC(&a1[1]._._.aCollider._.containingHeap, FIELD_U32(v3, 0x234));
-      p_x = &FIELD_U32(a1, 0x0)._.position.x;
-      sub_60022540(dword_60C7F52C, (int)&FIELD_U32(a1, 0x0)._.position, v7, playerId, 1);
+      p_x = &FIELD_F32(a1, 0x6C);
+      sub_60022540(dword_60C7F52C, (int)&FIELD_U32(a1, 0x6C), v7, playerId, 1);
     }
-    v11 = FIELD_U32(a1, 0x0)._.position.y;
+    v11 = FIELD_F32(a1, 0x70);
     v12 = Global_BasicSoundActor1;
-    position.x = FIELD_U32(a1, 0x0)._.position.x;
+    position.x = FIELD_F32(a1, 0x6C);
     position.y = v11;
     mapPositionToScreen(&out, &position);
     BasicSoundActor1_playSound(v12, "SE_EMY_BUBBLE_EXTINCT", (int)&out, 0);

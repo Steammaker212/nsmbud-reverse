@@ -17,9 +17,9 @@ signed int __fastcall Fuzzy__beginState_DieFall(StateActor *a1)
   unsigned int v3; // r1
   int v4; // r0
 
-  v2 = StageActor__directionToPlayerX(a1, &FIELD_U32(a1, 0x0)._.position);
-  FIELD_U32(a1, 0x0)._.direction = v2;
-  FIELD_U32(a1, 0x0)._.rotation.y = Enemy_CommonRotations[v2];
+  v2 = StageActor__directionToPlayerX(a1, &FIELD_U32(a1, 0x6C));
+  FIELD_U32(a1, 0x50) = v2;
+  FIELD_U32(a1, 0xA0) = Enemy_CommonRotations[v2];
   v3 = a1[1]._._.aCollider.field_EC;
   if ( v3 )
   {

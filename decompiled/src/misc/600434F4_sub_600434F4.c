@@ -91,9 +91,9 @@ LABEL_4:
     j_ModelWrapper_setupModel((int)v8, (int)v4, 0, 0);
     v5[1369] = (int)v7;
     animations = (unsigned int)v7[1].texAnims.animations;
-    v10 = (int *)FIELD_U32(v7, 0x8).animations;
+    v10 = (int *)FIELD_U32(v7, 0xC);
     v11 = *v5;
-    if ( FIELD_U32(v7, 0x8).count > animations )
+    if ( FIELD_U32(v7, 0x8) > animations )
       v10 += animations;
     v12 = *v10;
     a2.vtable = &sead__SafeStringBase__vtable;
@@ -156,9 +156,9 @@ LABEL_4:
   j_ModelWrapper_setupModel((int)v37, (int)v33, 0, 0);
   v34[1] = (int)v36;
   v38 = (unsigned int)v36[1].texAnims.animations;
-  v39 = (int *)FIELD_U32(v36, 0x8).animations;
+  v39 = (int *)FIELD_U32(v36, 0xC);
   v40 = *v34;
-  if ( FIELD_U32(v36, 0x8).count > v38 )
+  if ( FIELD_U32(v36, 0x8) > v38 )
     v39 += v38;
   v41 = *v39;
   a2.vtable = &sead__SafeStringBase__vtable;

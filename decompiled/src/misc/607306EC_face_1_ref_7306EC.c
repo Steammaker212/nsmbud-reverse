@@ -27,7 +27,7 @@ int __fastcall face_1_ref_7306EC(Enemy *a1, ActiveCollider *a2, ActiveCollider *
       v6[1] = "face_1";
       sub_60793F04(FIELD_U32(vtable, 4), v7, v6);
       sub_60236E40(0xFFFFFFFF, 376, v7, 0, 0);
-      return (*(int (__fastcall **)(Enemy *, int *))(FIELD_U32(a1, 0x0)._._._.vtable + 192))(a1, &dword_60CBDB60);
+      return (*(int (__fastcall **)(Enemy *, int *))(FIELD_U32(a1, 0x0) + 192))(a1, &dword_60CBDB60);
     }
   }
   return result;

@@ -12,7 +12,7 @@ __int64 __fastcall sub_601604FC(ColliderBase *this, __int64 *a2)
 {
   __int64 result; // r0
 
-  (*(void (__fastcall **)(ColliderBase *))(FIELD_U32(this, 0x0).vtable + 56))(this);
+  (*(void (__fastcall **)(ColliderBase *))(FIELD_U32(this, 0x0) + 56))(this);
   sub_60153898(ColliderMgr_instance, this, (__int64 *)&FIELD_U32(this, 0x130), a2);
   result = *a2;
   *(_QWORD *)&FIELD_U32(this, 0x130) = *a2;

@@ -72,7 +72,7 @@ int __fastcall Bowser__vf3EC(int a1)
     ModelWrapper_setup(v16, (int)v13, 0, 0);
     *(_DWORD *)(v20 + 32 * v11) = v15;
     v17 = (int)*v12;
-    v18 = *FIELD_U32(v15, 0x18).animations;
+    v18 = *FIELD_U32(v15, 0x1C);
     identifier.vtable = &sead__SafeStringBase__vtable;
     identifier.cstr = "koopa_damage";
     result = ShuAnim_play(v18, v17, (int)&identifier);

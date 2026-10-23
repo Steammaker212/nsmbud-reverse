@@ -14,13 +14,13 @@ Amp *__fastcall Amp__ctor(ActorBuildInfo *a1)
 
   v2 = (Amp *)operator_new(0x1B10u);
   Enemy__ctor(&FIELD_U32(v2, 0x0), a1);
-  FIELD_U32(v2, 0x0)._._._._.vtable = (int)Amp_vtable;
+  FIELD_U32(v2, 0x0) = (int)Amp_vtable;
   EffectWrapper_ctor(&FIELD_U32(v2, 0x18AC));
-  FIELD_U32(v2, 0x18AC)._.vtable = (int)off_60BC1450;
+  FIELD_U32(v2, 0x18AC) = (int)off_60BC1450;
   FIELD_U32(v2, 0x1918) = 0;
   FIELD_U32(v2, 0x191C) = 0;
-  sub_6000BAC8(&FIELD_U32(v2, 0x1920), FIELD_U32(v2, 0x0)._._._._.id);
-  sub_6000B63C(&FIELD_U32(v2, 0x1944), FIELD_U32(v2, 0x0)._._._._.id);
+  sub_6000BAC8(&FIELD_U32(v2, 0x1920), FIELD_U32(v2, 0x8));
+  sub_6000B63C(&FIELD_U32(v2, 0x1944), FIELD_U32(v2, 0x8));
   LightSource__ctor(&FIELD_U32(v2, 0x1968));
   ActiveCollider_ctor(&FIELD_U32(v2, 0x19B4));
   FIELD_U32(v2, 0x1AE4) = (int)off_60BDABCC;

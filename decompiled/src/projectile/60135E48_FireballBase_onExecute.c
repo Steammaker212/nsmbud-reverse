@@ -28,18 +28,18 @@ signed int __fastcall FireballBase_onExecute(FireballBase *a1)
   int v18; // [sp+10h] [bp-20h]
   int v19; // [sp+14h] [bp-1Ch]
 
-  p_manager = &FIELD_U32(a1, 0x0).states.manager;
-  StateMgr__execute(&FIELD_U32(a1, 0x0).states.manager);
-  (*(void (__fastcall **)(FireballBase *))(FIELD_U32(a1, 0x0)._._._.vtable + 264))(a1);
+  p_manager = &FIELD_U32(a1, 0x17C4);
+  StateMgr__execute(&FIELD_U32(a1, 0x17C4));
+  (*(void (__fastcall **)(FireballBase *))(FIELD_U32(a1, 0x0) + 264))(a1);
   v3 = FIELD_U32(a1, 0x1864);
   if ( v3 < 1 )
     v4 = 1.0;
   else
-    v4 = (float)v3 / (float)(*(int (__fastcall **)(FireballBase *))(FIELD_U32(a1, 0x0)._._._.vtable + 292))(a1);
-  *(float *)&FIELD_U32(a1, 0x17D4).field_4 = v4 * *(float *)&FIELD_U32(a1, 0x17FC);
-  FIELD_U32(a1, 0x17D4).position.x = FIELD_U32(a1, 0x0)._._.position.x;
-  FIELD_U32(a1, 0x17D4).position.y = FIELD_U32(a1, 0x0)._._.position.y;
-  FIELD_U32(a1, 0x17D4).position.z = FIELD_U32(a1, 0x0)._._.position.z;
+    v4 = (float)v3 / (float)(*(int (__fastcall **)(FireballBase *))(FIELD_U32(a1, 0x0) + 292))(a1);
+  *(float *)&FIELD_U32(a1, 0x17D8) = v4 * *(float *)&FIELD_U32(a1, 0x17FC);
+  FIELD_F32(a1, 0x17E0) = FIELD_F32(a1, 0x6C);
+  FIELD_F32(a1, 0x17E4) = FIELD_F32(a1, 0x70);
+  FIELD_F32(a1, 0x17E8) = FIELD_F32(a1, 0x74);
   LightMask__update((LightMask *)&FIELD_U32(a1, 0x17D4));
   if ( FIELD_U32(a1, 0x180C) != 2 )
   {
@@ -47,15 +47,15 @@ signed int __fastcall FireballBase_onExecute(FireballBase *a1)
     v6 = (*((int (__fastcall **)(StateBase *))FIELD_U32(CurrentState, 0x0) + 2))(CurrentState);
     if ( v6 != (*((int (**)(void))stru_60C877FC._._.vtable + 2))() )
     {
-      (*(void (__fastcall **)(FireballBase *))(FIELD_U32(a1, 0x0)._._._.vtable + 268))(a1);
+      (*(void (__fastcall **)(FireballBase *))(FIELD_U32(a1, 0x0) + 268))(a1);
       v10 = FIELD_U32(a1, 0x1848);
       v11 = (float *)&FIELD_U32(a1, 0x184C);
       ((void (__fastcall *)(int *, int *, _BYTE *, Vec3 *, _DWORD))physics_21893E8)(
         &v15,
         &FIELD_U32(a1, 0x184C),
         v16,
-        &FIELD_U32(a1, 0x0)._._.position,
-        (unsigned __int8)FIELD_U32(a1, 0x0)._._.field_56);
+        &FIELD_U32(a1, 0x6C),
+        (unsigned __int8)FIELD_U8(a1, 0x56));
       v12 = v15;
       FIELD_U32(a1, 0x1848) = v15;
       switch ( v12 )
@@ -63,13 +63,13 @@ signed int __fastcall FireballBase_onExecute(FireballBase *a1)
         case 0:
           if ( v10 == 2 && LOBYTE(FIELD_U32(a1, 0x1A58)) )
           {
-            vtable = FIELD_U32(a1, 0x0)._._._.vtable;
+            vtable = FIELD_U32(a1, 0x0);
             goto LABEL_26;
           }
           break;
         case 1:
           if ( !v10 )
-            (*(void (__fastcall **)(FireballBase *, float))(FIELD_U32(a1, 0x0)._._._.vtable + 272))(a1, *v11);
+            (*(void (__fastcall **)(FireballBase *, float))(FIELD_U32(a1, 0x0) + 272))(a1, *v11);
           break;
         case 2:
           if ( v16[0] )
@@ -80,7 +80,7 @@ signed int __fastcall FireballBase_onExecute(FireballBase *a1)
             FIELD_U32(a1, 0x1A64) = v19;
             if ( !v10 )
             {
-              vtable = FIELD_U32(a1, 0x0)._._._.vtable;
+              vtable = FIELD_U32(a1, 0x0);
 LABEL_26:
               (*(void (__fastcall **)(FireballBase *))(vtable + 276))(a1);
             }
@@ -89,14 +89,14 @@ LABEL_26:
         case 3:
           if ( !v10 )
           {
-            (*(void (__fastcall **)(FireballBase *, float))(FIELD_U32(a1, 0x0)._._._.vtable + 300))(a1, *v11);
+            (*(void (__fastcall **)(FireballBase *, float))(FIELD_U32(a1, 0x0) + 300))(a1, *v11);
             goto LABEL_31;
           }
           break;
         case 4:
           if ( !v10 )
           {
-            (*(void (__fastcall **)(FireballBase *, float))(FIELD_U32(a1, 0x0)._._._.vtable + 280))(a1, *v11);
+            (*(void (__fastcall **)(FireballBase *, float))(FIELD_U32(a1, 0x0) + 280))(a1, *v11);
             goto LABEL_31;
           }
           break;
@@ -106,9 +106,9 @@ LABEL_26:
             v14 = v12 == 5;
           if ( v14 )
           {
-            (*(void (__fastcall **)(FireballBase *, float))(FIELD_U32(a1, 0x0)._._._.vtable + 284))(a1, *v11);
+            (*(void (__fastcall **)(FireballBase *, float))(FIELD_U32(a1, 0x0) + 284))(a1, *v11);
 LABEL_31:
-            (*(void (__fastcall **)(FireballBase *))(FIELD_U32(a1, 0x0)._._._.vtable + 296))(a1);
+            (*(void (__fastcall **)(FireballBase *))(FIELD_U32(a1, 0x0) + 296))(a1);
             FIELD_U8(a1, 0x1860) = 1;
           }
           break;
@@ -118,15 +118,15 @@ LABEL_31:
   v7 = &FIELD_U8(a1, 0x1860);
   if ( !FIELD_U8(a1, 0x1860) )
   {
-    StageActor__cullCheck(&FIELD_U32(a1, 0x0)._._, 10);
+    StageActor__cullCheck(&FIELD_U32(a1, 0x0), 10);
     if ( v8 == 1 )
     {
-      (*(void (__fastcall **)(FireballBase *))(FIELD_U32(a1, 0x0)._._._.vtable + 296))(a1);
+      (*(void (__fastcall **)(FireballBase *))(FIELD_U32(a1, 0x0) + 296))(a1);
       *v7 = 1;
     }
-    if ( (float)(FIELD_U32(a1, 0x0)._._.position.x + FIELD_U32(a1, 0x0)._._.field_1F4) < FIELD_F32(AreaTask_intance, 1812) )
+    if ( (float)(FIELD_F32(a1, 0x6C) + FIELD_F32(a1, 0x1F4)) < FIELD_F32(AreaTask_intance, 1812) )
     {
-      (*(void (__fastcall **)(FireballBase *))(FIELD_U32(a1, 0x0)._._._.vtable + 296))(a1);
+      (*(void (__fastcall **)(FireballBase *))(FIELD_U32(a1, 0x0) + 296))(a1);
       *v7 = 1;
     }
   }

@@ -17,13 +17,13 @@ unsigned int __fastcall sub_603383FC(StateActor *a1)
   if ( BYTE1(a1[1]._._.field_254.z) )
     sub_6033A26C((int)a1, 1);
   else
-    (*(void (__fastcall **)(StateActor *))(FIELD_U32(a1, 0x0)._._.vtable + 732))(a1);
+    (*(void (__fastcall **)(StateActor *))(FIELD_U32(a1, 0x0) + 732))(a1);
   v2 = *(_DWORD *)&a1[1]._.collisionMgr[108];
-  LODWORD(FIELD_U32(a1, 0x0)._.speed.x) = dword_60AF26A4[v2];
-  LODWORD(FIELD_U32(a1, 0x0)._.speed.y) = dword_60AF26B4[v2];
-  FIELD_U32(a1, 0x0)._.speed.z = 0.0;
-  *(float *)&a1[1]._.collisionMgr[96] = FIELD_U32(a1, 0x0)._.position.x + flt_60AF26C4[v2];
-  *(float *)&a1[1]._.collisionMgr[100] = FIELD_U32(a1, 0x0)._.position.y + flt_60AF26D4[v2];
+  LODWORD(FIELD_F32(a1, 0x78)) = dword_60AF26A4[v2];
+  LODWORD(FIELD_F32(a1, 0x7C)) = dword_60AF26B4[v2];
+  FIELD_F32(a1, 0x80) = 0.0;
+  *(float *)&a1[1]._.collisionMgr[96] = FIELD_F32(a1, 0x6C) + flt_60AF26C4[v2];
+  *(float *)&a1[1]._.collisionMgr[100] = FIELD_F32(a1, 0x70) + flt_60AF26D4[v2];
   if ( v2 == 2 )
   {
     v3 = 1;
@@ -34,10 +34,10 @@ unsigned int __fastcall sub_603383FC(StateActor *a1)
   }
   else
   {
-    v3 = StageActor__directionToPlayerX(a1, &FIELD_U32(a1, 0x0)._.position);
+    v3 = StageActor__directionToPlayerX(a1, &FIELD_U32(a1, 0x6C));
   }
-  FIELD_U32(a1, 0x0)._.direction = v3;
+  FIELD_U32(a1, 0x50) = v3;
   result = Enemy_CommonRotations[v3];
-  FIELD_U32(a1, 0x0)._.rotation.y = result;
+  FIELD_U32(a1, 0xA0) = result;
   return result;
 }

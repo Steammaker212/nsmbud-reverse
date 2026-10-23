@@ -13,7 +13,7 @@ bool __fastcall LightSource_unkUpdate3(LightSource *this)
   _BOOL4 result; // r0
   int v3; // r1
 
-  result = sub_60236FD4(&FIELD_U32(this, 0x18).x);
+  result = sub_60236FD4(&FIELD_F32(this, 0x18));
   v3 = FIELD_U32(this, 0x14);
   if ( result )
   {

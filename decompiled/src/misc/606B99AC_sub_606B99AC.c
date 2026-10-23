@@ -45,7 +45,7 @@ int __fastcall sub_606B99AC(_DWORD *a1, float s0_0)
   v9 = a1[1532];
   if ( v9 )
   {
-    v10 = (int)*FIELD_U32(v6, 0x8).animations;
+    v10 = (int)*FIELD_U32(v6, 0xC);
     v22 = &sead__SafeStringBase__vtable;
     v23 = "obj_tsuru";
     if ( v9 == 1 )
@@ -81,7 +81,7 @@ int __fastcall sub_606B99AC(_DWORD *a1, float s0_0)
   }
   else
   {
-    v15 = (int)*FIELD_U32(v6, 0x18).animations;
+    v15 = (int)*FIELD_U32(v6, 0x1C);
     a1[1529] = v15;
     v16 = a1 + 1529;
     v22 = &sead__SafeStringBase__vtable;

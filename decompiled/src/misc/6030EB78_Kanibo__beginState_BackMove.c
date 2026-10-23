@@ -16,12 +16,12 @@ void __fastcall Kanibo__beginState_BackMove(Enemy *a1)
   float v5; // s2
   float *v6; // r0
 
-  v2 = (float)byte_60AFE3F4[FIELD_U32(a1, 0x0)._._.direction ^ 1];
+  v2 = (float)byte_60AFE3F4[FIELD_U32(a1, 0x50) ^ 1];
   sub_607160F4(
     TileMgr_instance,
-    (int)(float)(FIELD_U32(a1, 0x0)._._.position.x + (float)(v2 * 16.0)),
+    (int)(float)(FIELD_F32(a1, 0x6C) + (float)(v2 * 16.0)),
     (unsigned __int16)(int)(float)-(float)(*(float *)&a1[1]._._._._.field_20.next + 24.0),
-    (unsigned __int8)FIELD_U32(a1, 0x0)._._.field_56,
+    (unsigned __int8)FIELD_U8(a1, 0x56),
     1);
   if ( (v3 & 0xF) != 0 )
   {
@@ -32,12 +32,12 @@ void __fastcall Kanibo__beginState_BackMove(Enemy *a1)
   {
     v6 = dword_6030EC74;
     v4 = v2 * 1.3;
-    if ( (FIELD_U32(a1, 0x0)._._._.settings1 & 0x10) == 0 )
+    if ( (FIELD_U32(a1, 0x14) & 0x10) == 0 )
       v6 = &dword_6030EC78;
     v5 = *v6;
   }
-  FIELD_U32(a1, 0x0)._._.speed.x = v4;
-  FIELD_U32(a1, 0x0)._._.xAcceleration = v5;
-  FIELD_U32(a1, 0x0)._._.field_64 = -0.1875;
-  FIELD_U32(a1, 0x0)._._.maxSpeed.y = -4.0;
+  FIELD_F32(a1, 0x78) = v4;
+  FIELD_F32(a1, 0x68) = v5;
+  FIELD_F32(a1, 0x64) = -0.1875;
+  FIELD_F32(a1, 0x88) = -4.0;
 }

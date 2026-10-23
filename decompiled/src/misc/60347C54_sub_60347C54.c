@@ -22,6 +22,6 @@ int __fastcall sub_60347C54(CollisionActor *a1)
     SE_EMY_MECHAKOOPA_BOUND_ref(a1, v3);
   result = *(unsigned __int8 *)(**(_DWORD **)(a1[1]._.aCollider.field_68 + 12) + 28);
   if ( (result & 0x20) != 0 )
-    return (*(int (__fastcall **)(CollisionActor *, int *, float))(FIELD_U32(a1, 0x0)._.vtable + 192))(a1, &dword_60C94948, v3);
+    return (*(int (__fastcall **)(CollisionActor *, int *, float))(FIELD_U32(a1, 0x0) + 192))(a1, &dword_60C94948, v3);
   return result;
 }

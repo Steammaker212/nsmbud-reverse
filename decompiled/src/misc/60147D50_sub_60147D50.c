@@ -27,7 +27,7 @@ void __fastcall sub_60147D50(Enemy *a1, ActiveCollider *a2, ActiveCollider *a3)
       }
       if ( owner )
       {
-        if ( (*(int (__fastcall **)(StageActor *, int *))FIELD_U32(owner, 0x0).vtable)(owner, &dword_60C88160) == 1 )
+        if ( (*(int (__fastcall **)(StageActor *, int *))FIELD_U32(owner, 0x0))(owner, &dword_60C88160) == 1 )
           JUMPOUT(0x60147BB0);
       }
     }

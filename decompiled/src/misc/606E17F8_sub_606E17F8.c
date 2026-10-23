@@ -15,8 +15,8 @@ StateActor *__fastcall sub_606E17F8(StateActor *result)
   unsigned int v3; // r2
   int v4; // r1
 
-  eventId1 = (unsigned __int8)FIELD_U32(result, 0x0)._.eventId1;
-  if ( !FIELD_U32(result, 0x0)._.eventId1 )
+  eventId1 = (unsigned __int8)FIELD_U8(result, 0x21B);
+  if ( !FIELD_U8(result, 0x21B) )
     return (StateActor *)StageActor__delete(result, 1);
   v2 = eventId1 - 33;
   v3 = 1u >> (33 - eventId1);

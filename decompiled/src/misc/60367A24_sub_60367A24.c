@@ -18,6 +18,6 @@ int __fastcall sub_60367A24(CollisionActor *a1)
   result = (int)&a1[1]._.aCollider.owner[-1].field_280 + 3;
   a1[1]._.aCollider.owner = (StageActor *)result;
   if ( !result )
-    return (*(int (__fastcall **)(CollisionActor *, int *, float))(FIELD_U32(a1, 0x0)._.vtable + 192))(a1, &dword_60C95D38, v2);
+    return (*(int (__fastcall **)(CollisionActor *, int *, float))(FIELD_U32(a1, 0x0) + 192))(a1, &dword_60C95D38, v2);
   return result;
 }

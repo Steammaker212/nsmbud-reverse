@@ -36,7 +36,7 @@ int __fastcall sub_605A788C(int **a1)
   ModelWrapper_setup(v5, v2, 0, 0);
   a1[1526] = (int *)v4;
   a1 += 1526;
-  v6 = (int)*FIELD_U32(v4, 0x18).animations;
+  v6 = (int)*FIELD_U32(v4, 0x1C);
   a1[1] = (int *)v6;
   v14 = &sead__SafeStringBase__vtable;
   v15 = "obj_envfog";

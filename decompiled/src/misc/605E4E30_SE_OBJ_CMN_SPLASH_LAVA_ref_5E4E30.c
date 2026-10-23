@@ -18,13 +18,13 @@ int __fastcall SE_OBJ_CMN_SPLASH_LAVA_ref_5E4E30(StageActor *a1, int r1_0)
   if ( r1_0 == 1 )
   {
     v2 = *(float *)&a1[10].aCollider.field_E0;
-    a2.x = FIELD_U32(a1, 0x6C).x;
+    a2.x = FIELD_F32(a1, 0x6C);
     v3 = 833;
   }
   else
   {
     v2 = *(float *)&a1[10].aCollider.field_E0;
-    a2.x = FIELD_U32(a1, 0x6C).x;
+    a2.x = FIELD_F32(a1, 0x6C);
     v3 = 439;
   }
   a2.y = v2;

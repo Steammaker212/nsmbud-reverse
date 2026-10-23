@@ -11,6 +11,6 @@
 signed int __fastcall FireballBase_onDelete(FireballBase *a1)
 {
   if ( !FIELD_U8(a1, 0x1860) )
-    (*(void (__fastcall **)(FireballBase *))(FIELD_U32(a1, 0x0)._._._.vtable + 296))(a1);
+    (*(void (__fastcall **)(FireballBase *))(FIELD_U32(a1, 0x0) + 296))(a1);
   return 1;
 }

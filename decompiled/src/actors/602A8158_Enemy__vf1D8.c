@@ -11,6 +11,6 @@
 // Overridden by: None
 Enemy *__fastcall Enemy__vf1D8(Enemy *result)
 {
-  FIELD_U32(result, 0x0)._._._.isDeleted = 1;
+  FIELD_U8(result, 0x13) = 1;
   return result;
 }

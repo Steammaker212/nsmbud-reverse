@@ -15,7 +15,7 @@ StateActor *__fastcall Actor_geyser_water_bosufor_build(ActorBuildInfo *a1)
 
   v2 = (StateActor *)operator_new(0x1808u);
   result = StateActor_ctor(v2, a1);
-  FIELD_U32(result, 0x0)._._.vtable = (int)off_60C20738;
+  FIELD_U32(result, 0x0) = (int)off_60C20738;
   result[1]._._._.field_2C = 0;
   LOWORD(result[1]._._._.childCount) = 0;
   result[1]._._._.field_20.next = 0;

@@ -33,8 +33,8 @@ signed int __fastcall RollingHill_onCreate(RollingHill *a1)
   CircularColliderInfo info; // [sp+18h] [bp-48h] BYREF
 
   v2 = 2;
-  settings1 = FIELD_U32(a1, 0x0)._.settings1;
-  FIELD_U32(a1, 0x0).direction = settings1 & 1;
+  settings1 = FIELD_U32(a1, 0x14);
+  FIELD_U32(a1, 0x50) = settings1 & 1;
   v4 = (settings1 >> 3) & 1;
   FIELD_U8(a1, 0x418) = (settings1 & 8) != 0;
   size = (settings1 >> 20) & 0xF;
@@ -61,17 +61,17 @@ signed int __fastcall RollingHill_onCreate(RollingHill *a1)
     *(float *)v9 = v8;
     v2 = 1;
     *(float *)&v12 = (float)(1.0 / v10) * 10.0;
-    FIELD_U32(a1, 0x420) = (int)(float)(*(float *)&v12 * (float)(((32 * FIELD_U32(a1, 0x0)._.settigns2) & 0x1E00000) + 0x200000));
+    FIELD_U32(a1, 0x420) = (int)(float)(*(float *)&v12 * (float)(((32 * FIELD_U32(a1, 0x18)) & 0x1E00000) + 0x200000));
     FIELD_U32(a1, 0x428) = v12;
     v13 = -3490.0;
     v14 = HIWORD(settings1) & 0xF;
     v15 = (float *)&FIELD_U32(a1, 0x424);
-    if ( FIELD_U32(a1, 0x0).field_56 != 1 )
+    if ( FIELD_U8(a1, 0x56) != 1 )
       v13 = -10.0;
     v16 = v13 - (float)((float)(unsigned int)v14 * 10.0);
     if ( v14 == 15 )
       v16 = -288.0;
-    FIELD_U32(a1, 0x0).position.z = v16;
+    FIELD_F32(a1, 0x74) = v16;
     *v15 = v8 * 160.0;
     if ( !v4 )
     {
@@ -93,10 +93,10 @@ signed int __fastcall RollingHill_onCreate(RollingHill *a1)
         v20 = size_1 == 0;
       if ( v20 )
         v11 = v8;
-      FIELD_U32(a1, 0x0).scale.z = 1.0;
-      FIELD_U32(a1, 0x0).scale.x = v11;
-      FIELD_U32(a1, 0x0).scale.y = v11;
-      (*(void (__fastcall **)(int, Vec3 *))(*(_DWORD *)model + 68))(model, &FIELD_U32(a1, 0x0).scale);
+      FIELD_F32(a1, 0x98) = 1.0;
+      FIELD_F32(a1, 0x90) = v11;
+      FIELD_F32(a1, 0x94) = v11;
+      (*(void (__fastcall **)(int, Vec3 *))(*(_DWORD *)model + 68))(model, &FIELD_U32(a1, 0x90));
       v21 = *v15;
       info.distToCenter.x = 0.0;
       info.distToCenter.y = -v21;
@@ -104,10 +104,10 @@ signed int __fastcall RollingHill_onCreate(RollingHill *a1)
       info.radius = v21;
       info.rotation = 0;
       CircularCollider_init(&FIELD_U32(a1, 0x288), &FIELD_U32(a1, 0x0), &info);
-      FIELD_U32(a1, 0x288)._.field_88 |= 4u;
-      ColliderBase_setSurfaceType(&FIELD_U32(a1, 0x288)._, RollingHill_typeInfos[(unsigned __int8)FIELD_U8(a1, 0x419)].surfaceType);
-      FIELD_U32(a1, 0x288)._.field_150 = &FIELD_U32(a1, 0x438);
-      ColliderMgr_add(ColliderMgr_instance, &FIELD_U32(a1, 0x288)._);
+      FIELD_U32(a1, 0x310) |= 4u;
+      ColliderBase_setSurfaceType(&FIELD_U32(a1, 0x288), RollingHill_typeInfos[(unsigned __int8)FIELD_U8(a1, 0x419)].surfaceType);
+      FIELD_U32(a1, 0x3D8) = &FIELD_U32(a1, 0x438);
+      ColliderMgr_add(ColliderMgr_instance, &FIELD_U32(a1, 0x288));
       if ( FIELD_U8(a1, 0x419) == 9 )
         *(_DWORD *)(FIELD_U32(a1, 0x284) + 36) = 1;
       RollingHill_updateModel(a1);

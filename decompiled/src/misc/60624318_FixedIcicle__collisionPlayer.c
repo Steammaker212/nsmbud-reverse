@@ -17,7 +17,7 @@ int __fastcall FixedIcicle__collisionPlayer(FixedIcicle *this, ActiveCollider *a
   int result; // r0
   bool otherIsNull; // zf
 
-  result = FIELD_U32(acOther, 0x74).field_14;
+  result = FIELD_U32(acOther, 0x88);
   otherIsNull = result == 15;
   if ( result != 15 )
   {
@@ -26,9 +26,9 @@ int __fastcall FixedIcicle__collisionPlayer(FixedIcicle *this, ActiveCollider *a
   }
   if ( !otherIsNull )
   {
-    result = (*(int (__fastcall **)(StageActor *))(FIELD_U32(other, 0x0).vtable + 1156))(other);
+    result = (*(int (__fastcall **)(StageActor *))(FIELD_U32(other, 0x0) + 1156))(other);
     if ( !result )
-      return (*(int (__fastcall **)(StageActor *, ActiveCollider *, ActiveCollider *))(FIELD_U32(other, 0x0).vtable + 1164))(
+      return (*(int (__fastcall **)(StageActor *, ActiveCollider *, ActiveCollider *))(FIELD_U32(other, 0x0) + 1164))(
                other,
                acSelf,
                acOther);

@@ -15,7 +15,7 @@ StateActor *__fastcall Actor_kishibakubaku_build(ActorBuildInfo *a1)
 
   v2 = (StateActor *)operator_new(0x17D8u);
   result = StateActor_ctor(v2, a1);
-  FIELD_U32(result, 0x0)._._.vtable = (int)off_60BF76AC;
+  FIELD_U32(result, 0x0) = (int)off_60BF76AC;
   result[1]._._._.vtable = 0;
   return result;
 }

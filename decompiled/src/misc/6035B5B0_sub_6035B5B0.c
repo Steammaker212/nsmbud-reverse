@@ -27,8 +27,8 @@ int __fastcall sub_6035B5B0(int a1, ActiveCollider *a2, ActiveCollider *a3)
   v8 = 0;
   if ( owner )
   {
-    if ( (*(int (__fastcall **)(StageActor *, int *))FIELD_U32(owner, 0x0).vtable)(owner, &dword_60C7B378) == 1
-      && FIELD_U32(a3, 0x74).field_14 != 15 )
+    if ( (*(int (__fastcall **)(StageActor *, int *))FIELD_U32(owner, 0x0))(owner, &dword_60C7B378) == 1
+      && FIELD_U32(a3, 0x88) != 15 )
     {
       Bottom = ActiveCollider_getBottom(a3);
       if ( Bottom < ActiveCollider_getCenterY(a2) )
@@ -45,7 +45,7 @@ int __fastcall sub_6035B5B0(int a1, ActiveCollider *a2, ActiveCollider *a3)
           Right = ActiveCollider_getRight((ActiveCollider *)(a1 + 188));
         }
         if ( Left > Right
-          && (*(int (__fastcall **)(StageActor *, ActiveCollider *, ActiveCollider *))(FIELD_U32(owner, 0x0).vtable + 1164))(
+          && (*(int (__fastcall **)(StageActor *, ActiveCollider *, ActiveCollider *))(FIELD_U32(owner, 0x0) + 1164))(
                owner,
                a2,
                a3) == 1 )

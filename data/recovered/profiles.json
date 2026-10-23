@@ -1,0 +1,6382 @@
+{
+ "source": "codedx doc/profiles.csv (GPL-3.0, reference only)",
+ "rows": [
+  {
+   "profile_id": 0,
+   "sprite_id": 0,
+   "name_jp": "\u30d5\u30e9\u30b0\u30b9\u30a4\u30c3\u30c1\u30bf\u30b0",
+   "name_en": "Flag switch tag",
+   "factory_va": 6317192
+  },
+  {
+   "profile_id": 1,
+   "sprite_id": 1,
+   "name_jp": "\u30d5\u30e9\u30b0\u30b9\u30a4\u30c3\u30c1\uff14\u30b9\u30a4\u30c3\u30c1\u76e3\u8996\uff21\uff2e\uff24",
+   "name_en": "Flag switch AND",
+   "factory_va": 6305824
+  },
+  {
+   "profile_id": 2,
+   "sprite_id": 2,
+   "name_jp": "\u30d5\u30e9\u30b0\u30b9\u30a4\u30c3\u30c1\uff14\u30b9\u30a4\u30c3\u30c1\u76e3\u8996\uff2f\uff32",
+   "name_en": "Flag switch OR",
+   "factory_va": 6314896
+  },
+  {
+   "profile_id": 3,
+   "sprite_id": 3,
+   "name_jp": "\u30d5\u30e9\u30b0\u30b9\u30a4\u30c3\u30c1\u30e9\u30f3\u30c0\u30e0",
+   "name_en": "Flag switch random",
+   "factory_va": 6315800
+  },
+  {
+   "profile_id": 4,
+   "sprite_id": 4,
+   "name_jp": "\u30d5\u30e9\u30b0\u30b9\u30a4\u30c3\u30c1\u5909\u5316\u30b9\u30a4\u30c3\u30c1",
+   "name_en": "Flag switch change switch",
+   "factory_va": 6309060
+  },
+  {
+   "profile_id": 5,
+   "sprite_id": 5,
+   "name_jp": "\u30d5\u30e9\u30b0\u30b9\u30a4\u30c3\u30c1\u6761\u4ef6\u30d5\u30e9\u30b0",
+   "name_en": "Flag switch condition flag",
+   "factory_va": 6312992
+  },
+  {
+   "profile_id": 6,
+   "sprite_id": 6,
+   "name_jp": "\u30d5\u30e9\u30b0\u30b9\u30a4\u30c3\u30c1\u6761\u4ef6\u30d5\u30e9\u30b0\uff32\uff24\uff21\uff33\uff28\u7528",
+   "name_en": "Flag switch condition flag For RDASH",
+   "factory_va": 6313104
+  },
+  {
+   "profile_id": 7,
+   "sprite_id": 7,
+   "name_jp": "\u30d5\u30e9\u30b0\u30b9\u30a4\u30c3\u30c1\u6761\u4ef6\u30d5\u30e9\u30b0\uff32\uff16\uff13\u7528",
+   "name_en": "Flag switch condition flag for R63",
+   "factory_va": 6313212
+  },
+  {
+   "profile_id": 8,
+   "sprite_id": 8,
+   "name_jp": "\u30d5\u30e9\u30b0\u30b9\u30a4\u30c3\u30c1\u9023\u7d9a\uff2f\uff2e\u30d5\u30e9\u30b0",
+   "name_en": "Flag switch continuous ON flag",
+   "factory_va": 6310484
+  },
+  {
+   "profile_id": 9,
+   "sprite_id": 9,
+   "name_jp": "\u30d5\u30e9\u30b0\u30b9\u30a4\u30c3\u30c1\u4e00\u5b9a\u5468\u671f\uff2f\uff2e\u3001\uff2f\uff26\uff26\u30d5\u30e9\u30b0",
+   "name_en": "Flag switch fixed cycle ON, OFF flag",
+   "factory_va": 6311916
+  },
+  {
+   "profile_id": null,
+   "sprite_id": 10,
+   "name_jp": "\u30a2\u30af\u30bf\u30fc\uff24\uff32\uff23\u30bf\u30c3\u30c1",
+   "name_en": "Actor DRC Touch",
+   "factory_va": 5827772
+  },
+  {
+   "profile_id": null,
+   "sprite_id": 11,
+   "name_jp": "\u89aa\u5b50\u30aa\u30d6\u30b8\u30a7\u30fb\u89aa",
+   "name_en": "Parent-child object, parent",
+   "factory_va": 7002980
+  },
+  {
+   "profile_id": null,
+   "sprite_id": 12,
+   "name_jp": "\u89aa\u5b50\u30aa\u30d6\u30b8\u30a7\u30fb\u89aa(R-Dash\u5c02\u7528\u7248)",
+   "name_en": "Parent-child object, parent (R-Dash exclusive version)",
+   "factory_va": 7092052
+  },
+  {
+   "profile_id": null,
+   "sprite_id": 13,
+   "name_jp": "\u30ec\u30fc\u30eb\u52d5\u4f5c\u306e\u5168\u3042\u305f\u308a\u30dd\u30ea\u30b4\u30f3\u30fb\u89aa",
+   "name_en": "All the polygons and parents of the rail movement",
+   "factory_va": 7085548
+  },
+  {
+   "profile_id": null,
+   "sprite_id": 14,
+   "name_jp": "\uff2f\uff22\uff2a\u30b3\u30a4\u30f3\u76e3\u8996\u62cd\u624b\u541b",
+   "name_en": "OBJ coin surveillance applause",
+   "factory_va": 6917560
+  },
+  {
+   "profile_id": null,
+   "sprite_id": 15,
+   "name_jp": "\uff2f\uff22\uff2a\u30b3\u30a4\u30f3\u5e38\u99d0\u76e3\u8996\u62cd\u624b\u541b",
+   "name_en": "OBJ coin resident surveillance applause",
+   "factory_va": 6917560
+  },
+  {
+   "profile_id": 10,
+   "sprite_id": 16,
+   "name_jp": "\u7bc4\u56f2\u6307\u5b9a\u30b3\u30a4\u30f3\u76e3\u8996\u62cd\u624b\u541b",
+   "name_en": "Range designated coin surveillance applause",
+   "factory_va": 6916928
+  },
+  {
+   "profile_id": 11,
+   "sprite_id": 17,
+   "name_jp": "\u30b0\u30eb\u30fc\u30d7\uff29\uff24",
+   "name_en": "Group ID",
+   "factory_va": 6392072
+  },
+  {
+   "profile_id": 12,
+   "sprite_id": 18,
+   "name_jp": "\u30b0\u30eb\u30fc\u30d7\uff29\uff24\u30c8\u30b2\u30e1\u30c3\u30c8\u7528",
+   "name_en": "For group ID togemet",
+   "factory_va": 6394404
+  },
+  {
+   "profile_id": 13,
+   "sprite_id": 19,
+   "name_jp": "\u30af\u30c3\u30d1\u96fb\u7dda\u30bf\u30b0",
+   "name_en": "Kupper wire tag",
+   "factory_va": 2754216
+  },
+  {
+   "profile_id": 14,
+   "sprite_id": 20,
+   "name_jp": "\u540c\u671f\u30d0\u30fc\u30ca\u30fc\u7ba1\u7406OBJ",
+   "name_en": "Synchronous burner management OBJ",
+   "factory_va": 5896648
+  },
+  {
+   "profile_id": 15,
+   "sprite_id": 21,
+   "name_jp": "\u30d1\u30e9\u30b7\u30e5\u30fc\u30c8\u30b3\u30a4\u30f3(\u6e67\u304d\u51fa\u3057)",
+   "name_en": "Parachute coin",
+   "factory_va": 7268440
+  },
+  {
+   "profile_id": 16,
+   "sprite_id": 22,
+   "name_jp": "\u30b3\u30a4\u30f3\u30d8\u30d3\u89aa",
+   "name_en": "Coin snake parent",
+   "factory_va": 7175460
+  },
+  {
+   "profile_id": 17,
+   "sprite_id": 23,
+   "name_jp": "\u30c1\u30e7\u30ed\u30d7\u30fc\u30b3\u30a4\u30f3\u30de\u30cd\u30fc\u30b8\u30e3",
+   "name_en": "Choro Phu coin manager",
+   "factory_va": 6212948
+  },
+  {
+   "profile_id": 18,
+   "sprite_id": 24,
+   "name_jp": "\u30df\u30cb\u30b2\u30fc\u30e0\u30de\u30cd\u30fc\u30b8\u30e3",
+   "name_en": "Mini game manager",
+   "factory_va": 7541572
+  },
+  {
+   "profile_id": 19,
+   "sprite_id": 25,
+   "name_jp": "\u30df\u30cb\u30b2\u30fc\u30e0\u30de\u30cd\u30fc\u30b8\u30e3(RDash)",
+   "name_en": "Mini game manager (RDash)",
+   "factory_va": 7551824
+  },
+  {
+   "profile_id": null,
+   "sprite_id": 26,
+   "name_jp": "\u30b7\u30e3\u30c3\u30d5\u30eb\u30d6\u30ed\u30c3\u30af\u30de\u30cd\u30fc\u30b8\u30e3",
+   "name_en": "Shuffle block manager",
+   "factory_va": 7581016
+  },
+  {
+   "profile_id": null,
+   "sprite_id": 27,
+   "name_jp": "\u30b9\u30ed\u30c3\u30c8\u30de\u30cd\u30fc\u30b8\u30e3",
+   "name_en": "Slot manager",
+   "factory_va": 7611632
+  },
+  {
+   "profile_id": null,
+   "sprite_id": 28,
+   "name_jp": "\u30b3\u30a4\u30f3\u307e\u304d\u30de\u30cd\u30fc\u30b8\u30e3",
+   "name_en": "Coin throwing manager",
+   "factory_va": 7531444
+  },
+  {
+   "profile_id": null,
+   "sprite_id": 29,
+   "name_jp": "\u30de\u30b8\u30c3\u30af\u30cf\u30f3\u30c9\u30bf\u30b0\u30d1\u30fc",
+   "name_en": "Magic hand tag per",
+   "factory_va": 6840552
+  },
+  {
+   "profile_id": null,
+   "sprite_id": 30,
+   "name_jp": "\u30de\u30b8\u30c3\u30af\u30cf\u30f3\u30c9\u30bf\u30b0\u30b0\u30fc",
+   "name_en": "Magic Hand Tag Goo",
+   "factory_va": 6840552
+  },
+  {
+   "profile_id": null,
+   "sprite_id": 31,
+   "name_jp": "\u30de\u30b8\u30c3\u30af\u30cf\u30f3\u30c9\u30bf\u30b0\u30b0\u30fc\u30fb\u901f\u3044",
+   "name_en": "Magic Hand Tag Goo-Fast",
+   "factory_va": 6840552
+  },
+  {
+   "profile_id": 20,
+   "sprite_id": 32,
+   "name_jp": "\u5438\u3044\u8fbc\u307f\u6c34\u30bf\u30b0",
+   "name_en": "Suction water tag",
+   "factory_va": 7282944
+  },
+  {
+   "profile_id": 21,
+   "sprite_id": 33,
+   "name_jp": "\u6d41\u308c\u661f\u30b9\u30bf\u30fc",
+   "name_en": "Shooting star",
+   "factory_va": 4646032
+  },
+  {
+   "profile_id": 22,
+   "sprite_id": 34,
+   "name_jp": "\u30b9\u30bf\u30c3\u30d5\u30ed\u30fc\u30eb\u30de\u30cd\u30fc\u30b8\u30e3",
+   "name_en": "Staff role manager",
+   "factory_va": 7645440
+  },
+  {
+   "profile_id": 23,
+   "sprite_id": 35,
+   "name_jp": "\u30b9\u30bf\u30c3\u30d5\u30ed\u30fc\u30eb\u30de\u30cd\u30fc\u30b8\u30e3",
+   "name_en": "Staff role manager",
+   "factory_va": 7655304
+  },
+  {
+   "profile_id": 24,
+   "sprite_id": 36,
+   "name_jp": "\u30b7\u30e7\u30fc\u30c8\u30d7\u30ec\u30a4\u7d50\u679c\u30c7\u30e2\u30bf\u30b0",
+   "name_en": "Short play results demo tag",
+   "factory_va": 8587084
+  },
+  {
+   "profile_id": 25,
+   "sprite_id": 37,
+   "name_jp": "\u30dc\u30af\u30b7\u30f3\u30b0\u30af\u30c3\u30d1Jr.\u5c02\u7528\u5e8a\u30de\u30cd\u30fc\u30b8\u30e3",
+   "name_en": "Boxing Kupper Jr. Dedicated Floor Manager",
+   "factory_va": 6509156
+  },
+  {
+   "profile_id": 26,
+   "sprite_id": 38,
+   "name_jp": "\u30b0\u30eb\u30fc\u30d7\u30d7\u30af\u30d7\u30af\u7ba1\u7406\u30bf\u30b0",
+   "name_en": "Group Puk Puk Management Tag",
+   "factory_va": 3621976
+  },
+  {
+   "profile_id": 27,
+   "sprite_id": 39,
+   "name_jp": "\u4e2d\u5fc3\u541b\u30fb\u632f\u308a\u5b50",
+   "name_en": "Center you, pendulum",
+   "factory_va": 6087692
+  },
+  {
+   "profile_id": 28,
+   "sprite_id": 40,
+   "name_jp": "\u4e2d\u5fc3\u541b\u30fb\u56de\u8ee2",
+   "name_en": "Center Jun",
+   "factory_va": 6082056
+  },
+  {
+   "profile_id": 29,
+   "sprite_id": 41,
+   "name_jp": "\u4e2d\u5fc3\u541b\u30fb\u632f\u308a\u5b50\u30fb\u30ec\u30fc\u30eb\u5bfe\u5fdc\u7248",
+   "name_en": "Center you \u30fb pendulum \u30fb rail compatible version",
+   "factory_va": 6089236
+  },
+  {
+   "profile_id": null,
+   "sprite_id": 42,
+   "name_jp": "\u4e2d\u5fc3\u541b\u30fb\u56de\u8ee2\u30fb\u30ec\u30fc\u30eb\u5bfe\u5fdc\u7248",
+   "name_en": "Center you \u30fb rotation \u30fb rail compatible version",
+   "factory_va": 6086352
+  },
+  {
+   "profile_id": null,
+   "sprite_id": 43,
+   "name_jp": "\u4e2d\u5fc3\u541b\u5bfe\u5fdc\u30b0\u30eb\u30b0\u30eb",
+   "name_en": "Center for you",
+   "factory_va": 3664888
+  },
+  {
+   "profile_id": null,
+   "sprite_id": 44,
+   "name_jp": "\u4e2d\u5fc3\u541b\u5bfe\u5fdc\u30b0\u30eb\u30b0\u30eb(RDash)",
+   "name_en": "Center for your response Gruguru (RDash)",
+   "factory_va": 3664888
+  },
+  {
+   "profile_id": null,
+   "sprite_id": 45,
+   "name_jp": "\u89aa\u4e2d\u5fc3\u541b\u30b3\u30a4\u30f3",
+   "name_en": "Parent center you coin",
+   "factory_va": 6232268
+  },
+  {
+   "profile_id": null,
+   "sprite_id": 46,
+   "name_jp": "\u89aa\u4e2d\u5fc3\u541b\u901a\u904e\u30b3\u30a4\u30f3",
+   "name_en": "Parent center pass coin",
+   "factory_va": 6232268
+  },
+  {
+   "profile_id": null,
+   "sprite_id": 47,
+   "name_jp": "\u56de\u8ee2\u5236\u5fa1\u541b",
+   "name_en": "Rotation control you",
+   "factory_va": 7117404
+  },
+  {
+   "profile_id": 30,
+   "sprite_id": 48,
+   "name_jp": "\u6761\u4ef6\u30d5\u30e9\u30b0\u4ed8\u304d\u56de\u8ee2\u5236\u5fa1\u541b",
+   "name_en": "Rotation control with condition flag you",
+   "factory_va": 7117544
+  },
+  {
+   "profile_id": 31,
+   "sprite_id": 49,
+   "name_jp": "\u30ad\u30ce\u30b3\u30ea\u30d5\u30c8\u30fb\u89aa",
+   "name_en": "Mushroom lift, parent",
+   "factory_va": 6500644
+  },
+  {
+   "profile_id": 32,
+   "sprite_id": 50,
+   "name_jp": "\u30d1\u30e9\u30b7\u30e5\u30fc\u30c8\u30b3\u30a4\u30f3\u89aa",
+   "name_en": "Parachute coin parent",
+   "factory_va": 5795888
+  },
+  {
+   "profile_id": 33,
+   "sprite_id": 51,
+   "name_jp": "\u306d\u3058\u56de\u3057\u3067\u52d5\u304f\u5168\u5f53\u305f\u308a OBJ\u30fb\u89aa",
+   "name_en": "All-round OBJ \u00b7 parent moving with a screwdriver",
+   "factory_va": 6976496
+  },
+  {
+   "profile_id": 34,
+   "sprite_id": 52,
+   "name_jp": "\u4f38\u7e2e\u30d6\u30ed\u30c3\u30af\u30fb\u89aa",
+   "name_en": "Telescopic block / parent",
+   "factory_va": 6283404
+  },
+  {
+   "profile_id": 35,
+   "sprite_id": 53,
+   "name_jp": "\u5e8a\u56de\u8ee2",
+   "name_en": "Floor rotation",
+   "factory_va": 6330312
+  },
+  {
+   "profile_id": 36,
+   "sprite_id": 54,
+   "name_jp": "\u5168\u5f53\u305f\u308a\u30dd\u30ea\u30b4\u30f3",
+   "name_en": "Total hit polygon",
+   "factory_va": 6954108
+  },
+  {
+   "profile_id": 37,
+   "sprite_id": 55,
+   "name_jp": "\u5168\u5f53\u305f\u308a\u30dd\u30ea\u30b4\u30f3\u30fb\u7826\u7528",
+   "name_en": "Total hit polygons / for mischief",
+   "factory_va": 6959220
+  },
+  {
+   "profile_id": 38,
+   "sprite_id": 56,
+   "name_jp": "\u5168\u5f53\u305f\u308a\u30dd\u30ea\u30b4\u30f3\u30fb\u91ce\u539f\u7528",
+   "name_en": "For all polygons / fields",
+   "factory_va": 6958448
+  },
+  {
+   "profile_id": 39,
+   "sprite_id": 57,
+   "name_jp": "\u5168\u5f53\u305f\u308a\u30dd\u30ea\u30b4\u30f3\u30fb\u9ad8\u539f\u7528",
+   "name_en": "For all polygons / plateau",
+   "factory_va": 6957524
+  },
+  {
+   "profile_id": null,
+   "sprite_id": 58,
+   "name_jp": "\u5168\u5f53\u305f\u308a\u30dd\u30ea\u30b4\u30f3\u30fb\u98db\u884c\u8239",
+   "name_en": "Total polygon / airship",
+   "factory_va": 3541128
+  },
+  {
+   "profile_id": null,
+   "sprite_id": 59,
+   "name_jp": "\u5168\u5f53\u305f\u308a\u30dd\u30ea\u30b4\u30f3\u30fb\u958b\u9589",
+   "name_en": "Total hit polygon, opening and closing",
+   "factory_va": 6738320
+  },
+  {
+   "profile_id": null,
+   "sprite_id": 60,
+   "name_jp": "\u89aa\u5b50\u30aa\u30d6\u30b8\u30a7\u30fb\u5b50",
+   "name_en": "Parent-child object, child",
+   "factory_va": 6979424
+  },
+  {
+   "profile_id": null,
+   "sprite_id": 61,
+   "name_jp": "\u89aa\u5b50\u30aa\u30d6\u30b8\u30a7\u30fb\u5b50\u30fb\u7826\u7528",
+   "name_en": "Parent-child object, child, abuse",
+   "factory_va": 6997840
+  },
+  {
+   "profile_id": null,
+   "sprite_id": 62,
+   "name_jp": "\u89aa\u5b50\u30aa\u30d6\u30b8\u30a7\u30fb\u5b50\u30fb\u5ca9",
+   "name_en": "Parent-child object, child, rock",
+   "factory_va": 6987788
+  },
+  {
+   "profile_id": null,
+   "sprite_id": 63,
+   "name_jp": "\u89aa\u5b50\u30aa\u30d6\u30b8\u30a7\u30fb\u5b50\u30fb\u9244",
+   "name_en": "Parent-child object, child, iron",
+   "factory_va": 6986624
+  },
+  {
+   "profile_id": 40,
+   "sprite_id": 64,
+   "name_jp": "\u89aa\u5b50\u30aa\u30d6\u30b8\u30a7\u30fb\u5b50\u30fb\u91ce\u539f\u7528",
+   "name_en": "For parent and child object, child, field",
+   "factory_va": 6993020
+  },
+  {
+   "profile_id": 41,
+   "sprite_id": 65,
+   "name_jp": "\u89aa\u5b50\u30aa\u30d6\u30b8\u30a7\u30fb\u5b50\u30fb\u9ad8\u539f\u7528",
+   "name_en": "For parent and child object, child, plateau",
+   "factory_va": 6990712
+  },
+  {
+   "profile_id": 42,
+   "sprite_id": 66,
+   "name_jp": "\u89aa\u5b50\u30aa\u30d6\u30b8\u30a7\u30fb\u5b50\u30fb\u7d44\u307f\u5408\u308f\u305b",
+   "name_en": "Parent-child object, child, combination",
+   "factory_va": 6754344
+  },
+  {
+   "profile_id": 43,
+   "sprite_id": 67,
+   "name_jp": "\u89aa\u5b50\u30aa\u30d6\u30b8\u30a7\u30fb\u5b50\u30fb\u4e92\u3044\u9055\u3044",
+   "name_en": "Parent-child objects, children, alternate",
+   "factory_va": 6768008
+  },
+  {
+   "profile_id": 44,
+   "sprite_id": 68,
+   "name_jp": "\u89aa\u5b50\u30aa\u30d6\u30b8\u30a7\u30fb\u5b50\u30fb\u4e92\u3044\u9055\u3044\u6b6f\u8eca",
+   "name_en": "Parent-child object, child, alternate gear",
+   "factory_va": 6769468
+  },
+  {
+   "profile_id": 45,
+   "sprite_id": 69,
+   "name_jp": "\u89aa\u5b50\u30aa\u30d6\u30b8\u30a7\u30fb\u5b50\u30fb\u6eb6\u5ca9\u57ce",
+   "name_en": "Parent-child object, child, lava castle",
+   "factory_va": 6757152
+  },
+  {
+   "profile_id": 46,
+   "sprite_id": 70,
+   "name_jp": "\u89aa\u5b50\u30aa\u30d6\u30b8\u30a7\u30fb\u5b50\u30fb\u7802\u6f20\u306e\u907a\u8de1",
+   "name_en": "Remains of parent and child object, child, desert",
+   "factory_va": 6996768
+  },
+  {
+   "profile_id": 47,
+   "sprite_id": 71,
+   "name_jp": "\u89aa\u5b50\u30aa\u30d6\u30b8\u30a7\u30fb\u5b50\u30fb\u7826\u5ca9",
+   "name_en": "Parent-child object, child, persimmon rock",
+   "factory_va": 6998852
+  },
+  {
+   "profile_id": 48,
+   "sprite_id": 72,
+   "name_jp": "\u89aa\u5b50\u30aa\u30d6\u30b8\u30a7\u30fb\u5b50\u30fb\u7826\u5ca9(RDash\u7528)",
+   "name_en": "Parent-child object, child, persimmon (for RDash)",
+   "factory_va": 7000028
+  },
+  {
+   "profile_id": 49,
+   "sprite_id": 73,
+   "name_jp": "\u89aa\u5b50\u30aa\u30d6\u30b8\u30a7\u30fb\u5b50\u30fb\u57ce",
+   "name_en": "Parent-child object, child, castle",
+   "factory_va": 6756336
+  },
+  {
+   "profile_id": null,
+   "sprite_id": 74,
+   "name_jp": "\u89aa\u5b50\u30aa\u30d6\u30b8\u30a7\u30fb\u5b50\u30fb\u8b66\u544a",
+   "name_en": "Parent-child object, child, warning",
+   "factory_va": 7000732
+  },
+  {
+   "profile_id": null,
+   "sprite_id": 75,
+   "name_jp": "\u89aa\u5b50\u30aa\u30d6\u30b8\u30a7\u30fb\u5b50\u30fb\u91ce\u539f\u7528\u30fb\u534a\u5f53\u305f\u308a",
+   "name_en": "Parent-child object, child, for field, half hit",
+   "factory_va": 6994032
+  },
+  {
+   "profile_id": null,
+   "sprite_id": 76,
+   "name_jp": "\u30ad\u30ce\u30b3\u8db3\u5834\u30fb\u5de6\u53f3\u79fb\u52d5",
+   "name_en": "Mushroom scaffolding, left and right movement",
+   "factory_va": 6988800
+  },
+  {
+   "profile_id": null,
+   "sprite_id": 77,
+   "name_jp": "\u30ad\u30ce\u30b3\u30ea\u30d5\u30c8",
+   "name_en": "Mushroom lift",
+   "factory_va": 6493172
+  },
+  {
+   "profile_id": null,
+   "sprite_id": 78,
+   "name_jp": "\u30ab\u30e9\u30fc\u30ad\u30ce\u30b3\u30ea\u30d5\u30c8",
+   "name_en": "Color mushroom lift",
+   "factory_va": 6497460
+  },
+  {
+   "profile_id": null,
+   "sprite_id": 79,
+   "name_jp": "\u661f\u30ea\u30d5\u30c8",
+   "name_en": "Star lift",
+   "factory_va": 6758576
+  },
+  {
+   "profile_id": 50,
+   "sprite_id": 80,
+   "name_jp": "\u30aa\u30d6\u30b8\u30a7\u30ad\u30ce\u30b3",
+   "name_en": "Object mushroom",
+   "factory_va": 6926744
+  },
+  {
+   "profile_id": 51,
+   "sprite_id": 81,
+   "name_jp": "\u30d5\u30e9\u30a4\u30f3\u30b0\u30ad\u30ce\u30b3",
+   "name_en": "Flying mushroom",
+   "factory_va": 6339476
+  },
+  {
+   "profile_id": 52,
+   "sprite_id": 82,
+   "name_jp": "\u30c8\u30e9\u30f3\u30dd\u30ea\u30f3\u96f2",
+   "name_en": "Trampoline clouds",
+   "factory_va": 7256504
+  },
+  {
+   "profile_id": 53,
+   "sprite_id": 83,
+   "name_jp": "\u30c8\u30e9\u30f3\u30dd\u30ea\u30f3\u96f2(\u4e57\u308b\u3068\u52d5\u304f)",
+   "name_en": "Trampoline cloud (moves when riding)",
+   "factory_va": 7265060
+  },
+  {
+   "profile_id": 54,
+   "sprite_id": 84,
+   "name_jp": "\u6c34\u5730\u5f62\u30a2\u30af\u30bf\u30fc",
+   "name_en": "Water topography actor",
+   "factory_va": 5943892
+  },
+  {
+   "profile_id": 55,
+   "sprite_id": 85,
+   "name_jp": "\u6eb6\u5ca9\u5730\u5f62\u30a2\u30af\u30bf\u30fc",
+   "name_en": "Lava Terrain actor",
+   "factory_va": 5930288
+  },
+  {
+   "profile_id": 56,
+   "sprite_id": 86,
+   "name_jp": "\u6bd2\u6cbc\u5730\u5f62\u30a2\u30af\u30bf\u30fc",
+   "name_en": "Poisonous terrain actor",
+   "factory_va": 5937644
+  },
+  {
+   "profile_id": 57,
+   "sprite_id": 87,
+   "name_jp": "\u7802\u6f20\u5730\u5f62\u30a2\u30af\u30bf\u30fc",
+   "name_en": "Desert terrain actor",
+   "factory_va": 5941104
+  },
+  {
+   "profile_id": 58,
+   "sprite_id": 88,
+   "name_jp": "\u96f2\u5730\u5f62\u30a2\u30af\u30bf\u30fc",
+   "name_en": "Cloud terrain actor",
+   "factory_va": 5928872
+  },
+  {
+   "profile_id": 59,
+   "sprite_id": 89,
+   "name_jp": "\u9744\u5730\u5f62\u30a2\u30af\u30bf\u30fc",
+   "name_en": "\u9744 Terrain actor",
+   "factory_va": 5936264
+  },
+  {
+   "profile_id": null,
+   "sprite_id": 90,
+   "name_jp": "\u30de\u30ea\u30aa\u5e8a\u5730\u5f62\u30a2\u30af\u30bf\u30fc",
+   "name_en": "Mario floor terrain actor",
+   "factory_va": 5922064
+  },
+  {
+   "profile_id": null,
+   "sprite_id": 91,
+   "name_jp": "\u6ce2\u6253\u3064\u5e8a\u5730\u5f62\u30a2\u30af\u30bf\u30fc",
+   "name_en": "Rippling floor topography actor",
+   "factory_va": 5906608
+  },
+  {
+   "profile_id": null,
+   "sprite_id": 92,
+   "name_jp": "\u30b9\u30d4\u30f3\u7dda\u30ea\u30d5\u30c8",
+   "name_en": "Spin line lift",
+   "factory_va": 6792680
+  },
+  {
+   "profile_id": null,
+   "sprite_id": 93,
+   "name_jp": "\u7dda\u30ad\u30ce\u30b3\u30d6\u30ed\u30c3\u30af",
+   "name_en": "Line mushroom block",
+   "factory_va": 6790008
+  },
+  {
+   "profile_id": null,
+   "sprite_id": 94,
+   "name_jp": "\u30b0\u30eb\u30fc\u30d7\u7dda\u30ad\u30ce\u30b3\u30d6\u30ed\u30c3\u30af",
+   "name_en": "Group line mushroom block",
+   "factory_va": 6395296
+  },
+  {
+   "profile_id": null,
+   "sprite_id": 95,
+   "name_jp": "\u9006\u632f\u308a\u5b50\u30ea\u30d5\u30c8",
+   "name_en": "Reverse pendulum lift",
+   "factory_va": 6655404
+  },
+  {
+   "profile_id": 60,
+   "sprite_id": 96,
+   "name_jp": "\u9006\u632f\u308a\u5b50\u30ea\u30d5\u30c8(RDash\u5f53\u305f\u308a\u6d88\u3048\u306a\u3044\u7248)",
+   "name_en": "Reverse Pendulum Lift (Invisible Version per RDash)",
+   "factory_va": 6655404
+  },
+  {
+   "profile_id": 61,
+   "sprite_id": 97,
+   "name_jp": "\u30e9\u30a4\u30c8\u4ed8\u304d\u534a\u5f53\u305f\u308a\u56de\u8ee2\u30ea\u30d5\u30c8",
+   "name_en": "Half lift with light",
+   "factory_va": 6530728
+  },
+  {
+   "profile_id": 62,
+   "sprite_id": 98,
+   "name_jp": "\u6eb6\u5ca9\u632f\u308a\u5b50\u30ea\u30d5\u30c8",
+   "name_en": "Lava pendulum lift",
+   "factory_va": 6540544
+  },
+  {
+   "profile_id": 63,
+   "sprite_id": 99,
+   "name_jp": "\u6eb6\u5ca9\u632f\u308a\u5b50\u30ea\u30d5\u30c8(RDash)",
+   "name_en": "Lava Pendulum Lift (RDash)",
+   "factory_va": 6540544
+  },
+  {
+   "profile_id": 64,
+   "sprite_id": 100,
+   "name_jp": "\u30ec\u30fc\u30eb\u52d5\u4f5c\u306e\u5168\u3042\u305f\u308a\u30dd\u30ea\u30b4\u30f3",
+   "name_en": "All around polygon of rail movement",
+   "factory_va": 7083312
+  },
+  {
+   "profile_id": 65,
+   "sprite_id": 101,
+   "name_jp": "\u30ad\u30e9\u30fc\u7832\u53f0",
+   "name_en": "Bill blaster",
+   "factory_va": 3293720
+  },
+  {
+   "profile_id": 66,
+   "sprite_id": 102,
+   "name_jp": "\u4f38\u7e2e\u30ad\u30e9\u30fc\u7832\u53f0",
+   "name_en": "Telescopic Killer Battery",
+   "factory_va": 3293720
+  },
+  {
+   "profile_id": 67,
+   "sprite_id": 103,
+   "name_jp": "\u30de\u30b0\u30ca\u30e0\u30ad\u30e9\u30fc\u7832\u53f0",
+   "name_en": "Magnum Killer Battery",
+   "factory_va": 3293720
+  },
+  {
+   "profile_id": 68,
+   "sprite_id": 104,
+   "name_jp": "\u30de\u30b0\u30ca\u30e0\u30ad\u30e9\u30fc\u7832\u53f0\uff08\u4e0b\u5411\u304d\uff09",
+   "name_en": "Magnum killer battery (downward)",
+   "factory_va": 3293720
+  },
+  {
+   "profile_id": 69,
+   "sprite_id": 105,
+   "name_jp": "\u30b5\u30fc\u30c1\u30ad\u30e9\u30fc\u7832\u53f0",
+   "name_en": "Search Killer Battery",
+   "factory_va": 3293720
+  },
+  {
+   "profile_id": null,
+   "sprite_id": 106,
+   "name_jp": "\u30b5\u30fc\u30c1\u30de\u30b0\u30ca\u30e0\u30ad\u30e9\u30fc\u7832\u53f0",
+   "name_en": "Search Magnum Killer Battery",
+   "factory_va": 3293720
+  },
+  {
+   "profile_id": null,
+   "sprite_id": 107,
+   "name_jp": "\u30b5\u30fc\u30c1\u30de\u30b0\u30ca\u30e0\u30ad\u30e9\u30fc\u7832\u53f0\uff08\u4e0b\u5411\u304d\uff09",
+   "name_en": "Search magnum killer battery (downward)",
+   "factory_va": 3293720
+  },
+  {
+   "profile_id": null,
+   "sprite_id": 108,
+   "name_jp": "\u30de\u30b0\u30ca\u30e0\u30ad\u30e9\u30fc\u7832\u53f0(RDash)",
+   "name_en": "Magnum Killer Battery (RDash)",
+   "factory_va": 3293720
+  },
+  {
+   "profile_id": null,
+   "sprite_id": 109,
+   "name_jp": "\u30de\u30b0\u30ca\u30e0\u30ad\u30e9\u30fc\u7832\u53f0\uff08\u4e0b\u5411\u304d\uff09(RDash)",
+   "name_en": "Magnum killer battery (downward) (RDash)",
+   "factory_va": 3293720
+  },
+  {
+   "profile_id": null,
+   "sprite_id": 110,
+   "name_jp": "\u30b5\u30fc\u30c1\u30de\u30b0\u30ca\u30e0\u30ad\u30e9\u30fc\u7832\u53f0(RDash)",
+   "name_en": "Search Magnum Killer Battery (RDash)",
+   "factory_va": 3293720
+  },
+  {
+   "profile_id": null,
+   "sprite_id": 111,
+   "name_jp": "\u30b5\u30fc\u30c1\u30de\u30b0\u30ca\u30e0\u30ad\u30e9\u30fc\u7832\u53f0\uff08\u4e0b\u5411\u304d\uff09(RDash)",
+   "name_en": "Search magnum killer battery (downward) (RDash)",
+   "factory_va": 3293720
+  },
+  {
+   "profile_id": 70,
+   "sprite_id": 112,
+   "name_jp": "\u56de\u8ee2\u30ad\u30e9\u30fc\u7832\u53f0",
+   "name_en": "Rotating killer battery",
+   "factory_va": 3193056
+  },
+  {
+   "profile_id": 71,
+   "sprite_id": 113,
+   "name_jp": "\u591a\u7832\u8eab\u30ad\u30e9\u30fc\u7832\u53f0",
+   "name_en": "Artillery Killer Battery",
+   "factory_va": 3193056
+  },
+  {
+   "profile_id": 72,
+   "sprite_id": 114,
+   "name_jp": "\u30ca\u30ca\u30e1\u7832\u53f0",
+   "name_en": "Naname Battery",
+   "factory_va": 2558724
+  },
+  {
+   "profile_id": 73,
+   "sprite_id": 115,
+   "name_jp": "\u56de\u8ee2\u7832\u53f0",
+   "name_en": "Rotating battery",
+   "factory_va": 2546136
+  },
+  {
+   "profile_id": 74,
+   "sprite_id": 116,
+   "name_jp": "\u56de\u8ee2\u7832\u53f0\u5927",
+   "name_en": "Rotating battery size",
+   "factory_va": 2552700
+  },
+  {
+   "profile_id": 75,
+   "sprite_id": 117,
+   "name_jp": "\u7832\u9580",
+   "name_en": "Gun door",
+   "factory_va": 2540400
+  },
+  {
+   "profile_id": 76,
+   "sprite_id": 118,
+   "name_jp": "\u8d64\u30b3\u30a4\u30f3",
+   "name_en": "Red coin",
+   "factory_va": 7098024
+  },
+  {
+   "profile_id": 77,
+   "sprite_id": 119,
+   "name_jp": "\u7dd1\u30b3\u30a4\u30f3",
+   "name_en": "Green coin",
+   "factory_va": 6384008
+  },
+  {
+   "profile_id": 78,
+   "sprite_id": 120,
+   "name_jp": "\u7dd1\u30b3\u30a4\u30f3\u5b50",
+   "name_en": "Green coin child",
+   "factory_va": 6388156
+  },
+  {
+   "profile_id": 79,
+   "sprite_id": 121,
+   "name_jp": "\u9593\u6b20\u6cc9(\u7802)",
+   "name_en": "Geyser (sand)",
+   "factory_va": 6443180
+  },
+  {
+   "profile_id": null,
+   "sprite_id": 122,
+   "name_jp": "\u5e38\u99d0\u9593\u6b20\u6cc9(\u7802)",
+   "name_en": "Resident Geyser (sand)",
+   "factory_va": 6455724
+  },
+  {
+   "profile_id": null,
+   "sprite_id": 123,
+   "name_jp": "\u9593\u6b20\u6cc9(\u6c34)",
+   "name_en": "Geyser (water)",
+   "factory_va": 7290920
+  },
+  {
+   "profile_id": null,
+   "sprite_id": 124,
+   "name_jp": "\u5e38\u99d0\u9593\u6b20\u6cc9(\u6c34)",
+   "name_en": "Resident Geyser (Wed)",
+   "factory_va": 7342404
+  },
+  {
+   "profile_id": null,
+   "sprite_id": 125,
+   "name_jp": "RD3-3\u5c02\u7528\u5e38\u99d0\u9593\u6b20\u6cc9(\u6c34)",
+   "name_en": "RD3-3 resident geyser (water)",
+   "factory_va": 7344368
+  },
+  {
+   "profile_id": null,
+   "sprite_id": 126,
+   "name_jp": "\u9593\u6b20\u6cc9(\u6c34\u30fb\u30dc\u30b9\u7528)",
+   "name_en": "Geyser (for water and boss)",
+   "factory_va": 7309812
+  },
+  {
+   "profile_id": null,
+   "sprite_id": 127,
+   "name_jp": "\u9593\u6b20\u6cc9(\u6c34\u30fb\u30dc\u30b9\u7528\u306e\u5b50\u30a2\u30af\u30bf\u30fc)",
+   "name_en": "Geyser (child actor for water and boss)",
+   "factory_va": 7326564
+  },
+  {
+   "profile_id": 80,
+   "sprite_id": 128,
+   "name_jp": "\u9593\u6b20\u6cc9(\u6eb6\u5ca9)",
+   "name_en": "Geyser (Lava)",
+   "factory_va": 7387676
+  },
+  {
+   "profile_id": 81,
+   "sprite_id": 129,
+   "name_jp": "\u56de\u8ee2\u677f",
+   "name_en": "Rotating plate",
+   "factory_va": 6741280
+  },
+  {
+   "profile_id": 82,
+   "sprite_id": 130,
+   "name_jp": "\u30de\u30e1\u30de\u30ea\u30aa\u7528OBJ\u571f\u7ba1(\u53f3)",
+   "name_en": "OBJ earth pipe for legumerio (right)",
+   "factory_va": 6931816
+  },
+  {
+   "profile_id": 83,
+   "sprite_id": 131,
+   "name_jp": "\u30de\u30e1\u30de\u30ea\u30aa\u7528OBJ\u571f\u7ba1(\u5de6)",
+   "name_en": "OBJ ground pipe for legumerio (left)",
+   "factory_va": 6931396
+  },
+  {
+   "profile_id": 84,
+   "sprite_id": 132,
+   "name_jp": "\u30de\u30e1\u30de\u30ea\u30aa\u7528OBJ\u571f\u7ba1(\u4e0a)",
+   "name_en": "OBJ earth pipe for bean Mario (top)",
+   "factory_va": 6932244
+  },
+  {
+   "profile_id": 85,
+   "sprite_id": 133,
+   "name_jp": "\u30de\u30e1\u30de\u30ea\u30aa\u7528OBJ\u571f\u7ba1(\u4e0b)",
+   "name_en": "OBJ earth pipe for bean Mario (bottom)",
+   "factory_va": 6930976
+  },
+  {
+   "profile_id": 86,
+   "sprite_id": 134,
+   "name_jp": "OBJ\u571f\u7ba1\u30fb\u4e0b\u5411\u304dNEXTGOTO",
+   "name_en": "OBJ \u7ba1 \u30fb downward NEXTGOTO",
+   "factory_va": 6942572
+  },
+  {
+   "profile_id": 87,
+   "sprite_id": 135,
+   "name_jp": "\u30b3\u30a4\u30f3\u30d0\u30c8\u30eb\u7528\u571f\u7ba1\u30fb\u4e0a\u5411\u304dNEXTGOTO",
+   "name_en": "Earth ground for coin battle, upward NEXTGOTO",
+   "factory_va": 6228876
+  },
+  {
+   "profile_id": 88,
+   "sprite_id": 136,
+   "name_jp": "\u30b3\u30a4\u30f3\u30d0\u30c8\u30eb\u7528\u571f\u7ba1\u30fb\u4e0b\u5411\u304dNEXTGOTO",
+   "name_en": "Earth ground for coin battle, downward NEXTGOTO",
+   "factory_va": 6218896
+  },
+  {
+   "profile_id": 89,
+   "sprite_id": 137,
+   "name_jp": "\u30b3\u30a4\u30f3\u30d0\u30c8\u30eb\u7528\u571f\u7ba1\u30fb\u5de6\u5411\u304dNEXTGOTO",
+   "name_en": "Earth ground for coin battle, left facing NEXTGOTO",
+   "factory_va": 6222580
+  },
+  {
+   "profile_id": null,
+   "sprite_id": 138,
+   "name_jp": "\u30b3\u30a4\u30f3\u30d0\u30c8\u30eb\u7528\u571f\u7ba1\u30fb\u53f3\u5411\u304dNEXTGOTO",
+   "name_en": "Earth ground for coin battle, facing to the right NEXTGOTO",
+   "factory_va": 6225736
+  },
+  {
+   "profile_id": null,
+   "sprite_id": 139,
+   "name_jp": "\u4f38\u7e2e\u571f\u7ba1(\u53f3)",
+   "name_en": "Expandable earth pipe (right)",
+   "factory_va": 7408312
+  },
+  {
+   "profile_id": null,
+   "sprite_id": 140,
+   "name_jp": "\u4f38\u7e2e\u571f\u7ba1(\u5de6)",
+   "name_en": "Telescopic earth pipe (left)",
+   "factory_va": 7408036
+  },
+  {
+   "profile_id": null,
+   "sprite_id": 141,
+   "name_jp": "\u4f38\u7e2e\u571f\u7ba1(\u4e0a)",
+   "name_en": "Expandable earth pipe (top)",
+   "factory_va": 7406044
+  },
+  {
+   "profile_id": null,
+   "sprite_id": 142,
+   "name_jp": "\u4f38\u7e2e\u571f\u7ba1(\u4e0b)",
+   "name_en": "Telescopic earth pipe (bottom)",
+   "factory_va": 7407760
+  },
+  {
+   "profile_id": null,
+   "sprite_id": 143,
+   "name_jp": "\u56de\u8ee2\u571f\u7ba1",
+   "name_en": "Rotating earth pipe",
+   "factory_va": 7154068
+  },
+  {
+   "profile_id": 90,
+   "sprite_id": 144,
+   "name_jp": "\u56de\u8ee2\u571f\u7ba1(RDash)",
+   "name_en": "Rotating earth pipe (RDash)",
+   "factory_va": 7154068
+  },
+  {
+   "profile_id": 91,
+   "sprite_id": 145,
+   "name_jp": "\u571f\u7ba1\u5927\u7832",
+   "name_en": "Earth cannon",
+   "factory_va": 6058260
+  },
+  {
+   "profile_id": 92,
+   "sprite_id": 146,
+   "name_jp": "\u571f\u7ba1\u5927\u7832(RDash)",
+   "name_en": "Earth cannon (RDash)",
+   "factory_va": 6058260
+  },
+  {
+   "profile_id": 93,
+   "sprite_id": 147,
+   "name_jp": "\u8df3\u306d\u6a4b\u306e\u8155",
+   "name_en": "Arm of drawbridge",
+   "factory_va": 6730516
+  },
+  {
+   "profile_id": 94,
+   "sprite_id": 148,
+   "name_jp": "\u8df3\u306d\u6a4b\u306e\u652f\u67f1",
+   "name_en": "Strut of drawbridge",
+   "factory_va": 6734364
+  },
+  {
+   "profile_id": 95,
+   "sprite_id": 149,
+   "name_jp": "\u8df3\u306d\u6a4b\u306e\u7559\u3081\u5177",
+   "name_en": "Drawbridge fasteners",
+   "factory_va": 6736116
+  },
+  {
+   "profile_id": 96,
+   "sprite_id": 150,
+   "name_jp": "\u56de\u8ee2\u7826\u6a2a\u30d6\u30ed\u30c3\u30af",
+   "name_en": "Rotating rod side block",
+   "factory_va": 6773672
+  },
+  {
+   "profile_id": 97,
+   "sprite_id": 151,
+   "name_jp": "\u30ec\u30fc\u30eb\u52d5\u4f5c\u306e\u5168\u3042\u305f\u308a\u30dd\u30ea\u30b4\u30f3\u30fb\u5b50",
+   "name_en": "All polygons and children of the rail movement",
+   "factory_va": 7079776
+  },
+  {
+   "profile_id": 98,
+   "sprite_id": 152,
+   "name_jp": "\u56de\u8ee2\u30d6\u30ed\u30c3\u30af\uff08\u5168\u30a2\u30bf\u30ea\uff09",
+   "name_en": "Rotating block (all atari)",
+   "factory_va": 6653124
+  },
+  {
+   "profile_id": 99,
+   "sprite_id": 153,
+   "name_jp": "\u56de\u8ee2\u30d6\u30ed\u30c3\u30af\u30fb\u5730\u4e0b\u7528",
+   "name_en": "Rotating block for underground",
+   "factory_va": 7123396
+  },
+  {
+   "profile_id": null,
+   "sprite_id": 154,
+   "name_jp": "\u56de\u8ee2\u30d6\u30ed\u30c3\u30af\u30fb\u30ad\u30ce\u30b3",
+   "name_en": "Rotating block \u00b7 mushroom",
+   "factory_va": 7135620
+  },
+  {
+   "profile_id": null,
+   "sprite_id": 155,
+   "name_jp": "\u56de\u8ee2\u30d6\u30ed\u30c3\u30af\u30fb\u6728",
+   "name_en": "Rotating block / tree",
+   "factory_va": 7139076
+  },
+  {
+   "profile_id": null,
+   "sprite_id": 156,
+   "name_jp": "\u56de\u8ee2\u30d6\u30ed\u30c3\u30af\u30fb\u6728(RDash)",
+   "name_en": "Rotating block / tree (RDash)",
+   "factory_va": 7143464
+  },
+  {
+   "profile_id": null,
+   "sprite_id": 157,
+   "name_jp": "\u56de\u8ee2\u30d6\u30ed\u30c3\u30af\u30fb\u77f3",
+   "name_en": "Rotating block, stone",
+   "factory_va": 7137240
+  },
+  {
+   "profile_id": null,
+   "sprite_id": 158,
+   "name_jp": "\u56de\u8ee2\u30d6\u30ed\u30c3\u30af\u30fb\u304a\u5316\u3051",
+   "name_en": "Rotating block, ghost",
+   "factory_va": 7129568
+  },
+  {
+   "profile_id": null,
+   "sprite_id": 159,
+   "name_jp": "\u56de\u8ee2\u30d6\u30ed\u30c3\u30af\u30fb\u304a\u5316\u3051(RD4-\u5316\u3051\u5c02\u7528)",
+   "name_en": "Rotating block, ghost (RD4 only)",
+   "factory_va": 7131076
+  },
+  {
+   "profile_id": null,
+   "sprite_id": 160,
+   "name_jp": "\u5c02\u7528\u304a\u5316\u3051\u5c4b\u6577\u306e\u5168\u5f53\u305f\u308a\u30dd\u30ea\u30b4\u30f3",
+   "name_en": "The whole polygon of a dedicated haunted house",
+   "factory_va": 6959992
+  },
+  {
+   "profile_id": null,
+   "sprite_id": 161,
+   "name_jp": "\u304a\u5316\u3051\u5c4b\u6577\u306e\u56de\u308b\u90e8\u5c4b",
+   "name_en": "A room that turns around a haunted house",
+   "factory_va": 6576060
+  },
+  {
+   "profile_id": null,
+   "sprite_id": 162,
+   "name_jp": "\u56de\u8ee2\u30d6\u30ed\u30c3\u30af\u30fb\u30ab\u30e9\u30fc\uff08\u7a7a\u7528\uff09",
+   "name_en": "Rotating block color (for empty)",
+   "factory_va": 7127992
+  },
+  {
+   "profile_id": null,
+   "sprite_id": 163,
+   "name_jp": "\u56de\u8ee2\u30d6\u30ed\u30c3\u30af\u30fb\u9244",
+   "name_en": "Rotating block, iron",
+   "factory_va": 7133080
+  },
+  {
+   "profile_id": null,
+   "sprite_id": 164,
+   "name_jp": "\u56de\u8ee2\u30d6\u30ed\u30c3\u30af\u30fb\u9244(RDASH\u7528)",
+   "name_en": "Rotating block, iron (for RDASH)",
+   "factory_va": 7133828
+  },
+  {
+   "profile_id": null,
+   "sprite_id": 165,
+   "name_jp": "\u56de\u8ee2\u30d6\u30ed\u30c3\u30af\u30fb\u9244(RDASH\u7528\u305d\u306e2)",
+   "name_en": "Rotating block, iron (for RDASH 2)",
+   "factory_va": 7134552
+  },
+  {
+   "profile_id": null,
+   "sprite_id": 166,
+   "name_jp": "\u56de\u8ee2\u30d6\u30ed\u30c3\u30af\u30fb\u304a\u5316\u3051\u5c4b\u6577\u306e\u6c88\u6ca1\u8239",
+   "name_en": "The sunken ship of a rotating block and a haunted house",
+   "factory_va": 7132400
+  },
+  {
+   "profile_id": null,
+   "sprite_id": 167,
+   "name_jp": "\u30cf\u30f3\u30de\u30fc\u632f\u308a\u5b50",
+   "name_en": "Hammer pendulum",
+   "factory_va": 6726668
+  },
+  {
+   "profile_id": null,
+   "sprite_id": 168,
+   "name_jp": "\u30e2\u30a2\u30a4",
+   "name_en": "Moai",
+   "factory_va": 6868820
+  },
+  {
+   "profile_id": null,
+   "sprite_id": 169,
+   "name_jp": "RDash2-4\u5c02\u7528\u30e2\u30a2\u30a4",
+   "name_en": "RDash2-4 dedicated moai",
+   "factory_va": 6884768
+  },
+  {
+   "profile_id": null,
+   "sprite_id": 170,
+   "name_jp": "\u30e2\u30a2\u30a4\uff08\u4e0b\u5411\u304d\uff09",
+   "name_en": "Moai (downward)",
+   "factory_va": 6882176
+  },
+  {
+   "profile_id": null,
+   "sprite_id": 171,
+   "name_jp": "RDash2-4\u5c02\u7528\u30e2\u30a2\u30a4\uff08\u4e0b\u5411\u304d\uff09",
+   "name_en": "RDash2-4 dedicated moai (downward)",
+   "factory_va": 6883188
+  },
+  {
+   "profile_id": null,
+   "sprite_id": 172,
+   "name_jp": "RDash5-5\u5c02\u7528\u30e2\u30a2\u30a4",
+   "name_en": "RDash5-5 dedicated moai",
+   "factory_va": 6885572
+  },
+  {
+   "profile_id": null,
+   "sprite_id": 173,
+   "name_jp": "\u306d\u3058\u56de\u3057\u3067\u52d5\u304f\u5168\u5f53\u305f\u308a OBJ\u30fb\u5b50",
+   "name_en": "All-round OBJ \u00b7 child moving with a screwdriver",
+   "factory_va": 6969388
+  },
+  {
+   "profile_id": null,
+   "sprite_id": 174,
+   "name_jp": "\u306d\u3058\u56de\u3057\u3067\u52d5\u304f\u5168\u5f53\u305f\u308a OBJ\u30fb\u5b50\u30fb\u30d4\u30e9\u30df\u30c3\u30c9",
+   "name_en": "All-round OBJ \u00b7 child \u00b7 pyramid moving with a screwdriver",
+   "factory_va": 6972780
+  },
+  {
+   "profile_id": null,
+   "sprite_id": 175,
+   "name_jp": "\u306d\u3058\u56de\u3057\u3067\u52d5\u304f\u5168\u5f53\u305f\u308a OBJ\u30fb\u5b50\u30fb\u30d4\u30e9\u30df\u30c3\u30c9\u30fb\u5e38\u99d0",
+   "name_en": "All-round OBJ \u00b7 child \u00b7 pyramid \u00b7 resident move with a screwdriver",
+   "factory_va": 6975456
+  },
+  {
+   "profile_id": null,
+   "sprite_id": 176,
+   "name_jp": "\u306d\u3058\u56de\u3057\u3067\u52d5\u304f\u8db3\u5834",
+   "name_en": "Scaffolding that moves with a screwdriver",
+   "factory_va": 6967620
+  },
+  {
+   "profile_id": null,
+   "sprite_id": 177,
+   "name_jp": "\u306d\u3058\u56de\u3057\u3067\u52d5\u304f\u30ef\u30a4\u30e4\u30fc",
+   "name_en": "Wire driven by a screwdriver",
+   "factory_va": 7181092
+  },
+  {
+   "profile_id": null,
+   "sprite_id": 178,
+   "name_jp": "\u4e00\u5b9a\u6570\u4e57\u308b\u3068\u52d5\u304f\u30ea\u30d5\u30c8",
+   "name_en": "A lift that moves when you ride a certain number",
+   "factory_va": 6564724
+  },
+  {
+   "profile_id": null,
+   "sprite_id": 179,
+   "name_jp": "\u4e00\u5b9a\u6570\u4e57\u308b\u3068\u52d5\u304f\u304a\u5316\u3051\u30aa\u30d6\u30b8\u30a7BG",
+   "name_en": "A ghost object BG that moves when you ride a certain number",
+   "factory_va": 6933608
+  },
+  {
+   "profile_id": null,
+   "sprite_id": 180,
+   "name_jp": "\u4e00\u5b9a\u6570\u4e57\u308b\u3068\u6b62\u307e\u308b\u6eb6\u5ca9\u30ea\u30d5\u30c8",
+   "name_en": "A lava lift that stops when you ride a certain number",
+   "factory_va": 6646908
+  },
+  {
+   "profile_id": null,
+   "sprite_id": 181,
+   "name_jp": "\u30c1\u30e3\u30ec\u30f3\u30b8\u30e2\u30fc\u30c9\u5c02\u7528\u30d6\u30ed\u30c3\u30af",
+   "name_en": "Challenge mode dedicated block",
+   "factory_va": 5992460
+  },
+  {
+   "profile_id": null,
+   "sprite_id": 182,
+   "name_jp": "\u304a\u984c\u30e2\u30fc\u30c9\u8db3\u5834",
+   "name_en": "Themed mode scaffolding",
+   "factory_va": 6006496
+  },
+  {
+   "profile_id": null,
+   "sprite_id": 183,
+   "name_jp": "\u30af\u30a8\u30b9\u30c8\u5c02\u7528\u30d6\u30ed\u30c3\u30af",
+   "name_en": "Quest dedicated block",
+   "factory_va": 7076248
+  },
+  {
+   "profile_id": null,
+   "sprite_id": 184,
+   "name_jp": "\u6163\u6027\u7dda\u30ea\u30d5\u30c8",
+   "name_en": "Inertial wire lift",
+   "factory_va": 6797008
+  },
+  {
+   "profile_id": null,
+   "sprite_id": 185,
+   "name_jp": "\u6163\u6027\u7dda\u30ea\u30d5\u30c8\u89aa(RDash)",
+   "name_en": "Inertial line lift parent (RDash)",
+   "factory_va": 6814580
+  },
+  {
+   "profile_id": null,
+   "sprite_id": 186,
+   "name_jp": "\u6163\u6027\u7dda\u30ea\u30d5\u30c8\u5b50(RDash)",
+   "name_en": "Inertial line lift child (RDash)",
+   "factory_va": 6812968
+  },
+  {
+   "profile_id": null,
+   "sprite_id": 187,
+   "name_jp": "\u61d0\u4e2d\u96fb\u706f",
+   "name_en": "flashlight",
+   "factory_va": 6396204
+  },
+  {
+   "profile_id": null,
+   "sprite_id": 188,
+   "name_jp": "\u5149\u3067\u73fe\u308c\u308b\u30d6\u30ed\u30c3\u30af",
+   "name_en": "Light appearing block",
+   "factory_va": 5971500
+  },
+  {
+   "profile_id": null,
+   "sprite_id": 189,
+   "name_jp": "\u30d6\u30ed\u30c3\u30af\u51fa\u73fe\u3064\u305f",
+   "name_en": "Block appeared",
+   "factory_va": 6011440
+  },
+  {
+   "profile_id": null,
+   "sprite_id": 190,
+   "name_jp": "\u6930\u5b50\u306e\u6728",
+   "name_en": "Palm tree",
+   "factory_va": 7006168
+  },
+  {
+   "profile_id": null,
+   "sprite_id": 191,
+   "name_jp": "\u30c8\u30b2\u9244\u7403\u901a\u308a\u7a74",
+   "name_en": "Toge iron ball street hole",
+   "factory_va": 6457068
+  },
+  {
+   "profile_id": null,
+   "sprite_id": 192,
+   "name_jp": "\u30c8\u30b2\u9244\u7403\u901a\u308a\u7a74(RDash\u75282\u7826)",
+   "name_en": "Toge iron ball street hole (2 for RDash)",
+   "factory_va": 6457068
+  },
+  {
+   "profile_id": null,
+   "sprite_id": 193,
+   "name_jp": "\u30c8\u30b2\u9244\u7403\u6e67\u304d\u571f\u7ba1",
+   "name_en": "Toge iron ball ground earth pipe",
+   "factory_va": 7275096
+  },
+  {
+   "profile_id": null,
+   "sprite_id": 194,
+   "name_jp": "\u30b9\u30cd\u30fc\u30af\u30d6\u30ed\u30c3\u30af",
+   "name_en": "Snake block",
+   "factory_va": 3823104
+  },
+  {
+   "profile_id": null,
+   "sprite_id": 195,
+   "name_jp": "\u30b9\u30cd\u30fc\u30af\u30d6\u30ed\u30c3\u30af(R76\u7528)",
+   "name_en": "Snake block (for R76)",
+   "factory_va": 3823104
+  },
+  {
+   "profile_id": null,
+   "sprite_id": 196,
+   "name_jp": "\u30b9\u30cd\u30fc\u30af\u30d6\u30ed\u30c3\u30af(RDash\u7528)",
+   "name_en": "Snake block (for RDash)",
+   "factory_va": 3844060
+  },
+  {
+   "profile_id": null,
+   "sprite_id": 197,
+   "name_jp": "\u30b9\u30d4\u30f3\u56de\u8ee2\u30ad\u30ce\u30b3\u53f0",
+   "name_en": "Spin rotating mushroom stand",
+   "factory_va": 6697484
+  },
+  {
+   "profile_id": null,
+   "sprite_id": 198,
+   "name_jp": "\u30b9\u30d4\u30f3\u56de\u8ee2\u30ad\u30ce\u30b3\u53f0\u30fb\u5b50",
+   "name_en": "Spin rotating mushroom stand \u30fb child",
+   "factory_va": 6706864
+  },
+  {
+   "profile_id": null,
+   "sprite_id": 199,
+   "name_jp": "\u56de\u8ee2\u67a0\u30fb\u304a\u3070\u3051",
+   "name_en": "Rotating frame, ghost",
+   "factory_va": 7149584
+  },
+  {
+   "profile_id": null,
+   "sprite_id": 200,
+   "name_jp": "\u5149\u308b\u30d6\u30ed\u30c3\u30af\u30ea\u30d5\u30c8",
+   "name_en": "Glowing block lift",
+   "factory_va": 5995644
+  },
+  {
+   "profile_id": null,
+   "sprite_id": 201,
+   "name_jp": "\u6a2a\u4f38\u7e2e\u30ad\u30ce\u30b3\u30ea\u30d5\u30c8",
+   "name_en": "Horizontal telescopic mushroom lift",
+   "factory_va": 6683012
+  },
+  {
+   "profile_id": null,
+   "sprite_id": 202,
+   "name_jp": "\u6a2a\u4f38\u7e2e\u30ad\u30ce\u30b3\u30ea\u30d5\u30c8\uff08\u5e38\u99d0\uff09",
+   "name_en": "Horizontal telescopic mushroom lift (resident)",
+   "factory_va": 6683012
+  },
+  {
+   "profile_id": null,
+   "sprite_id": 203,
+   "name_jp": "\u4f38\u7e2e\u30d6\u30ed\u30c3\u30af\u30fb\u5b50(\u6a2a)",
+   "name_en": "Telescopic block, child (horizontal)",
+   "factory_va": 6277248
+  },
+  {
+   "profile_id": null,
+   "sprite_id": 204,
+   "name_jp": "\u4f38\u7e2e\u30d6\u30ed\u30c3\u30af\u30fb\u5b50(\u7e26)",
+   "name_en": "Telescopic block, child (vertical)",
+   "factory_va": 6286260
+  },
+  {
+   "profile_id": null,
+   "sprite_id": 205,
+   "name_jp": "\u30d1\u30bf\u30e1\u30c3\u30c8",
+   "name_en": "Patahmet",
+   "factory_va": 7032848
+  },
+  {
+   "profile_id": null,
+   "sprite_id": 206,
+   "name_jp": "\u30d1\u30bf\u30e1\u30c3\u30c8(\u5927)",
+   "name_en": "Patamet (Large)",
+   "factory_va": 7043516
+  },
+  {
+   "profile_id": null,
+   "sprite_id": 207,
+   "name_jp": "\u30d1\u30bf\u30e1\u30c3\u30c8",
+   "name_en": "Patahmet",
+   "factory_va": 7047500
+  },
+  {
+   "profile_id": null,
+   "sprite_id": 208,
+   "name_jp": "\u6b6f\u8eca",
+   "name_en": "gear",
+   "factory_va": 6357000
+  },
+  {
+   "profile_id": null,
+   "sprite_id": 209,
+   "name_jp": "\u6b6f\u8eca(RDash)",
+   "name_en": "Gears (RDash)",
+   "factory_va": 6357000
+  },
+  {
+   "profile_id": null,
+   "sprite_id": 210,
+   "name_jp": "\u5e8a\u56de\u8ee2(\u7a74\u3042\u304d\u571f\u7ba1)",
+   "name_en": "Floor rotation (perforated earth pipe)",
+   "factory_va": 6334144
+  },
+  {
+   "profile_id": null,
+   "sprite_id": 211,
+   "name_jp": "\u534a\u5f53\u305f\u308a\u4e0a\u4e0b\u79fb\u52d5\u30ea\u30d5\u30c8",
+   "name_en": "Half lift lift",
+   "factory_va": 6647936
+  },
+  {
+   "profile_id": null,
+   "sprite_id": 212,
+   "name_jp": "\u534a\u5f53\u305f\u308a\u5de6\u53f3\u79fb\u52d5\u30ea\u30d5\u30c8",
+   "name_en": "Half hit lift",
+   "factory_va": 6622464
+  },
+  {
+   "profile_id": null,
+   "sprite_id": 213,
+   "name_jp": "\u540c\u671f\u534a\u5f53\u305f\u308a\u5de6\u53f3\u79fb\u52d5\u30ea\u30d5\u30c8",
+   "name_en": "Synchronous half hit left and right movement lift",
+   "factory_va": 6622464
+  },
+  {
+   "profile_id": null,
+   "sprite_id": 214,
+   "name_jp": "\u540c\u671f\u534a\u5f53\u305f\u308a\u4e0a\u4e0b\u79fb\u52d5\u30ea\u30d5\u30c8",
+   "name_en": "Vertical movement lift per half",
+   "factory_va": 6647936
+  },
+  {
+   "profile_id": null,
+   "sprite_id": 215,
+   "name_jp": "\u6e67\u304d\u51fa\u3057\u30ea\u30d5\u30c8",
+   "name_en": "Spring lift",
+   "factory_va": 6709192
+  },
+  {
+   "profile_id": null,
+   "sprite_id": 216,
+   "name_jp": "\u6e67\u304d\u51fa\u3057\u30ea\u30d5\u30c8\u30fb\u30b9\u30c6\u30c3\u30d7",
+   "name_en": "Spring lift step",
+   "factory_va": 6710828
+  },
+  {
+   "profile_id": null,
+   "sprite_id": 217,
+   "name_jp": "\u7dda\u30ea\u30d5\u30c8",
+   "name_en": "Line lift",
+   "factory_va": 6557924
+  },
+  {
+   "profile_id": null,
+   "sprite_id": 218,
+   "name_jp": "\u540c\u671f\u7dda\u30ea\u30d5\u30c8",
+   "name_en": "Syncline lift",
+   "factory_va": 6557924
+  },
+  {
+   "profile_id": null,
+   "sprite_id": 219,
+   "name_jp": "\u7dda\u30ea\u30d5\u30c8RDash",
+   "name_en": "Line lift RDash",
+   "factory_va": 6557924
+  },
+  {
+   "profile_id": null,
+   "sprite_id": 220,
+   "name_jp": "\u30b7\u30fc\u30bd\u30fc\u30ea\u30d5\u30c8",
+   "name_en": "Seesaw lift",
+   "factory_va": 6678180
+  },
+  {
+   "profile_id": null,
+   "sprite_id": 221,
+   "name_jp": "\u30b7\u30fc\u30bd\u30fc\u30ea\u30d5\u30c8(RDash)",
+   "name_en": "Seesaw lift (RDash)",
+   "factory_va": 6678180
+  },
+  {
+   "profile_id": null,
+   "sprite_id": 222,
+   "name_jp": "\u4e38\u592a",
+   "name_en": "log",
+   "factory_va": 6852460
+  },
+  {
+   "profile_id": null,
+   "sprite_id": 223,
+   "name_jp": "\u6d6e\u304d\u6a3d",
+   "name_en": "Floating barrel",
+   "factory_va": 5897504
+  },
+  {
+   "profile_id": null,
+   "sprite_id": 224,
+   "name_jp": "\u30d0\u30fc\u30ca\u30fc",
+   "name_en": "burner",
+   "factory_va": 5881452
+  },
+  {
+   "profile_id": null,
+   "sprite_id": 225,
+   "name_jp": "\u30d0\u30fc\u30ca\u30fc(\u5927)",
+   "name_en": "Burner (Large)",
+   "factory_va": 5886560
+  },
+  {
+   "profile_id": null,
+   "sprite_id": 226,
+   "name_jp": "\u540c\u671f\u30d0\u30fc\u30ca\u30fc",
+   "name_en": "Sync burner",
+   "factory_va": 5893692
+  },
+  {
+   "profile_id": null,
+   "sprite_id": 227,
+   "name_jp": "\u56de\u8ee2\u30d0\u30fc\u30ca\u30fc",
+   "name_en": "Rotating burner",
+   "factory_va": 5888868
+  },
+  {
+   "profile_id": null,
+   "sprite_id": 228,
+   "name_jp": "\u30b8\u30e3\u30f3\u30d7\u30d6\u30ed\u30c3\u30af",
+   "name_en": "Jump block",
+   "factory_va": 5685512
+  },
+  {
+   "profile_id": null,
+   "sprite_id": 229,
+   "name_jp": "\u306e\u307c\u308a\u68d2",
+   "name_en": "Hot stick",
+   "factory_va": 6919588
+  },
+  {
+   "profile_id": null,
+   "sprite_id": 230,
+   "name_jp": "\u5929\u79e4\u30ea\u30d5\u30c8\u30b9\u30c6\u30c3\u30d7",
+   "name_en": "Balance lift step",
+   "factory_va": 6673160
+  },
+  {
+   "profile_id": null,
+   "sprite_id": 231,
+   "name_jp": "\u5929\u79e4\u30ea\u30d5\u30c8",
+   "name_en": "Balance lift",
+   "factory_va": 6665408
+  },
+  {
+   "profile_id": null,
+   "sprite_id": 232,
+   "name_jp": "\u5929\u79e4\u30ea\u30d5\u30c8\u623b\u308a",
+   "name_en": "Balance lift return",
+   "factory_va": 6665408
+  },
+  {
+   "profile_id": null,
+   "sprite_id": 233,
+   "name_jp": "\u30b0\u30e9\u30b0\u30e9\u5ca9",
+   "name_en": "Gravel rock",
+   "factory_va": 2923728
+  },
+  {
+   "profile_id": null,
+   "sprite_id": 234,
+   "name_jp": "\u79fb\u52d5\u91d1\u7db2",
+   "name_en": "Moving wire mesh",
+   "factory_va": 7372128
+  },
+  {
+   "profile_id": null,
+   "sprite_id": 235,
+   "name_jp": "\u6c37\u584a",
+   "name_en": "Ice block",
+   "factory_va": 6414544
+  },
+  {
+   "profile_id": null,
+   "sprite_id": 236,
+   "name_jp": "\u7a7a\u4e2d\u6c34",
+   "name_en": "Air water",
+   "factory_va": 7351088
+  },
+  {
+   "profile_id": null,
+   "sprite_id": 237,
+   "name_jp": "\u30d7\u30ec\u30a4\u30e4\u30fc\u6c37",
+   "name_en": "Player ice",
+   "factory_va": 7884708
+  },
+  {
+   "profile_id": null,
+   "sprite_id": 238,
+   "name_jp": "\u3076\u3089\u3055\u304c\u308a\u30c4\u30bf",
+   "name_en": "Hanging Tsuta",
+   "factory_va": 7228856
+  },
+  {
+   "profile_id": null,
+   "sprite_id": 239,
+   "name_jp": "\u3064\u304b\u307e\u308a\u9396",
+   "name_en": "Chain",
+   "factory_va": 7228392
+  },
+  {
+   "profile_id": null,
+   "sprite_id": 240,
+   "name_jp": "\u7e04\u68af\u5b50",
+   "name_en": "\u7e04 ladder",
+   "factory_va": 6510220
+  },
+  {
+   "profile_id": null,
+   "sprite_id": 241,
+   "name_jp": "\u6728\u7bb1(\u6e67\u304d\u51fa\u3057)",
+   "name_en": "Wooden box (well out)",
+   "factory_va": 7385840
+  },
+  {
+   "profile_id": null,
+   "sprite_id": 242,
+   "name_jp": "\u9244\u7bb1(\u6e67\u304d\u51fa\u3057)",
+   "name_en": "Iron box (well out)",
+   "factory_va": 7385840
+  },
+  {
+   "profile_id": null,
+   "sprite_id": 243,
+   "name_jp": "\u30ea\u30e2\u30b3\u30f3\u30b7\u30fc\u30bd\u30fc\u30ea\u30d5\u30c8",
+   "name_en": "Remote control seesaw lift",
+   "factory_va": 6610140
+  },
+  {
+   "profile_id": null,
+   "sprite_id": 244,
+   "name_jp": "\u30ea\u30e2\u30b3\u30f3\u6a2a\u79fb\u52d5\u7dda\u30ea\u30d5\u30c8",
+   "name_en": "Remote control horizontal movement line lift",
+   "factory_va": 6614976
+  },
+  {
+   "profile_id": null,
+   "sprite_id": 245,
+   "name_jp": "\u30a2\u30af\u30bf\u30fc\u77f3\u30d6\u30ed\u30c3\u30af",
+   "name_en": "Actor stone block",
+   "factory_va": 5719720
+  },
+  {
+   "profile_id": null,
+   "sprite_id": 246,
+   "name_jp": "\u30a2\u30af\u30bf\u30fc\u58ca\u308c\u306a\u3044\u30d6\u30ed\u30c3\u30af",
+   "name_en": "Actor does not break blocks",
+   "factory_va": 5669456
+  },
+  {
+   "profile_id": null,
+   "sprite_id": 247,
+   "name_jp": "\u30a2\u30af\u30bf\u30fc\u6728\u30d6\u30ed\u30c3\u30af",
+   "name_en": "Actor wood block",
+   "factory_va": 5719720
+  },
+  {
+   "profile_id": null,
+   "sprite_id": 248,
+   "name_jp": "\u304a\u624b\u672c\u30d6\u30ed\u30c3\u30af",
+   "name_en": "Model block",
+   "factory_va": 5680248
+  },
+  {
+   "profile_id": null,
+   "sprite_id": 249,
+   "name_jp": "RDash\u30eb\u30a4\u30fc\u30b8\u30d6\u30ed\u30c3\u30af",
+   "name_en": "RDash route block",
+   "factory_va": 7088092
+  },
+  {
+   "profile_id": null,
+   "sprite_id": 250,
+   "name_jp": "\u5168\u5f53\u305f\u308a\u5de6\u53f3\u79fb\u52d5\u30ea\u30d5\u30c8",
+   "name_en": "Left and right moving lift",
+   "factory_va": 6578920
+  },
+  {
+   "profile_id": null,
+   "sprite_id": 251,
+   "name_jp": "\u5168\u5f53\u305f\u308a\u4e0a\u4e0b\u79fb\u52d5\u30ea\u30d5\u30c8",
+   "name_en": "Vertical lift lift",
+   "factory_va": 6583272
+  },
+  {
+   "profile_id": null,
+   "sprite_id": 252,
+   "name_jp": "\u6eb6\u5ca9\u5730\u9762",
+   "name_en": "Lava ground",
+   "factory_va": 7394932
+  },
+  {
+   "profile_id": null,
+   "sprite_id": 253,
+   "name_jp": "\u6eb6\u5ca9\u5730\u9762(RDash)",
+   "name_en": "Lava ground (RDash)",
+   "factory_va": 7394932
+  },
+  {
+   "profile_id": null,
+   "sprite_id": 254,
+   "name_jp": "\u30e2\u30ce\u30ec\u30fc\u30eb\u30d6\u30ed\u30c3\u30af",
+   "name_en": "Monorail block",
+   "factory_va": 6890364
+  },
+  {
+   "profile_id": null,
+   "sprite_id": 255,
+   "name_jp": "\u30e2\u30ce\u30ec\u30fc\u30eb\u30d6\u30ed\u30c3\u30af\u306e\u30ec\u30fc\u30eb",
+   "name_en": "Monorail block rail",
+   "factory_va": 6894968
+  },
+  {
+   "profile_id": 100,
+   "sprite_id": 256,
+   "name_jp": "\u4e57\u308b\u3068\u52d5\u304f\u30ea\u30d5\u30c8",
+   "name_en": "A lift that moves when you get on",
+   "factory_va": 6627812
+  },
+  {
+   "profile_id": 101,
+   "sprite_id": 257,
+   "name_jp": "\u4e57\u308b\u3068\u52d5\u304f\u30ea\u30d5\u30c8\u7a7a\u7528",
+   "name_en": "For lifts that move when you get on",
+   "factory_va": 6633832
+  },
+  {
+   "profile_id": 102,
+   "sprite_id": 258,
+   "name_jp": "\u56de\u8ee2\u534a\u5f53\u305f\u308a\u5e8a",
+   "name_en": "Half turn per floor",
+   "factory_va": 7147136
+  },
+  {
+   "profile_id": 103,
+   "sprite_id": 259,
+   "name_jp": "\u89b3\u89a7\u8eca\u30ea\u30d5\u30c8",
+   "name_en": "Ferris wheel lift",
+   "factory_va": 6720556
+  },
+  {
+   "profile_id": 104,
+   "sprite_id": 260,
+   "name_jp": "\u8449\u3063\u3071\u30ea\u30d5\u30c8",
+   "name_en": "Leaf lift",
+   "factory_va": 6544952
+  },
+  {
+   "profile_id": 105,
+   "sprite_id": 261,
+   "name_jp": "\u30b7\u30e3\u30c3\u30d5\u30eb\u30d6\u30ed\u30c3\u30af",
+   "name_en": "Shuffle block",
+   "factory_va": 7566144
+  },
+  {
+   "profile_id": 106,
+   "sprite_id": 262,
+   "name_jp": "\u30dc\u30b9\u5927\u7832\uff08\u30b3\u30af\u30c3\u30d1\u98db\u884c\u8239\u4e57\u308a\u8fbc\u307f\u7528\uff09",
+   "name_en": "Boss cannon (for Kokoppa airship)",
+   "factory_va": 779516
+  },
+  {
+   "profile_id": 107,
+   "sprite_id": 263,
+   "name_jp": "\u6728\u306e\u679d\u4f38\u7e2e\u30ea\u30d5\u30c8",
+   "name_en": "Tree branch telescopic lift",
+   "factory_va": 6690584
+  },
+  {
+   "profile_id": 108,
+   "sprite_id": 264,
+   "name_jp": "\u30af\u30c3\u30d1\u7528\u8db3\u5834",
+   "name_en": "Footer scaffolding",
+   "factory_va": 6028472
+  },
+  {
+   "profile_id": 109,
+   "sprite_id": 265,
+   "name_jp": "\u30af\u30c3\u30d1\u30b7\u30e3\u30c3\u30bf\u30fc",
+   "name_en": "Kupper shutter",
+   "factory_va": 876888
+  },
+  {
+   "profile_id": null,
+   "sprite_id": 266,
+   "name_jp": "\u98db\u884c\u8239\u306e\u5e95",
+   "name_en": "Airship bottom",
+   "factory_va": 5830280
+  },
+  {
+   "profile_id": null,
+   "sprite_id": 267,
+   "name_jp": "\u98db\u884c\u8239\u306e\u5e95\u306e\u67a0",
+   "name_en": "Bottom frame of the airship",
+   "factory_va": 5838056
+  },
+  {
+   "profile_id": null,
+   "sprite_id": 268,
+   "name_jp": "\u98db\u884c\u8239\u306e\u5e95(RDash)",
+   "name_en": "Airship bottom (RDash)",
+   "factory_va": 5835460
+  },
+  {
+   "profile_id": null,
+   "sprite_id": 269,
+   "name_jp": "W8\u9053\u4e2d\u30af\u30c3\u30d1Jr.\u7528\u534a\u5f53\u305f\u308a\u4e0a\u4e0b\u79fb\u52d5\u30ea\u30d5\u30c8",
+   "name_en": "Half per shot vertical lift for Wupper Kuppa Jr.",
+   "factory_va": 1077900
+  },
+  {
+   "profile_id": null,
+   "sprite_id": 270,
+   "name_jp": "W8\u9053\u4e2d\u30af\u30c3\u30d1Jr.\u7528\u534a\u5f53\u305f\u308a\u5de6\u53f3\u79fb\u52d5\u30ea\u30d5\u30c8",
+   "name_en": "Half hit left and right move lift for W8 way Kuppa Jr.",
+   "factory_va": 1064168
+  },
+  {
+   "profile_id": null,
+   "sprite_id": 271,
+   "name_jp": "W8\u9053\u4e2d\u30af\u30c3\u30d1Jr.\u7528\u534a\u30a2\u30bf\u30ea\u79fb\u52d5\u30ea\u30d5\u30c8\uff08\u89aa\u5b50\u30aa\u30d6\u30b8\u30a7\u5bfe\u5fdc\uff09",
+   "name_en": "Semi Atari movement lift (for parent and child object correspondence) for W8 way Kuppa Jr.",
+   "factory_va": 1072736
+  },
+  {
+   "profile_id": 110,
+   "sprite_id": 272,
+   "name_jp": "\u30ed\u30a4\u7528\u6e67\u304d\u51fa\u3057\u30ea\u30d5\u30c8\u30fb\u30b9\u30c6\u30c3\u30d7",
+   "name_en": "Roy's Hot Lift Step",
+   "factory_va": 1116164
+  },
+  {
+   "profile_id": 111,
+   "sprite_id": 273,
+   "name_jp": "\u30a6\u30a7\u30f3\u30c7\u30a3\u306e\u5e8a",
+   "name_en": "Wendy's floor",
+   "factory_va": 1225324
+  },
+  {
+   "profile_id": 112,
+   "sprite_id": 274,
+   "name_jp": "\u30a4\u30ae\u30fc\u90e8\u5c4b",
+   "name_en": "Iggy room",
+   "factory_va": 669896
+  },
+  {
+   "profile_id": 113,
+   "sprite_id": 275,
+   "name_jp": "\u30b4\u30fc\u30eb\u30dd\u30fc\u30eb",
+   "name_en": "Goal pole",
+   "factory_va": 6364808
+  },
+  {
+   "profile_id": 114,
+   "sprite_id": 276,
+   "name_jp": "\u7d75\u753b\u30b9\u30c6\u30fc\u30b8\u7528\u30b4\u30fc\u30eb\u30dd\u30fc\u30eb",
+   "name_en": "Goal pole for painting stage",
+   "factory_va": 6364808
+  },
+  {
+   "profile_id": 115,
+   "sprite_id": 277,
+   "name_jp": "\u30b4\u30fc\u30eb\u30dd\u30fc\u30eb(RDash)",
+   "name_en": "Goal pole (RDash)",
+   "factory_va": 6364808
+  },
+  {
+   "profile_id": 116,
+   "sprite_id": 278,
+   "name_jp": "\u7d75\u753b\u30b9\u30c6\u30fc\u30b8\u7528\u30b4\u30fc\u30eb\u30dd\u30fc\u30eb(RDash)",
+   "name_en": "Goal pole for painting stage (RDash)",
+   "factory_va": 6364808
+  },
+  {
+   "profile_id": 117,
+   "sprite_id": 279,
+   "name_jp": "\u571f\u7ba1\u6c34\u6d41",
+   "name_en": "Earth flow",
+   "factory_va": 7356916
+  },
+  {
+   "profile_id": 118,
+   "sprite_id": 280,
+   "name_jp": "\u30af\u30c3\u30ad\u30fc",
+   "name_en": "cookie",
+   "factory_va": 2643920
+  },
+  {
+   "profile_id": 119,
+   "sprite_id": 281,
+   "name_jp": "\u30de\u30b8\u30c3\u30af\u30cf\u30f3\u30c9\u30fb\u6c34\u4e2d\u30af\u30c3\u30d1Jr.\u30c7\u30e2\u7528",
+   "name_en": "Magic hand for underwater Kuppa Jr. demo",
+   "factory_va": 6841424
+  },
+  {
+   "profile_id": null,
+   "sprite_id": 282,
+   "name_jp": "\u30de\u30b8\u30c3\u30af\u30cf\u30f3\u30c9\u30fb\u30dc\u30af\u30b7\u30f3\u30b0\u30af\u30c3\u30d1Jr.\u30c7\u30e2\u7528",
+   "name_en": "For magic hand boxing Kupper Jr. demonstration",
+   "factory_va": 6841424
+  },
+  {
+   "profile_id": null,
+   "sprite_id": 283,
+   "name_jp": "\u51b7\u51cd\u30d6\u30ed\u30c3\u30af",
+   "name_en": "Frozen block",
+   "factory_va": 6348020
+  },
+  {
+   "profile_id": null,
+   "sprite_id": 284,
+   "name_jp": "\uff30\u30e0\u30b5\u30b5\u30d3\u30d6\u30ed\u30c3\u30af",
+   "name_en": "P Musasabi block",
+   "factory_va": 7057396
+  },
+  {
+   "profile_id": null,
+   "sprite_id": 285,
+   "name_jp": "\u6c34\u306b\u6d6e\u304f\u6c37\u30d6\u30ed\u30c3\u30af",
+   "name_en": "Ice block floating in water",
+   "factory_va": 6318944
+  },
+  {
+   "profile_id": null,
+   "sprite_id": 286,
+   "name_jp": "\u6c34\u306b\u6d6e\u304f\u6c37\u30d6\u30ed\u30c3\u30af\uff08\u5927\uff09",
+   "name_en": "Ice block floating in water (large)",
+   "factory_va": 6318944
+  },
+  {
+   "profile_id": null,
+   "sprite_id": 287,
+   "name_jp": "\u30d6\u30ed\u30c3\u30af",
+   "name_en": "block",
+   "factory_va": 5967340
+  },
+  {
+   "profile_id": 120,
+   "sprite_id": 288,
+   "name_jp": "\u58ca\u308c\u305f\u30d6\u30ed\u30c3\u30af",
+   "name_en": "Broken block",
+   "factory_va": 6032180
+  },
+  {
+   "profile_id": 121,
+   "sprite_id": 289,
+   "name_jp": "\u30a2\u30af\u30bf\u30fc\u30cf\u30c6\u30ca\u30d6\u30ed\u30c3\u30af",
+   "name_en": "Actor Hatena Block",
+   "factory_va": 5671048
+  },
+  {
+   "profile_id": 122,
+   "sprite_id": 290,
+   "name_jp": "\u30a2\u30af\u30bf\u30fc\u30cf\u30c6\u30ca\u30d6\u30ed\u30c3\u30af(RDash)",
+   "name_en": "Actor Hatena Block (RDash)",
+   "factory_va": 5671048
+  },
+  {
+   "profile_id": 123,
+   "sprite_id": 291,
+   "name_jp": "\u30a2\u30af\u30bf\u30fc\u30ec\u30f3\u30ac\u30d6\u30ed\u30c3\u30af",
+   "name_en": "Actor brick block",
+   "factory_va": 5709024
+  },
+  {
+   "profile_id": 124,
+   "sprite_id": 292,
+   "name_jp": "\u30a2\u30af\u30bf\u30fc\u30ec\u30f3\u30ac\u30d6\u30ed\u30c3\u30af(RDash)",
+   "name_en": "Actor brick block (RDash)",
+   "factory_va": 5709024
+  },
+  {
+   "profile_id": 125,
+   "sprite_id": 293,
+   "name_jp": "\u30a2\u30af\u30bf\u30fc\u30ec\u30f3\u30ac\u30d6\u30ed\u30c3\u30af\uff08\u30ec\u30fc\u30eb\u7e26\u65b9\u5411\uff09",
+   "name_en": "Actor brick block (rail vertical direction)",
+   "factory_va": 5709024
+  },
+  {
+   "profile_id": 126,
+   "sprite_id": 294,
+   "name_jp": "\u30a2\u30af\u30bf\u30fc\u900f\u660e\u30d6\u30ed\u30c3\u30af",
+   "name_en": "Actor transparent block",
+   "factory_va": 5663512
+  },
+  {
+   "profile_id": 127,
+   "sprite_id": 295,
+   "name_jp": "\u30a2\u30af\u30bf\u30fc\u900f\u660e\u30d6\u30ed\u30c3\u30afRDash",
+   "name_en": "Actor Transparent Block RDash",
+   "factory_va": 5663512
+  },
+  {
+   "profile_id": 128,
+   "sprite_id": 296,
+   "name_jp": "\u30a2\u30af\u30bf\u30fc\u7dda\u5bfe\u5fdc\u30cf\u30c6\u30ca\u30d6\u30ed\u30c3\u30af",
+   "name_en": "Actor wire corresponding hatena block",
+   "factory_va": 5677520
+  },
+  {
+   "profile_id": 129,
+   "sprite_id": 297,
+   "name_jp": "\u30a2\u30af\u30bf\u30fc\u7dda\u5bfe\u5fdc\u30ec\u30f3\u30ac\u30d6\u30ed\u30c3\u30af",
+   "name_en": "Actor wire corresponding brick block",
+   "factory_va": 5713812
+  },
+  {
+   "profile_id": null,
+   "sprite_id": 298,
+   "name_jp": "\u30a2\u30af\u30bf\u30fc\u30b0\u30eb\u30fc\u30d7\u7dda\u5bfe\u5fdc\u30cf\u30c6\u30ca\u30d6\u30ed\u30c3\u30af",
+   "name_en": "Actor group line compatible hatena block",
+   "factory_va": 5677520
+  },
+  {
+   "profile_id": null,
+   "sprite_id": 299,
+   "name_jp": "\u30a2\u30af\u30bf\u30fc\u30b0\u30eb\u30fc\u30d7\u7dda\u5bfe\u5fdc\u30ec\u30f3\u30ac\u30d6\u30ed\u30c3\u30af",
+   "name_en": "Actor group line corresponding brick block",
+   "factory_va": 5713812
+  },
+  {
+   "profile_id": null,
+   "sprite_id": 300,
+   "name_jp": "\u30a2\u30af\u30bf\u30fc\u56de\u8ee2\u5236\u5fa1\u30cf\u30c6\u30ca\u30d6\u30ed\u30c3\u30af",
+   "name_en": "Actor Rotation Control Hatena Block",
+   "factory_va": 5673156
+  },
+  {
+   "profile_id": null,
+   "sprite_id": 301,
+   "name_jp": "\u30a2\u30af\u30bf\u30fc\u56de\u8ee2\u5236\u5fa1\u30cf\u30c6\u30ca\u30d6\u30ed\u30c3\u30af(R99)",
+   "name_en": "Actor Rotation Control Hatena Block (R99)",
+   "factory_va": 5673156
+  },
+  {
+   "profile_id": null,
+   "sprite_id": 302,
+   "name_jp": "\u30a2\u30af\u30bf\u30fc\u56de\u8ee2\u5236\u5fa1\u30ec\u30f3\u30ac\u30d6\u30ed\u30c3\u30af",
+   "name_en": "Actor rotation control brick block",
+   "factory_va": 5710976
+  },
+  {
+   "profile_id": null,
+   "sprite_id": 303,
+   "name_jp": "\u30a2\u30af\u30bf\u30fc\u56de\u8ee2\u5236\u5fa1\u30ec\u30f3\u30ac\u30d6\u30ed\u30c3\u30af(RDash)",
+   "name_en": "Actor Rotation Control Brick Block (RDash)",
+   "factory_va": 5710976
+  },
+  {
+   "profile_id": 130,
+   "sprite_id": 304,
+   "name_jp": "\u56de\u8ee2\u5236\u5fa1\u30ec\u30f3\u30ac\u30d6\u30ed\u30c3\u30af(R99)",
+   "name_en": "Rotation control brick block (R99)",
+   "factory_va": 5710976
+  },
+  {
+   "profile_id": 131,
+   "sprite_id": 305,
+   "name_jp": "\u30a2\u30af\u30bf\u30fc\u56de\u8ee2\u5236\u5fa1\u541b\u7528\u30cf\u30c6\u30ca\u30d6\u30ed\u30c3\u30af",
+   "name_en": "Actor Rotation Control Your Hatena Block",
+   "factory_va": 5678996
+  },
+  {
+   "profile_id": 132,
+   "sprite_id": 306,
+   "name_jp": "\u30a2\u30af\u30bf\u30fc\u56de\u8ee2\u5236\u5fa1\u541b\u7528\u30ec\u30f3\u30ac\u30d6\u30ed\u30c3\u30af",
+   "name_en": "Actor rotation control your brick block",
+   "factory_va": 5714812
+  },
+  {
+   "profile_id": 133,
+   "sprite_id": 307,
+   "name_jp": "\u753b\u9762\u8ffd\u5f93\u30cf\u30c6\u30ca\u30d6\u30ed\u30c3\u30af",
+   "name_en": "Screen following hatena block",
+   "factory_va": 5675996
+  },
+  {
+   "profile_id": 134,
+   "sprite_id": 308,
+   "name_jp": "\u753b\u9762\u8ffd\u5f93\u30ec\u30f3\u30ac\u30d6\u30ed\u30c3\u30af",
+   "name_en": "Screen following brick block",
+   "factory_va": 5712032
+  },
+  {
+   "profile_id": 135,
+   "sprite_id": 309,
+   "name_jp": "\u30a2\u30af\u30bf\u30fc\uff24\uff32\uff23\u51fa\u73fe\u30d6\u30ed\u30c3\u30af",
+   "name_en": "Actor DRC appearance block",
+   "factory_va": 4576572
+  },
+  {
+   "profile_id": 136,
+   "sprite_id": 310,
+   "name_jp": "\u30a2\u30af\u30bf\u30fc\u30d1\u30bf\u30d6\u30ed\u30c3\u30af",
+   "name_en": "Actor Patablock",
+   "factory_va": 5697168
+  },
+  {
+   "profile_id": 137,
+   "sprite_id": 311,
+   "name_jp": "\u30a2\u30af\u30bf\u30fc\u6c34\u9762\u30cf\u30c6\u30ca\u30d6\u30ed\u30c3\u30af",
+   "name_en": "Actor water surface hatena block",
+   "factory_va": 5726236
+  },
+  {
+   "profile_id": 138,
+   "sprite_id": 312,
+   "name_jp": "\u30a2\u30af\u30bf\u30fc\u30d6\u30ed\u30c3\u30af\u96f2",
+   "name_en": "Actor block cloud",
+   "factory_va": 5666116
+  },
+  {
+   "profile_id": 139,
+   "sprite_id": 313,
+   "name_jp": "\u30d8\u30d3\u30b3\u30a4\u30f3\u7528\u30d6\u30ed\u30c3\u30af",
+   "name_en": "Snake coin block",
+   "factory_va": 5717756
+  },
+  {
+   "profile_id": null,
+   "sprite_id": 314,
+   "name_jp": "\u30a2\u30af\u30bf\u30fc\u30d6\u30ed\u30c3\u30af\u30b9\u30a4\u30c3\u30c1",
+   "name_en": "Actor block switch",
+   "factory_va": 5723524
+  },
+  {
+   "profile_id": null,
+   "sprite_id": 315,
+   "name_jp": "\u30a2\u30af\u30bf\u30fc\u30d6\u30ed\u30c3\u30af\uff30\u30b9\u30a4\u30c3\u30c1",
+   "name_en": "Actor block P switch",
+   "factory_va": 5723524
+  },
+  {
+   "profile_id": null,
+   "sprite_id": 316,
+   "name_jp": "\u5b50\u30e8\u30c3\u30b7\u30fc\u7528\u30d6\u30ed\u30c3\u30af",
+   "name_en": "Block for child Yoshi",
+   "factory_va": 5728220
+  },
+  {
+   "profile_id": null,
+   "sprite_id": 317,
+   "name_jp": "\u30a2\u30af\u30bf\u30fc\u5de8\u5927\u30ec\u30f3\u30ac\u30d6\u30ed\u30c3\u30af",
+   "name_en": "Actor huge brick block",
+   "factory_va": 5659336
+  },
+  {
+   "profile_id": null,
+   "sprite_id": 318,
+   "name_jp": "\u30a2\u30af\u30bf\u30fc\u5de8\u5927\u30cf\u30c6\u30ca\u30d6\u30ed\u30c3\u30af",
+   "name_en": "Actor Huge Hatena Block",
+   "factory_va": 5656984
+  },
+  {
+   "profile_id": null,
+   "sprite_id": 319,
+   "name_jp": "\u6575\u30b3\u30fc\u30b9\u7528\u30cf\u30c6\u30ca\u30d6\u30ed\u30c3\u30af",
+   "name_en": "Hatena Block for Enemy Course",
+   "factory_va": 5674100
+  },
+  {
+   "profile_id": 140,
+   "sprite_id": 320,
+   "name_jp": "\u6575\u30b3\u30fc\u30b9\u7528\u30a2\u30af\u30bf\u30fc\u30d1\u30bf\u30d6\u30ed\u30c3\u30af",
+   "name_en": "Actor Pata block for enemy course",
+   "factory_va": 5702992
+  },
+  {
+   "profile_id": 141,
+   "sprite_id": 321,
+   "name_jp": "\u30eb\u30fc\u30ec\u30c3\u30c8\u30d6\u30ed\u30c3\u30af",
+   "name_en": "Roulette block",
+   "factory_va": 7156416
+  },
+  {
+   "profile_id": 142,
+   "sprite_id": 322,
+   "name_jp": "\u3061\u304f\u308f\u30d6\u30ed\u30c3\u30af",
+   "name_en": "Chikuwa block",
+   "factory_va": 6207900
+  },
+  {
+   "profile_id": 143,
+   "sprite_id": 323,
+   "name_jp": "\u30ab\u30e1\u30c3\u30af\u30d6\u30ed\u30c3\u30af",
+   "name_en": "Camek block",
+   "factory_va": 6465484
+  },
+  {
+   "profile_id": 144,
+   "sprite_id": 324,
+   "name_jp": "\u6728\u7bb1",
+   "name_en": "Wooden box",
+   "factory_va": 7374700
+  },
+  {
+   "profile_id": 145,
+   "sprite_id": 325,
+   "name_jp": "\u9244\u7bb1",
+   "name_en": "Iron box",
+   "factory_va": 7374700
+  },
+  {
+   "profile_id": 146,
+   "sprite_id": 326,
+   "name_jp": "\u9244\u7bb1(RDash)",
+   "name_en": "\u9244 box (RDash)",
+   "factory_va": 7374700
+  },
+  {
+   "profile_id": 147,
+   "sprite_id": 327,
+   "name_jp": "\u9244\u7bb1(RDash-\u751f\u6210\u7bc4\u56f2\u72ed\u3044\u7248)",
+   "name_en": "Iron Box (RDash-Generation Range Narrow Edition)",
+   "factory_va": 7374700
+  },
+  {
+   "profile_id": 148,
+   "sprite_id": 328,
+   "name_jp": "\u30de\u30b8\u30c3\u30af\u30cf\u30f3\u30c9\u30d1\u30fc",
+   "name_en": "Magic hand par",
+   "factory_va": 6833660
+  },
+  {
+   "profile_id": 149,
+   "sprite_id": 329,
+   "name_jp": "\u30de\u30b8\u30c3\u30af\u30cf\u30f3\u30c9\u30b0\u30fc",
+   "name_en": "Magic hand goo",
+   "factory_va": 6827104
+  },
+  {
+   "profile_id": null,
+   "sprite_id": 330,
+   "name_jp": "\u30de\u30b8\u30c3\u30af\u30cf\u30f3\u30c9\u30b0\u30fc(RDash)",
+   "name_en": "Magic hand goo (RDash)",
+   "factory_va": 6827104
+  },
+  {
+   "profile_id": null,
+   "sprite_id": 331,
+   "name_jp": "DRC\u753b\u9762\u306b\u3057\u304b\u898b\u3048\u306a\u3044\u30d6\u30ed\u30c3\u30af",
+   "name_en": "Blocks that can only be seen on the DRC screen",
+   "factory_va": 4576572
+  },
+  {
+   "profile_id": null,
+   "sprite_id": 332,
+   "name_jp": "\u30ec\u30fc\u30eb\u30a8\u30d5\u30a7\u30af\u30c8\u767a\u751f\u30d6\u30ed\u30c3\u30af",
+   "name_en": "Rail effect generation block",
+   "factory_va": 7078496
+  },
+  {
+   "profile_id": null,
+   "sprite_id": 333,
+   "name_jp": "OBJ\u571f\u7ba1(\u53f3)",
+   "name_en": "OBJ earth pipe (right)",
+   "factory_va": 6947616
+  },
+  {
+   "profile_id": null,
+   "sprite_id": 334,
+   "name_jp": "OBJ\u571f\u7ba1(\u5de6)",
+   "name_en": "OBJ earth pipe (left)",
+   "factory_va": 6944320
+  },
+  {
+   "profile_id": null,
+   "sprite_id": 335,
+   "name_jp": "OBJ\u571f\u7ba1(\u4e0a)",
+   "name_en": "OBJ earth pipe (above)",
+   "factory_va": 6950900
+  },
+  {
+   "profile_id": 150,
+   "sprite_id": 336,
+   "name_jp": "OBJ\u571f\u7ba1(\u4e0b)",
+   "name_en": "OBJ earth pipe (bottom)",
+   "factory_va": 6941308
+  },
+  {
+   "profile_id": 151,
+   "sprite_id": 337,
+   "name_jp": "OBJ\u571f\u7ba1(\u53f3\u30fb\u30b0\u30eb\u30fc\u30d7)",
+   "name_en": "OBJ earth pipe (right, group)",
+   "factory_va": 6947616
+  },
+  {
+   "profile_id": 152,
+   "sprite_id": 338,
+   "name_jp": "OBJ\u571f\u7ba1(\u5de6\u30fb\u30b0\u30eb\u30fc\u30d7)",
+   "name_en": "OBJ earth pipe (left, group)",
+   "factory_va": 6944320
+  },
+  {
+   "profile_id": 153,
+   "sprite_id": 339,
+   "name_jp": "OBJ\u571f\u7ba1(\u4e0a\u30fb\u30b0\u30eb\u30fc\u30d7)",
+   "name_en": "OBJ earth pipe (upper group)",
+   "factory_va": 6950900
+  },
+  {
+   "profile_id": 154,
+   "sprite_id": 340,
+   "name_jp": "OBJ\u571f\u7ba1(\u4e0b\u30fb\u30b0\u30eb\u30fc\u30d7)",
+   "name_en": "OBJ earth pipe (bottom, group)",
+   "factory_va": 6941308
+  },
+  {
+   "profile_id": 155,
+   "sprite_id": 341,
+   "name_jp": "OBJ\u571f\u7ba1\u30fb\u53f3\u5411\u304dNEXTGOTO",
+   "name_en": "OBJ \u7ba1 \u30fb rightward NEXTGOTO",
+   "factory_va": 6948924
+  },
+  {
+   "profile_id": 156,
+   "sprite_id": 342,
+   "name_jp": "OBJ\u571f\u7ba1\u30fb\u5de6\u5411\u304dNEXTGOTO",
+   "name_en": "OBJ earth pipe, left facing NEXTGOTO",
+   "factory_va": 6945624
+  },
+  {
+   "profile_id": 157,
+   "sprite_id": 343,
+   "name_jp": "OBJ\u571f\u7ba1\u30fb\u4e0a\u5411\u304dNEXTGOTO",
+   "name_en": "OBJ \u7ba1 \u30fb upward NEXTGOTO",
+   "factory_va": 6952124
+  },
+  {
+   "profile_id": 158,
+   "sprite_id": 344,
+   "name_jp": "\u30b9\u30a4\u30c3\u30c1\u306f\u3066\u306a\u30dc\u30bf\u30f3",
+   "name_en": "Switch Hatena Button",
+   "factory_va": 7222656
+  },
+  {
+   "profile_id": 159,
+   "sprite_id": 345,
+   "name_jp": "\u30b9\u30a4\u30c3\u30c1\uff30\u30dc\u30bf\u30f3",
+   "name_en": "Switch P button",
+   "factory_va": 7224348
+  },
+  {
+   "profile_id": null,
+   "sprite_id": 346,
+   "name_jp": "\u30b9\u30a4\u30c3\u30c1\uff30\u30dc\u30bf\u30f3(RDash)",
+   "name_en": "Switch P button (RDash)",
+   "factory_va": 7224348
+  },
+  {
+   "profile_id": null,
+   "sprite_id": 347,
+   "name_jp": "\u30b9\u30a4\u30c3\u30c1\uff30\u30dc\u30bf\u30f3(\u58c1\u30ad\u30c3\u30af\u7121\u52b9\u7248)",
+   "name_en": "Switch P button (wall kick disabled version)",
+   "factory_va": 7224348
+  },
+  {
+   "profile_id": null,
+   "sprite_id": 348,
+   "name_jp": "\u30dc\u30b9\u30af\u30c3\u30d1\u30b9\u30a4\u30c3\u30c1\u30dc\u30bf\u30f3",
+   "name_en": "Boss button switch button",
+   "factory_va": 7206424
+  },
+  {
+   "profile_id": null,
+   "sprite_id": 349,
+   "name_jp": "\u30dc\u30b9\u30af\u30c3\u30d1\u65a7\u4ed8\u30b9\u30a4\u30c3\u30c1\u30dc\u30bf\u30f3",
+   "name_en": "Boss button with switch button",
+   "factory_va": 7207244
+  },
+  {
+   "profile_id": null,
+   "sprite_id": 350,
+   "name_jp": "\u30c4\u30e9\u30e9\uff08\u5927\uff09",
+   "name_en": "Tsurara (Large)",
+   "factory_va": 6429724
+  },
+  {
+   "profile_id": null,
+   "sprite_id": 351,
+   "name_jp": "\u30ec\u30df\u30fc\u306e\u30dc\u30fc\u30eb",
+   "name_en": "Remy's ball",
+   "factory_va": 923456
+  },
+  {
+   "profile_id": 160,
+   "sprite_id": 352,
+   "name_jp": "\u30ec\u30df\u30fc\u306e\u7206\u5f3e",
+   "name_en": "Remy bomb",
+   "factory_va": 932828
+  },
+  {
+   "profile_id": 161,
+   "sprite_id": 353,
+   "name_jp": "\u30a2\u30b3\u30e4\u8c9d",
+   "name_en": "Pearl oyster",
+   "factory_va": 5839704
+  },
+  {
+   "profile_id": 162,
+   "sprite_id": 354,
+   "name_jp": "\u6c37\u30d6\u30ed\u30c3\u30af",
+   "name_en": "Ice block",
+   "factory_va": 6411504
+  },
+  {
+   "profile_id": 163,
+   "sprite_id": 355,
+   "name_jp": "\u6c37\u30ea\u30d5\u30c8(\u6e67\u304d\u51fa\u3057)",
+   "name_en": "Ice lift (well out)",
+   "factory_va": 6403264
+  },
+  {
+   "profile_id": 164,
+   "sprite_id": 356,
+   "name_jp": "\u6c37\u30ea\u30d5\u30c8(\u6e67\u304d\u51fa\u3057\u30fb\u6d6e\u304f)",
+   "name_en": "Ice lift (well out and float)",
+   "factory_va": 6408332
+  },
+  {
+   "profile_id": 165,
+   "sprite_id": 357,
+   "name_jp": "\u6c37\u30ea\u30d5\u30c8(\u30ec\u30fc\u30eb\u52d5\u4f5c)",
+   "name_en": "Ice lift (rail movement)",
+   "factory_va": 6406948
+  },
+  {
+   "profile_id": 166,
+   "sprite_id": 358,
+   "name_jp": "\u6c34\u8eca\u30ea\u30d5\u30c8",
+   "name_en": "Water wheel lift",
+   "factory_va": 6712840
+  },
+  {
+   "profile_id": 167,
+   "sprite_id": 359,
+   "name_jp": "\u30ea\u30e2\u30b3\u30f3\u4e0a\u6607\u30ea\u30d5\u30c8\u306e\u30af\u30ea\u30f3\u30c1",
+   "name_en": "Remote control lift lift clinch",
+   "factory_va": 6603896
+  },
+  {
+   "profile_id": 168,
+   "sprite_id": 360,
+   "name_jp": "\u30ea\u30e2\u30b3\u30f3\u4e0a\u6607\u5b9a\u54e1\u30ea\u30d5\u30c8",
+   "name_en": "Remote control climb capacity lift",
+   "factory_va": 6604108
+  },
+  {
+   "profile_id": 169,
+   "sprite_id": 361,
+   "name_jp": "\u30ea\u30e2\u30b3\u30f3\u4e0a\u6607\u5b9a\u54e1\u30ea\u30d5\u30c8(RDash)",
+   "name_en": "Remote control ascent capacity lift (RDash)",
+   "factory_va": 6604108
+  },
+  {
+   "profile_id": null,
+   "sprite_id": 362,
+   "name_jp": "\u30da\u30f3\u30bf\u30ed\u30fc\u306e\u6c37",
+   "name_en": "Pentalo's ice",
+   "factory_va": 3588092
+  },
+  {
+   "profile_id": null,
+   "sprite_id": 363,
+   "name_jp": "\u4e00\u5b9a\u6570\u4e57\u308b\u3068\u52d5\u304f\u534a\u5f53\u305f\u308a\u30ea\u30d5\u30c8",
+   "name_en": "Half lift that moves when you ride a certain number",
+   "factory_va": 6568696
+  },
+  {
+   "profile_id": null,
+   "sprite_id": 364,
+   "name_jp": "\u9032\u884c\u65b9\u5411\u5207\u63db\u30ea\u30d5\u30c8",
+   "name_en": "Directional switching lift",
+   "factory_va": 6525856
+  },
+  {
+   "profile_id": null,
+   "sprite_id": 365,
+   "name_jp": "\u786c\u3044\u6c37\u30d6\u30ed\u30c3\u30af",
+   "name_en": "Hard ice block",
+   "factory_va": 6399308
+  },
+  {
+   "profile_id": null,
+   "sprite_id": 366,
+   "name_jp": "\u30ef\u30f3\u30ef\u30f3\u676d",
+   "name_en": "One-one pile",
+   "factory_va": 4044972
+  },
+  {
+   "profile_id": null,
+   "sprite_id": 367,
+   "name_jp": "\u30ef\u30f3\u30ef\u30f3\u676d(RDash)",
+   "name_en": "One-one pile (RDash)",
+   "factory_va": 4050488
+  },
+  {
+   "profile_id": 170,
+   "sprite_id": 368,
+   "name_jp": "\u30ab\u30e1\u30c3\u30af\u306e\u30c4\u30e9\u30e9",
+   "name_en": "Kamek Tsurara",
+   "factory_va": 707792
+  },
+  {
+   "profile_id": 171,
+   "sprite_id": 369,
+   "name_jp": "\u30a6\u30a7\u30f3\u30c7\u30a3\u306e\u30c4\u30e9\u30e9",
+   "name_en": "Wendy's Tsurara",
+   "factory_va": 1227964
+  },
+  {
+   "profile_id": 172,
+   "sprite_id": 370,
+   "name_jp": "W8\u9053\u4e2d\u30af\u30c3\u30d1Jr.\u30af\u30e9\u30a6\u30f3",
+   "name_en": "W8 Roadside Kuppa Jr. Crown",
+   "factory_va": 1033992
+  },
+  {
+   "profile_id": 173,
+   "sprite_id": 371,
+   "name_jp": "\u30dc\u30af\u30b7\u30f3\u30b0\u30af\u30c3\u30d1Jr.\u306e\u30af\u30e9\u30a6\u30f3",
+   "name_en": "Boxing Bowser Jr. Crown",
+   "factory_va": 239500
+  },
+  {
+   "profile_id": 174,
+   "sprite_id": 372,
+   "name_jp": "\u30dc\u30af\u30b7\u30f3\u30b0\u30af\u30c3\u30d1Jr.\u5c02\u7528\u5e8a",
+   "name_en": "Boxing Kupper Jr. Exclusive Floor",
+   "factory_va": 6502280
+  },
+  {
+   "profile_id": 175,
+   "sprite_id": 373,
+   "name_jp": "\u6700\u7d42\u30af\u30c3\u30d1Jr.\u30af\u30e9\u30a6\u30f3",
+   "name_en": "Final Kupper Jr. Crown",
+   "factory_va": 577164
+  },
+  {
+   "profile_id": 176,
+   "sprite_id": 374,
+   "name_jp": "\u6700\u7d42\u30af\u30c3\u30d1",
+   "name_en": "Final cuppa",
+   "factory_va": 421492
+  },
+  {
+   "profile_id": 177,
+   "sprite_id": 375,
+   "name_jp": "\u30d5\u30a1\u30a4\u30a2\u30fc\u30d0\u30fc",
+   "name_en": "Fire bar",
+   "factory_va": 6292396
+  },
+  {
+   "profile_id": 178,
+   "sprite_id": 376,
+   "name_jp": "\u540c\u671f\u30d5\u30a1\u30a4\u30a2\u30fc\u30d0\u30fc",
+   "name_en": "Sync fire bar",
+   "factory_va": 6292396
+  },
+  {
+   "profile_id": 179,
+   "sprite_id": 377,
+   "name_jp": "\u30d5\u30a1\u30a4\u30a2\u30fc\u30d0\u30fc2",
+   "name_en": "Fire bar 2",
+   "factory_va": 6297680
+  },
+  {
+   "profile_id": null,
+   "sprite_id": 378,
+   "name_jp": "\u4e2d\u5fc3\u541b\u5bfe\u5fdc\u30d5\u30a1\u30a4\u30a2\u30fc\u30d0\u30fc",
+   "name_en": "Center you corresponded fire bar",
+   "factory_va": 7143784
+  },
+  {
+   "profile_id": null,
+   "sprite_id": 379,
+   "name_jp": "\u30ac\u30c3\u30bf\u30f3",
+   "name_en": "Gattan",
+   "factory_va": 2868496
+  },
+  {
+   "profile_id": null,
+   "sprite_id": 380,
+   "name_jp": "\u7389\u4e57\u308a\u30ea\u30d5\u30c8",
+   "name_en": "Ball lift",
+   "factory_va": 7227700
+  },
+  {
+   "profile_id": null,
+   "sprite_id": 381,
+   "name_jp": "\u30e1\u30c3\u30c8",
+   "name_en": "Buzzy Beetle",
+   "factory_va": 3447800
+  },
+  {
+   "profile_id": null,
+   "sprite_id": 382,
+   "name_jp": "\u3053\u3067\u304b\u30e1\u30c3\u30c8",
+   "name_en": "Here or Met",
+   "factory_va": 3447800
+  },
+  {
+   "profile_id": null,
+   "sprite_id": 383,
+   "name_jp": "\u30a6\u30cb\u30e9",
+   "name_en": "Unila",
+   "factory_va": 3961504
+  },
+  {
+   "profile_id": 180,
+   "sprite_id": 384,
+   "name_jp": "\u30a6\u30cb\u30e9\u30fbRDASH\u30fbBG\u30c1\u30a7\u30c3\u30af\u72ed\u3044\u7248",
+   "name_en": "Sea urchin \u00b7 RDASH \u00b7 BG check narrow edition",
+   "factory_va": 3961504
+  },
+  {
+   "profile_id": 181,
+   "sprite_id": 385,
+   "name_jp": "\u3067\u304b\u30a6\u30cb\u30e9",
+   "name_en": "Big Unila",
+   "factory_va": 2678752
+  },
+  {
+   "profile_id": 182,
+   "sprite_id": 386,
+   "name_jp": "\u30a6\u30cb\u30e9(RDash\u7528)",
+   "name_en": "Sea urchin (for RDash)",
+   "factory_va": 3961504
+  },
+  {
+   "profile_id": 183,
+   "sprite_id": 387,
+   "name_jp": "POW\u30d6\u30ed\u30c3\u30af",
+   "name_en": "POW block",
+   "factory_va": 7061908
+  },
+  {
+   "profile_id": 184,
+   "sprite_id": 388,
+   "name_jp": "\u5149\u308b\u30d6\u30ed\u30c3\u30af",
+   "name_en": "Shining block",
+   "factory_va": 6779776
+  },
+  {
+   "profile_id": 185,
+   "sprite_id": 389,
+   "name_jp": "\u30d7\u30ed\u30da\u30e9\u30d6\u30ed\u30c3\u30af",
+   "name_en": "Propeller block",
+   "factory_va": 7071660
+  },
+  {
+   "profile_id": 186,
+   "sprite_id": 390,
+   "name_jp": "\u6c37\u30d6\u30ed\u30c3\u30af(\u6301\u3066\u308b)",
+   "name_en": "Ice block (can have)",
+   "factory_va": 7166952
+  },
+  {
+   "profile_id": 187,
+   "sprite_id": 391,
+   "name_jp": "\u6a3d\u30d6\u30ed\u30c3\u30af",
+   "name_en": "Barrel block",
+   "factory_va": 6071900
+  },
+  {
+   "profile_id": 188,
+   "sprite_id": 392,
+   "name_jp": "\u6c37",
+   "name_en": "ice",
+   "factory_va": 3043488
+  },
+  {
+   "profile_id": 189,
+   "sprite_id": 393,
+   "name_jp": "\u30a2\u30af\u30bf\u30fc\u30b3\u30a4\u30f3\u6e67\u304d\u51fa\u3057",
+   "name_en": "The actor coin outs",
+   "factory_va": 5822676
+  },
+  {
+   "profile_id": null,
+   "sprite_id": 394,
+   "name_jp": "\u30a2\u30af\u30bf\u30fc\u30b3\u30a4\u30f3\u5674\u6c34\u6e67\u304d\u51fa\u3057\u30bf\u30b0",
+   "name_en": "Actor coin fountain out tag",
+   "factory_va": 5824232
+  },
+  {
+   "profile_id": null,
+   "sprite_id": 395,
+   "name_jp": "\u30a2\u30af\u30bf\u30fc\u30b3\u30a4\u30f3",
+   "name_en": "Actor coin",
+   "factory_va": 5730028
+  },
+  {
+   "profile_id": null,
+   "sprite_id": 396,
+   "name_jp": "\u30a2\u30af\u30bf\u30fc\u30b3\u30a4\u30f3\uff32\uff24\uff21\uff33\uff28\u7528",
+   "name_en": "For actor coin RDASH",
+   "factory_va": 5730028
+  },
+  {
+   "profile_id": null,
+   "sprite_id": 397,
+   "name_jp": "\u30a2\u30af\u30bf\u30fc\u51b7\u51cd\u30b3\u30a4\u30f3",
+   "name_en": "Actor frozen coin",
+   "factory_va": 5762980
+  },
+  {
+   "profile_id": null,
+   "sprite_id": 398,
+   "name_jp": "\u30a2\u30af\u30bf\u30fc\u30dd\u30ea\u30b4\u30f3\u8ffd\u5f93\u30b3\u30a4\u30f3",
+   "name_en": "Actor polygon tracking coin",
+   "factory_va": 5789448
+  },
+  {
+   "profile_id": null,
+   "sprite_id": 399,
+   "name_jp": "\u30a2\u30af\u30bf\u30fc\u30b3\u30a4\u30f3\u30b8\u30e3\u30f3\u30d7\u30c7\u30e2",
+   "name_en": "Actor Coin Jump Demo",
+   "factory_va": 5758280
+  },
+  {
+   "profile_id": 190,
+   "sprite_id": 400,
+   "name_jp": "\u30a2\u30af\u30bf\u30fc\u30b3\u30a4\u30f3\uff28\uff2f\uff30\u30b8\u30e3\u30f3\u30d7",
+   "name_en": "Actor coin HOP jump",
+   "factory_va": 5766800
+  },
+  {
+   "profile_id": 191,
+   "sprite_id": 401,
+   "name_jp": "\u30a2\u30af\u30bf\u30fc\u30b3\u30a4\u30f3\u30b8\u30e3\u30f3\u30d7",
+   "name_en": "Actor coin jump",
+   "factory_va": 5770324
+  },
+  {
+   "profile_id": 192,
+   "sprite_id": 402,
+   "name_jp": "\u30a2\u30af\u30bf\u30fc\u30b3\u30a4\u30f3\u30b8\u30e3\u30f3\u30d7\u30d0\u30c8\u30eb\u7528",
+   "name_en": "For actor coin jump battle",
+   "factory_va": 5770324
+  },
+  {
+   "profile_id": 193,
+   "sprite_id": 403,
+   "name_jp": "\u30a2\u30af\u30bf\u30fc\u30b3\u30a4\u30f3\u30b8\u30e3\u30f3\u30d7\u30bf\u30c4\u30ce\u30f3\u7528",
+   "name_en": "For actor coin jump tatsunon",
+   "factory_va": 5770324
+  },
+  {
+   "profile_id": 194,
+   "sprite_id": 404,
+   "name_jp": "\u30a2\u30af\u30bf\u30fc\u30b3\u30a4\u30f3\u30b7\u30e3\u30ef\u30fc\u30b8\u30e3\u30f3\u30d7",
+   "name_en": "Actor coin shower jump",
+   "factory_va": 5814784
+  },
+  {
+   "profile_id": 195,
+   "sprite_id": 405,
+   "name_jp": "\u30a2\u30af\u30bf\u30fc\u56de\u8ee2\u5236\u5fa1\u30b3\u30a4\u30f3",
+   "name_en": "Actor rotation control coin",
+   "factory_va": 5733968
+  },
+  {
+   "profile_id": 196,
+   "sprite_id": 406,
+   "name_jp": "\u30a2\u30af\u30bf\u30fc\u56de\u8ee2\u677f\u8ffd\u5f93\u30b3\u30a4\u30f3",
+   "name_en": "Actor rotating plate tracking coin",
+   "factory_va": 5736704
+  },
+  {
+   "profile_id": 197,
+   "sprite_id": 407,
+   "name_jp": "\u30a2\u30af\u30bf\u30fc\u6c34\u9762\u30b3\u30a4\u30f3",
+   "name_en": "Actor water surface coin",
+   "factory_va": 5826284
+  },
+  {
+   "profile_id": 198,
+   "sprite_id": 408,
+   "name_jp": "\u30a2\u30af\u30bf\u30fc\u753b\u9762\u8ffd\u5f93\u30b3\u30a4\u30f3",
+   "name_en": "Actor screen follow coin",
+   "factory_va": 5761616
+  },
+  {
+   "profile_id": 199,
+   "sprite_id": 409,
+   "name_jp": "\u30a2\u30af\u30bf\u30fc\u6ce1\u30b3\u30a4\u30f3",
+   "name_en": "Actor bubble coin",
+   "factory_va": 5750148
+  },
+  {
+   "profile_id": null,
+   "sprite_id": 410,
+   "name_jp": "\u30a2\u30af\u30bf\u30fc\u30b3\u30a4\u30f3\u30b8\u30e5\u30b2\u30e0",
+   "name_en": "Actor Coin Jugem",
+   "factory_va": 5767924
+  },
+  {
+   "profile_id": null,
+   "sprite_id": 411,
+   "name_jp": "\u30a2\u30af\u30bf\u30fc\u901a\u904e\u30b3\u30a4\u30f3",
+   "name_en": "Actor passing coin",
+   "factory_va": 5802708
+  },
+  {
+   "profile_id": null,
+   "sprite_id": 412,
+   "name_jp": "\u30a2\u30af\u30bf\u30fc\u30a2\u30b3\u30e4\u8c9d\u7528\u30b3\u30a4\u30f3",
+   "name_en": "Actor oyster shell coin",
+   "factory_va": 5732252
+  },
+  {
+   "profile_id": null,
+   "sprite_id": 413,
+   "name_jp": "\u30a2\u30af\u30bf\u30fc\u56de\u8ee2\u5236\u5fa1\u7528\u30b3\u30a4\u30f3",
+   "name_en": "Actor rotation control coin",
+   "factory_va": 5810404
+  },
+  {
+   "profile_id": null,
+   "sprite_id": 414,
+   "name_jp": "\u56de\u8ee2\u5236\u5fa1\u541b\u7528\u901a\u904e\u30b3\u30a4\u30f3",
+   "name_en": "Rotation control your passing coin",
+   "factory_va": 5802708
+  },
+  {
+   "profile_id": null,
+   "sprite_id": 415,
+   "name_jp": "\u306d\u3058\u56de\u3057\u5c02\u7528\u30b3\u30a4\u30f3",
+   "name_en": "Screwdriver dedicated coin",
+   "factory_va": 5821372
+  },
+  {
+   "profile_id": null,
+   "sprite_id": 416,
+   "name_jp": "\u56de\u8ee2\u5e8a\u540c\u671f\u30b3\u30a4\u30f3",
+   "name_en": "Rotating floor synchronized coin",
+   "factory_va": 5812672
+  },
+  {
+   "profile_id": null,
+   "sprite_id": 417,
+   "name_jp": "\u30a2\u30af\u30bf\u30fc\u30b3\u30a4\u30f3\u30d1\u30e9\u30b7\u30e5\u30fc\u30c8",
+   "name_en": "Actor coin parachute",
+   "factory_va": 5792444
+  },
+  {
+   "profile_id": null,
+   "sprite_id": 418,
+   "name_jp": "\u30a2\u30af\u30bf\u30fc\u30d8\u30d3\u30b3\u30a4\u30f3",
+   "name_en": "Actor snake coin",
+   "factory_va": 5817544
+  },
+  {
+   "profile_id": null,
+   "sprite_id": 419,
+   "name_jp": "\u30a2\u30af\u30bf\u30fc\u30ad\u30ce\u30b3\u30ea\u30d5\u30c8\u8ffd\u5f93\u30b3\u30a4\u30f3",
+   "name_en": "Actor mushroom lift following coin",
+   "factory_va": 5774996
+  },
+  {
+   "profile_id": null,
+   "sprite_id": 420,
+   "name_jp": "\u30a2\u30af\u30bf\u30fc\u98a8\u8239\u30b3\u30a4\u30f3",
+   "name_en": "Actor Balloons Coin",
+   "factory_va": 5738076
+  },
+  {
+   "profile_id": null,
+   "sprite_id": 421,
+   "name_jp": "\u30a2\u30af\u30bf\u30fc\u91cd\u529b\u4ed8\u30b3\u30a4\u30f3",
+   "name_en": "Actor Grab with Coin",
+   "factory_va": 5765188
+  },
+  {
+   "profile_id": null,
+   "sprite_id": 422,
+   "name_jp": "\u30a2\u30af\u30bf\u30fc\u30b3\u30a4\u30f3\uff30\uff2f\uff37\u30d6\u30ed\u30c3\u30af\u30e6\u30cb\u30c3\u30c8\u5909\u63db\u7528",
+   "name_en": "Actor coin POW block unit conversion",
+   "factory_va": 5819592
+  },
+  {
+   "profile_id": null,
+   "sprite_id": 423,
+   "name_jp": "\u30a2\u30af\u30bf\u30fc\uff24\uff32\uff23\u51fa\u73fe\u30b3\u30a4\u30f3",
+   "name_en": "Actor DRC appeared coin",
+   "factory_va": 5790776
+  },
+  {
+   "profile_id": null,
+   "sprite_id": 424,
+   "name_jp": "\u30a2\u30af\u30bf\u30fc\u98df\u3079\u3089\u308c\u5c02\u7528\u30b3\u30a4\u30f3",
+   "name_en": "Actor eaten only coin",
+   "factory_va": 5759776
+  },
+  {
+   "profile_id": null,
+   "sprite_id": 425,
+   "name_jp": "\u9752\u30b3\u30a4\u30f3",
+   "name_en": "Blue coin",
+   "factory_va": 6016512
+  },
+  {
+   "profile_id": null,
+   "sprite_id": 426,
+   "name_jp": "\u30b3\u30ec\u30af\u30b7\u30e7\u30f3\u30b3\u30a4\u30f3",
+   "name_en": "Collection coin",
+   "factory_va": 6239612
+  },
+  {
+   "profile_id": null,
+   "sprite_id": 427,
+   "name_jp": "\u30b3\u30ec\u30af\u30b7\u30e7\u30f3\u30b3\u30a4\u30f3\u7dda\u5bfe\u5fdc",
+   "name_en": "Collection coin line correspondence",
+   "factory_va": 6248544
+  },
+  {
+   "profile_id": null,
+   "sprite_id": 428,
+   "name_jp": "\u30b0\u30eb\u30fc\u30d7\u30b3\u30ec\u30af\u30b7\u30e7\u30f3\u30b3\u30a4\u30f3\u7dda\u5bfe\u5fdc",
+   "name_en": "Group collection coin line correspondence",
+   "factory_va": 6248544
+  },
+  {
+   "profile_id": null,
+   "sprite_id": 429,
+   "name_jp": "\u30b3\u30ec\u30af\u30b7\u30e7\u30f3\u30b3\u30a4\u30f3\u30dc\u30eb\u30c8\u5bfe\u5fdc",
+   "name_en": "Collection coin bolt compatible",
+   "factory_va": 6249832
+  },
+  {
+   "profile_id": null,
+   "sprite_id": 430,
+   "name_jp": "\u30b3\u30ec\u30af\u30b7\u30e7\u30f3\u89aa\u5236\u5fa1",
+   "name_en": "Collection parent control",
+   "factory_va": 6249832
+  },
+  {
+   "profile_id": null,
+   "sprite_id": 431,
+   "name_jp": "\u30b3\u30ec\u30af\u30b7\u30e7\u30f3\u89aa\u5236\u5fa1(RDash)",
+   "name_en": "Collection parent control (RDash)",
+   "factory_va": 6249832
+  },
+  {
+   "profile_id": null,
+   "sprite_id": 432,
+   "name_jp": "\u30b3\u30ec\u30af\u30b7\u30e7\u30f3\u89aa\u5236\u5fa1(RDash\u751f\u6210\u7bc4\u56f2\u62e1\u5f35\u7248)",
+   "name_en": "Collection parent control (RDash generation range extended version)",
+   "factory_va": 6249832
+  },
+  {
+   "profile_id": null,
+   "sprite_id": 433,
+   "name_jp": "\u30b3\u30ec\u30af\u30b7\u30e7\u30f3\u89aa\u5236\u5fa1(R\uff16\u57ce)",
+   "name_en": "Collection Parent Control (R6 Castle)",
+   "factory_va": 6249832
+  },
+  {
+   "profile_id": null,
+   "sprite_id": 434,
+   "name_jp": "\u30b3\u30ec\u30af\u30b7\u30e7\u30f3\u30b3\u30a4\u30f3\u30d8\u30d3",
+   "name_en": "Collection coin snake",
+   "factory_va": 6254212
+  },
+  {
+   "profile_id": null,
+   "sprite_id": 435,
+   "name_jp": "\u56de\u8ee2\u5236\u5fa1\u7528\u30b3\u30ec\u30af\u30b7\u30e7\u30f3\u30b3\u30a4\u30f3",
+   "name_en": "Collection coin for rotation control",
+   "factory_va": 6252652
+  },
+  {
+   "profile_id": null,
+   "sprite_id": 436,
+   "name_jp": "\u5357\u4eac\u7389\u3059\u3060\u308c\u30b3\u30a4\u30f3\u30fb\u89aa",
+   "name_en": "Nanjing ball blind coin / parent",
+   "factory_va": 6236040
+  },
+  {
+   "profile_id": null,
+   "sprite_id": 437,
+   "name_jp": "\u5357\u4eac\u7389\u3059\u3060\u308c\u30b3\u30a4\u30f3\u30fb\u5b50",
+   "name_en": "Nanjing ball blind coin / child",
+   "factory_va": 6234096
+  },
+  {
+   "profile_id": null,
+   "sprite_id": 438,
+   "name_jp": "\u30b3\u30a4\u30f3\u307e\u304d\u30b3\u30a4\u30f3",
+   "name_en": "Coin winding coin",
+   "factory_va": 7522292
+  },
+  {
+   "profile_id": null,
+   "sprite_id": 439,
+   "name_jp": "\u30b7\u30e3\u30c9\u30a6\u541b\u306e\u5bb6\u306e\u8aad\u3080\u30bf\u30b0",
+   "name_en": "Shadow's home tag",
+   "factory_va": 8577220
+  },
+  {
+   "profile_id": null,
+   "sprite_id": 440,
+   "name_jp": "\u30b7\u30e3\u30dc\u30f3\u4fdd\u8b77\u5730\u5e2f\u30bf\u30b0",
+   "name_en": "Soapland protected area tag",
+   "factory_va": 8572400
+  },
+  {
+   "profile_id": null,
+   "sprite_id": 441,
+   "name_jp": "\u30d0\u30eb\u30fc\u30f3",
+   "name_en": "balloon",
+   "factory_va": 2370124
+  },
+  {
+   "profile_id": null,
+   "sprite_id": 442,
+   "name_jp": "\u30e8\u30c3\u30b7\u30fc",
+   "name_en": "Yoshi",
+   "factory_va": 8173492
+  },
+  {
+   "profile_id": null,
+   "sprite_id": 443,
+   "name_jp": "\u30c8\u30c3\u30c6\u30f3\u30d7\u30ec\u30a4\u30e4\u30fc",
+   "name_en": "Totten player",
+   "factory_va": 8159356
+  },
+  {
+   "profile_id": null,
+   "sprite_id": 444,
+   "name_jp": "\u30d7\u30ec\u30a4\u30e4\u30fc\u30aa\u30d6\u30b8\u30a7\u30af\u30c8",
+   "name_en": "Player object",
+   "factory_va": 7949988
+  },
+  {
+   "profile_id": null,
+   "sprite_id": 445,
+   "name_jp": "\u30b4\u30fc\u30eb\u30c7\u30e2\u30ad\u30ce\u30d4\u30aa",
+   "name_en": "Goal Demo Kinopio",
+   "factory_va": 7664024
+  },
+  {
+   "profile_id": null,
+   "sprite_id": 446,
+   "name_jp": "\u30c1\u30d3\u30e8\u30c3\u30b7\u30fc\u306e\u5375",
+   "name_en": "Chibi Yoshi egg",
+   "factory_va": 6186960
+  },
+  {
+   "profile_id": null,
+   "sprite_id": 447,
+   "name_jp": "\u30c1\u30d3\u30e8\u30c3\u30b7\u30fc(\u6ce1)",
+   "name_en": "Thibi Yoshi (foam)",
+   "factory_va": 6052524
+  },
+  {
+   "profile_id": null,
+   "sprite_id": 448,
+   "name_jp": "\u30c1\u30d3\u30e8\u30c3\u30b7\u30fc(\u98a8\u8239)",
+   "name_en": "Chibi Yoshi (balloon)",
+   "factory_va": 5866788
+  },
+  {
+   "profile_id": null,
+   "sprite_id": 449,
+   "name_jp": "\u30c1\u30d3\u30e8\u30c3\u30b7\u30fc(\u5149\u308b)",
+   "name_en": "Chibi Yoshi (glow)",
+   "factory_va": 6783820
+  },
+  {
+   "profile_id": null,
+   "sprite_id": 450,
+   "name_jp": "\u30c1\u30d3\u30e8\u30c3\u30b7\u30fc(\u96f2)",
+   "name_en": "Chibi Yoshi (cloud)",
+   "factory_va": 6217268
+  },
+  {
+   "profile_id": null,
+   "sprite_id": 451,
+   "name_jp": "\u30c1\u30d3\u30e8\u30c3\u30b7\u30fc(\u6ce1)\u306e\u6ce1",
+   "name_en": "Tibiyoshi (foam) foam",
+   "factory_va": 6105048
+  },
+  {
+   "profile_id": null,
+   "sprite_id": 452,
+   "name_jp": "\u30d5\u30eb\u30fc\u30c4\u30af\u30c3\u30ad\u30fc",
+   "name_en": "Fruit cookies",
+   "factory_va": 6351604
+  },
+  {
+   "profile_id": null,
+   "sprite_id": 453,
+   "name_jp": "\u30b9\u30ed\u30c3\u30c8\u30c1\u30d3\u30e8\u30c3\u30b7\u30fc",
+   "name_en": "Slot Chibi Yoshi",
+   "factory_va": 7589924
+  },
+  {
+   "profile_id": null,
+   "sprite_id": 454,
+   "name_jp": "\u30d2\u30c3\u30d7\u30a2\u30bf\u30c3\u30af\u6e67\u304d\u51fa\u3057\u30a2\u30af\u30bf\u30fc",
+   "name_en": "Hip Attack Outrage Actor",
+   "factory_va": 7279120
+  },
+  {
+   "profile_id": null,
+   "sprite_id": 455,
+   "name_jp": "\u571f\u7ba1NextGoto\u30bf\u30a4\u30de\u30fc\u52a0\u7b97\u30bf\u30b0",
+   "name_en": "Earth pipe NextGoto timer addition tag",
+   "factory_va": 8573848
+  },
+  {
+   "profile_id": null,
+   "sprite_id": 456,
+   "name_jp": "\u30af\u30a8\u30b9\u30c8\u30a2\u30af\u30bf\u30fc\u914d\u7f6e\u30bf\u30b0",
+   "name_en": "Quest actor placement tag",
+   "factory_va": 8581844
+  },
+  {
+   "profile_id": null,
+   "sprite_id": 457,
+   "name_jp": "\u30af\u30a8\u30b9\u30c8\u7528\u30c7\u30e2\u30ed\u30b1\u30fc\u30b7\u30e7\u30f3\u30bf\u30b0",
+   "name_en": "Demo location tag for quest",
+   "factory_va": 8582588
+  },
+  {
+   "profile_id": null,
+   "sprite_id": 458,
+   "name_jp": "\u30b7\u30e3\u30c9\u30a6\u541b\u9000\u907f\u30bf\u30b0",
+   "name_en": "Shadow's evacuation tag",
+   "factory_va": 8583360
+  },
+  {
+   "profile_id": null,
+   "sprite_id": 459,
+   "name_jp": "\u30b7\u30e3\u30c9\u30a6\u541b",
+   "name_en": "Shadow you",
+   "factory_va": 3745020
+  },
+  {
+   "profile_id": null,
+   "sprite_id": 460,
+   "name_jp": "\u30b7\u30e3\u30c9\u30a6\u541b\u306e\u888b",
+   "name_en": "Shadow's bag",
+   "factory_va": 7165412
+  },
+  {
+   "profile_id": null,
+   "sprite_id": 461,
+   "name_jp": "\u30af\u30a8\u30b9\u30c8\u306e\u30ab\u30ae",
+   "name_en": "The key to the quest",
+   "factory_va": 7077960
+  },
+  {
+   "profile_id": null,
+   "sprite_id": 462,
+   "name_jp": "\u30af\u30a8\u30b9\u30c8\u7528\u30ad\u30ce\u30d4\u30aa",
+   "name_en": "Quest for Kinopio",
+   "factory_va": 3637232
+  },
+  {
+   "profile_id": null,
+   "sprite_id": 463,
+   "name_jp": "\u30af\u30a8\u30b9\u30c8\u306e\u666f\u54c1\u30a2\u30a4\u30c6\u30e0",
+   "name_en": "Quest gift items",
+   "factory_va": 4643396
+  },
+  {
+   "profile_id": null,
+   "sprite_id": 464,
+   "name_jp": "\u6575\u30b3\u30fc\u30b9\u30c7\u30e2\u7528\u30b7\u30e3\u30c9\u30a6\u541b",
+   "name_en": "Shadow for enemy course demo",
+   "factory_va": 2771560
+  },
+  {
+   "profile_id": null,
+   "sprite_id": 465,
+   "name_jp": "\u30bf\u30a4\u30c8\u30eb\u30c7\u30e2\u7528\u30b7\u30e3\u30c9\u30a6\u541b",
+   "name_en": "Title demo shadow for you",
+   "factory_va": 3880308
+  },
+  {
+   "profile_id": null,
+   "sprite_id": 466,
+   "name_jp": "\u98a8\u8239\u540a\u308b\u30a2\u30af\u30bf\u30fc",
+   "name_en": "Balloon actor",
+   "factory_va": 2395840
+  },
+  {
+   "profile_id": null,
+   "sprite_id": 467,
+   "name_jp": "\u30af\u30ea\u30dc\u30fc",
+   "name_en": "Goomba",
+   "factory_va": 3374380
+  },
+  {
+   "profile_id": null,
+   "sprite_id": 468,
+   "name_jp": "\u30ab\u30ad\u30dc\u30fc",
+   "name_en": "Goombrat",
+   "factory_va": 3374380
+  },
+  {
+   "profile_id": null,
+   "sprite_id": 469,
+   "name_jp": "\u30d1\u30bf\u30af\u30ea\u30dc\u30fc",
+   "name_en": "Paragoomba",
+   "factory_va": 3549972
+  },
+  {
+   "profile_id": null,
+   "sprite_id": 470,
+   "name_jp": "\u30a4\u30ac\u30af\u30ea\u30dc\u30fc",
+   "name_en": "Prickly Goomba",
+   "factory_va": 3098660
+  },
+  {
+   "profile_id": null,
+   "sprite_id": 471,
+   "name_jp": "\u30de\u30e1\u30af\u30ea\u30dc\u30fc",
+   "name_en": "Mini Goomba",
+   "factory_va": 2429996
+  },
+  {
+   "profile_id": null,
+   "sprite_id": 472,
+   "name_jp": "\u4e2d\u30af\u30ea\u30dc\u30fc",
+   "name_en": "Middle Goomba",
+   "factory_va": 3467844
+  },
+  {
+   "profile_id": null,
+   "sprite_id": 473,
+   "name_jp": "\u5927\u30af\u30ea\u30dc\u30fc",
+   "name_en": "Large Goomba",
+   "factory_va": 3401252
+  },
+  {
+   "profile_id": null,
+   "sprite_id": 474,
+   "name_jp": "\u30a2\u30a4\u30b9\u30dc\u30fc\u30eb",
+   "name_en": "Ice ball",
+   "factory_va": 1313300
+  },
+  {
+   "profile_id": null,
+   "sprite_id": 475,
+   "name_jp": "\u30d1\u30c3\u30af\u30f3\u7528\u30a2\u30a4\u30b9\u30dc\u30fc\u30eb",
+   "name_en": "Ice ice ball for packon",
+   "factory_va": 1325360
+  },
+  {
+   "profile_id": null,
+   "sprite_id": 476,
+   "name_jp": "\u30d7\u30ec\u30a4\u30e4\u30fc\u7528\u30d5\u30a1\u30a4\u30e4\u30fc\u30dc\u30fc\u30eb",
+   "name_en": "Player fireball",
+   "factory_va": 1288100
+  },
+  {
+   "profile_id": null,
+   "sprite_id": 477,
+   "name_jp": "\u30d5\u30a1\u30a4\u30e4\u30fc\u30dc\u30fc\u30eb\u30d1\u30c3\u30af\u30f3",
+   "name_en": "Fireball Packon",
+   "factory_va": 1284376
+  },
+  {
+   "profile_id": null,
+   "sprite_id": 478,
+   "name_jp": "\u30e8\u30c3\u30b7\u30fc\u306e\u708e",
+   "name_en": "Yoshi's Flame",
+   "factory_va": 8201792
+  },
+  {
+   "profile_id": null,
+   "sprite_id": 479,
+   "name_jp": "\u4e0a\u5411\u304d\u571f\u7ba1\u30d1\u30c3\u30af\u30f3\u30d5\u30e9\u30ef\u30fc",
+   "name_en": "Upside-down tube pipen flower",
+   "factory_va": 2739196
+  },
+  {
+   "profile_id": null,
+   "sprite_id": 480,
+   "name_jp": "\u4e0b\u5411\u304d\u571f\u7ba1\u30d1\u30c3\u30af\u30f3\u30d5\u30e9\u30ef\u30fc",
+   "name_en": "Downward facing tube tube n flower",
+   "factory_va": 2735464
+  },
+  {
+   "profile_id": null,
+   "sprite_id": 481,
+   "name_jp": "\u5de6\u5411\u304d\u571f\u7ba1\u30d1\u30c3\u30af\u30f3\u30d5\u30e9\u30ef\u30fc",
+   "name_en": "Left facing earthen tube pack n flower",
+   "factory_va": 2736692
+  },
+  {
+   "profile_id": null,
+   "sprite_id": 482,
+   "name_jp": "\u53f3\u5411\u304d\u571f\u7ba1\u30d1\u30c3\u30af\u30f3\u30d5\u30e9\u30ef\u30fc",
+   "name_en": "Right facing earthen tube pack n flower",
+   "factory_va": 2737944
+  },
+  {
+   "profile_id": null,
+   "sprite_id": 483,
+   "name_jp": "\u4e0a\u5411\u304d\u571f\u7ba1\u30d5\u30a1\u30a4\u30e4\u30d1\u30c3\u30af\u30f3\u30d5\u30e9\u30ef\u30fc",
+   "name_en": "Upside down tube fire packon flower",
+   "factory_va": 2705816
+  },
+  {
+   "profile_id": null,
+   "sprite_id": 484,
+   "name_jp": "\u4e0b\u5411\u304d\u571f\u7ba1\u30d5\u30a1\u30a4\u30e4\u30d1\u30c3\u30af\u30f3\u30d5\u30e9\u30ef\u30fc",
+   "name_en": "Down-point earth tube fire packun flower",
+   "factory_va": 2701672
+  },
+  {
+   "profile_id": null,
+   "sprite_id": 485,
+   "name_jp": "\u5de6\u5411\u304d\u571f\u7ba1\u30d5\u30a1\u30a4\u30e4\u30d1\u30c3\u30af\u30f3\u30d5\u30e9\u30ef\u30fc",
+   "name_en": "Left facing earth pipe fire packun flower",
+   "factory_va": 2703152
+  },
+  {
+   "profile_id": null,
+   "sprite_id": 486,
+   "name_jp": "\u53f3\u5411\u304d\u571f\u7ba1\u30d5\u30a1\u30a4\u30e4\u30d1\u30c3\u30af\u30f3\u30d5\u30e9\u30ef\u30fc",
+   "name_en": "Right facing earth pipe fire packun flower",
+   "factory_va": 2704484
+  },
+  {
+   "profile_id": null,
+   "sprite_id": 487,
+   "name_jp": "\u4e0a\u5411\u304d\u571f\u7ba1\u30a2\u30a4\u30b9\u30d1\u30c3\u30af\u30f3\u30d5\u30e9\u30ef\u30fc",
+   "name_en": "Upside Earth tube ice packon flower",
+   "factory_va": 2709744
+  },
+  {
+   "profile_id": null,
+   "sprite_id": 488,
+   "name_jp": "\u4e0b\u5411\u304d\u571f\u7ba1\u30a2\u30a4\u30b9\u30d1\u30c3\u30af\u30f3\u30d5\u30e9\u30ef\u30fc",
+   "name_en": "Down-side earth tube ice packon flower",
+   "factory_va": 2707152
+  },
+  {
+   "profile_id": null,
+   "sprite_id": 489,
+   "name_jp": "\u5de6\u5411\u304d\u571f\u7ba1\u30a2\u30a4\u30b9\u30d1\u30c3\u30af\u30f3\u30d5\u30e9\u30ef\u30fc",
+   "name_en": "Left facing earth tube ice pack n flower",
+   "factory_va": 2708016
+  },
+  {
+   "profile_id": null,
+   "sprite_id": 490,
+   "name_jp": "\u53f3\u5411\u304d\u571f\u7ba1\u30a2\u30a4\u30b9\u30d1\u30c3\u30af\u30f3\u30d5\u30e9\u30ef\u30fc",
+   "name_en": "Right facing earth tube ice packon flower",
+   "factory_va": 2708880
+  },
+  {
+   "profile_id": null,
+   "sprite_id": 491,
+   "name_jp": "\u3067\u304b\u571f\u7ba1\u30d1\u30c3\u30af\u30f3\u30d5\u30e9\u30ef\u30fc",
+   "name_en": "Big earthen tube pack n flower",
+   "factory_va": 2731456
+  },
+  {
+   "profile_id": null,
+   "sprite_id": 492,
+   "name_jp": "\u5730\u9762\u30d1\u30c3\u30af\u30f3\u30d5\u30e9\u30ef\u30fc",
+   "name_en": "Ground Pacton Flower",
+   "factory_va": 3137900
+  },
+  {
+   "profile_id": null,
+   "sprite_id": 493,
+   "name_jp": "\u5730\u9762\u30d1\u30c3\u30af\u30f3\u30d5\u30e9\u30ef\u30fc(RDash)",
+   "name_en": "Ground Pacton Flower (RDash)",
+   "factory_va": 3137900
+  },
+  {
+   "profile_id": null,
+   "sprite_id": 494,
+   "name_jp": "\u5730\u9762\u30d1\u30c3\u30af\u30f3\u30d5\u30e9\u30ef\u30fc(R33)",
+   "name_en": "Ground Pacton Flower (R33)",
+   "factory_va": 3137900
+  },
+  {
+   "profile_id": null,
+   "sprite_id": 495,
+   "name_jp": "\u5730\u9762\u30d5\u30a1\u30a4\u30e4\u30fc\u30d1\u30c3\u30af\u30f3\u30d5\u30e9\u30ef\u30fc",
+   "name_en": "Ground Fire Pacton Flower",
+   "factory_va": 3132576
+  },
+  {
+   "profile_id": null,
+   "sprite_id": 496,
+   "name_jp": "\u5730\u9762\u30a2\u30a4\u30b9\u30d1\u30c3\u30af\u30f3\u30d5\u30e9\u30ef\u30fc",
+   "name_en": "Ground ice packon flower",
+   "factory_va": 3136816
+  },
+  {
+   "profile_id": null,
+   "sprite_id": 497,
+   "name_jp": "\u5730\u9762\u5927\u30d1\u30c3\u30af\u30f3\u30d5\u30e9\u30ef\u30fc",
+   "name_en": "Ground large packon flower",
+   "factory_va": 3130156
+  },
+  {
+   "profile_id": null,
+   "sprite_id": 498,
+   "name_jp": "\u5730\u9762\u30d5\u30a1\u30a4\u30e4\u5927\u30d1\u30c3\u30af\u30f3\u30d5\u30e9\u30ef\u30fc",
+   "name_en": "Ground fire large packon flower",
+   "factory_va": 3125668
+  },
+  {
+   "profile_id": null,
+   "sprite_id": 499,
+   "name_jp": "\u6b69\u304f\u30d1\u30c3\u30af\u30f3",
+   "name_en": "Stalking Piranha Plant",
+   "factory_va": 4013652
+  },
+  {
+   "profile_id": null,
+   "sprite_id": 500,
+   "name_jp": "\u6c34\u9762\u30d1\u30c3\u30af\u30f3",
+   "name_en": "Water surface Pacton",
+   "factory_va": 4051396
+  },
+  {
+   "profile_id": null,
+   "sprite_id": 501,
+   "name_jp": "\u6c34\u9762\u30d1\u30c3\u30af\u30f3(RDash)",
+   "name_en": "Water surface packon (RDash)",
+   "factory_va": 4051396
+  },
+  {
+   "profile_id": null,
+   "sprite_id": 502,
+   "name_jp": "\u30d6\u30e9\u30c3\u30af\u30d1\u30c3\u30af\u30f3",
+   "name_en": "Muncher",
+   "factory_va": 3545480
+  },
+  {
+   "profile_id": null,
+   "sprite_id": 503,
+   "name_jp": "\u30d6\u30e9\u30c3\u30af\u30d1\u30c3\u30af\u30f3OBJ",
+   "name_en": "Muncher OBJ",
+   "factory_va": 3545480
+  },
+  {
+   "profile_id": null,
+   "sprite_id": 504,
+   "name_jp": "\u30cb\u30bb\u30e0\u30b5",
+   "name_en": "Fake",
+   "factory_va": 3496296
+  },
+  {
+   "profile_id": null,
+   "sprite_id": 505,
+   "name_jp": "\u30b5\u30f3\u30dc",
+   "name_en": "Pokey",
+   "factory_va": 3667368
+  },
+  {
+   "profile_id": null,
+   "sprite_id": 506,
+   "name_jp": "\u30b5\u30f3\u30dc\u306e\u6b7b\u4ea1\u30d1\u30fc\u30c4",
+   "name_en": "Pokey death parts",
+   "factory_va": 3690416
+  },
+  {
+   "profile_id": null,
+   "sprite_id": 507,
+   "name_jp": "\u30af\u30a8\u30b9\u30c8\u7528\u30ad\u30ce\u30d4\u30aa",
+   "name_en": "Quest for Kinopio",
+   "factory_va": 3988648
+  },
+  {
+   "profile_id": null,
+   "sprite_id": 508,
+   "name_jp": "\u30cf\u30ca\u30c1\u30e3\u30f3",
+   "name_en": "Hana Chan",
+   "factory_va": 2937356
+  },
+  {
+   "profile_id": null,
+   "sprite_id": 509,
+   "name_jp": "\u30cf\u30ca\u30c1\u30e3\u30f3",
+   "name_en": "Hana Chan",
+   "factory_va": 2959040
+  },
+  {
+   "profile_id": null,
+   "sprite_id": 510,
+   "name_jp": "\u5927\u30cf\u30ca\u30c1\u30e3\u30f3",
+   "name_en": "Dai Hana Chan",
+   "factory_va": 2441484
+  },
+  {
+   "profile_id": null,
+   "sprite_id": 511,
+   "name_jp": "\u30d5\u30fc\u30d5\u30fc\u30dc\u30fc\u30eb",
+   "name_en": "Fu fu ball",
+   "factory_va": 2827988
+  },
+  {
+   "profile_id": 200,
+   "sprite_id": 512,
+   "name_jp": "\u30ce\u30b3\u30ce\u30b3",
+   "name_en": "Koopa Troopa",
+   "factory_va": 3507484
+  },
+  {
+   "profile_id": 201,
+   "sprite_id": 513,
+   "name_jp": "\u30ce\u30b3\u30ce\u30b3\u6a2a\u65b9\u5411\u751f\u6210",
+   "name_en": "Noko Noko horizontal direction generation",
+   "factory_va": 3507484
+  },
+  {
+   "profile_id": 202,
+   "sprite_id": 514,
+   "name_jp": "\u3067\u304b\u30ce\u30b3\u30ce\u30b3",
+   "name_en": "Big Koopa Troopa",
+   "factory_va": 3507484
+  },
+  {
+   "profile_id": 203,
+   "sprite_id": 515,
+   "name_jp": "\u30d1\u30bf\u30d1\u30bf",
+   "name_en": "Koopa Paratroopa",
+   "factory_va": 3556012
+  },
+  {
+   "profile_id": 204,
+   "sprite_id": 516,
+   "name_jp": "\u30b0\u30eb\u30fc\u30d7\u30d1\u30bf\u30d1\u30bf",
+   "name_en": "Group Koopa Paratroopa",
+   "factory_va": 3556012
+  },
+  {
+   "profile_id": 205,
+   "sprite_id": 517,
+   "name_jp": "\u30c8\u30b2\u30be\u30fc",
+   "name_en": "Spiny",
+   "factory_va": 3913536
+  },
+  {
+   "profile_id": 206,
+   "sprite_id": 518,
+   "name_jp": "\u9006\u3055\u30c8\u30b2\u30be\u30fc",
+   "name_en": "Upside down Spiny",
+   "factory_va": 3644380
+  },
+  {
+   "profile_id": 207,
+   "sprite_id": 519,
+   "name_jp": "\u30ab\u30cb\u30dc\u30fc",
+   "name_en": "Huckit Crab",
+   "factory_va": 3203848
+  },
+  {
+   "profile_id": 208,
+   "sprite_id": 520,
+   "name_jp": "\u30ab\u30cb\u30dc\u30fc\u7389",
+   "name_en": "Huckit Crab ball",
+   "factory_va": 3212856
+  },
+  {
+   "profile_id": 209,
+   "sprite_id": 521,
+   "name_jp": "\u30dc\u30e0\u5175",
+   "name_en": "Bob-omb",
+   "factory_va": 2465812
+  },
+  {
+   "profile_id": null,
+   "sprite_id": 522,
+   "name_jp": "\u30d1\u30e9\u30dc\u30e0\u5175",
+   "name_en": "Parabomb",
+   "factory_va": 2495528
+  },
+  {
+   "profile_id": null,
+   "sprite_id": 523,
+   "name_jp": "\u30d1\u30e9\u30dc\u30e0\u5175(RDash)",
+   "name_en": "Parabomb (RDash)",
+   "factory_va": 2495528
+  },
+  {
+   "profile_id": null,
+   "sprite_id": 524,
+   "name_jp": "\u30e1\u30ab\u30af\u30c3\u30d1",
+   "name_en": "Mechakoopa",
+   "factory_va": 3437376
+  },
+  {
+   "profile_id": null,
+   "sprite_id": 525,
+   "name_jp": "\u30da\u30f3\u30bf\u30ed\u30fc",
+   "name_en": "Cooligan",
+   "factory_va": 3569236
+  },
+  {
+   "profile_id": null,
+   "sprite_id": 526,
+   "name_jp": "\u30da\u30f3\u30bf\u30ed\u30fc\u306e\u30b5\u30f3\u30b0\u30e9\u30b9",
+   "name_en": "Cooligan sunglasses",
+   "factory_va": 3586016
+  },
+  {
+   "profile_id": null,
+   "sprite_id": 527,
+   "name_jp": "\u30da\u30f3\u30bf\u30ed\u30fc(\u6e67\u304d\u571f\u7ba1)",
+   "name_en": "Cooligan (ground earth pipe)",
+   "factory_va": 4000136
+  },
+  {
+   "profile_id": 210,
+   "sprite_id": 528,
+   "name_jp": "\u30db\u30cd\u30e1\u30c3\u30c8",
+   "name_en": "Honemmet",
+   "factory_va": 2981716
+  },
+  {
+   "profile_id": 211,
+   "sprite_id": 529,
+   "name_jp": "\u30db\u30cd\u30e1\u30c3\u30c8(\u982d)",
+   "name_en": "Honemet (head)",
+   "factory_va": 3005444
+  },
+  {
+   "profile_id": 212,
+   "sprite_id": 530,
+   "name_jp": "\u30d7\u30af\u30d7\u30af",
+   "name_en": "Pukpuk",
+   "factory_va": 3607376
+  },
+  {
+   "profile_id": 213,
+   "sprite_id": 531,
+   "name_jp": "\u30b0\u30eb\u30fc\u30d7\u30d7\u30af\u30d7\u30af",
+   "name_en": "Group puk puk",
+   "factory_va": 3607376
+  },
+  {
+   "profile_id": 214,
+   "sprite_id": 532,
+   "name_jp": "\u30d7\u30af\u30d7\u30af\uff08\u4e2d\uff09",
+   "name_en": "Pukpuk (middle)",
+   "factory_va": 3607376
+  },
+  {
+   "profile_id": 215,
+   "sprite_id": 533,
+   "name_jp": "\u30b0\u30eb\u30fc\u30d7\u30d7\u30af\u30d7\u30af\uff08\u4e2d\uff09",
+   "name_en": "Group group (middle)",
+   "factory_va": 3607376
+  },
+  {
+   "profile_id": 216,
+   "sprite_id": 534,
+   "name_jp": "\u30b5\u30fc\u30c1\u30d7\u30af\u30d7\u30af",
+   "name_en": "Search puk puk",
+   "factory_va": 3607376
+  },
+  {
+   "profile_id": 217,
+   "sprite_id": 535,
+   "name_jp": "\u30b5\u30fc\u30c1\u30d7\u30af\u30d7\u30af\uff08\u4e2d\uff09",
+   "name_en": "Search search (middle)",
+   "factory_va": 3607376
+  },
+  {
+   "profile_id": 218,
+   "sprite_id": 536,
+   "name_jp": "\u306b\u3052\u30d7\u30af\u30d7\u30af",
+   "name_en": "Nigepukpuk",
+   "factory_va": 3607376
+  },
+  {
+   "profile_id": 219,
+   "sprite_id": 537,
+   "name_jp": "\u306b\u3052\u30d7\u30af\u30d7\u30af\uff08\u4e2d\uff09",
+   "name_en": "Nige-puk-puk (middle)",
+   "factory_va": 3607376
+  },
+  {
+   "profile_id": null,
+   "sprite_id": 538,
+   "name_jp": "\u30e1\u30ab\u30d7\u30af\u30d7\u30af",
+   "name_en": "Mekakupupuk",
+   "factory_va": 3607376
+  },
+  {
+   "profile_id": null,
+   "sprite_id": 539,
+   "name_jp": "\u30c8\u30b2\u30d7\u30af",
+   "name_en": "Togepuku",
+   "factory_va": 3627044
+  },
+  {
+   "profile_id": null,
+   "sprite_id": 540,
+   "name_jp": "\u98db\u3073\u30d7\u30af",
+   "name_en": "Jumping",
+   "factory_va": 3882940
+  },
+  {
+   "profile_id": null,
+   "sprite_id": 541,
+   "name_jp": "\u98db\u3073\u30e1\u30ab\u30d7\u30af",
+   "name_en": "Flying mechanism",
+   "factory_va": 3882940
+  },
+  {
+   "profile_id": null,
+   "sprite_id": 542,
+   "name_jp": "\u30d7\u30af\u30d7\u30af(\u6e67\u304d\u51fa\u3057)",
+   "name_en": "Puk-puk",
+   "factory_va": 4002460
+  },
+  {
+   "profile_id": null,
+   "sprite_id": 543,
+   "name_jp": "\u30b5\u30fc\u30c1\u30d7\u30af\u30d7\u30af(\u6e67\u304d\u51fa\u3057)",
+   "name_en": "Search Puk Puk (Bring Out)",
+   "factory_va": 4002460
+  },
+  {
+   "profile_id": 220,
+   "sprite_id": 544,
+   "name_jp": "\u306b\u3052\u30d7\u30af\u30d7\u30af(\u6e67\u304d\u51fa\u3057)",
+   "name_en": "Nige-puk-puk",
+   "factory_va": 4002460
+  },
+  {
+   "profile_id": 221,
+   "sprite_id": 545,
+   "name_jp": "\u98db\u3073\u30d7\u30af(\u6e67\u304d\u51fa\u3057)",
+   "name_en": "Jump puk",
+   "factory_va": 4007484
+  },
+  {
+   "profile_id": 222,
+   "sprite_id": 546,
+   "name_jp": "\u98db\u3073\u30e1\u30ab\u30d7\u30af(\u6e67\u304d\u51fa\u3057)",
+   "name_en": "Jump Mecha Puku (Blow Out)",
+   "factory_va": 4007484
+  },
+  {
+   "profile_id": 223,
+   "sprite_id": 547,
+   "name_jp": "\u30d7\u30af\u30d7\u30af(\u30d5\u30a9\u30fc\u30e1\u30fc\u30b7\u30e7\u30f3)",
+   "name_en": "Puk Puk (formation)",
+   "factory_va": 3623736
+  },
+  {
+   "profile_id": 224,
+   "sprite_id": 548,
+   "name_jp": "\u30d5\u30a3\u30c3\u30b7\u30e5\u30dc\u30fc\u30f3",
+   "name_en": "Fish bone",
+   "factory_va": 2815032
+  },
+  {
+   "profile_id": 225,
+   "sprite_id": 549,
+   "name_jp": "\u30d5\u30b0\u30de\u30f3\u30cd\u30f3",
+   "name_en": "Hugmannen",
+   "factory_va": 2843328
+  },
+  {
+   "profile_id": 226,
+   "sprite_id": 550,
+   "name_jp": "\u3067\u304b\u30d5\u30b0\u30de\u30f3\u30cd\u30f3",
+   "name_en": "Big hug mannen",
+   "factory_va": 2843328
+  },
+  {
+   "profile_id": 227,
+   "sprite_id": 551,
+   "name_jp": "\u30d5\u30b0\u30de\u30f3\u30cd\u30f3(\u6e67\u304d\u51fa\u3057)",
+   "name_en": "Hug mannen (blow out)",
+   "factory_va": 3990664
+  },
+  {
+   "profile_id": 228,
+   "sprite_id": 552,
+   "name_jp": "\u3067\u304b\u30d5\u30b0\u30de\u30f3\u30cd\u30f3(\u6e67\u304d\u51fa\u3057)",
+   "name_en": "Deaf hug mannen (spring out)",
+   "factory_va": 3990664
+  },
+  {
+   "profile_id": 229,
+   "sprite_id": 553,
+   "name_jp": "\u30e9\u30a4\u30c8\u30af\u30e9\u30b2",
+   "name_en": "Light jellyfish",
+   "factory_va": 3112256
+  },
+  {
+   "profile_id": null,
+   "sprite_id": 554,
+   "name_jp": "\u30c1\u30e7\u30fc\u30c1\u30f3",
+   "name_en": "Chotin",
+   "factory_va": 2570640
+  },
+  {
+   "profile_id": null,
+   "sprite_id": 555,
+   "name_jp": "\u30b8\u30e3\u30f3\u30d7\u53f0",
+   "name_en": "Jump ramp",
+   "factory_va": 6458936
+  },
+  {
+   "profile_id": null,
+   "sprite_id": 556,
+   "name_jp": "\u30b1\u30ed\u30f3\u30d1",
+   "name_en": "Keronpa",
+   "factory_va": 3255168
+  },
+  {
+   "profile_id": null,
+   "sprite_id": 557,
+   "name_jp": "RDash\u7528\u30b1\u30ed\u30f3\u30d1",
+   "name_en": "Kerash for RDash",
+   "factory_va": 3269920
+  },
+  {
+   "profile_id": null,
+   "sprite_id": 558,
+   "name_jp": "\u30b1\u30ed\u30f3\u30d1\u306e\u708e",
+   "name_en": "Keronpa's flame",
+   "factory_va": 1277644
+  },
+  {
+   "profile_id": null,
+   "sprite_id": 559,
+   "name_jp": "\u30b1\u30ed\u30f3\u30d1\u306e\u708e(RDash\u7528)",
+   "name_en": "Keronpa's Flame (for RDash)",
+   "factory_va": 1282664
+  },
+  {
+   "profile_id": 230,
+   "sprite_id": 560,
+   "name_jp": "\u6e67\u304d\u51fa\u3057\u30b1\u30ed\u30f3\u30d1",
+   "name_en": "Springing out Keronpa",
+   "factory_va": 3998248
+  },
+  {
+   "profile_id": 231,
+   "sprite_id": 561,
+   "name_jp": "\u30d5\u30a1\u30a4\u30a2\u30b9\u30cd\u30fc\u30af",
+   "name_en": "Fire Snake",
+   "factory_va": 2794116
+  },
+  {
+   "profile_id": 232,
+   "sprite_id": 562,
+   "name_jp": "\u30b4\u30ed\u30b4\u30ed",
+   "name_en": "Gorogoro",
+   "factory_va": 2905636
+  },
+  {
+   "profile_id": 233,
+   "sprite_id": 563,
+   "name_jp": "\u30b4\u30ed\u30b4\u30ed\uff08\u5de8\u5927\uff09",
+   "name_en": "Gorogoro (big)",
+   "factory_va": 2915884
+  },
+  {
+   "profile_id": 234,
+   "sprite_id": 564,
+   "name_jp": "\u30b4\u30ed\u30b4\u30ed\uff08\u5de8\u5927RDash\uff09",
+   "name_en": "Gorogoro (Gigantic RDash)",
+   "factory_va": 2915884
+  },
+  {
+   "profile_id": 235,
+   "sprite_id": 565,
+   "name_jp": "\u4e2d\u9593\u30dd\u30a4\u30f3\u30c8\u306e\u65d7",
+   "name_en": "Mid point flag",
+   "factory_va": 6098516
+  },
+  {
+   "profile_id": 236,
+   "sprite_id": 566,
+   "name_jp": "\u4e0b\u5411\u304d\u5927\u68cd\u68d2",
+   "name_en": "Downward rod",
+   "factory_va": 5962208
+  },
+  {
+   "profile_id": 237,
+   "sprite_id": 567,
+   "name_jp": "\u4e0a\u5411\u304d\u5927\u68cd\u68d2",
+   "name_en": "Upward rod",
+   "factory_va": 5963820
+  },
+  {
+   "profile_id": 238,
+   "sprite_id": 568,
+   "name_jp": "\u53f3\u5411\u304d\u5927\u68cd\u68d2",
+   "name_en": "Right-pointing rod",
+   "factory_va": 5960796
+  },
+  {
+   "profile_id": 239,
+   "sprite_id": 569,
+   "name_jp": "\u5de6\u5411\u304d\u5927\u68cd\u68d2",
+   "name_en": "Left-facing large rod",
+   "factory_va": 5959248
+  },
+  {
+   "profile_id": null,
+   "sprite_id": 570,
+   "name_jp": "\u53f3\u5411\u304d\u30ed\u30f3\u30b0\u5927\u68cd\u68d2",
+   "name_en": "Right long long rod",
+   "factory_va": 7204804
+  },
+  {
+   "profile_id": null,
+   "sprite_id": 571,
+   "name_jp": "\u5de6\u5411\u304d\u30ed\u30f3\u30b0\u5927\u68cd\u68d2",
+   "name_en": "Left facing long \u5927 \u68cd",
+   "factory_va": 7203484
+  },
+  {
+   "profile_id": null,
+   "sprite_id": 572,
+   "name_jp": "\u706b\u5c71\u5f3e\u7ba1\u7406\u30aa\u30d6\u30b8\u30a7",
+   "name_en": "Volcanic project management object",
+   "factory_va": 6485140
+  },
+  {
+   "profile_id": null,
+   "sprite_id": 573,
+   "name_jp": "\u308f\u304d\u3060\u3057\u706b\u5c71\u5f3e",
+   "name_en": "Wild boar volcano bullet",
+   "factory_va": 7280492
+  },
+  {
+   "profile_id": null,
+   "sprite_id": 574,
+   "name_jp": "\u706b\u5c71\u5f3e",
+   "name_en": "Volcanic bullet",
+   "factory_va": 6477048
+  },
+  {
+   "profile_id": null,
+   "sprite_id": 575,
+   "name_jp": "\u30ba\u30fc\u30e0\u541b",
+   "name_en": "Zoom you",
+   "factory_va": 8592576
+  },
+  {
+   "profile_id": 240,
+   "sprite_id": 576,
+   "name_jp": "\u30ba\u30fc\u30e0\u541b(RDash)",
+   "name_en": "Zoom you (RDash)",
+   "factory_va": 8593280
+  },
+  {
+   "profile_id": 241,
+   "sprite_id": 577,
+   "name_jp": "\u5883\u754c\u901f\u5ea6\u8abf\u6574\u541b",
+   "name_en": "Realm speed adjustment",
+   "factory_va": 8579856
+  },
+  {
+   "profile_id": 242,
+   "sprite_id": 578,
+   "name_jp": "\u30de\u30c3\u30af\u30b9\u4e0a\u541b\uff08\u5de6\uff09",
+   "name_en": "Max on you (left)",
+   "factory_va": 8581468
+  },
+  {
+   "profile_id": 243,
+   "sprite_id": 579,
+   "name_jp": "\u30de\u30c3\u30af\u30b9\u4e0a\u541b\uff08\u53f3\uff09",
+   "name_en": "Max on you (right)",
+   "factory_va": 8581468
+  },
+  {
+   "profile_id": 244,
+   "sprite_id": 580,
+   "name_jp": "\u53f3\u30b9\u30c8\u30c3\u30d7\u541b\uff08\u4e0a\uff09",
+   "name_en": "Right stop you (above)",
+   "factory_va": 8581468
+  },
+  {
+   "profile_id": 245,
+   "sprite_id": 581,
+   "name_jp": "\u53f3\u30b9\u30c8\u30c3\u30d7\u541b\uff08\u4e0b\uff09",
+   "name_en": "Right stop you (bottom)",
+   "factory_va": 8581468
+  },
+  {
+   "profile_id": 246,
+   "sprite_id": 582,
+   "name_jp": "\u30cf\u30a4\u30d1\u30fc\u30de\u30c3\u30af\u30b9\u4e0a\u541b\uff08\u5de6\uff09",
+   "name_en": "Hyper Max Kami (left)",
+   "factory_va": 8581468
+  },
+  {
+   "profile_id": 247,
+   "sprite_id": 583,
+   "name_jp": "\u30cf\u30a4\u30d1\u30fc\u30de\u30c3\u30af\u30b9\u4e0a\u541b\uff08\u53f3\uff09",
+   "name_en": "Hyper Max Kami (right)",
+   "factory_va": 8581468
+  },
+  {
+   "profile_id": 248,
+   "sprite_id": 584,
+   "name_jp": "\u30aa\u30fc\u30c8\u30b9\u30af\u30ed\u30fc\u30eb",
+   "name_en": "Auto scroll",
+   "factory_va": 8571652
+  },
+  {
+   "profile_id": 249,
+   "sprite_id": 585,
+   "name_jp": "\u7279\u6b8a\u30b9\u30af\u30ed\u30fc\u30eb\u30bf\u30b0",
+   "name_en": "Special scroll tag",
+   "factory_va": 8584504
+  },
+  {
+   "profile_id": null,
+   "sprite_id": 586,
+   "name_jp": "\u30af\u30c3\u30d1\u5c02\u7528\u30a8\u30ea\u30a2\uff2f\uff22\uff2a",
+   "name_en": "Kuppa exclusive area OBJ",
+   "factory_va": 8579096
+  },
+  {
+   "profile_id": null,
+   "sprite_id": 587,
+   "name_jp": "\uff22\uff27\u4e2d\u5fc3\u304f\u3093",
+   "name_en": "BG center kun",
+   "factory_va": 8573268
+  },
+  {
+   "profile_id": null,
+   "sprite_id": 588,
+   "name_jp": "\u74b0\u5883\u73fe\u8c61\u304f\u3093",
+   "name_en": "Environmental phenomenon kun",
+   "factory_va": 8576620
+  },
+  {
+   "profile_id": null,
+   "sprite_id": 589,
+   "name_jp": "\u8349\u82b1\u7a2e\u985e\u6307\u5b9a\u30bf\u30b0",
+   "name_en": "Flower type specification tag",
+   "factory_va": 8578476
+  },
+  {
+   "profile_id": null,
+   "sprite_id": 590,
+   "name_jp": "\u74b0\u5883\u97f3\u30bf\u30b0",
+   "name_en": "Environmental sound tag",
+   "factory_va": 8575600
+  },
+  {
+   "profile_id": null,
+   "sprite_id": 591,
+   "name_jp": "\u30ad\u30ce\u30b3",
+   "name_en": "mushroom",
+   "factory_va": 4618248
+  },
+  {
+   "profile_id": 250,
+   "sprite_id": 592,
+   "name_jp": "\u30d5\u30a1\u30a4\u30e4\u30fc\u30d5\u30e9\u30ef\u30fc",
+   "name_en": "Fire flower",
+   "factory_va": 4577132
+  },
+  {
+   "profile_id": 251,
+   "sprite_id": 593,
+   "name_jp": "\u30de\u30e1\u30ad\u30ce\u30b3",
+   "name_en": "Legume mushroom",
+   "factory_va": 4620932
+  },
+  {
+   "profile_id": 252,
+   "sprite_id": 594,
+   "name_jp": "\u30a2\u30a4\u30b9\u30d5\u30e9\u30ef\u30fc",
+   "name_en": "Ice flower",
+   "factory_va": 4580064
+  },
+  {
+   "profile_id": 253,
+   "sprite_id": 595,
+   "name_jp": "\u30d7\u30ed\u30da\u30e9",
+   "name_en": "propeller",
+   "factory_va": 4635152
+  },
+  {
+   "profile_id": 254,
+   "sprite_id": 596,
+   "name_jp": "\u30da\u30f3\u30ae\u30f3",
+   "name_en": "Penguin",
+   "factory_va": 4632304
+  },
+  {
+   "profile_id": 255,
+   "sprite_id": 597,
+   "name_jp": "\uff11\uff35\uff30\u30ad\u30ce\u30b3",
+   "name_en": "1UP mushroom",
+   "factory_va": 4626668
+  },
+  {
+   "profile_id": 256,
+   "sprite_id": 598,
+   "name_jp": "\u30e0\u30b5\u30b5\u30d3",
+   "name_en": "Flying squirrel",
+   "factory_va": 4624060
+  },
+  {
+   "profile_id": 257,
+   "sprite_id": 599,
+   "name_jp": "\uff13\uff35\uff30\u30e0\u30fc\u30f3",
+   "name_en": "3UP Moon",
+   "factory_va": 4652744
+  },
+  {
+   "profile_id": 258,
+   "sprite_id": 600,
+   "name_jp": "\u30bf\u30a4\u30c8\u30eb\u30c7\u30e2\u4e2d\u306e\u30a2\u30a4\u30c6\u30e0",
+   "name_en": "Items in the title demo",
+   "factory_va": 4655492
+  },
+  {
+   "profile_id": 259,
+   "sprite_id": 601,
+   "name_jp": "\u30d4\u30fc\u30c1\u30af\u30e9\u30a6\u30f3",
+   "name_en": "Peach crown",
+   "factory_va": 4629816
+  },
+  {
+   "profile_id": null,
+   "sprite_id": 602,
+   "name_jp": "\u30ef\u30ab\u30e1",
+   "name_en": "Wakame",
+   "factory_va": 7162976
+  },
+  {
+   "profile_id": null,
+   "sprite_id": 603,
+   "name_jp": "\u666e\u901a\u306e\u30c9\u30a2",
+   "name_en": "Ordinary door",
+   "factory_va": 6268136
+  },
+  {
+   "profile_id": null,
+   "sprite_id": 604,
+   "name_jp": "\u304a\u5316\u3051\u5c4b\u6577\u306e\u30c9\u30a2",
+   "name_en": "Haunted house door",
+   "factory_va": 6269420
+  },
+  {
+   "profile_id": null,
+   "sprite_id": 605,
+   "name_jp": "\u7826\u306e\u30c9\u30a2",
+   "name_en": "Agate door",
+   "factory_va": 6271200
+  },
+  {
+   "profile_id": null,
+   "sprite_id": 606,
+   "name_jp": "\u7826\u306e\u30c9\u30a2(RDash\u7528)",
+   "name_en": "Agate door (for RDash)",
+   "factory_va": 6272772
+  },
+  {
+   "profile_id": null,
+   "sprite_id": 607,
+   "name_jp": "\u57ce\u306e\u30c9\u30a2",
+   "name_en": "Castle door",
+   "factory_va": 6262596
+  },
+  {
+   "profile_id": 260,
+   "sprite_id": 608,
+   "name_jp": "\u57ce\u306e\u30c9\u30a2(RDash\u7528)",
+   "name_en": "Castle door (for RDash)",
+   "factory_va": 6264168
+  },
+  {
+   "profile_id": 261,
+   "sprite_id": 609,
+   "name_jp": "\u30af\u30c3\u30d1\u30c9\u30a2",
+   "name_en": "Kupper door",
+   "factory_va": 6264632
+  },
+  {
+   "profile_id": 262,
+   "sprite_id": 610,
+   "name_jp": "\u30af\u30c3\u30d1\u30c9\u30a2(RDash\u7528)",
+   "name_en": "Bowser door (for RDash)",
+   "factory_va": 6267752
+  },
+  {
+   "profile_id": 263,
+   "sprite_id": 611,
+   "name_jp": "\u30c1\u30e7\u30ed\u30d7\u30fc",
+   "name_en": "Monty Mole",
+   "factory_va": 2601744
+  },
+  {
+   "profile_id": 264,
+   "sprite_id": 612,
+   "name_jp": "\u30c1\u30e7\u30ed\u30d7\u30fc\u306e\u7a74",
+   "name_en": "Monty Mole Hole",
+   "factory_va": 2592684
+  },
+  {
+   "profile_id": 265,
+   "sprite_id": 613,
+   "name_jp": "\u30d0\u30b5\u30d0\u30b5",
+   "name_en": "Swoop",
+   "factory_va": 2412648
+  },
+  {
+   "profile_id": 266,
+   "sprite_id": 614,
+   "name_jp": "\u677e\u660e\u306e\u708e",
+   "name_en": "Torch flame",
+   "factory_va": 7242044
+  },
+  {
+   "profile_id": 267,
+   "sprite_id": 615,
+   "name_jp": "\u571f\u7ba1\u6e67\u304d\u51fa\u3057\u6575",
+   "name_en": "Earth Ejection Enemy",
+   "factory_va": 7271164
+  },
+  {
+   "profile_id": 268,
+   "sprite_id": 616,
+   "name_jp": "\u30d5\u30e9\u30a4\u30f3\u30b0\u30ad\u30ce\u30b3(\u6e67\u304d\u51fa\u3057)",
+   "name_en": "Flying mushroom (well out)",
+   "factory_va": 6345144
+  },
+  {
+   "profile_id": 269,
+   "sprite_id": 617,
+   "name_jp": "\u30de\u30f3\u30db\u30fc\u30eb\u30d7\u30fc",
+   "name_en": "Manhole Pooh",
+   "factory_va": 3420144
+  },
+  {
+   "profile_id": null,
+   "sprite_id": 618,
+   "name_jp": "\u30b9\u30d1\u30ca",
+   "name_en": "spanner",
+   "factory_va": 1347500
+  },
+  {
+   "profile_id": null,
+   "sprite_id": 619,
+   "name_jp": "\u30de\u30f3\u30db\u30fc\u30eb",
+   "name_en": "manhole",
+   "factory_va": 3418396
+  },
+  {
+   "profile_id": null,
+   "sprite_id": 620,
+   "name_jp": "\u30b8\u30e5\u30b2\u30e0\u6295\u3052\u30a2\u30af\u30bf\u30fc",
+   "name_en": "Jugem throw actor",
+   "factory_va": 3186808
+  },
+  {
+   "profile_id": null,
+   "sprite_id": 621,
+   "name_jp": "\u30b8\u30e5\u30b2\u30e0\u96f2",
+   "name_en": "Jugem cloud",
+   "factory_va": 3172068
+  },
+  {
+   "profile_id": null,
+   "sprite_id": 622,
+   "name_jp": "\u30b3\u30a4\u30f3\u30b8\u30e5\u30b2\u30e0\u96f2",
+   "name_en": "Coin Jugem cloud",
+   "factory_va": 3172068
+  },
+  {
+   "profile_id": null,
+   "sprite_id": 623,
+   "name_jp": "\u30b8\u30e5\u30b2\u30e0\u96f2(\u30de\u30eb\u30c1\u30d7\u30ec\u30a4\u7528)",
+   "name_en": "Jugem cloud (for multiplayer)",
+   "factory_va": 3172068
+  },
+  {
+   "profile_id": 270,
+   "sprite_id": 624,
+   "name_jp": "\u30b8\u30e5\u30b2\u30e0\u80f4\u4f53",
+   "name_en": "Jugem body",
+   "factory_va": 3155636
+  },
+  {
+   "profile_id": 271,
+   "sprite_id": 625,
+   "name_jp": "\u30b8\u30e5\u30b2\u30e0\u80f4\u4f53(\u30de\u30eb\u30c1\u30d7\u30ec\u30a4\u7528)",
+   "name_en": "Jugem body (for multiplayer)",
+   "factory_va": 3155636
+  },
+  {
+   "profile_id": 272,
+   "sprite_id": 626,
+   "name_jp": "\u6e67\u304d\u51fa\u3057\u30b8\u30e5\u30b2\u30e0",
+   "name_en": "Outgoing Jugem",
+   "factory_va": 3992668
+  },
+  {
+   "profile_id": 273,
+   "sprite_id": 627,
+   "name_jp": "\u6e67\u304d\u51fa\u3057\u30b8\u30e5\u30b2\u30e0(\u30de\u30eb\u30c1\u30d7\u30ec\u30a4\u7528)",
+   "name_en": "Springing out Jugem (for multiplayer)",
+   "factory_va": 3994792
+  },
+  {
+   "profile_id": 274,
+   "sprite_id": 628,
+   "name_jp": "\u6575\u7832\u53f0\u5f3e",
+   "name_en": "Enemy battery shell",
+   "factory_va": 2534752
+  },
+  {
+   "profile_id": 275,
+   "sprite_id": 629,
+   "name_jp": "\u30ad\u30e9\u30fc",
+   "name_en": "killer",
+   "factory_va": 3276100
+  },
+  {
+   "profile_id": 276,
+   "sprite_id": 630,
+   "name_jp": "\u30de\u30b0\u30ca\u30e0\u30ad\u30e9\u30fc",
+   "name_en": "Magnum killer",
+   "factory_va": 3319616
+  },
+  {
+   "profile_id": 277,
+   "sprite_id": 631,
+   "name_jp": "\u30b5\u30fc\u30c1\u30ad\u30e9\u30fc",
+   "name_en": "Search killer",
+   "factory_va": 3321888
+  },
+  {
+   "profile_id": 278,
+   "sprite_id": 632,
+   "name_jp": "\u30de\u30b0\u30ca\u30e0\u30b5\u30fc\u30c1\u30ad\u30e9\u30fc",
+   "name_en": "Magnum Search Killer",
+   "factory_va": 3330184
+  },
+  {
+   "profile_id": 279,
+   "sprite_id": 633,
+   "name_jp": "\u30ad\u30f3\u30b0\u30ad\u30e9\u30fc",
+   "name_en": "King killer",
+   "factory_va": 3307616
+  },
+  {
+   "profile_id": null,
+   "sprite_id": 634,
+   "name_jp": "\u30ad\u30f3\u30b0\u30ad\u30e9\u30fc(RDash)",
+   "name_en": "King Killer (RDash)",
+   "factory_va": 3318660
+  },
+  {
+   "profile_id": null,
+   "sprite_id": 635,
+   "name_jp": "\u6e67\u304d\u51fa\u3057\u30b5\u30fc\u30c1\u30de\u30b0\u30ca\u30e0\u30ad\u30e9\u30fc",
+   "name_en": "Outdated Search Magnum Killer",
+   "factory_va": 4006508
+  },
+  {
+   "profile_id": null,
+   "sprite_id": 636,
+   "name_jp": "\ufffdh\ufffdb\ufffdX\ufffd\ufffd",
+   "name_en": "Thwomp",
+   "factory_va": 2740500
+  },
+  {
+   "profile_id": null,
+   "sprite_id": 637,
+   "name_jp": "\ufffdh\ufffdb\ufffdX\ufffd\ufffd\ufffdi\ufffd\ufffdj",
+   "name_en": "Big Thwomp",
+   "factory_va": 2740500
+  },
+  {
+   "profile_id": null,
+   "sprite_id": 638,
+   "name_jp": "\u30ac\u30dc\u30f3",
+   "name_en": "Spike",
+   "factory_va": 2854184
+  },
+  {
+   "profile_id": null,
+   "sprite_id": 639,
+   "name_jp": "\u30ac\u30dc\u30f3(RDash)",
+   "name_en": "Spike (RDash)",
+   "factory_va": 2854184
+  },
+  {
+   "profile_id": 280,
+   "sprite_id": 640,
+   "name_jp": "\u30ac\u30dc\u30f3\uff08\u5e38\u99d0\uff09",
+   "name_en": "Spike (resident)",
+   "factory_va": 2866528
+  },
+  {
+   "profile_id": 281,
+   "sprite_id": 641,
+   "name_jp": "\u30ac\u30dc\u30f3\u306e\u9244\u7403",
+   "name_en": "Spike iron ball",
+   "factory_va": 1292884
+  },
+  {
+   "profile_id": 282,
+   "sprite_id": 642,
+   "name_jp": "\u30ed\u30c3\u30af\u30ac\u30dc\u30f3",
+   "name_en": "Rock Spike",
+   "factory_va": 3648508
+  },
+  {
+   "profile_id": 283,
+   "sprite_id": 643,
+   "name_jp": "\u30ed\u30c3\u30af\u30ac\u30dc\u30f3\uff08\u5e38\u99d0\uff09",
+   "name_en": "Rock Spike (resident)",
+   "factory_va": 3649884
+  },
+  {
+   "profile_id": 284,
+   "sprite_id": 644,
+   "name_jp": "\u30ed\u30c3\u30af\u30ac\u30dc\u30f3\u306e\u5ca9",
+   "name_en": "Rock Spike Rock",
+   "factory_va": 1334588
+  },
+  {
+   "profile_id": 285,
+   "sprite_id": 645,
+   "name_jp": "\u30bb\u30a4\u3061\u3083\u3093",
+   "name_en": "Fliprus",
+   "factory_va": 3728104
+  },
+  {
+   "profile_id": 286,
+   "sprite_id": 646,
+   "name_jp": "\u30bb\u30a4\u3061\u3083\u3093\u306e\u96ea\u7389",
+   "name_en": "Fliprus snowball",
+   "factory_va": 1337552
+  },
+  {
+   "profile_id": 287,
+   "sprite_id": 647,
+   "name_jp": "\u96ea\u7389",
+   "name_en": "Snow jade",
+   "factory_va": 7177640
+  },
+  {
+   "profile_id": 288,
+   "sprite_id": 648,
+   "name_jp": "\u30ab\u30ed\u30f3(\u982d)",
+   "name_en": "Dry Bones (head)",
+   "factory_va": 3245300
+  },
+  {
+   "profile_id": 289,
+   "sprite_id": 649,
+   "name_jp": "\u30ab\u30ed\u30f3",
+   "name_en": "Dry Bones",
+   "factory_va": 3218960
+  },
+  {
+   "profile_id": null,
+   "sprite_id": 650,
+   "name_jp": "\u30ab\u30ed\u30f3(\u5927)",
+   "name_en": "Dry Bones (Large)",
+   "factory_va": 3218960
+  },
+  {
+   "profile_id": null,
+   "sprite_id": 651,
+   "name_jp": "\u30a6\u30fc\u30c1\u30e3\u30f3",
+   "name_en": "Wu Chan",
+   "factory_va": 4063884
+  },
+  {
+   "profile_id": null,
+   "sprite_id": 652,
+   "name_jp": "\u9023\u7d50\u30cd\u30ba\u30df",
+   "name_en": "Connected rat",
+   "factory_va": 3479260
+  },
+  {
+   "profile_id": null,
+   "sprite_id": 653,
+   "name_jp": "\u30c1\u30e7\u30ed\u30dc\u30f3",
+   "name_en": "Chorobon",
+   "factory_va": 2577272
+  },
+  {
+   "profile_id": null,
+   "sprite_id": 654,
+   "name_jp": "\u30b0\u30eb\u30fc\u30d7\u30c1\u30e7\u30ed\u30dc\u30f3",
+   "name_en": "Group chorobon",
+   "factory_va": 2577272
+  },
+  {
+   "profile_id": null,
+   "sprite_id": 655,
+   "name_jp": "\u30d0\u30d6\u30eb",
+   "name_en": "Lava Bubble",
+   "factory_va": 2521336
+  },
+  {
+   "profile_id": 290,
+   "sprite_id": 656,
+   "name_jp": "\u540c\u671f\u30d0\u30d6\u30eb",
+   "name_en": "Sync Lava Bubble",
+   "factory_va": 2521336
+  },
+  {
+   "profile_id": 291,
+   "sprite_id": 657,
+   "name_jp": "\u30d0\u30d6\u30eb(RDash)",
+   "name_en": "Lava Bubble (RDash)",
+   "factory_va": 2532804
+  },
+  {
+   "profile_id": 292,
+   "sprite_id": 658,
+   "name_jp": "\u540c\u671f\u30d0\u30d6\u30eb(RDash)",
+   "name_en": "Sync Lava Bubble (RDash)",
+   "factory_va": 2532804
+  },
+  {
+   "profile_id": 293,
+   "sprite_id": 659,
+   "name_jp": "\u30af\u30e9\u30c3\u30b7\u30e3\u30fc",
+   "name_en": "crusher",
+   "factory_va": 2648412
+  },
+  {
+   "profile_id": 294,
+   "sprite_id": 660,
+   "name_jp": "\u30a6\u30ca\u30dc\u30f3",
+   "name_en": "Unabon",
+   "factory_va": 3941504
+  },
+  {
+   "profile_id": 295,
+   "sprite_id": 661,
+   "name_jp": "\u4e2d\u9593\u30a6\u30ca\u30dc\u30f3",
+   "name_en": "Middle Unabon",
+   "factory_va": 3941504
+  },
+  {
+   "profile_id": 296,
+   "sprite_id": 662,
+   "name_jp": "\u571f\u7ba1\u30a6\u30ca\u30dc\u30f3",
+   "name_en": "Earth pipe unabon",
+   "factory_va": 3941504
+  },
+  {
+   "profile_id": 297,
+   "sprite_id": 663,
+   "name_jp": "\u30a6\u30ca\u30dc\u30f3(\u5fa9\u6d3b)",
+   "name_en": "Unabon (Resurrection)",
+   "factory_va": 4009584
+  },
+  {
+   "profile_id": 298,
+   "sprite_id": 664,
+   "name_jp": "\u30a6\u30ca\u30dc\u30f3(\u5fa9\u6d3bRDash)",
+   "name_en": "Unabon (Revived RDash)",
+   "factory_va": 4009584
+  },
+  {
+   "profile_id": 299,
+   "sprite_id": 665,
+   "name_jp": "\u30a6\u30ca\u30dc\u30f3(RDash)",
+   "name_en": "Unabon (RDash)",
+   "factory_va": 3960028
+  },
+  {
+   "profile_id": null,
+   "sprite_id": 666,
+   "name_jp": "K.K.",
+   "name_en": "K.K.",
+   "factory_va": 3348664
+  },
+  {
+   "profile_id": null,
+   "sprite_id": 667,
+   "name_jp": "K.K.(\u5e38\u99d0)",
+   "name_en": "K.K. (resident)",
+   "factory_va": 3348664
+  },
+  {
+   "profile_id": null,
+   "sprite_id": 668,
+   "name_jp": "K.K.(\u30ea\u30d5\u30c8\u4fee\u6b63\u7248)",
+   "name_en": "K. K. (lift modified version)",
+   "factory_va": 3348664
+  },
+  {
+   "profile_id": null,
+   "sprite_id": 669,
+   "name_jp": "K.K.\u306e\u96f7",
+   "name_en": "Sumo Bro Lightning",
+   "factory_va": 3361700
+  },
+  {
+   "profile_id": null,
+   "sprite_id": 670,
+   "name_jp": "\u30ef\u30f3\u30ef\u30f3",
+   "name_en": "Bow-wow",
+   "factory_va": 4022812
+  },
+  {
+   "profile_id": null,
+   "sprite_id": 671,
+   "name_jp": "\u30dd\u30eb\u30bf\u30fc\u30ac\u30a4\u30b9\u30c8",
+   "name_en": "Poltergeist",
+   "factory_va": 3598584
+  },
+  {
+   "profile_id": null,
+   "sprite_id": 672,
+   "name_jp": "\u71ed\u53f0",
+   "name_en": "Candlestick",
+   "factory_va": 7181952
+  },
+  {
+   "profile_id": null,
+   "sprite_id": 673,
+   "name_jp": "\u6e67\u304d\u51fa\u3057\u30d0\u30af\u30d0\u30af",
+   "name_en": "Boiling Bakubak",
+   "factory_va": 3987200
+  },
+  {
+   "profile_id": null,
+   "sprite_id": 674,
+   "name_jp": "\u30d0\u30af\u30d0\u30af",
+   "name_en": "Bakubak",
+   "factory_va": 2339100
+  },
+  {
+   "profile_id": null,
+   "sprite_id": 675,
+   "name_jp": "\u30a4\u30d0\u30e9\u30e0\u30b7",
+   "name_en": "Bivalvia",
+   "factory_va": 3019160
+  },
+  {
+   "profile_id": null,
+   "sprite_id": 676,
+   "name_jp": "\u30af\u30ed\u30b9\u30b1\u30fc",
+   "name_en": "Cross key",
+   "factory_va": 2668504
+  },
+  {
+   "profile_id": null,
+   "sprite_id": 677,
+   "name_jp": "\u30c8\u30b2\u30e1\u30c3\u30c8",
+   "name_en": "Spike Top",
+   "factory_va": 3891980
+  },
+  {
+   "profile_id": null,
+   "sprite_id": 678,
+   "name_jp": "\u30b0\u30eb\u30fc\u30d7\u30c8\u30b2\u30e1\u30c3\u30c8",
+   "name_en": "Group gamet",
+   "factory_va": 3891980
+  },
+  {
+   "profile_id": null,
+   "sprite_id": 679,
+   "name_jp": "\u30d6\u30f3\u30d6\u30f3\uff08\uff37\uff11\u7826\uff09",
+   "name_en": "Boom (W1 bowl)",
+   "factory_va": 316128
+  },
+  {
+   "profile_id": null,
+   "sprite_id": 680,
+   "name_jp": "\u30d6\u30f3\u30d6\u30f3\uff08\uff37\uff12\u7826\uff09",
+   "name_en": "Boom (W2 bowl)",
+   "factory_va": 349704
+  },
+  {
+   "profile_id": null,
+   "sprite_id": 681,
+   "name_jp": "\u30d6\u30f3\u30d6\u30f3\uff08\uff37\uff13\u7826\uff09",
+   "name_en": "Boom (W3)",
+   "factory_va": 357848
+  },
+  {
+   "profile_id": null,
+   "sprite_id": 682,
+   "name_jp": "\u30d6\u30f3\u30d6\u30f3\uff08\uff37\uff14\u7826\uff09",
+   "name_en": "Boom (W4)",
+   "factory_va": 364380
+  },
+  {
+   "profile_id": null,
+   "sprite_id": 683,
+   "name_jp": "\u30d6\u30f3\u30d6\u30f3\uff08\uff37\uff15\u7826\uff09",
+   "name_en": "Boom (W5)",
+   "factory_va": 367456
+  },
+  {
+   "profile_id": null,
+   "sprite_id": 684,
+   "name_jp": "\u30d6\u30f3\u30d6\u30f3\uff08\uff37\uff16\u7826\uff09",
+   "name_en": "Boom (W6 bowl)",
+   "factory_va": 375156
+  },
+  {
+   "profile_id": null,
+   "sprite_id": 685,
+   "name_jp": "\u30d6\u30f3\u30d6\u30f3\u30c7\u30e2\u7ba1\u7406\u30bf\u30b0",
+   "name_en": "Boom demo management tag",
+   "factory_va": 343988
+  },
+  {
+   "profile_id": null,
+   "sprite_id": 686,
+   "name_jp": "\u30b3\u30af\u30c3\u30d1\u30c7\u30e2\u7ba1\u7406\u30bf\u30b0",
+   "name_en": "KOKUPPA demo management tag",
+   "factory_va": 755216
+  },
+  {
+   "profile_id": null,
+   "sprite_id": 687,
+   "name_jp": "\u30b8\u30e5\u30cb\u30a2\u30c7\u30e2\u7ba1\u7406\u30bf\u30b0",
+   "name_en": "Junior demo management tag",
+   "factory_va": 861452
+  },
+  {
+   "profile_id": null,
+   "sprite_id": 688,
+   "name_jp": "\u30ab\u30e1\u30c3\u30af\u30c7\u30e2\u7ba1\u7406\u30bf\u30b0",
+   "name_en": "Camek demo management tag",
+   "factory_va": 706660
+  },
+  {
+   "profile_id": null,
+   "sprite_id": 689,
+   "name_jp": "\u30dc\u30b9K.K.\u30c7\u30e2\u7ba1\u7406\u30bf\u30b0",
+   "name_en": "Boss K. K. demo management tag",
+   "factory_va": 206296
+  },
+  {
+   "profile_id": null,
+   "sprite_id": 690,
+   "name_jp": "W8\u9053\u4e2d\u30af\u30c3\u30d1Jr.\u7ba1\u7406\u30bf\u30b0",
+   "name_en": "W8 Dokdo Kuppa Jr. Management tag",
+   "factory_va": 1063036
+  },
+  {
+   "profile_id": null,
+   "sprite_id": 691,
+   "name_jp": "\u57ce\u30af\u30c3\u30d1\u30c7\u30e2\u7ba1\u7406\u30bf\u30b0",
+   "name_en": "Castle Kupper demo management tag",
+   "factory_va": 817372
+  },
+  {
+   "profile_id": null,
+   "sprite_id": 692,
+   "name_jp": "\u6700\u7d42\u30af\u30c3\u30d1\u30c7\u30e2\u7ba1\u7406\u30bf\u30b0",
+   "name_en": "Final Kupper Demo Management Tag",
+   "factory_va": 501556
+  },
+  {
+   "profile_id": null,
+   "sprite_id": 693,
+   "name_jp": "\u30d4\u30fc\u30c1\u30c7\u30e2\u7ba1\u7406\u30bf\u30b0",
+   "name_en": "Peach Demo Management Tag",
+   "factory_va": 1020064
+  },
+  {
+   "profile_id": null,
+   "sprite_id": 694,
+   "name_jp": "\u30e9\u30ea\u30fc",
+   "name_en": "Rally",
+   "factory_va": 882628
+  },
+  {
+   "profile_id": null,
+   "sprite_id": 695,
+   "name_jp": "\u30b3\u30af\u30c3\u30d1\u306e\u708e",
+   "name_en": "The flame of cok",
+   "factory_va": 757928
+  },
+  {
+   "profile_id": null,
+   "sprite_id": 696,
+   "name_jp": "\u30ec\u30df\u30fc",
+   "name_en": "Remy",
+   "factory_va": 900572
+  },
+  {
+   "profile_id": null,
+   "sprite_id": 697,
+   "name_jp": "\u30e2\u30fc\u30c8\u30f3",
+   "name_en": "Morton",
+   "factory_va": 978636
+  },
+  {
+   "profile_id": null,
+   "sprite_id": 698,
+   "name_jp": "\u5de8\u5927\u30b5\u30f3\u30dc",
+   "name_en": "Giant Sambo",
+   "factory_va": 1001356
+  },
+  {
+   "profile_id": null,
+   "sprite_id": 699,
+   "name_jp": "\u5de8\u5927\u30b5\u30f3\u30dc\u306e\u30d1\u30fc\u30c4",
+   "name_en": "Huge Sambo parts",
+   "factory_va": 1001508
+  },
+  {
+   "profile_id": null,
+   "sprite_id": 700,
+   "name_jp": "\u30a6\u30a7\u30f3\u30c7\u30a3",
+   "name_en": "Wendy",
+   "factory_va": 1198288
+  },
+  {
+   "profile_id": null,
+   "sprite_id": 701,
+   "name_jp": "\u30a6\u30a7\u30f3\u30c7\u30a3\u306e\u30ea\u30f3\u30b0",
+   "name_en": "Wendy's ring",
+   "factory_va": 1235120
+  },
+  {
+   "profile_id": null,
+   "sprite_id": 702,
+   "name_jp": "\u30eb\u30c9\u30a6\u30a3\u30c3\u30b0",
+   "name_en": "Ludwig",
+   "factory_va": 947464
+  },
+  {
+   "profile_id": null,
+   "sprite_id": 703,
+   "name_jp": "\u30eb\u30c9\u30a6\u30a3\u30c3\u30b0\u5206\u8eab",
+   "name_en": "Ludwig",
+   "factory_va": 947940
+  },
+  {
+   "profile_id": null,
+   "sprite_id": 704,
+   "name_jp": "\u30a4\u30ae\u30fc",
+   "name_en": "Iggy",
+   "factory_va": 621148
+  },
+  {
+   "profile_id": null,
+   "sprite_id": 705,
+   "name_jp": "\u30a4\u30ae\u30fc\u306e\u9b54\u6cd5",
+   "name_en": "Iggy magic",
+   "factory_va": 665808
+  },
+  {
+   "profile_id": null,
+   "sprite_id": 706,
+   "name_jp": "\u30a6\u30fc\u30ac\u30f3",
+   "name_en": "Wugan",
+   "factory_va": 1241576
+  },
+  {
+   "profile_id": null,
+   "sprite_id": 707,
+   "name_jp": "\u30ed\u30a4",
+   "name_en": "Roy",
+   "factory_va": 1084548
+  },
+  {
+   "profile_id": null,
+   "sprite_id": 708,
+   "name_jp": "\u30ed\u30a4\u7528\u6e67\u304d\u51fa\u3057\u30ea\u30d5\u30c8",
+   "name_en": "Roaring lift for Roy",
+   "factory_va": 1113284
+  },
+  {
+   "profile_id": null,
+   "sprite_id": 709,
+   "name_jp": "\u30dc\u30b9K.K.",
+   "name_en": "Boss K. K.",
+   "factory_va": 167868
+  },
+  {
+   "profile_id": null,
+   "sprite_id": 710,
+   "name_jp": "\u30dc\u30b9K.K.\u306e\u96f7",
+   "name_en": "Boss K. Lightning",
+   "factory_va": 211576
+  },
+  {
+   "profile_id": null,
+   "sprite_id": 711,
+   "name_jp": "\u30ab\u30e1\u30c3\u30af",
+   "name_en": "Camek",
+   "factory_va": 674116
+  },
+  {
+   "profile_id": null,
+   "sprite_id": 712,
+   "name_jp": "\u30ab\u30e1\u30c3\u30af\u30c4\u30e9\u30e9\u914d\u7f6e",
+   "name_en": "Camek Tullala arrangement",
+   "factory_va": 673964
+  },
+  {
+   "profile_id": null,
+   "sprite_id": 713,
+   "name_jp": "\u30ab\u30e1\u30c3\u30af\u30ef\u30fc\u30d7\u4f4d\u7f6e",
+   "name_en": "Camec Warp Position",
+   "factory_va": 674028
+  },
+  {
+   "profile_id": null,
+   "sprite_id": 714,
+   "name_jp": "\u30ab\u30e1\u30c3\u30af\u306e\u9b54\u6cd5",
+   "name_en": "Kamek's magic",
+   "factory_va": 722044
+  },
+  {
+   "profile_id": null,
+   "sprite_id": 715,
+   "name_jp": "W8\u9053\u4e2d\u30af\u30c3\u30d1Jr",
+   "name_en": "W8 Dokdo Kuppa Jr",
+   "factory_va": 1029756
+  },
+  {
+   "profile_id": null,
+   "sprite_id": 716,
+   "name_jp": "\u30af\u30c3\u30d1",
+   "name_en": "Bowser",
+   "factory_va": 790556
+  },
+  {
+   "profile_id": null,
+   "sprite_id": 717,
+   "name_jp": "\u30af\u30c3\u30d1\u708e\uff08\u6e67\u304d\u51fa\u3057\uff09",
+   "name_en": "Kuppa flame (blow out)",
+   "factory_va": 1121312
+  },
+  {
+   "profile_id": null,
+   "sprite_id": 718,
+   "name_jp": "\u30af\u30c3\u30d1\u708e",
+   "name_en": "Kuppa flame",
+   "factory_va": 835476
+  },
+  {
+   "profile_id": null,
+   "sprite_id": 719,
+   "name_jp": "\u521d\u56de\u30af\u30c3\u30d1\u30c7\u30e2\u7528\u30af\u30c3\u30d1Jr.\u30af\u30e9\u30a6\u30f3",
+   "name_en": "Kuppa Jr. Crown for the first Kuppa demo",
+   "factory_va": 400328
+  },
+  {
+   "profile_id": null,
+   "sprite_id": 720,
+   "name_jp": "\u521d\u56de\u30af\u30c3\u30d1\u30c7\u30e2\u7528\u30af\u30c3\u30d1Jr",
+   "name_en": "Kuppa Jr for the first Kuppa demo",
+   "factory_va": 396968
+  },
+  {
+   "profile_id": null,
+   "sprite_id": 721,
+   "name_jp": "\u30c7\u30e2\u7528\u30ab\u30e1\u30c3\u30af",
+   "name_en": "Demonstration for Camek",
+   "factory_va": 345648
+  },
+  {
+   "profile_id": null,
+   "sprite_id": 722,
+   "name_jp": "\u521d\u56de\u30af\u30c3\u30d1\u30c7\u30e2\u7528\u30ab\u30e1\u30c3\u30af",
+   "name_en": "Kamek for the first Kuppa demo",
+   "factory_va": 832324
+  },
+  {
+   "profile_id": null,
+   "sprite_id": 723,
+   "name_jp": "\u30c7\u30e2\u7528\u30ab\u30e1\u30c3\u30af",
+   "name_en": "Demonstration for Camek",
+   "factory_va": 207360
+  },
+  {
+   "profile_id": null,
+   "sprite_id": 724,
+   "name_jp": "\u30c7\u30e2\u7528K.K.",
+   "name_en": "Demo K.K.",
+   "factory_va": 208504
+  },
+  {
+   "profile_id": null,
+   "sprite_id": 725,
+   "name_jp": "\u6700\u7d42\u30af\u30c3\u30d1\u306e\u708e",
+   "name_en": "Final Kuppa's flame",
+   "factory_va": 518644
+  },
+  {
+   "profile_id": null,
+   "sprite_id": 726,
+   "name_jp": "\u6700\u7d42\u30af\u30c3\u30d1Jr",
+   "name_en": "Final Kupper Jr",
+   "factory_va": 531232
+  },
+  {
+   "profile_id": null,
+   "sprite_id": 727,
+   "name_jp": "\u6700\u7d42\u30af\u30c3\u30d1Jr.\u306e\u708e",
+   "name_en": "Final Kuppa Jr.'s Flame",
+   "factory_va": 617012
+  },
+  {
+   "profile_id": null,
+   "sprite_id": 728,
+   "name_jp": "\u6700\u7d42\u30dc\u30e0\u5175",
+   "name_en": "Last bomber",
+   "factory_va": 407280
+  },
+  {
+   "profile_id": null,
+   "sprite_id": 729,
+   "name_jp": "\u30ec\u30df\u30fc\u98db\u884c\u8239",
+   "name_en": "Remy airship",
+   "factory_va": 773640
+  },
+  {
+   "profile_id": null,
+   "sprite_id": 730,
+   "name_jp": "\u30e2\u30fc\u30c8\u30f3\u98db\u884c\u8239",
+   "name_en": "Moreton Airship",
+   "factory_va": 776572
+  },
+  {
+   "profile_id": null,
+   "sprite_id": 731,
+   "name_jp": "\u30e9\u30ea\u30fc\u98db\u884c\u8239",
+   "name_en": "Rally airship",
+   "factory_va": 772168
+  },
+  {
+   "profile_id": null,
+   "sprite_id": 732,
+   "name_jp": "\u30a6\u30a7\u30f3\u30c7\u30a3\u98db\u884c\u8239",
+   "name_en": "Wendy Airship",
+   "factory_va": 789084
+  },
+  {
+   "profile_id": null,
+   "sprite_id": 733,
+   "name_jp": "\u30a4\u30ae\u30fc\u98db\u884c\u8239",
+   "name_en": "Iggy Airship",
+   "factory_va": 770544
+  },
+  {
+   "profile_id": null,
+   "sprite_id": 734,
+   "name_jp": "\u30ed\u30a4\u98db\u884c\u8239",
+   "name_en": "Roy Airship",
+   "factory_va": 778044
+  },
+  {
+   "profile_id": null,
+   "sprite_id": 735,
+   "name_jp": "\u30eb\u30c9\u30a6\u30a3\u30c3\u30b0\u98db\u884c\u8239",
+   "name_en": "Ludwig Airship",
+   "factory_va": 775100
+  },
+  {
+   "profile_id": null,
+   "sprite_id": 736,
+   "name_jp": "\u30d4\u30fc\u30c1",
+   "name_en": "Peach",
+   "factory_va": 1015208
+  },
+  {
+   "profile_id": null,
+   "sprite_id": 737,
+   "name_jp": "\u30d4\u30fc\u30c1\u30c7\u30e2\u7528\u30b7\u30e3\u30c9\u30a6\u541b",
+   "name_en": "Shadow demo for Peach Demo",
+   "factory_va": 3565460
+  },
+  {
+   "profile_id": null,
+   "sprite_id": 738,
+   "name_jp": "\u9060\u666f\u914d\u7f6e\u7528\u30d4\u30fc\u30c1",
+   "name_en": "Peach for distant view arrangement",
+   "factory_va": 411376
+  },
+  {
+   "profile_id": null,
+   "sprite_id": 739,
+   "name_jp": "\u9060\u666f\u914d\u7f6e\u7528\u30b7\u30e3\u30c3\u30bf\u30fc",
+   "name_en": "Shutter for distant view arrangement",
+   "factory_va": 418360
+  },
+  {
+   "profile_id": null,
+   "sprite_id": 740,
+   "name_jp": "\u30b7\u30e7\u30fc\u30c8\u30d7\u30ec\u30a4\u7d50\u679c\u753b\u9762\u306e\u30d4\u30fc\u30c1\u59eb",
+   "name_en": "Princess Peach of the short play result screen",
+   "factory_va": 3845676
+  },
+  {
+   "profile_id": null,
+   "sprite_id": 741,
+   "name_jp": "\u770b\u677f\u77e2\u5370",
+   "name_en": "Billboard arrow",
+   "factory_va": 6469320
+  },
+  {
+   "profile_id": null,
+   "sprite_id": 742,
+   "name_jp": "\u770b\u677f\u77e2\u5370(RDash)",
+   "name_en": "Billboard arrow (RDash)",
+   "factory_va": 6469320
+  },
+  {
+   "profile_id": null,
+   "sprite_id": 743,
+   "name_jp": "\u770b\u677f\u77e2\u5370(\u751f\u6210\u7bc4\u56f2\u72ed\u3044\u7248)",
+   "name_en": "Billboard arrow (generation range narrow version)",
+   "factory_va": 6469320
+  },
+  {
+   "profile_id": null,
+   "sprite_id": 744,
+   "name_jp": "\u30eb\u30a4\u30fc\u30b8\u770b\u677f\uff08\uff11\uff0d\uff11\uff09",
+   "name_en": "Luigi signboard (1-1)",
+   "factory_va": 6815532
+  },
+  {
+   "profile_id": null,
+   "sprite_id": 745,
+   "name_jp": "\u30eb\u30a4\u30fc\u30b8\u770b\u677f\uff08\uff19\uff0d\uff19\uff09",
+   "name_en": "Luigi signboard (9-9)",
+   "factory_va": 6815532
+  },
+  {
+   "profile_id": null,
+   "sprite_id": 746,
+   "name_jp": "\u8ffd\u5f93\u8349\u82b1",
+   "name_en": "Followed flower",
+   "factory_va": 6902296
+  },
+  {
+   "profile_id": null,
+   "sprite_id": 747,
+   "name_jp": "\uff24\uff36\u8349\u82b1\u767a\u751f",
+   "name_en": "DV flowering outbreak",
+   "factory_va": 6273352
+  },
+  {
+   "profile_id": null,
+   "sprite_id": 748,
+   "name_jp": "\uff2e\uff25\uff38\uff34\uff27\uff2f\uff34\uff2f\u30d6\u30ed\u30c3\u30af",
+   "name_en": "NEXTGOTO block",
+   "factory_va": 6912728
+  },
+  {
+   "profile_id": null,
+   "sprite_id": 749,
+   "name_jp": "\u66f8\u304d\u63db\u3048\u30d6\u30ed\u30c3\u30af",
+   "name_en": "Rewrite block",
+   "factory_va": 6090520
+  },
+  {
+   "profile_id": null,
+   "sprite_id": 750,
+   "name_jp": "\u66f8\u304d\u63db\u3048\u30d6\u30ed\u30c3\u30af(RDash\u7528)",
+   "name_en": "Rewriting block (for RDash)",
+   "factory_va": 6090520
+  },
+  {
+   "profile_id": null,
+   "sprite_id": 751,
+   "name_jp": "\u8d64\u30ea\u30f3\u30b0",
+   "name_en": "Red ring",
+   "factory_va": 7099452
+  },
+  {
+   "profile_id": null,
+   "sprite_id": 752,
+   "name_jp": "\u7dd1\u30ea\u30f3\u30b0",
+   "name_en": "Green ring",
+   "factory_va": 6390660
+  },
+  {
+   "profile_id": null,
+   "sprite_id": 753,
+   "name_jp": "\u7d2b\u30ea\u30f3\u30b0",
+   "name_en": "Purple ring",
+   "factory_va": 7074600
+  },
+  {
+   "profile_id": null,
+   "sprite_id": 754,
+   "name_jp": "\u9752\u30ea\u30f3\u30b0",
+   "name_en": "Blue ring",
+   "factory_va": 6020420
+  },
+  {
+   "profile_id": null,
+   "sprite_id": 755,
+   "name_jp": "\u30b4\u30fc\u30eb\u30ea\u30f3\u30b0",
+   "name_en": "Goal ring",
+   "factory_va": 6381212
+  },
+  {
+   "profile_id": null,
+   "sprite_id": 756,
+   "name_jp": "\u6728\u306e\u5b9f",
+   "name_en": "Tree nuts",
+   "factory_va": 2839660
+  },
+  {
+   "profile_id": null,
+   "sprite_id": 757,
+   "name_jp": "\u30d5\u30eb\u30fc\u30c4\u306e\u6728",
+   "name_en": "Fruit tree",
+   "factory_va": 6354028
+  },
+  {
+   "profile_id": null,
+   "sprite_id": 758,
+   "name_jp": "\u30cf\u30f3\u30de\u30fc\u30d6\u30ed\u30b9",
+   "name_en": "Hammer Bro",
+   "factory_va": 2931488
+  },
+  {
+   "profile_id": null,
+   "sprite_id": 759,
+   "name_jp": "\u30cf\u30f3\u30de\u30fc",
+   "name_en": "Hammer",
+   "factory_va": 1306668
+  },
+  {
+   "profile_id": null,
+   "sprite_id": 760,
+   "name_jp": "\u30d6\u30fc\u30e1\u30e9\u30f3\u30d6\u30ed\u30b9",
+   "name_en": "Boomerang Bro",
+   "factory_va": 2499872
+  },
+  {
+   "profile_id": null,
+   "sprite_id": 761,
+   "name_jp": "\u30d6\u30fc\u30e1\u30e9\u30f3",
+   "name_en": "Boomerang",
+   "factory_va": 1253092
+  },
+  {
+   "profile_id": null,
+   "sprite_id": 762,
+   "name_jp": "\u30d5\u30a1\u30a4\u30a2\u30d6\u30ed\u30b9",
+   "name_en": "Fire Bro",
+   "factory_va": 2792040
+  },
+  {
+   "profile_id": null,
+   "sprite_id": 763,
+   "name_jp": "\u30d6\u30ed\u30b9\u7528\u30d5\u30a1\u30a4\u30e4\u30fc\u30dc\u30fc\u30eb",
+   "name_en": "Bro fireball",
+   "factory_va": 1274700
+  },
+  {
+   "profile_id": null,
+   "sprite_id": 764,
+   "name_jp": "\u30a2\u30a4\u30b9\u30d6\u30ed\u30b9",
+   "name_en": "Ice Bro",
+   "factory_va": 3086836
+  },
+  {
+   "profile_id": null,
+   "sprite_id": 765,
+   "name_jp": "\u30d6\u30ed\u30b9\u7528\u30a2\u30a4\u30b9\u30dc\u30fc\u30eb",
+   "name_en": "Bro ice ball",
+   "factory_va": 1322868
+  },
+  {
+   "profile_id": null,
+   "sprite_id": 766,
+   "name_jp": "\u30e1\u30ac\u30d6\u30ed\u30b9",
+   "name_en": "Sledge Bro",
+   "factory_va": 2961000
+  },
+  {
+   "profile_id": null,
+   "sprite_id": 767,
+   "name_jp": "\u30e1\u30ac\u30cf\u30f3\u30de\u30fc",
+   "name_en": "Sledge Bro hammer",
+   "factory_va": 1329956
+  },
+  {
+   "profile_id": 300,
+   "sprite_id": 768,
+   "name_jp": "\u30d3\u30ea\u30ad\u30e5\u30fc",
+   "name_en": "Amp",
+   "factory_va": 2458152
+  },
+  {
+   "profile_id": 301,
+   "sprite_id": 769,
+   "name_jp": "\u30af\u30c3\u30d1\u96fb\u7dda",
+   "name_en": "Kupper wire",
+   "factory_va": 2748676
+  },
+  {
+   "profile_id": 302,
+   "sprite_id": 770,
+   "name_jp": "\u30af\u30c3\u30d1\u96fb\u7dda\u5358\u4f53",
+   "name_en": "Kupper wire single body",
+   "factory_va": 2748676
+  },
+  {
+   "profile_id": 303,
+   "sprite_id": 771,
+   "name_jp": "\u96fb\u7dda\u96fb\u6483",
+   "name_en": "Wire electric shock",
+   "factory_va": 2756072
+  },
+  {
+   "profile_id": 304,
+   "sprite_id": 772,
+   "name_jp": "\u30b3\u30c8\u30f3",
+   "name_en": "Coton",
+   "factory_va": 3366124
+  },
+  {
+   "profile_id": 305,
+   "sprite_id": 773,
+   "name_jp": "\u30b0\u30eb\u30fc\u30d7\u30b3\u30c8\u30f3",
+   "name_en": "Group coton",
+   "factory_va": 3366124
+  },
+  {
+   "profile_id": 306,
+   "sprite_id": 774,
+   "name_jp": "\u4e2d\u5fc3\u541b\u5bfe\u5fdc\u571f\u7ba1\u30d5\u30a1\u30a4\u30e4\u30fc\u30d1\u30c3\u30af\u30f3",
+   "name_en": "Center-san corresponding earth pipe fire packon",
+   "factory_va": 3651112
+  },
+  {
+   "profile_id": 307,
+   "sprite_id": 775,
+   "name_jp": "\u4e2d\u5fc3\u541b\u5bfe\u5fdc\u571f\u7ba1\u30d1\u30c3\u30af\u30f3\u30d5\u30e9\u30ef\u30fc\uff08\u4e0a\uff09",
+   "name_en": "Center-correspondence earth pipe packun flower (above)",
+   "factory_va": 3664528
+  },
+  {
+   "profile_id": 308,
+   "sprite_id": 776,
+   "name_jp": "\u4e2d\u5fc3\u541b\u5bfe\u5fdc\u571f\u7ba1\u30d1\u30c3\u30af\u30f3\u30d5\u30e9\u30ef\u30fc\uff08\u4e0b\uff09",
+   "name_en": "Center-correspondence earth pipe packun flower (bottom)",
+   "factory_va": 3663448
+  },
+  {
+   "profile_id": 309,
+   "sprite_id": 777,
+   "name_jp": "\u4e2d\u5fc3\u541b\u5bfe\u5fdc\u571f\u7ba1\u30d1\u30c3\u30af\u30f3\u30d5\u30e9\u30ef\u30fc\uff08\u5de6\uff09",
+   "name_en": "Center-correspondence earth pipe packun flower (left)",
+   "factory_va": 3663808
+  },
+  {
+   "profile_id": null,
+   "sprite_id": 778,
+   "name_jp": "\u4e2d\u5fc3\u541b\u5bfe\u5fdc\u571f\u7ba1\u30d1\u30c3\u30af\u30f3\u30d5\u30e9\u30ef\u30fc\uff08\u53f3\uff09",
+   "name_en": "Center-correspondence earth pipe packun flower (right)",
+   "factory_va": 3664168
+  },
+  {
+   "profile_id": null,
+   "sprite_id": 779,
+   "name_jp": "\u30c4\u30e9\u30e9",
+   "name_en": "Tsurara",
+   "factory_va": 6420264
+  },
+  {
+   "profile_id": null,
+   "sprite_id": 780,
+   "name_jp": "\u30c4\u30e9\u30e9\uff08\u56fa\u5b9a\uff09",
+   "name_en": "Tsurara (fixed)",
+   "factory_va": 6437756
+  },
+  {
+   "profile_id": null,
+   "sprite_id": 781,
+   "name_jp": "\u30c6\u30ec\u30b5",
+   "name_en": "Teresa",
+   "factory_va": 3851576
+  },
+  {
+   "profile_id": null,
+   "sprite_id": 782,
+   "name_jp": "\u30d3\u30c3\u30b0\u30c6\u30ec\u30b5",
+   "name_en": "Big Theresa",
+   "factory_va": 3851576
+  },
+  {
+   "profile_id": null,
+   "sprite_id": 783,
+   "name_jp": "\u56de\u8ee2\u62e1\u7e2e\u30c6\u30ec\u30b5\uff08\u5b50\uff09",
+   "name_en": "Rotation scaling teleresa (child)",
+   "factory_va": 3868600
+  },
+  {
+   "profile_id": 310,
+   "sprite_id": 784,
+   "name_jp": "\u56de\u8ee2\u62e1\u7e2e\u30c6\u30ec\u30b5\uff08\u89aa\uff09",
+   "name_en": "Rotation scaling teleresa (parent)",
+   "factory_va": 3875432
+  },
+  {
+   "profile_id": 311,
+   "sprite_id": 785,
+   "name_jp": "\u56de\u8ee2\u62e1\u7e2e\u30c6\u30ec\u30b5RDash\uff08\u89aa\uff09",
+   "name_en": "Rotation scaling telesa RDash (parent)",
+   "factory_va": 3878340
+  },
+  {
+   "profile_id": 312,
+   "sprite_id": 786,
+   "name_jp": "\u30ad\u30ea\u30d5\u30ad\u30fc",
+   "name_en": "Kiriff key",
+   "factory_va": 3333260
+  },
+  {
+   "profile_id": 313,
+   "sprite_id": 787,
+   "name_jp": "\u30ad\u30ea\u30d5\u30ad\u30fc(RDash)",
+   "name_en": "Kiriff key (RDash)",
+   "factory_va": 3333260
+  },
+  {
+   "profile_id": 314,
+   "sprite_id": 788,
+   "name_jp": "\u9727\u7bc4\u56f2\u6307\u5b9a\u541b",
+   "name_en": "Mist range designated you",
+   "factory_va": 2613100
+  },
+  {
+   "profile_id": 315,
+   "sprite_id": 789,
+   "name_jp": "\u6bd2\u9727",
+   "name_en": "Poisonous fog",
+   "factory_va": 2613320
+  },
+  {
+   "profile_id": 316,
+   "sprite_id": 790,
+   "name_jp": "\u9727\u7bc4\u56f2\u6307\u5b9a\u541b(\u30e9\u30a4\u30c8\u7248)",
+   "name_en": "Mist range designation you (light version)",
+   "factory_va": 2635956
+  },
+  {
+   "profile_id": 317,
+   "sprite_id": 791,
+   "name_jp": "\u6ce1\u767a\u751f\u7ba1\u7406\u541b",
+   "name_en": "Bubble generation management you",
+   "factory_va": 6041808
+  },
+  {
+   "profile_id": 318,
+   "sprite_id": 792,
+   "name_jp": "\u96ea\u767a\u751f\u30bf\u30b0",
+   "name_en": "Snowfall tag",
+   "factory_va": 6960860
+  },
+  {
+   "profile_id": 319,
+   "sprite_id": 793,
+   "name_jp": "\u706b\u306e\u7c89\u767a\u751f\u541b",
+   "name_en": "Fire powder outbreak you",
+   "factory_va": 6964416
+  },
+  {
+   "profile_id": null,
+   "sprite_id": 794,
+   "name_jp": "\u98a8\u767a\u751f\u30bf\u30b0",
+   "name_en": "Wind generation tag",
+   "factory_va": 7226584
+  },
+  {
+   "profile_id": null,
+   "sprite_id": 795,
+   "name_jp": "\u30d5\u30ec\u30fc\u30e0\u8a2d\u5b9a\u30bf\u30b0",
+   "name_en": "Frame setting tag",
+   "factory_va": 7226376
+  },
+  {
+   "profile_id": null,
+   "sprite_id": 796,
+   "name_jp": "\u30b7\u30e3\u30c9\u30a6\u541b\u306e\u5bb6\u306e\u8aad\u3080\u30bf\u30b0",
+   "name_en": "Shadow's home tag",
+   "factory_va": 8585192
+  },
+  {
+   "profile_id": null,
+   "sprite_id": 797,
+   "name_jp": "\u30b7\u30e7\u30fc\u30c8\u30d7\u30ec\u30a4\u7d50\u679c\u30c7\u30e2\u30bf\u30b0",
+   "name_en": "Short play results demo tag",
+   "factory_va": 8588148
+  },
+  {
+   "profile_id": null,
+   "sprite_id": 798,
+   "name_jp": "\u6df1\u6d77\u7528\u7167\u660e",
+   "name_en": "Deep sea lighting",
+   "factory_va": 6782364
+  },
+  {
+   "profile_id": null,
+   "sprite_id": 799,
+   "name_jp": "\u5186\u30e9\u30a4\u30c8",
+   "name_en": "Circle light",
+   "factory_va": 6216208
+  },
+  {
+   "profile_id": 320,
+   "sprite_id": 800,
+   "name_jp": "\u5927\u7532\u7f85",
+   "name_en": "Big armor",
+   "factory_va": 5965448
+  },
+  {
+   "profile_id": 321,
+   "sprite_id": 801,
+   "name_jp": "\u56de\u8ee2\u7826\u6a2a\u30d6\u30ed\u30c3\u30af\u7559\u3081\u5177",
+   "name_en": "Rotating rod side block fasteners",
+   "factory_va": 6775328
+  },
+  {
+   "profile_id": 322,
+   "sprite_id": 802,
+   "name_jp": "\u6eb6\u5ca9\u632f\u308a\u5b50\u30ea\u30d5\u30c8\u4e2d\u592e",
+   "name_en": "Lava Pendulum Lift Central",
+   "factory_va": 6542576
+  },
+  {
+   "profile_id": 323,
+   "sprite_id": 803,
+   "name_jp": "\u30b0\u30eb\u30b0\u30eb",
+   "name_en": "Guru guru",
+   "factory_va": 2926732
+  },
+  {
+   "profile_id": 324,
+   "sprite_id": 804,
+   "name_jp": "\u30b2\u30c3\u30bd\u30fc",
+   "name_en": "Gessoo",
+   "factory_va": 2872168
+  },
+  {
+   "profile_id": 325,
+   "sprite_id": 805,
+   "name_jp": "\u30b3\u30b2\u30c3\u30bd\u30fc",
+   "name_en": "Kegessou",
+   "factory_va": 2898260
+  },
+  {
+   "profile_id": 326,
+   "sprite_id": 806,
+   "name_jp": "\u30b2\u30c3\u30bd\u30fc(\u3070\u3089\u6492\u304d)",
+   "name_en": "Gessoo",
+   "factory_va": 2401848
+  },
+  {
+   "profile_id": 327,
+   "sprite_id": 807,
+   "name_jp": "\u30ca\u30c3\u30c8",
+   "name_en": "nut",
+   "factory_va": 6921196
+  },
+  {
+   "profile_id": 328,
+   "sprite_id": 808,
+   "name_jp": "\u5b9d\u7bb1",
+   "name_en": "Treasure chest",
+   "factory_va": 7183632
+  },
+  {
+   "profile_id": 329,
+   "sprite_id": 809,
+   "name_jp": "\u5b9d\u7bb1\u306e\u30ab\u30ae",
+   "name_en": "The key to the treasure chest",
+   "factory_va": 7197344
+  },
+  {
+   "profile_id": null,
+   "sprite_id": 810,
+   "name_jp": "\u30d0\u30c8\u30eb\u7528\u30a2\u30a4\u30c6\u30e0",
+   "name_en": "Battle item",
+   "factory_va": 4572096
+  },
+  {
+   "profile_id": null,
+   "sprite_id": 811,
+   "name_jp": "\u30e8\u30c3\u30b7\u30fc\u305f\u307e\u3054",
+   "name_en": "Yoshi's egg",
+   "factory_va": 7399736
+  },
+  {
+   "profile_id": null,
+   "sprite_id": 812,
+   "name_jp": "\u30d0\u30c8\u30eb\u7528\u30a2\u30a4\u30c6\u30e0",
+   "name_en": "Battle item",
+   "factory_va": 4657704
+  },
+  {
+   "profile_id": null,
+   "sprite_id": 813,
+   "name_jp": "\u30c8\u30fc\u30d4\u30fc\u30c9\u57fa\u5730",
+   "name_en": "Torpedo base",
+   "factory_va": 3933064
+  },
+  {
+   "profile_id": null,
+   "sprite_id": 814,
+   "name_jp": "\u30b5\u30fc\u30c1\u30c8\u30fc\u30d4\u30fc\u30c9\u57fa\u5730",
+   "name_en": "Search torpedo base",
+   "factory_va": 3933064
+  },
+  {
+   "profile_id": null,
+   "sprite_id": 815,
+   "name_jp": "\u6c34\u4e2d\u30af\u30c3\u30d1Jr.\u7528\u30c8\u30fc\u30d4\u30fc\u30c9\u751f\u6210\u30bf\u30b0",
+   "name_en": "Torpedo Generation Tag for Underwater Kuppa Jr.",
+   "factory_va": 3937836
+  },
+  {
+   "profile_id": 330,
+   "sprite_id": 816,
+   "name_jp": "\u30c8\u30fc\u30d4\u30fc\u30c9",
+   "name_en": "Torpedo",
+   "factory_va": 3530036
+  },
+  {
+   "profile_id": 331,
+   "sprite_id": 817,
+   "name_jp": "\u30b0\u30eb\u30fc\u30d7\u30c8\u30fc\u30d4\u30fc\u30c9",
+   "name_en": "Group torpedo",
+   "factory_va": 3530036
+  },
+  {
+   "profile_id": 332,
+   "sprite_id": 818,
+   "name_jp": "\u30b5\u30fc\u30c1\u30c8\u30fc\u30d4\u30fc\u30c9",
+   "name_en": "Search torpedo",
+   "factory_va": 3702552
+  },
+  {
+   "profile_id": 333,
+   "sprite_id": 819,
+   "name_jp": "\u30af\u30c3\u30d1Jr.\u306e\u708e",
+   "name_en": "Kuppa Jr.'s Flame",
+   "factory_va": 872764
+  },
+  {
+   "profile_id": 334,
+   "sprite_id": 820,
+   "name_jp": "\u30af\u30c3\u30d1Jr.\u306e\u7389",
+   "name_en": "The ball of Kuppa Jr.",
+   "factory_va": 839012
+  },
+  {
+   "profile_id": 335,
+   "sprite_id": 821,
+   "name_jp": "\u6c34\u4e2d\u30af\u30c3\u30d1Jr",
+   "name_en": "Underwater Kuppa Jr",
+   "factory_va": 1123652
+  },
+  {
+   "profile_id": 336,
+   "sprite_id": 822,
+   "name_jp": "\u6c34\u4e2d\u30af\u30c3\u30d1Jr\u306e\u30af\u30e9\u30a6\u30f3",
+   "name_en": "Underwater Kuppa Jr Crown",
+   "factory_va": 1143648
+  },
+  {
+   "profile_id": 337,
+   "sprite_id": 823,
+   "name_jp": "\u6c34\u4e2d\u30af\u30c3\u30d1Jr.\u9000\u907f\u4f4d\u7f6e",
+   "name_en": "Underwater Kuppa Jr. evacuation position",
+   "factory_va": 1197504
+  },
+  {
+   "profile_id": 338,
+   "sprite_id": 824,
+   "name_jp": "\u30dc\u30af\u30b7\u30f3\u30b0\u30af\u30c3\u30d1Jr.",
+   "name_en": "Boxing Kupper Jr.",
+   "factory_va": 215892
+  },
+  {
+   "profile_id": 339,
+   "sprite_id": 825,
+   "name_jp": "\u6226\u95d8\u5f8c\u30c7\u30e2\u30dc\u30af\u30b7\u30f3\u30b0\u30af\u30c3\u30d1Jr.",
+   "name_en": "Post-fight demo boxing Kupper Jr.",
+   "factory_va": 215892
+  },
+  {
+   "profile_id": null,
+   "sprite_id": 826,
+   "name_jp": "\u6226\u95d8\u5f8c\u30c7\u30e2\u30dc\u30af\u30b7\u30f3\u30b0\u30af\u30c3\u30d1Jr.\u306e\u30af\u30e9\u30a6\u30f3",
+   "name_en": "Demonstration of boxing Kuppa Jr. after battle",
+   "factory_va": 239500
+  },
+  {
+   "profile_id": null,
+   "sprite_id": 827,
+   "name_jp": "\u30df\u30cb\u30b2\u30fc\u30e0\u30d1\u30cd\u30eb\u30a2\u30a4\u30c6\u30e0",
+   "name_en": "Mini game panel item",
+   "factory_va": 7556644
+  },
+  {
+   "profile_id": null,
+   "sprite_id": 828,
+   "name_jp": "\u30b9\u30ed\u30c3\u30c8\u30a2\u30a4\u30c6\u30e0",
+   "name_en": "Slot item",
+   "factory_va": 7601612
+  },
+  {
+   "profile_id": null,
+   "sprite_id": 829,
+   "name_jp": "\u30b3\u30a4\u30f3\u307e\u304d\u7832\u53f0",
+   "name_en": "Coin fire battery",
+   "factory_va": 7515148
+  },
+  {
+   "profile_id": null,
+   "sprite_id": 830,
+   "name_jp": "\u30b3\u30a4\u30f3\u307e\u304d\u30a2\u30a4\u30c6\u30e0",
+   "name_en": "Coin rolling item",
+   "factory_va": 7525400
+  },
+  {
+   "profile_id": null,
+   "sprite_id": 831,
+   "name_jp": "\u30df\u30cb\u30b2\u30fc\u30e0\u30ad\u30ce\u30d4\u30aa",
+   "name_en": "Mini game Kinopio",
+   "factory_va": 7535052
+  },
+  {
+   "profile_id": 340,
+   "sprite_id": 832,
+   "name_jp": "\u8c46\u306e\u6728",
+   "name_en": "Bean tree",
+   "factory_va": 7049736
+  },
+  {
+   "profile_id": 341,
+   "sprite_id": 833,
+   "name_jp": "\u571f\u7ba1\u30b8\u30e7\u30a4\u30f3\u30c8\u63cf\u753b",
+   "name_en": "Earth pipe joint drawing",
+   "factory_va": 6255396
+  },
+  {
+   "profile_id": 342,
+   "sprite_id": 834,
+   "name_jp": "\u571f\u7ba1\u30b8\u30e7\u30a4\u30f3\u30c8\u30de\u30e1\u63cf\u753b",
+   "name_en": "Earth pipe joint bean drawing",
+   "factory_va": 6256988
+  },
+  {
+   "profile_id": 343,
+   "sprite_id": 835,
+   "name_jp": "\u30b4\u30fc\u30eb\u30ad\u30ce\u30b3\u30cf\u30a6\u30b9\u63cf\u753b",
+   "name_en": "Goal mushroom house drawing",
+   "factory_va": 6363072
+  },
+  {
+   "profile_id": 344,
+   "sprite_id": 836,
+   "name_jp": "\u5168\u6c34\u4e2d\u30a8\u30d5\u30a7\u30af\u30c8\u30d5\u30a3\u30eb\u30bf\u30fc",
+   "name_en": "All-water effect filter",
+   "factory_va": 7286232
+  },
+  {
+   "profile_id": 345,
+   "sprite_id": 837,
+   "name_jp": "\u5168\u6c34\u4e2d\u30a8\u30d5\u30a7\u30af\u30c8\u30d5\u30a3\u30eb\u30bf\u30fc(RDash)",
+   "name_en": "All-water effect filter (RDash)",
+   "factory_va": 7286232
+  },
+  {
+   "profile_id": 346,
+   "sprite_id": 838,
+   "name_jp": "\u6ce1",
+   "name_en": "bubble",
+   "factory_va": 7281896
+  },
+  {
+   "profile_id": 347,
+   "sprite_id": 839,
+   "name_jp": "\u30e0\u30b5\u30b5\u30d3\u30d7\u30ec\u30a4\u30e4\u30fc\u53c2\u7167\u30bf\u30b0",
+   "name_en": "Scorpion player reference tag",
+   "factory_va": 6346184
+  },
+  {
+   "profile_id": 348,
+   "sprite_id": 840,
+   "name_jp": "\u30d7\u30ec\u30a4\u30e4\u30fc\u753b\u9762\u6a2a\u631f\u307f\u8981\u6c42\u30bf\u30b0",
+   "name_en": "Player screen sideways request tag",
+   "factory_va": 7056244
+  },
+  {
+   "profile_id": 349,
+   "sprite_id": 841,
+   "name_jp": "\u30c1\u30d3\u30e8\u30c3\u30b7\u30fc\uff08\u6ce1\uff09\uff08\u30b9\u30bf\u30c3\u30d5\u30ed\u30fc\u30eb\uff09",
+   "name_en": "Chibi Yoshi (foam) (Staff Roll)",
+   "factory_va": 7640740
+  },
+  {
+   "profile_id": null,
+   "sprite_id": 842,
+   "name_jp": "\u30c1\u30d3\u30e8\u30c3\u30b7\u30fc\uff08\u98a8\u8239\uff09\uff08\u30b9\u30bf\u30c3\u30d5\u30ed\u30fc\u30eb\uff09",
+   "name_en": "Chibi Yoshi (balloons) (Staff Roll)",
+   "factory_va": 7632788
+  },
+  {
+   "profile_id": null,
+   "sprite_id": 843,
+   "name_jp": "\u30c1\u30d3\u30e8\u30c3\u30b7\u30fc\uff08\u98a8\u8239\uff09\uff08\u30b9\u30bf\u30c3\u30d5\u30ed\u30fc\u30eb\u559c\u3073\u7528\uff09",
+   "name_en": "Chibi Yoshi (balloons) (for staff roll pleasure)",
+   "factory_va": 7632788
+  },
+  {
+   "profile_id": null,
+   "sprite_id": 844,
+   "name_jp": "\u30c1\u30d3\u30e8\u30c3\u30b7\u30fc\uff08\u5149\uff09\uff08\u30b9\u30bf\u30c3\u30d5\u30ed\u30fc\u30eb\uff09",
+   "name_en": "Tibi Yoshi (light) (Staff Roll)",
+   "factory_va": 7643080
+  },
+  {
+   "profile_id": null,
+   "sprite_id": 845,
+   "name_jp": "\u30c1\u30d3\u30e8\u30c3\u30b7\u30fc\uff08\u5149\uff09\uff08\u30b9\u30bf\u30c3\u30d5\u30ed\u30fc\u30eb\u559c\u3073\u7528\uff09",
+   "name_en": "Chibi Yoshi (light) (for staff roll pleasure)",
+   "factory_va": 7643080
+  },
+  {
+   "profile_id": null,
+   "sprite_id": 846,
+   "name_jp": "\u30a2\u30eb\u30d5\u30a1\u30d9\u30c3\u30c8\u3057\u3083\u307c\u3093\uff08\u30b9\u30bf\u30c3\u30d5\u30ed\u30fc\u30eb\uff09",
+   "name_en": "Alphabet alphabet (Staff roll)",
+   "factory_va": 7627440
+  },
+  {
+   "profile_id": null,
+   "sprite_id": 847,
+   "name_jp": "\u30b3\u30a4\u30f3\u3057\u3083\u307c\u3093\uff08\u30b9\u30bf\u30c3\u30d5\u30ed\u30fc\u30eb\uff09",
+   "name_en": "Coin Shabon (Staff Roll)",
+   "factory_va": 7620864
+  },
+  {
+   "profile_id": 350,
+   "sprite_id": 848,
+   "name_jp": "\u30c8\u30c3\u30c6\u30f3\u541b\uff08\u30b9\u30bf\u30c3\u30d5\u30ed\u30fc\u30eb\uff09",
+   "name_en": "Mr. Totten (Staff Roll)",
+   "factory_va": 7656640
+  },
+  {
+   "profile_id": 351,
+   "sprite_id": 849,
+   "name_jp": "\uff24\uff32\uff23\u30bf\u30c3\u30c1\u30de\u30b9\u30af\u30e9\u30a4\u30c8",
+   "name_en": "DRC touch mask light",
+   "factory_va": 4576572
+  },
+  {
+   "profile_id": 352,
+   "sprite_id": 850,
+   "name_jp": "\u30bf\u30c3\u30c1\u7121\u52b9\u30a2\u30af\u30bf\u30fc",
+   "name_en": "Touch disabled actor",
+   "factory_va": 7255976
+  },
+  {
+   "profile_id": 353,
+   "sprite_id": 851,
+   "name_jp": "\u30a8\u30c7\u30a3\u30c3\u30c8\u30b3\u30a4\u30f3\u30a2\u30af\u30bf\u30fc\u8a2d\u7f6e\u7bc4\u56f2\u30bf\u30b0",
+   "name_en": "Edit coin actor setting range tag",
+   "factory_va": 6274844
+  },
+  {
+   "profile_id": 354,
+   "sprite_id": 852,
+   "name_jp": "\u30d5\u30a3\u30fc\u30d0\u30fc\u30a8\u30d5\u30a7\u30af\u30c8",
+   "name_en": "Fever effect",
+   "factory_va": 4576572
+  },
+  {
+   "profile_id": 355,
+   "sprite_id": 853,
+   "name_jp": "\u30d5\u30a3\u30fc\u30d0\u30fc\u7528\u30b9\u30bf\uff0d",
+   "name_en": "Fever star",
+   "factory_va": 4576572
+  },
+  {
+   "profile_id": 356,
+   "sprite_id": 854,
+   "name_jp": "\u30b9\u30bf\uff0d",
+   "name_en": "Star",
+   "factory_va": 4648352
+  },
+  {
+   "profile_id": 357,
+   "sprite_id": 855,
+   "name_jp": "\u30b3\u30fc\u30b9\u30bb\u30ec\u30af\u30c8\u30d7\u30ec\u30a4\u30e4\u30fc",
+   "name_en": "Course select player",
+   "factory_va": 1775280
+  },
+  {
+   "profile_id": 358,
+   "sprite_id": 856,
+   "name_jp": "2P\u4ee5\u4e0b\u306e\u30d7\u30ec\u30a4\u30e4\u30fc",
+   "name_en": "Player below 2P",
+   "factory_va": 1793980
+  },
+  {
+   "profile_id": 359,
+   "sprite_id": 857,
+   "name_jp": "\u30b3\u30fc\u30b9\u30bb\u30ec\u30af\u30c8\u306e\u3061\u3073\u30e8\u30c3\u30b7\u30fc",
+   "name_en": "Course Select Chishi Yoshi",
+   "factory_va": 1793980
+  },
+  {
+   "profile_id": null,
+   "sprite_id": 858,
+   "name_jp": "\u30b3\u30fc\u30b9\u30bb\u30ec\u30af\u30c8\u30ab\u30e1\u30e9",
+   "name_en": "Course select camera",
+   "factory_va": 1488468
+  },
+  {
+   "profile_id": null,
+   "sprite_id": 859,
+   "name_jp": "CourseSelect\u304a\u57ce",
+   "name_en": "CourseSelect Castle",
+   "factory_va": 1521632
+  },
+  {
+   "profile_id": null,
+   "sprite_id": 860,
+   "name_jp": "CourseSelect\u7826",
+   "name_en": "CourseSelect\u7826",
+   "factory_va": 2117356
+  },
+  {
+   "profile_id": null,
+   "sprite_id": 861,
+   "name_jp": "CourseSelect\uff11Up\u30ad\u30ce\u30b3\u30cf\u30a6\u30b9",
+   "name_en": "CourseSelect1Up Mushroom House",
+   "factory_va": 1652252
+  },
+  {
+   "profile_id": null,
+   "sprite_id": 862,
+   "name_jp": "CourseSelect\u30b7\u30e3\u30c3\u30d5\u30eb\u30ad\u30ce\u30b3\u30cf\u30a6\u30b9",
+   "name_en": "CourseSelect Shuffle Mushroom House",
+   "factory_va": 1654936
+  },
+  {
+   "profile_id": null,
+   "sprite_id": 863,
+   "name_jp": "CourseSelect\u30b9\u30ed\u30c3\u30c8\u30ad\u30ce\u30b3\u30cf\u30a6\u30b9",
+   "name_en": "CourseSelect Slot Mushroom House",
+   "factory_va": 1658404
+  },
+  {
+   "profile_id": 360,
+   "sprite_id": 864,
+   "name_jp": "\u30d4\u30fc\u30c1\u57ce\uff08\uff11\u968e\u6249\uff09",
+   "name_en": "Peach Castle (1st floor door)",
+   "factory_va": 1754072
+  },
+  {
+   "profile_id": 361,
+   "sprite_id": 865,
+   "name_jp": "\u30d4\u30fc\u30c1\u57ce\uff08\uff12\u968e\u6249\uff09",
+   "name_en": "Peach Castle (2nd floor door)",
+   "factory_va": 1756676
+  },
+  {
+   "profile_id": 362,
+   "sprite_id": 866,
+   "name_jp": "CourseSelect\u30b3\u30fc\u30b9\u30dd\u30a4\u30f3\u30c8",
+   "name_en": "CourseSelect course point",
+   "factory_va": 1542788
+  },
+  {
+   "profile_id": 363,
+   "sprite_id": 867,
+   "name_jp": "CS\u30ef\u30fc\u30eb\u30c9\u79fb\u52d5\u571f\u7ba1",
+   "name_en": "CS World mobile earth pipe",
+   "factory_va": 2190080
+  },
+  {
+   "profile_id": 364,
+   "sprite_id": 868,
+   "name_jp": "\u30b3\u30fc\u30b9\u30bb\u30ec\u30af\u30c8\u306eW8\u306e\u96f2",
+   "name_en": "Course Select's W8 Cloud",
+   "factory_va": 2186060
+  },
+  {
+   "profile_id": 365,
+   "sprite_id": 869,
+   "name_jp": "CourseSelect\u304a\u5316\u3051\u5c4b\u6577",
+   "name_en": "CourseSelect Haunted House",
+   "factory_va": 1649152
+  },
+  {
+   "profile_id": 366,
+   "sprite_id": 870,
+   "name_jp": "W2\u30cf\u30f3\u30de\u30fc\u30d6\u30ed\u30b9",
+   "name_en": "W2 hammer broth",
+   "factory_va": 2134696
+  },
+  {
+   "profile_id": 367,
+   "sprite_id": 871,
+   "name_jp": "CourseSelect\u98db\u884c\u8239\u30ec\u30df\u30fc",
+   "name_en": "CourseSelect Airship Remy",
+   "factory_va": 2068156
+  },
+  {
+   "profile_id": 368,
+   "sprite_id": 872,
+   "name_jp": "CourseSelect\u98db\u884c\u8239\u30e2\u30fc\u30c8\u30f3",
+   "name_en": "CourseSelect Airship Morton",
+   "factory_va": 2074248
+  },
+  {
+   "profile_id": 369,
+   "sprite_id": 873,
+   "name_jp": "CourseSelect\u98db\u884c\u8239\u30e9\u30ea\u30fc",
+   "name_en": "CourseSelect Airship Rally",
+   "factory_va": 2066456
+  },
+  {
+   "profile_id": null,
+   "sprite_id": 874,
+   "name_jp": "CourseSelect\u98db\u884c\u8239\u30a6\u30a7\u30f3\u30c7\u30a3",
+   "name_en": "CourseSelect Airship Wendy",
+   "factory_va": 2076744
+  },
+  {
+   "profile_id": null,
+   "sprite_id": 875,
+   "name_jp": "CourseSelect\u98db\u884c\u8239\u30a4\u30ae\u30fc",
+   "name_en": "CourseSelect Airship Iggy",
+   "factory_va": 2046872
+  },
+  {
+   "profile_id": null,
+   "sprite_id": 876,
+   "name_jp": "CourseSelect\u98db\u884c\u8239\u30ed\u30a4",
+   "name_en": "CourseSelect Airship Roy",
+   "factory_va": 2075512
+  },
+  {
+   "profile_id": null,
+   "sprite_id": 877,
+   "name_jp": "CourseSelect\u98db\u884c\u8239\u30eb\u30c9\u30a6\u30a3\u30c3\u30b0",
+   "name_en": "CourseSelect Airship Ludwig",
+   "factory_va": 2071148
+  },
+  {
+   "profile_id": null,
+   "sprite_id": 878,
+   "name_jp": "CourseSelect\u98db\u884c\u8239\u30af\u30c3\u30d1Jr",
+   "name_en": "CourseSelect Airship Kuppa Jr",
+   "factory_va": 2049612
+  },
+  {
+   "profile_id": null,
+   "sprite_id": 879,
+   "name_jp": "CourseSelect\u58ca\u308c\u305f\u98db\u884c\u8239\u30af\u30c3\u30d1Jr",
+   "name_en": "CourseSelect Broken Airship Kuppa Jr",
+   "factory_va": 2043768
+  },
+  {
+   "profile_id": 370,
+   "sprite_id": 880,
+   "name_jp": "\u767d\u65d7",
+   "name_en": "white flag",
+   "factory_va": 2081176
+  },
+  {
+   "profile_id": 371,
+   "sprite_id": 881,
+   "name_jp": "CourseSelect\u30b9\u30a3\u30c3\u30c1A\uff08\u9752\uff09",
+   "name_en": "CourseSelect switch A (blue)",
+   "factory_va": 2083096
+  },
+  {
+   "profile_id": 372,
+   "sprite_id": 882,
+   "name_jp": "CourseSelect\u30b9\u30a3\u30c3\u30c1B\uff08\u8d64\uff09",
+   "name_en": "CourseSelect Switch B (Red)",
+   "factory_va": 2084836
+  },
+  {
+   "profile_id": 373,
+   "sprite_id": 883,
+   "name_jp": "CourseSelect\u30c6\u30ec\u30b5",
+   "name_en": "CourseSelect Theresa",
+   "factory_va": 2097680
+  },
+  {
+   "profile_id": 374,
+   "sprite_id": 884,
+   "name_jp": "CourseSelect\u30aa\u30fc\u30d7\u30cb\u30f3\u30b0\u30ab\u30e1\u30c3\u30af",
+   "name_en": "CourseSelect Opening Camek",
+   "factory_va": 1734392
+  },
+  {
+   "profile_id": 375,
+   "sprite_id": 885,
+   "name_jp": "CourseSelect\u7826\u30dc\u30b9",
+   "name_en": "CourseSelect \u7826 boss",
+   "factory_va": 2121256
+  },
+  {
+   "profile_id": 376,
+   "sprite_id": 886,
+   "name_jp": "CS\u30d1\u30c3\u30af\u30f3",
+   "name_en": "CS Pacton",
+   "factory_va": 1742560
+  },
+  {
+   "profile_id": 377,
+   "sprite_id": 887,
+   "name_jp": "\u8aac\u660e\u30ad\u30ce\u30d4\u30aa",
+   "name_en": "Explanation Kinopio",
+   "factory_va": 1947844
+  },
+  {
+   "profile_id": 378,
+   "sprite_id": 888,
+   "name_jp": "CS\u98db\u3073\u30d7\u30af",
+   "name_en": "CS jump",
+   "factory_va": 2104500
+  },
+  {
+   "profile_id": 379,
+   "sprite_id": 889,
+   "name_jp": "\u30b3\u30fc\u30b9\u30bb\u30ec\u30af\u30c8\u306e\u30c1\u30e7\u30ed\u30dc\u30f3",
+   "name_en": "Chorobon of course select",
+   "factory_va": 1526640
+  },
+  {
+   "profile_id": null,
+   "sprite_id": 890,
+   "name_jp": "\u30b3\u30fc\u30b9\u30bb\u30ec\u30af\u30c8W7\u306e\u30a2\u30a4\u30c6\u30e0",
+   "name_en": "Item of course select W7",
+   "factory_va": 2176552
+  },
+  {
+   "profile_id": null,
+   "sprite_id": 891,
+   "name_jp": "CSW5\u30c6\u30ec\u30b5",
+   "name_en": "CSW5 Theresa",
+   "factory_va": 2155372
+  },
+  {
+   "profile_id": null,
+   "sprite_id": 892,
+   "name_jp": "\u30d4\u30fc\u30c1\u57ce\u306e\u65d7",
+   "name_en": "Peach Castle Flag",
+   "factory_va": 1646036
+  },
+  {
+   "profile_id": null,
+   "sprite_id": 893,
+   "name_jp": "CS\u30e0\u30b5\u30b5\u30d3",
+   "name_en": "CS moth rust",
+   "factory_va": 1727820
+  },
+  {
+   "profile_id": null,
+   "sprite_id": 894,
+   "name_jp": "CS\u9593\u6b20\u6cc9",
+   "name_en": "CS between the springs",
+   "factory_va": 2195412
+  },
+  {
+   "profile_id": null,
+   "sprite_id": 895,
+   "name_jp": "CSW7\u306e\u8679\u306e\u6a4b",
+   "name_en": "Rainbow Bridge in CSW 7",
+   "factory_va": 2167096
+  },
+  {
+   "profile_id": 380,
+   "sprite_id": 896,
+   "name_jp": "\u30b3\u30fc\u30b9\u30bb\u30ec\u30af\u30c8Mii\u30d0\u30eb\u30fc\u30f3",
+   "name_en": "Course Select Mii Balloon",
+   "factory_va": 1724296
+  },
+  {
+   "profile_id": 381,
+   "sprite_id": 897,
+   "name_jp": "CS\u30da\u30f3\u30bf\u30ed\u30fc",
+   "name_en": "CS Pentalo",
+   "factory_va": 1760816
+  },
+  {
+   "profile_id": 382,
+   "sprite_id": 898,
+   "name_jp": "CSW4\u306e\u30a2\u30a4\u30c6\u30e0",
+   "name_en": "CSW4 items",
+   "factory_va": 2149904
+  },
+  {
+   "profile_id": 383,
+   "sprite_id": 899,
+   "name_jp": "CSW2\u30af\u30ea\u30dc\u30fc",
+   "name_en": "CSW2 Kribo",
+   "factory_va": 2142376
+  },
+  {
+   "profile_id": 384,
+   "sprite_id": 900,
+   "name_jp": "CourseSelect\u3067\u304b\u30d1\u30c3\u30af\u30f3",
+   "name_en": "CourseSelect or Pacton",
+   "factory_va": 1746632
+  },
+  {
+   "profile_id": 385,
+   "sprite_id": 901,
+   "name_jp": "CS\u30b7\u30e3\u30c9\u30a6\u541b\u30a2\u30a4\u30b3\u30f3",
+   "name_en": "CS shadow you icon",
+   "factory_va": 2010880
+  },
+  {
+   "profile_id": 386,
+   "sprite_id": 902,
+   "name_jp": "CourseSelect\u3067\u304b\u30a6\u30cb\u30e9",
+   "name_en": "CourseSelect or Unirra",
+   "factory_va": 1593880
+  },
+  {
+   "profile_id": 387,
+   "sprite_id": 903,
+   "name_jp": "CS\u304a\u5893",
+   "name_en": "CS Tomb",
+   "factory_va": 2115320
+  },
+  {
+   "profile_id": 388,
+   "sprite_id": 904,
+   "name_jp": "\u8aac\u660e\u30b7\u30e3\u30c9\u30a6\u304f\u3093",
+   "name_en": "Explanation shadow",
+   "factory_va": 2016280
+  },
+  {
+   "profile_id": 389,
+   "sprite_id": 905,
+   "name_jp": "CS\u9aa8\u30b3\u30fc\u30b9\u30bf\u30fc",
+   "name_en": "CS bone coaster",
+   "factory_va": 1686388
+  },
+  {
+   "profile_id": null,
+   "sprite_id": 906,
+   "name_jp": "CourseSelect\u30af\u30c3\u30d1Jr",
+   "name_en": "CourseSelect Kupper Jr",
+   "factory_va": 1660708
+  },
+  {
+   "profile_id": null,
+   "sprite_id": 907,
+   "name_jp": "CourseSelect\u30d4\u30fc\u30c1\u59eb",
+   "name_en": "CourseSelect Peach Princess",
+   "factory_va": 1750448
+  },
+  {
+   "profile_id": null,
+   "sprite_id": 908,
+   "name_jp": "CSW1\u306e\u30a2\u30a4\u30c6\u30e0",
+   "name_en": "CSW1 items",
+   "factory_va": 2130796
+  },
+  {
+   "profile_id": null,
+   "sprite_id": 909,
+   "name_jp": "CSW9\u30b9\u30bf\u30fc\u30b2\u30fc\u30c8",
+   "name_en": "CSW 9 star gate",
+   "factory_va": 2077620
+  },
+  {
+   "profile_id": null,
+   "sprite_id": 910,
+   "name_jp": "\u30a4\u30d9\u30f3\u30c8\u30a2\u30b7\u30b9\u30bf\u30f3\u30c8",
+   "name_en": "Event assistant",
+   "factory_va": 1602108
+  }
+ ]
+}

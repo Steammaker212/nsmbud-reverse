@@ -18,7 +18,7 @@ Enemy *__fastcall sub_606897FC(Enemy *a1, ActorBuildInfo *a2)
   int v8; // r0
 
   Enemy__ctor(a1, a2);
-  FIELD_U32(a1, 0x0)._._._.vtable = (int)off_60C17140;
+  FIELD_U32(a1, 0x0) = (int)off_60C17140;
   memset(&a1[1], 0, 161);
   SolidOnTopCollider_ctor((SolidOnTopCollider *)&a1[1]._._._.rotation.z);
   a1[1]._._._.rotation.z = (int)SolidOnTopColliderWrapper_vtable;

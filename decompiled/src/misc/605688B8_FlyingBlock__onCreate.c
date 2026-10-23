@@ -93,7 +93,7 @@ signed int __fastcall FlyingBlock__onCreate(ColliderBase *a1)
       v14 = &dword_60CAE31C;
     else
       v14 = &dword_60CAE2F8;
-    (*(void (__fastcall **)(ColliderBase *, int *))(FIELD_U32(a1, 0x0).vtable + 192))(a1, v14);
+    (*(void (__fastcall **)(ColliderBase *, int *))(FIELD_U32(a1, 0x0) + 192))(a1, v14);
     return 1;
   }
   return result;

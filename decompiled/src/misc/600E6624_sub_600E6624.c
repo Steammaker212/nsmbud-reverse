@@ -15,16 +15,16 @@ signed int __fastcall sub_600E6624(StateActor *a1)
 
   if ( a1[1]._.collisionMgr[1384] )
   {
-    v2 = *(float *)&FIELD_U32(a1, 0x0)._._.parent[1].field_20.next;
-    FIELD_U32(a1, 0x0)._.position.z = v2
-                       + (float)((float)((*(int (__fastcall **)(StateActor *))(FIELD_U32(a1, 0x0)._._.vtable + 1680))(a1) + 1)
+    v2 = *(float *)&FIELD_U32(a1, 0x38)[1].field_20.next;
+    FIELD_F32(a1, 0x74) = v2
+                       + (float)((float)((*(int (__fastcall **)(StateActor *))(FIELD_U32(a1, 0x0) + 1680))(a1) + 1)
                                * -300.0);
   }
   sub_60421AD4(*(_DWORD *)&a1[1]._.collisionMgr[348]);
-  FIELD_U32(a1, 0x0)._.speed.x = 0.0;
-  FIELD_U32(a1, 0x0)._.speed.y = 0.0;
-  FIELD_U32(a1, 0x0)._.speed.z = 0.0;
-  result = StageActor__directionToPlayerX(a1, &FIELD_U32(a1, 0x0)._.position);
-  FIELD_U32(a1, 0x0)._.direction = result;
+  FIELD_F32(a1, 0x78) = 0.0;
+  FIELD_F32(a1, 0x7C) = 0.0;
+  FIELD_F32(a1, 0x80) = 0.0;
+  result = StageActor__directionToPlayerX(a1, &FIELD_U32(a1, 0x6C));
+  FIELD_U32(a1, 0x50) = result;
   return result;
 }

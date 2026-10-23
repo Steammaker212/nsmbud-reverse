@@ -15,7 +15,7 @@ StageActor *__fastcall Actor_mid_pendulum_build(ActorBuildInfo *a1)
 
   v2 = (StageActor *)operator_new(0x2A0u);
   result = StageActor__ctor(v2, a1);
-  FIELD_U32(result, 0x0).vtable = (int)off_60C0ABA0;
+  FIELD_U32(result, 0x0) = (int)off_60C0ABA0;
   LOBYTE(result[1]._.settigns2) = 0;
   result[1]._.vtable = 0;
   result[1]._.heap = 0;

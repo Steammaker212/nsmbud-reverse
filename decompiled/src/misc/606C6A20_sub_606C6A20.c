@@ -16,8 +16,8 @@ _BYTE *__fastcall sub_606C6A20(StateActor *a1)
   int v5; // r0
   _BYTE *result; // r0
 
-  (*(void (__fastcall **)(StateActor *))(FIELD_U32(a1, 0x0)._._.vtable + 220))(a1);
-  eventId1 = (unsigned __int8)FIELD_U32(a1, 0x0)._.eventId1;
+  (*(void (__fastcall **)(StateActor *))(FIELD_U32(a1, 0x0) + 220))(a1);
+  eventId1 = (unsigned __int8)FIELD_U8(a1, 0x21B);
   v3 = eventId1 - 33;
   v4 = 1u >> (33 - eventId1);
   v5 = 1 << (eventId1 - 1);

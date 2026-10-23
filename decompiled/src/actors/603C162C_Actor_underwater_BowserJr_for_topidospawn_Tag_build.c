@@ -15,7 +15,7 @@ StateActor *__fastcall Actor_underwater_BowserJr_for_topidospawn_Tag_build(Actor
 
   v2 = (StateActor *)operator_new(0x17E8u);
   result = StateActor_ctor(v2, a1);
-  FIELD_U32(result, 0x0)._._.vtable = (int)off_60BF6A08;
+  FIELD_U32(result, 0x0) = (int)off_60BF6A08;
   result[1]._._._.id = 0;
   result[1]._._._.profile = 0;
   BYTE2(result[1]._._._.heap) = 0;

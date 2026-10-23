@@ -13,12 +13,12 @@ signed int __fastcall sub_6008A9F8(BossBase *a1)
   StateBase *CurrentState; // r0
   int v3; // r7
 
-  CurrentState = StateMgr__getCurrentState(&FIELD_U32(a1, 0x0)._.states.manager);
+  CurrentState = StateMgr__getCurrentState(&FIELD_U32(a1, 0x17C4));
   v3 = (*((int (__fastcall **)(StateBase *))FIELD_U32(CurrentState, 0x0) + 2))(CurrentState);
   if ( v3 == (*(int (**)(void))(dword_60C81D4C + 8))() )
   {
-    (*(void (__fastcall **)(BossBase *, int *))(FIELD_U32(a1, 0x0)._._._._.vtable + 192))(a1, &dword_60C81D6C);
-    FIELD_U32(a1, 0x0)._._._.playerId = -1;
+    (*(void (__fastcall **)(BossBase *, int *))(FIELD_U32(a1, 0x0) + 192))(a1, &dword_60C81D6C);
+    FIELD_U8(a1, 0x54) = -1;
   }
   return BossBase__collisionIceball(a1);
 }

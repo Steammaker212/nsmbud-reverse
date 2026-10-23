@@ -25,7 +25,7 @@ ModelWrapper *__fastcall sub_6063B50C(unsigned int a1, unsigned int a2)
       v7 = *(ModelWrapper **)(a1 + 4);
       if ( v7 )
       {
-        sub_6041838C((ModelAnimation *)((char *)*FIELD_U32(v7, 0x18).animations + 4));
+        sub_6041838C((ModelAnimation *)((char *)*FIELD_U32(v7, 0x1C) + 4));
         result = ModelWrapper_updateAnims(v7);
       }
       a1 += 36;
@@ -39,7 +39,7 @@ ModelWrapper *__fastcall sub_6063B50C(unsigned int a1, unsigned int a2)
       v6 = *(ModelWrapper **)(a1 + 4);
       if ( v6 )
       {
-        sub_6041838C((ModelAnimation *)((char *)*FIELD_U32(v6, 0x18).animations + 4));
+        sub_6041838C((ModelAnimation *)((char *)*FIELD_U32(v6, 0x1C) + 4));
         result = ModelWrapper_updateAnims(v6);
       }
       a1 += 36;

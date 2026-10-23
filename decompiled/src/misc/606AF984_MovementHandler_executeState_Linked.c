@@ -86,11 +86,11 @@ LABEL_35:
 LABEL_32:
   if ( typeMask == 1 )
   {
-    y = FIELD_U32(this, 0xC).y;
-    typeMask = LODWORD(FIELD_U32(this, 0xC).x);
+    y = FIELD_F32(this, 0x10);
+    typeMask = LODWORD(FIELD_F32(this, 0xC));
     v10 = FIELD_F32(v5, 7168);
-    LODWORD(FIELD_U32(this, 0x0).x) = typeMask;
-    FIELD_U32(this, 0x0).y = y - v10;
+    LODWORD(FIELD_F32(this, 0x0)) = typeMask;
+    FIELD_F32(this, 0x4) = y - v10;
   }
   return typeMask;
 }

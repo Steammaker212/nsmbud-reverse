@@ -16,7 +16,7 @@ int __fastcall sub_60063774(CollisionActor *a1)
   CollisionActor__handleSpeed(a1);
   CollisionActor__sub_600034C8(a1);
   result = (unsigned __int8)FIELD_U8(a1, 0x288)[2224];
-  if ( (result & 1) != 0 && FIELD_U32(a1, 0x0).speed.y <= 0.0 )
-    return (*(int (__fastcall **)(CollisionActor *, State *))(FIELD_U32(a1, 0x0)._.vtable + 192))(a1, &BobOmb_StateID_Walk);
+  if ( (result & 1) != 0 && FIELD_F32(a1, 0x7C) <= 0.0 )
+    return (*(int (__fastcall **)(CollisionActor *, State *))(FIELD_U32(a1, 0x0) + 192))(a1, &BobOmb_StateID_Walk);
   return result;
 }

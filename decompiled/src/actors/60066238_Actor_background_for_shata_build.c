@@ -15,7 +15,7 @@ StateActor *__fastcall Actor_background_for_shata_build(ActorBuildInfo *a1)
 
   v2 = (StateActor *)operator_new(0x17F0u);
   result = StateActor_ctor(v2, a1);
-  FIELD_U32(result, 0x0)._._.vtable = (int)off_60BC67E8;
+  FIELD_U32(result, 0x0) = (int)off_60BC67E8;
   result[1]._._._.settings1 = 0;
   *(_DWORD *)&result[1]._._._.field_10 = 0;
   result[1]._._._.profile = 0;

@@ -22,20 +22,20 @@ void __fastcall CarryableEnemy__vf284(Enemy *a1, ActiveCollider *a2, ActiveColli
     _cxa_guard_release(&dword_60C7B374);
   }
   if ( owner
-    && (*(int (__fastcall **)(StageActor *, int *))FIELD_U32(owner, 0x0).vtable)(owner, &dword_60C7B370) == 1
-    && owner[17].aCollider.field_110 != FIELD_U32(a1, 0x0)._._._.id )
+    && (*(int (__fastcall **)(StageActor *, int *))FIELD_U32(owner, 0x0))(owner, &dword_60C7B370) == 1
+    && owner[17].aCollider.field_110 != FIELD_U32(a1, 0x8) )
   {
     v8 = Enemy__processCollision(a1, a2, a3, 0);
     switch ( v8 )
     {
       case 3:
-        (*(void (__fastcall **)(Enemy *, StageActor *))(FIELD_U32(a1, 0x0)._._._.vtable + 632))(a1, FIELD_U32(a3, 0x40));
+        (*(void (__fastcall **)(Enemy *, StageActor *))(FIELD_U32(a1, 0x0) + 632))(a1, FIELD_U32(a3, 0x40));
         break;
       case 2:
-        (*(void (__fastcall **)(Enemy *, StageActor *))(FIELD_U32(a1, 0x0)._._._.vtable + 628))(a1, FIELD_U32(a3, 0x40));
+        (*(void (__fastcall **)(Enemy *, StageActor *))(FIELD_U32(a1, 0x0) + 628))(a1, FIELD_U32(a3, 0x40));
         break;
       case 1:
-        (*(void (__fastcall **)(Enemy *, StageActor *))(FIELD_U32(a1, 0x0)._._._.vtable + 624))(a1, FIELD_U32(a3, 0x40));
+        (*(void (__fastcall **)(Enemy *, StageActor *))(FIELD_U32(a1, 0x0) + 624))(a1, FIELD_U32(a3, 0x40));
         break;
     }
   }

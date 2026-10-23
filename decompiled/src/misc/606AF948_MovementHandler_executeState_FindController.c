@@ -11,5 +11,5 @@
 void __fastcall MovementHandler_executeState_FindController(MovementHandler *this)
 {
   if ( MovementHandler_findMovementController(this) )
-    StateMgr__changeState(&FIELD_U32(this, 0xD4).manager, &MovementHandler_StateID_Linked._);
+    StateMgr__changeState(&FIELD_U32(this, 0xE8), &MovementHandler_StateID_Linked._);
 }

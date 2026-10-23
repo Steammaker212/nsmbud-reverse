@@ -32,8 +32,8 @@ ModelWrapper *__fastcall ModelWrapper_ctor(
     {
       if ( v11 )
       {
-        FIELD_U32(this, 0x8).count = numSklAnims;
-        FIELD_U32(this, 0x8).animations = v11;
+        FIELD_U32(this, 0x8) = numSklAnims;
+        FIELD_U32(this, 0xC) = v11;
       }
     }
   }
@@ -44,8 +44,8 @@ ModelWrapper *__fastcall ModelWrapper_ctor(
     {
       if ( v12 )
       {
-        FIELD_U32(this, 0x10).count = numTexmAnims;
-        FIELD_U32(this, 0x10).animations = v12;
+        FIELD_U32(this, 0x10) = numTexmAnims;
+        FIELD_U32(this, 0x14) = v12;
       }
     }
   }
@@ -56,8 +56,8 @@ ModelWrapper *__fastcall ModelWrapper_ctor(
     {
       if ( v13 )
       {
-        FIELD_U32(this, 0x18).count = numShuAnims;
-        FIELD_U32(this, 0x18).animations = v13;
+        FIELD_U32(this, 0x18) = numShuAnims;
+        FIELD_U32(this, 0x1C) = v13;
       }
     }
   }
@@ -68,8 +68,8 @@ ModelWrapper *__fastcall ModelWrapper_ctor(
     {
       if ( v14 )
       {
-        FIELD_U32(this, 0x20).count = numVisAnims;
-        FIELD_U32(this, 0x20).animations = v14;
+        FIELD_U32(this, 0x20) = numVisAnims;
+        FIELD_U32(this, 0x24) = v14;
       }
     }
   }
@@ -80,8 +80,8 @@ ModelWrapper *__fastcall ModelWrapper_ctor(
     {
       if ( v15 )
       {
-        FIELD_U32(this, 0x28).count = numShaAnims;
-        FIELD_U32(this, 0x28).animations = v15;
+        FIELD_U32(this, 0x28) = numShaAnims;
+        FIELD_U32(this, 0x2C) = v15;
       }
     }
   }

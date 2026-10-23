@@ -59,10 +59,10 @@ void __fastcall sub_602EFC88(int a1, _BYTE *a2)
         {
           v9 = (StageActor *)(*(int (__fastcall **)(_BYTE *, int, int))(*(_DWORD *)a2 + 32))(a2, a1, 2);
           type = (unsigned __int8)FIELD_U8(v9, 0x215);
-          v11 = FIELD_F32(v5, 108) < FIELD_U32(v9, 0x6C).x;
+          v11 = FIELD_F32(v5, 108) < FIELD_F32(v9, 0x6C);
           if ( (unsigned int)(type - 1) < 2 )
           {
-            if ( (*(int (__fastcall **)(StageActor *))(FIELD_U32(v9, 0x0).vtable + 1204))(v9) != 1 )
+            if ( (*(int (__fastcall **)(StageActor *))(FIELD_U32(v9, 0x0) + 1204))(v9) != 1 )
             {
               CurrentState = StateMgr__getCurrentState((StateMgr *)(v5 + 6084));
               v13 = (*((int (__fastcall **)(StateBase *))FIELD_U32(CurrentState, 0x0) + 2))(CurrentState);
@@ -156,7 +156,7 @@ LABEL_21:
           }
           else
           {
-            if ( (*(_BYTE *)((*(int (__fastcall **)(StageActor *))(FIELD_U32(v9, 0x0).vtable + 80))(v9) + 2545) & 2) == 0
+            if ( (*(_BYTE *)((*(int (__fastcall **)(StageActor *))(FIELD_U32(v9, 0x0) + 80))(v9) + 2545) & 2) == 0
               || sub_602F0A90(v5, v9, v11) )
             {
               return;

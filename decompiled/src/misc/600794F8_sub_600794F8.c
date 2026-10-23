@@ -10,7 +10,7 @@
 
 _DWORD *__fastcall sub_600794F8(StageActor *a1)
 {
-  FIELD_U32(a1, 0x0).vtable = (int)off_60BC6E38;
+  FIELD_U32(a1, 0x0) = (int)off_60BC6E38;
   sub_60002B6C(a1);
   return sead__IDisposer__dtor(a1);
 }

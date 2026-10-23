@@ -27,12 +27,12 @@ int __fastcall sub_6034D854(StateActor *a1)
   {
     a1[1]._._.aCollider.field_44 = (int)owner;
     a1[1]._._.aCollider.owner = (StageActor *)1;
-    (*(void (__fastcall **)(StateActor *))(FIELD_U32(a1, 0x0)._._.vtable + 696))(a1);
+    (*(void (__fastcall **)(StateActor *))(FIELD_U32(a1, 0x0) + 696))(a1);
   }
-  FIELD_U32(a1, 0x0)._.speed.x = 0.0;
-  FIELD_U32(a1, 0x0)._.speed.y = 2.5;
-  FIELD_U32(a1, 0x0)._.speed.z = 0.0;
-  FIELD_U32(a1, 0x0)._.direction = StageActor__directionToPlayerX(a1, &FIELD_U32(a1, 0x0)._.position);
+  FIELD_F32(a1, 0x78) = 0.0;
+  FIELD_F32(a1, 0x7C) = 2.5;
+  FIELD_F32(a1, 0x80) = 0.0;
+  FIELD_U32(a1, 0x50) = StageActor__directionToPlayerX(a1, &FIELD_U32(a1, 0x6C));
   a1[1]._._.aCollider.info.field_24 = 1;
   return 6440;
 }

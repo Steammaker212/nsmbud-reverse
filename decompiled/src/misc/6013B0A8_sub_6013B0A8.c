@@ -14,13 +14,13 @@ ActiveColliderMgr *__fastcall sub_6013B0A8(StateActor *a1)
   ActiveColliderMgr *v2; // r5
   ActiveColliderMgr *result; // r0
 
-  p_aCollider = &FIELD_U32(a1, 0x0)._.aCollider;
+  p_aCollider = &FIELD_U32(a1, 0xBC);
   ActiveCollider_init3(
-    &FIELD_U32(a1, 0x0)._.aCollider,
+    &FIELD_U32(a1, 0xBC),
     a1,
     (ActiveColliderInfo *)&unk_60BD2B7C,
-    &FIELD_U32(a1, 0x0)._.field_57,
-    (unsigned __int8)FIELD_U32(a1, 0x0)._.field_56,
+    &FIELD_U8(a1, 0x57),
+    (unsigned __int8)FIELD_U8(a1, 0x56),
     0);
   v2 = ActiveColliderMgr_instance;
   result = (ActiveColliderMgr *)ActiveColliderMgr_isInActiveList(ActiveColliderMgr_instance, p_aCollider);

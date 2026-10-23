@@ -38,7 +38,7 @@ signed int __fastcall Pokey__vfF4(int a1, ActiveCollider *a2, ActiveCollider *a3
       _cxa_guard_release(&dword_60C7B408);
     }
     v9 = (int)&owner[17].aCollider.field_DC;
-    if ( !(*(int (__fastcall **)(StageActor *, int *))FIELD_U32(owner, 0x0).vtable)(owner, &dword_60C7B404) )
+    if ( !(*(int (__fastcall **)(StageActor *, int *))FIELD_U32(owner, 0x0))(owner, &dword_60C7B404) )
       v9 = 11356;
     result = *(_DWORD *)v9;
     if ( !*(_DWORD *)v9 )

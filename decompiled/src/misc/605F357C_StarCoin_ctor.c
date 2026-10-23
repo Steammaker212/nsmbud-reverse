@@ -15,7 +15,7 @@ StarCoin *__fastcall StarCoin_ctor(ActorBuildInfo *a1)
 
   v2 = (StarCoin *)operator_new(0x1838u);
   this = (StarCoin *)StarCoinBase_ctor(&FIELD_U32(v2, 0x0), a1);
-  FIELD_U32(this, 0x0)._._._._.vtable = (int)StarCoin_vtable;
+  FIELD_U32(this, 0x0) = (int)StarCoin_vtable;
   FIELD_U32(this, 0x182C) = 0;
   FIELD_U32(this, 0x1830) = 0;
   FIELD_U32(this, 0x1834) = 0;

@@ -11,6 +11,6 @@
 // Overridden by: None
 bool __fastcall Enemy__vfF0(Enemy *a1, bool *unk, ActiveCollider *acSelf, ActiveCollider *acOther)
 {
-  return FIELD_U32(acOther, 0x74).category == 27
-      && (*(int (__fastcall **)(Enemy *, bool *, ActiveCollider *))(FIELD_U32(a1, 0x0)._._._.vtable + 0x158))(a1, unk, acSelf) != 0;
+  return FIELD_U32(acOther, 0x8C) == 27
+      && (*(int (__fastcall **)(Enemy *, bool *, ActiveCollider *))(FIELD_U32(a1, 0x0) + 0x158))(a1, unk, acSelf) != 0;
 }

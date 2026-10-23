@@ -36,7 +36,7 @@ int __fastcall sub_605FFBFC(int a1)
       _cxa_guard_release(&dword_60C803D0);
     }
   }
-  if ( !(*(int (__fastcall **)(ColliderBase *, int *))(FIELD_U32(v2, 0x0).vtable + 8))(v2, &dword_60C803CC) )
+  if ( !(*(int (__fastcall **)(ColliderBase *, int *))(FIELD_U32(v2, 0x0) + 8))(v2, &dword_60C803CC) )
     v2 = 0;
   ColliderMgr_removeRelated1(v3, v2);
   return 1;

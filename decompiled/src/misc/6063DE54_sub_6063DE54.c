@@ -14,7 +14,7 @@ MultiStateActor *__fastcall sub_6063DE54(MultiStateActor *a1, ActorBuildInfo *a2
   int v4; // r1
 
   MultiStateActor__ctor(a1, a2);
-  FIELD_U32(a1, 0x0)._._.vtable = (int)off_60C13108;
+  FIELD_U32(a1, 0x0) = (int)off_60C13108;
   memset(&a1[1]._._._.id, 0, 172);
   SolidOnTopCollider_ctor((SolidOnTopCollider *)&a1[1]._._.aCollider.node4);
   a1[1]._._.aCollider.node4.owner = (ActiveCollider *)off_60BEE598;

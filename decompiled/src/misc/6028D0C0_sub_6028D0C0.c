@@ -25,7 +25,7 @@ void __fastcall sub_6028D0C0(Enemy *a1, int a2, ActiveCollider *a3)
     dword_60C7B378 = (int)&off_60BC00BC;
     _cxa_guard_release(&dword_60C7B37C);
   }
-  if ( owner && (*(int (__fastcall **)(StageActor *, int *))FIELD_U32(owner, 0x0).vtable)(owner, &dword_60C7B378) == 1 )
+  if ( owner && (*(int (__fastcall **)(StageActor *, int *))FIELD_U32(owner, 0x0))(owner, &dword_60C7B378) == 1 )
   {
     v8 = FIELD_F32(a2, 176);
     v9 = Enemy__processCollision(a1, (ActiveCollider *)a2, a3, 0);
@@ -50,8 +50,8 @@ void __fastcall sub_6028D0C0(Enemy *a1, int a2, ActiveCollider *a3)
           _cxa_guard_release(&dword_60C7B374);
         }
         if ( v11
-          && (*(int (__fastcall **)(StageActor *, int *))FIELD_U32(v11, 0x0).vtable)(v11, &dword_60C7B370) == 1
-          && !(*(int (__fastcall **)(StageActor *))(FIELD_U32(v11, 0x0).vtable + 1156))(v11) )
+          && (*(int (__fastcall **)(StageActor *, int *))FIELD_U32(v11, 0x0))(v11, &dword_60C7B370) == 1
+          && !(*(int (__fastcall **)(StageActor *))(FIELD_U32(v11, 0x0) + 1156))(v11) )
         {
           Enemy__collisionPlayer((int)a1, a2, (int)a3);
         }

@@ -18,7 +18,7 @@ signed int __fastcall Enemy__vf1AC(Enemy *a1, int a2)
 
   if ( sub_602A588C((int)a1) )
     return sub_605D477C(a2, 0);
-  currState = StateMgr__getCurrentState(&FIELD_U32(a1, 0x0).states.manager);
+  currState = StateMgr__getCurrentState(&FIELD_U32(a1, 0x17C4));
   v5 = (*((int (__fastcall **)(StateBase *))FIELD_U32(currState, 0x0) + 2))(currState);
   if ( v5 == (*((int (**)(void))Enemy_StateId_Frozen._._.vtable + 2))() )
     return sub_605D477C(a2, 0);

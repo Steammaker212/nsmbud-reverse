@@ -64,7 +64,7 @@ signed int __fastcall ice_C1_ref(int a1)
     v11 = ModelWrapper_ctor(v10, Model2, 0, 0, 1, 0, 0);
     ModelWrapper_setup(v11, (int)ResArchiveById, 0, 0);
     FIELD_U32(a1, 6064) = v10;
-    v12 = (int)*FIELD_U32(v10, 0x18).animations;
+    v12 = (int)*FIELD_U32(v10, 0x1C);
     LODWORD(a2.distToCenter.x) = &sead__SafeStringBase__vtable;
     LODWORD(a2.distToCenter.y) = "ice_C1";
     sub_60446088(v12, (int)ResArchiveById, (int)&a2);

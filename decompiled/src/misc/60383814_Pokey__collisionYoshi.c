@@ -27,7 +27,7 @@ int __fastcall Pokey__collisionYoshi(int a1, ActiveCollider *a2, ActiveCollider 
   }
   if ( owner )
   {
-    v8 = (*(int (__fastcall **)(StageActor *, int *))FIELD_U32(owner, 0x0).vtable)(owner, &dword_60C7B378);
+    v8 = (*(int (__fastcall **)(StageActor *, int *))FIELD_U32(owner, 0x0))(owner, &dword_60C7B378);
     if ( v8 )
       v8 = (int)owner;
   }

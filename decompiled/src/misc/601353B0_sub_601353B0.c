@@ -15,7 +15,7 @@ int __fastcall sub_601353B0(CollisionActor *a1)
   StageActor__accelerateX(&FIELD_U32(a1, 0x0));
   CollisionActor__handleGravity(a1);
   v2 = CollisionActor__handleSpeed(a1);
-  (*(void (__fastcall **)(CollisionActor *, float))(FIELD_U32(a1, 0x0)._.vtable + 336))(a1, v2);
-  (*(void (__fastcall **)(CollisionActor *))(FIELD_U32(a1, 0x0)._.vtable + 340))(a1);
-  return (*(int (__fastcall **)(CollisionActor *))(FIELD_U32(a1, 0x0)._.vtable + 196))(a1);
+  (*(void (__fastcall **)(CollisionActor *, float))(FIELD_U32(a1, 0x0) + 336))(a1, v2);
+  (*(void (__fastcall **)(CollisionActor *))(FIELD_U32(a1, 0x0) + 340))(a1);
+  return (*(int (__fastcall **)(CollisionActor *))(FIELD_U32(a1, 0x0) + 196))(a1);
 }

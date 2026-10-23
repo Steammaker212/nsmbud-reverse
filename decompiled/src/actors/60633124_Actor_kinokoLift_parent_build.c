@@ -15,7 +15,7 @@ StateActor *__fastcall Actor_kinokoLift_parent_build(ActorBuildInfo *a1)
 
   v2 = (StateActor *)operator_new(0x17E8u);
   result = StateActor_ctor(v2, a1);
-  FIELD_U32(result, 0x0)._._.vtable = (int)off_60C128C4;
+  FIELD_U32(result, 0x0) = (int)off_60C128C4;
   LOBYTE(result[1]._._._.profile) = 0;
   result[1]._._._.id = 0;
   result[1]._._._.vtable = 0;

@@ -55,11 +55,11 @@ ActiveColliderMgr *__fastcall damage_ref_2F7440(int a1)
   v12 = FIELD_U32(a1, 6316);
   v11 = (ActiveCollider *)(a1 + 6316);
   sub_6045195C(v12, *v2, &v16);
-  AnimationCtrl_setRepeat((ModelAnimation *)(FIELD_U32(v11, 0x0).vtable + 4), 0);
-  vtable = FIELD_U32(v11, 0x0).vtable;
+  AnimationCtrl_setRepeat((ModelAnimation *)(FIELD_U32(v11, 0x0) + 4), 0);
+  vtable = FIELD_U32(v11, 0x0);
   FIELD_U32(vtable, 20) = 0;
   FIELD_U32(vtable, 28) |= 2u;
-  *(_DWORD *)(FIELD_U32(v11, 0x0).vtable + 24) = 1065353216;
+  *(_DWORD *)(FIELD_U32(v11, 0x0) + 24) = 1065353216;
   v11[-21].lastCollisionOffsetX = 0.0;
   v11[-21].field_C0 = 0;
   v11[-21].field_C4 = 0;

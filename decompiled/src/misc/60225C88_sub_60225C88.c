@@ -355,7 +355,7 @@ LABEL_82:
     sub_6017D524(&v66, "top1%d", 3);
     FIELD_U32(a1, 784) = (*(int (__fastcall **)(void *, int (***)()))(*(_DWORD *)v55 + 84))(v55, &v66);
   }
-  *(_DWORD *)(a1 + 4 * v59 + 1652) = *FIELD_U32(v21, 0x8).animations;
+  *(_DWORD *)(a1 + 4 * v59 + 1652) = *FIELD_U32(v21, 0xC);
 LABEL_84:
   for ( m = 0; m != 8; ++m )
   {

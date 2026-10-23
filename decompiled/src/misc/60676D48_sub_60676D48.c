@@ -22,13 +22,13 @@ signed int __fastcall sub_60676D48(StageActor *a1)
   v2 = 1;
   if ( !v3 )
   {
-    (*(void (__fastcall **)(StageActor *))(FIELD_U32(a1, 0x0).vtable + 208))(a1);
+    (*(void (__fastcall **)(StageActor *))(FIELD_U32(a1, 0x0) + 208))(a1);
     category = a1[9].aCollider.info.category;
     if ( !category )
     {
 LABEL_13:
       StateMgr__execute((StateMgr *)&a1[9].aCollider.field_64);
-      (*(void (__fastcall **)(StageActor *))(FIELD_U32(a1, 0x0).vtable + 216))(a1);
+      (*(void (__fastcall **)(StageActor *))(FIELD_U32(a1, 0x0) + 216))(a1);
       return v2;
     }
     v5 = (float *)ActorMgrRelated_getById(ActorMgr__instance + 27168, category);
@@ -38,24 +38,24 @@ LABEL_13:
       if ( (unsigned int)(v6 - 2) < 2 )
       {
         sub_606D465C(&FIELD_U32(a1, 0x6C), &a1[9].aCollider.info.field_14);
-        FIELD_U32(a1, 0x6C).x = FIELD_U32(a1, 0x6C).x - FIELD_U32(a1, 0x23C).x;
-        FIELD_U32(a1, 0x6C).y = FIELD_U32(a1, 0x6C).y - FIELD_U32(a1, 0x23C).y;
-        FIELD_U32(a1, 0x6C).z = FIELD_U32(a1, 0x6C).z - FIELD_U32(a1, 0x23C).z;
+        FIELD_F32(a1, 0x6C) = FIELD_F32(a1, 0x6C) - FIELD_F32(a1, 0x23C);
+        FIELD_F32(a1, 0x70) = FIELD_F32(a1, 0x70) - FIELD_F32(a1, 0x240);
+        FIELD_F32(a1, 0x74) = FIELD_F32(a1, 0x74) - FIELD_F32(a1, 0x244);
       }
       else if ( v6 == 1 )
       {
         if ( HIBYTE(a1[9].aCollider.info.field_1C) )
-          FIELD_U32(a1, 0x6C).y = a1[9].aCollider.info.distToEdge.y;
+          FIELD_F32(a1, 0x70) = a1[9].aCollider.info.distToEdge.y;
         else
-          FIELD_U32(a1, 0x6C).x = a1[9].aCollider.info.distToEdge.x;
+          FIELD_F32(a1, 0x6C) = a1[9].aCollider.info.distToEdge.x;
       }
       else if ( !LOBYTE(a1[9].aCollider.info.field_1C) )
       {
         v7 = a1[9].aCollider.info.distToEdge.y + v5[1526];
         v8 = *(float *)&a1[9].aCollider.info.field_10 + v5[1527];
-        FIELD_U32(a1, 0x6C).x = a1[9].aCollider.info.distToEdge.x + v5[1525];
-        FIELD_U32(a1, 0x6C).y = v7;
-        FIELD_U32(a1, 0x6C).z = v8;
+        FIELD_F32(a1, 0x6C) = a1[9].aCollider.info.distToEdge.x + v5[1525];
+        FIELD_F32(a1, 0x70) = v7;
+        FIELD_F32(a1, 0x74) = v8;
       }
       goto LABEL_13;
     }

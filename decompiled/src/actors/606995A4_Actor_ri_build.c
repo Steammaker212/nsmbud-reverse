@@ -15,6 +15,6 @@ StageActor *__fastcall Actor_ri_build(ActorBuildInfo *a1)
 
   v2 = (StageActor *)operator_new(0x2A4u);
   result = StageActor__ctor(v2, a1);
-  FIELD_U32(result, 0x0).vtable = (int)off_60C180D0;
+  FIELD_U32(result, 0x0) = (int)off_60C180D0;
   return result;
 }

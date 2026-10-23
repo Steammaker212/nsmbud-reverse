@@ -92,7 +92,7 @@ int __fastcall sub_6037325C(int a1, int a2)
         *v16 = 0;
       }
       v18 = *(ModelWrapper **)(a1 + 6300);
-      if ( (*((_BYTE *)*FIELD_U32(v18, 0x8).animations + 28) & 0x20) != 0 )
+      if ( (*((_BYTE *)*FIELD_U32(v18, 0xC) + 28) & 0x20) != 0 )
       {
         if ( *v4 )
         {

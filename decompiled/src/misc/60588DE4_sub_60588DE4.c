@@ -202,7 +202,7 @@ LABEL_25:
             }
           }
         }
-        a1[27] = LODWORD(FIELD_U32(v19, 0x0).x);
+        a1[27] = LODWORD(FIELD_F32(v19, 0x0));
         a1[28] = a1[1749];
         if ( *v37 == 1 && (*((_BYTE *)a1 + 23) & 2) != 0 )
         {

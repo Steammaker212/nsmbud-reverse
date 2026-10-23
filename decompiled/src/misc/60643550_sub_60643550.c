@@ -12,7 +12,7 @@ float __fastcall sub_60643550(CollisionActor *a1)
 {
   float result; // s0
 
-  if ( (*(int (__fastcall **)(CollisionActor *))(FIELD_U32(a1, 0x0)._.vtable + 208))(a1) == 1 )
+  if ( (*(int (__fastcall **)(CollisionActor *))(FIELD_U32(a1, 0x0) + 208))(a1) == 1 )
     return CollisionActor__handleSpeed(a1);
   return result;
 }

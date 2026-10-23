@@ -17,9 +17,9 @@ float __fastcall BrosBase__executeState_DieFall(CollisionActor *a1)
 
   j_ModelWrapper_updateAnims(a1[1]._.aCollider.node3.prev);
   v2 = -134217728;
-  if ( (ActiveColliderNode *)FIELD_U32(a1, 0x0).direction == a1[1]._.aCollider.createNode.next )
+  if ( (ActiveColliderNode *)FIELD_U32(a1, 0x50) == a1[1]._.aCollider.createNode.next )
     v2 = 0x8000000;
-  FIELD_U32(a1, 0x0).rotation.x += v2;
+  FIELD_U32(a1, 0x9C) += v2;
   CollisionActor__handleGravity(a1);
   return CollisionActor__handleSpeed(a1);
 }

@@ -26,18 +26,18 @@ StageActor *__fastcall sub_6046D080(StageActor *a1)
   if ( !v4 )
     v5 = *v3 == 0;
   if ( v5 )
-    (*(void (__fastcall **)(StageActor *))(FIELD_U32(a1, 0x0).vtable + 224))(a1);
+    (*(void (__fastcall **)(StageActor *))(FIELD_U32(a1, 0x0) + 224))(a1);
   else
     a1[9].aCollider.field_E0 = -1;
   result = StageActor__accelerateX(a1);
-  x = FIELD_U32(a1, 0x78).x;
-  FIELD_U32(a1, 0x6C).x = FIELD_U32(a1, 0x6C).x + x;
-  FIELD_U32(a1, 0x6C).y = FIELD_U32(a1, 0x6C).y + FIELD_U32(a1, 0x78).y;
-  FIELD_U32(a1, 0x6C).z = FIELD_U32(a1, 0x6C).z + FIELD_U32(a1, 0x78).z;
+  x = FIELD_F32(a1, 0x78);
+  FIELD_F32(a1, 0x6C) = FIELD_F32(a1, 0x6C) + x;
+  FIELD_F32(a1, 0x70) = FIELD_F32(a1, 0x70) + FIELD_F32(a1, 0x7C);
+  FIELD_F32(a1, 0x74) = FIELD_F32(a1, 0x74) + FIELD_F32(a1, 0x80);
   if ( x == 0.0 )
   {
     a1[10].aCollider.field_E0 = FIELD_U32(a1, 0x50) + 1;
-    return (StageActor *)(*(int (__fastcall **)(StageActor *, int *))(FIELD_U32(a1, 0x0).vtable + 192))(a1, &dword_60C9D584);
+    return (StageActor *)(*(int (__fastcall **)(StageActor *, int *))(FIELD_U32(a1, 0x0) + 192))(a1, &dword_60C9D584);
   }
   return result;
 }

@@ -32,21 +32,21 @@ int __fastcall sub_602DCA64(Enemy *a1, int a2, int a3)
     if ( v7 && (**v7)(v7, &dword_60C7B378) == 1 )
     {
       v8 = sub_6000AED0((int)a1, (int)v7);
-      FIELD_U32(a1, 0x0)._._.direction = v8;
+      FIELD_U32(a1, 0x50) = v8;
       v9 = (unsigned __int8)byte_60AFE3F4[v8];
-      FIELD_U32(a1, 0x0)._._.rotation.y = v9 << 29;
-      CurrentState = StateMgr__getCurrentState(&FIELD_U32(a1, 0x0).states.manager);
+      FIELD_U32(a1, 0xA0) = v9 << 29;
+      CurrentState = StateMgr__getCurrentState(&FIELD_U32(a1, 0x17C4));
       v11 = (*((int (__fastcall **)(StateBase *))FIELD_U32(CurrentState, 0x0) + 2))(CurrentState);
       if ( v11 == (*(int (**)(void))(dword_60C91C88 + 8))() )
       {
-        FIELD_U32(a1, 0x0)._._.speed.x = (float)(char)v9 * 0.5;
+        FIELD_F32(a1, 0x78) = (float)(char)v9 * 0.5;
       }
       else
       {
-        v12 = StateMgr__getCurrentState(&FIELD_U32(a1, 0x0).states.manager);
+        v12 = StateMgr__getCurrentState(&FIELD_U32(a1, 0x17C4));
         v13 = (*((int (__fastcall **)(StateBase *))FIELD_U32(v12, 0x0) + 2))(v12);
         if ( v13 == (*(int (**)(void))(dword_60C91CA8 + 8))() )
-          (*(void (__fastcall **)(Enemy *, int *))(FIELD_U32(a1, 0x0)._._._.vtable + 192))(a1, &dword_60C91C88);
+          (*(void (__fastcall **)(Enemy *, int *))(FIELD_U32(a1, 0x0) + 192))(a1, &dword_60C91C88);
       }
       sub_602DADF4((int)a1);
       return 1;

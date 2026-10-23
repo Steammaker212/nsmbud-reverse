@@ -11,7 +11,7 @@
 StageActor *__fastcall Actor_StaffRoll_Manager_2_build_helper(StageActor *a1, ActorBuildInfo *a2)
 {
   StageActor__ctor(a1, a2);
-  FIELD_U32(a1, 0x0).vtable = (int)off_60C23910;
+  FIELD_U32(a1, 0x0) = (int)off_60C23910;
   a1[1]._.settings1 = 0;
   *(_DWORD *)&a1[1]._.field_10 = 0;
   a1[1]._.profile = 0;

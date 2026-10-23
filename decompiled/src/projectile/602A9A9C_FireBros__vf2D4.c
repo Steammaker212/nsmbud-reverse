@@ -16,7 +16,7 @@ bool __fastcall FireBros__vf2D4(Enemy *a1)
   int v1; // r1
 
   v1 = 1;
-  if ( (FIELD_U32(a1, 0x0)._._._.settings1 & 1) != 0 )
+  if ( (FIELD_U32(a1, 0x14) & 1) != 0 )
     return sub_60266410((int)a1, 0.0, 0.0);
   return v1;
 }

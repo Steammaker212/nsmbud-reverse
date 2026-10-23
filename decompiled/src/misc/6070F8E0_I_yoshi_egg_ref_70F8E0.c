@@ -34,7 +34,7 @@ int __fastcall I_yoshi_egg_ref_70F8E0(_DWORD *a1)
   ModelWrapper_setup(v5, v2, 0, 0);
   a1[1526] = v4;
   a1 += 1526;
-  v6 = (int)*FIELD_U32(v4, 0x8).animations;
+  v6 = (int)*FIELD_U32(v4, 0xC);
   v13 = &sead__SafeStringBase__vtable;
   v14 = "I_yoshi_egg";
   v7 = LoadResource(ResourceMgrRelated_instance, &v13);

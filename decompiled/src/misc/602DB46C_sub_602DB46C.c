@@ -34,7 +34,7 @@ int __fastcall sub_602DB46C(int a1)
   {
     v5 = 0;
     v6 = 0;
-    if ( (*(int (__fastcall **)(StageActor *, int *))FIELD_U32(v3, 0x0).vtable)(v3, &StageActor_RTTI) == 1 )
+    if ( (*(int (__fastcall **)(StageActor *, int *))FIELD_U32(v3, 0x0))(v3, &StageActor_RTTI) == 1 )
     {
       StageActor__cullCheck(v3, 2);
       if ( !v7 )
@@ -73,7 +73,7 @@ int __fastcall sub_602DB46C(int a1)
   if ( v8 != 1 )
     return 0;
   if ( v5 == 1 )
-    FIELD_U32(v6, 0x0).isDeleted = 1;
+    FIELD_U8(v6, 0x13) = 1;
   *v2 = 0;
   return 1;
 }

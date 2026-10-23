@@ -22,11 +22,11 @@ int __fastcall sub_6031EC0C(int a1, ActiveCollider *a2, ActiveCollider *a3)
   v8 = (*((int (__fastcall **)(StateBase *))FIELD_U32(CurrentState, 0x0) + 2))(CurrentState);
   if ( v8 == (*(int (**)(void))(dword_60C93880 + 8))() && FIELD_U8(a1, 12604) )
   {
-    result = (*(int (__fastcall **)(StageActor *))(FIELD_U32(owner, 0x0).vtable + 1156))(owner);
+    result = (*(int (__fastcall **)(StageActor *))(FIELD_U32(owner, 0x0) + 1156))(owner);
     if ( !result )
     {
       if ( sub_6075EDF8(owner) == 1 )
-        return (*(int (__fastcall **)(StageActor *, ActiveCollider *, _DWORD))(FIELD_U32(owner, 0x0).vtable + 1164))(owner, a2, 0);
+        return (*(int (__fastcall **)(StageActor *, ActiveCollider *, _DWORD))(FIELD_U32(owner, 0x0) + 1164))(owner, a2, 0);
       else
         return (*(int (__fastcall **)(int, ActiveCollider *, ActiveCollider *))(*(_DWORD *)a1 + 200))(a1, a2, a3);
     }

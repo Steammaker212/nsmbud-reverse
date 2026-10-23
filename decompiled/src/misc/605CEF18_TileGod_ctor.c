@@ -14,7 +14,7 @@ MultiStateActor *__fastcall TileGod_ctor(ActorBuildInfo *a1)
 
   v2 = (MultiStateActor *)operator_new(0x1800u);
   MultiStateActor__ctor(v2, a1);
-  FIELD_U32(v2, 0x0)._._.vtable = (int)TileGod_vtable;
+  FIELD_U32(v2, 0x0) = (int)TileGod_vtable;
   memset(&v2[1], 0, 33);
   return v2;
 }

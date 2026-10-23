@@ -23,21 +23,21 @@ signed int __fastcall SE_BOSS_IGGY_MAGIC_DISAPPEAR_ref(StageActor *a1)
   StageActor__cullCheck(a1, 0);
   StateMgr__execute((StateMgr *)&a1[9].aCollider.field_64);
   CollisionMgr_process(&a1[1]._.heap);
-  if ( (*(int (__fastcall **)(StageActor *))(FIELD_U32(a1, 0x0).vtable + 300))(a1) )
+  if ( (*(int (__fastcall **)(StageActor *))(FIELD_U32(a1, 0x0) + 300))(a1) )
   {
     if ( !LOBYTE(a1[10].aCollider.info.field_10) )
     {
-      x = FIELD_U32(a1, 0x6C).x;
+      x = FIELD_F32(a1, 0x6C);
       if ( x > (float)(FIELD_F32(dword_60CC6484, 112) + -8.0) || x < (float)(FIELD_F32(dword_60CC6484, 120) + 8.0) )
       {
         v3 = a1[10].aCollider.info.field_14;
-        *(float *)a2 = FIELD_U32(a1, 0x6C).x;
+        *(float *)a2 = FIELD_F32(a1, 0x6C);
         *(_DWORD *)&a2[4] = v3;
         *(_DWORD *)&a2[8] = 1166843904;
         StageActor__createWaterSplash(a1, (Vec2 *)a2, 1025, 18, "SE_OBJ_CMN_SPLASH_LAVA");
-        y = FIELD_U32(a1, 0x6C).y;
+        y = FIELD_F32(a1, 0x70);
         v5 = Global_BasicSoundActor1;
-        position.x = FIELD_U32(a1, 0x6C).x;
+        position.x = FIELD_F32(a1, 0x6C);
         position.y = y;
         mapPositionToScreen(&out, &position);
         BasicSoundActor1_playSound(v5, "SE_BOSS_IGGY_MAGIC_DISAPPEAR", (int)&out, 0);
@@ -45,9 +45,9 @@ signed int __fastcall SE_BOSS_IGGY_MAGIC_DISAPPEAR_ref(StageActor *a1)
       }
     }
   }
-  position.x = FIELD_U32(a1, 0x6C).x + FIELD_U32(a1, 0x23C).x;
-  position.y = FIELD_U32(a1, 0x6C).y + FIELD_U32(a1, 0x23C).y;
-  position.z = FIELD_U32(a1, 0x6C).z + FIELD_U32(a1, 0x23C).z;
+  position.x = FIELD_F32(a1, 0x6C) + FIELD_F32(a1, 0x23C);
+  position.y = FIELD_F32(a1, 0x70) + FIELD_F32(a1, 0x240);
+  position.z = FIELD_F32(a1, 0x74) + FIELD_F32(a1, 0x244);
   if ( BYTE1(a1[10].aCollider.info.field_10)
     && (CurrentState = StateMgr__getCurrentState((StateMgr *)&a1[9].aCollider.field_64),
         v7 = (*((int (__fastcall **)(StateBase *))FIELD_U32(CurrentState, 0x0) + 2))(CurrentState),

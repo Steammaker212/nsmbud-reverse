@@ -47,7 +47,7 @@ int __fastcall boss_koopa_ashiba_ref(int a1)
   v8 = ModelWrapper_ctor(v7, Model2, 1, 0, 0, 0, 0);
   ModelWrapper_setup(v8, v4, 0, 0);
   FIELD_U32(a1, 6104) = v7;
-  v9 = (int)*FIELD_U32(v7, 0x8).animations;
+  v9 = (int)*FIELD_U32(v7, 0xC);
   v13 = &sead__SafeStringBase__vtable;
   v14 = "boss_koopa_ashiba";
   v10 = LoadResource(ResourceMgrRelated_instance, &v13);

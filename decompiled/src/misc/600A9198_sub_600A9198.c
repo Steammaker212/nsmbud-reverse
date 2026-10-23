@@ -37,10 +37,10 @@ int __fastcall sub_600A9198(int a1, int a2, int a3)
   v7 = 0;
   if ( v6 )
   {
-    v8 = (*(int (__fastcall **)(StageActor *, int *))FIELD_U32(v6, 0x0).vtable)(v6, &Enemy_RTTI);
+    v8 = (*(int (__fastcall **)(StageActor *, int *))FIELD_U32(v6, 0x0))(v6, &Enemy_RTTI);
     if ( v8 )
       v8 = (int)v6;
-    if ( !FIELD_U32(v6, 0x0).isDeleted && Actor__getProfileId(&FIELD_U32(v6, 0x0)) != 368 )
+    if ( !FIELD_U8(v6, 0x13) && Actor__getProfileId(&FIELD_U32(v6, 0x0)) != 368 )
     {
       sub_600009FC((StageActor *)a1);
       if ( !FIELD_U8(a1, 6220) && Actor__getProfileId(&FIELD_U32(v6, 0x0)) == 392 )
@@ -50,7 +50,7 @@ int __fastcall sub_600A9198(int a1, int a2, int a3)
           dword_60C7B398 = (int)&off_60BC00E0;
           _cxa_guard_release(&dword_60C7B39C);
         }
-        v10 = (*(int (__fastcall **)(StageActor *, int *))FIELD_U32(v6, 0x0).vtable)(v6, &dword_60C7B398);
+        v10 = (*(int (__fastcall **)(StageActor *, int *))FIELD_U32(v6, 0x0))(v6, &dword_60C7B398);
         if ( v10 )
           v10 = (int)v6;
         CurrentState = StateMgr__getCurrentState((StateMgr *)(v10 + 6084));

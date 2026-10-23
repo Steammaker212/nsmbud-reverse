@@ -15,7 +15,7 @@ Enemy *__fastcall Actor_Demo_for_K_K_build(ActorBuildInfo *a1)
 
   v2 = (Enemy *)operator_new(0x18A8u);
   result = Enemy__ctor(v2, a1);
-  FIELD_U32(result, 0x0)._._._.vtable = (int)off_60BC23B0;
+  FIELD_U32(result, 0x0) = (int)off_60BC23B0;
   result[1]._._._._.vtable = 0;
   LOWORD(result[1]._._._._.heap) = 0;
   return result;

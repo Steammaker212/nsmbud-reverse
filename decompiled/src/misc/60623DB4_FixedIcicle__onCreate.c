@@ -19,38 +19,38 @@ signed int __fastcall FixedIcicle__onCreate(FixedIcicle *this)
   ActiveColliderMgr *v5; // r7
   ActiveColliderMgr *v6; // r6
 
-  FIELD_U32(this, 0x18A0) = FIELD_U32(this, 0x0)._._._._.settings1 & 0xF;
-  (*(void (__fastcall **)(FixedIcicle *))(FIELD_U32(this, 0x0)._._._._.vtable + 0x270))(this);
-  FIELD_U32(this, 0x0)._._._.field_1F4 = 64.0;
-  FIELD_U32(this, 0x0)._._._.field_1F8 = 64.0;
+  FIELD_U32(this, 0x18A0) = FIELD_U32(this, 0x14) & 0xF;
+  (*(void (__fastcall **)(FixedIcicle *))(FIELD_U32(this, 0x0) + 0x270))(this);
+  FIELD_F32(this, 0x1F4) = 64.0;
+  FIELD_F32(this, 0x1F8) = 64.0;
   if ( FIELD_U32(this, 0x18A0) )
   {
-    ActiveCollider__init(&FIELD_U32(this, 0x0)._._._.aCollider, &FIELD_U32(this, 0x0)._._._, &stru_60C11C70, 0);
+    ActiveCollider__init(&FIELD_U32(this, 0xBC), &FIELD_U32(this, 0x0), &stru_60C11C70, 0);
     aCollider2 = &FIELD_U32(this, 0x18A4);
     v3 = &FIELD_U32(this, 0x19D4);
     aCollider1_info = &stru_60B06908;
   }
   else
   {
-    ActiveCollider__init(&FIELD_U32(this, 0x0)._._._.aCollider, &FIELD_U32(this, 0x0)._._._, &stru_60C11C44, 0);
+    ActiveCollider__init(&FIELD_U32(this, 0xBC), &FIELD_U32(this, 0x0), &stru_60C11C44, 0);
     aCollider2 = &FIELD_U32(this, 0x18A4);
     v3 = &FIELD_U32(this, 0x19D4);
     aCollider1_info = &stru_60B068DC;
   }
-  ActiveCollider__init(aCollider2, &FIELD_U32(this, 0x0)._._._, aCollider1_info, (int)v3);
-  FIELD_U32(this, 0x0)._._._.aCollider.trapezoidOffsetTopLeft = -8.0;
-  FIELD_U32(this, 0x0)._._._.aCollider.trapezoidOffsetTopRight = 8.0;
-  FIELD_U32(this, 0x0)._._._.aCollider.trapezoidOffsetBottomLeft = -1.0;
-  FIELD_U32(this, 0x0)._._._.aCollider.trapezoidOffsetBottomRight = 1.0;
-  FIELD_U32(this, 0x18A4).trapezoidOffsetTopLeft = -8.0;
-  FIELD_U32(this, 0x18A4).trapezoidOffsetTopRight = 8.0;
-  FIELD_U32(this, 0x18A4).trapezoidOffsetBottomLeft = -1.0;
-  FIELD_U32(this, 0x18A4).trapezoidOffsetBottomRight = 1.0;
+  ActiveCollider__init(aCollider2, &FIELD_U32(this, 0x0), aCollider1_info, (int)v3);
+  FIELD_F32(this, 0x15C) = -8.0;
+  FIELD_F32(this, 0x160) = 8.0;
+  FIELD_F32(this, 0x164) = -1.0;
+  FIELD_F32(this, 0x168) = 1.0;
+  FIELD_F32(this, 0x1944) = -8.0;
+  FIELD_F32(this, 0x1948) = 8.0;
+  FIELD_F32(this, 0x194C) = -1.0;
+  FIELD_F32(this, 0x1950) = 1.0;
   v5 = ActiveColliderMgr_instance;
-  if ( !ActiveColliderMgr_isInActiveList(ActiveColliderMgr_instance, &FIELD_U32(this, 0x0)._._._.aCollider)
-    && !ActiveColliderMgr_isInCreateList(v5, &FIELD_U32(this, 0x0)._._._.aCollider) )
+  if ( !ActiveColliderMgr_isInActiveList(ActiveColliderMgr_instance, &FIELD_U32(this, 0xBC))
+    && !ActiveColliderMgr_isInCreateList(v5, &FIELD_U32(this, 0xBC)) )
   {
-    ActiveColliderMgr_addToCreateList(v5, &FIELD_U32(this, 0x0)._._._.aCollider);
+    ActiveColliderMgr_addToCreateList(v5, &FIELD_U32(this, 0xBC));
   }
   v6 = ActiveColliderMgr_instance;
   if ( !ActiveColliderMgr_isInActiveList(ActiveColliderMgr_instance, aCollider2)
@@ -60,8 +60,8 @@ signed int __fastcall FixedIcicle__onCreate(FixedIcicle *this)
   }
   if ( FIELD_U32(dword_60C99DD4, 764) == 4 )
     sub_60003D84(this);
-  FIELD_U32(this, 0x0)._._._.field_280 = 0;
-  (*(void (__fastcall **)(FixedIcicle *, int *))(FIELD_U32(this, 0x0)._._._._.vtable + 192))(this, &dword_60CB3ABC);
-  (*(void (__fastcall **)(FixedIcicle *))(FIELD_U32(this, 0x0)._._._._.vtable + 628))(this);
+  FIELD_U32(this, 0x280) = 0;
+  (*(void (__fastcall **)(FixedIcicle *, int *))(FIELD_U32(this, 0x0) + 192))(this, &dword_60CB3ABC);
+  (*(void (__fastcall **)(FixedIcicle *))(FIELD_U32(this, 0x0) + 628))(this);
   return 1;
 }

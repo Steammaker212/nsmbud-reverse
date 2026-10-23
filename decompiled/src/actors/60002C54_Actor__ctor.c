@@ -27,8 +27,8 @@ Actor *__fastcall Actor__ctor(Actor *this, ActorBuildInfo *buildInfo)
   FIELD_U8(this, 0x1C) = FIELD_U8(buildInfo, 0x24);
   FIELD_U8(this, 0x1D) = FIELD_U8(buildInfo, 0x25);
   FIELD_U8(this, 0x1E) = FIELD_U8(buildInfo, 0x26);
-  FIELD_U32(this, 0x20).previous = &FIELD_U32(this, 0x20);
-  FIELD_U32(this, 0x20).next = &FIELD_U32(this, 0x20);
+  FIELD_U32(this, 0x20) = &FIELD_U32(this, 0x20);
+  FIELD_U32(this, 0x24) = &FIELD_U32(this, 0x20);
   FIELD_U32(this, 0x28) = 0;
   FIELD_U32(this, 0x2C) = -1;
   FIELD_U32(this, 0x30) = 0;

@@ -30,19 +30,19 @@ signed int __fastcall Enemy__beforeExecute(CollisionActor *a1)
   result = 0;
   if ( v2 != 1 )
     return result;
-  if ( !FIELD_U32(a1, 0x0).field_218 )
+  if ( !FIELD_U8(a1, 0x218) )
   {
     CurrentState = StateMgr__getCurrentState((StateMgr *)&a1[1]._._.settings1);
     v5 = (*((int (__fastcall **)(StateBase *))FIELD_U32(CurrentState, 0x0) + 2))(CurrentState);
     if ( v5 != (*((int (**)(void))Enemy_StateId_Frozen._._.vtable + 2))()
-      && (*(int (__fastcall **)(CollisionActor *))(FIELD_U32(a1, 0x0)._.vtable + 360))(a1) == 1 )
+      && (*(int (__fastcall **)(CollisionActor *))(FIELD_U32(a1, 0x0) + 360))(a1) == 1 )
     {
       v6 = FIELD_U32(AreaRumbleMgr_instance, 56);
       if ( (v6 & 2) != 0 )
       {
-        if ( (*(int (__fastcall **)(CollisionActor *))(FIELD_U32(a1, 0x0)._.vtable + 424))(a1) == 1 )
+        if ( (*(int (__fastcall **)(CollisionActor *))(FIELD_U32(a1, 0x0) + 424))(a1) == 1 )
         {
-          vtable = FIELD_U32(a1, 0x0)._.vtable;
+          vtable = FIELD_U32(a1, 0x0);
           v8 = 0;
 LABEL_13:
           (*(void (__fastcall **)(CollisionActor *, int))(vtable + 348))(a1, v8);
@@ -53,12 +53,12 @@ LABEL_13:
         if ( (v6 & 4) == 0 )
         {
           if ( (v6 & 1) != 0 )
-            (*(void (__fastcall **)(CollisionActor *))(FIELD_U32(a1, 0x0)._.vtable + 420))(a1);
+            (*(void (__fastcall **)(CollisionActor *))(FIELD_U32(a1, 0x0) + 420))(a1);
           goto LABEL_14;
         }
-        if ( (*(int (__fastcall **)(CollisionActor *))(FIELD_U32(a1, 0x0)._.vtable + 424))(a1) == 1 )
+        if ( (*(int (__fastcall **)(CollisionActor *))(FIELD_U32(a1, 0x0) + 424))(a1) == 1 )
         {
-          vtable = FIELD_U32(a1, 0x0)._.vtable;
+          vtable = FIELD_U32(a1, 0x0);
           v8 = 1;
           goto LABEL_13;
         }
@@ -77,13 +77,13 @@ LABEL_14:
   *v9 = 0;
   if ( LOBYTE(a1[1]._._.field_48) )
   {
-    if ( !FIELD_U32(a1, 0x0).field_218 )
+    if ( !FIELD_U8(a1, 0x218) )
     {
-      FIELD_U32(a1, 0x0).field_218 = 1;
+      FIELD_U8(a1, 0x218) = 1;
       v10 = SLOBYTE(a1[1]._._.field_44);
       if ( v10 <= 3 )
         ++*(_DWORD *)(dword_60C99DD4 + 72 * v10 + 348);
-      (*(void (__fastcall **)(CollisionActor *, Actor *))(FIELD_U32(a1, 0x0)._.vtable + 192))(a1, a1[1]._._.parent);
+      (*(void (__fastcall **)(CollisionActor *, Actor *))(FIELD_U32(a1, 0x0) + 192))(a1, a1[1]._._.parent);
     }
     sub_6040A960(dword_60C9A1F0, SBYTE2(a1[1]._.aCollider.node3.next));
     LOBYTE(a1[1]._._.field_48) = 0;

@@ -20,19 +20,19 @@ int __fastcall ShellEnemy__vf298(Enemy *a1)
   int v6; // r5
   int *v7; // r1
 
-  CarryableEnemy__vf298(&FIELD_U32(a1, 0x0)._._._.vtable);
-  CurrentState = StateMgr__getCurrentState(&FIELD_U32(a1, 0x0).states.manager);
+  CarryableEnemy__vf298(&FIELD_U32(a1, 0x0));
+  CurrentState = StateMgr__getCurrentState(&FIELD_U32(a1, 0x17C4));
   v3 = (*((int (__fastcall **)(StateBase *))FIELD_U32(CurrentState, 0x0) + 2))(CurrentState);
   result = (*(int (**)(void))(dword_60C976FC + 8))();
   if ( v3 == result )
   {
-    result = (*(int (__fastcall **)(Enemy *))(FIELD_U32(a1, 0x0)._._._.vtable + 0x2D8))(a1);
+    result = (*(int (__fastcall **)(Enemy *))(FIELD_U32(a1, 0x0) + 0x2D8))(a1);
     if ( result == 1 )
     {
       v5 = sub_60271E94((int)a1);
       v6 = v5;
       if ( v5 )
-        FIELD_U32(a1, 0x0)._._.direction = FIELD_U32(v5, 0x50);
+        FIELD_U32(a1, 0x50) = FIELD_U32(v5, 0x50);
       if ( ((int (__fastcall *)(Enemy *, int))loc_602720FC)(a1, v5) == 1 )
       {
         return SE_EMY_DOWN_ref_2723A8(a1, v6, 1);
@@ -42,7 +42,7 @@ int __fastcall ShellEnemy__vf298(Enemy *a1)
         v7 = (int *)&unk_60C97744;
         if ( a1[1]._._._.field_56 )
           v7 = &dword_60C9778C;
-        return (*(int (__fastcall **)(Enemy *, int *))(FIELD_U32(a1, 0x0)._._._.vtable + 192))(a1, v7);
+        return (*(int (__fastcall **)(Enemy *, int *))(FIELD_U32(a1, 0x0) + 192))(a1, v7);
       }
     }
   }

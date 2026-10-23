@@ -18,5 +18,5 @@ void __fastcall SolidOnTopCollider_init(SolidOnTopCollider *this, StageActor *ow
   ownerInfo._57Ptr = &FIELD_U8(owner, 0x57);
   ownerInfo.playerIdPtr = &FIELD_U8(owner, 0x54);
   SolidOnTopCollider_initImpl(this, &ownerInfo, info);
-  FIELD_U32(this, 0x0).owner = owner;
+  FIELD_U32(this, 0x90) = owner;
 }

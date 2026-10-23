@@ -13,10 +13,10 @@ StateActor *__fastcall Yoshi_ctor(StateActor *a1, ActorBuildInfo *a2)
   sead_IDisposer *v3; // r0
 
   PlayerBase_ctor(a1, a2);
-  FIELD_U32(a1, 0x0)._._.vtable = (int)&off_60C25AB0;
+  FIELD_U32(a1, 0x0) = (int)&off_60C25AB0;
   *(_DWORD *)&a1[1]._.collisionMgr[4608] = 0;
   *(_DWORD *)&a1[1]._.collisionMgr[4612] = 0;
-  Yoshi_ctor_helper_7D6354(&a1[1]._.collisionMgr[4616], FIELD_U32(a1, 0x0)._._.settings1 & 0xF, 0);
+  Yoshi_ctor_helper_7D6354(&a1[1]._.collisionMgr[4616], FIELD_U32(a1, 0x14) & 0xF, 0);
   v3 = (sead_IDisposer *)operator_new(0x1Cu);
   *(_DWORD *)&a1[1]._.collisionMgr[4632] = Yoshi_ctor_helper(v3);
   *(_DWORD *)&a1[1]._.collisionMgr[4636] = &off_60C26018;
@@ -45,8 +45,8 @@ StateActor *__fastcall Yoshi_ctor(StateActor *a1, ActorBuildInfo *a2)
   *(_DWORD *)&a1[1]._.collisionMgr[4864] = off_60BC1450;
   EffectWrapper_ctor((EffectWrapper *)&a1[1]._.collisionMgr[4968]);
   *(_DWORD *)&a1[1]._.collisionMgr[4968] = off_60BC1450;
-  FIELD_U32(a1, 0x0)._.type = 2;
-  *(_DWORD *)FIELD_U32(a1, 0x0).collisionMgr = (char *)a1 + 11364;
+  FIELD_U8(a1, 0x215) = 2;
+  *(_DWORD *)FIELD_U8(a1, 0x288) = (char *)a1 + 11364;
   sub_6078B160((_DWORD *)PlayerMgr_instance, (int)a1);
   sub_6078B118((_DWORD *)PlayerMgr_instance);
   return a1;

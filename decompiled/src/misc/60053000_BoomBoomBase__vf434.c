@@ -18,7 +18,7 @@ int __fastcall BoomBoomBase__vf434(CollisionActor *a1)
   unsigned int v6; // r0
   int result; // r0
 
-  (*(void (__fastcall **)(CollisionActor *))(FIELD_U32(a1, 0x0)._.vtable + 1116))(a1);
+  (*(void (__fastcall **)(CollisionActor *))(FIELD_U32(a1, 0x0) + 1116))(a1);
   StageActor__accelerateX(&FIELD_U32(a1, 0x0));
   CollisionActor__handleGravity(a1);
   CollisionActor__handleSpeed(a1);
@@ -32,9 +32,9 @@ int __fastcall BoomBoomBase__vf434(CollisionActor *a1)
       v3 += 4 * v4;
     if ( *(float *)(*(_DWORD *)v3 + 20) >= 8.0 )
     {
-      (*(void (__fastcall **)(CollisionActor *, float))(FIELD_U32(a1, 0x0)._.vtable + 1124))(a1, 0.0);
-      (*(void (__fastcall **)(CollisionActor *))(FIELD_U32(a1, 0x0)._.vtable + 1156))(a1);
-      (*(void (__fastcall **)(CollisionActor *, int *))(FIELD_U32(a1, 0x0)._.vtable + 192))(a1, &dword_60C8071C);
+      (*(void (__fastcall **)(CollisionActor *, float))(FIELD_U32(a1, 0x0) + 1124))(a1, 0.0);
+      (*(void (__fastcall **)(CollisionActor *))(FIELD_U32(a1, 0x0) + 1156))(a1);
+      (*(void (__fastcall **)(CollisionActor *, int *))(FIELD_U32(a1, 0x0) + 192))(a1, &dword_60C8071C);
     }
   }
   v5 = *(_DWORD *)(*(_DWORD *)v2 + 12);
@@ -43,6 +43,6 @@ int __fastcall BoomBoomBase__vf434(CollisionActor *a1)
     v5 += 4 * v6;
   result = *(unsigned __int8 *)(*(_DWORD *)v5 + 28);
   if ( (result & 0x10) != 0 )
-    return (*(int (__fastcall **)(CollisionActor *, int *))(FIELD_U32(a1, 0x0)._.vtable + 192))(a1, &dword_60C806FC);
+    return (*(int (__fastcall **)(CollisionActor *, int *))(FIELD_U32(a1, 0x0) + 192))(a1, &dword_60C806FC);
   return result;
 }

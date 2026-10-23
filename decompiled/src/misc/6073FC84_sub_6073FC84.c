@@ -15,16 +15,16 @@ int __fastcall sub_6073FC84(CollisionActor *a1)
   result = LOWORD(a1[1]._.aCollider.activeNode.prev);
   if ( !result )
   {
-    if ( FIELD_U32(a1, 0x0).position.y <= (float)(FIELD_F32(dword_60CC6484, 132) + -64.0) )
+    if ( FIELD_F32(a1, 0x70) <= (float)(FIELD_F32(dword_60CC6484, 132) + -64.0) )
     {
-      return (*(int (__fastcall **)(CollisionActor *, int *))(FIELD_U32(a1, 0x0)._.vtable + 192))(a1, &dword_60CBE284);
+      return (*(int (__fastcall **)(CollisionActor *, int *))(FIELD_U32(a1, 0x0) + 192))(a1, &dword_60CBE284);
     }
     else
     {
       CollisionActor__handleGravity(a1);
       CollisionActor__handleSpeed(a1);
-      result = FIELD_U32(a1, 0x0).rotation.z - 0x4000000;
-      FIELD_U32(a1, 0x0).rotation.z = result;
+      result = FIELD_U32(a1, 0xA4) - 0x4000000;
+      FIELD_U32(a1, 0xA4) = result;
     }
   }
   return result;

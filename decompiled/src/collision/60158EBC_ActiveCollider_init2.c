@@ -17,7 +17,7 @@ int __fastcall ActiveCollider_init2(
 {
   int result; // r0
 
-  ActiveCollider__init(this, &FIELD_U32(owner, 0x0)._, info, unk);
+  ActiveCollider__init(this, &FIELD_U32(owner, 0x0), info, unk);
   result = *r3_0;
   FIELD_U8(this, 0x6C) = result;
   return result;

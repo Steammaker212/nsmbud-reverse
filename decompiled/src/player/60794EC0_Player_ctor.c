@@ -22,15 +22,15 @@ StateActor *__fastcall Player_ctor(StateActor *a1, ActorBuildInfo *a2)
 
   PlayerBase_ctor(a1, a2);
   v3 = 0;
-  FIELD_U32(a1, 0x0)._._.vtable = (int)&Player_vtable;
-  v4 = ((unsigned int)FIELD_U32(a1, 0x0)._._.settings1 >> 8) & 0xF;
+  FIELD_U32(a1, 0x0) = (int)&Player_vtable;
+  v4 = ((unsigned int)FIELD_U32(a1, 0x14) >> 8) & 0xF;
   if ( v4 <= 6 )
     v3 = dword_60B0C330[v4];
-  sub_60794B48(&a1[1]._.collisionMgr[4608], v3, 0, FIELD_U32(a1, 0x0)._._.settings1 & 0xF, 1);
+  sub_60794B48(&a1[1]._.collisionMgr[4608], v3, 0, FIELD_U32(a1, 0x14) & 0xF, 1);
   memset(&a1[1]._.collisionMgr[4624], 0, 96);
-  x = FIELD_U32(a1, 0x0)._.position.x;
-  y = FIELD_U32(a1, 0x0)._.position.y;
-  *(float *)&a1[1]._.collisionMgr[4728] = FIELD_U32(a1, 0x0)._.position.z;
+  x = FIELD_F32(a1, 0x6C);
+  y = FIELD_F32(a1, 0x70);
+  *(float *)&a1[1]._.collisionMgr[4728] = FIELD_F32(a1, 0x74);
   *(float *)&a1[1]._.collisionMgr[4724] = y;
   *(float *)&a1[1]._.collisionMgr[4720] = x;
   *(_DWORD *)&a1[1]._.collisionMgr[4732] = 0;
@@ -41,12 +41,12 @@ StateActor *__fastcall Player_ctor(StateActor *a1, ActorBuildInfo *a2)
   *(_DWORD *)&a1[1]._.collisionMgr[5196] = 0;
   a1[1]._.collisionMgr[5200] = 0;
   v7 = (sead_IDisposer *)operator_new(0x1Cu);
-  *(_DWORD *)&a1[1]._.collisionMgr[5204] = Player_ctor_helper_3E568C(v7, FIELD_U32(a1, 0x0)._._.settings1 & 0xF);
+  *(_DWORD *)&a1[1]._.collisionMgr[5204] = Player_ctor_helper_3E568C(v7, FIELD_U32(a1, 0x14) & 0xF);
   sub_6074EE98((int)&a1[1]._.collisionMgr[5208]);
   *(_DWORD *)&a1[1]._.collisionMgr[5252] = 0;
   a1[1]._.collisionMgr[5256] = 0;
   v8 = (sead_IDisposer *)operator_new(0x24u);
-  *(_DWORD *)&a1[1]._.collisionMgr[5260] = Player_ctor_helper(v8, FIELD_U32(a1, 0x0)._._.settings1 & 0xF);
+  *(_DWORD *)&a1[1]._.collisionMgr[5260] = Player_ctor_helper(v8, FIELD_U32(a1, 0x14) & 0xF);
   a1[1]._.collisionMgr[5264] = 0;
   a1[1]._.collisionMgr[5265] = 0;
   *(_DWORD *)&a1[1]._.collisionMgr[5268] = 0;
@@ -118,7 +118,7 @@ StateActor *__fastcall Player_ctor(StateActor *a1, ActorBuildInfo *a2)
   *(_DWORD *)&a1[2]._.collisionMgr[56] = 0;
   *(_DWORD *)&a1[2]._.collisionMgr[52] = 0;
   *(_DWORD *)&a1[2]._.collisionMgr[48] = 0;
-  Player_ctor_helper_77B890(&a1[2]._.collisionMgr[84], FIELD_U32(a1, 0x0)._._.id);
+  Player_ctor_helper_77B890(&a1[2]._.collisionMgr[84], FIELD_U32(a1, 0x8));
   *(_DWORD *)&a1[2]._.collisionMgr[120] = 0;
   *(_DWORD *)&a1[2]._.collisionMgr[124] = 0;
   a1[2]._.collisionMgr[128] = 0;
@@ -226,22 +226,22 @@ StateActor *__fastcall Player_ctor(StateActor *a1, ActorBuildInfo *a2)
   *(_DWORD *)&a1[2]._.collisionMgr[2240] = 0;
   *(_DWORD *)&a1[2]._.collisionMgr[2236] = 0;
   *(_DWORD *)&a1[2]._.collisionMgr[2232] = 0;
-  settings1 = FIELD_U32(a1, 0x0)._._.settings1;
-  *(_DWORD *)&FIELD_U32(a1, 0x0).collisionMgr[668] = (settings1 >> 8) & 0xF;
-  *(_DWORD *)&FIELD_U32(a1, 0x0).collisionMgr[672] = (unsigned __int8)settings1 >> 4;
-  FIELD_U32(a1, 0x0)._.playerId = settings1 & 0xF;
-  FIELD_U32(a1, 0x0)._.direction = HIBYTE(settings1) & 0xF;
-  sub_60786324(&FIELD_U32(a1, 0x0).collisionMgr[40], settings1 & 0xF);
-  FIELD_U32(a1, 0x0)._.type = 1;
+  settings1 = FIELD_U32(a1, 0x14);
+  *(_DWORD *)&FIELD_U8(a1, 0x288)[668] = (settings1 >> 8) & 0xF;
+  *(_DWORD *)&FIELD_U8(a1, 0x288)[672] = (unsigned __int8)settings1 >> 4;
+  FIELD_U8(a1, 0x54) = settings1 & 0xF;
+  FIELD_U32(a1, 0x50) = HIBYTE(settings1) & 0xF;
+  sub_60786324(&FIELD_U8(a1, 0x288)[40], settings1 & 0xF);
+  FIELD_U8(a1, 0x215) = 1;
   v10 = 0;
-  *(_DWORD *)FIELD_U32(a1, 0x0).collisionMgr = (char *)a1 + 11356;
-  playerId = (unsigned __int8)FIELD_U32(a1, 0x0)._.playerId;
+  *(_DWORD *)FIELD_U8(a1, 0x288) = (char *)a1 + 11356;
+  playerId = (unsigned __int8)FIELD_U8(a1, 0x54);
   if ( playerId < 6 )
     v10 = (char)playerId;
   (*(void (__fastcall **)(int, _DWORD))(**(_DWORD **)&a1[1]._.collisionMgr[4620] + 200))(
     *(_DWORD *)&a1[1]._.collisionMgr[4620],
     *(unsigned __int8 *)(dword_60C99DD4 + 72 * v10 + 320));
-  FIELD_U32(a1, 0x0).collisionMgr[664] = FIELD_U32(a1, 0x0)._.playerId;
+  FIELD_U8(a1, 0x288)[664] = FIELD_U8(a1, 0x54);
   *(_DWORD *)&a1[2]._.collisionMgr[1688] = 0;
   *(_DWORD *)&a1[2]._.collisionMgr[1692] = 0;
   return a1;

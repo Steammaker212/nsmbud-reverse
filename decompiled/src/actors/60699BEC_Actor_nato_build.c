@@ -14,7 +14,7 @@ StateActor *__fastcall Actor_nato_build(ActorBuildInfo *a1)
 
   v2 = (StateActor *)operator_new(0x18A0u);
   StateActor_ctor(v2, a1);
-  FIELD_U32(v2, 0x0)._._.vtable = (int)off_60C1815C;
+  FIELD_U32(v2, 0x0) = (int)off_60C1815C;
   memset(&v2[1]._._._.parent, 0, 144);
   memset(&v2[1], 0, 44);
   return v2;

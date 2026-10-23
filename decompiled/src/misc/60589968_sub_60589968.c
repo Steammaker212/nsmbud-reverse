@@ -28,10 +28,10 @@ int __fastcall sub_60589968(StageActor *a1)
   int v18; // [sp+0h] [bp-20h] BYREF
   float v19; // [sp+4h] [bp-1Ch] BYREF
 
-  if ( (FIELD_U32(a1, 0x0).settings1 & 0x80) != 0 )
+  if ( (FIELD_U32(a1, 0x14) & 0x80) != 0 )
   {
     StateMgr__execute((StateMgr *)&a1[9].aCollider.field_64);
-    a1[9].profileFlags = FIELD_U32(a1, 0x9C).z;
+    a1[9].profileFlags = FIELD_U32(a1, 0xA4);
     ShapedCollider_execute((ColliderBase *)&a1[9].aCollider.info.field_14);
     return 1;
   }
@@ -55,7 +55,7 @@ int __fastcall sub_60589968(StageActor *a1)
           &v19,
           &FIELD_U32(a1, 0x6C),
           (unsigned __int8)FIELD_U8(a1, 0x56));
-        FIELD_U32(a1, 0x6C).y = a1[10].aCollider.trapezoidOffsetBottomLeft
+        FIELD_F32(a1, 0x70) = a1[10].aCollider.trapezoidOffsetBottomLeft
                        + (float)(*(float *)&a1[11].aCollider.field_E8
                                + (float)(v19 - *(float *)&a1[11].aCollider.field_EC));
       }
@@ -73,13 +73,13 @@ int __fastcall sub_60589968(StageActor *a1)
           if ( a1[11].direction )
           {
             a1[11].aCollider.activeNode.prev = (ActiveColliderNode *)31;
-            (*(void (__fastcall **)(StageActor *, void *))(FIELD_U32(a1, 0x0).vtable + 192))(a1, &unk_60CAF318);
+            (*(void (__fastcall **)(StageActor *, void *))(FIELD_U32(a1, 0x0) + 192))(a1, &unk_60CAF318);
           }
         }
       }
-      FIELD_U32(a1, 0x6C).x = *(float *)&a1[10].field_228;
-      FIELD_U32(a1, 0x6C).y = *(float *)&a1[10].field_22C + a1[10].aCollider.trapezoidOffsetBottomLeft;
-      if ( a1[11].aCollider.createNode.owner == (ActiveCollider *)1 && (FIELD_U32(a1, 0x0).settings1 & 0x2000000) != 0 )
+      FIELD_F32(a1, 0x6C) = *(float *)&a1[10].field_228;
+      FIELD_F32(a1, 0x70) = *(float *)&a1[10].field_22C + a1[10].aCollider.trapezoidOffsetBottomLeft;
+      if ( a1[11].aCollider.createNode.owner == (ActiveCollider *)1 && (FIELD_U32(a1, 0x14) & 0x2000000) != 0 )
       {
         v11 = 7120;
       }
@@ -87,7 +87,7 @@ int __fastcall sub_60589968(StageActor *a1)
       {
         if ( a1[11].aCollider.field_D4 )
         {
-          parent = FIELD_U32(a1, 0x0).parent;
+          parent = FIELD_U32(a1, 0x38);
           if ( ((unsigned int)&dword_60C7B364 & ~(1616419588 << v6) & 1) == 0 && _cxa_guard_acquire(&dword_60C7B364) )
           {
             StageActor_RTTI = (int)&off_60BC0098;
@@ -97,31 +97,31 @@ int __fastcall sub_60589968(StageActor *a1)
             goto LABEL_28;
           v10 = a1[11].aCollider.field_DC + parent[2].heap;
 LABEL_27:
-          FIELD_U32(a1, 0x9C).z = v10;
+          FIELD_U32(a1, 0xA4) = v10;
 LABEL_28:
           if ( LOBYTE(a1[10].field_27C) )
           {
-            x = FIELD_U32(a1, 0x6C).x;
-            y = FIELD_U32(a1, 0x6C).y;
-            z = FIELD_U32(a1, 0x6C).z;
-            FIELD_U32(a1, 0x248).x = x;
-            FIELD_U32(a1, 0x248).y = y;
-            FIELD_U32(a1, 0x248).z = z;
-            FIELD_U32(a1, 0x260).x = x;
-            FIELD_U32(a1, 0x260).y = y;
-            FIELD_U32(a1, 0x260).z = z;
+            x = FIELD_F32(a1, 0x6C);
+            y = FIELD_F32(a1, 0x70);
+            z = FIELD_F32(a1, 0x74);
+            FIELD_F32(a1, 0x248) = x;
+            FIELD_F32(a1, 0x24C) = y;
+            FIELD_F32(a1, 0x250) = z;
+            FIELD_F32(a1, 0x260) = x;
+            FIELD_F32(a1, 0x264) = y;
+            FIELD_F32(a1, 0x268) = z;
             sub_60160948(&a1[9].aCollider.info.field_14);
           }
           goto LABEL_30;
         }
         v11 = 7072;
       }
-      v10 = *(int *)((char *)&FIELD_U32(a1, 0x0).vtable + v11);
+      v10 = *(int *)((char *)&FIELD_U32(a1, 0x0) + v11);
       goto LABEL_27;
     }
   }
 LABEL_30:
-  a1[9].profileFlags = FIELD_U32(a1, 0x9C).z;
+  a1[9].profileFlags = FIELD_U32(a1, 0xA4);
   ShapedCollider_execute((ColliderBase *)&a1[9].aCollider.info.field_14);
   sub_605B2D70(a1);
   if ( !a1[11].aCollider.field_E0 )

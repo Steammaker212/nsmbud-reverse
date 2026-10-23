@@ -16,7 +16,7 @@ int __fastcall ActiveCollider_init3(
         int a5,
         int a4)
 {
-  ActiveCollider__init(a1, &FIELD_U32(a2, 0x0)._, a3, a4);
+  ActiveCollider__init(a1, &FIELD_U32(a2, 0x0), a3, a4);
   FIELD_U8(a1, 0x6C) = *r3_0;
   FIELD_U8(a1, 0x6D) = a5;
   return a5;

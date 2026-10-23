@@ -13,6 +13,6 @@ StateActor *__fastcall Actor_RDash24exclusive_moai_ki_build_helper(StateActor *a
   StateActor *result; // r0
 
   result = sub_6068D194(a1, a2);
-  FIELD_U32(result, 0x0)._._.vtable = (int)off_60C17680;
+  FIELD_U32(result, 0x0) = (int)off_60C17680;
   return result;
 }

@@ -15,6 +15,6 @@ CarryableEnemy *__fastcall Spiny__ctor(_DWORD *a1)
 
   v2 = operator_new(0x1AE0u);
   result = SpinyBase__ctor(v2, a1);
-  FIELD_U32(result, 0x0)._._._._.vtable = (int)off_60BF5CF4;
+  FIELD_U32(result, 0x0) = (int)off_60BF5CF4;
   return result;
 }

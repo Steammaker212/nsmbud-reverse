@@ -15,7 +15,7 @@ StateActor *__fastcall Actor_ball_surekoin_parent_build(ActorBuildInfo *a1)
 
   v2 = (StateActor *)operator_new(0x18B0u);
   result = StateActor_ctor(v2, a1);
-  FIELD_U32(result, 0x0)._._.vtable = (int)off_60C0C278;
+  FIELD_U32(result, 0x0) = (int)off_60C0C278;
   result[1]._._._.heap = 0;
   *(_DWORD *)&result[1]._._._.field_10 = 0;
   *(_DWORD *)&result[1]._._._.movementId = 0;

@@ -126,7 +126,7 @@ void __fastcall sub_60091144(ActiveCollider *a1, ActiveCollider *a2)
   }
   if ( !owner )
     return;
-  v7 = (*(int (__fastcall **)(StageActor *, int *))FIELD_U32(owner, 0x0).vtable)(owner, &dword_60C81100);
+  v7 = (*(int (__fastcall **)(StageActor *, int *))FIELD_U32(owner, 0x0))(owner, &dword_60C81100);
   if ( v7 )
     v7 = (int)owner;
   v9 = v6 == 0;
@@ -142,7 +142,7 @@ void __fastcall sub_60091144(ActiveCollider *a1, ActiveCollider *a2)
       Enemy__collisionCallback(a1, a2);
       return;
     }
-    if ( Actor__getProfileId(FIELD_U32(v6, 0x0).parent) == 726 )
+    if ( Actor__getProfileId(FIELD_U32(v6, 0x38)) == 726 )
       return;
     sub_602EE7B8(v6, FIELD_U32(v6, 0x50), FIELD_U8(v6, 0x54));
 LABEL_31:
@@ -158,7 +158,7 @@ LABEL_31:
         dword_60C7B370 = (int)&off_60BC00B0;
         _cxa_guard_release(&dword_60C7B374);
       }
-      if ( (*(int (__fastcall **)(StageActor *, int *))FIELD_U32(v6, 0x0).vtable)(v6, &dword_60C7B370) == 1 )
+      if ( (*(int (__fastcall **)(StageActor *, int *))FIELD_U32(v6, 0x0))(v6, &dword_60C7B370) == 1 )
       {
         v12 = (unsigned int *)(v7 + 15240);
         v11 = FIELD_U32(v7, 15240);
@@ -175,7 +175,7 @@ LABEL_31:
           }
           else
           {
-            if ( FIELD_U32(a2, 0x74).category == 7 )
+            if ( FIELD_U32(a2, 0x8C) == 7 )
             {
               CurrentState = StateMgr__getCurrentState((StateMgr *)(v7 + 6084));
               v14 = (*((int (__fastcall **)(StateBase *))FIELD_U32(CurrentState, 0x0) + 2))(CurrentState);
@@ -184,14 +184,14 @@ LABEL_31:
                 if ( FIELD_U8(v7, 15261) )
                 {
                   FIELD_U8(v7, 15261) = 0;
-                  FIELD_U32(v7, 80) = FIELD_U32(v6, 0x6C).x >= FIELD_F32(v7, 108);
+                  FIELD_U32(v7, 80) = FIELD_F32(v6, 0x6C) >= FIELD_F32(v7, 108);
                   (*(void (__fastcall **)(int, void *))(*(_DWORD *)v7 + 192))(v7, &unk_60C82240);
                 }
               }
             }
             if ( (LOBYTE(v6[1].effectOffset.x) & 0x30) != 0 )
             {
-              (*(void (__fastcall **)(StageActor *, int, int))(FIELD_U32(v6, 0x0).vtable + 1168))(v6, v7, 4);
+              (*(void (__fastcall **)(StageActor *, int, int))(FIELD_U32(v6, 0x0) + 1168))(v6, v7, 4);
               v15 = 0;
               FIELD_U8(a2, 0x6E) |= 2u;
               v6[14].field_230 = 32;
@@ -200,7 +200,7 @@ LABEL_31:
                 v15 = (char)v16;
               *(_WORD *)(v7 + 2 * v15 + 6140) = 32;
             }
-            else if ( FIELD_U32(v6, 0x6C).y > (float)(FIELD_F32(v7, 112) + 12.0) )
+            else if ( FIELD_F32(v6, 0x70) > (float)(FIELD_F32(v7, 112) + 12.0) )
             {
               if ( *v12 >= 4
                 && ((v62 = StateMgr__getCurrentState((StateMgr *)(v7 + 6084)),
@@ -274,17 +274,17 @@ LABEL_31:
                     if ( *(int *)(v7 + 4 * v103 + 9460) < 1 )
                     {
                       sub_602A3178(v6, &dword_60CC4B7C);
-                      y = FIELD_U32(v6, 0x6C).y;
+                      y = FIELD_F32(v6, 0x70);
                       v106 = Global_BasicSoundActor1;
-                      position.x = FIELD_U32(v6, 0x6C).x;
+                      position.x = FIELD_F32(v6, 0x6C);
                       position.y = y;
                       mapPositionToScreen(&out, &position);
                       BasicSoundActor1_playSound(v106, "SE_OBJ_NO_DAMAGE_BOUND", (int)&out, 0);
                     }
                     else
                     {
-                      v104 = FIELD_U32(v6, 0x78).y;
-                      *(float *)&FIELD_U32(v6, 0xB4) = FIELD_U32(v6, 0x78).x + *(float *)&FIELD_U32(v6, 0xB4);
+                      v104 = FIELD_F32(v6, 0x7C);
+                      *(float *)&FIELD_U32(v6, 0xB4) = FIELD_F32(v6, 0x78) + *(float *)&FIELD_U32(v6, 0xB4);
                       *(float *)&FIELD_U32(v6, 0xB8) = v104 + *(float *)&FIELD_U32(v6, 0xB8);
                     }
                   }
@@ -318,7 +318,7 @@ LABEL_31:
     owner = (StageActor *)v7;
     goto LABEL_40;
   }
-  if ( FIELD_U32(v6, 0x78).y > 0.0 )
+  if ( FIELD_F32(v6, 0x7C) > 0.0 )
   {
     owner = (StageActor *)v7;
     goto LABEL_40;
@@ -440,7 +440,7 @@ LABEL_47:
       v24 = v24 * v37;
       v25 = v25 * v37;
     }
-    v38 = (*(float (__fastcall **)(StageActor *))(FIELD_U32(owner, 0x0).vtable + 668))(owner) + (float)(FIELD_U32(a1, 0x74).distToEdge.x * 0.5);
+    v38 = (*(float (__fastcall **)(StageActor *))(FIELD_U32(owner, 0x0) + 668))(owner) + (float)(FIELD_F32(a1, 0x7C) * 0.5);
     if ( v27 < v38 )
     {
       v39 = v38 - v27;
@@ -450,10 +450,10 @@ LABEL_47:
     v40 = StateMgr__getCurrentState((StateMgr *)&v6[9].aCollider.field_64);
     v41 = (*((int (__fastcall **)(StateBase *))FIELD_U32(v40, 0x0) + 2))(v40);
     if ( v41 == (*(int (**)(void))(dword_60C81D8C + 8))() )
-      x = FIELD_U32(v6, 0x78).x;
+      x = FIELD_F32(v6, 0x78);
     else
-      x = FIELD_U32(v6, 0x84).x;
-    FIELD_U32(v6, 0x78).x = -x;
+      x = FIELD_F32(v6, 0x84);
+    FIELD_F32(v6, 0x78) = -x;
   }
 LABEL_58:
   if ( Actor__getProfileId(&FIELD_U32(v6, 0x0)) != 728 )
@@ -486,7 +486,7 @@ LABEL_62:
       goto LABEL_64;
     v79 = StateMgr__getCurrentState((StateMgr *)&v6[9].aCollider.field_64);
     v80 = (*((int (__fastcall **)(StateBase *))FIELD_U32(v79, 0x0) + 2))(v79);
-    if ( v80 == (*(int (**)(void))(dword_60C810D8 + 8))() || FIELD_U32(owner, 0x78).y >= 0.0 )
+    if ( v80 == (*(int (**)(void))(dword_60C810D8 + 8))() || FIELD_F32(owner, 0x7C) >= 0.0 )
       goto LABEL_64;
     v81 = StateMgr__getCurrentState((StateMgr *)&v6[9].aCollider.field_64);
     v82 = (*((int (__fastcall **)(StateBase *))FIELD_U32(v81, 0x0) + 2))(v81);
@@ -520,7 +520,7 @@ LABEL_65:
             Enemy_RTTI = (int)&off_60BC00C8;
             _cxa_guard_release(dword_60C7B430);
           }
-          if ( (*(int (__fastcall **)(StageActor *, int *))FIELD_U32(v6, 0x0).vtable)(v6, &Enemy_RTTI) == 1 )
+          if ( (*(int (__fastcall **)(StageActor *, int *))FIELD_U32(v6, 0x0))(v6, &Enemy_RTTI) == 1 )
           {
             Enemy__collisionCallback(a2, (ActiveCollider *)(v56 + 188));
             goto LABEL_31;

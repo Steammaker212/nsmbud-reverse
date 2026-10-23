@@ -13,7 +13,7 @@ int __fastcall sub_6015907C(ActiveCollider *a1, int a2)
   ActiveColliderMgr *v4; // r6
   int result; // r0
 
-  if ( (a2 & 0x800) != 0 && (FIELD_U32(a1, 0x74).field_1C & 0x800) == 0 )
+  if ( (a2 & 0x800) != 0 && (FIELD_U32(a1, 0x90) & 0x800) == 0 )
   {
     v4 = ActiveColliderMgr_instance;
     if ( ActiveColliderMgr_isInActiveList(ActiveColliderMgr_instance, a1)
@@ -26,7 +26,7 @@ int __fastcall sub_6015907C(ActiveCollider *a1, int a2)
         ActiveColliderMgr_addToCreateList(v4, a1);
     }
   }
-  result = FIELD_U32(a1, 0x74).field_1C | a2;
-  FIELD_U32(a1, 0x74).field_1C = result;
+  result = FIELD_U32(a1, 0x90) | a2;
+  FIELD_U32(a1, 0x90) = result;
   return result;
 }

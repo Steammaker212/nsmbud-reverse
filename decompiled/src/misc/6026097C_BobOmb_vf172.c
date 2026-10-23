@@ -42,7 +42,7 @@ int __fastcall BobOmb_vf172(CollisionActor *a1)
     if ( v5 )
       ((void (__fastcall *)(CollisionActor *, float, float, float))loc_602A25F8)(a1, 0.1875, 1.0, 0.5);
     else
-      FIELD_U32(a1, 0x0).speed.y = 5.5;
+      FIELD_F32(a1, 0x7C) = 5.5;
     if ( !LOBYTE(a1[1]._.aCollider.field_D8) )
     {
       v6 = 0;
@@ -64,8 +64,8 @@ int __fastcall BobOmb_vf172(CollisionActor *a1)
               v16 = v15 == 8;
             if ( !v16 )
             {
-              y = FIELD_U32(a1, 0x0).position.y;
-              v18.x = FIELD_U32(a1, 0x0).position.x;
+              y = FIELD_F32(a1, 0x70);
+              v18.x = FIELD_F32(a1, 0x6C);
               v18.y = y;
               v18.z = sub_600024C4((int)a1);
               EffectData_create(dword_60AFD900[v14], &v18, 0, 0);
@@ -77,25 +77,25 @@ int __fastcall BobOmb_vf172(CollisionActor *a1)
       LOBYTE(a1[1]._.aCollider.field_D8) = v6;
     }
   }
-  direction = FIELD_U32(a1, 0x0).direction;
+  direction = FIELD_U32(a1, 0x50);
   if ( ((*(_DWORD *)&collisionMgr[4 * ((direction + 18) >> 5) + 2224] & (1 << ((direction + 18) & 0x1F))) != 0
      || (*(_DWORD *)&collisionMgr[4 * ((direction + 22) >> 5) + 2224] & (1 << ((direction + 22) & 0x1F))) != 0)
     && (*(_DWORD *)&collisionMgr[4 * ((direction + 28) >> 5) + 2224] & (1 << ((direction + 28) & 0x1F))) == 0 )
   {
     v8 = direction ^ 1;
-    FIELD_U32(a1, 0x0).direction = v8;
-    FIELD_U32(a1, 0x0).rotation.y = Enemy_CommonRotations[v8];
-    FIELD_U32(a1, 0x0).speed.x = FIELD_U32(a1, 0x0).speed.x * -0.5;
+    FIELD_U32(a1, 0x50) = v8;
+    FIELD_U32(a1, 0xA0) = Enemy_CommonRotations[v8];
+    FIELD_F32(a1, 0x78) = FIELD_F32(a1, 0x78) * -0.5;
   }
   result = (unsigned __int8)FIELD_U8(a1, 0x288)[2224];
   if ( (result & 1) != 0 )
   {
-    x = FIELD_U32(a1, 0x0).speed.x;
+    x = FIELD_F32(a1, 0x78);
     if ( x <= 0.00000011921 && x >= -0.00000011921 )
     {
       v11 = LOBYTE(a1[1]._.aCollider.field_D8);
-      FIELD_U32(a1, 0x0).speed.x = 0.0;
-      result = (*(int (__fastcall **)(CollisionActor *, int *))(FIELD_U32(a1, 0x0)._.vtable + 192))(a1, &dword_60C8E274);
+      FIELD_F32(a1, 0x78) = 0.0;
+      result = (*(int (__fastcall **)(CollisionActor *, int *))(FIELD_U32(a1, 0x0) + 192))(a1, &dword_60C8E274);
       if ( v11 )
         LOBYTE(a1[1]._.aCollider.field_D8) = v11;
     }

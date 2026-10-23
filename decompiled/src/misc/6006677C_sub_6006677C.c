@@ -37,8 +37,8 @@ int __fastcall sub_6006677C(int a1)
   FIELD_U32(a1, 6100) = v5;
   v7 = (int **)(a1 + 6100);
   animations = (unsigned int)v5[1].texAnims.animations;
-  v9 = (int *)FIELD_U32(v5, 0x8).animations;
-  if ( FIELD_U32(v5, 0x8).count > animations )
+  v9 = (int *)FIELD_U32(v5, 0xC);
+  if ( FIELD_U32(v5, 0x8) > animations )
     v9 += animations;
   v10 = *v9;
   a2.vtable = &sead__SafeStringBase__vtable;

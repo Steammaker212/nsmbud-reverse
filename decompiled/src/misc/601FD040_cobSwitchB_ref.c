@@ -26,7 +26,7 @@ int __fastcall cobSwitchB_ref(int a1)
   v5 = ModelWrapper_ctor(v4, Model, 1, 0, 0, 0, 0);
   ModelWrapper_setup(v5, (int)ResArchiveById, 0, 0);
   FIELD_U32(a1, 268) = v4;
-  v6 = (int)*FIELD_U32(v4, 0x8).animations;
+  v6 = (int)*FIELD_U32(v4, 0xC);
   identifier.vtable = &sead__SafeStringBase__vtable;
   identifier.cstr = "cobSwitchB";
   SkeletalAnim_play(v6, (int)ResArchiveById, (int)&identifier);

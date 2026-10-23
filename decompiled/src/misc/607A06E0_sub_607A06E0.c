@@ -45,16 +45,16 @@ void __fastcall sub_607A06E0(int a1, ActiveCollider *a2)
       _cxa_guard_release(&dword_60C7B37C);
     }
     if ( owner
-      && (*(int (__fastcall **)(StageActor *, int *))FIELD_U32(owner, 0x0).vtable)(owner, &dword_60C7B378) == 1
+      && (*(int (__fastcall **)(StageActor *, int *))FIELD_U32(owner, 0x0))(owner, &dword_60C7B378) == 1
       && !FIELD_U32(v6, 9580)
       && !owner[14].field_234
       && FIELD_U32(a1, 140) == 10 )
     {
-      if ( FIELD_U32(a2, 0x74).category == 10 )
+      if ( FIELD_U32(a2, 0x8C) == 10 )
       {
         sub_607B5350(v6, owner, 1);
       }
-      else if ( (FIELD_U32(a2, 0x74).field_14 | 2) == 2 )
+      else if ( (FIELD_U32(a2, 0x88) | 2) == 2 )
       {
         sub_607B5350(v6, owner, 0);
       }

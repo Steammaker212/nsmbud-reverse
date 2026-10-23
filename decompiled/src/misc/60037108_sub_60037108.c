@@ -44,9 +44,9 @@ int __fastcall sub_60037108(_DWORD *a1)
   j_ModelWrapper_setupModel((int)v5, (int)v2, 0, 0);
   a1[1775] = v4;
   animations = (unsigned int)v4[1].texAnims.animations;
-  v7 = (int *)FIELD_U32(v4, 0x8).animations;
+  v7 = (int *)FIELD_U32(v4, 0xC);
   v8 = a1[1774];
-  if ( FIELD_U32(v4, 0x8).count > animations )
+  if ( FIELD_U32(v4, 0x8) > animations )
     v7 += animations;
   v9 = *v7;
   a2.vtable = &sead__SafeStringBase__vtable;

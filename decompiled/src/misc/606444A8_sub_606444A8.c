@@ -53,7 +53,7 @@ int __fastcall sub_606444A8(ModelWrapper **a1, void *r1_0, void *a3, float a4, f
   v15 = ModelWrapper_ctor(v14, Model2, 0, 1, 0, 0, 0);
   ModelWrapper_setup(v15, a3, 0, r1_0);
   *a1 = v14;
-  v16 = (int)*FIELD_U32(v14, 0x10).animations;
+  v16 = (int)*FIELD_U32(v14, 0x14);
   a2.vtable = &sead__SafeStringBase__vtable;
   a2.cstr = "lift_up_down_plate";
   TexAnim_play(v16, (int)a3, &a2);

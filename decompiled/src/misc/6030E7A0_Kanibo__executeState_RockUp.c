@@ -25,17 +25,17 @@ void __fastcall Kanibo__executeState_RockUp(Enemy *this)
 
   v2 = this + 1;
   j_ModelWrapper_updateAnims(*((_DWORD *)this + 1575));
-  sub_604218E0(FIELD_U32(v2, 0x0)._._._.vtable);
-  CollisionActor__handleGravity(&FIELD_U32(this, 0x0)._);
-  CollisionActor__handleSpeed(&FIELD_U32(this, 0x0)._);
-  CollisionActor__sub_600034C8(&FIELD_U32(this, 0x0)._);
+  sub_604218E0(FIELD_U32(v2, 0x0));
+  CollisionActor__handleGravity(&FIELD_U32(this, 0x0));
+  CollisionActor__handleSpeed(&FIELD_U32(this, 0x0));
+  CollisionActor__sub_600034C8(&FIELD_U32(this, 0x0));
   if ( *((_BYTE *)this + 6472) )
   {
-    if ( (FIELD_U32(this, 0x0)._.collisionMgr[2232] & 1) == 0 && (FIELD_U32(this, 0x0)._.collisionMgr[2224] & 1) != 0 )
+    if ( (FIELD_U8(this, 0x288)[2232] & 1) == 0 && (FIELD_U8(this, 0x288)[2224] & 1) != 0 )
     {
-      y = FIELD_U32(this, 0x0)._._.position.y;
-      v4 = *(_DWORD *)&FIELD_U32(this, 0x0)._.collisionMgr[5308];
-      position.x = FIELD_U32(this, 0x0)._._.position.x;
+      y = FIELD_F32(this, 0x70);
+      v4 = *(_DWORD *)&FIELD_U8(this, 0x288)[5308];
+      position.x = FIELD_F32(this, 0x6C);
       position.y = y;
       position.z = 4500.0;
       EffectData_create(dword_60AFF324[BYTE1(v4)], &position, 0, 0);
@@ -48,27 +48,27 @@ void __fastcall Kanibo__executeState_RockUp(Enemy *this)
   v5 = *((_DWORD *)this + 1588);
   if ( v5 == 1 )
   {
-    v8 = *(_DWORD **)(FIELD_U32(v2, 0x0)._._._.vtable + 12);
-    v9 = *(_DWORD *)(FIELD_U32(v2, 0x0)._._._.vtable + 68);
-    if ( *(_DWORD *)(FIELD_U32(v2, 0x0)._._._.vtable + 8) > v9 )
+    v8 = *(_DWORD **)(FIELD_U32(v2, 0x0) + 12);
+    v9 = *(_DWORD *)(FIELD_U32(v2, 0x0) + 68);
+    if ( *(_DWORD *)(FIELD_U32(v2, 0x0) + 8) > v9 )
       v8 += v9;
     if ( sub_60418548(*v8 + 4) )
     {
       Kanibo__setTamaAction(this, 1);
-      v10 = FIELD_U32(this, 0x0)._._.position.y;
+      v10 = FIELD_F32(this, 0x70);
       v11 = Global_BasicSoundActor1;
-      position.x = FIELD_U32(this, 0x0)._._.position.x;
+      position.x = FIELD_F32(this, 0x6C);
       position.y = v10;
       mapPositionToScreen(&out, &position);
       BasicSoundActor1_playSound(v11, "SE_EMY_KANIBO_THROW", (int)&out, 0);
-      (*(void (__fastcall **)(Enemy *, State *))(FIELD_U32(this, 0x0)._._._.vtable + 192))(this, &Kanibo__StateID_Jump);
+      (*(void (__fastcall **)(Enemy *, State *))(FIELD_U32(this, 0x0) + 192))(this, &Kanibo__StateID_Jump);
     }
   }
   else if ( !v5 )
   {
-    v6 = *(_DWORD **)(FIELD_U32(v2, 0x0)._._._.vtable + 12);
-    v7 = *(_DWORD *)(FIELD_U32(v2, 0x0)._._._.vtable + 68);
-    if ( *(_DWORD *)(FIELD_U32(v2, 0x0)._._._.vtable + 8) > v7 )
+    v6 = *(_DWORD **)(FIELD_U32(v2, 0x0) + 12);
+    v7 = *(_DWORD *)(FIELD_U32(v2, 0x0) + 68);
+    if ( *(_DWORD *)(FIELD_U32(v2, 0x0) + 8) > v7 )
       v6 += v7;
     if ( sub_60418548(*v6 + 4) )
     {

@@ -13,7 +13,7 @@ ActiveColliderMgr *__fastcall sub_60158F04(ActiveCollider *a1, int a2)
   ActiveColliderMgr *v3; // r5
   ActiveColliderMgr *result; // r0
 
-  FIELD_U32(a1, 0x74).field_14 = a2;
+  FIELD_U32(a1, 0x88) = a2;
   v3 = ActiveColliderMgr_instance;
   if ( ActiveColliderMgr_isInActiveList(ActiveColliderMgr_instance, a1)
     || (result = (ActiveColliderMgr *)ActiveColliderMgr_isInCreateList(v3, a1), result == (ActiveColliderMgr *)1) )

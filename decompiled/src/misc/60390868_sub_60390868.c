@@ -17,7 +17,7 @@ signed int __fastcall sub_60390868(Enemy *a1)
   v3 = FIELD_U8(dword_60CC6D8C, 17) == 0;
   if ( FIELD_U8(dword_60CC6D8C, 17) )
   {
-    eventId1 = (unsigned __int8)FIELD_U32(a1, 0x0)._._.eventId1;
+    eventId1 = (unsigned __int8)FIELD_U8(a1, 0x21B);
     v3 = eventId1 == 0;
   }
   if ( !v3 )

@@ -10,6 +10,6 @@
 
 int __fastcall sub_60055BC8(BossBase *a1, int a2)
 {
-  (*(void (__fastcall **)(BossBase *))(FIELD_U32(a1, 0x0)._._._._.vtable + 1312))(a1);
+  (*(void (__fastcall **)(BossBase *))(FIELD_U32(a1, 0x0) + 1312))(a1);
   return BossBase__afterExecute(a1, a2);
 }

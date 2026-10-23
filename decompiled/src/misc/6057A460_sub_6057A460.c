@@ -17,12 +17,12 @@ int __fastcall sub_6057A460(StageActor *a1)
   result = sub_60003AE0(a1);
   if ( result == 1 )
   {
-    y = FIELD_U32(a1, 0x6C).y;
-    v4.x = FIELD_U32(a1, 0x6C).x;
+    y = FIELD_F32(a1, 0x70);
+    v4.x = FIELD_F32(a1, 0x6C);
     v4.y = y + 8.0;
     v4.z = 4500.0;
     EffectData_create(1233, &v4, 0, (int)&FIELD_U32(a1, 0x90));
-    FIELD_U32(a1, 0x0).isDeleted = 1;
+    FIELD_U8(a1, 0x13) = 1;
     return 1;
   }
   return result;

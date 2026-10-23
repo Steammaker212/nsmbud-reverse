@@ -15,6 +15,6 @@ StateActor *__fastcall Actor_kagi_build(ActorBuildInfo *a1)
 
   v2 = (StateActor *)operator_new(0x17E0u);
   result = StateActor_ctor(v2, a1);
-  FIELD_U32(result, 0x0)._._.vtable = (int)off_60C1EA68;
+  FIELD_U32(result, 0x0) = (int)off_60C1EA68;
   return result;
 }

@@ -52,7 +52,7 @@ int __fastcall sub_603262C0(int a1)
   v6 = ModelWrapper_ctor(v5, Model2, 1, 0, 0, 0, 0);
   ModelWrapper_setup(v6, (int)ResArchiveById, 0, 0);
   FIELD_U32(a1, 6100) = v5;
-  v7 = (int)*FIELD_U32(v5, 0x8).animations;
+  v7 = (int)*FIELD_U32(v5, 0xC);
   v26[0] = &sead__SafeStringBase__vtable;
   v26[1] = "shot";
   SkeletalAnim_play(v7, (int)ResArchiveById, (int)v26);

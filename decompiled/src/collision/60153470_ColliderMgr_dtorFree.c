@@ -12,7 +12,7 @@ void __fastcall ColliderMgr_dtorFree(ColliderMgr *a1)
 {
   _DWORD *v1; // r0
 
-  FIELD_U32(a1, 0x0).vtable = (int)ColliderMgr_vtable;
+  FIELD_U32(a1, 0x0) = (int)ColliderMgr_vtable;
   if ( dword_60C88208 == a1 )
   {
     dword_60C88208 = 0;

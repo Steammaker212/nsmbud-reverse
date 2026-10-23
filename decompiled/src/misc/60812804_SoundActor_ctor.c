@@ -29,9 +29,9 @@ SoundActor *__fastcall SoundActor_ctor(SoundActor *a1, int a2, int (__fastcall *
   if ( v7 )
     v7 += 2;
   nn__atk__SoundActor__ctor(a1, (int)v7);
-  *(_DWORD *)FIELD_U32(a1, 0x0).nn_atk_SoundActor_data = SoundActor_vtable;
+  *(_DWORD *)FIELD_U8(a1, 0x0) = SoundActor_vtable;
   FIELD_U32(a1, 0x88) = a2;
-  *(_DWORD *)&FIELD_U32(a1, 0x0).nn_atk_SoundActor_data[120] = 0;
+  *(_DWORD *)&FIELD_U8(a1, 0x0)[120] = 0;
   FIELD_U32(a1, 0x7C) = -1;
   FIELD_U32(a1, 0x80) = 1;
   operator_new(1u);

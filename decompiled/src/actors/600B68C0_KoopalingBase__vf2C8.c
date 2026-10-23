@@ -33,14 +33,14 @@ signed int __fastcall KoopalingBase__vf2C8(Enemy *a1)
   if ( (a1[1]._._.collisionMgr[228] & 2) != 0
     || (v3 = &a1[1]._._.collisionMgr[148], (v2 = *(int **)&a1[1]._._.collisionMgr[148]) == 0) )
   {
-    y = FIELD_U32(a1, 0x0)._._.position.y;
-    z = FIELD_U32(a1, 0x0)._._.position.z;
-    *(float *)&a1[1]._._.collisionMgr[80] = FIELD_U32(a1, 0x0)._._.position.x;
+    y = FIELD_F32(a1, 0x70);
+    z = FIELD_F32(a1, 0x74);
+    *(float *)&a1[1]._._.collisionMgr[80] = FIELD_F32(a1, 0x6C);
     *(float *)&a1[1]._._.collisionMgr[84] = y + -2.5;
     *(float *)&a1[1]._._.collisionMgr[88] = z;
-    v13 = (float)(FIELD_U32(a1, 0x0)._._.aCollider.info.distToEdge.y + FIELD_U32(a1, 0x0)._._.aCollider.info.distToEdge.y) + 8.0;
-    *(float *)&a1[1]._._.collisionMgr[92] = (float)(FIELD_U32(a1, 0x0)._._.aCollider.info.distToEdge.x
-                                                  + FIELD_U32(a1, 0x0)._._.aCollider.info.distToEdge.x)
+    v13 = (float)(FIELD_F32(a1, 0x13C) + FIELD_F32(a1, 0x13C)) + 8.0;
+    *(float *)&a1[1]._._.collisionMgr[92] = (float)(FIELD_F32(a1, 0x138)
+                                                  + FIELD_F32(a1, 0x138))
                                           + 8.0;
     *(float *)&a1[1]._._.collisionMgr[96] = v13;
   }
@@ -53,15 +53,15 @@ signed int __fastcall KoopalingBase__vf2C8(Enemy *a1)
     v6 = v5(v4, &v15);
     if ( v6 < 0 || v6 >= (*(int (__fastcall **)(_DWORD))(***(_DWORD ***)v3 + 92))(**(_DWORD **)v3) )
     {
-      v7 = FIELD_U32(a1, 0x0)._._.position.y;
-      v8 = v7 + FIELD_U32(a1, 0x0)._._.effectOffset.y;
-      v9 = FIELD_U32(a1, 0x0)._._.position.z + FIELD_U32(a1, 0x0)._._.effectOffset.z;
-      v10 = FIELD_U32(a1, 0x0)._._.position.x + FIELD_U32(a1, 0x0)._._.effectOffset.x;
+      v7 = FIELD_F32(a1, 0x70);
+      v8 = v7 + FIELD_F32(a1, 0x240);
+      v9 = FIELD_F32(a1, 0x74) + FIELD_F32(a1, 0x244);
+      v10 = FIELD_F32(a1, 0x6C) + FIELD_F32(a1, 0x23C);
     }
     else
     {
       (*(void (__fastcall **)(_DWORD, int, sead__SafeString *))(***(_DWORD ***)v3 + 108))(**(_DWORD **)v3, v6, &v15);
-      v7 = FIELD_U32(a1, 0x0)._._.position.y;
+      v7 = FIELD_F32(a1, 0x70);
       v8 = v17;
       v9 = v18;
       v10 = v16;
@@ -69,8 +69,8 @@ signed int __fastcall KoopalingBase__vf2C8(Enemy *a1)
     *(float *)&a1[1]._._.collisionMgr[80] = v10;
     *(float *)&a1[1]._._.collisionMgr[84] = v7 + -2.5;
     *(float *)&a1[1]._._.collisionMgr[88] = v9;
-    *(float *)&a1[1]._._.collisionMgr[92] = (float)(FIELD_U32(a1, 0x0)._._.aCollider.info.distToEdge.x
-                                                  + FIELD_U32(a1, 0x0)._._.aCollider.info.distToEdge.x)
+    *(float *)&a1[1]._._.collisionMgr[92] = (float)(FIELD_F32(a1, 0x138)
+                                                  + FIELD_F32(a1, 0x138))
                                           + 12.0;
     *(float *)&a1[1]._._.collisionMgr[96] = (float)((float)(v8 - v7) + (float)(v8 - v7)) + 26.0;
   }

@@ -14,24 +14,24 @@ StageActor *__fastcall StageActor__accelerateX(StageActor *result)
   float xSpeedMax; // s2
   float xSpeedNew; // s0
 
-  xSpeed = FIELD_U32(result, 0x78).x;
-  xSpeedMax = FIELD_U32(result, 0x84).x;
+  xSpeed = FIELD_F32(result, 0x78);
+  xSpeedMax = FIELD_F32(result, 0x84);
   if ( xSpeed >= xSpeedMax )
   {
     if ( xSpeed > xSpeedMax )
     {
       xSpeed = xSpeed - FIELD_F32(result, 0x68);
       if ( xSpeed < xSpeedMax )
-        xSpeed = FIELD_U32(result, 0x84).x;
+        xSpeed = FIELD_F32(result, 0x84);
     }
-    FIELD_U32(result, 0x78).x = xSpeed;
+    FIELD_F32(result, 0x78) = xSpeed;
   }
   else
   {
     xSpeedNew = xSpeed + FIELD_F32(result, 0x68);
     if ( xSpeedNew > xSpeedMax )
-      xSpeedNew = FIELD_U32(result, 0x84).x;
-    FIELD_U32(result, 0x78).x = xSpeedNew;
+      xSpeedNew = FIELD_F32(result, 0x84);
+    FIELD_F32(result, 0x78) = xSpeedNew;
   }
   return result;
 }

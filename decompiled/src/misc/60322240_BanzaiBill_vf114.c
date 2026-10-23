@@ -13,7 +13,7 @@ int __fastcall BanzaiBill_vf114(Enemy *a1)
   int *v2; // r5
 
   v2 = &a1[2]._._._.aCollider.field_E4;
-  (*(void (__fastcall **)(Enemy *))(FIELD_U32(a1, 0x0)._._._.vtable + 72))(a1);
+  (*(void (__fastcall **)(Enemy *))(FIELD_U32(a1, 0x0) + 72))(a1);
   Enemy__beginState_DieFall(a1);
   *(_BYTE *)v2 = 1;
   return 1;

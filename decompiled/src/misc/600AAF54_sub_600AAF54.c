@@ -13,7 +13,7 @@ int __fastcall sub_600AAF54(StateActor *a1)
   int v2; // r1
 
   KoopalingBase__vf5C8();
-  FIELD_U32(a1, 0x0)._.direction = StageActor__directionToPlayerX(a1, &FIELD_U32(a1, 0x0)._.position);
-  v2 = (*(int (__fastcall **)(StateActor *))(FIELD_U32(a1, 0x0)._._.vtable + 1108))(a1);
+  FIELD_U32(a1, 0x50) = StageActor__directionToPlayerX(a1, &FIELD_U32(a1, 0x6C));
+  v2 = (*(int (__fastcall **)(StateActor *))(FIELD_U32(a1, 0x0) + 1108))(a1);
   return sub_600B33DC(a1, v2);
 }

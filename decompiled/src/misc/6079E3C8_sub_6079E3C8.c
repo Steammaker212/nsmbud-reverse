@@ -21,7 +21,7 @@ float *__fastcall sub_6079E3C8(float *result, ActiveCollider *a2)
   owner = FIELD_U32(a2, 0x40);
   if ( owner )
   {
-    result = (float *)(*(int (__fastcall **)(StageActor *))(FIELD_U32(owner, 0x0).vtable + 88))(owner);
+    result = (float *)(*(int (__fastcall **)(StageActor *))(FIELD_U32(owner, 0x0) + 88))(owner);
     if ( result == (float *)1 )
     {
       result = (float *)(*(int (__fastcall **)(float *, StageActor *, _DWORD))(*(_DWORD *)v3 + 1432))(v3, owner, 0);
@@ -36,7 +36,7 @@ float *__fastcall sub_6079E3C8(float *result, ActiveCollider *a2)
           if ( v7 < v6 )
             return result;
 LABEL_10:
-          v3[3037] = *(float *)&FIELD_U32(owner, 0x0).id;
+          v3[3037] = *(float *)&FIELD_U32(owner, 0x8);
           *result = v7;
           return result;
         }

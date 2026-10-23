@@ -13,7 +13,7 @@ ShapedCollider *__fastcall ShapedCollider_ctor(ShapedCollider *this)
   ShapedCollider *this_1; // r0
 
   this_1 = (ShapedCollider *)ColliderBase_ctor(&FIELD_U32(this, 0x0));
-  FIELD_U32(this_1, 0x0)._.vtable = (int)ShapedCollider_vtable;
+  FIELD_U32(this_1, 0x0) = (int)ShapedCollider_vtable;
   FIELD_U32(this_1, 0x154) = 0;
   FIELD_U32(this_1, 0x158) = 0;
   FIELD_U32(this_1, 0x15C) = 0;

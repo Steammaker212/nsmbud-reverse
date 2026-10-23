@@ -14,7 +14,7 @@ Enemy *__fastcall Actor_ship_ruakuta_build(ActorBuildInfo *a1)
 
   v2 = (Enemy *)operator_new(0x18D0u);
   Enemy__ctor(v2, a1);
-  FIELD_U32(v2, 0x0)._._._.vtable = (int)off_60BD9C64;
+  FIELD_U32(v2, 0x0) = (int)off_60BD9C64;
   memset(&v2[1]._._._._.id, 0, 31);
   v2[1]._._._._.field_2C = (int)off_60BD9F08;
   v2[1]._._._._.childCount = 0;

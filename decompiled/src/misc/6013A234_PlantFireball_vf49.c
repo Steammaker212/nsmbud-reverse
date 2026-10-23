@@ -28,15 +28,15 @@ int __fastcall PlantFireball_vf49(CollisionActor *a1)
   {
     v3 = v2 <= 1;
     v4 = *(_DWORD *)&a1[1].collisionMgr[64];
-    y = FIELD_U32(a1, 0x0).scale.y;
-    z = FIELD_U32(a1, 0x0).scale.z;
+    y = FIELD_F32(a1, 0x94);
+    z = FIELD_F32(a1, 0x98);
     v7 = v2 - 1;
     if ( v3 )
       v4 = 1;
     v8 = 1.0 / (float)v4;
-    FIELD_U32(a1, 0x0).scale.x = FIELD_U32(a1, 0x0).scale.x + (float)(v8 * (float)(1.0 - FIELD_U32(a1, 0x0).scale.x));
-    FIELD_U32(a1, 0x0).scale.y = y + (float)(v8 * (float)(1.0 - y));
-    FIELD_U32(a1, 0x0).scale.z = z + (float)(v8 * (float)(1.0 - z));
+    FIELD_F32(a1, 0x90) = FIELD_F32(a1, 0x90) + (float)(v8 * (float)(1.0 - FIELD_F32(a1, 0x90)));
+    FIELD_F32(a1, 0x94) = y + (float)(v8 * (float)(1.0 - y));
+    FIELD_F32(a1, 0x98) = z + (float)(v8 * (float)(1.0 - z));
     *(_DWORD *)&a1[1].collisionMgr[64] = v7;
   }
   collisionMgr = FIELD_U8(a1, 0x288);
@@ -46,7 +46,7 @@ int __fastcall PlantFireball_vf49(CollisionActor *a1)
   {
     if ( (v10 & 0x10) != 0 )
       goto LABEL_11;
-    direction = FIELD_U32(a1, 0x0).direction;
+    direction = FIELD_U32(a1, 0x50);
     if ( (*(_DWORD *)&collisionMgr[4 * ((direction + 18) >> 5) + 2224] & (1 << ((direction + 18) & 0x1F))) != 0
       || (*(_DWORD *)&collisionMgr[4 * ((direction + 22) >> 5) + 2224] & (1 << ((direction + 22) & 0x1F))) != 0 )
     {
@@ -64,6 +64,6 @@ LABEL_11:
       goto LABEL_11;
     }
   }
-  (*(void (__fastcall **)(CollisionActor *))(FIELD_U32(a1, 0x0)._.vtable + 240))(a1);
+  (*(void (__fastcall **)(CollisionActor *))(FIELD_U32(a1, 0x0) + 240))(a1);
   return sub_601362A0((int)a1);
 }

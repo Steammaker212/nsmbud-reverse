@@ -31,26 +31,26 @@ signed int __fastcall FireSnake__onCreate(StateActor *a1)
   int v17; // r6
   int *v18; // r1
 
-  p_position = &FIELD_U32(a1, 0x0)._.position;
-  FIELD_U32(a1, 0x0)._.direction = StageActor__directionToPlayerX(a1, &FIELD_U32(a1, 0x0)._.position);
+  p_position = &FIELD_U32(a1, 0x6C);
+  FIELD_U32(a1, 0x50) = StageActor__directionToPlayerX(a1, &FIELD_U32(a1, 0x6C));
   v3 = *(float *)&dword_60C90BB4;
   v4 = *(float *)&dword_60C90BB8;
-  LODWORD(FIELD_U32(a1, 0x0)._.scale.x) = dword_60C90BB0;
-  FIELD_U32(a1, 0x0)._.scale.y = v3;
-  FIELD_U32(a1, 0x0)._.scale.z = v4;
+  LODWORD(FIELD_F32(a1, 0x90)) = dword_60C90BB0;
+  FIELD_F32(a1, 0x94) = v3;
+  FIELD_F32(a1, 0x98) = v4;
   *(_DWORD *)&a1[1]._.collisionMgr[532] = 1065353216;
   *(_DWORD *)&a1[1]._.collisionMgr[528] = 1065353216;
   *(_DWORD *)&a1[1]._.collisionMgr[524] = 1065353216;
-  ActiveCollider__init(&FIELD_U32(a1, 0x0)._.aCollider, &FIELD_U32(a1, 0x0)._, (ActiveColliderInfo *)&unk_60BE3478, 0);
+  ActiveCollider__init(&FIELD_U32(a1, 0xBC), &FIELD_U32(a1, 0x0), (ActiveColliderInfo *)&unk_60BE3478, 0);
   v5 = ActiveColliderMgr_instance;
-  if ( !ActiveColliderMgr_isInActiveList(ActiveColliderMgr_instance, &FIELD_U32(a1, 0x0)._.aCollider)
-    && !ActiveColliderMgr_isInCreateList(v5, &FIELD_U32(a1, 0x0)._.aCollider) )
+  if ( !ActiveColliderMgr_isInActiveList(ActiveColliderMgr_instance, &FIELD_U32(a1, 0xBC))
+    && !ActiveColliderMgr_isInCreateList(v5, &FIELD_U32(a1, 0xBC)) )
   {
-    ActiveColliderMgr_addToCreateList(v5, &FIELD_U32(a1, 0x0)._.aCollider);
+    ActiveColliderMgr_addToCreateList(v5, &FIELD_U32(a1, 0xBC));
   }
   ActiveCollider__init(
     (ActiveCollider *)&a1[1]._.collisionMgr[580],
-    &FIELD_U32(a1, 0x0)._,
+    &FIELD_U32(a1, 0x0),
     &stru_60AFE528,
     (int)&a1[1]._.collisionMgr[884]);
   v6 = ActiveColliderMgr_instance;
@@ -61,32 +61,32 @@ signed int __fastcall FireSnake__onCreate(StateActor *a1)
   }
   *(double *)&a1[1]._.collisionMgr[552] = ((double (__fastcall *)(char *))**(_DWORD **)&a1[1]._.collisionMgr[548])(&a1[1]._.collisionMgr[548]);
   *(_DWORD *)&a1[1]._.collisionMgr[560] = v7;
-  CollisionMgr_init((CollisionMgr *)FIELD_U32(a1, 0x0).collisionMgr, a1, &stru_60AFE554, &stru_60AFE560, &stru_60AFE56C);
-  FIELD_U32(a1, 0x0)._.field_64 = -0.0625;
-  FIELD_U32(a1, 0x0)._.field_1F4 = 128.0;
-  FIELD_U32(a1, 0x0)._.field_1F8 = 128.0;
-  FIELD_U32(a1, 0x0)._.field_1EC = 0.0;
-  FIELD_U32(a1, 0x0)._.field_1F0 = 0x40000000;
-  FIELD_U32(a1, 0x0)._.effectOffset.x = 0.0;
-  FIELD_U32(a1, 0x0)._.effectOffset.y = 2.0;
-  FIELD_U32(a1, 0x0)._.effectOffset.z = 0.0;
+  CollisionMgr_init((CollisionMgr *)FIELD_U8(a1, 0x288), a1, &stru_60AFE554, &stru_60AFE560, &stru_60AFE56C);
+  FIELD_F32(a1, 0x64) = -0.0625;
+  FIELD_F32(a1, 0x1F4) = 128.0;
+  FIELD_F32(a1, 0x1F8) = 128.0;
+  FIELD_F32(a1, 0x1EC) = 0.0;
+  FIELD_U32(a1, 0x1F0) = 0x40000000;
+  FIELD_F32(a1, 0x23C) = 0.0;
+  FIELD_F32(a1, 0x240) = 2.0;
+  FIELD_F32(a1, 0x244) = 0.0;
   *(_DWORD *)&a1[1]._.collisionMgr[412] = 5;
-  FIELD_U32(a1, 0x0)._.field_26C = (int)&a1[1]._.collisionMgr[396];
+  FIELD_U32(a1, 0x26C) = (int)&a1[1]._.collisionMgr[396];
   *(_DWORD *)&a1[1]._.collisionMgr[460] = 1;
-  FIELD_U32(a1, 0x0)._.field_270 = (int)&a1[1]._.collisionMgr[432];
+  FIELD_U32(a1, 0x270) = (int)&a1[1]._.collisionMgr[432];
   LODWORD(a1[1]._._.scale.x) = 1;
   v8 = dword_602AC520;
-  if ( (FIELD_U32(a1, 0x0)._.field_57 & 1) != 0 )
+  if ( (FIELD_U8(a1, 0x57) & 1) != 0 )
     v8 = &dword_602AC520[1];
   p_prev = &a1[1]._._.aCollider.activeNode.prev;
   v10 = *(float *)v8;
   v11 = 0;
-  FIELD_U32(a1, 0x0)._.position.z = v10;
+  FIELD_F32(a1, 0x74) = v10;
   do
   {
-    y = FIELD_U32(a1, 0x0)._.position.y;
+    y = FIELD_F32(a1, 0x70);
     v13 = (char *)&p_prev[v11];
-    *((_DWORD *)v13 - 1) = LODWORD(FIELD_U32(a1, 0x0)._.position.x);
+    *((_DWORD *)v13 - 1) = LODWORD(FIELD_F32(a1, 0x6C));
     *(float *)&p_prev[v11] = y;
     v11 += 3;
     v13[4] = 0;
@@ -157,17 +157,17 @@ signed int __fastcall FireSnake__onCreate(StateActor *a1)
   LightMask__init((RevealMaskRelated *)&a1[1]._.collisionMgr[68], 0, 2);
   LightSource_update1((LightSource *)&a1[1]._.collisionMgr[108], 13, p_position, 0, 0, 0, 0, 0, 0);
   LightSource_unkUpdate3((LightSource *)&a1[1]._.collisionMgr[108]);
-  if ( (FIELD_U32(a1, 0x0)._._.settings1 & 1) != 0 )
+  if ( (FIELD_U32(a1, 0x14) & 1) != 0 )
   {
-    (*(void (__fastcall **)(StateActor *, int *))(FIELD_U32(a1, 0x0)._._.vtable + 192))(a1, &dword_60C90A30);
+    (*(void (__fastcall **)(StateActor *, int *))(FIELD_U32(a1, 0x0) + 192))(a1, &dword_60C90A30);
   }
   else
   {
-    if ( FIELD_U32(a1, 0x0)._._.initStateFlag == 1 )
+    if ( FIELD_U8(a1, 0x1E) == 1 )
       v18 = &dword_60C90AD0;
     else
       v18 = &dword_60C90A70;
-    (*(void (__fastcall **)(StateActor *, int *))(FIELD_U32(a1, 0x0)._._.vtable + 192))(a1, v18);
+    (*(void (__fastcall **)(StateActor *, int *))(FIELD_U32(a1, 0x0) + 192))(a1, v18);
   }
   skl_root_ref_2AC6EC(a1);
   return 1;

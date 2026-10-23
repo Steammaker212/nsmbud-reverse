@@ -16,11 +16,11 @@ FireballBase *__fastcall PlayerFireball_ctor(ActorBuildInfo *a1)
 
   v2 = (FireballBase *)operator_new(0x1A78u);
   result = FireballBase_ctor(v2, a1);
-  FIELD_U32(result, 0x0)._._._.vtable = (int)off_60BD2A4C;
+  FIELD_U32(result, 0x0) = (int)off_60BD2A4C;
   result[1]._._._._.vtable = 0;
   result[1]._._._._.heap = 0;
-  v4 = FIELD_U32(result, 0x0)._._._.settings1 & 0xF;
+  v4 = FIELD_U32(result, 0x14) & 0xF;
   result[1]._._._._.id = v4;
-  FIELD_U32(result, 0x0)._._.playerId = v4;
+  FIELD_U8(result, 0x54) = v4;
   return result;
 }

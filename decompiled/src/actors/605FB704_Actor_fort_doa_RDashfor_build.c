@@ -15,6 +15,6 @@ Enemy *__fastcall Actor_fort_doa_RDashfor_build(ActorBuildInfo *a1)
 
   v2 = (Enemy *)operator_new(0x18C8u);
   result = Actor_fort_doa_RDashfor_build_helper(v2, a1);
-  FIELD_U32(result, 0x0)._._._.vtable = (int)off_60C0E2B0;
+  FIELD_U32(result, 0x0) = (int)off_60C0E2B0;
   return result;
 }

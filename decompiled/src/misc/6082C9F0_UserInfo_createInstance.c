@@ -18,7 +18,7 @@ UserInfo *__fastcall UserInfo_createInstance(int heap)
   {
     this = (UserInfo *)operator_new_8DE2C8(0x18u, heap, 4);
     this_1 = (UserInfo *)sead__IDisposer__ctor(this, heap, 3u);
-    FIELD_U32(this_1, 0x0).vtable = (int)off_60C2A774;
+    FIELD_U32(this_1, 0x0) = (int)off_60C2A774;
     dword_60CC6E18 = (int)this_1;
     FIELD_U8(this_1, 0x10) = 0;
     FIELD_U32(this_1, 0x14) = 0;

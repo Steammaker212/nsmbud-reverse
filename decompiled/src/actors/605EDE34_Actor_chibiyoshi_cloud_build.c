@@ -15,7 +15,7 @@ CollisionActor *__fastcall Actor_chibiyoshi_cloud_build(ActorBuildInfo *a1)
 
   v2 = (CollisionActor *)operator_new(0x1F88u);
   result = BabyYoshiBaseProbably_ctor(v2, a1, 0);
-  FIELD_U32(result, 0x0)._.vtable = (int)off_60C0BA80;
+  FIELD_U32(result, 0x0) = (int)off_60C0BA80;
   *(_DWORD *)&result[1].collisionMgr[1324] = 0;
   *(_DWORD *)&result[1].collisionMgr[1328] = 0;
   result[1].collisionMgr[1332] = 0;

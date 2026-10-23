@@ -30,7 +30,7 @@ int __fastcall pukupuku_ref(int a1)
   ModelWrapper_setup(v5, (int)v2, 0, 0);
   FIELD_U32(a1, 372) = v4;
   v6 = FIELD_U32(a1, 376);
-  v7 = (int)*FIELD_U32(v4, 0x8).animations;
+  v7 = (int)*FIELD_U32(v4, 0xC);
   identifier.vtable = &sead__SafeStringBase__vtable;
   identifier.cstr = "fly";
   SkeletalAnim_play(v7, v6, (int)&identifier);

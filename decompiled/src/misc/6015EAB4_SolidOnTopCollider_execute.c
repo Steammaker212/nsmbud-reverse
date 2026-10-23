@@ -14,7 +14,7 @@ int __fastcall SolidOnTopCollider_execute(ColliderBase *a1)
 
   sub_601603E8(a1);
   v2 = sub_6015E4F0((int)a1);
-  (*(void (__fastcall **)(ColliderBase *, float))(FIELD_U32(a1, 0x0).vtable + 52))(a1, v2);
+  (*(void (__fastcall **)(ColliderBase *, float))(FIELD_U32(a1, 0x0) + 52))(a1, v2);
   ((void (__fastcall *)(ColliderBase *, int *, int))loc_6015FBE4)(a1, &FIELD_U32(a1, 0xFC), 3);
   ((void (__fastcall *)(ColliderBase *, int *, int))loc_6015FBE4)(a1, &FIELD_U32(a1, 0x108), 2);
   ((void (__fastcall *)(ColliderBase *, int *, _DWORD))loc_6015FBE4)(a1, &FIELD_U32(a1, 0x114), 0);

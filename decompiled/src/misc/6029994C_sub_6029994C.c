@@ -16,11 +16,11 @@ int __fastcall sub_6029994C(CollisionActor *a1)
 
   CollisionActor__handleGravity(a1);
   CollisionActor__handleSpeed(a1);
-  z = FIELD_U32(a1, 0x0).rotation.z;
+  z = FIELD_U32(a1, 0xA4);
   next = a1[1]._.aCollider.createNode.next;
   v4 = dword_60AF1FD0[(_DWORD)next];
-  if ( (ActiveColliderNode *)FIELD_U32(a1, 0x0).direction == next )
+  if ( (ActiveColliderNode *)FIELD_U32(a1, 0x50) == next )
     v4 = -v4;
-  FIELD_U32(a1, 0x0).rotation.z = z + v4;
+  FIELD_U32(a1, 0xA4) = z + v4;
   return z + v4;
 }

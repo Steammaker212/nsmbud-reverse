@@ -11,16 +11,16 @@
 StateActor *__fastcall sub_601424B4(StateActor *a1, ActorBuildInfo *a2)
 {
   StateActor_ctor(a1, a2);
-  FIELD_U32(a1, 0x0)._._.vtable = (int)off_60BD3600;
+  FIELD_U32(a1, 0x0) = (int)off_60BD3600;
   a1[1]._._._.settings1 = 0;
   *(_DWORD *)&a1[1]._._._.field_10 = 0;
   a1[1]._._._.profile = 0;
   a1[1]._._._.id = 0;
   a1[1]._._._.heap = 0;
   a1[1]._._._.vtable = 0;
-  sub_6000BAC8(&a1[1]._._._.settigns2, FIELD_U32(a1, 0x0)._._.id);
+  sub_6000BAC8(&a1[1]._._._.settigns2, FIELD_U32(a1, 0x8));
   a1[1]._._._.settigns2 = (int)off_60BD35A8;
-  sub_6000B63C(&a1[1]._._._.field_3C, FIELD_U32(a1, 0x0)._._.id);
+  sub_6000B63C(&a1[1]._._._.field_3C, FIELD_U32(a1, 0x8));
   a1[1]._._._.field_3C = (int)off_60BD35DC;
   LightMask__ctor((RevealMaskRelated *)&a1[1]._._.field_60);
   a1[1]._._.maxSpeed.y = 120.0;

@@ -22,37 +22,37 @@ void __fastcall Kanibo__executeState_BackMove(Enemy *this)
 
   v2 = this + 1;
   j_ModelWrapper_updateAnims(*((_DWORD *)this + 1575));
-  sub_604218E0(FIELD_U32(v2, 0x0)._._._.vtable);
-  StageActor__accelerateX(&FIELD_U32(this, 0x0)._._);
-  CollisionActor__handleGravity(&FIELD_U32(this, 0x0)._);
-  CollisionActor__handleSpeed(&FIELD_U32(this, 0x0)._);
-  x = FIELD_U32(this, 0x0)._._.position.x;
+  sub_604218E0(FIELD_U32(v2, 0x0));
+  StageActor__accelerateX(&FIELD_U32(this, 0x0));
+  CollisionActor__handleGravity(&FIELD_U32(this, 0x0));
+  CollisionActor__handleSpeed(&FIELD_U32(this, 0x0));
+  x = FIELD_F32(this, 0x6C);
   v4 = *((float *)this + 1583);
   v5 = v4 + -16.0;
   if ( x >= (float)(v4 + -16.0) )
   {
     v6 = v4 + 16.0;
-    v5 = FIELD_U32(this, 0x0)._._.position.x;
+    v5 = FIELD_F32(this, 0x6C);
     if ( x > v6 )
       v5 = v6;
   }
-  FIELD_U32(this, 0x0)._._.position.x = v5;
-  v7 = CollisionActor__sub_600034C8(&FIELD_U32(this, 0x0)._);
+  FIELD_F32(this, 0x6C) = v5;
+  v7 = CollisionActor__sub_600034C8(&FIELD_U32(this, 0x0));
   if ( !*((_BYTE *)this + 6472) )
   {
     *((_BYTE *)this + 6472) = 1;
     goto LABEL_10;
   }
-  if ( (FIELD_U32(this, 0x0)._.collisionMgr[2232] & 1) != 0 || (FIELD_U32(this, 0x0)._.collisionMgr[2224] & 1) == 0 )
+  if ( (FIELD_U8(this, 0x288)[2232] & 1) != 0 || (FIELD_U8(this, 0x288)[2224] & 1) == 0 )
   {
 LABEL_10:
     if ( (v7 & 1) == 0 )
       return;
     goto LABEL_11;
   }
-  y = FIELD_U32(this, 0x0)._._.position.y;
-  v9 = *(_DWORD *)&FIELD_U32(this, 0x0)._.collisionMgr[5308];
-  position.x = FIELD_U32(this, 0x0)._._.position.x;
+  y = FIELD_F32(this, 0x70);
+  v9 = *(_DWORD *)&FIELD_U8(this, 0x288)[5308];
+  position.x = FIELD_F32(this, 0x6C);
   position.y = y;
   position.z = 4500.0;
   EffectData_create(dword_60AFF324[BYTE1(v9)], &position, 0, 0);
@@ -60,7 +60,7 @@ LABEL_10:
   {
 LABEL_11:
     *((_DWORD *)this + 1586) = 2;
-    sub_60421AD4(FIELD_U32(v2, 0x0)._._._.vtable);
-    (*(void (__fastcall **)(Enemy *, State *))(FIELD_U32(this, 0x0)._._._.vtable + 192))(this, &Kanibo__StateID_Wait);
+    sub_60421AD4(FIELD_U32(v2, 0x0));
+    (*(void (__fastcall **)(Enemy *, State *))(FIELD_U32(this, 0x0) + 192))(this, &Kanibo__StateID_Wait);
   }
 }

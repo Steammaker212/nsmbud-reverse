@@ -13,7 +13,7 @@ MultiStateActor *__fastcall FlagSwitchBase__ctor(MultiStateActor *a1, ActorBuild
   MultiStateActor *result; // r0
 
   result = MultiStateActor__ctor(a1, a2);
-  FIELD_U32(result, 0x0)._._.vtable = (int)off_60C0EDE8;
+  FIELD_U32(result, 0x0) = (int)off_60C0EDE8;
   BYTE2(result[1]._._._.settings1) = 0;
   LOWORD(result[1]._._._.settings1) = 0;
   *(_DWORD *)&result[1]._._._.field_10 = 0;

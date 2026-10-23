@@ -31,7 +31,7 @@ ModelAnimation *__fastcall throw_5_ref(int *a1)
   ModelWrapper_setup(v5, (int)v2, 0, 0);
   *(a1 - 1) = (int)v4;
   v6 = *a1;
-  v7 = (int)*FIELD_U32(v4, 0x8).animations;
+  v7 = (int)*FIELD_U32(v4, 0xC);
   a2.vtable = &sead__SafeStringBase__vtable;
   a2.cstr = "throw_5";
   SkeletalAnim_play(v7, v6, (int)&a2);

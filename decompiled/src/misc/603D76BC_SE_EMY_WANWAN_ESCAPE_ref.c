@@ -27,15 +27,15 @@ int __fastcall SE_EMY_WANWAN_ESCAPE_ref(CollisionActor *a1)
 
   v9.x = 0.0;
   out.x = 4.702e-38;
-  moveValueTo(&FIELD_U32(a1, 0x0).rotation.x, (int *)&v9, (int *)&out);
-  LODWORD(v9.x) = dword_60AF1EC0[FIELD_U32(a1, 0x0).direction];
+  moveValueTo(&FIELD_U32(a1, 0x9C), (int *)&v9, (int *)&out);
+  LODWORD(v9.x) = dword_60AF1EC0[FIELD_U32(a1, 0x50)];
   out.x = 1.5046e-36;
-  moveValueTo(&FIELD_U32(a1, 0x0).rotation.y, (int *)&v9, (int *)&out);
+  moveValueTo(&FIELD_U32(a1, 0xA0), (int *)&v9, (int *)&out);
   CollisionActor__handleGravity(a1);
-  FIELD_U32(a1, 0x0).position.x = FIELD_U32(a1, 0x0).position.x + FIELD_U32(a1, 0x0).speed.x;
-  FIELD_U32(a1, 0x0).position.y = FIELD_U32(a1, 0x0).position.y + FIELD_U32(a1, 0x0).speed.y;
-  v2 = FIELD_U32(a1, 0x0).position.z + FIELD_U32(a1, 0x0).speed.z;
-  FIELD_U32(a1, 0x0).position.z = v2;
+  FIELD_F32(a1, 0x6C) = FIELD_F32(a1, 0x6C) + FIELD_F32(a1, 0x78);
+  FIELD_F32(a1, 0x70) = FIELD_F32(a1, 0x70) + FIELD_F32(a1, 0x7C);
+  v2 = FIELD_F32(a1, 0x74) + FIELD_F32(a1, 0x80);
+  FIELD_F32(a1, 0x74) = v2;
   CollisionMgr_process(FIELD_U8(a1, 0x288), v2);
   v3 = sub_6000346C((int)a1);
   v4 = v3 == 1;
@@ -49,7 +49,7 @@ int __fastcall SE_EMY_WANWAN_ESCAPE_ref(CollisionActor *a1)
     v10 = -1103101952;
     v11 = &dword_60C990D4;
     v12 = -1;
-    direction = FIELD_U32(a1, 0x0).direction;
+    direction = FIELD_U32(a1, 0x50);
     v14 = -1;
     return sub_602A852C((int)&a1[1]._._.childCount, &v9);
   }
@@ -64,10 +64,10 @@ int __fastcall SE_EMY_WANWAN_ESCAPE_ref(CollisionActor *a1)
     }
     if ( v6 )
     {
-      FIELD_U32(a1, 0x0).speed.y = 3.0;
-      y = FIELD_U32(a1, 0x0).position.y;
+      FIELD_F32(a1, 0x7C) = 3.0;
+      y = FIELD_F32(a1, 0x70);
       v8 = Global_BasicSoundActor1;
-      v9.x = FIELD_U32(a1, 0x0).position.x;
+      v9.x = FIELD_F32(a1, 0x6C);
       v9.y = y;
       mapPositionToScreen(&out, &v9);
       return BasicSoundActor1_playSound(v8, "SE_EMY_WANWAN_ESCAPE", (int)&out, 0);

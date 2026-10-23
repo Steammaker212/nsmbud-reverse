@@ -55,7 +55,7 @@ signed int __fastcall sub_60569C24(ColliderBase *a1)
       v8 = &dword_60CAE31C;
     else
       v8 = &dword_60CAE2F8;
-    (*(void (__fastcall **)(ColliderBase *, int *))(FIELD_U32(a1, 0x0).vtable + 192))(a1, v8);
+    (*(void (__fastcall **)(ColliderBase *, int *))(FIELD_U32(a1, 0x0) + 192))(a1, v8);
     return 1;
   }
   return result;

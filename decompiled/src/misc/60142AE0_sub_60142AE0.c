@@ -14,7 +14,7 @@ int __fastcall sub_60142AE0(CollisionActor *a1)
   int result; // r0
 
   v2 = CollisionActor__handleSpeed(a1);
-  result = (*(int (__fastcall **)(CollisionActor *, float))(FIELD_U32(a1, 0x0)._.vtable + 252))(a1, v2);
+  result = (*(int (__fastcall **)(CollisionActor *, float))(FIELD_U32(a1, 0x0) + 252))(a1, v2);
   if ( result == 1 )
     return SE_OBJ_PNGN_ICEBALL_DISAPP_ref((int)a1);
   return result;

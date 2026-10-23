@@ -16,6 +16,6 @@ int __fastcall sub_606F1D7C(StageActor *a1)
   v2 = a1[9].aCollider.field_54 + 1;
   a1[9].aCollider.field_54 = v2;
   if ( (v2 & 0x7F) == 0 )
-    sub_6071689C(TileMgr_instance, 10, (unsigned __int8)(a1[9].aCollider.field_50 + 1), FIELD_U32(a1, 0x0).id);
+    sub_6071689C(TileMgr_instance, 10, (unsigned __int8)(a1[9].aCollider.field_50 + 1), FIELD_U32(a1, 0x8));
   return 1;
 }

@@ -62,7 +62,7 @@ int __fastcall sub_60132D14(int a1, int a2)
   FIELD_U32(v7, 6588) = 8;
   FIELD_U32(v7, 6584) = 1;
   v10 = *(StateActor **)(a1 + 36);
-  collisionMgr = (CollisionMgr *)FIELD_U32(v10, 0x0).collisionMgr;
+  collisionMgr = (CollisionMgr *)FIELD_U8(v10, 0x288);
   if ( FIELD_U8(dword_60CC6D8C, 17) )
   {
     CollisionMgr_init(collisionMgr, v10, &stru_60AF6598, &stru_60AF65A4, &stru_60AF65B0);

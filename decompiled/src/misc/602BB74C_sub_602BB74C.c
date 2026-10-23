@@ -27,7 +27,7 @@ float __fastcall sub_602BB74C(CollisionActor *a1)
     v7 = 2147500000.0 * 4.2;
     if ( v5 > v6 )
       owner = (ActiveCollider *)((char *)owner + 4 * (_DWORD)v6);
-    *(_DWORD *)(FIELD_U32(owner, 0x0).vtable + 24) = 1045220557;
+    *(_DWORD *)(FIELD_U32(owner, 0x0) + 24) = 1045220557;
   }
   else
   {
@@ -35,7 +35,7 @@ float __fastcall sub_602BB74C(CollisionActor *a1)
     v7 = 2147500000.0 * 11.25;
   }
   j_ModelWrapper_updateAnims(*p_prev);
-  FIELD_U32(a1, 0x0).rotation.x += (int)(float)(v7 / 180.0);
+  FIELD_U32(a1, 0x9C) += (int)(float)(v7 / 180.0);
   CollisionActor__handleGravity(a1);
   return CollisionActor__handleSpeed(a1);
 }

@@ -41,7 +41,7 @@ _DWORD *__fastcall sub_603DB988(int a1)
           dword_60C99118 = (int)&off_60BC04AC;
           _cxa_guard_release(&dword_60C9911C);
         }
-        if ( (*(int (__fastcall **)(ActiveColliderMgr *, int *))FIELD_U32(v5, 0x0).vtable)(v5, &dword_60C99118) == 1 )
+        if ( (*(int (__fastcall **)(ActiveColliderMgr *, int *))FIELD_U32(v5, 0x0))(v5, &dword_60C99118) == 1 )
           sub_603D923C(v5);
       }
     }

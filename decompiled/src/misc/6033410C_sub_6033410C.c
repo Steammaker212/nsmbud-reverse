@@ -31,7 +31,7 @@ unsigned int __fastcall sub_6033410C(unsigned int result, ActiveCollider *a2, Ac
   {
     if ( FIELD_U8(result, 7004) )
     {
-      y = FIELD_U32(owner, 0x78).y;
+      y = FIELD_F32(owner, 0x7C);
       result = Enemy__processCollision((Enemy *)result, a2, a3, 0);
       if ( result )
       {
@@ -42,7 +42,7 @@ unsigned int __fastcall sub_6033410C(unsigned int result, ActiveCollider *a2, Ac
         {
           if ( y < 0.0 )
             goto LABEL_13;
-          result = (unsigned int)FIELD_U32(v6, 0x0)._._._.profile;
+          result = (unsigned int)FIELD_U32(v6, 0xC);
           if ( result )
           {
             result = FIELD_U32(result, 12);
@@ -73,8 +73,8 @@ LABEL_13:
       {
         v12 = FIELD_U32(a3, 0x40);
         v13 = FIELD_U32(a2, 0x40);
-        v3.n64_f32[0] = FIELD_U32(v12, 0x6C).y - FIELD_U32(v13, 0x6C).y;
-        v14 = FIELD_U32(v12, 0x6C).x - FIELD_U32(v13, 0x6C).x;
+        v3.n64_f32[0] = FIELD_F32(v12, 0x70) - FIELD_F32(v13, 0x70);
+        v14 = FIELD_F32(v12, 0x6C) - FIELD_F32(v13, 0x6C);
         v15 = sqrtf((float)(v3.n64_f32[0] * v3.n64_f32[0]) + (float)(v14 * v14));
         if ( v15 > 0.0 )
         {
@@ -84,7 +84,7 @@ LABEL_13:
         }
         v9.n64_u32[0] = 1.0;
         v17 = vmax_f32(v3, v9).n64_f32[0];
-        (*(void (__fastcall **)(StageActor *, int, _DWORD, _DWORD, float, float))(FIELD_U32(v12, 0x0).vtable + 748))(
+        (*(void (__fastcall **)(StageActor *, int, _DWORD, _DWORD, float, float))(FIELD_U32(v12, 0x0) + 748))(
           v12,
           1,
           0,
@@ -105,9 +105,9 @@ LABEL_13:
     }
     else
     {
-      result = FIELD_U32(a3, 0x74).field_14;
+      result = FIELD_U32(a3, 0x88);
       if ( result != 15 )
-        return (*(int (__fastcall **)(StageActor *, ActiveCollider *, ActiveCollider *))(FIELD_U32(owner, 0x0).vtable + 1164))(
+        return (*(int (__fastcall **)(StageActor *, ActiveCollider *, ActiveCollider *))(FIELD_U32(owner, 0x0) + 1164))(
                  FIELD_U32(a3, 0x40),
                  a2,
                  a3);

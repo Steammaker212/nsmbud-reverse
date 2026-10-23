@@ -38,17 +38,17 @@ void __fastcall CollisionMgr_init(
     a = FIELD_F32(blowSensor, 0x0);
     b = FIELD_F32(blowSensor, 0x4);
     c = FIELD_F32(blowSensor, 0x8);
-    FIELD_U32(result, 0x958).a = a;
-    FIELD_U32(result, 0x958).b = b;
+    FIELD_F32(result, 0x958) = a;
+    FIELD_F32(result, 0x95C) = b;
   }
   else
   {
     c = 0.0;
     FIELD_U32(result, 0x8B0)[124] = 1;
-    FIELD_U32(result, 0x958).a = 0.0;
-    FIELD_U32(result, 0x958).b = 0.0;
+    FIELD_F32(result, 0x958) = 0.0;
+    FIELD_F32(result, 0x95C) = 0.0;
   }
-  FIELD_U32(result, 0x958).c = c;
+  FIELD_F32(result, 0x960) = c;
   FIELD_U32(result, 0x8B0)[114] = 1;
   FIELD_U32(result, 0x8B0)[119] = 1;
   FIELD_U32(result, 0x8B0)[115] = 1;
@@ -58,16 +58,16 @@ void __fastcall CollisionMgr_init(
     v8 = FIELD_F32(aboveSensor, 0x0);
     v9 = FIELD_F32(aboveSensor, 0x4);
     v10 = FIELD_F32(aboveSensor, 0x8);
-    FIELD_U32(result, 0x94C).a = v8;
-    FIELD_U32(result, 0x94C).b = v9;
-    FIELD_U32(result, 0x94C).c = v10;
+    FIELD_F32(result, 0x94C) = v8;
+    FIELD_F32(result, 0x950) = v9;
+    FIELD_F32(result, 0x954) = v10;
   }
   else
   {
     FIELD_U32(result, 0x8B0)[0x7B] = 1;
-    FIELD_U32(result, 0x94C).a = 0.0;
-    FIELD_U32(result, 0x94C).b = 0.0;
-    FIELD_U32(result, 0x94C).c = 0.0;
+    FIELD_F32(result, 0x94C) = 0.0;
+    FIELD_F32(result, 0x950) = 0.0;
+    FIELD_F32(result, 0x954) = 0.0;
   }
   FIELD_U32(result, 0x8B0)[0x72] = 1;
   FIELD_U32(result, 0x8B0)[0x75] = 1;
@@ -78,40 +78,40 @@ void __fastcall CollisionMgr_init(
     FIELD_U32(result, 0x8B0)[121] = 0;
     v12 = FIELD_F32(adjacentSensor, 0x4);
     v13 = FIELD_F32(adjacentSensor, 0x8);
-    FIELD_U32(result, 0x934).a = FIELD_F32(adjacentSensor, 0x0);
-    FIELD_U32(result, 0x934).b = v12;
-    FIELD_U32(result, 0x934).c = v13;
+    FIELD_F32(result, 0x934) = FIELD_F32(adjacentSensor, 0x0);
+    FIELD_F32(result, 0x938) = v12;
+    FIELD_F32(result, 0x93C) = v13;
     v14 = FIELD_F32(adjacentSensor, 0x0);
     v15 = FIELD_F32(adjacentSensor, 0x4);
     v16 = FIELD_F32(adjacentSensor, 0x8);
     FIELD_U32(result, 0x8B0)[0x72] = 1;
     FIELD_U32(result, 0x8B0)[0x76] = 1;
     FIELD_U32(result, 0x8B0)[0x73] = 1;
-    FIELD_U32(result, 0x940).a = v14;
-    FIELD_U32(result, 0x940).b = v15;
+    FIELD_F32(result, 0x940) = v14;
+    FIELD_F32(result, 0x944) = v15;
     v17 = -v16;
   }
   else
   {
     v17 = 0.0;
     FIELD_U32(result, 0x8B0)[121] = 1;
-    FIELD_U32(result, 0x934).a = 0.0;
-    FIELD_U32(result, 0x934).b = 0.0;
-    FIELD_U32(result, 0x934).c = 0.0;
+    FIELD_F32(result, 0x934) = 0.0;
+    FIELD_F32(result, 0x938) = 0.0;
+    FIELD_F32(result, 0x93C) = 0.0;
     FIELD_U32(result, 0x8B0)[114] = 1;
     FIELD_U32(result, 0x8B0)[118] = 1;
     FIELD_U32(result, 0x8B0)[115] = 1;
-    FIELD_U32(result, 0x940).a = 0.0;
-    FIELD_U32(result, 0x940).b = 0.0;
+    FIELD_F32(result, 0x940) = 0.0;
+    FIELD_F32(result, 0x944) = 0.0;
     v11 = 1;
   }
   FIELD_U32(result, 0x8B0)[122] = v11;
-  FIELD_U32(result, 0x940).c = v17;
-  FIELD_U32(result, 0x894) = &FIELD_U32(owner, 0x0)._;
-  FIELD_U32(result, 0x89C) = &FIELD_U32(owner, 0x0)._.position;
-  FIELD_U32(result, 0x8A0) = &FIELD_U32(owner, 0x0)._.field_248;
-  FIELD_U32(result, 0x8A4) = (unsigned __int8 *)&FIELD_U32(owner, 0x0)._.field_56;
-  FIELD_U32(result, 0x8A8) = (unsigned __int8 *)&FIELD_U32(owner, 0x0)._.field_57;
-  FIELD_U32(result, 0x8AC) = &FIELD_U32(owner, 0x0)._.playerId;
+  FIELD_F32(result, 0x948) = v17;
+  FIELD_U32(result, 0x894) = &FIELD_U32(owner, 0x0);
+  FIELD_U32(result, 0x89C) = &FIELD_U32(owner, 0x6C);
+  FIELD_U32(result, 0x8A0) = &FIELD_U32(owner, 0x248);
+  FIELD_U32(result, 0x8A4) = (unsigned __int8 *)&FIELD_U8(owner, 0x56);
+  FIELD_U32(result, 0x8A8) = (unsigned __int8 *)&FIELD_U8(owner, 0x57);
+  FIELD_U32(result, 0x8AC) = &FIELD_U8(owner, 0x54);
   FIELD_U32(result, 0x8B0)[113] = 1;
 }

@@ -10,7 +10,7 @@
 
 float __fastcall sub_600D20E8(CollisionActor *a1)
 {
-  FIELD_U32(a1, 0x0).rotation.z += dword_60AF1EC8[(int)a1[1]._.aCollider.createNode.next];
+  FIELD_U32(a1, 0xA4) += dword_60AF1EC8[(int)a1[1]._.aCollider.createNode.next];
   CollisionActor__handleGravity(a1);
   return CollisionActor__handleSpeed(a1);
 }

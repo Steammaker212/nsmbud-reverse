@@ -14,7 +14,7 @@
 float __fastcall BrosBase__executeState_DieFumi(CollisionActor *a1)
 {
   j_ModelWrapper_updateAnims(a1[1]._.aCollider.node3.prev);
-  FIELD_U32(a1, 0x0).rotation.x += 0x8000000;
+  FIELD_U32(a1, 0x9C) += 0x8000000;
   CollisionActor__handleGravity(a1);
   return CollisionActor__handleSpeed(a1);
 }

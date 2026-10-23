@@ -17,7 +17,7 @@ StateActor *__fastcall Actor_koinmakiManager_build(ActorBuildInfo *a1)
 
   v2 = (StateActor *)operator_new(0x18E0u);
   StateActor_ctor(v2, a1);
-  FIELD_U32(v2, 0x0)._._.vtable = (int)off_60C22374;
+  FIELD_U32(v2, 0x0) = (int)off_60C22374;
   p_y = (char *)&v2[1]._._.maxSpeed.y;
   memset(&v2[1], 0, 264);
   for ( i = 0; i != 120; i += 8 )

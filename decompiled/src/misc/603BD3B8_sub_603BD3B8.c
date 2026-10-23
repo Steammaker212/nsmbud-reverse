@@ -25,7 +25,7 @@ int __fastcall sub_603BD3B8(_DWORD *a1)
   v5 = ModelWrapper_ctor(v4, Model2, 1, 0, 0, 0, 0);
   ModelWrapper_setup(v5, (int)Resource, 0, 0);
   a1[1706] = v4;
-  v6 = (int)*FIELD_U32(v4, 0x8).animations;
+  v6 = (int)*FIELD_U32(v4, 0xC);
   v9[0] = &sead__SafeStringBase__vtable;
   v9[1] = "walk";
   SkeletalAnim_play(v6, (int)Resource, (int)v9);

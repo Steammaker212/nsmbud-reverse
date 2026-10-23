@@ -39,15 +39,15 @@ int __fastcall GiantWiggler_onCreate_helper_2559BC(Enemy *a1)
   v25 = a1[1]._._._._.field_2C;
   childCount = a1[1]._._._._.childCount;
   next = a1[1]._._._._.field_20.next;
-  y = FIELD_U32(a1, 0x0)._._.position.y;
-  x = FIELD_U32(a1, 0x0)._._.position.x;
+  y = FIELD_F32(a1, 0x70);
+  x = FIELD_F32(a1, 0x6C);
   *(_WORD *)&v20.field_0 = 0;
   a3.x = x;
   positionOffset.x = x;
   a3.y = y + 32.0;
   positionOffset.y = y + -32.0;
-  v20.field_2 = FIELD_U32(a1, 0x0)._._.field_56;
-  v20.field_3 = FIELD_U32(a1, 0x0)._._.field_57;
+  v20.field_2 = FIELD_U8(a1, 0x56);
+  v20.field_3 = FIELD_U8(a1, 0x57);
   v20.field_4 = 0;
   v20.field_8 = 0;
   v5 = TileCheck_ctor(&v19, &v20);
@@ -60,12 +60,12 @@ int __fastcall GiantWiggler_onCreate_helper_2559BC(Enemy *a1)
     v6 = v18.field_8;
   HIWORD(v8) = 16928;
   if ( !v7 )
-    FIELD_U32(a1, 0x0)._._.position.y = v6;
+    FIELD_F32(a1, 0x70) = v6;
   v9 = &a1[1]._._._.aCollider.field_4C;
   do
   {
-    v10 = FIELD_U32(a1, 0x0)._._.position.y;
-    v9[8 * v2] = LODWORD(FIELD_U32(a1, 0x0)._._.position.x);
+    v10 = FIELD_F32(a1, 0x70);
+    v9[8 * v2] = LODWORD(FIELD_F32(a1, 0x6C));
     v11 = (float *)&v9[8 * v2];
     v11[1] = v10;
     v12 = childCount;
@@ -74,13 +74,13 @@ int __fastcall GiantWiggler_onCreate_helper_2559BC(Enemy *a1)
     *((_DWORD *)v11 + 3) = v12;
     *((_DWORD *)v11 + 4) = v13;
     *((_DWORD *)v11 + 5) = v8;
-    *((_DWORD *)v11 + 7) = sub_6014C4A4((int)FIELD_U32(a1, 0x0)._.collisionMgr);
+    *((_DWORD *)v11 + 7) = sub_6014C4A4((int)FIELD_U8(a1, 0x288));
     v14 = v11 + 2;
-    v15 = sub_6014C4A4((int)FIELD_U32(a1, 0x0)._.collisionMgr);
-    if ( sub_6014C57C((int)FIELD_U32(a1, 0x0)._.collisionMgr, v15) )
+    v15 = sub_6014C4A4((int)FIELD_U8(a1, 0x288));
+    if ( sub_6014C57C((int)FIELD_U8(a1, 0x288), v15) )
     {
-      direction = FIELD_U32(a1, 0x0)._._.direction;
-      result = sub_6014C540((int)FIELD_U32(a1, 0x0)._.collisionMgr);
+      direction = FIELD_U32(a1, 0x50);
+      result = sub_6014C540((int)FIELD_U8(a1, 0x288));
       if ( direction )
       {
         v7 = result == 0;

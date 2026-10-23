@@ -32,7 +32,7 @@ int __fastcall lift_zen_chika_pori_ref(int a1, _DWORD *a2)
   v9 = ModelWrapper_ctor(v8, Model2, 0, 0, 1, 0, 0);
   ModelWrapper_setup(v9, ResArchiveById, 0, 0);
   FIELD_U32(a1, 6624) = v8;
-  v10 = (int)*FIELD_U32(v8, 0x18).animations;
+  v10 = (int)*FIELD_U32(v8, 0x1C);
   v12[0] = &sead__SafeStringBase__vtable;
   v12[1] = "lift_zen_chika_pori";
   sub_60446088(v10, (int)ResArchiveById, v12);

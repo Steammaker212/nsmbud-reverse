@@ -23,7 +23,7 @@ Actor *__fastcall Actor__dtor(Actor *this)
   {
     do
     {
-      next = FIELD_U32(this, 0x20).next;
+      next = FIELD_U32(this, 0x24);
       v4 = next == 0;
       if ( next )
       {

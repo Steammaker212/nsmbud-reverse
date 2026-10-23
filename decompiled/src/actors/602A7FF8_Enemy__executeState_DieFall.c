@@ -39,7 +39,7 @@ float __fastcall Enemy__executeState_DieFall(CollisionActor *a1)
     _cxa_guard_release(&dword_60C907FC[1]);
   }
   next = (int)a1[1]._.aCollider.createNode.next;
-  v4 = FIELD_U32(a1, 0x0).direction == next;
+  v4 = FIELD_U32(a1, 0x50) == next;
   v5 = (char *)&unk_60C907F0 + 4 * next;
   v6 = -201326592;
   if ( v4 )
@@ -49,8 +49,8 @@ float __fastcall Enemy__executeState_DieFall(CollisionActor *a1)
     v7 = -v7;
   if ( FIELD_U8(a1, 0x17A6) )
     v6 = (int)(float)((float)v6 * 0.5);
-  FIELD_U32(a1, 0x0).rotation.x += v6;
-  FIELD_U32(a1, 0x0).rotation.y += v7;
+  FIELD_U32(a1, 0x9C) += v6;
+  FIELD_U32(a1, 0xA0) += v7;
   CollisionActor__handleGravity(a1);
   return CollisionActor__handleSpeed(a1);
 }

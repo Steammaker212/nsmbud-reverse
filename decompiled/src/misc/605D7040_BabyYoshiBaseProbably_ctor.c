@@ -11,10 +11,10 @@
 CollisionActor *__fastcall BabyYoshiBaseProbably_ctor(CollisionActor *a1, ActorBuildInfo *a2, int a3)
 {
   CollisionActor__ctor(a1, a2);
-  FIELD_U32(a1, 0x0)._.vtable = (int)off_60C0B1F8;
+  FIELD_U32(a1, 0x0) = (int)off_60C0B1F8;
   sub_605EA200(&a1[1], a3, 0);
   a1[1]._.aCollider._.vtable = a3;
-  a1[1]._.aCollider._.containingHeap = ((unsigned int)FIELD_U32(a1, 0x0)._.settings1 >> 20) & 0xF;
+  a1[1]._.aCollider._.containingHeap = ((unsigned int)FIELD_U32(a1, 0x14) >> 20) & 0xF;
   BYTE1(a1[1]._.aCollider.activeNode.owner) = 0;
   BYTE1(a1[1]._.aCollider._.field_C) = 0;
   BYTE1(a1[1]._.aCollider._.field_8) = 0;
@@ -130,7 +130,7 @@ CollisionActor *__fastcall BabyYoshiBaseProbably_ctor(CollisionActor *a1, ActorB
   *(_DWORD *)&a1[1].collisionMgr[200] = 0;
   *(_DWORD *)&a1[1].collisionMgr[196] = 0;
   memset(&a1[1].collisionMgr[208], 0, 88);
-  BabyYoshiBaseProbably_ctor_helper(&a1[1].collisionMgr[296], FIELD_U32(a1, 0x0)._.id);
+  BabyYoshiBaseProbably_ctor_helper(&a1[1].collisionMgr[296], FIELD_U32(a1, 0x8));
   *(_DWORD *)&a1[1].collisionMgr[348] = 0;
   a1[1].collisionMgr[352] = 0;
   *(_DWORD *)&a1[1].collisionMgr[356] = 0;
@@ -184,8 +184,8 @@ CollisionActor *__fastcall BabyYoshiBaseProbably_ctor(CollisionActor *a1, ActorB
   *(_DWORD *)&a1[1].collisionMgr[220] = 0;
   *(_DWORD *)&a1[1].collisionMgr[216] = 0;
   sub_605E3BA4(a1);
-  FIELD_U32(a1, 0x0).type = 4;
+  FIELD_U8(a1, 0x215) = 4;
   a1[1].collisionMgr[432] = 0;
-  (*(void (__fastcall **)(CollisionActor *, int))(FIELD_U32(a1, 0x0)._.vtable + 68))(a1, HIWORD(FIELD_U32(a1, 0x0)._.settings1) & 0xF);
+  (*(void (__fastcall **)(CollisionActor *, int))(FIELD_U32(a1, 0x0) + 68))(a1, HIWORD(FIELD_U32(a1, 0x14)) & 0xF);
   return a1;
 }

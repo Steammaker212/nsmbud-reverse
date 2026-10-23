@@ -32,21 +32,21 @@ unsigned int __fastcall MovingSoundActor_setPosition(MovingSoundActor *a1, Vec2 
   v4 = &FIELD_U32(a1, 0x12C);
   v5 = dword_60CC6B68;
   ((void (__fastcall *)(int, float *, int *, int, _DWORD))loc_6080E034)(
-    FIELD_U32(a1, 0x0).field_84,
+    FIELD_U32(a1, 0x84),
     &FIELD_F32(a1, 0x8C),
     &FIELD_U32(a1, 0x12C),
     7,
     0);
   if ( nn__atk__SoundActor__GetPlayingSoundCount_const((int)a1, 0) > 0
-    || (((void (__fastcall *)(int, float *, int *, int, _DWORD))loc_6080E034)(FIELD_U32(a1, 0x0).field_84, v3, v4, 7, 0),
+    || (((void (__fastcall *)(int, float *, int *, int, _DWORD))loc_6080E034)(FIELD_U32(a1, 0x84), v3, v4, 7, 0),
         nn__atk__SoundActor__GetPlayingSoundCount_const((int)a1, 1) >= 1)
-    || (((void (__fastcall *)(int, float *, int *, int, _DWORD))loc_6080E034)(FIELD_U32(a1, 0x0).field_84, v3, v4, 7, 0),
+    || (((void (__fastcall *)(int, float *, int *, int, _DWORD))loc_6080E034)(FIELD_U32(a1, 0x84), v3, v4, 7, 0),
         nn__atk__SoundActor__GetPlayingSoundCount_const((int)a1, 2) > 0)
-    || (((void (__fastcall *)(int, float *, int *, int, _DWORD))loc_6080E034)(FIELD_U32(a1, 0x0).field_84, v3, v4, 7, 0),
+    || (((void (__fastcall *)(int, float *, int *, int, _DWORD))loc_6080E034)(FIELD_U32(a1, 0x84), v3, v4, 7, 0),
         result = nn__atk__SoundActor__GetPlayingSoundCount_const((int)a1, 3),
         (int)result > 0) )
   {
-    result = *(_DWORD *)&FIELD_U32(a1, 0x0)._.nn_atk_SoundActor_data[120];
+    result = *(_DWORD *)&FIELD_U8(a1, 0x0)[120];
     if ( result )
     {
       p_handle = &FIELD_U32(a1, 0x9C)[0].handle;
@@ -54,7 +54,7 @@ unsigned int __fastcall MovingSoundActor_setPosition(MovingSoundActor *a1, Vec2 
       while ( !*p_handle )
       {
 LABEL_30:
-        result = *(_DWORD *)&FIELD_U32(a1, 0x0)._.nn_atk_SoundActor_data[120];
+        result = *(_DWORD *)&FIELD_U8(a1, 0x0)[120];
         ++v8;
         p_handle += 6;
         if ( v8 >= result )

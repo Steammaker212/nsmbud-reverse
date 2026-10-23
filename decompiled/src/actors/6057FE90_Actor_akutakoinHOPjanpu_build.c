@@ -15,6 +15,6 @@ MultiStateActor *__fastcall Actor_akutakoinHOPjanpu_build(ActorBuildInfo *a1)
 
   v2 = (MultiStateActor *)operator_new(0x17E8u);
   result = sub_6057D92C(v2, a1);
-  FIELD_U32(result, 0x0)._._.vtable = (int)off_60C05594;
+  FIELD_U32(result, 0x0) = (int)off_60C05594;
   return result;
 }

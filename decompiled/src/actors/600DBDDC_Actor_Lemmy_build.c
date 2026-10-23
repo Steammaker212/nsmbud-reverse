@@ -15,7 +15,7 @@ BossBase *__fastcall Actor_Lemmy_build(ActorBuildInfo *a1)
 
   v2 = (BossBase *)operator_new(0x1FD0u);
   result = KoopalingBase__ctor(v2, a1);
-  FIELD_U32(result, 0x0)._._._._.vtable = (int)off_60BCC370;
+  FIELD_U32(result, 0x0) = (int)off_60BCC370;
   *(_DWORD *)&result[1]._._._.collisionMgr[380] = 0;
   *(_DWORD *)&result[1]._._._.collisionMgr[384] = 0;
   *(_DWORD *)&result[1]._._._.collisionMgr[388] = 1065353216;

@@ -32,12 +32,12 @@ int __fastcall sub_606299C8(int a1, ActiveCollider *a2, ActiveCollider *a3)
         v11 = 0,
         v10 == (*((int (**)(void))stru_60CB0EF0._._.vtable + 2))()) )
   {
-    v12 = FIELD_U32(a3, 0x74).field_14;
+    v12 = FIELD_U32(a3, 0x88);
     v11 = 0;
     if ( v12 <= 0xF && ((1 << v12) & 0x8005) != 0 )
     {
       owner = FIELD_U32(a3, 0x40);
-      if ( FIELD_U32(owner, 0x78).y < 0.0 )
+      if ( FIELD_F32(owner, 0x7C) < 0.0 )
       {
         playerId = FIELD_U8(owner, 0x54);
         if ( playerId <= 3 )
@@ -53,7 +53,7 @@ int __fastcall sub_606299C8(int a1, ActiveCollider *a2, ActiveCollider *a3)
               dword_60C7B378 = (int)&off_60BC00BC;
               _cxa_guard_release(&dword_60C7B37C);
             }
-            if ( (*(int (__fastcall **)(StageActor *, int *))FIELD_U32(owner, 0x0).vtable)(owner, &dword_60C7B378) == 1 )
+            if ( (*(int (__fastcall **)(StageActor *, int *))FIELD_U32(owner, 0x0))(owner, &dword_60C7B378) == 1 )
               sub_607702EC(owner);
           }
           v11 = 1;

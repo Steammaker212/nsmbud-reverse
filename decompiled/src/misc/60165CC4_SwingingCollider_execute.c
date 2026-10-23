@@ -17,7 +17,7 @@ int __fastcall SwingingCollider_execute(ColliderBase *a1)
 
   sub_601603E8(a1);
   sub_601656B0((int)a1);
-  (*(void (__fastcall **)(ColliderBase *))(FIELD_U32(a1, 0x0).vtable + 52))(a1);
+  (*(void (__fastcall **)(ColliderBase *))(FIELD_U32(a1, 0x0) + 52))(a1);
   SwingingCollider_execute_helper(a1);
   (*(void (__fastcall **)(ColliderBase *))(a1[1]._.vtable + 16))(a1 + 1);
   v2 = a1[1]._.field_C;

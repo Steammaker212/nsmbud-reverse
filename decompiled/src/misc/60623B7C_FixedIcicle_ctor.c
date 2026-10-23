@@ -14,7 +14,7 @@ FixedIcicle *__fastcall FixedIcicle_ctor(ActorBuildInfo *buildInfo)
 
   this = (FixedIcicle *)operator_new(0x19D8u);
   Enemy__ctor(&FIELD_U32(this, 0x0), buildInfo);
-  FIELD_U32(this, 0x0)._._._._.vtable = (int)FixedIcicle_vtable;
+  FIELD_U32(this, 0x0) = (int)FixedIcicle_vtable;
   FIELD_U32(this, 0x189C) = 0;
   ActiveCollider_ctor(&FIELD_U32(this, 0x18A4));
   FIELD_U32(this, 0x19D4) = (int)off_60C11CA4;

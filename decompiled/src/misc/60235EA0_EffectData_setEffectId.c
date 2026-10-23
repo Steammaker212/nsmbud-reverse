@@ -24,12 +24,12 @@ signed int __fastcall EffectData_setEffectId(EffectData *this, int effectId)
     || (v7 = 0, !FIELD_U8(v6, 8)) )
   {
     v7 = 0;
-    *(_QWORD *)FIELD_U32(this, 0x0).cells = 1065353216;
-    *(_QWORD *)&FIELD_U32(this, 0x0).cells[2] = 0;
-    *(_QWORD *)&FIELD_U32(this, 0x0).cells[4] = 0x3F80000000000000LL;
-    *(_QWORD *)&FIELD_U32(this, 0x0).cells[6] = 0;
-    *(_QWORD *)&FIELD_U32(this, 0x0).cells[8] = 0;
-    *(_QWORD *)&FIELD_U32(this, 0x0).cells[10] = 1065353216;
+    *(_QWORD *)FIELD_F32(this, 0x0) = 1065353216;
+    *(_QWORD *)&FIELD_F32(this, 0x0)[2] = 0;
+    *(_QWORD *)&FIELD_F32(this, 0x0)[4] = 0x3F80000000000000LL;
+    *(_QWORD *)&FIELD_F32(this, 0x0)[6] = 0;
+    *(_QWORD *)&FIELD_F32(this, 0x0)[8] = 0;
+    *(_QWORD *)&FIELD_F32(this, 0x0)[10] = 1065353216;
     FIELD_U8(this, 0x30) = 0;
     FIELD_U32(this, 0x34) = 0;
     FIELD_U32(this, 0x38) = -1;

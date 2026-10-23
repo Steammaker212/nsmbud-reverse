@@ -20,9 +20,9 @@ Actor *__fastcall Actor_condition_Flag_with_rotate_control_build(ActorBuildInfo 
     FIELD_U32(v2, 0x14) & 0xFFFFF000,
     ((unsigned int)FIELD_U32(v2, 0x14) >> 8) & 0xF | FIELD_U32(v2, 0x18) & 0xFF0000,
     FIELD_U8(v2, 0x1C),
-    FIELD_U32(a1, 0x10).x,
-    FIELD_U32(a1, 0x10).y,
-    FIELD_U32(a1, 0x10).z,
+    FIELD_F32(a1, 0x10),
+    FIELD_F32(a1, 0x14),
+    FIELD_F32(a1, 0x18),
     FIELD_U8(a1, 0x21),
     0);
   FIELD_U8(v2, 0x13) = 1;

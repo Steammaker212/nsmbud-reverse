@@ -21,11 +21,11 @@ int __fastcall sub_6013D138(CollisionActor *a1)
   ((void (__fastcall *)(int *, int *, Vec3 *, _DWORD, float))checkLiquidCollisions)(
     &v4,
     &v5,
-    &FIELD_U32(a1, 0x0).position,
-    (unsigned __int8)FIELD_U32(a1, 0x0).field_56,
+    &FIELD_U32(a1, 0x6C),
+    (unsigned __int8)FIELD_U8(a1, 0x56),
     v2);
   result = v4;
   if ( v4 == 1 )
-    return (*(int (__fastcall **)(CollisionActor *, int *))(FIELD_U32(a1, 0x0)._.vtable + 192))(a1, &dword_60C87C40);
+    return (*(int (__fastcall **)(CollisionActor *, int *))(FIELD_U32(a1, 0x0) + 192))(a1, &dword_60C87C40);
   return result;
 }

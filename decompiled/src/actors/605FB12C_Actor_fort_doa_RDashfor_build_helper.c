@@ -13,7 +13,7 @@ Enemy *__fastcall Actor_fort_doa_RDashfor_build_helper(Enemy *a1, ActorBuildInfo
   Enemy *result; // r0
 
   result = sub_605F7FA4(a1, a2);
-  FIELD_U32(result, 0x0)._._._.vtable = (int)off_60C0DF98;
+  FIELD_U32(result, 0x0) = (int)off_60C0DF98;
   *(_DWORD *)&result[1]._._._._.field_10 = 1;
   result[1]._._._._.field_20.previous = (sead_ListNode *)93;
   return result;

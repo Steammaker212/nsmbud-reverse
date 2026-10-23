@@ -13,9 +13,9 @@ signed int __fastcall sub_6034CBFC(Enemy *a1)
   StateBase *CurrentState; // r0
   int v3; // r5
 
-  CurrentState = (StateBase *)FIELD_U32(a1, 0x0).field_17D4;
+  CurrentState = (StateBase *)FIELD_U32(a1, 0x17D4);
   if ( !CurrentState )
-    CurrentState = StateMgr__getCurrentState(&FIELD_U32(a1, 0x0).states.manager);
+    CurrentState = StateMgr__getCurrentState(&FIELD_U32(a1, 0x17C4));
   v3 = (*((int (__fastcall **)(StateBase *))FIELD_U32(CurrentState, 0x0) + 2))(CurrentState);
   if ( v3 == (*(int (**)(void))(dword_60C94C80 + 8))() )
     ((void (__fastcall *)(Enemy *))loc_6034AD68)(a1);

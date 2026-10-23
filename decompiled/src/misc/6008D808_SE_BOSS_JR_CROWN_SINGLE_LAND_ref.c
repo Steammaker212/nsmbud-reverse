@@ -19,25 +19,25 @@ int __fastcall SE_BOSS_JR_CROWN_SINGLE_LAND_ref(CollisionActor *a1)
   CollisionActor__handleGravity(a1);
   v2 = CollisionActor__handleSpeed(a1);
   sub_60095344(a1, v2);
-  x = FIELD_U32(a1, 0x0).position.x;
+  x = FIELD_F32(a1, 0x6C);
   v4 = FIELD_F32(dword_60CC6484, 208) + -80.0;
   if ( x >= v4 )
   {
     v5 = FIELD_F32(dword_60CC6484, 216) + 80.0;
     if ( x > v5 )
-      FIELD_U32(a1, 0x0).position.x = v5;
+      FIELD_F32(a1, 0x6C) = v5;
   }
   else
   {
-    FIELD_U32(a1, 0x0).position.x = v4;
+    FIELD_F32(a1, 0x6C) = v4;
   }
   CollisionMgr_process(FIELD_U8(a1, 0x288));
   result = (unsigned __int8)FIELD_U8(a1, 0x288)[2224];
   if ( (result & 1) != 0 )
   {
-    if ( FIELD_U32(a1, 0x0).speed.y < -1.0 )
+    if ( FIELD_F32(a1, 0x7C) < -1.0 )
       sub_60813430(&a1[1].collisionMgr[2764], "SE_BOSS_JR_CROWN_SINGLE_LAND", 0);
-    FIELD_U32(a1, 0x0).speed.y = 0.0;
+    FIELD_F32(a1, 0x7C) = 0.0;
     return 0;
   }
   return result;

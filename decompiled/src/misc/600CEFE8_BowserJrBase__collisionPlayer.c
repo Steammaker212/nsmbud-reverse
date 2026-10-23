@@ -25,7 +25,7 @@ int __fastcall BowserJrBase__collisionPlayer(BossBase *a1, ActiveCollider *a2, A
     _cxa_guard_release(&dword_60C80048);
   }
   if ( owner )
-    (*(void (__fastcall **)(StageActor *, int *))FIELD_U32(owner, 0x0).vtable)(owner, &dword_60C80044);
+    (*(void (__fastcall **)(StageActor *, int *))FIELD_U32(owner, 0x0))(owner, &dword_60C80044);
   result = FIELD_U32(a1, 0x18A4);
   if ( result <= 0 )
   {
@@ -36,7 +36,7 @@ int __fastcall BowserJrBase__collisionPlayer(BossBase *a1, ActiveCollider *a2, A
       if ( result != 3 )
         v9 = result == 1;
       if ( v9 )
-        return (*(int (__fastcall **)(BossBase *, StageActor *))(FIELD_U32(a1, 0x0)._._._._.vtable + 804))(a1, FIELD_U32(a3, 0x40));
+        return (*(int (__fastcall **)(BossBase *, StageActor *))(FIELD_U32(a1, 0x0) + 804))(a1, FIELD_U32(a3, 0x40));
     }
     else
     {

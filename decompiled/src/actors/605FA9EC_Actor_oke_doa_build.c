@@ -15,7 +15,7 @@ Enemy *__fastcall Actor_oke_doa_build(ActorBuildInfo *a1)
 
   v2 = (Enemy *)operator_new(0x18C8u);
   result = sub_605F7FA4(v2, a1);
-  FIELD_U32(result, 0x0)._._._.vtable = (int)off_60C0DC80;
+  FIELD_U32(result, 0x0) = (int)off_60C0DC80;
   *(_DWORD *)&result[1]._._._._.field_10 = 0;
   result[1]._._._._.field_20.previous = (sead_ListNode *)30;
   return result;

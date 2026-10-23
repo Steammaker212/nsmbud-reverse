@@ -10,12 +10,12 @@
 
 void __fastcall Kanibo__beginState_Jump(Enemy *result)
 {
-  FIELD_U32(result, 0x0)._._.speed.x = 0.0;
-  FIELD_U32(result, 0x0)._._.speed.y = 3.45;
-  FIELD_U32(result, 0x0)._._.speed.z = 0.0;
-  FIELD_U32(result, 0x0)._._.field_64 = -0.1875;
-  result[1]._._._._.field_20.previous = (sead_ListNode *)LODWORD(FIELD_U32(result, 0x0)._._.position.x);
-  result[1]._._._._.field_20.next = (sead_ListNode *)LODWORD(FIELD_U32(result, 0x0)._._.position.y);
-  result[1]._._._._.childCount = LODWORD(FIELD_U32(result, 0x0)._._.position.z);
+  FIELD_F32(result, 0x78) = 0.0;
+  FIELD_F32(result, 0x7C) = 3.45;
+  FIELD_F32(result, 0x80) = 0.0;
+  FIELD_F32(result, 0x64) = -0.1875;
+  result[1]._._._._.field_20.previous = (sead_ListNode *)LODWORD(FIELD_F32(result, 0x6C));
+  result[1]._._._._.field_20.next = (sead_ListNode *)LODWORD(FIELD_F32(result, 0x70));
+  result[1]._._._._.childCount = LODWORD(FIELD_F32(result, 0x74));
   result[1]._._._._.field_3C = 0;
 }

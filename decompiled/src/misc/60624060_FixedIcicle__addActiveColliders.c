@@ -17,7 +17,7 @@ ActiveColliderMgr *__fastcall FixedIcicle__addActiveColliders(FixedIcicle *a1)
   ActiveColliderMgr *v3; // r5
   ActiveColliderMgr *result; // r0
 
-  StageActor__addActiveColliders(&FIELD_U32(a1, 0x0)._._._);
+  StageActor__addActiveColliders(&FIELD_U32(a1, 0x0));
   p_aCollider2 = &FIELD_U32(a1, 0x18A4);
   v3 = ActiveColliderMgr_instance;
   result = (ActiveColliderMgr *)ActiveColliderMgr_isInActiveList(ActiveColliderMgr_instance, p_aCollider2);

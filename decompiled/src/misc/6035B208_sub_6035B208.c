@@ -24,7 +24,7 @@ int __fastcall sub_6035B208(ActiveCollider *a1, ActiveCollider *a2)
     goto LABEL_8;
   if ( owner[11].aCollider.field_CC )
     return Enemy__collisionCallback(a1, a2);
-  result = (*(int (__fastcall **)(StageActor *, ActiveCollider *, ActiveCollider *))(FIELD_U32(owner, 0x0).vtable + 256))(
+  result = (*(int (__fastcall **)(StageActor *, ActiveCollider *, ActiveCollider *))(FIELD_U32(owner, 0x0) + 256))(
              owner,
              a1,
              a2);

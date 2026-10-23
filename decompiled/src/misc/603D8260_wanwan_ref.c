@@ -35,7 +35,7 @@ int __fastcall wanwan_ref(_DWORD *a1)
   ModelWrapper_setup(v5, (int)v2, 0, 0);
   a1[1575] = v4;
   a1 += 1575;
-  v6 = (int)*FIELD_U32(v4, 0x8).animations;
+  v6 = (int)*FIELD_U32(v4, 0xC);
   v13 = &sead__SafeStringBase__vtable;
   v14 = "wanwan";
   v7 = LoadResource(ResourceMgrRelated_instance, &v13);

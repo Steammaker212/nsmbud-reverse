@@ -18,7 +18,7 @@ MultiStateActor *__fastcall sub_606BB010(MultiStateActor *a1, ActorBuildInfo *a2
   int v8; // r0
 
   MultiStateActor__ctor(a1, a2);
-  FIELD_U32(a1, 0x0)._._.vtable = (int)off_60C1B488;
+  FIELD_U32(a1, 0x0) = (int)off_60C1B488;
   SolidOnTopCollider_ctor((SolidOnTopCollider *)&a1[1]);
   a1[1]._._._.vtable = (int)SolidOnTopColliderWrapper_vtable;
   memset(&a1[1]._._.aCollider.field_B4, 0, 48);

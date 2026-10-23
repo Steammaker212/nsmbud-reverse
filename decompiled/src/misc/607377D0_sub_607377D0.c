@@ -33,7 +33,7 @@ int __fastcall sub_607377D0(_DWORD *a1)
   ModelWrapper_setup(v6, v3, 0, 0);
   a1[1847] = v5;
   a1 += 1847;
-  v7 = (int)*FIELD_U32(v5, 0x8).animations;
+  v7 = (int)*FIELD_U32(v5, 0xC);
   a2.vtable = &sead__SafeStringBase__vtable;
   a2.cstr = "fly_normal";
   SkeletalAnim_play(v7, (int)v3, (const char **)&a2);

@@ -18,9 +18,9 @@ int __fastcall SE_BOSS_JR_CROWN_SINGLE_LAND_ref_8F890(CollisionActor *a1)
   result = (unsigned __int8)FIELD_U8(a1, 0x288)[2224];
   if ( (result & 1) != 0 )
   {
-    if ( FIELD_U32(a1, 0x0).speed.y < FIELD_U32(a1, 0x0).field_64 )
+    if ( FIELD_F32(a1, 0x7C) < FIELD_F32(a1, 0x64) )
       sub_60813430(&a1[1].collisionMgr[2764], "SE_BOSS_JR_CROWN_SINGLE_LAND", 0);
-    FIELD_U32(a1, 0x0).speed.y = 0.0;
+    FIELD_F32(a1, 0x7C) = 0.0;
     return 0;
   }
   return result;

@@ -44,11 +44,11 @@ int __fastcall SE_BOSS_MORTON_STAMP_ref(CollisionActor *a1)
     v14.z = 4500.0;
     EffectData_create(321, &v14, 0, 0);
   }
-  (*(void (__fastcall **)(CollisionActor *))(FIELD_U32(a1, 0x0)._.vtable + 1320))(a1);
+  (*(void (__fastcall **)(CollisionActor *))(FIELD_U32(a1, 0x0) + 1320))(a1);
   CollisionActor__handleGravity(a1);
   CollisionActor__handleSpeed(a1);
   if ( (FIELD_U8(a1, 0x288)[2224] & 1) != 0 )
-    FIELD_U32(a1, 0x0).speed.y = 0.0;
+    FIELD_F32(a1, 0x7C) = 0.0;
   v8 = *(_DWORD **)(*(_DWORD *)v2 + 12);
   v9 = *(_DWORD *)(*(_DWORD *)v2 + 68);
   if ( *(_DWORD *)(*(_DWORD *)v2 + 8) > v9 )
@@ -66,7 +66,7 @@ int __fastcall SE_BOSS_MORTON_STAMP_ref(CollisionActor *a1)
   if ( (result & 0x20) != 0 )
   {
     *(_DWORD *)(*(_DWORD *)&a1[1].collisionMgr[396] + 48) = 0;
-    return (*(int (__fastcall **)(CollisionActor *, void *))(FIELD_U32(a1, 0x0)._.vtable + 192))(a1, &unk_60C85504);
+    return (*(int (__fastcall **)(CollisionActor *, void *))(FIELD_U32(a1, 0x0) + 192))(a1, &unk_60C85504);
   }
   return result;
 }

@@ -89,7 +89,7 @@ signed int __fastcall sub_6002D974(int a1)
         dword_60C7FC00 = (int)&off_60BC04AC;
         _cxa_guard_release(&dword_60C7FC04);
       }
-      if ( v14 && (*(int (__fastcall **)(StateActor *, int *))FIELD_U32(v14, 0x0)._._.vtable)(v14, &dword_60C7FC00) == 1 )
+      if ( v14 && (*(int (__fastcall **)(StateActor *, int *))FIELD_U32(v14, 0x0))(v14, &dword_60C7FC00) == 1 )
         StageActor__delete(v14, 1);
     }
   }

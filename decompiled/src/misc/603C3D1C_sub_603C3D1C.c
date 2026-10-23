@@ -160,7 +160,7 @@ int __fastcall sub_603C3D1C(StageActor *a1)
     {
       StateMgr__execute((StateMgr *)&a1[9].aCollider.field_64);
       v22 = (StageActor *)((char *)a1 + 26976);
-      (*(void (__fastcall **)(StageActor *))(FIELD_U32(a1, 0x0).vtable + 628))(a1);
+      (*(void (__fastcall **)(StageActor *))(FIELD_U32(a1, 0x0) + 628))(a1);
       v23 = (StageActor *)((char *)a1 + 26980);
       v24 = ((unsigned __int16)a1[22].aCollider.info.field_1C - byte_60B00E8C[16 * LODWORD(a1[41].effectOffset.y) + 12])
           & 0x3FF;
@@ -174,22 +174,22 @@ int __fastcall sub_603C3D1C(StageActor *a1)
         do
         {
           v29 = 0;
-          vtable = FIELD_U32(v22, 0x0).vtable;
+          vtable = FIELD_U32(v22, 0x0);
           if ( (unsigned int)v28 < 0x20 )
             v29 = v28;
           ++v28;
-          v31 = &FIELD_U32(a1, 0x0).vtable + 7 * v29;
+          v31 = &FIELD_U32(a1, 0x0) + 7 * v29;
           v31[3741] = v26;
           v31[3742] = v27;
           v31[3743] = vtable;
-          v24 = ((_WORD)v24 - byte_60B00E8C[16 * FIELD_U32(v23, 0x0).vtable + 12]) & 0x3FF;
+          v24 = ((_WORD)v24 - byte_60B00E8C[16 * FIELD_U32(v23, 0x0) + 12]) & 0x3FF;
           v32 = (char *)a1 + 8 * v24;
           v27 = *((_DWORD *)v32 + 1578);
           v26 = *((_DWORD *)v32 + 1577);
         }
         while ( v28 < (unsigned __int8)*v67 );
       }
-      v33 = FIELD_U32(v22, 0x0).vtable;
+      v33 = FIELD_U32(v22, 0x0);
       a1[24].aCollider.field_D8 = v26;
       a1[24].aCollider.field_DC = v27;
       a1[24].aCollider.field_E0 = v33;
@@ -200,9 +200,9 @@ int __fastcall sub_603C3D1C(StageActor *a1)
         --LOBYTE(a1[41].field_260.z);
         sub_603C44FC(a1);
         StateMgr__execute((StateMgr *)&a1[9].aCollider.field_64);
-        (*(void (__fastcall **)(StageActor *))(FIELD_U32(a1, 0x0).vtable + 628))(a1);
-        v34 = FIELD_U32(v23, 0x0).vtable;
-        v35 = ((unsigned __int16)a1[22].aCollider.info.field_1C - byte_60B00E8C[16 * FIELD_U32(v23, 0x0).vtable + 12]) & 0x3FF;
+        (*(void (__fastcall **)(StageActor *))(FIELD_U32(a1, 0x0) + 628))(a1);
+        v34 = FIELD_U32(v23, 0x0);
+        v35 = ((unsigned __int16)a1[22].aCollider.info.field_1C - byte_60B00E8C[16 * FIELD_U32(v23, 0x0) + 12]) & 0x3FF;
         v36 = (char *)a1 + 8 * v35;
         v37 = *((_DWORD *)v36 + 1578);
         v38 = *((_DWORD *)v36 + 1577);
@@ -212,23 +212,23 @@ int __fastcall sub_603C3D1C(StageActor *a1)
           do
           {
             v40 = 0;
-            v41 = FIELD_U32(v22, 0x0).vtable;
+            v41 = FIELD_U32(v22, 0x0);
             if ( (unsigned int)v39 < 0x20 )
               v40 = v39;
             ++v39;
-            v42 = &FIELD_U32(a1, 0x0).vtable + 7 * v40;
+            v42 = &FIELD_U32(a1, 0x0) + 7 * v40;
             v42[3741] = v38;
             v42[3742] = v37;
             v42[3743] = v41;
-            v34 = FIELD_U32(v23, 0x0).vtable;
-            v35 = ((_WORD)v35 - byte_60B00E8C[16 * FIELD_U32(v23, 0x0).vtable + 12]) & 0x3FF;
+            v34 = FIELD_U32(v23, 0x0);
+            v35 = ((_WORD)v35 - byte_60B00E8C[16 * FIELD_U32(v23, 0x0) + 12]) & 0x3FF;
             v43 = (char *)a1 + 8 * v35;
             v37 = *((_DWORD *)v43 + 1578);
             v38 = *((_DWORD *)v43 + 1577);
           }
           while ( v39 < (unsigned __int8)*v67 );
         }
-        v44 = FIELD_U32(v22, 0x0).vtable;
+        v44 = FIELD_U32(v22, 0x0);
         a1[24].aCollider.field_D8 = v38;
         a1[24].aCollider.field_DC = v37;
         a1[24].aCollider.field_E0 = v44;
@@ -305,7 +305,7 @@ int __fastcall sub_603C3D1C(StageActor *a1)
         if ( --HIBYTE(a1[41].field_260.z) == 0 )
           *v59 = 0;
         x = a1[41].field_260.x;
-        FIELD_U32(a1, 0x9C).z += LODWORD(x);
+        FIELD_U32(a1, 0xA4) += LODWORD(x);
         if ( BYTE2(a1[41].field_270) )
         {
           v62 = 0;

@@ -11,7 +11,7 @@
 ColliderBase *__fastcall ColliderBase_ctor(ColliderBase *this)
 {
   sead_IDisposer_ctor(&FIELD_U32(this, 0x0));
-  FIELD_U32(this, 0x0).vtable = (int)ColliderBase_vtable;
+  FIELD_U32(this, 0x0) = (int)ColliderBase_vtable;
   FIELD_U32(this, 0x10)[0].owner = this;
   FIELD_U32(this, 0x10)[0].next = 0;
   FIELD_U32(this, 0x10)[0].prev = 0;

@@ -15,7 +15,7 @@ Enemy *__fastcall Actor_final_bomu_build(ActorBuildInfo *a1)
 
   v2 = (Enemy *)operator_new(0x1BA8u);
   result = BobOmb_ctor(v2, a1);
-  FIELD_U32(result, 0x0)._._._.vtable = (int)&off_60BC6404;
+  FIELD_U32(result, 0x0) = (int)&off_60BC6404;
   result[1]._._.collisionMgr[120] = 0;
   *(_DWORD *)&result[1]._._.collisionMgr[124] = 0;
   *(_DWORD *)&result[1]._._.collisionMgr[128] = 0;

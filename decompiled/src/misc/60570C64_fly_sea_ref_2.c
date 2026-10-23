@@ -38,7 +38,7 @@ int __fastcall fly_sea_ref_2(int a1, int r1_0)
   ModelWrapper_setup(v7, v4, 0, 0);
   FIELD_U32(a1, 7388) = v6;
   v8 = a1 + 7388;
-  v9 = (int)*FIELD_U32(v6, 0x8).animations;
+  v9 = (int)*FIELD_U32(v6, 0xC);
   v18 = &sead__SafeStringBase__vtable;
   v19 = "block_pata";
   v10 = LoadResource(ResourceMgrRelated_instance, &v18);

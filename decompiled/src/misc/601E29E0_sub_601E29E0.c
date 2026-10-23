@@ -61,7 +61,7 @@ _DWORD *__fastcall sub_601E29E0(_DWORD *a1)
   *(_DWORD *)&v5[1]._._.nn_atk_SoundActor_data[4] = 10;
   v5[1]._._.nn_atk_SoundActor_data[8] = 0;
   v5[1]._._.nn_atk_SoundActor_data[9] = 1;
-  *(_DWORD *)FIELD_U32(v5, 0x0)._.nn_atk_SoundActor_data = off_60BD6C84;
+  *(_DWORD *)FIELD_U8(v5, 0x0) = off_60BD6C84;
   a1[4] = v5;
   *(_DWORD *)v5[1]._._.nn_atk_SoundActor_data = 0;
   v6 = (MovingSoundActor *)operator_new(0x140u);
@@ -70,7 +70,7 @@ _DWORD *__fastcall sub_601E29E0(_DWORD *a1)
   *(_DWORD *)&v7[1]._._.nn_atk_SoundActor_data[4] = 10;
   v7[1]._._.nn_atk_SoundActor_data[8] = 0;
   v7[1]._._.nn_atk_SoundActor_data[9] = 1;
-  *(_DWORD *)FIELD_U32(v7, 0x0)._.nn_atk_SoundActor_data = off_60BD6C84;
+  *(_DWORD *)FIELD_U8(v7, 0x0) = off_60BD6C84;
   a1[5] = v7;
   *(_DWORD *)v7[1]._._.nn_atk_SoundActor_data = 1;
   v8 = (MovingSoundActor *)operator_new(0x140u);
@@ -79,7 +79,7 @@ _DWORD *__fastcall sub_601E29E0(_DWORD *a1)
   *(_DWORD *)&v9[1]._._.nn_atk_SoundActor_data[4] = 10;
   v9[1]._._.nn_atk_SoundActor_data[8] = 0;
   v9[1]._._.nn_atk_SoundActor_data[9] = 1;
-  *(_DWORD *)FIELD_U32(v9, 0x0)._.nn_atk_SoundActor_data = off_60BD6C84;
+  *(_DWORD *)FIELD_U8(v9, 0x0) = off_60BD6C84;
   a1[6] = v9;
   *(_DWORD *)v9[1]._._.nn_atk_SoundActor_data = 2;
   v10 = (MovingSoundActor *)operator_new(0x140u);
@@ -88,7 +88,7 @@ _DWORD *__fastcall sub_601E29E0(_DWORD *a1)
   *(_DWORD *)&v11[1]._._.nn_atk_SoundActor_data[4] = 10;
   v11[1]._._.nn_atk_SoundActor_data[8] = 0;
   v11[1]._._.nn_atk_SoundActor_data[9] = 1;
-  *(_DWORD *)FIELD_U32(v11, 0x0)._.nn_atk_SoundActor_data = off_60BD6C84;
+  *(_DWORD *)FIELD_U8(v11, 0x0) = off_60BD6C84;
   a1[7] = v11;
   *(_DWORD *)v11[1]._._.nn_atk_SoundActor_data = 3;
   v12 = (MovingSoundActor *)operator_new(0x140u);
@@ -97,7 +97,7 @@ _DWORD *__fastcall sub_601E29E0(_DWORD *a1)
   *(_DWORD *)&v13[1]._._.nn_atk_SoundActor_data[4] = 10;
   v13[1]._._.nn_atk_SoundActor_data[8] = 0;
   v13[1]._._.nn_atk_SoundActor_data[9] = 1;
-  *(_DWORD *)FIELD_U32(v13, 0x0)._.nn_atk_SoundActor_data = off_60BD6C84;
+  *(_DWORD *)FIELD_U8(v13, 0x0) = off_60BD6C84;
   a1[8] = v13;
   *(_DWORD *)v13[1]._._.nn_atk_SoundActor_data = 5;
   v14 = (MovingSoundActor *)operator_new(0x140u);
@@ -106,7 +106,7 @@ _DWORD *__fastcall sub_601E29E0(_DWORD *a1)
   *(_DWORD *)&v15[1]._._.nn_atk_SoundActor_data[4] = 10;
   v15[1]._._.nn_atk_SoundActor_data[8] = 0;
   v15[1]._._.nn_atk_SoundActor_data[9] = 1;
-  *(_DWORD *)FIELD_U32(v15, 0x0)._.nn_atk_SoundActor_data = off_60BD6C84;
+  *(_DWORD *)FIELD_U8(v15, 0x0) = off_60BD6C84;
   a1[9] = v15;
   *(_DWORD *)v15[1]._._.nn_atk_SoundActor_data = 4;
   v16 = (MovingSoundActor *)operator_new(0x140u);
@@ -115,7 +115,7 @@ _DWORD *__fastcall sub_601E29E0(_DWORD *a1)
   *(_DWORD *)&v17[1]._._.nn_atk_SoundActor_data[4] = 10;
   v17[1]._._.nn_atk_SoundActor_data[8] = 0;
   v17[1]._._.nn_atk_SoundActor_data[9] = 1;
-  *(_DWORD *)FIELD_U32(v17, 0x0)._.nn_atk_SoundActor_data = off_60BD6C84;
+  *(_DWORD *)FIELD_U8(v17, 0x0) = off_60BD6C84;
   a1[10] = v17;
   *(_DWORD *)v17[1]._._.nn_atk_SoundActor_data = 15;
   v18 = (MovingSoundActor *)operator_new(0x140u);
@@ -124,7 +124,7 @@ _DWORD *__fastcall sub_601E29E0(_DWORD *a1)
   *(_DWORD *)&v19[1]._._.nn_atk_SoundActor_data[4] = 10;
   v19[1]._._.nn_atk_SoundActor_data[8] = 0;
   v19[1]._._.nn_atk_SoundActor_data[9] = 1;
-  *(_DWORD *)FIELD_U32(v19, 0x0)._.nn_atk_SoundActor_data = off_60BD6C84;
+  *(_DWORD *)FIELD_U8(v19, 0x0) = off_60BD6C84;
   a1[11] = v19;
   *(_DWORD *)v19[1]._._.nn_atk_SoundActor_data = 15;
   v20 = (MovingSoundActor *)operator_new(0x140u);
@@ -133,12 +133,12 @@ _DWORD *__fastcall sub_601E29E0(_DWORD *a1)
   *(_DWORD *)&v21[1]._._.nn_atk_SoundActor_data[4] = 10;
   v21[1]._._.nn_atk_SoundActor_data[8] = 0;
   v21[1]._._.nn_atk_SoundActor_data[9] = 1;
-  *(_DWORD *)FIELD_U32(v21, 0x0)._.nn_atk_SoundActor_data = off_60BD6C84;
+  *(_DWORD *)FIELD_U8(v21, 0x0) = off_60BD6C84;
   a1[12] = v21;
   *(_DWORD *)v21[1]._._.nn_atk_SoundActor_data = 0;
   v22 = (MovingSoundActor *)operator_new(0x134u);
   v23 = MovingSoundActor_ctor(v22, 0, 1);
-  *(_DWORD *)FIELD_U32(v23, 0x0)._.nn_atk_SoundActor_data = off_60BD6CCC;
+  *(_DWORD *)FIELD_U8(v23, 0x0) = off_60BD6CCC;
   a1[1] = v23;
   v24 = (_DWORD *)operator_new(0x1A4u);
   v25 = BasicSoundActor_ctor(v24, 1);

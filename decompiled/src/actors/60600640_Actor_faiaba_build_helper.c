@@ -11,7 +11,7 @@
 EffectWrapper *__fastcall Actor_faiaba_build_helper(EffectWrapper *a1)
 {
   EffectWrapper_ctor(a1);
-  FIELD_U32(a1, 0x0).vtable = (int)off_60BC1450;
+  FIELD_U32(a1, 0x0) = (int)off_60BC1450;
   EffectWrapper_ctor(a1 + 1);
   a1[1]._.vtable = (int)off_60BC1450;
   EffectWrapper_ctor(a1 + 2);

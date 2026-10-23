@@ -34,7 +34,7 @@ int __fastcall sub_606E4E9C(int a1)
   v7 = ModelWrapper_ctor(v6, Model2, 1, 0, 0, 0, 0);
   ModelWrapper_setup(v7, ResArchiveById, 0, 0);
   FIELD_U32(a1, 732) = v6;
-  v8 = (int)*FIELD_U32(v6, 0x8).animations;
+  v8 = (int)*FIELD_U32(v6, 0xC);
   v9 = Profile__getResArchiveById(*(Profile **)(a1 + 12), 0);
   a2.vtable = &sead__SafeStringBase__vtable;
   a2.cstr = "wait";

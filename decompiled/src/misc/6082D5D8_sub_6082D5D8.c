@@ -14,12 +14,12 @@ signed int __fastcall sub_6082D5D8(StageActor *a1)
   ActiveColliderMgr *v3; // r6
 
   p_aCollider = &FIELD_U32(a1, 0xBC);
-  FIELD_U32(a1, 0x0).field_4C |= 2u;
+  FIELD_U32(a1, 0x4C) |= 2u;
   ActiveCollider__init(&FIELD_U32(a1, 0xBC), a1, (ActiveColliderInfo *)&unk_60C2A968, 0);
-  FIELD_U32(a1, 0xBC).info.distToCenter.x = 16.0;
-  FIELD_U32(a1, 0xBC).info.distToCenter.y = -8.0;
-  FIELD_U32(a1, 0xBC).info.distToEdge.x = 16.0;
-  FIELD_U32(a1, 0xBC).info.distToEdge.y = 8.0;
+  FIELD_F32(a1, 0x130) = 16.0;
+  FIELD_F32(a1, 0x134) = -8.0;
+  FIELD_F32(a1, 0x138) = 16.0;
+  FIELD_F32(a1, 0x13C) = 8.0;
   v3 = ActiveColliderMgr_instance;
   if ( !ActiveColliderMgr_isInActiveList(ActiveColliderMgr_instance, p_aCollider)
     && !ActiveColliderMgr_isInCreateList(v3, p_aCollider) )

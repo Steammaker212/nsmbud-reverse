@@ -13,7 +13,7 @@ float __fastcall sub_60623140(Enemy *a1)
   float result; // s0
 
   Enemy__beginState_DieFall(a1);
-  result = FIELD_U32(a1, 0x0)._._.speed.y * 0.5;
-  FIELD_U32(a1, 0x0)._._.speed.y = result;
+  result = FIELD_F32(a1, 0x7C) * 0.5;
+  FIELD_F32(a1, 0x7C) = result;
   return result;
 }

@@ -48,7 +48,7 @@ int __fastcall sub_6063EDE0(int a1)
     v6 = ModelWrapper_ctor(v5, Model2, 1, 0, 0, 0, 0);
     ModelWrapper_setup(v6, v3, 0, 0);
     FIELD_U32(a1, 6104) = v5;
-    v7 = (int)*FIELD_U32(v5, 0x8).animations;
+    v7 = (int)*FIELD_U32(v5, 0xC);
     v25 = &sead__SafeStringBase__vtable;
     v26 = "lift_han_leaf";
     v8 = LoadResource(ResourceMgrRelated_instance, &v25);
@@ -65,7 +65,7 @@ int __fastcall sub_6063EDE0(int a1)
     v13 = ModelWrapper_ctor(v12, v11, 1, 0, 0, 0, 0);
     ModelWrapper_setup(v13, v10, 0, 0);
     FIELD_U32(a1, 6104) = v12;
-    v7 = (int)*FIELD_U32(v12, 0x8).animations;
+    v7 = (int)*FIELD_U32(v12, 0xC);
     v25 = &sead__SafeStringBase__vtable;
     v26 = "lift_han_leaf";
     v8 = LoadResource(ResourceMgrRelated_instance, &v25);

@@ -14,7 +14,7 @@ int __fastcall PowBlock_vf9(CollisionActor *a1, int a2)
 
   if ( a2 == 2 )
   {
-    if ( (*(int (__fastcall **)(CollisionActor *))(FIELD_U32(a1, 0x0)._.vtable + 88))(a1) == 1 )
+    if ( (*(int (__fastcall **)(CollisionActor *))(FIELD_U32(a1, 0x0) + 88))(a1) == 1 )
     {
       next = a1[1]._._.field_20.next;
       if ( next != (sead_ListNode *)-1 )

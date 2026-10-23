@@ -30,14 +30,14 @@ signed int __fastcall DryBones__vfD0(Enemy *a1)
   float v15; // s0
   EnemyFreezeMgr_Info freezeInfo; // [sp+0h] [bp-28h] BYREF
 
-  x = FIELD_U32(a1, 0x0)._._.position.x;
-  y = FIELD_U32(a1, 0x0)._._.position.y;
+  x = FIELD_F32(a1, 0x6C);
+  y = FIELD_F32(a1, 0x70);
   v3 = flt_60AF1F10;
   v4 = *(unsigned __int16 *)&a1[1]._._.collisionMgr[694];
   if ( !*(_WORD *)&a1[1]._._.collisionMgr[694] )
     v3 = (float *)&unk_60AF2078;
-  z = FIELD_U32(a1, 0x0)._._.position.z;
-  v6 = &v3[FIELD_U32(a1, 0x0)._._.rotation.y > 0x2AA9FFFFu && FIELD_U32(a1, 0x0)._._.rotation.y < 1];
+  z = FIELD_F32(a1, 0x74);
+  v6 = &v3[FIELD_U32(a1, 0xA0) > 0x2AA9FFFFu && FIELD_U32(a1, 0xA0) < 1];
   v7 = 4;
   if ( !*(_WORD *)&a1[1]._._.collisionMgr[694] )
     v7 = 1;

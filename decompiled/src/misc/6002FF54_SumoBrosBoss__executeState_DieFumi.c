@@ -45,9 +45,9 @@ LABEL_16:
   {
     if ( v2 == 1 )
     {
-      if ( FIELD_U32(a1, 0x0).position.y >= (float)(FIELD_F32(dword_60CC6484, 132) + -100.0) )
+      if ( FIELD_F32(a1, 0x70) >= (float)(FIELD_F32(dword_60CC6484, 132) + -100.0) )
         goto LABEL_17;
-      FIELD_U32(a1, 0x0).speed.y = 0.0;
+      FIELD_F32(a1, 0x7C) = 0.0;
       LOWORD(a1[1]._.aCollider.activeNode.prev) = 65;
       v6 = 2;
       goto LABEL_16;
@@ -55,15 +55,15 @@ LABEL_16:
     if ( !a1[1].collisionMgr[715] )
     {
       CollisionMgr_process(FIELD_U8(a1, 0x288));
-      if ( FIELD_U32(a1, 0x0).speed.y < 0.0 && (FIELD_U8(a1, 0x288)[2224] & 1) != 0 && !sub_6014B69C(FIELD_U8(a1, 0x288)) )
+      if ( FIELD_F32(a1, 0x7C) < 0.0 && (FIELD_U8(a1, 0x288)[2224] & 1) != 0 && !sub_6014B69C(FIELD_U8(a1, 0x288)) )
       {
-        FIELD_U32(a1, 0x0).speed.x = 1.0;
-        FIELD_U32(a1, 0x0).speed.y = 2.5;
-        FIELD_U32(a1, 0x0).speed.z = 0.0;
-        if ( FIELD_U32(a1, 0x0).direction == 1 )
-          FIELD_U32(a1, 0x0).speed.x = -1.0;
-        x = FIELD_U32(a1, 0x0).position.x;
-        target[0].y = FIELD_U32(a1, 0x0).position.y;
+        FIELD_F32(a1, 0x78) = 1.0;
+        FIELD_F32(a1, 0x7C) = 2.5;
+        FIELD_F32(a1, 0x80) = 0.0;
+        if ( FIELD_U32(a1, 0x50) == 1 )
+          FIELD_F32(a1, 0x78) = -1.0;
+        x = FIELD_F32(a1, 0x6C);
+        target[0].y = FIELD_F32(a1, 0x70);
         target[0].x = x;
         target[0].z = 4500.0;
         EffectData_create(971, target, 0, 0);
@@ -79,9 +79,9 @@ LABEL_17:
   result = (unsigned __int8)a1[1].collisionMgr[721];
   if ( a1[1].collisionMgr[721] )
   {
-    LODWORD(target[0].x) = (int)(float)((float)(2147500000.0 * 35.0) / 180.0) * byte_60AFE3F4[FIELD_U32(a1, 0x0).direction];
+    LODWORD(target[0].x) = (int)(float)((float)(2147500000.0 * 35.0) / 180.0) * byte_60AFE3F4[FIELD_U32(a1, 0x50)];
     speed = 0x8000000;
-    result = moveValueTo(&FIELD_U32(a1, 0x0).rotation.y, (int *)target, &speed);
+    result = moveValueTo(&FIELD_U32(a1, 0xA0), (int *)target, &speed);
     if ( result == 1 )
     {
       a1[1].collisionMgr[721] = 0;

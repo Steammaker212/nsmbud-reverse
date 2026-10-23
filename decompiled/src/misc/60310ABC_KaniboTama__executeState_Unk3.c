@@ -22,9 +22,9 @@ void __fastcall KaniboTama__executeState_Unk3(Enemy *result)
     p_speed = &result[1]._._._.speed;
     if ( !LOBYTE(result[1]._._._.speed.x) )
     {
-      p_aCollider = &FIELD_U32(result, 0x0)._._.aCollider;
+      p_aCollider = &FIELD_U32(result, 0xBC);
       v5 = ActiveColliderMgr_instance;
-      if ( !ActiveColliderMgr_isInActiveList(ActiveColliderMgr_instance, &FIELD_U32(result, 0x0)._._.aCollider)
+      if ( !ActiveColliderMgr_isInActiveList(ActiveColliderMgr_instance, &FIELD_U32(result, 0xBC))
         && !ActiveColliderMgr_isInCreateList(v5, p_aCollider) )
       {
         ActiveColliderMgr_addToCreateList(v5, p_aCollider);

@@ -15,6 +15,6 @@ StarCoinBase *__fastcall Actor_korekushonkoinhebi_build(ActorBuildInfo *a1)
 
   v2 = (StarCoinBase *)operator_new(0x1838u);
   result = StarCoinBase_ctor(v2, a1);
-  FIELD_U32(result, 0x0)._._._.vtable = (int)off_60C0C7F4;
+  FIELD_U32(result, 0x0) = (int)off_60C0C7F4;
   return result;
 }

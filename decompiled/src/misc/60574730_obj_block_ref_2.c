@@ -21,38 +21,38 @@ signed int __fastcall obj_block_ref_2(Enemy *a1)
   sead__SafeString a2; // [sp+20h] [bp-28h] BYREF
   _DWORD v11[8]; // [sp+28h] [bp-20h] BYREF
 
-  if ( Actor__getProfileId(&FIELD_U32(a1, 0x0)._._._) == 247 )
+  if ( Actor__getProfileId(&FIELD_U32(a1, 0x0)) == 247 )
   {
     LODWORD(a1[1]._._._.field_20C) = 1;
     z = 500.0;
-    FIELD_U32(a1, 0x0)._._.position.z = 500.0;
+    FIELD_F32(a1, 0x74) = 500.0;
   }
   else
   {
-    z = FIELD_U32(a1, 0x0)._._.position.z;
+    z = FIELD_F32(a1, 0x74);
   }
-  a1[1]._._._.field_1FC = FIELD_U32(a1, 0x0)._._.position.x;
-  a1[1]._._._.field_200 = LODWORD(FIELD_U32(a1, 0x0)._._.position.y);
+  a1[1]._._._.field_1FC = FIELD_F32(a1, 0x6C);
+  a1[1]._._._.field_200 = LODWORD(FIELD_F32(a1, 0x70));
   a1[1]._._._.field_204 = z;
   v3 = sub_605B9FEC(dword_60CB061C, &a1[1]._._._.field_1FC, FIELD_U8(LevelInfo_instance, 18));
   result = 2;
   if ( v3 != 2 )
   {
-    FIELD_U32(a1, 0x0)._._.field_1F4 = 512.0;
-    FIELD_U32(a1, 0x0)._._.field_1F8 = 512.0;
-    FIELD_U32(a1, 0x0)._._.field_1FC = 32.0;
-    FIELD_U32(a1, 0x0)._._.field_200 = 1107296256;
-    FIELD_U32(a1, 0x0)._._.scale.x = 1.0;
-    FIELD_U32(a1, 0x0)._._.scale.y = 1.0;
-    FIELD_U32(a1, 0x0)._._.scale.z = 1.0;
+    FIELD_F32(a1, 0x1F4) = 512.0;
+    FIELD_F32(a1, 0x1F8) = 512.0;
+    FIELD_F32(a1, 0x1FC) = 32.0;
+    FIELD_U32(a1, 0x200) = 1107296256;
+    FIELD_F32(a1, 0x90) = 1.0;
+    FIELD_F32(a1, 0x94) = 1.0;
+    FIELD_F32(a1, 0x98) = 1.0;
     if ( LODWORD(a1[1]._._._.field_20C) == 1 )
     {
-      ShapedCollider_init((ShapedCollider *)&FIELD_F32(a1, 0x17E0), &FIELD_U32(a1, 0x0)._._, (ShapedColliderInfo *)&dword_60CAEB34);
+      ShapedCollider_init((ShapedCollider *)&FIELD_F32(a1, 0x17E0), &FIELD_U32(a1, 0x0), (ShapedColliderInfo *)&dword_60CAEB34);
       FIELD_U32(a1, 0x1868) |= 0x18u;
     }
     else
     {
-      ShapedCollider_init((ShapedCollider *)&FIELD_F32(a1, 0x17E0), &FIELD_U32(a1, 0x0)._._, (ShapedColliderInfo *)&dword_60CAEB10);
+      ShapedCollider_init((ShapedCollider *)&FIELD_F32(a1, 0x17E0), &FIELD_U32(a1, 0x0), (ShapedColliderInfo *)&dword_60CAEB10);
     }
     LODWORD(a1[1]._._._.speed.y) = sub_605749C4;
     LODWORD(a1[1]._._._.speed.z) = sub_60574B80;
@@ -60,7 +60,7 @@ signed int __fastcall obj_block_ref_2(Enemy *a1)
     ColliderBase_setType((ColliderBase *)&FIELD_F32(a1, 0x17E0), 14);
     v9[0] = 1115684864;
     v9[1] = 1115684864;
-    sub_6069AFA0(&a1[1]._._._.aCollider.field_118, &FIELD_U32(a1, 0x0)._._.position, &FIELD_U32(a1, 0x0)._._.field_1EC, v9, &FIELD_F32(a1, 0x17E0));
+    sub_6069AFA0(&a1[1]._._._.aCollider.field_118, &FIELD_U32(a1, 0x6C), &FIELD_F32(a1, 0x1EC), v9, &FIELD_F32(a1, 0x17E0));
     if ( LODWORD(a1[1]._._._.field_20C) == 1 )
     {
       v11[0] = &sead__SafeStringBase__vtable;

@@ -53,7 +53,7 @@ unsigned int __fastcall sub_603EC7B0(int a1)
     *(_DWORD *)(v3 + 4 * v4) = v7;
     if ( (unsigned int)(FIELD_U32(a1, 204) - 1) > 1 )
       goto LABEL_8;
-    v9 = *FIELD_U32(v7, 0x10).animations;
+    v9 = *FIELD_U32(v7, 0x14);
     v20 = &sead__SafeStringBase__vtable;
     v21 = "box_wood_parts";
     TexAnim_play(v9, Resource, &v20);

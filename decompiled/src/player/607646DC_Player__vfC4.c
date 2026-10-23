@@ -15,13 +15,13 @@ signed int __fastcall sub_607646DC(
         ActiveColliderInfo *a4,
         ActiveColliderInfo *info)
 {
-  ActiveCollider__init(&FIELD_U32(a1, 0x0)._.aCollider, &FIELD_U32(a1, 0x0)._, a2, 0);
-  ActiveCollider__init((ActiveCollider *)&a1[1]._.collisionMgr[388], &FIELD_U32(a1, 0x0)._, a2, 0);
-  ActiveCollider__init((ActiveCollider *)&a1[1]._.collisionMgr[692], &FIELD_U32(a1, 0x0)._, a2, 0);
-  ActiveCollider__init((ActiveCollider *)&a1[1]._.collisionMgr[1300], &FIELD_U32(a1, 0x0)._, a3, 0);
-  ActiveCollider__init((ActiveCollider *)&a1[1]._.collisionMgr[996], &FIELD_U32(a1, 0x0)._, a3, 0);
-  ActiveCollider__init((ActiveCollider *)&a1[1]._.collisionMgr[1908], &FIELD_U32(a1, 0x0)._, a3, 0);
-  ActiveCollider__init((ActiveCollider *)&a1[1]._.collisionMgr[1604], &FIELD_U32(a1, 0x0)._, a3, 0);
-  ActiveCollider__init((ActiveCollider *)&a1[1]._.collisionMgr[2212], &FIELD_U32(a1, 0x0)._, a4, 0);
-  return ActiveCollider__init((ActiveCollider *)&a1[1]._.collisionMgr[2516], &FIELD_U32(a1, 0x0)._, info, 0);
+  ActiveCollider__init(&FIELD_U32(a1, 0xBC), &FIELD_U32(a1, 0x0), a2, 0);
+  ActiveCollider__init((ActiveCollider *)&a1[1]._.collisionMgr[388], &FIELD_U32(a1, 0x0), a2, 0);
+  ActiveCollider__init((ActiveCollider *)&a1[1]._.collisionMgr[692], &FIELD_U32(a1, 0x0), a2, 0);
+  ActiveCollider__init((ActiveCollider *)&a1[1]._.collisionMgr[1300], &FIELD_U32(a1, 0x0), a3, 0);
+  ActiveCollider__init((ActiveCollider *)&a1[1]._.collisionMgr[996], &FIELD_U32(a1, 0x0), a3, 0);
+  ActiveCollider__init((ActiveCollider *)&a1[1]._.collisionMgr[1908], &FIELD_U32(a1, 0x0), a3, 0);
+  ActiveCollider__init((ActiveCollider *)&a1[1]._.collisionMgr[1604], &FIELD_U32(a1, 0x0), a3, 0);
+  ActiveCollider__init((ActiveCollider *)&a1[1]._.collisionMgr[2212], &FIELD_U32(a1, 0x0), a4, 0);
+  return ActiveCollider__init((ActiveCollider *)&a1[1]._.collisionMgr[2516], &FIELD_U32(a1, 0x0), info, 0);
 }

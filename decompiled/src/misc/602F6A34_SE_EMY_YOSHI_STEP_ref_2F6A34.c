@@ -28,7 +28,7 @@ void __fastcall SE_EMY_YOSHI_STEP_ref_2F6A34(int a1, ActiveCollider *a2, ActiveC
       }
       if ( owner )
       {
-        if ( (*(int (__fastcall **)(StageActor *, int *))FIELD_U32(owner, 0x0).vtable)(owner, &dword_60C7B404) == 1 )
+        if ( (*(int (__fastcall **)(StageActor *, int *))FIELD_U32(owner, 0x0))(owner, &dword_60C7B404) == 1 )
         {
           sub_602A3520((float *)a1, "SE_EMY_YOSHI_STEP", 0);
           (*(void (__fastcall **)(int, StageActor *))(*(_DWORD *)a1 + 380))(a1, owner);

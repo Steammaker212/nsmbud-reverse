@@ -15,7 +15,7 @@ Enemy *__fastcall Actor_giant_SumoBro_patsu_build(ActorBuildInfo *a1)
 
   v2 = (Enemy *)operator_new(0x18D0u);
   result = Enemy__ctor(v2, a1);
-  FIELD_U32(result, 0x0)._._._.vtable = (int)off_60BCEAC4;
+  FIELD_U32(result, 0x0) = (int)off_60BCEAC4;
   result[1]._._._._.movementId = 0;
   result[1]._._._._.settigns2 = 0;
   result[1]._._._._.settings1 = 0;

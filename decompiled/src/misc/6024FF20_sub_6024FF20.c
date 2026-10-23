@@ -22,7 +22,7 @@ int __fastcall sub_6024FF20(Enemy *a1, ActiveCollider *a2, ActiveCollider *a3)
     case 3:
       return Enemy_killSpin(a1, owner);
     case 1:
-      return (*(int (__fastcall **)(Enemy *, StageActor *))(FIELD_U32(a1, 0x0)._._._.vtable + 624))(a1, owner);
+      return (*(int (__fastcall **)(Enemy *, StageActor *))(FIELD_U32(a1, 0x0) + 624))(a1, owner);
   }
   return result;
 }

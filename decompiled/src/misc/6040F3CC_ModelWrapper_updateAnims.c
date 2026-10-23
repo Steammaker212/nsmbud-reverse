@@ -29,11 +29,11 @@ ModelWrapper *__fastcall ModelWrapper_updateAnims(ModelWrapper *this)
   int v17; // t1
 
   v2 = this;
-  animations = FIELD_U32(this, 0x8).animations;
+  animations = FIELD_U32(this, 0xC);
   v4 = animations == 0;
   if ( animations )
   {
-    count = FIELD_U32(this, 0x8).count;
+    count = FIELD_U32(this, 0x8);
     v4 = count == 0;
   }
   if ( !v4 )
@@ -46,11 +46,11 @@ ModelWrapper *__fastcall ModelWrapper_updateAnims(ModelWrapper *this)
     }
     while ( count );
   }
-  v6 = (int *)FIELD_U32(v2, 0x10).animations;
+  v6 = (int *)FIELD_U32(v2, 0x14);
   v7 = v6 == 0;
   if ( v6 )
   {
-    count = FIELD_U32(v2, 0x10).count;
+    count = FIELD_U32(v2, 0x10);
     v7 = count == 0;
   }
   if ( !v7 )
@@ -63,11 +63,11 @@ ModelWrapper *__fastcall ModelWrapper_updateAnims(ModelWrapper *this)
     }
     while ( count );
   }
-  v9 = (int *)FIELD_U32(v2, 0x18).animations;
+  v9 = (int *)FIELD_U32(v2, 0x1C);
   v10 = v9 == 0;
   if ( v9 )
   {
-    count = FIELD_U32(v2, 0x18).count;
+    count = FIELD_U32(v2, 0x18);
     v10 = count == 0;
   }
   if ( !v10 )
@@ -80,11 +80,11 @@ ModelWrapper *__fastcall ModelWrapper_updateAnims(ModelWrapper *this)
     }
     while ( count );
   }
-  v12 = (int *)FIELD_U32(v2, 0x20).animations;
+  v12 = (int *)FIELD_U32(v2, 0x24);
   v13 = v12 == 0;
   if ( v12 )
   {
-    count = FIELD_U32(v2, 0x20).count;
+    count = FIELD_U32(v2, 0x20);
     v13 = count == 0;
   }
   if ( !v13 )
@@ -97,11 +97,11 @@ ModelWrapper *__fastcall ModelWrapper_updateAnims(ModelWrapper *this)
     }
     while ( count );
   }
-  v15 = (int *)FIELD_U32(v2, 0x28).animations;
+  v15 = (int *)FIELD_U32(v2, 0x2C);
   v16 = v15 == 0;
   if ( v15 )
   {
-    v2 = (ModelWrapper *)FIELD_U32(v2, 0x28).count;
+    v2 = (ModelWrapper *)FIELD_U32(v2, 0x28);
     v16 = v2 == 0;
   }
   if ( !v16 )

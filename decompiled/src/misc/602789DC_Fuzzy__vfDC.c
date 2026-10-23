@@ -30,26 +30,26 @@ StateMethodExecuter *__fastcall Fuzzy__vfDC(Enemy *a1)
   LODWORD(v12[0]) = &sead__SafeStringBase__vtable;
   HIDWORD(v12[0]) = "skl_root";
   v5 = v4(v3, v12);
-  (*(void (__fastcall **)(_DWORD, _DWORD, __int64 *))(**(_DWORD **)FIELD_U32(v2, 0x0)._._._.vtable + 108))(
-    *(_DWORD *)FIELD_U32(v2, 0x0)._._._.vtable,
+  (*(void (__fastcall **)(_DWORD, _DWORD, __int64 *))(**(_DWORD **)FIELD_U32(v2, 0x0) + 108))(
+    *(_DWORD *)FIELD_U32(v2, 0x0),
     v5,
     v12);
   sub_602372C0((int)&a1[1]._._.collisionMgr[5068], 593, v12, 0);
-  v7 = (StateBase **)&FIELD_U32(a1, 0x0).field_17D4;
-  CurrentState = (StateBase *)FIELD_U32(a1, 0x0).field_17D4;
+  v7 = (StateBase **)&FIELD_U32(a1, 0x17D4);
+  CurrentState = (StateBase *)FIELD_U32(a1, 0x17D4);
   if ( !CurrentState )
-    CurrentState = StateMgr__getCurrentState(&FIELD_U32(a1, 0x0).states.manager);
+    CurrentState = StateMgr__getCurrentState(&FIELD_U32(a1, 0x17C4));
   v8 = (*((int (__fastcall **)(StateBase *))FIELD_U32(CurrentState, 0x0) + 2))(CurrentState);
   if ( v8 == (*(int (**)(void))(dword_60C8ECA0 + 8))() )
-    return (StateMethodExecuter *)(*(int (__fastcall **)(Enemy *, int *))(FIELD_U32(a1, 0x0)._._._.vtable + 192))(
+    return (StateMethodExecuter *)(*(int (__fastcall **)(Enemy *, int *))(FIELD_U32(a1, 0x0) + 192))(
                                     a1,
                                     &dword_60C8ECA0);
   v9 = *v7;
   if ( !*v7 )
-    v9 = StateMgr__getCurrentState(&FIELD_U32(a1, 0x0).states.manager);
+    v9 = StateMgr__getCurrentState(&FIELD_U32(a1, 0x17C4));
   v10 = (*((int (__fastcall **)(StateBase *))FIELD_U32(v9, 0x0) + 2))(v9);
   if ( v10 == (*(int (**)(void))(dword_60C8EDB0 + 8))() )
-    return (StateMethodExecuter *)(*(int (__fastcall **)(Enemy *, int *))(FIELD_U32(a1, 0x0)._._._.vtable + 192))(
+    return (StateMethodExecuter *)(*(int (__fastcall **)(Enemy *, int *))(FIELD_U32(a1, 0x0) + 192))(
                                     a1,
                                     &dword_60C8ECA0);
   else

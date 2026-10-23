@@ -10,8 +10,8 @@
 
 int __fastcall sub_603CD864(StateActor *a1)
 {
-  StateMgr__execute(&FIELD_U32(a1, 0x17B0).manager);
-  if ( FIELD_U8(LevelInfo_instance, 20) != (unsigned __int8)FIELD_U32(a1, 0x0)._.zoneId )
+  StateMgr__execute(&FIELD_U32(a1, 0x17C4));
+  if ( FIELD_U8(LevelInfo_instance, 20) != (unsigned __int8)FIELD_U8(a1, 0x214) )
     StageActor__delete(a1, 1);
   return 1;
 }

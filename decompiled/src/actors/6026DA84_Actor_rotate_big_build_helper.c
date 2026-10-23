@@ -11,7 +11,7 @@
 MultiStateActor *__fastcall Actor_rotate_big_build_helper(MultiStateActor *a1, ActorBuildInfo *a2)
 {
   MultiStateActor__ctor(a1, a2);
-  FIELD_U32(a1, 0x0)._._.vtable = (int)off_60BDC634;
+  FIELD_U32(a1, 0x0) = (int)off_60BDC634;
   RectCollider_ctor((RectCollider *)&a1[1]._._._.id);
   a1[1]._._._.id = (int)off_60BC30D8;
   RectCollider_ctor((RectCollider *)&a1[1]._.collisionMgr[16]);

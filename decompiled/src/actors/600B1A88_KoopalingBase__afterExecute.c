@@ -22,7 +22,7 @@ int __fastcall KoopalingBase__afterExecute(BossBase *a1, int a2)
     if ( v4 >= 1 )
     {
       a1[1]._._._._.aCollider.field_DC = v4 - 1;
-      (*(void (__fastcall **)(BossBase *))(FIELD_U32(a1, 0x0)._._._._.vtable + 1248))(a1);
+      (*(void (__fastcall **)(BossBase *))(FIELD_U32(a1, 0x0) + 1248))(a1);
     }
     v5 = ActiveColliderMgr_instance;
     ActiveColldierMgr_removeFromActiveList(ActiveColliderMgr_instance, (ActiveCollider *)&a1[1]._._._._.field_5C);

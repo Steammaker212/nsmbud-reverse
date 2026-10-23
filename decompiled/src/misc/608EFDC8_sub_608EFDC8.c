@@ -108,5 +108,5 @@ LABEL_18:
         v5 = (nn__os *)sead__HeapMgr__setCurrentHeap(sead__HeapMgr__sInstance, v7);
     }
   }
-  return nn__os__YieldThread(v5);
+  return nn__os__YieldThread__thunk(v5);
 }

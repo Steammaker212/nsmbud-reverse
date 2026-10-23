@@ -50,7 +50,7 @@ void __fastcall sub_603035FC(int a1, ActiveCollider *a2, ActiveCollider *a3, int
   }
   if ( owner )
   {
-    v12 = (*(int (__fastcall **)(StageActor *, int *))FIELD_U32(owner, 0x0).vtable)(owner, &dword_60C7B378);
+    v12 = (*(int (__fastcall **)(StageActor *, int *))FIELD_U32(owner, 0x0))(owner, &dword_60C7B378);
     if ( v12 )
       v12 = (int)owner;
     v13 = v10 == 0;

@@ -26,7 +26,7 @@ ActiveColliderMgr *__fastcall SledgeBro__beginState_DieFumi(Enemy *a1)
 
   v3 = &a1[1]._._._.field_22C;
   v2 = (_DWORD *)a1[1]._._._.field_22C;
-  ResArchiveById = Profile__getResArchiveById(FIELD_U32(a1, 0x0)._._._.profile, 0);
+  ResArchiveById = Profile__getResArchiveById(FIELD_U32(a1, 0xC), 0);
   v12[0] = &sead__SafeStringBase__vtable;
   v12[1] = "dead";
   sub_60421938(v2, ResArchiveById, (int)v12);
@@ -40,7 +40,7 @@ ActiveColliderMgr *__fastcall SledgeBro__beginState_DieFumi(Enemy *a1)
   if ( *(_DWORD *)(*v3 + 8) > v8 )
     v7 += 4 * v8;
   *(_DWORD *)(*(_DWORD *)v7 + 24) = 1065353216;
-  FIELD_U32(a1, 0x0)._._.rotation.x = 835125248;
+  FIELD_U32(a1, 0x9C) = 835125248;
   Enemy__beginState_DieFumi(a1);
   v9 = (ActiveCollider *)&a1[1]._._.collisionMgr[128];
   v10 = ActiveColliderMgr_instance;

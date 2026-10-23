@@ -30,7 +30,7 @@ void __fastcall Kanibo__createModel(Enemy *a1)
   v6 = sub_60421830(v5, Model2, 2, 1, 0, 0, 0);
   j_ModelWrapper_setupModel((int)v6, v3, 0, 0);
   a1[1]._._._._.vtable = (int)v5;
-  v7 = (float *)*FIELD_U32(v5, 0x10).animations;
+  v7 = (float *)*FIELD_U32(v5, 0x14);
   identifier.vtable = &sead__SafeStringBase__vtable;
   identifier.cstr = "kanibo";
   TexAnim_play(v7, v3, &identifier);
@@ -41,9 +41,9 @@ void __fastcall Kanibo__createModel(Enemy *a1)
     v8 = 0.0;
   v7[5] = v8;
   *((_DWORD *)v7 + 7) |= 2u;
-  FIELD_U32(a1, 0x0)._._.scale.x = 1.0;
-  FIELD_U32(a1, 0x0)._._.scale.y = 1.0;
-  FIELD_U32(a1, 0x0)._._.scale.z = 1.0;
+  FIELD_F32(a1, 0x90) = 1.0;
+  FIELD_F32(a1, 0x94) = 1.0;
+  FIELD_F32(a1, 0x98) = 1.0;
   a1[1]._._._._.field_2C = 0;
   sub_60421AD4(a1[1]._._._._.vtable);
 }

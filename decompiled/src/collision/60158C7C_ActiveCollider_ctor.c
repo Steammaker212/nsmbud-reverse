@@ -11,18 +11,18 @@
 ActiveCollider *__fastcall ActiveCollider_ctor(ActiveCollider *a1)
 {
   sead_IDisposer_ctor(&FIELD_U32(a1, 0x0));
-  FIELD_U32(a1, 0x0).vtable = (int)ActiveCollider_vtable;
-  FIELD_U32(a1, 0x10).owner = a1;
-  FIELD_U32(a1, 0x10).next = 0;
-  FIELD_U32(a1, 0x10).prev = 0;
-  FIELD_U32(a1, 0x1C).owner = a1;
-  FIELD_U32(a1, 0x1C).next = 0;
-  FIELD_U32(a1, 0x1C).prev = 0;
-  FIELD_U32(a1, 0x28).owner = a1;
-  FIELD_U32(a1, 0x28).next = 0;
-  FIELD_U32(a1, 0x28).prev = 0;
-  FIELD_U32(a1, 0x34).owner = a1;
-  memset(&FIELD_U32(a1, 0x34).next, 0, 0x34);
+  FIELD_U32(a1, 0x0) = (int)ActiveCollider_vtable;
+  FIELD_U32(a1, 0x10) = a1;
+  FIELD_U32(a1, 0x14) = 0;
+  FIELD_U32(a1, 0x18) = 0;
+  FIELD_U32(a1, 0x1C) = a1;
+  FIELD_U32(a1, 0x20) = 0;
+  FIELD_U32(a1, 0x24) = 0;
+  FIELD_U32(a1, 0x28) = a1;
+  FIELD_U32(a1, 0x2C) = 0;
+  FIELD_U32(a1, 0x30) = 0;
+  FIELD_U32(a1, 0x34) = a1;
+  memset(&FIELD_U32(a1, 0x38), 0, 0x34);
   FIELD_U8(a1, 0x6C) = 1;
   FIELD_U8(a1, 0x6D) = 0;
   FIELD_U8(a1, 0x6E) = 0;

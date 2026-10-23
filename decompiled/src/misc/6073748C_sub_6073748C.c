@@ -46,7 +46,7 @@ signed int __fastcall sub_6073748C(ColliderBase *a1)
     LOBYTE(a1[21].field_FC) = v5;
     LOBYTE(a1[21].field_110) = v5;
     FIELD_F32(a1, 0x74) = FIELD_F32(a1, 0x74) + (float)((float)(unsigned int)v5 * -32.0);
-    v6 = (*(int (__fastcall **)(ColliderBase *))(FIELD_U32(a1, 0x0).vtable + 432))(a1);
+    v6 = (*(int (__fastcall **)(ColliderBase *))(FIELD_U32(a1, 0x0) + 432))(a1);
     a1[21].field_10C = v6;
     if ( v6 == 24 )
       BYTE1(a1[21].field_104) = 1;
@@ -55,7 +55,7 @@ signed int __fastcall sub_6073748C(ColliderBase *a1)
     v9 = FIELD_F32(a1, 0x74);
     memset(&v14.settings2, 0, 40);
     v14.settings1 = v6;
-    v14.parentId = FIELD_U32(a1, 0x0).field_8;
+    v14.parentId = FIELD_U32(a1, 0x8);
     v14.profile = Profile__get(0x33Bu);
     LODWORD(v14.position.x) = prev;
     v14.position.y = v8;
@@ -86,9 +86,9 @@ signed int __fastcall sub_6073748C(ColliderBase *a1)
     v13.bottomRight.y = -8.0;
     v13.rotation = 0;
     ShapedCollider_init(v2, (StageActor *)a1, &v13);
-    (*(void (__fastcall **)(ColliderBase *))(FIELD_U32(a1, 0x0).vtable + 428))(a1);
-    (*(void (__fastcall **)(ColliderBase *))(FIELD_U32(a1, 0x0).vtable + 436))(a1);
-    (*(void (__fastcall **)(ColliderBase *))(FIELD_U32(a1, 0x0).vtable + 440))(a1);
+    (*(void (__fastcall **)(ColliderBase *))(FIELD_U32(a1, 0x0) + 428))(a1);
+    (*(void (__fastcall **)(ColliderBase *))(FIELD_U32(a1, 0x0) + 436))(a1);
+    (*(void (__fastcall **)(ColliderBase *))(FIELD_U32(a1, 0x0) + 440))(a1);
     return 1;
   }
   return result;

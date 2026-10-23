@@ -15,7 +15,7 @@ StateActor *__fastcall Actor_resident_geyser_water_build(ActorBuildInfo *a1)
 
   v2 = (StateActor *)operator_new(0x2020u);
   result = sub_606F4044(v2, a1);
-  FIELD_U32(result, 0x0)._._.vtable = (int)off_60C20928;
+  FIELD_U32(result, 0x0) = (int)off_60C20928;
   result[1]._.collisionMgr[1473] = 0;
   result[1]._.collisionMgr[1474] = 0;
   return result;

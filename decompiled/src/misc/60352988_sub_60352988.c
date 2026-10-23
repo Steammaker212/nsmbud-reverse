@@ -18,7 +18,7 @@ int __fastcall sub_60352988(StateActor *a1)
   StageActor *v7; // r0
   int v8; // r0
 
-  StageActor__cullCheck(&FIELD_U32(a1, 0x0)._, 2);
+  StageActor__cullCheck(&FIELD_U32(a1, 0x0), 2);
   if ( v2 != 1 )
     return 0;
   v3 = a1;

@@ -15,19 +15,19 @@ int __fastcall sub_600958B0(CollisionActor *a1)
   int target[5]; // [sp+4h] [bp-14h] BYREF
 
   j_ModelWrapper_updateAnims(a1[1]._.aCollider.node4.owner);
-  FIELD_U32(a1, 0x0).rotation.z += dword_60AF1EC8[FIELD_U32(a1, 0x0).direction];
+  FIELD_U32(a1, 0xA4) += dword_60AF1EC8[FIELD_U32(a1, 0x50)];
   CollisionActor__handleGravity(a1);
   CollisionActor__handleSpeed(a1);
   target[0] = 0;
   v3 = 0x2000000;
-  moveValueTo(&FIELD_U32(a1, 0x0).rotation.x, target, &v3);
+  moveValueTo(&FIELD_U32(a1, 0x9C), target, &v3);
   target[0] = 0;
   v3 = 0x2000000;
-  moveValueTo(&FIELD_U32(a1, 0x0).rotation.y, target, &v3);
+  moveValueTo(&FIELD_U32(a1, 0xA0), target, &v3);
   result = dword_60CC6484;
-  if ( FIELD_U32(a1, 0x0).position.y < (float)(FIELD_F32(dword_60CC6484, 132) + -100.0) )
+  if ( FIELD_F32(a1, 0x70) < (float)(FIELD_F32(dword_60CC6484, 132) + -100.0) )
   {
-    FIELD_U32(a1, 0x0)._.isDeleted = 1;
+    FIELD_U8(a1, 0x13) = 1;
     return 1;
   }
   return result;
