@@ -1,0 +1,17 @@
+/* sub_603E4AB4
+ * address: 0x603E4AB4   size: 36   group: misc
+ * Decompiled from the retail Deluxe (Switch) main module v1.0.0.
+ */
+#include "nsmbudx_field.h"
+#include "nsmbudx_data_symbols.h"
+#include "nsmbudx_prototypes.h"
+#include "nsmbudx_undeclared.h"
+#include "nsmbudx_prelude.h"
+
+int __fastcall sub_603E4AB4(int a1)
+{
+  if ( !FIELD_U8(a1, 29) )
+    return 0;
+  sub_6002426C(FIELD_U32(a1, 24));
+  return 1;
+}

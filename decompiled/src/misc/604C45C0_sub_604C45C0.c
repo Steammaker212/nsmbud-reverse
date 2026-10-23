@@ -1,0 +1,16 @@
+/* sub_604C45C0
+ * address: 0x604C45C0   size: 24   group: misc
+ * Decompiled from the retail Deluxe (Switch) main module v1.0.0.
+ */
+#include "nsmbudx_field.h"
+#include "nsmbudx_data_symbols.h"
+#include "nsmbudx_prototypes.h"
+#include "nsmbudx_undeclared.h"
+#include "nsmbudx_prelude.h"
+
+int __fastcall sub_604C45C0(int result)
+{
+  FIELD_U8(result, 14169) = 0;
+  FIELD_U8(result, 5103) = 0;
+  return result;
+}

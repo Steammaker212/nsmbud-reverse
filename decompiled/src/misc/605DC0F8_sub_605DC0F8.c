@@ -1,0 +1,29 @@
+/* sub_605DC0F8
+ * address: 0x605DC0F8   size: 72   group: misc
+ * Decompiled from the retail Deluxe (Switch) main module v1.0.0.
+ */
+#include "nsmbudx_field.h"
+#include "nsmbudx_data_symbols.h"
+#include "nsmbudx_prototypes.h"
+#include "nsmbudx_undeclared.h"
+#include "nsmbudx_prelude.h"
+
+unsigned int __fastcall sub_605DC0F8(int a1)
+{
+  unsigned int result; // r0
+  _BYTE *v3; // r4
+
+  v3 = (_BYTE *)(a1 + 6336);
+  result = FIELD_S8(a1, 6336);
+  if ( result <= 3 )
+  {
+    result = *(_DWORD *)(PlayerMgr_instance + 4 * result + 32);
+    if ( result )
+    {
+      Player_ReleaseCarryableEnemy((_DWORD *)result, a1);
+      *v3 = -1;
+      return 255;
+    }
+  }
+  return result;
+}

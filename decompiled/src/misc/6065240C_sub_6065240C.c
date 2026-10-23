@@ -1,0 +1,14 @@
+/* sub_6065240C
+ * address: 0x6065240C   size: 32   group: misc
+ * Decompiled from the retail Deluxe (Switch) main module v1.0.0.
+ */
+#include "nsmbudx_field.h"
+#include "nsmbudx_data_symbols.h"
+#include "nsmbudx_prototypes.h"
+#include "nsmbudx_undeclared.h"
+#include "nsmbudx_prelude.h"
+
+int __fastcall sub_6065240C(int a1)
+{
+  return sub_60645448(a1 + 6576, a1 + 108, FIELD_F32(a1, 6832));
+}

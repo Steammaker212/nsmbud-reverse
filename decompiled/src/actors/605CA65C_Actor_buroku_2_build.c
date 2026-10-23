@@ -1,0 +1,25 @@
+/* Actor_buroku_2_build
+ * address: 0x605CA65C   size: 152   group: actors
+ * Decompiled from the retail Deluxe (Switch) main module v1.0.0.
+ */
+#include "nsmbudx_field.h"
+#include "nsmbudx_data_symbols.h"
+#include "nsmbudx_prototypes.h"
+#include "nsmbudx_undeclared.h"
+#include "nsmbudx_prelude.h"
+
+int __fastcall Actor_buroku_2_build(ActorBuildInfo *a1)
+{
+  int v2; // r4
+
+  v2 = operator_new(0x1BD8u);
+  *(_DWORD *)v2 = off_60C0A708;
+  sub_605C92C8((StateActor *)v2, a1, v2 + 6160, (void *)6);
+  *(_DWORD *)v2 = off_60C0A708;
+  FIELD_U32(v2, 6152) = 0;
+  RectCollider_ctor((RectCollider *)(v2 + 6160));
+  FIELD_U32(v2, 6160) = off_60BC30D8;
+  FIELD_U32(v2, 6816) = off_60C0A84C;
+  ActiveCollider_ctor((ActiveCollider *)(v2 + 6820));
+  return v2;
+}

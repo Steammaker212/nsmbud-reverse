@@ -1,0 +1,16 @@
+/* sub_60503590
+ * address: 0x60503590   size: 28   group: misc
+ * Decompiled from the retail Deluxe (Switch) main module v1.0.0.
+ */
+#include "nsmbudx_field.h"
+#include "nsmbudx_data_symbols.h"
+#include "nsmbudx_prototypes.h"
+#include "nsmbudx_undeclared.h"
+#include "nsmbudx_prelude.h"
+
+int __fastcall sub_60503590(int a1)
+{
+  sub_6047EBC4(a1 + 40);
+  FIELD_U8(a1, 730) = 1;
+  return 1;
+}

@@ -1,0 +1,36 @@
+/* sub_60102CA0
+ * address: 0x60102CA0   size: 248   group: misc
+ * Decompiled from the retail Deluxe (Switch) main module v1.0.0.
+ */
+#include "nsmbudx_field.h"
+#include "nsmbudx_data_symbols.h"
+#include "nsmbudx_prototypes.h"
+#include "nsmbudx_undeclared.h"
+#include "nsmbudx_prelude.h"
+
+Actor *__fastcall sub_60102CA0(int a1)
+{
+  _DWORD *v2; // r5
+  _DWORD *v3; // r6
+
+  *(_DWORD *)a1 = off_60BCF6CC;
+  v2 = (_DWORD *)(a1 + 7008);
+  FIELD_U32(a1, 9784) = EffectWrapper_vtable;
+  v3 = (_DWORD *)(a1 + 9784);
+  sub_60237560(a1 + 9784);
+  sead__IDisposer__dtor(v3);
+  sub_60026BFC((_DWORD *)(a1 + 9476));
+  ColliderBase_dtor((ColliderBase *)(a1 + 8928));
+  ShapedCollider_dtor((ColliderBase *)(a1 + 8272));
+  ActiveCollider_dtor((ActiveCollider *)(a1 + 7964));
+  ActiveCollider_dtor((ActiveCollider *)(a1 + 7660));
+  *(_DWORD *)a1 = off_60BCB52C;
+  ActiveCollider_dtor((ActiveCollider *)(a1 + 7348));
+  sub_60026BFC(v2);
+  ColliderBase_dtor((ColliderBase *)(a1 + 6336));
+  *(_DWORD *)a1 = &Enemy__vtable;
+  sub_602F36E0(a1 + 6152);
+  *(_DWORD *)a1 =&CollisionActor__vtable;
+  CollisionMgr_dtor(a1 + 648);
+  return StageActor__dtor((Actor *)a1);
+}

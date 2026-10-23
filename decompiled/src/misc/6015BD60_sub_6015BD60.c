@@ -1,0 +1,14 @@
+/* sub_6015BD60
+ * address: 0x6015BD60   size: 24   group: misc
+ * Decompiled from the retail Deluxe (Switch) main module v1.0.0.
+ */
+#include "nsmbudx_field.h"
+#include "nsmbudx_data_symbols.h"
+#include "nsmbudx_prototypes.h"
+#include "nsmbudx_undeclared.h"
+#include "nsmbudx_prelude.h"
+
+int __fastcall sub_6015BD60(int a1, int a2, int a3)
+{
+  return SE_SYS_ref_2(SoundSystem_instance, a3, 3);
+}

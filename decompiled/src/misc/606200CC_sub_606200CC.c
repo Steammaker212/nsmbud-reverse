@@ -1,0 +1,48 @@
+/* sub_606200CC
+ * address: 0x606200CC   size: 332   group: misc
+ * Decompiled from the retail Deluxe (Switch) main module v1.0.0.
+ */
+#include "nsmbudx_field.h"
+#include "nsmbudx_data_symbols.h"
+#include "nsmbudx_prototypes.h"
+#include "nsmbudx_undeclared.h"
+#include "nsmbudx_prelude.h"
+
+int __fastcall sub_606200CC(int a1)
+{
+  _DWORD *v1; // r4
+  void *ResArchiveById; // r5
+  int v3; // t1
+  void *Model2; // r6
+  int v5; // r7
+  ModelWrapper *v6; // r0
+  int result; // r0
+
+  v1 = (_DWORD *)a1;
+  ResArchiveById = (void *)Profile__getResArchiveById(*(Profile **)(a1 + 12), 0);
+  v3 = v1[1670];
+  v1 += 1670;
+  Model2 = (void *)Resource_getModel2(
+                     ResArchiveById,
+                     (sead__SafeString *)&dword_60CB3830[2 * v3 + 3],
+                     1,
+                     0,
+                     1,
+                     0,
+                     0,
+                     0,
+                     0);
+  v5 = operator_new_8DE25C(0x30u, 0, 4);
+  v6 = ModelWrapper_ctor((ModelWrapper *)v5, Model2, 1, 0, 1, 0, 0);
+  ModelWrapper_setup(v6, ResArchiveById, 0, 0);
+  *(v1 - 95) = v5;
+  SkeletalAnim_play(**(_DWORD **)(v5 + 12), (int)ResArchiveById, (const char **)&dword_60CB3830[2 * *v1 + 7]);
+  AnimationCtrl_setRepeat((ModelAnimation *)(**(_DWORD **)(*(v1 - 95) + 12) + 4), 1);
+  sub_60446088(**(_DWORD **)(*(v1 - 95) + 28), (int)ResArchiveById, &dword_60CB3830[2 * *v1 + 19]);
+  AnimationCtrl_setRepeat((ModelAnimation *)(**(_DWORD **)(*(v1 - 95) + 28) + 4), 1);
+  *(_DWORD *)(**(_DWORD **)(*(v1 - 95) + 28) + 24) = 1065353216;
+  result = **(_DWORD **)(*(v1 - 95) + 28);
+  FIELD_U32(result, 20) = 0;
+  FIELD_U32(result, 28) |= 2u;
+  return result;
+}

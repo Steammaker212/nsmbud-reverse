@@ -1,0 +1,19 @@
+/* sub_605346C4
+ * address: 0x605346C4   size: 100   group: misc
+ * Decompiled from the retail Deluxe (Switch) main module v1.0.0.
+ */
+#include "nsmbudx_field.h"
+#include "nsmbudx_data_symbols.h"
+#include "nsmbudx_prototypes.h"
+#include "nsmbudx_undeclared.h"
+#include "nsmbudx_prelude.h"
+
+int __fastcall sub_605346C4(int result)
+{
+  *(_BYTE *)(FIELD_U32(result, 52600) + 64) |= 1u;
+  *(_BYTE *)(FIELD_U32(result, 52604) + 64) &= ~1u;
+  *(_BYTE *)(FIELD_U32(result, 52608) + 64) &= ~1u;
+  *(_BYTE *)(FIELD_U32(result, 52612) + 64) &= ~1u;
+  FIELD_U8(result, 83625) = 0;
+  return result;
+}

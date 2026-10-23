@@ -1,0 +1,19 @@
+/* sub_604ED9CC
+ * address: 0x604ED9CC   size: 68   group: misc
+ * Decompiled from the retail Deluxe (Switch) main module v1.0.0.
+ */
+#include "nsmbudx_field.h"
+#include "nsmbudx_data_symbols.h"
+#include "nsmbudx_prototypes.h"
+#include "nsmbudx_undeclared.h"
+#include "nsmbudx_prelude.h"
+
+int __fastcall sub_604ED9CC(int a1, int a2)
+{
+  int result; // r0
+
+  result = sub_604741D8((_DWORD *)a1, 0, &off_60BFECE0, 0);
+  if ( a2 == 1 )
+    return (*(int (__fastcall **)(_DWORD))(***(_DWORD ***)(a1 + 3512) + 104))(**(_DWORD **)(a1 + 3512));
+  return result;
+}

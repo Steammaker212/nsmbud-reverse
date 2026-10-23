@@ -1,0 +1,177 @@
+/* TalkWindow_Sign_00_ref
+ * address: 0x6018CD98   size: 1040   group: misc
+ * Decompiled from the retail Deluxe (Switch) main module v1.0.0.
+ */
+#include "nsmbudx_field.h"
+#include "nsmbudx_data_symbols.h"
+#include "nsmbudx_prototypes.h"
+#include "nsmbudx_undeclared.h"
+#include "nsmbudx_prelude.h"
+
+_DWORD *TalkWindow_Sign_00_ref()
+{
+  _DWORD *result; // r0
+  sead__SafeString v1; // [sp+10h] [bp-28h] BYREF
+
+  dword_60C897D0 = 0;
+  dword_60C897D4 = 0;
+  dword_60C897D8 = 0;
+  dword_60C897DC = 0;
+  dword_60C897E0 = 0;
+  dword_60C897E4 = 0;
+  dword_60C897E8 = 0;
+  dword_60C897EC = 0;
+  dword_60C897F0 = 0;
+  dword_60C897F4 = 0;
+  dword_60C897F8 = 0;
+  dword_60C897FC = 0;
+  dword_60C89800 = 0;
+  dword_60C89804 = 0;
+  dword_60C89808 = 0;
+  dword_60C896FC = (int)&sead__SafeStringBase__vtable;
+  dword_60C89810 = 0;
+  dword_60C89814 = 0;
+  dword_60C89818 = 0;
+  dword_60C8981C = 0;
+  dword_60C89820 = 0;
+  dword_60C89824 = 0;
+  dword_60C89828 = 0;
+  dword_60C8982C = 0;
+  dword_60C89830 = 0;
+  dword_60C89834 = 0;
+  dword_60C89838 = 0;
+  dword_60C8983C = 0;
+  dword_60C89700 = (int)"TalkWindow_Sign_00";
+  dword_60C89840 = -1018691584;
+  dword_60C89844 = 0;
+  dword_60C89848 = 1133903872;
+  dword_60C8984C = 0;
+  dword_60C89850 = 0;
+  dword_60C89854 = 0;
+  dword_60C89858 = 0;
+  dword_60C8985C = 0;
+  dword_60C89860 = 0;
+  dword_60C89864 = 0;
+  dword_60C89868 = 0;
+  dword_60C8986C = 0;
+  dword_60C89870 = 1137180672;
+  dword_60C89874 = 0;
+  dword_60C89878 = 1137180672;
+  dword_60C8987C = 0;
+  dword_60C89880 = 0;
+  dword_60C89884 = 0;
+  dword_60C89890 = 0;
+  dword_60C89894 = -1007026176;
+  dword_60C89898 = -1006010368;
+  dword_60C8989C = 0;
+  dword_60C898A0 = -1035468800;
+  dword_60C898A4 = -1007026176;
+  dword_60C898A8 = 0;
+  dword_60C898AC = 0;
+  dword_60C898B0 = 0;
+  dword_60C898B4 = 0;
+  dword_60C898B8 = 0;
+  dword_60C898BC = 1159069696;
+  dword_60C898C0 = 0;
+  dword_60C898C4 = 0;
+  dword_60C898C8 = 0;
+  dword_60C898CC = 0;
+  dword_60C898D0 = 0;
+  dword_60C898D4 = 0;
+  dword_60C894E4 = CurrentStateID + 1;
+  dword_60C894E8 = 84;
+  dword_60C894EC = 1;
+  dword_60C894F0 = 88;
+  dword_60C894F4 = 1;
+  dword_60C894F8 = 92;
+  dword_60C894FC = 1;
+  dword_60C894E0 = (int)&off_60BD544C;
+  dword_60C89500 = (int)&NullState;
+  dword_60C89510 = 1;
+  dword_60C89514 = 100;
+  dword_60C89518 = 1;
+  dword_60C8951C = 104;
+  dword_60C89520 = 1;
+  unk_60C89504 = &off_60BD544C;
+  unk_60C89508 = CurrentStateID + 2;
+  unk_60C8950C = 96;
+  dword_60C89524 = (int)&NullState;
+  dword_60C89534 = 1;
+  dword_60C89538 = 112;
+  dword_60C8953C = 1;
+  dword_60C89540 = 116;
+  dword_60C89544 = 1;
+  unk_60C89528 = &off_60BD544C;
+  unk_60C8952C = CurrentStateID + 3;
+  unk_60C89530 = 108;
+  dword_60C89548 = (int)&NullState;
+  dword_60C89558 = 1;
+  dword_60C8955C = 124;
+  dword_60C89560 = 1;
+  dword_60C89564 = 128;
+  dword_60C89568 = 1;
+  unk_60C8954C = &off_60BD544C;
+  unk_60C89550 = CurrentStateID + 4;
+  unk_60C89554 = 120;
+  dword_60C8956C = (int)&NullState;
+  dword_60C8957C = 1;
+  dword_60C89580 = 136;
+  dword_60C89584 = 1;
+  dword_60C89588 = 140;
+  dword_60C8958C = 1;
+  unk_60C89570 = &off_60BD544C;
+  unk_60C89574 = CurrentStateID + 5;
+  unk_60C89578 = 132;
+  dword_60C89590 = (int)&NullState;
+  dword_60C895A0 = 1;
+  dword_60C895A4 = 148;
+  dword_60C895A8 = 1;
+  dword_60C895AC = 152;
+  dword_60C895B0 = 1;
+  unk_60C89594 = &off_60BD544C;
+  unk_60C89598 = CurrentStateID + 6;
+  unk_60C8959C = 144;
+  dword_60C895B4 = (int)&NullState;
+  dword_60C895C4 = 1;
+  dword_60C895C8 = 160;
+  dword_60C895CC = 1;
+  dword_60C895D0 = 164;
+  dword_60C895D4 = 1;
+  unk_60C895B8 = &off_60BD544C;
+  unk_60C895BC = CurrentStateID + 7;
+  unk_60C895C0 = 156;
+  dword_60C895D8 = (int)&NullState;
+  dword_60C895E8 = 1;
+  dword_60C895EC = 172;
+  dword_60C895F0 = 1;
+  dword_60C895F4 = 176;
+  dword_60C895F8 = 1;
+  unk_60C895DC = &off_60BD544C;
+  unk_60C895E0 = CurrentStateID + 8;
+  unk_60C895E4 = 168;
+  dword_60C895FC = (int)&NullState;
+  dword_60C8960C = 1;
+  dword_60C89610 = 184;
+  dword_60C89614 = 1;
+  dword_60C89618 = 188;
+  dword_60C8961C = 1;
+  unk_60C89600 = &off_60BD544C;
+  unk_60C89604 = CurrentStateID + 9;
+  unk_60C89608 = 180;
+  dword_60C89620 = (int)&NullState;
+  CurrentStateID += 10;
+  *(_DWORD *)algn_60C89628 = CurrentStateID;
+  *(_DWORD *)&algn_60C89628[4] = 192;
+  dword_60C89630 = 1;
+  dword_60C89634 = 196;
+  dword_60C89638 = 1;
+  dword_60C8963C = 200;
+  dword_60C89640 = 1;
+  v1.vtable = &sead__SafeStringBase__vtable;
+  dword_60C89624 = (int)&off_60BD544C;
+  dword_60C89644 = (int)&NullState;
+  v1.cstr = (char *)&unk_60ABF3D0;
+  Profile__ctor(&stru_60C89648, Actor_ibentoashisutanto_build, 0x38Eu, &v1, 0, 0);
+  *result = &off_60BD5354;
+  return result;
+}

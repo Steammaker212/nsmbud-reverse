@@ -1,0 +1,22 @@
+/* sub_603429FC
+ * address: 0x603429FC   size: 64   group: misc
+ * Decompiled from the retail Deluxe (Switch) main module v1.0.0.
+ */
+#include "nsmbudx_field.h"
+#include "nsmbudx_data_symbols.h"
+#include "nsmbudx_prototypes.h"
+#include "nsmbudx_undeclared.h"
+#include "nsmbudx_prelude.h"
+
+int __fastcall sub_603429FC(int a1)
+{
+  int result; // r0
+
+  CollisionActor__handleSpeed((CollisionActor *)a1);
+  CollisionActor__handleGravity((CollisionActor *)a1);
+  if ( FIELD_F32(a1, 116) >= 5000.0 )
+    FIELD_U32(a1, 116) = 1167867904;
+  result = FIELD_U32(a1, 164) + 0x8000000;
+  FIELD_U32(a1, 164) = result;
+  return result;
+}

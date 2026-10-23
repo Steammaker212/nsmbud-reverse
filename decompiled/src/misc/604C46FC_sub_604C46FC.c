@@ -1,0 +1,105 @@
+/* sub_604C46FC
+ * address: 0x604C46FC   size: 1016   group: misc
+ * Decompiled from the retail Deluxe (Switch) main module v1.0.0.
+ */
+#include "nsmbudx_field.h"
+#include "nsmbudx_data_symbols.h"
+#include "nsmbudx_prototypes.h"
+#include "nsmbudx_undeclared.h"
+#include "nsmbudx_prelude.h"
+
+int __fastcall sub_604C46FC(int a1)
+{
+  *(_DWORD *)a1 = off_60BFE354;
+  FIELD_U32(a1, 4) = &off_60BFE388;
+  FIELD_U32(a1, 8) = &off_60BFE398;
+  FIELD_U32(a1, 12) = &off_60BFE3BC;
+  FIELD_U32(a1, 16) = a1;
+  FIELD_U32(a1, 20) = 0;
+  StateMgr_ctor((StateMgr *)(a1 + 24), (StateExecuter *)(a1 + 8), (StateBase *)&dword_60CA2BCC);
+  FIELD_U32(a1, 4) = &off_60BFE378;
+  sub_604C4B0C(a1 + 48);
+  SE_SYS_DECIDE_ref_50208C(a1 + 4056);
+  sub_6045BF30();
+  sub_6050A308(a1 + 6540);
+  FIELD_U32(a1, 14028) = 2139095039;
+  FIELD_U32(a1, 14032) = 2139095039;
+  FIELD_U32(a1, 14036) = -8388609;
+  FIELD_U32(a1, 14040) = -8388609;
+  FIELD_U32(a1, 14044) = 2139095039;
+  FIELD_U32(a1, 14048) = 2139095039;
+  FIELD_U32(a1, 14052) = -8388609;
+  FIELD_U32(a1, 14056) = -8388609;
+  FIELD_U32(a1, 14060) = 2139095039;
+  FIELD_U32(a1, 14064) = 2139095039;
+  FIELD_U32(a1, 14068) = -8388609;
+  FIELD_U32(a1, 14072) = -8388609;
+  FIELD_U32(a1, 14076) = 2139095039;
+  FIELD_U32(a1, 14080) = 2139095039;
+  FIELD_U32(a1, 14084) = -8388609;
+  FIELD_U32(a1, 14088) = -8388609;
+  FIELD_U32(a1, 14092) = 2139095039;
+  FIELD_U32(a1, 14096) = 2139095039;
+  FIELD_U32(a1, 14100) = -8388609;
+  FIELD_U32(a1, 14104) = -8388609;
+  FIELD_U32(a1, 14108) = 2139095039;
+  FIELD_U32(a1, 14112) = 2139095039;
+  FIELD_U32(a1, 14116) = -8388609;
+  FIELD_U32(a1, 14120) = -8388609;
+  FIELD_U32(a1, 14136) = 0;
+  FIELD_U32(a1, 14132) = 0;
+  FIELD_U32(a1, 14128) = 0;
+  FIELD_U32(a1, 14124) = 0;
+  FIELD_U32(a1, 14140) = 1;
+  FIELD_U32(a1, 14144) = 0;
+  FIELD_U32(a1, 14152) = 0;
+  FIELD_U32(a1, 14156) = 0;
+  FIELD_U16(a1, 14184) = 0;
+  FIELD_U16(a1, 14182) = 0;
+  FIELD_U16(a1, 14180) = 0;
+  FIELD_U16(a1, 14178) = 0;
+  FIELD_U16(a1, 14176) = 0;
+  FIELD_U16(a1, 14174) = 0;
+  FIELD_U16(a1, 14172) = 0;
+  FIELD_U16(a1, 14170) = 0;
+  FIELD_U16(a1, 14168) = 0;
+  FIELD_U16(a1, 14166) = 0;
+  FIELD_U16(a1, 14164) = 0;
+  FIELD_U16(a1, 14162) = 0;
+  FIELD_U8(a1, 14186) = 0;
+  FIELD_U8(a1, 14187) = 1;
+  FIELD_U8(a1, 14188) = 0;
+  FIELD_U8(a1, 14189) = 0;
+  FIELD_U8(a1, 14190) = 0;
+  sub_6050D7FC(a1 + 14192);
+  sub_6050D7FC(a1 + 17796);
+  sub_6050D7FC(a1 + 21400);
+  sub_6050D7FC(a1 + 25004);
+  memset((void *)(a1 + 13756), 0, 160);
+  memset((void *)(a1 + 13932), 0, 0x5Eu);
+  FIELD_U32(a1, 14028) = 2139095039;
+  FIELD_U32(a1, 14032) = 2139095039;
+  FIELD_U32(a1, 14036) = -8388609;
+  FIELD_U32(a1, 14040) = -8388609;
+  FIELD_U32(a1, 14044) = 2139095039;
+  FIELD_U32(a1, 14048) = 2139095039;
+  FIELD_U32(a1, 14052) = -8388609;
+  FIELD_U32(a1, 14056) = -8388609;
+  FIELD_U32(a1, 14060) = 2139095039;
+  FIELD_U32(a1, 14064) = 2139095039;
+  FIELD_U32(a1, 14068) = -8388609;
+  FIELD_U32(a1, 14072) = -8388609;
+  FIELD_U32(a1, 14076) = 2139095039;
+  FIELD_U32(a1, 14080) = 2139095039;
+  FIELD_U32(a1, 14084) = -8388609;
+  FIELD_U32(a1, 14088) = -8388609;
+  FIELD_U32(a1, 14092) = 2139095039;
+  FIELD_U32(a1, 14096) = 2139095039;
+  FIELD_U32(a1, 14100) = -8388609;
+  FIELD_U32(a1, 14104) = -8388609;
+  FIELD_U32(a1, 14108) = 2139095039;
+  FIELD_U32(a1, 14112) = 2139095039;
+  FIELD_U32(a1, 14116) = -8388609;
+  FIELD_U32(a1, 14120) = -8388609;
+  return a1;
+}

@@ -1,0 +1,18 @@
+/* registerProfile_neshiexclusive_koin_58D850
+ * address: 0x6058D850   size: 108   group: misc
+ * Decompiled from the retail Deluxe (Switch) main module v1.0.0.
+ */
+#include "nsmbudx_field.h"
+#include "nsmbudx_data_symbols.h"
+#include "nsmbudx_prototypes.h"
+#include "nsmbudx_undeclared.h"
+#include "nsmbudx_prelude.h"
+
+void registerProfile_neshiexclusive_koin_58D850()
+{
+  sead__SafeString v0; // [sp+10h] [bp-10h] BYREF
+
+  v0.vtable = &sead__SafeStringBase__vtable;
+  v0.cstr = (char *)&unk_60AD1EF5;
+  Profile__ctor(&stru_60CAF48C, Actor_neshiexclusive_koin_build, 0x19Fu, &v0, &stru_60B04BB8, 8198);
+}

@@ -1,0 +1,16 @@
+/* sub_60987724
+ * address: 0x60987724   size: 20   group: misc
+ * Decompiled from the retail Deluxe (Switch) main module v1.0.0.
+ */
+#include "nsmbudx_field.h"
+#include "nsmbudx_data_symbols.h"
+#include "nsmbudx_prototypes.h"
+#include "nsmbudx_undeclared.h"
+#include "nsmbudx_prelude.h"
+
+_DWORD *__fastcall sub_60987724(_DWORD *result, _DWORD *a2)
+{
+  *result = *a2;
+  result[1] = a2[1];
+  return result;
+}

@@ -1,0 +1,146 @@
+/* sub_607A3128
+ * address: 0x607A3128   size: 1056   group: misc
+ * Decompiled from the retail Deluxe (Switch) main module v1.0.0.
+ */
+#include "nsmbudx_field.h"
+#include "nsmbudx_data_symbols.h"
+#include "nsmbudx_prototypes.h"
+#include "nsmbudx_undeclared.h"
+#include "nsmbudx_prelude.h"
+
+_DWORD *(__fastcall *sub_607A3128())(_DWORD *result)
+{
+  dword_60CC4960 = 0;
+  dword_60CC4964 = 0;
+  dword_60CC4968 = 0;
+  dword_60CC4970 = CurrentStateID + 1;
+  dword_60CC496C = (int)&off_60C25364;
+  dword_60CC4974 = 368;
+  dword_60CC4978 = 1;
+  dword_60CC497C = 372;
+  dword_60CC4980 = 1;
+  dword_60CC4984 = 376;
+  dword_60CC4988 = 1;
+  unk_60CC498C = &off_60C25364;
+  unk_60CC4990 = CurrentStateID + 2;
+  unk_60CC4994 = 524;
+  dword_60CC4998 = 1;
+  dword_60CC499C = 528;
+  dword_60CC49A0 = 1;
+  dword_60CC49A4 = 532;
+  dword_60CC49A8 = 1;
+  dword_60CC49AC = (int)&off_60C25364;
+  unk_60CC49B0 = CurrentStateID + 3;
+  unk_60CC49B4 = 536;
+  dword_60CC49B8 = 1;
+  dword_60CC49BC = 540;
+  dword_60CC49C0 = 1;
+  dword_60CC49C4 = 544;
+  dword_60CC49C8 = 1;
+  unk_60CC49CC = &off_60C25364;
+  unk_60CC49D0 = CurrentStateID + 4;
+  unk_60CC49D4 = 560;
+  dword_60CC49D8 = 1;
+  dword_60CC49DC = 564;
+  dword_60CC49E0 = 1;
+  dword_60CC49E4 = 568;
+  dword_60CC49E8 = 1;
+  unk_60CC49EC = &off_60C25364;
+  unk_60CC49F0 = CurrentStateID + 5;
+  dword_60CC49F4 = (int)sub_607A9450;
+  dword_60CC49F8 = 0;
+  dword_60CC49FC = (int)sub_607A9498;
+  dword_60CC4A00 = 0;
+  dword_60CC4A04 = (int)nullsub_5469;
+  dword_60CC4A08 = 0;
+  unk_60CC4A0C = &off_60C25364;
+  unk_60CC4A10 = CurrentStateID + 6;
+  unk_60CC4A14 = 608;
+  dword_60CC4A18 = 1;
+  dword_60CC4A1C = 612;
+  dword_60CC4A20 = 1;
+  dword_60CC4A24 = 616;
+  dword_60CC4A28 = 1;
+  dword_60CC4A30 = CurrentStateID + 7;
+  dword_60CC4A2C = (int)&off_60C25364;
+  dword_60CC4A34 = (int)&loc_607A3C38;
+  dword_60CC4A38 = 0;
+  dword_60CC4A3C = (int)&loc_607A3D4C;
+  dword_60CC4A40 = 0;
+  dword_60CC4A44 = (int)nullsub_5470;
+  dword_60CC4A48 = 0;
+  dword_60CC4A50 = CurrentStateID + 8;
+  dword_60CC4A4C = (int)&off_60C25364;
+  dword_60CC4A54 = (int)sub_607A3F74;
+  dword_60CC4A58 = 0;
+  dword_60CC4A5C = (int)sub_607A3FE8;
+  dword_60CC4A60 = 0;
+  dword_60CC4A64 = (int)nullsub_5472;
+  dword_60CC4A68 = 0;
+  dword_60CC4A70 = CurrentStateID + 9;
+  dword_60CC4A6C = (int)&off_60C25364;
+  dword_60CC4A74 = (int)sub_607A40F8;
+  dword_60CC4A78 = 0;
+  dword_60CC4A7C = (int)&loc_607A42E8;
+  dword_60CC4A80 = 0;
+  dword_60CC4A84 = (int)sub_607A42D8;
+  dword_60CC4A88 = 0;
+  dword_60CC4A90 = CurrentStateID + 10;
+  dword_60CC4A8C = (int)&off_60C25364;
+  dword_60CC4A94 = (int)sub_607A46D4;
+  dword_60CC4A98 = 0;
+  dword_60CC4A9C = (int)&loc_607A4810;
+  dword_60CC4AA0 = 0;
+  dword_60CC4AA4 = (int)sub_607A4800;
+  dword_60CC4AA8 = 0;
+  dword_60CC4AB0 = CurrentStateID + 11;
+  dword_60CC4AAC = (int)&off_60C25364;
+  dword_60CC4AB4 = (int)&loc_607A4C40;
+  dword_60CC4AB8 = 0;
+  dword_60CC4ABC = (int)&loc_607A4DCC;
+  dword_60CC4AC0 = 0;
+  dword_60CC4AC4 = (int)nullsub_5473;
+  dword_60CC4AC8 = 0;
+  dword_60CC4AD0 = CurrentStateID + 12;
+  dword_60CC4ACC = (int)&off_60C25364;
+  dword_60CC4AD4 = (int)Player_playDownSound_7A72DC;
+  dword_60CC4AD8 = 0;
+  dword_60CC4ADC = (int)sub_607A750C;
+  dword_60CC4AE0 = 0;
+  dword_60CC4AE4 = (int)sub_607A74E8;
+  dword_60CC4AE8 = 0;
+  dword_60CC4AF0 = CurrentStateID + 13;
+  dword_60CC4AEC = (int)&off_60C25364;
+  dword_60CC4AF4 = (int)Player_playDownSound_7A75EC;
+  dword_60CC4AF8 = 0;
+  dword_60CC4AFC = (int)SE_PLY_BURN_DOWN_ref;
+  dword_60CC4B00 = 0;
+  dword_60CC4B04 = (int)nullsub_5474;
+  dword_60CC4B08 = 0;
+  dword_60CC4B10 = CurrentStateID + 14;
+  dword_60CC4B0C = (int)&off_60C25364;
+  dword_60CC4B14 = (int)sub_607A7B24;
+  dword_60CC4B18 = 0;
+  dword_60CC4B1C = (int)SE_PLY_CHANGE_SMALL_ref;
+  dword_60CC4B20 = 0;
+  dword_60CC4B24 = (int)sub_607A7BB8;
+  dword_60CC4B28 = 0;
+  dword_60CC4B30 = CurrentStateID + 15;
+  dword_60CC4B2C = (int)&off_60C25364;
+  dword_60CC4B34 = (int)sub_607A5558;
+  dword_60CC4B38 = 0;
+  dword_60CC4B3C = (int)sub_607A55B0;
+  dword_60CC4B40 = 0;
+  dword_60CC4B44 = (int)sub_607A5594;
+  dword_60CC4B48 = 0;
+  CurrentStateID += 16;
+  dword_60CC4B50 = CurrentStateID;
+  dword_60CC4B4C = (int)&off_60C25364;
+  dword_60CC4B54 = (int)sub_6079D174;
+  dword_60CC4B58 = 0;
+  dword_60CC4B5C = (int)sub_6079D220;
+  dword_60CC4B60 = 0;
+  dword_60CC4B64 = (int)sub_6079D1C0;
+  dword_60CC4B68 = 0;
+  return sub_6079D1C0;
+}

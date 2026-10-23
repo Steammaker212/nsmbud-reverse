@@ -1,0 +1,53 @@
+/* sub_608D3940
+ * address: 0x608D3940   size: 128   group: misc
+ * Decompiled from the retail Deluxe (Switch) main module v1.0.0.
+ */
+#include "nsmbudx_field.h"
+#include "nsmbudx_data_symbols.h"
+#include "nsmbudx_prototypes.h"
+#include "nsmbudx_undeclared.h"
+#include "nsmbudx_prelude.h"
+
+int __fastcall sub_608D3940(int result)
+{
+  unsigned __int8 *v1; // r4
+  bool v2; // zf
+  int *v3; // r0
+
+  if ( !FIELD_U32(result, 1344) )
+  {
+    v1 = (unsigned __int8 *)(result - 164);
+    result = *(unsigned __int8 *)(result - 128);
+    v2 = result == 0;
+    if ( result )
+    {
+      result = v1[37];
+      v2 = result == 0;
+    }
+    if ( !v2 )
+    {
+      result = v1[38];
+      if ( !v1[38] )
+      {
+        result = sub_608D348C((int)v1);
+        if ( result == 1 )
+        {
+          v1[39] = 1;
+          if ( v1[1518] )
+          {
+            v3 = sub_608C3C60();
+            sub_608C411C((int)v3, (int)(v1 + 164));
+            v1[1518] = 0;
+          }
+          result = v1[37];
+          if ( v1[37] )
+          {
+            v1[37] = 0;
+            return 0;
+          }
+        }
+      }
+    }
+  }
+  return result;
+}

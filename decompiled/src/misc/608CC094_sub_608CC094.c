@@ -1,0 +1,20 @@
+/* sub_608CC094
+ * address: 0x608CC094   size: 84   group: misc
+ * Decompiled from the retail Deluxe (Switch) main module v1.0.0.
+ */
+#include "nsmbudx_field.h"
+#include "nsmbudx_data_symbols.h"
+#include "nsmbudx_prototypes.h"
+#include "nsmbudx_undeclared.h"
+#include "nsmbudx_prelude.h"
+
+void __fastcall sub_608CC094(_DWORD *a1)
+{
+  *a1 = off_60C5B420;
+  a1[41] = off_60C5B454;
+  a1[44] = off_60C5B468;
+  sub_608CC238(a1);
+  *a1 = off_60C5B7B8;
+  nn__os__FinalizeEvent(a1 + 1);
+  operator_delete(a1);
+}

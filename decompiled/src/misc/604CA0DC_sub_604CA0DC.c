@@ -1,0 +1,18 @@
+/* sub_604CA0DC
+ * address: 0x604CA0DC   size: 68   group: misc
+ * Decompiled from the retail Deluxe (Switch) main module v1.0.0.
+ */
+#include "nsmbudx_field.h"
+#include "nsmbudx_data_symbols.h"
+#include "nsmbudx_prototypes.h"
+#include "nsmbudx_undeclared.h"
+#include "nsmbudx_prelude.h"
+
+int __fastcall sub_604CA0DC(int a1)
+{
+  _DWORD v3[4]; // [sp+0h] [bp-10h] BYREF
+
+  v3[0] = &sead__SafeStringBase__vtable;
+  v3[1] = sub_604DABE0(3);
+  return sub_604741D8((_DWORD *)(a1 + 40), 4u, v3, 0);
+}

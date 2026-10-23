@@ -1,0 +1,143 @@
+/* sub_60759C20
+ * address: 0x60759C20   size: 944   group: misc
+ * Decompiled from the retail Deluxe (Switch) main module v1.0.0.
+ */
+#include "nsmbudx_field.h"
+#include "nsmbudx_data_symbols.h"
+#include "nsmbudx_prototypes.h"
+#include "nsmbudx_undeclared.h"
+#include "nsmbudx_prelude.h"
+
+int sub_60759C20()
+{
+  dword_60CBEF90 = (int)&sead__SafeStringBase__vtable;
+  unk_60CBEF94 = "MarioMdl";
+  unk_60CBEF98 = &sead__SafeStringBase__vtable;
+  dword_60CBEF9C = (int)"CommonAnm";
+  dword_60CBEFA0 = (int)&sead__SafeStringBase__vtable;
+  dword_60CBEFA4 = (int)"MB_model";
+  dword_60CBEFA8 = (int)&sead__SafeStringBase__vtable;
+  dword_60CBEFAC = (int)"SMB_model";
+  dword_60CBEFB0 = (int)&sead__SafeStringBase__vtable;
+  dword_60CBEFB4 = (int)"PLMB_model";
+  dword_60CBEFB8 = (int)&sead__SafeStringBase__vtable;
+  dword_60CBEFBC = (int)"PMB_model";
+  dword_60CBEFC0 = (int)&sead__SafeStringBase__vtable;
+  dword_60CBEFC4 = (int)"MMB_model";
+  dword_60CBEFC8 = (int)&sead__SafeStringBase__vtable;
+  dword_60CBEFCC = (int)&byte_60ABC94D;
+  dword_60CBEFD0 = (int)&sead__SafeStringBase__vtable;
+  dword_60CBEFD4 = (int)"MH_model";
+  dword_60CBEFD8 = (int)&sead__SafeStringBase__vtable;
+  dword_60CBEFDC = (int)"SMH_model";
+  dword_60CBEFE0 = (int)&sead__SafeStringBase__vtable;
+  dword_60CBEFE4 = (int)"PLMH_model";
+  dword_60CBEFE8 = (int)&sead__SafeStringBase__vtable;
+  dword_60CBEFEC = (int)"PMH_model";
+  dword_60CBEFF0 = (int)&sead__SafeStringBase__vtable;
+  unk_60CBEFF4 = "MMH_model";
+  unk_60CBEFF8 = &sead__SafeStringBase__vtable;
+  unk_60CBEFFC = &byte_60ABC94D;
+  dword_60CBF000 = 1095761920;
+  dword_60CBF004 = 1092616192;
+  dword_60CBF008 = 1095761920;
+  dword_60CBF00C = 1095761920;
+  dword_60CBF010 = 1095761920;
+  dword_60CBF014 = 1065353216;
+  dword_60CBF018 = (int)&sead__SafeStringBase__vtable;
+  dword_60CBF01C = (int)"LuigiMdl";
+  dword_60CBF020 = (int)&sead__SafeStringBase__vtable;
+  dword_60CBF024 = (int)"CommonAnm";
+  dword_60CBF028 = (int)&sead__SafeStringBase__vtable;
+  dword_60CBF02C = (int)"LB_model";
+  dword_60CBF030 = (int)&sead__SafeStringBase__vtable;
+  dword_60CBF034 = (int)"SLB_model";
+  dword_60CBF038 = (int)&sead__SafeStringBase__vtable;
+  dword_60CBF03C = (int)"PLLB_model";
+  dword_60CBF040 = (int)&sead__SafeStringBase__vtable;
+  dword_60CBF044 = (int)"PLB_model";
+  dword_60CBF048 = (int)&sead__SafeStringBase__vtable;
+  unk_60CBF04C = "MLB_model";
+  unk_60CBF050 = &sead__SafeStringBase__vtable;
+  unk_60CBF054 = &byte_60ABC94D;
+  dword_60CBF058 = (int)&sead__SafeStringBase__vtable;
+  dword_60CBF05C = (int)"LH_model";
+  dword_60CBF060 = (int)&sead__SafeStringBase__vtable;
+  dword_60CBF064 = (int)"SLH_model";
+  dword_60CBF068 = (int)&sead__SafeStringBase__vtable;
+  dword_60CBF06C = (int)"PLLH_model";
+  dword_60CBF070 = (int)&sead__SafeStringBase__vtable;
+  dword_60CBF074 = (int)"PLH_model";
+  dword_60CBF078 = (int)&sead__SafeStringBase__vtable;
+  unk_60CBF07C = "MLH_model";
+  unk_60CBF080 = &sead__SafeStringBase__vtable;
+  unk_60CBF084 = &byte_60ABC94D;
+  dword_60CBF088 = 1096810496;
+  dword_60CBF08C = 1093664768;
+  dword_60CBF090 = 1096810496;
+  dword_60CBF094 = 1096810496;
+  dword_60CBF098 = 1096810496;
+  dword_60CBF09C = 1065353216;
+  sub_60000288();
+  dword_60CBF0B0 = (int)&sead__SafeStringBase__vtable;
+  unk_60CBF0B4 = "MC_model";
+  unk_60CBF0B8 = &sead__SafeStringBase__vtable;
+  dword_60CBF0BC = (int)"SMC_model";
+  dword_60CBF0C0 = (int)&sead__SafeStringBase__vtable;
+  dword_60CBF0C4 = (int)"LC_model";
+  dword_60CBF0C8 = (int)&sead__SafeStringBase__vtable;
+  dword_60CBF0CC = (int)"SLC_model";
+  sub_60000288();
+  dword_60CBF0D0 = (int)&sead__SafeStringBase__vtable;
+  dword_60CBF0D4 = (int)"PH_switch";
+  dword_60CBF0D8 = (int)&sead__SafeStringBase__vtable;
+  dword_60CBF0DC = (int)"PH_switch";
+  dword_60CBF0E0 = (int)&sead__SafeStringBase__vtable;
+  dword_60CBF0E4 = (int)"PH_switch";
+  dword_60CBF0E8 = (int)&sead__SafeStringBase__vtable;
+  dword_60CBF0EC = (int)"PH_switch";
+  dword_60CBF0F0 = (int)&sead__SafeStringBase__vtable;
+  unk_60CBF0F4 = "MMH_model_switch";
+  unk_60CBF0F8 = &sead__SafeStringBase__vtable;
+  unk_60CBF0FC = &byte_60ABC94D;
+  sub_60000288();
+  dword_60CBF100 = (int)&sead__SafeStringBase__vtable;
+  dword_60CBF104 = (int)"PB_switch";
+  dword_60CBF108 = (int)&sead__SafeStringBase__vtable;
+  dword_60CBF10C = (int)"PB_switch";
+  dword_60CBF110 = (int)&sead__SafeStringBase__vtable;
+  dword_60CBF114 = (int)"PB_switch";
+  dword_60CBF118 = (int)&sead__SafeStringBase__vtable;
+  dword_60CBF11C = (int)"PB_switch";
+  dword_60CBF120 = (int)&sead__SafeStringBase__vtable;
+  unk_60CBF124 = "MMB_model_switch";
+  unk_60CBF128 = &sead__SafeStringBase__vtable;
+  unk_60CBF12C = &byte_60ABC94D;
+  sub_60000288();
+  dword_60CBF130 = (int)&sead__SafeStringBase__vtable;
+  dword_60CBF134 = (int)"PH_switch";
+  dword_60CBF138 = (int)&sead__SafeStringBase__vtable;
+  dword_60CBF13C = (int)"PH_switch";
+  dword_60CBF140 = (int)&sead__SafeStringBase__vtable;
+  dword_60CBF144 = (int)"PH_switch";
+  dword_60CBF148 = (int)&sead__SafeStringBase__vtable;
+  dword_60CBF14C = (int)"PH_switch";
+  dword_60CBF150 = (int)&sead__SafeStringBase__vtable;
+  unk_60CBF154 = "MLH_model_switch";
+  unk_60CBF158 = &sead__SafeStringBase__vtable;
+  unk_60CBF15C = &byte_60ABC94D;
+  sub_60000288();
+  unk_60CBF160 = &sead__SafeStringBase__vtable;
+  unk_60CBF164 = "PB_switch";
+  dword_60CBF168 = (int)&sead__SafeStringBase__vtable;
+  dword_60CBF16C = (int)"PB_switch";
+  dword_60CBF170 = (int)&sead__SafeStringBase__vtable;
+  dword_60CBF174 = (int)"PB_switch";
+  dword_60CBF178 = (int)&sead__SafeStringBase__vtable;
+  dword_60CBF17C = (int)"PB_switch";
+  dword_60CBF180 = (int)&sead__SafeStringBase__vtable;
+  unk_60CBF184 = "MLB_model_switch";
+  unk_60CBF188 = &sead__SafeStringBase__vtable;
+  unk_60CBF18C = &byte_60ABC94D;
+  return sub_60000288();
+}

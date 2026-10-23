@@ -1,0 +1,40 @@
+/* Actor_buroku_child_2_build
+ * address: 0x605FEBB4   size: 264   group: actors
+ * Decompiled from the retail Deluxe (Switch) main module v1.0.0.
+ */
+#include "nsmbudx_field.h"
+#include "nsmbudx_data_symbols.h"
+#include "nsmbudx_prototypes.h"
+#include "nsmbudx_undeclared.h"
+#include "nsmbudx_prelude.h"
+
+int __fastcall Actor_buroku_child_2_build(ActorBuildInfo *a1)
+{
+  int v2; // r4
+
+  v2 = operator_new(0x1B40u);
+  MultiStateActor__ctor((MultiStateActor *)v2, a1);
+  *(_DWORD *)v2 = off_60C0E8F0;
+  RectCollider_ctor((RectCollider *)(v2 + 6168));
+  FIELD_U32(v2, 6168) = off_60BC30D8;
+  FIELD_U16(v2, 6828) = 0;
+  FIELD_U32(v2, 6824) = 0;
+  memset((void *)(v2 + 6104), 0, 60);
+  memset(v2 + 6832, 0, 80);
+  FIELD_U32(v2, 6912) = -1082130432;
+  FIELD_U32(v2, 6916) = -1082130432;
+  FIELD_U32(v2, 6920) = -1082130432;
+  FIELD_U32(v2, 6924) = -1082130432;
+  FIELD_U32(v2, 6928) = -1082130432;
+  FIELD_U32(v2, 6932) = -1082130432;
+  FIELD_U32(v2, 6936) = -1082130432;
+  FIELD_U32(v2, 6940) = -1082130432;
+  FIELD_U32(v2, 6944) = -1082130432;
+  FIELD_U32(v2, 6948) = -1082130432;
+  FIELD_U32(v2, 6952) = -1082130432;
+  FIELD_U32(v2, 6956) = -1082130432;
+  FIELD_U32(v2, 6960) = -1082130432;
+  FIELD_U32(v2, 6964) = -1082130432;
+  FIELD_U32(v2, 6968) = -1082130432;
+  return v2;
+}

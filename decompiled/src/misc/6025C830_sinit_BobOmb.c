@@ -1,0 +1,174 @@
+/* sinit_BobOmb
+ * address: 0x6025C830   size: 1388   group: misc
+ * Decompiled from the retail Deluxe (Switch) main module v1.0.0.
+ */
+#include "nsmbudx_field.h"
+#include "nsmbudx_data_symbols.h"
+#include "nsmbudx_prototypes.h"
+#include "nsmbudx_undeclared.h"
+#include "nsmbudx_prelude.h"
+
+int sinit_BobOmb()
+{
+  int result; // r0
+  sead__SafeString v1; // [sp+10h] [bp-28h] BYREF
+
+  dword_60C8E374 = 0;
+  dword_60C8E378 = 0;
+  dword_60C8E37C = 0;
+  v1.vtable = &sead__SafeStringBase__vtable;
+  v1.cstr = (char *)&unk_60AC297B;
+  Profile__ctor(&stru_60C8E114, BobOmb_create, 0x209u, &v1, &stru_60AFD890, 18);
+  BobOmb_StateID_Walk._.id = CurrentStateID + 1;
+  BobOmb_StateID_Walk._.vtable = &off_60BDB258;
+  LODWORD(BobOmb_StateID_Walk.beginFunc) = sub_6025A030;
+  HIDWORD(BobOmb_StateID_Walk.beginFunc) = 0;
+  LODWORD(BobOmb_StateID_Walk.executeFunc) = &loc_6025A11C;
+  HIDWORD(BobOmb_StateID_Walk.executeFunc) = 0;
+  LODWORD(BobOmb_StateID_Walk.endFunc) = nullsub_3104;
+  HIDWORD(BobOmb_StateID_Walk.endFunc) = 0;
+  BobOmb_StateID_Turn._.vtable = &off_60BDB258;
+  BobOmb_StateID_Turn._.id = CurrentStateID + 2;
+  LODWORD(BobOmb_StateID_Turn.beginFunc) = sub_6025A2DC;
+  HIDWORD(BobOmb_StateID_Turn.beginFunc) = 0;
+  LODWORD(BobOmb_StateID_Turn.executeFunc) = &loc_6025A2F4;
+  HIDWORD(BobOmb_StateID_Turn.executeFunc) = 0;
+  LODWORD(BobOmb_StateID_Turn.endFunc) = nullsub_3105;
+  HIDWORD(BobOmb_StateID_Turn.endFunc) = 0;
+  BobOmb_StateID_EnemyGenerator._.vtable = &off_60BDB258;
+  BobOmb_StateID_EnemyGenerator._.id = CurrentStateID + 3;
+  LODWORD(BobOmb_StateID_EnemyGenerator.beginFunc) = sub_6025A430;
+  HIDWORD(BobOmb_StateID_EnemyGenerator.beginFunc) = 0;
+  LODWORD(BobOmb_StateID_EnemyGenerator.executeFunc) = sub_6025A60C;
+  HIDWORD(BobOmb_StateID_EnemyGenerator.executeFunc) = 0;
+  LODWORD(BobOmb_StateID_EnemyGenerator.endFunc) = sub_6025A658;
+  HIDWORD(BobOmb_StateID_EnemyGenerator.endFunc) = 0;
+  stru_60C8E18C._.vtable = &off_60BDB258;
+  stru_60C8E18C._.id = CurrentStateID + 4;
+  LODWORD(stru_60C8E18C.beginFunc) = sub_6025A6AC;
+  HIDWORD(stru_60C8E18C.beginFunc) = 0;
+  LODWORD(stru_60C8E18C.executeFunc) = nullsub_3106;
+  HIDWORD(stru_60C8E18C.executeFunc) = 0;
+  LODWORD(stru_60C8E18C.endFunc) = sub_6025A74C;
+  HIDWORD(stru_60C8E18C.endFunc) = 0;
+  BobOmb_StateID_Cannon._.vtable = &off_60BDB258;
+  BobOmb_StateID_Cannon._.id = CurrentStateID + 5;
+  LODWORD(BobOmb_StateID_Cannon.beginFunc) = sub_6025A764;
+  HIDWORD(BobOmb_StateID_Cannon.beginFunc) = 0;
+  LODWORD(BobOmb_StateID_Cannon.executeFunc) = &loc_6025A928;
+  HIDWORD(BobOmb_StateID_Cannon.executeFunc) = 0;
+  LODWORD(BobOmb_StateID_Cannon.endFunc) = sub_6025AC44;
+  HIDWORD(BobOmb_StateID_Cannon.endFunc) = 0;
+  stru_60C8E1CC._.vtable = &off_60BDB258;
+  stru_60C8E1CC._.id = CurrentStateID + 6;
+  LODWORD(stru_60C8E1CC.beginFunc) = SE_EMY_BH_BOMB_ref;
+  HIDWORD(stru_60C8E1CC.beginFunc) = 0;
+  LODWORD(stru_60C8E1CC.executeFunc) = &loc_6025AFE8;
+  HIDWORD(stru_60C8E1CC.executeFunc) = 0;
+  LODWORD(stru_60C8E1CC.endFunc) = nullsub_3107;
+  HIDWORD(stru_60C8E1CC.endFunc) = 0;
+  stru_60C8E1EC._._.id = CurrentStateID + 7;
+  stru_60C8E1EC._.beginFunc = 0x100000294LL;
+  stru_60C8E1EC._.executeFunc = 0x100000298LL;
+  stru_60C8E1EC._.endFunc = 0x10000029CLL;
+  stru_60C8E1EC._._.vtable = &off_60BDB26C;
+  stru_60C8E1EC.baseState = (StateBase *)&stru_60C8EA70;
+  BobOmb_StateID_BowserJrW7_1._.id = CurrentStateID + 8;
+  BobOmb_StateID_BowserJrW7_1._.vtable = &off_60BDB258;
+  LODWORD(BobOmb_StateID_BowserJrW7_1.beginFunc) = sub_6025B1A8;
+  HIDWORD(BobOmb_StateID_BowserJrW7_1.beginFunc) = 0;
+  LODWORD(BobOmb_StateID_BowserJrW7_1.executeFunc) = &loc_6025B3B8;
+  HIDWORD(BobOmb_StateID_BowserJrW7_1.executeFunc) = 0;
+  LODWORD(BobOmb_StateID_BowserJrW7_1.endFunc) = sub_6025B990;
+  HIDWORD(BobOmb_StateID_BowserJrW7_1.endFunc) = 0;
+  BobOmb_StateID_BowserJrW7_2._.id = CurrentStateID + 9;
+  BobOmb_StateID_BowserJrW7_2._.vtable = &off_60BDB258;
+  LODWORD(BobOmb_StateID_BowserJrW7_2.beginFunc) = sub_6025B9D4;
+  HIDWORD(BobOmb_StateID_BowserJrW7_2.beginFunc) = 0;
+  LODWORD(BobOmb_StateID_BowserJrW7_2.executeFunc) = &loc_6025BBD8;
+  HIDWORD(BobOmb_StateID_BowserJrW7_2.executeFunc) = 0;
+  LODWORD(BobOmb_StateID_BowserJrW7_2.endFunc) = sub_6025C02C;
+  HIDWORD(BobOmb_StateID_BowserJrW7_2.endFunc) = 0;
+  BobOmb_StateID_Kicked._._.id = CurrentStateID + 10;
+  BobOmb_StateID_Kicked._.beginFunc = 0x1000002ACLL;
+  BobOmb_StateID_Kicked._.executeFunc = 0x1000002B0LL;
+  BobOmb_StateID_Kicked._.endFunc = 0x1000002B4LL;
+  BobOmb_StateID_Kicked._._.vtable = &off_60BDB26C;
+  BobOmb_StateID_Kicked.baseState = (StateBase *)&stru_60C8EAB8;
+  dword_60C8E278 = CurrentStateID + 11;
+  dword_60C8E27C = 672;
+  dword_60C8E280 = 1;
+  dword_60C8E284 = 676;
+  dword_60C8E288 = 1;
+  dword_60C8E28C = 680;
+  dword_60C8E290 = 1;
+  dword_60C8E274 = (int)&off_60BDB26C;
+  dword_60C8E294 = (int)&dword_60C8EA94;
+  dword_60C8E29C = CurrentStateID + 12;
+  dword_60C8E2A0 = 456;
+  dword_60C8E2A4 = 1;
+  dword_60C8E2A8 = 460;
+  dword_60C8E2AC = 1;
+  dword_60C8E2B0 = 464;
+  dword_60C8E2B4 = 1;
+  dword_60C8E298 = (int)&off_60BDB26C;
+  dword_60C8E2B8 = (int)&stru_60C90710;
+  dword_60C8E2C4 = 612;
+  dword_60C8E2C8 = 1;
+  dword_60C8E2CC = 616;
+  dword_60C8E2D0 = 1;
+  dword_60C8E2D4 = 620;
+  dword_60C8E2D8 = 1;
+  unk_60C8E2BC = &off_60BDB26C;
+  unk_60C8E2C0 = CurrentStateID + 13;
+  dword_60C8E35C = (int)&sead__SafeStringBase__vtable;
+  dword_60C8E2DC = (int)&Enemy_StateId_Frozen;
+  dword_60C8E2E4 = CurrentStateID + 14;
+  dword_60C8E2E0 = (int)&off_60BDB258;
+  dword_60C8E2E8 = (int)SE_EMY_KAME_KERU_ref;
+  dword_60C8E2EC = 0;
+  dword_60C8E2F0 = (int)sub_6025C194;
+  dword_60C8E2F4 = 0;
+  dword_60C8E2F8 = (int)sub_6025C3F0;
+  dword_60C8E2FC = 0;
+  dword_60C8E304 = CurrentStateID + 15;
+  dword_60C8E300 = (int)&off_60BDB258;
+  dword_60C8E308 = (int)sub_6025C400;
+  dword_60C8E30C = 0;
+  dword_60C8E310 = (int)&loc_6025C438;
+  dword_60C8E314 = 0;
+  dword_60C8E318 = (int)nullsub_3108;
+  dword_60C8E31C = 0;
+  CurrentStateID += 16;
+  dword_60C8E324 = CurrentStateID;
+  BobOmb_StateID_Kameck = (int)&off_60BDB258;
+  dword_60C8E328 = (int)sub_6025C6F0;
+  dword_60C8E32C = 0;
+  dword_60C8E330 = (int)nullsub_3109;
+  dword_60C8E334 = 0;
+  dword_60C8E338 = (int)sub_6025C7C0;
+  dword_60C8E33C = 0;
+  dword_60C8E360 = (int)"bombhei";
+  dword_60C8E364 = (int)&sead__SafeStringBase__vtable;
+  dword_60C8E368 = (int)"bombhei";
+  dword_60C8E3D0 = (int)&sead__SafeStringBase__vtable;
+  *(_DWORD *)algn_60C8E3D4 = "walk";
+  dword_60C8E3D8 = 1;
+  dword_60C8E3DC = 1082130432;
+  dword_60C8E3E0 = (int)&sead__SafeStringBase__vtable;
+  dword_60C8E3E4 = (int)"stop";
+  dword_60C8E3E8 = 1;
+  dword_60C8E3EC = 1082130432;
+  dword_60C8E3F0 = (int)&sead__SafeStringBase__vtable;
+  unk_60C8E3F4 = "carry";
+  dword_60C8E3F8 = 1;
+  unk_60C8E3FC = 0;
+  unk_60C8E400 = &sead__SafeStringBase__vtable;
+  unk_60C8E404 = "frozen";
+  dword_60C8E408 = 1;
+  *(_DWORD *)algn_60C8E40C = 0;
+  result = sub_60000288();
+  dword_60C8E36C = (int)&sead__SafeStringBase__vtable;
+  dword_60C8E370 = (int)"bombhei";
+  return result;
+}

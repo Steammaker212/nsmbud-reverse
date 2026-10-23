@@ -1,0 +1,16 @@
+/* sub_608F2924
+ * address: 0x608F2924   size: 36   group: misc
+ * Decompiled from the retail Deluxe (Switch) main module v1.0.0.
+ */
+#include "nsmbudx_field.h"
+#include "nsmbudx_data_symbols.h"
+#include "nsmbudx_prototypes.h"
+#include "nsmbudx_undeclared.h"
+#include "nsmbudx_prelude.h"
+
+int __fastcall sub_608F2924(int result)
+{
+  if ( FIELD_U8(result, 365) )
+    return dword_60CC7300(FIELD_U32(result, 24), 5);
+  return result;
+}

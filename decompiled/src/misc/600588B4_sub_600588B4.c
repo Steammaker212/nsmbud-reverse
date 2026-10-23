@@ -1,0 +1,38 @@
+/* sub_600588B4
+ * address: 0x600588B4   size: 304   group: misc
+ * Decompiled from the retail Deluxe (Switch) main module v1.0.0.
+ */
+#include "nsmbudx_field.h"
+#include "nsmbudx_data_symbols.h"
+#include "nsmbudx_prototypes.h"
+#include "nsmbudx_undeclared.h"
+#include "nsmbudx_prelude.h"
+
+bool __fastcall sub_600588B4(int a1, int *a2)
+{
+  char v2; // r12
+
+  if ( ((unsigned int)dword_60C80B30 & ~(1610975436 << v2) & 1) == 0 && _cxa_guard_acquire(dword_60C80B30) )
+  {
+    dword_60C80B2C = (int)&off_60BC4B48;
+    _cxa_guard_release(dword_60C80B30);
+  }
+  if ( a2 == &dword_60C80B2C )
+    return 1;
+  if ( ((unsigned int)dword_60C80A14 & ~(1610975528 << v2) & 1) == 0 && _cxa_guard_acquire(dword_60C80A14) )
+  {
+    dword_60C80A10 = (int)&off_60BC45B8;
+    _cxa_guard_release(dword_60C80A14);
+  }
+  if ( a2 == &dword_60C80A10 )
+    return 1;
+  if ( ((unsigned int)&dword_60C8057C & ~(1610975620 << v2) & 1) == 0 )
+  {
+    if ( _cxa_guard_acquire(&dword_60C8057C) )
+    {
+      dword_60C80578 = (int)&off_60BC3768;
+      _cxa_guard_release(&dword_60C8057C);
+    }
+  }
+  return a2 == &dword_60C80578 || sub_6004F7C8(a2);
+}

@@ -1,0 +1,15 @@
+/* SE_SYS_DIALOGUE_OUT_AUTO_ref
+ * address: 0x604E34D0   size: 48   group: misc
+ * Decompiled from the retail Deluxe (Switch) main module v1.0.0.
+ */
+#include "nsmbudx_field.h"
+#include "nsmbudx_data_symbols.h"
+#include "nsmbudx_prototypes.h"
+#include "nsmbudx_undeclared.h"
+#include "nsmbudx_prelude.h"
+
+int __fastcall SE_SYS_DIALOGUE_OUT_AUTO_ref(int a1)
+{
+  sub_60473DE4((_DWORD *)(a1 + 40), 0, &dword_60CA56C4, 0);
+  return sub_60478680((int)"SE_SYS_DIALOGUE_OUT_AUTO", 9);
+}

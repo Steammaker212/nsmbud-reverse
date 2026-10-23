@@ -1,0 +1,14 @@
+/* sub_601B09EC
+ * address: 0x601B09EC   size: 16   group: misc
+ * Decompiled from the retail Deluxe (Switch) main module v1.0.0.
+ */
+#include "nsmbudx_field.h"
+#include "nsmbudx_data_symbols.h"
+#include "nsmbudx_prototypes.h"
+#include "nsmbudx_undeclared.h"
+#include "nsmbudx_prelude.h"
+
+StateMethodExecuter *__fastcall sub_601B09EC(int a1)
+{
+  return StateMgr__changeState((StateMgr *)(a1 + 284), (StateBase *)&dword_60C8A80C);
+}
