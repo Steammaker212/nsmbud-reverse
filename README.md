@@ -44,14 +44,32 @@ file_off = VA - 0x60000288 + 0x6e4
 |---|---|
 | `docs/HAMMER_POWERUP_REPORT.md` | **Main writeup.** Custom Hammer power-up: hook point, actor, collision, and the full Approach A / Approach B patch plans. |
 | `docs/NOTES.md` | Broad Deluxe binary survey — why the module is ARM32, the actor system, the player state machine, and the model pipeline. |
+| `docs/CORPUS_STATUS.md` | **Measured decompilation status** — how many functions exist, how many are named, how many compile, and what the rest are blocked on. |
 | `docs/section7_new.md` | Source text for report §7 (Approach B). |
 | `docs/PState_*.txt` | Raw player-state / vtable dumps. |
-| `decompiled/` | 369 IDA decompiled functions from the Deluxe binary. Filenames carry the address, e.g. `FB_607AABA0.c` = `createFireBall`. |
+| `decompiled/src/` | **The decompiled corpus**: 44,049 C translation units, one per function, grouped by subsystem. 83.4% compile clean under `clang -std=gnu89`. |
+| `decompiled/src/include/` | The generated headers the corpus shares: prototypes for every function, data symbols, recovered struct layouts, and the `FIELD_U*` access macros. |
+| `decompiled/` (loose files) | 369 hand-picked IDA decompiled functions from earlier passes. Filenames carry the address, e.g. `FB_607AABA0.c` = `createFireBall`. |
+| `scripts/pipeline/` | The offline pipeline that produces `decompiled/src/` from the IDA database. See its `README.md`. |
 | `scripts/` | Python tooling: ELF mapping, rebasing, byte-diff patch application, and verification. |
 | `data/` | Exported JSON/CSV: function inventory, actor catalog, profile registry, xref sets. |
+| `data/recovered/` | Measured struct-member evidence for the functions not yet in the corpus. |
 | `logs/` | Raw IDA plugin output. |
 
-### Naming convention in `decompiled/`
+### Naming convention in the generated corpus
+
+| Form | Meaning |
+|---|---|
+| `Class__method` | Member of `Class`, name from the database |
+| `Class__ctor` / `Class__dtor` | Constructor / destructor |
+| `Class__method_const` | Const member function |
+| `Class__method_XXXX` | Member whose only distinguishing feature is its address suffix |
+| `sub_XXXXXXXX` | No evidence for a better name yet; the address is the identity |
+
+A function keeps its `sub_` name until there is evidence for something better.
+See `decompiled/NAMING.md`.
+
+### Naming convention in the loose `decompiled/` files
 
 | Prefix | Meaning |
 |---|---|
@@ -60,8 +78,7 @@ file_off = VA - 0x60000288 + 0x6e4
 | `FA_`, `FA2_`, `FB_`, `FI_`, `FI2_`, `FM_`, `FM2_`, `FP_`, `FQ_`, `FS_`, `FV_`, `FW_`, `FX_`, `FY_`, `FZ_` | Related-cluster groups |
 | `Player*`, `Enemy*`, `Hammer*`, `Fire*`, `StateMgr*`, `CollisionMgr*` | Named after identification |
 
-Every file carries `/* line: N, address: 0x... */` markers, so any line maps
-back to an exact VA.
+Every file carries its address, so any line maps back to an exact VA.
 
 ---
 
