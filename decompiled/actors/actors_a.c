@@ -60002,7 +60002,7 @@ sub_6022C360__LABEL_122:
   
     v3 = *(_DWORD *)(result + 4);
     if ( v3 == 2 )
-      return (*(int (__fastcall **)(_DWORD, const char *, int, _DWORD, _DWORD))(*MEMORY[0xC7F534] + 40))(
+      return (*(int (__fastcall **)(_DWORD, const char *, int, _DWORD, _DWORD))(*(uint32_t *)(uintptr_t)MEMORY[0xC7F534] + 40))(
                MEMORY[0xC7F534],
                "SE_EMY_TOUCH_BH_HIBANA",
                a3,
@@ -77746,7 +77746,7 @@ sub_6022C360__LABEL_122:
  * ============================================================================ */
   int __fastcall sub_60278648(int a1, int a2, int a3)
   {
-    (*(void (__fastcall **)(_DWORD, const char *, int, int, _DWORD))(*MEMORY[0xC7F530] + 40))(
+    (*(void (__fastcall **)(_DWORD, const char *, int, int, _DWORD))(*(uint32_t *)(uintptr_t)MEMORY[0xC7F530] + 40))(
       MEMORY[0xC7F530],
       "SE_SYS_CMN_TOUCH",
       a3,

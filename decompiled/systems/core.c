@@ -9695,7 +9695,7 @@ int _nnDetailNintendoSdkRuntimeObjectFileRefer()
     if ( (struct sead_IDisposer *)MEMORY[0xC7B460] == a1 )
     {
       MEMORY[0xC7B460] = 0;
-      (*(void (__fastcall **)(_DWORD))*MEMORY[0xC7B464])(MEMORY[0xC7B464]);
+      (*(void (__fastcall **)(_DWORD))*(uint32_t *)(uintptr_t)MEMORY[0xC7B464])(MEMORY[0xC7B464]);
       MEMORY[0xC7B464] = 0;
     }
     return sead__IDisposer__dtor(a1);
@@ -9713,7 +9713,7 @@ int _nnDetailNintendoSdkRuntimeObjectFileRefer()
     if ( (struct sead_IDisposer *)MEMORY[0xC7B460] == a1 )
     {
       MEMORY[0xC7B460] = 0;
-      (*(void (__fastcall **)(_DWORD))*MEMORY[0xC7B464])(MEMORY[0xC7B464]);
+      (*(void (__fastcall **)(_DWORD))*(uint32_t *)(uintptr_t)MEMORY[0xC7B464])(MEMORY[0xC7B464]);
       MEMORY[0xC7B464] = 0;
     }
     v2 = sead__IDisposer__dtor(a1);
@@ -18244,12 +18244,12 @@ sub_6000FD08__LABEL_240:
       v7[1] = v6;
       if ( a3 == 3 )
       {
-        (*(void (__fastcall **)(_DWORD, const char *, _DWORD *, _DWORD))(*MEMORY[0xC7F534] + 36))(
+        (*(void (__fastcall **)(_DWORD, const char *, _DWORD *, _DWORD))(*(uint32_t *)(uintptr_t)MEMORY[0xC7F534] + 36))(
           MEMORY[0xC7F534],
           "SE_SYS_THREE_UP",
           v7,
           0);
-        (*(void (__fastcall **)(_DWORD, const char *, _DWORD *, _DWORD))(*MEMORY[0xC7F534] + 36))(
+        (*(void (__fastcall **)(_DWORD, const char *, _DWORD *, _DWORD))(*(uint32_t *)(uintptr_t)MEMORY[0xC7F534] + 36))(
           MEMORY[0xC7F534],
           "SE_SYS_THREE_UP_RC",
           v7,
@@ -18257,12 +18257,12 @@ sub_6000FD08__LABEL_240:
       }
       else if ( a3 == 1 )
       {
-        (*(void (__fastcall **)(_DWORD, const char *, _DWORD *, _DWORD))(*MEMORY[0xC7F534] + 36))(
+        (*(void (__fastcall **)(_DWORD, const char *, _DWORD *, _DWORD))(*(uint32_t *)(uintptr_t)MEMORY[0xC7F534] + 36))(
           MEMORY[0xC7F534],
           "SE_SYS_ONE_UP",
           v7,
           0);
-        (*(void (__fastcall **)(_DWORD, const char *, _DWORD *, _DWORD))(*MEMORY[0xC7F534] + 36))(
+        (*(void (__fastcall **)(_DWORD, const char *, _DWORD *, _DWORD))(*(uint32_t *)(uintptr_t)MEMORY[0xC7F534] + 36))(
           MEMORY[0xC7F534],
           "SE_SYS_ONE_UP_RC",
           v7,
@@ -18306,12 +18306,12 @@ sub_6000FD08__LABEL_240:
         v4 = *(_DWORD *)(MEMORY[0xCC6484] + 128);
         v12 = *(_DWORD *)(MEMORY[0xCC6484] + 116);
         v13 = v4;
-        (*(void (__fastcall **)(_DWORD, const char *, int *, _DWORD))(*MEMORY[0xC7F534] + 36))(
+        (*(void (__fastcall **)(_DWORD, const char *, int *, _DWORD))(*(uint32_t *)(uintptr_t)MEMORY[0xC7F534] + 36))(
           MEMORY[0xC7F534],
           "SE_SYS_ONE_UP",
           &v12,
           0);
-        (*(void (__fastcall **)(_DWORD, const char *, int *, _DWORD))(*MEMORY[0xC7F534] + 36))(
+        (*(void (__fastcall **)(_DWORD, const char *, int *, _DWORD))(*(uint32_t *)(uintptr_t)MEMORY[0xC7F534] + 36))(
           MEMORY[0xC7F534],
           "SE_SYS_ONE_UP_RC",
           &v12,
@@ -18329,12 +18329,12 @@ sub_6000FD08__LABEL_240:
         v7 = *(_DWORD *)(MEMORY[0xCC6484] + 128);
         v12 = *(_DWORD *)(MEMORY[0xCC6484] + 116);
         v13 = v7;
-        (*(void (__fastcall **)(_DWORD, const char *, int *, _DWORD))(*MEMORY[0xC7F534] + 36))(
+        (*(void (__fastcall **)(_DWORD, const char *, int *, _DWORD))(*(uint32_t *)(uintptr_t)MEMORY[0xC7F534] + 36))(
           MEMORY[0xC7F534],
           "SE_SYS_ONE_UP",
           &v12,
           0);
-        (*(void (__fastcall **)(_DWORD, const char *, int *, _DWORD))(*MEMORY[0xC7F534] + 36))(
+        (*(void (__fastcall **)(_DWORD, const char *, int *, _DWORD))(*(uint32_t *)(uintptr_t)MEMORY[0xC7F534] + 36))(
           MEMORY[0xC7F534],
           "SE_SYS_ONE_UP_RC",
           &v12,
@@ -18346,12 +18346,12 @@ sub_6000FD08__LABEL_240:
         v8 = *(_DWORD *)(MEMORY[0xCC6484] + 128);
         v12 = *(_DWORD *)(MEMORY[0xCC6484] + 116);
         v13 = v8;
-        (*(void (__fastcall **)(_DWORD, const char *, int *, _DWORD))(*MEMORY[0xC7F534] + 36))(
+        (*(void (__fastcall **)(_DWORD, const char *, int *, _DWORD))(*(uint32_t *)(uintptr_t)MEMORY[0xC7F534] + 36))(
           MEMORY[0xC7F534],
           "SE_SYS_ONE_UP",
           &v12,
           0);
-        (*(void (__fastcall **)(_DWORD, const char *, int *, _DWORD))(*MEMORY[0xC7F534] + 36))(
+        (*(void (__fastcall **)(_DWORD, const char *, int *, _DWORD))(*(uint32_t *)(uintptr_t)MEMORY[0xC7F534] + 36))(
           MEMORY[0xC7F534],
           "SE_SYS_ONE_UP_RC",
           &v12,
@@ -18363,12 +18363,12 @@ sub_6000FD08__LABEL_240:
         v9 = *(_DWORD *)(MEMORY[0xCC6484] + 128);
         v12 = *(_DWORD *)(MEMORY[0xCC6484] + 116);
         v13 = v9;
-        (*(void (__fastcall **)(_DWORD, const char *, int *, _DWORD))(*MEMORY[0xC7F534] + 36))(
+        (*(void (__fastcall **)(_DWORD, const char *, int *, _DWORD))(*(uint32_t *)(uintptr_t)MEMORY[0xC7F534] + 36))(
           MEMORY[0xC7F534],
           "SE_SYS_ONE_UP",
           &v12,
           0);
-        (*(void (__fastcall **)(_DWORD, const char *, int *, _DWORD))(*MEMORY[0xC7F534] + 36))(
+        (*(void (__fastcall **)(_DWORD, const char *, int *, _DWORD))(*(uint32_t *)(uintptr_t)MEMORY[0xC7F534] + 36))(
           MEMORY[0xC7F534],
           "SE_SYS_ONE_UP_RC",
           &v12,
@@ -18381,12 +18381,12 @@ sub_6000FD08__LABEL_240:
         v11 = *(_DWORD *)(MEMORY[0xCC6484] + 128);
         v12 = *(_DWORD *)(MEMORY[0xCC6484] + 116);
         v13 = v11;
-        (*(void (__fastcall **)(_DWORD, const char *, int *, _DWORD))(*MEMORY[0xC7F534] + 36))(
+        (*(void (__fastcall **)(_DWORD, const char *, int *, _DWORD))(*(uint32_t *)(uintptr_t)MEMORY[0xC7F534] + 36))(
           MEMORY[0xC7F534],
           "SE_SYS_ONE_UP",
           &v12,
           0);
-        (*(void (__fastcall **)(_DWORD, const char *, int *, _DWORD))(*MEMORY[0xC7F534] + 36))(
+        (*(void (__fastcall **)(_DWORD, const char *, int *, _DWORD))(*(uint32_t *)(uintptr_t)MEMORY[0xC7F534] + 36))(
           MEMORY[0xC7F534],
           "SE_SYS_ONE_UP_RC",
           &v12,
@@ -18580,12 +18580,12 @@ sub_6000FD08__LABEL_240:
             v10 = *(_DWORD *)(MEMORY[0xCC6484] + 128);
             v11 = *(_DWORD *)(MEMORY[0xCC6484] + 116);
             v12 = v10;
-            (*(void (__fastcall **)(_DWORD, const char *, int *, _DWORD))(*MEMORY[0xC7F534] + 36))(
+            (*(void (__fastcall **)(_DWORD, const char *, int *, _DWORD))(*(uint32_t *)(uintptr_t)MEMORY[0xC7F534] + 36))(
               MEMORY[0xC7F534],
               "SE_SYS_THREE_UP",
               &v11,
               0);
-            (*(void (__fastcall **)(_DWORD, const char *, int *, _DWORD))(*MEMORY[0xC7F534] + 36))(
+            (*(void (__fastcall **)(_DWORD, const char *, int *, _DWORD))(*(uint32_t *)(uintptr_t)MEMORY[0xC7F534] + 36))(
               MEMORY[0xC7F534],
               "SE_SYS_THREE_UP_RC",
               &v11,
@@ -18603,12 +18603,12 @@ sub_6000FD08__LABEL_240:
             v8 = *(_DWORD *)(MEMORY[0xCC6484] + 128);
             v11 = *(_DWORD *)(MEMORY[0xCC6484] + 116);
             v12 = v8;
-            (*(void (__fastcall **)(_DWORD, const char *, int *, _DWORD))(*MEMORY[0xC7F534] + 36))(
+            (*(void (__fastcall **)(_DWORD, const char *, int *, _DWORD))(*(uint32_t *)(uintptr_t)MEMORY[0xC7F534] + 36))(
               MEMORY[0xC7F534],
               "SE_SYS_ONE_UP",
               &v11,
               0);
-            (*(void (__fastcall **)(_DWORD, const char *, int *, _DWORD))(*MEMORY[0xC7F534] + 36))(
+            (*(void (__fastcall **)(_DWORD, const char *, int *, _DWORD))(*(uint32_t *)(uintptr_t)MEMORY[0xC7F534] + 36))(
               MEMORY[0xC7F534],
               "SE_SYS_ONE_UP_RC",
               &v11,
@@ -18661,12 +18661,12 @@ sub_6000FD08__LABEL_240:
         v7 = *(_DWORD *)(MEMORY[0xCC6484] + 128);
         v8[0] = *(_DWORD *)(MEMORY[0xCC6484] + 116);
         v8[1] = v7;
-        (*(void (__fastcall **)(_DWORD, const char *, _DWORD *, _DWORD))(*MEMORY[0xC7F534] + 36))(
+        (*(void (__fastcall **)(_DWORD, const char *, _DWORD *, _DWORD))(*(uint32_t *)(uintptr_t)MEMORY[0xC7F534] + 36))(
           MEMORY[0xC7F534],
           "SE_SYS_ONE_UP",
           v8,
           0);
-        (*(void (__fastcall **)(_DWORD, const char *, _DWORD *, _DWORD))(*MEMORY[0xC7F534] + 36))(
+        (*(void (__fastcall **)(_DWORD, const char *, _DWORD *, _DWORD))(*(uint32_t *)(uintptr_t)MEMORY[0xC7F534] + 36))(
           MEMORY[0xC7F534],
           "SE_SYS_ONE_UP_RC",
           v8,
@@ -19259,7 +19259,7 @@ sub_6000FD08__LABEL_240:
     *(_WORD *)(a1 + 24) = v9;
     if ( !v8 && v9 )
       sub_608175F8(MEMORY[0xCC6B68]);
-    (*(void (__fastcall **)(_DWORD))(*MEMORY[0xCC6AF8] + 16))(MEMORY[0xCC6AF8]);
+    (*(void (__fastcall **)(_DWORD))(*(uint32_t *)(uintptr_t)MEMORY[0xCC6AF8] + 16))(MEMORY[0xCC6AF8]);
     result = *(unsigned __int16 *)(a1 + 26);
     if ( *(_WORD *)(a1 + 26) )
     {
@@ -19320,7 +19320,7 @@ sub_6000FD08__LABEL_240:
     v13[9] = 196608;
     v13[10] = 196608;
     v13[11] = 196608;
-    (*(void (__fastcall **)(_DWORD, _DWORD *))(*MEMORY[0xCC6AF8] + 12))(MEMORY[0xCC6AF8], v13);
+    (*(void (__fastcall **)(_DWORD, _DWORD *))(*(uint32_t *)(uintptr_t)MEMORY[0xCC6AF8] + 12))(MEMORY[0xCC6AF8], v13);
     v5 = __operator_new(420);
     v6 = (_DWORD *)BasicSoundActor_ctor(v5, 1);
     *v6 = 12326044;
@@ -19404,23 +19404,23 @@ sub_6000FD08__LABEL_240:
   
     if ( MEMORY[0xC7F53C] )
     {
-      (*(void (__fastcall **)(_DWORD))(*MEMORY[0xC7F53C] + 4))(MEMORY[0xC7F53C]);
+      (*(void (__fastcall **)(_DWORD))(*(uint32_t *)(uintptr_t)MEMORY[0xC7F53C] + 4))(MEMORY[0xC7F53C]);
       MEMORY[0xC7F53C] = 0;
     }
     if ( MEMORY[0xC7F540] )
     {
-      (*(void (__fastcall **)(_DWORD))(*MEMORY[0xC7F540] + 4))(MEMORY[0xC7F540]);
+      (*(void (__fastcall **)(_DWORD))(*(uint32_t *)(uintptr_t)MEMORY[0xC7F540] + 4))(MEMORY[0xC7F540]);
       MEMORY[0xC7F540] = 0;
     }
     if ( MEMORY[0xC7F544] )
     {
-      (*(void (__fastcall **)(_DWORD))(*MEMORY[0xC7F544] + 4))(MEMORY[0xC7F544]);
+      (*(void (__fastcall **)(_DWORD))(*(uint32_t *)(uintptr_t)MEMORY[0xC7F544] + 4))(MEMORY[0xC7F544]);
       MEMORY[0xC7F544] = 0;
     }
     result = MEMORY[0xC7F548];
     if ( MEMORY[0xC7F548] )
     {
-      (*(void (__fastcall **)(_DWORD))(*MEMORY[0xC7F548] + 4))(MEMORY[0xC7F548]);
+      (*(void (__fastcall **)(_DWORD))(*(uint32_t *)(uintptr_t)MEMORY[0xC7F548] + 4))(MEMORY[0xC7F548]);
       MEMORY[0xC7F548] = 0;
       return 13104444;
     }
@@ -19498,7 +19498,7 @@ sub_6000FD08__LABEL_240:
         v2 = *(_DWORD *)(MEMORY[0xCC6484] + 128);
         v4[0] = *(_DWORD *)(MEMORY[0xCC6484] + 116);
         v4[1] = v2;
-        (*(void (__fastcall **)(_DWORD, const char *, _DWORD *, _DWORD))(*MEMORY[0xC7F534] + 36))(
+        (*(void (__fastcall **)(_DWORD, const char *, _DWORD *, _DWORD))(*(uint32_t *)(uintptr_t)MEMORY[0xC7F534] + 36))(
           MEMORY[0xC7F534],
           "SE_SYS_NICE_S",
           v4,
@@ -30723,7 +30723,7 @@ sub_6000FD08__LABEL_240:
  * ============================================================================ */
   int __fastcall SE_OBJ_CMN_TOUCH_THUNDER_ref(int a1, int a2, int a3)
   {
-    return (*(int (__fastcall **)(_DWORD, const char *, int, int, _DWORD))(*MEMORY[0xC7F530] + 40))(
+    return (*(int (__fastcall **)(_DWORD, const char *, int, int, _DWORD))(*(uint32_t *)(uintptr_t)MEMORY[0xC7F530] + 40))(
              MEMORY[0xC7F530],
              "SE_OBJ_CMN_TOUCH_THUNDER",
              a3,
@@ -49490,7 +49490,7 @@ sub_60045DB4__LABEL_181:
         v8 = *(_DWORD *)(MEMORY[0xCC6484] + 128);
         v13[0] = *(_DWORD *)(MEMORY[0xCC6484] + 116);
         v13[1] = v8;
-        (*(void (__fastcall **)(_DWORD, const char *, _DWORD *, _DWORD))(*MEMORY[0xC7F530] + 36))(
+        (*(void (__fastcall **)(_DWORD, const char *, _DWORD *, _DWORD))(*(uint32_t *)(uintptr_t)MEMORY[0xC7F530] + 36))(
           MEMORY[0xC7F530],
           "SE_EMY_KAMECK_FLY_MAGIC",
           v13,
@@ -57281,7 +57281,7 @@ sub_60045DB4__LABEL_181:
         v7 = *(const char **)(MEMORY[0xCC6484] + 128);
         v12 = *(_DWORD *)(MEMORY[0xCC6484] + 116);
         v13 = v7;
-        (*(void (__fastcall **)(_DWORD, const char *, int *, _DWORD))(*MEMORY[0xC7F530] + 36))(
+        (*(void (__fastcall **)(_DWORD, const char *, int *, _DWORD))(*(uint32_t *)(uintptr_t)MEMORY[0xC7F530] + 36))(
           MEMORY[0xC7F530],
           "SE_EMY_KAMECK_FLY_MAGIC",
           &v12,
@@ -57353,7 +57353,7 @@ sub_60045DB4__LABEL_181:
       v7[0] = 15;
       v7[1] = MEMORY[0xC26458];
       v8 = 0;
-      (*(void (__fastcall **)(_DWORD, const char *, _DWORD *))(*MEMORY[0xC7F538] + 44))(
+      (*(void (__fastcall **)(_DWORD, const char *, _DWORD *))(*(uint32_t *)(uintptr_t)MEMORY[0xC7F538] + 44))(
         MEMORY[0xC7F538],
         "SE_AMB_KP_EARTHQUAKE",
         v7);
@@ -57420,7 +57420,7 @@ sub_60045DB4__LABEL_181:
     v1[0] = 15;
     v1[1] = MEMORY[0xC26458];
     v2 = 0;
-    return (*(int (__fastcall **)(_DWORD, const char *, _DWORD *))(*MEMORY[0xC7F538] + 44))(
+    return (*(int (__fastcall **)(_DWORD, const char *, _DWORD *))(*(uint32_t *)(uintptr_t)MEMORY[0xC7F538] + 44))(
              MEMORY[0xC7F538],
              "SE_AMB_KP_EARTHQUAKE",
              v1);
@@ -69389,7 +69389,7 @@ sub_60045DB4__LABEL_181:
  * ============================================================================ */
   int __fastcall SE_AMB_LAST_BATTLE_ref(int a1)
   {
-    (*(void (__fastcall **)(_DWORD, const char *, _DWORD))(*MEMORY[0xC7F538] + 44))(
+    (*(void (__fastcall **)(_DWORD, const char *, _DWORD))(*(uint32_t *)(uintptr_t)MEMORY[0xC7F538] + 44))(
       MEMORY[0xC7F538],
       "SE_AMB_LAST_BATTLE",
       0);
@@ -85640,7 +85640,7 @@ SE_OBJ_NO_DAMAGE_BOUND_ref_91144__LABEL_65:
       }
     }
     if ( *(_BYTE *)(a1 + 8206) )
-      (*(void (__fastcall **)(_DWORD, const char *, _DWORD))(*MEMORY[0xC7F538] + 44))(
+      (*(void (__fastcall **)(_DWORD, const char *, _DWORD))(*(uint32_t *)(uintptr_t)MEMORY[0xC7F538] + 44))(
         MEMORY[0xC7F538],
         "SE_AMB_BROOM_W8",
         0);
@@ -105071,7 +105071,7 @@ SE_OBJ_NO_DAMAGE_BOUND_ref_91144__LABEL_65:
     v4 = MEMORY[0xC7F534];
     mapPositionToScreen(v7, v6);
     SE_OBJ_FIRE_CANNON_BLAZE_ref_2(v4, v2, v3, v7, 0);
-    (*(void (__fastcall **)(_DWORD, _DWORD, _DWORD))(*MEMORY[0xC7F538] + 44))(MEMORY[0xC7F538], *(_DWORD *)(a1 + 6260), 0);
+    (*(void (__fastcall **)(_DWORD, _DWORD, _DWORD))(*(uint32_t *)(uintptr_t)MEMORY[0xC7F538] + 44))(MEMORY[0xC7F538], *(_DWORD *)(a1 + 6260), 0);
     ActorScaler_execute(a1 + 6220);
     sub_600BBA44((float *)a1);
     return 1;
@@ -105185,7 +105185,7 @@ SE_OBJ_NO_DAMAGE_BOUND_ref_91144__LABEL_65:
     v10 = *(const char **)(MEMORY[0xCC6484] + 128);
     v11 = 43;
     v7 = Global_setBitmaskAndReturnC7B3A8(a2);
-    (*(void (__fastcall **)(_DWORD, const char *, int *, int))(*MEMORY[0xC7F534] + 36))(
+    (*(void (__fastcall **)(_DWORD, const char *, int *, int))(*(uint32_t *)(uintptr_t)MEMORY[0xC7F534] + 36))(
       MEMORY[0xC7F534],
       "SE_OBJ_BOSS_SHIP_BOUND",
       &v9,
@@ -116292,7 +116292,7 @@ SE_OBJ_NO_DAMAGE_BOUND_ref_91144__LABEL_65:
   int __fastcall BowserJrBase__vf43C(int a1, int a2)
   {
     if ( (*(int (__fastcall **)(int))(*(_DWORD *)a1 + 728))(a1) != 1 )
-      return (*(int (__fastcall **)(_DWORD, const char *, int, _DWORD, _DWORD))(*MEMORY[0xC7F530] + 40))(
+      return (*(int (__fastcall **)(_DWORD, const char *, int, _DWORD, _DWORD))(*(uint32_t *)(uintptr_t)MEMORY[0xC7F530] + 40))(
                MEMORY[0xC7F530],
                "SE_BOSS_CMN_DAMAGE_FIRE",
                a2,
@@ -116305,7 +116305,7 @@ SE_OBJ_NO_DAMAGE_BOUND_ref_91144__LABEL_65:
       1);
     (*(void (__fastcall **)(_DWORD))(**(_DWORD **)(a1 + 7244) + 812))(*(_DWORD *)(a1 + 7244));
     (*(void (__fastcall **)(int, int))(*(_DWORD *)a1 + 192))(a1, 13123948);
-    return (*(int (__fastcall **)(_DWORD, const char *, int, _DWORD, _DWORD))(*MEMORY[0xC7F530] + 40))(
+    return (*(int (__fastcall **)(_DWORD, const char *, int, _DWORD, _DWORD))(*(uint32_t *)(uintptr_t)MEMORY[0xC7F530] + 40))(
              MEMORY[0xC7F530],
              "SE_BOSS_CMN_DAMAGE_FIRE_DEF",
              a2,
@@ -116326,7 +116326,7 @@ SE_OBJ_NO_DAMAGE_BOUND_ref_91144__LABEL_65:
       1);
     (*(void (__fastcall **)(_DWORD))(**(_DWORD **)(a1 + 7244) + 816))(*(_DWORD *)(a1 + 7244));
     SoundActor_tryStartSoundIfFree((_DWORD *)(a1 + 6332), (int)"SE_BOSS_CMN_DAMAGE_LAST_F_MODE", 0);
-    (*(void (__fastcall **)(_DWORD, const char *, int, _DWORD, _DWORD))(*MEMORY[0xC7F530] + 40))(
+    (*(void (__fastcall **)(_DWORD, const char *, int, _DWORD, _DWORD))(*(uint32_t *)(uintptr_t)MEMORY[0xC7F530] + 40))(
       MEMORY[0xC7F530],
       "SE_BOSS_CMN_DAMAGE_FIRE_LAST",
       a2,
@@ -118420,7 +118420,7 @@ SE_OBJ_NO_DAMAGE_BOUND_ref_91144__LABEL_65:
     v2 = *(unsigned __int8 *)(a1 + 6122);
     if ( v2 == 2 )
     {
-      (*(void (__fastcall **)(_DWORD, const char *, _DWORD))(*MEMORY[0xC7F538] + 44))(
+      (*(void (__fastcall **)(_DWORD, const char *, _DWORD))(*(uint32_t *)(uintptr_t)MEMORY[0xC7F538] + 44))(
         MEMORY[0xC7F538],
         "SE_AMB_RP_SHIP_WIND",
         0);
@@ -118429,7 +118429,7 @@ SE_OBJ_NO_DAMAGE_BOUND_ref_91144__LABEL_65:
     {
       if ( *(_BYTE *)(a1 + 6139) )
         *(_DWORD *)(MEMORY[0xCC6484] + 268) = *(_DWORD *)(a1 + 6152);
-      (*(void (__fastcall **)(_DWORD, const char *, _DWORD))(*MEMORY[0xC7F538] + 44))(
+      (*(void (__fastcall **)(_DWORD, const char *, _DWORD))(*(uint32_t *)(uintptr_t)MEMORY[0xC7F538] + 44))(
         MEMORY[0xC7F538],
         "SE_AMB_BROOM_W7",
         0);
@@ -119795,7 +119795,7 @@ SE_OBJ_NO_DAMAGE_BOUND_ref_91144__LABEL_65:
             v34[0] = 15;
             v34[1] = MEMORY[0xC263A8];
             v35 = 0;
-            (*(void (__fastcall **)(_DWORD, const char *, _DWORD *, _DWORD *))(*MEMORY[0xC7F534] + 36))(
+            (*(void (__fastcall **)(_DWORD, const char *, _DWORD *, _DWORD *))(*(uint32_t *)(uintptr_t)MEMORY[0xC7F534] + 36))(
               MEMORY[0xC7F534],
               "SE_BOSS_JR_BLOCK_FALL",
               v36,
@@ -119825,7 +119825,7 @@ SE_OBJ_NO_DAMAGE_BOUND_ref_91144__LABEL_65:
             v37[0] = 15;
             v37[1] = MEMORY[0xC263A4];
             LOBYTE(v37[2]) = 0;
-            return (*(int (__fastcall **)(_DWORD, const char *, _DWORD *))(*MEMORY[0xC7F538] + 44))(
+            return (*(int (__fastcall **)(_DWORD, const char *, _DWORD *))(*(uint32_t *)(uintptr_t)MEMORY[0xC7F538] + 44))(
                      MEMORY[0xC7F538],
                      "SE_AMB_JR_EARTHQUAKE",
                      v37);
@@ -119887,7 +119887,7 @@ SE_OBJ_NO_DAMAGE_BOUND_ref_91144__LABEL_65:
             *v2 = 10;
           }
           v37[0] = 12;
-          return (*(int (__fastcall **)(_DWORD, const char *, _DWORD))(*MEMORY[0xC7F538] + 44))(
+          return (*(int (__fastcall **)(_DWORD, const char *, _DWORD))(*(uint32_t *)(uintptr_t)MEMORY[0xC7F538] + 44))(
                    MEMORY[0xC7F538],
                    "SE_AMB_JR_EARTHQUAKE",
                    0);
@@ -120692,7 +120692,7 @@ SE_OBJ_NO_DAMAGE_BOUND_ref_91144__LABEL_65:
     v2 = (*(int (__fastcall **)(_DWORD))(**(_DWORD **)(a1 + 6704) + 8))(*(_DWORD *)(a1 + 6704));
     result = (*(int (**)(void))(MEMORY[0xC843D8] + 8))();
     if ( v2 != result )
-      return (*(int (__fastcall **)(_DWORD, const char *, int, _DWORD))(*MEMORY[0xC7F538] + 48))(
+      return (*(int (__fastcall **)(_DWORD, const char *, int, _DWORD))(*(uint32_t *)(uintptr_t)MEMORY[0xC7F538] + 48))(
                MEMORY[0xC7F538],
                "SE_AMB_BROOM_W8",
                (int)(float)(*(float *)(MEMORY[0xCC6484] + 116) - *(float *)(a1 + 108)),
@@ -131028,7 +131028,7 @@ SE_OBJ_NO_DAMAGE_BOUND_ref_91144__LABEL_65:
   int __fastcall SE_AMB_BROOM_W7_ref(int a1)
   {
     if ( *(_BYTE *)(a1 + 8349) )
-      (*(void (__fastcall **)(_DWORD, const char *, _DWORD))(*MEMORY[0xC7F538] + 44))(
+      (*(void (__fastcall **)(_DWORD, const char *, _DWORD))(*(uint32_t *)(uintptr_t)MEMORY[0xC7F538] + 44))(
         MEMORY[0xC7F538],
         "SE_AMB_BROOM_W7",
         0);

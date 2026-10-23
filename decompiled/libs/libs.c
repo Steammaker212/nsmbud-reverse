@@ -7720,7 +7720,7 @@ sub_608044F0__LABEL_87:
     if ( (struct sead_IDisposer *)MEMORY[0xCC6AF4] == a1 )
     {
       MEMORY[0xCC6AF4] = 0;
-      (*(void (__fastcall **)(_DWORD))(*MEMORY[0xCC6AF8] + 4))(MEMORY[0xCC6AF8]);
+      (*(void (__fastcall **)(_DWORD))(*(uint32_t *)(uintptr_t)MEMORY[0xCC6AF8] + 4))(MEMORY[0xCC6AF8]);
       MEMORY[0xCC6AF8] = 0;
     }
     return sead__IDisposer__dtor(a1);
@@ -7738,7 +7738,7 @@ sub_608044F0__LABEL_87:
     if ( (struct sead_IDisposer *)MEMORY[0xCC6AF4] == a1 )
     {
       MEMORY[0xCC6AF4] = 0;
-      (*(void (__fastcall **)(_DWORD))(*MEMORY[0xCC6AF8] + 4))(MEMORY[0xCC6AF8]);
+      (*(void (__fastcall **)(_DWORD))(*(uint32_t *)(uintptr_t)MEMORY[0xCC6AF8] + 4))(MEMORY[0xCC6AF8]);
       MEMORY[0xCC6AF8] = 0;
     }
     v2 = sead__IDisposer__dtor(a1);
@@ -21530,14 +21530,14 @@ sub_6080C744__LABEL_131:
     {
       case 1:
         *(_BYTE *)(a1 + 54) = 1;
-        (*(void (__fastcall **)(_DWORD, int, _DWORD, _DWORD))(*MEMORY[0xCC6AF8] + 60))(MEMORY[0xCC6AF8], 100663296, 0, 0);
+        (*(void (__fastcall **)(_DWORD, int, _DWORD, _DWORD))(*(uint32_t *)(uintptr_t)MEMORY[0xCC6AF8] + 60))(MEMORY[0xCC6AF8], 100663296, 0, 0);
         sub_6080A630(MEMORY[0xCC6AF8]);
         return 1;
       case 3:
         *(_BYTE *)(a1 + 54) = 1;
-        (*(void (__fastcall **)(_DWORD, int, _DWORD, _DWORD))(*MEMORY[0xCC6AF8] + 60))(MEMORY[0xCC6AF8], 100663299, 0, 0);
+        (*(void (__fastcall **)(_DWORD, int, _DWORD, _DWORD))(*(uint32_t *)(uintptr_t)MEMORY[0xCC6AF8] + 60))(MEMORY[0xCC6AF8], 100663299, 0, 0);
         *(_BYTE *)(a1 + 54) = 1;
-        (*(void (__fastcall **)(_DWORD, int, _DWORD, _DWORD))(*MEMORY[0xCC6AF8] + 60))(MEMORY[0xCC6AF8], 100663300, 0, 0);
+        (*(void (__fastcall **)(_DWORD, int, _DWORD, _DWORD))(*(uint32_t *)(uintptr_t)MEMORY[0xCC6AF8] + 60))(MEMORY[0xCC6AF8], 100663300, 0, 0);
         return 1;
       case 5:
         *(_BYTE *)(a1 + 54) = 1;
@@ -21552,9 +21552,9 @@ sub_6080C744__LABEL_131:
       case 15:
       case 16:
         *(_BYTE *)(a1 + 54) = 1;
-        (*(void (__fastcall **)(_DWORD, int, _DWORD, _DWORD))(*MEMORY[0xCC6AF8] + 60))(MEMORY[0xCC6AF8], 100663302, 0, 0);
+        (*(void (__fastcall **)(_DWORD, int, _DWORD, _DWORD))(*(uint32_t *)(uintptr_t)MEMORY[0xCC6AF8] + 60))(MEMORY[0xCC6AF8], 100663302, 0, 0);
         *(_BYTE *)(a1 + 54) = 1;
-        (*(void (__fastcall **)(_DWORD, int, _DWORD, _DWORD))(*MEMORY[0xCC6AF8] + 60))(MEMORY[0xCC6AF8], 100663303, 0, 0);
+        (*(void (__fastcall **)(_DWORD, int, _DWORD, _DWORD))(*(uint32_t *)(uintptr_t)MEMORY[0xCC6AF8] + 60))(MEMORY[0xCC6AF8], 100663303, 0, 0);
         *(_BYTE *)(a1 + 54) = 1;
         v3 = MEMORY[0xCC6AF8];
         goto sub_60815C90__LABEL_3;
@@ -21566,11 +21566,11 @@ sub_6080C744__LABEL_131:
       case 20:
         *(_BYTE *)(a1 + 54) = 1;
   sub_60815C90__LABEL_8:
-        (*(void (__fastcall **)(_DWORD, int, _DWORD, _DWORD))(*MEMORY[0xCC6AF8] + 60))(MEMORY[0xCC6AF8], 100663301, 0, 0);
+        (*(void (__fastcall **)(_DWORD, int, _DWORD, _DWORD))(*(uint32_t *)(uintptr_t)MEMORY[0xCC6AF8] + 60))(MEMORY[0xCC6AF8], 100663301, 0, 0);
         break;
       case 21:
         *(_BYTE *)(a1 + 54) = 1;
-        (*(void (__fastcall **)(_DWORD, int, _DWORD, _DWORD))(*MEMORY[0xCC6AF8] + 60))(MEMORY[0xCC6AF8], 100663297, 0, 0);
+        (*(void (__fastcall **)(_DWORD, int, _DWORD, _DWORD))(*(uint32_t *)(uintptr_t)MEMORY[0xCC6AF8] + 60))(MEMORY[0xCC6AF8], 100663297, 0, 0);
         break;
       case 22:
         *(_BYTE *)(a1 + 54) = 1;
@@ -21581,7 +21581,7 @@ sub_6080C744__LABEL_131:
       case 24:
         *(_BYTE *)(a1 + 54) = 1;
   sub_60815C90__LABEL_13:
-        (*(void (__fastcall **)(_DWORD, int, _DWORD, _DWORD))(*MEMORY[0xCC6AF8] + 60))(MEMORY[0xCC6AF8], 100663303, 0, 0);
+        (*(void (__fastcall **)(_DWORD, int, _DWORD, _DWORD))(*(uint32_t *)(uintptr_t)MEMORY[0xCC6AF8] + 60))(MEMORY[0xCC6AF8], 100663303, 0, 0);
         break;
       default:
         return 1;
@@ -21596,7 +21596,7 @@ sub_6080C744__LABEL_131:
   int __fastcall sub_60815EE0(int a1)
   {
     *(_BYTE *)(a1 + 54) = 1;
-    return (*(int (__fastcall **)(_DWORD, int, _DWORD, _DWORD))(*MEMORY[0xCC6AF8] + 60))(
+    return (*(int (__fastcall **)(_DWORD, int, _DWORD, _DWORD))(*(uint32_t *)(uintptr_t)MEMORY[0xCC6AF8] + 60))(
              MEMORY[0xCC6AF8],
              100663301,
              0,
@@ -22744,180 +22744,180 @@ sub_6080C744__LABEL_131:
     if ( a2 > 0x1E )
       return 0;
     *(_BYTE *)(a1 + 54) = 1;
-    (*(void (__fastcall **)(_DWORD, int, _DWORD, _DWORD))(*MEMORY[0xCC6AF8] + 60))(MEMORY[0xCC6AF8], 100663301, 0, 0);
+    (*(void (__fastcall **)(_DWORD, int, _DWORD, _DWORD))(*(uint32_t *)(uintptr_t)MEMORY[0xCC6AF8] + 60))(MEMORY[0xCC6AF8], 100663301, 0, 0);
     switch ( a2 )
     {
       case 1u:
         *(_BYTE *)(a1 + 54) = 1;
         v5 = MEMORY[0xCC6AF8];
-        v6 = *(int (__fastcall **)(int, int, _DWORD, _DWORD))(*MEMORY[0xCC6AF8] + 60);
+        v6 = *(int (__fastcall **)(int, int, _DWORD, _DWORD))(*(uint32_t *)(uintptr_t)MEMORY[0xCC6AF8] + 60);
         v7 = 100663304;
         goto sub_60817728__LABEL_32;
       case 2u:
         *(_BYTE *)(a1 + 54) = 1;
         v5 = MEMORY[0xCC6AF8];
-        v6 = *(int (__fastcall **)(int, int, _DWORD, _DWORD))(*MEMORY[0xCC6AF8] + 60);
+        v6 = *(int (__fastcall **)(int, int, _DWORD, _DWORD))(*(uint32_t *)(uintptr_t)MEMORY[0xCC6AF8] + 60);
         v7 = 100663305;
         goto sub_60817728__LABEL_32;
       case 3u:
         *(_BYTE *)(a1 + 54) = 1;
         v5 = MEMORY[0xCC6AF8];
-        v6 = *(int (__fastcall **)(int, int, _DWORD, _DWORD))(*MEMORY[0xCC6AF8] + 60);
+        v6 = *(int (__fastcall **)(int, int, _DWORD, _DWORD))(*(uint32_t *)(uintptr_t)MEMORY[0xCC6AF8] + 60);
         v7 = 100663306;
         goto sub_60817728__LABEL_32;
       case 4u:
         *(_BYTE *)(a1 + 54) = 1;
         v5 = MEMORY[0xCC6AF8];
-        v6 = *(int (__fastcall **)(int, int, _DWORD, _DWORD))(*MEMORY[0xCC6AF8] + 60);
+        v6 = *(int (__fastcall **)(int, int, _DWORD, _DWORD))(*(uint32_t *)(uintptr_t)MEMORY[0xCC6AF8] + 60);
         v7 = 100663307;
         goto sub_60817728__LABEL_32;
       case 5u:
         *(_BYTE *)(a1 + 54) = 1;
         v5 = MEMORY[0xCC6AF8];
-        v6 = *(int (__fastcall **)(int, int, _DWORD, _DWORD))(*MEMORY[0xCC6AF8] + 60);
+        v6 = *(int (__fastcall **)(int, int, _DWORD, _DWORD))(*(uint32_t *)(uintptr_t)MEMORY[0xCC6AF8] + 60);
         v7 = 100663308;
         goto sub_60817728__LABEL_32;
       case 6u:
         *(_BYTE *)(a1 + 54) = 1;
         v5 = MEMORY[0xCC6AF8];
-        v6 = *(int (__fastcall **)(int, int, _DWORD, _DWORD))(*MEMORY[0xCC6AF8] + 60);
+        v6 = *(int (__fastcall **)(int, int, _DWORD, _DWORD))(*(uint32_t *)(uintptr_t)MEMORY[0xCC6AF8] + 60);
         v7 = 100663309;
         goto sub_60817728__LABEL_32;
       case 7u:
         *(_BYTE *)(a1 + 54) = 1;
         v5 = MEMORY[0xCC6AF8];
-        v6 = *(int (__fastcall **)(int, int, _DWORD, _DWORD))(*MEMORY[0xCC6AF8] + 60);
+        v6 = *(int (__fastcall **)(int, int, _DWORD, _DWORD))(*(uint32_t *)(uintptr_t)MEMORY[0xCC6AF8] + 60);
         v7 = 100663310;
         goto sub_60817728__LABEL_32;
       case 8u:
         *(_BYTE *)(a1 + 54) = 1;
         v5 = MEMORY[0xCC6AF8];
-        v6 = *(int (__fastcall **)(int, int, _DWORD, _DWORD))(*MEMORY[0xCC6AF8] + 60);
+        v6 = *(int (__fastcall **)(int, int, _DWORD, _DWORD))(*(uint32_t *)(uintptr_t)MEMORY[0xCC6AF8] + 60);
         v7 = 100663311;
         goto sub_60817728__LABEL_32;
       case 9u:
         *(_BYTE *)(a1 + 54) = 1;
         v5 = MEMORY[0xCC6AF8];
-        v6 = *(int (__fastcall **)(int, int, _DWORD, _DWORD))(*MEMORY[0xCC6AF8] + 60);
+        v6 = *(int (__fastcall **)(int, int, _DWORD, _DWORD))(*(uint32_t *)(uintptr_t)MEMORY[0xCC6AF8] + 60);
         v7 = 100663312;
         goto sub_60817728__LABEL_32;
       case 0xAu:
         *(_BYTE *)(a1 + 54) = 1;
         v5 = MEMORY[0xCC6AF8];
-        v6 = *(int (__fastcall **)(int, int, _DWORD, _DWORD))(*MEMORY[0xCC6AF8] + 60);
+        v6 = *(int (__fastcall **)(int, int, _DWORD, _DWORD))(*(uint32_t *)(uintptr_t)MEMORY[0xCC6AF8] + 60);
         v7 = 100663313;
         goto sub_60817728__LABEL_32;
       case 0xBu:
         *(_BYTE *)(a1 + 54) = 1;
         v5 = MEMORY[0xCC6AF8];
-        v6 = *(int (__fastcall **)(int, int, _DWORD, _DWORD))(*MEMORY[0xCC6AF8] + 60);
+        v6 = *(int (__fastcall **)(int, int, _DWORD, _DWORD))(*(uint32_t *)(uintptr_t)MEMORY[0xCC6AF8] + 60);
         v7 = 100663314;
         goto sub_60817728__LABEL_32;
       case 0xCu:
         *(_BYTE *)(a1 + 54) = 1;
         v5 = MEMORY[0xCC6AF8];
-        v6 = *(int (__fastcall **)(int, int, _DWORD, _DWORD))(*MEMORY[0xCC6AF8] + 60);
+        v6 = *(int (__fastcall **)(int, int, _DWORD, _DWORD))(*(uint32_t *)(uintptr_t)MEMORY[0xCC6AF8] + 60);
         v7 = 100663315;
         goto sub_60817728__LABEL_32;
       case 0xDu:
         *(_BYTE *)(a1 + 54) = 1;
-        v8 = (*(int (__fastcall **)(_DWORD, int, _DWORD, _DWORD))(*MEMORY[0xCC6AF8] + 60))(
+        v8 = (*(int (__fastcall **)(_DWORD, int, _DWORD, _DWORD))(*(uint32_t *)(uintptr_t)MEMORY[0xCC6AF8] + 60))(
                MEMORY[0xCC6AF8],
                100663316,
                0,
                0);
         *(_BYTE *)(a1 + 54) = 1;
         v9 = v8;
-        (*(void (__fastcall **)(_DWORD, int, _DWORD, _DWORD))(*MEMORY[0xCC6AF8] + 60))(MEMORY[0xCC6AF8], 100663298, 0, 0);
+        (*(void (__fastcall **)(_DWORD, int, _DWORD, _DWORD))(*(uint32_t *)(uintptr_t)MEMORY[0xCC6AF8] + 60))(MEMORY[0xCC6AF8], 100663298, 0, 0);
         return v9;
       case 0xEu:
         *(_BYTE *)(a1 + 54) = 1;
         v5 = MEMORY[0xCC6AF8];
-        v6 = *(int (__fastcall **)(int, int, _DWORD, _DWORD))(*MEMORY[0xCC6AF8] + 60);
+        v6 = *(int (__fastcall **)(int, int, _DWORD, _DWORD))(*(uint32_t *)(uintptr_t)MEMORY[0xCC6AF8] + 60);
         v7 = 100663317;
         goto sub_60817728__LABEL_32;
       case 0xFu:
         *(_BYTE *)(a1 + 54) = 1;
         v5 = MEMORY[0xCC6AF8];
-        v6 = *(int (__fastcall **)(int, int, _DWORD, _DWORD))(*MEMORY[0xCC6AF8] + 60);
+        v6 = *(int (__fastcall **)(int, int, _DWORD, _DWORD))(*(uint32_t *)(uintptr_t)MEMORY[0xCC6AF8] + 60);
         v7 = 100663318;
         goto sub_60817728__LABEL_32;
       case 0x10u:
         *(_BYTE *)(a1 + 54) = 1;
         v5 = MEMORY[0xCC6AF8];
-        v6 = *(int (__fastcall **)(int, int, _DWORD, _DWORD))(*MEMORY[0xCC6AF8] + 60);
+        v6 = *(int (__fastcall **)(int, int, _DWORD, _DWORD))(*(uint32_t *)(uintptr_t)MEMORY[0xCC6AF8] + 60);
         v7 = 100663319;
         goto sub_60817728__LABEL_32;
       case 0x11u:
         *(_BYTE *)(a1 + 54) = 1;
         v5 = MEMORY[0xCC6AF8];
-        v6 = *(int (__fastcall **)(int, int, _DWORD, _DWORD))(*MEMORY[0xCC6AF8] + 60);
+        v6 = *(int (__fastcall **)(int, int, _DWORD, _DWORD))(*(uint32_t *)(uintptr_t)MEMORY[0xCC6AF8] + 60);
         v7 = 100663320;
         goto sub_60817728__LABEL_32;
       case 0x12u:
         *(_BYTE *)(a1 + 54) = 1;
         v5 = MEMORY[0xCC6AF8];
-        v6 = *(int (__fastcall **)(int, int, _DWORD, _DWORD))(*MEMORY[0xCC6AF8] + 60);
+        v6 = *(int (__fastcall **)(int, int, _DWORD, _DWORD))(*(uint32_t *)(uintptr_t)MEMORY[0xCC6AF8] + 60);
         v7 = 100663321;
         goto sub_60817728__LABEL_32;
       case 0x13u:
         *(_BYTE *)(a1 + 54) = 1;
         v5 = MEMORY[0xCC6AF8];
-        v6 = *(int (__fastcall **)(int, int, _DWORD, _DWORD))(*MEMORY[0xCC6AF8] + 60);
+        v6 = *(int (__fastcall **)(int, int, _DWORD, _DWORD))(*(uint32_t *)(uintptr_t)MEMORY[0xCC6AF8] + 60);
         v7 = 100663322;
         goto sub_60817728__LABEL_32;
       case 0x14u:
         *(_BYTE *)(a1 + 54) = 1;
         v5 = MEMORY[0xCC6AF8];
-        v6 = *(int (__fastcall **)(int, int, _DWORD, _DWORD))(*MEMORY[0xCC6AF8] + 60);
+        v6 = *(int (__fastcall **)(int, int, _DWORD, _DWORD))(*(uint32_t *)(uintptr_t)MEMORY[0xCC6AF8] + 60);
         v7 = 100663323;
         goto sub_60817728__LABEL_32;
       case 0x15u:
         *(_BYTE *)(a1 + 54) = 1;
         v5 = MEMORY[0xCC6AF8];
-        v6 = *(int (__fastcall **)(int, int, _DWORD, _DWORD))(*MEMORY[0xCC6AF8] + 60);
+        v6 = *(int (__fastcall **)(int, int, _DWORD, _DWORD))(*(uint32_t *)(uintptr_t)MEMORY[0xCC6AF8] + 60);
         v7 = 100663324;
         goto sub_60817728__LABEL_32;
       case 0x16u:
         *(_BYTE *)(a1 + 54) = 1;
         v5 = MEMORY[0xCC6AF8];
-        v6 = *(int (__fastcall **)(int, int, _DWORD, _DWORD))(*MEMORY[0xCC6AF8] + 60);
+        v6 = *(int (__fastcall **)(int, int, _DWORD, _DWORD))(*(uint32_t *)(uintptr_t)MEMORY[0xCC6AF8] + 60);
         v7 = 100663325;
         goto sub_60817728__LABEL_32;
       case 0x17u:
         *(_BYTE *)(a1 + 54) = 1;
         v5 = MEMORY[0xCC6AF8];
-        v6 = *(int (__fastcall **)(int, int, _DWORD, _DWORD))(*MEMORY[0xCC6AF8] + 60);
+        v6 = *(int (__fastcall **)(int, int, _DWORD, _DWORD))(*(uint32_t *)(uintptr_t)MEMORY[0xCC6AF8] + 60);
         v7 = 100663326;
         goto sub_60817728__LABEL_32;
       case 0x18u:
         *(_BYTE *)(a1 + 54) = 1;
         v5 = MEMORY[0xCC6AF8];
-        v6 = *(int (__fastcall **)(int, int, _DWORD, _DWORD))(*MEMORY[0xCC6AF8] + 60);
+        v6 = *(int (__fastcall **)(int, int, _DWORD, _DWORD))(*(uint32_t *)(uintptr_t)MEMORY[0xCC6AF8] + 60);
         v7 = 100663327;
         goto sub_60817728__LABEL_32;
       case 0x19u:
         *(_BYTE *)(a1 + 54) = 1;
         v5 = MEMORY[0xCC6AF8];
-        v6 = *(int (__fastcall **)(int, int, _DWORD, _DWORD))(*MEMORY[0xCC6AF8] + 60);
+        v6 = *(int (__fastcall **)(int, int, _DWORD, _DWORD))(*(uint32_t *)(uintptr_t)MEMORY[0xCC6AF8] + 60);
         v7 = 100663328;
         goto sub_60817728__LABEL_32;
       case 0x1Au:
         *(_BYTE *)(a1 + 54) = 1;
         v5 = MEMORY[0xCC6AF8];
-        v6 = *(int (__fastcall **)(int, int, _DWORD, _DWORD))(*MEMORY[0xCC6AF8] + 60);
+        v6 = *(int (__fastcall **)(int, int, _DWORD, _DWORD))(*(uint32_t *)(uintptr_t)MEMORY[0xCC6AF8] + 60);
         v7 = 100663329;
         goto sub_60817728__LABEL_32;
       case 0x1Cu:
         *(_BYTE *)(a1 + 54) = 1;
         v5 = MEMORY[0xCC6AF8];
-        v6 = *(int (__fastcall **)(int, int, _DWORD, _DWORD))(*MEMORY[0xCC6AF8] + 60);
+        v6 = *(int (__fastcall **)(int, int, _DWORD, _DWORD))(*(uint32_t *)(uintptr_t)MEMORY[0xCC6AF8] + 60);
         v7 = 100663330;
         goto sub_60817728__LABEL_32;
       default:
         *(_BYTE *)(a1 + 54) = 1;
         v5 = MEMORY[0xCC6AF8];
-        v6 = *(int (__fastcall **)(int, int, _DWORD, _DWORD))(*MEMORY[0xCC6AF8] + 60);
+        v6 = *(int (__fastcall **)(int, int, _DWORD, _DWORD))(*(uint32_t *)(uintptr_t)MEMORY[0xCC6AF8] + 60);
         v7 = 100663301;
   sub_60817728__LABEL_32:
         result = v6(v5, v7, 0, 0);
@@ -23615,7 +23615,7 @@ sub_6080C744__LABEL_131:
     v2 = (_DWORD *)MEMORY[0xC9BB38];
     if ( MEMORY[0xC9BB38] )
     {
-      (*(void (__fastcall **)(_DWORD, _DWORD))(*MEMORY[0xC9BB38] + 20))(MEMORY[0xC9BB38], 0);
+      (*(void (__fastcall **)(_DWORD, _DWORD))(*(uint32_t *)(uintptr_t)MEMORY[0xC9BB38] + 20))(MEMORY[0xC9BB38], 0);
       sub_60422BD4(v2);
       sub_6098B540(*(_DWORD *)(MEMORY[0xCD0C84] + 864));
       sub_608EB168(a1);
@@ -32296,7 +32296,7 @@ sub_6081CA7C__LABEL_157:
     if ( (struct sead_IDisposer *)MEMORY[0xCC6E00] == a1 )
     {
       MEMORY[0xCC6E00] = 0;
-      (*(void (__fastcall **)(_DWORD))*MEMORY[0xCC6E04])(MEMORY[0xCC6E04]);
+      (*(void (__fastcall **)(_DWORD))*(uint32_t *)(uintptr_t)MEMORY[0xCC6E04])(MEMORY[0xCC6E04]);
       MEMORY[0xCC6E04] = 0;
     }
     return sead__IDisposer__dtor(a1);
@@ -32314,7 +32314,7 @@ sub_6081CA7C__LABEL_157:
     if ( (struct sead_IDisposer *)MEMORY[0xCC6E00] == a1 )
     {
       MEMORY[0xCC6E00] = 0;
-      (*(void (__fastcall **)(_DWORD))*MEMORY[0xCC6E04])(MEMORY[0xCC6E04]);
+      (*(void (__fastcall **)(_DWORD))*(uint32_t *)(uintptr_t)MEMORY[0xCC6E04])(MEMORY[0xCC6E04]);
       MEMORY[0xCC6E04] = 0;
     }
     v2 = sead__IDisposer__dtor(a1);
@@ -37590,44 +37590,44 @@ sub_6082756C__LABEL_84:
       switch ( *(_DWORD *)(a1 + 20) )
       {
         case 0:
-          (*(void (__fastcall **)(_DWORD, const char *, int, _DWORD))(*MEMORY[0xC7F538] + 48))(
+          (*(void (__fastcall **)(_DWORD, const char *, int, _DWORD))(*(uint32_t *)(uintptr_t)MEMORY[0xC7F538] + 48))(
             MEMORY[0xC7F538],
             "SE_AMB_MAGMA",
             (int)(float)(*(float *)(MEMORY[0xC99D70] + 1816) - *(float *)(MEMORY[0xCC6484] + 128)),
             0);
           goto SE_AMB_ref_2__LABEL_10;
         case 1:
-          (*(void (__fastcall **)(_DWORD, const char *, _DWORD))(*MEMORY[0xC7F538] + 44))(
+          (*(void (__fastcall **)(_DWORD, const char *, _DWORD))(*(uint32_t *)(uintptr_t)MEMORY[0xC7F538] + 44))(
             MEMORY[0xC7F538],
             "SE_AMB_JUNGLE",
             0);
           goto SE_AMB_ref_2__LABEL_10;
         case 2:
-          (*(void (__fastcall **)(_DWORD, const char *, _DWORD))(*MEMORY[0xC7F538] + 44))(
+          (*(void (__fastcall **)(_DWORD, const char *, _DWORD))(*(uint32_t *)(uintptr_t)MEMORY[0xC7F538] + 44))(
             MEMORY[0xC7F538],
             "SE_AMB_THUNDER_CLOUD",
             0);
           goto SE_AMB_ref_2__LABEL_10;
         case 3:
-          (*(void (__fastcall **)(_DWORD, const char *, _DWORD))(*MEMORY[0xC7F538] + 44))(
+          (*(void (__fastcall **)(_DWORD, const char *, _DWORD))(*(uint32_t *)(uintptr_t)MEMORY[0xC7F538] + 44))(
             MEMORY[0xC7F538],
             "SE_AMB_SEASIDE",
             0);
           goto SE_AMB_ref_2__LABEL_10;
         case 4:
-          (*(void (__fastcall **)(_DWORD, const char *, _DWORD))(*MEMORY[0xC7F538] + 44))(
+          (*(void (__fastcall **)(_DWORD, const char *, _DWORD))(*(uint32_t *)(uintptr_t)MEMORY[0xC7F538] + 44))(
             MEMORY[0xC7F538],
             "SE_AMB_SEWER",
             0);
           goto SE_AMB_ref_2__LABEL_10;
         case 5:
-          (*(void (__fastcall **)(_DWORD, const char *, _DWORD))(*MEMORY[0xC7F538] + 44))(
+          (*(void (__fastcall **)(_DWORD, const char *, _DWORD))(*(uint32_t *)(uintptr_t)MEMORY[0xC7F538] + 44))(
             MEMORY[0xC7F538],
             "SE_AMB_RP_SHIP_WIND",
             0);
           goto SE_AMB_ref_2__LABEL_10;
         case 6:
-          (*(void (__fastcall **)(_DWORD, const char *, _DWORD))(*MEMORY[0xC7F538] + 44))(
+          (*(void (__fastcall **)(_DWORD, const char *, _DWORD))(*(uint32_t *)(uintptr_t)MEMORY[0xC7F538] + 44))(
             MEMORY[0xC7F538],
             "SE_AMB_RP_W7_SHIP_WIND",
             0);
@@ -104920,7 +104920,7 @@ sub_6087C54C__LABEL_19:
     int result; // r0
   
     v2 = (a1 + 31) & 0xFFFFFFE0;
-    result = (*(int (__fastcall **)(_DWORD, unsigned int, int))(*MEMORY[0xCC7FE4] + 8))(MEMORY[0xCC7FE4], v2, a2);
+    result = (*(int (__fastcall **)(_DWORD, unsigned int, int))(*(uint32_t *)(uintptr_t)MEMORY[0xCC7FE4] + 8))(MEMORY[0xCC7FE4], v2, a2);
     MEMORY[0xCC7FE0] += v2;
     return result;
   }
@@ -104931,7 +104931,7 @@ sub_6087C54C__LABEL_19:
  * ============================================================================ */
   int __fastcall sub_6088208C(int a1)
   {
-    return (*(int (__fastcall **)(_DWORD, int))(*MEMORY[0xCC7FE4] + 12))(MEMORY[0xCC7FE4], a1);
+    return (*(int (__fastcall **)(_DWORD, int))(*(uint32_t *)(uintptr_t)MEMORY[0xCC7FE4] + 12))(MEMORY[0xCC7FE4], a1);
   }
 
 /* ============================================================================
@@ -104968,7 +104968,7 @@ sub_6087C54C__LABEL_19:
  * ============================================================================ */
   int __fastcall sub_608820E8(int a1, int a2, int a3)
   {
-    return (*(int (__fastcall **)(_DWORD, int, int))(*MEMORY[0xCC7FE8] + 8))(MEMORY[0xCC7FE8], (a1 + a3 - 1) & -a3, a2);
+    return (*(int (__fastcall **)(_DWORD, int, int))(*(uint32_t *)(uintptr_t)MEMORY[0xCC7FE8] + 8))(MEMORY[0xCC7FE8], (a1 + a3 - 1) & -a3, a2);
   }
 
 /* ============================================================================
@@ -104987,7 +104987,7 @@ sub_6087C54C__LABEL_19:
   int __fastcall sub_60882124(int a1, int a2)
   {
     if ( a2 == 1 )
-      return (*(int (__fastcall **)(_DWORD, int))(*MEMORY[0xCC7FE8] + 12))(MEMORY[0xCC7FE8], a1);
+      return (*(int (__fastcall **)(_DWORD, int))(*(uint32_t *)(uintptr_t)MEMORY[0xCC7FE8] + 12))(MEMORY[0xCC7FE8], a1);
     nn__os__LockMutex(13402108);
     *(_DWORD *)(MEMORY[0xCC7FF0] + 4 * MEMORY[0xCC7FF4]++) = a1;
     return nn__os__UnlockMutex(13402108);
@@ -105004,7 +105004,7 @@ sub_6087C54C__LABEL_19:
   
     v1 = (4 * a1 + 31) & 0xFFFFFFE0;
     MEMORY[0xCC7FF8] = a1;
-    v2 = (void *)(*(int (__fastcall **)(_DWORD, unsigned int, int))(*MEMORY[0xCC7FE4] + 8))(MEMORY[0xCC7FE4], v1, 128);
+    v2 = (void *)(*(int (__fastcall **)(_DWORD, unsigned int, int))(*(uint32_t *)(uintptr_t)MEMORY[0xCC7FE4] + 8))(MEMORY[0xCC7FE4], v1, 128);
     MEMORY[0xCC7FE0] += v1;
     MEMORY[0xCC7FF0] = v2;
     memset(v2, 0, 4 * MEMORY[0xCC7FF8]);
@@ -105025,14 +105025,14 @@ sub_6087C54C__LABEL_19:
       v0 = 0;
       do
       {
-        (*(void (__fastcall **)(_DWORD, _DWORD))(*MEMORY[0xCC7FE8] + 12))(
+        (*(void (__fastcall **)(_DWORD, _DWORD))(*(uint32_t *)(uintptr_t)MEMORY[0xCC7FE8] + 12))(
           MEMORY[0xCC7FE8],
           *(_DWORD *)(MEMORY[0xCC7FF0] + 4 * v0));
         *(_DWORD *)(MEMORY[0xCC7FF0] + 4 * v0++) = 0;
       }
       while ( v0 < MEMORY[0xCC7FF4] );
     }
-    (*(void (__fastcall **)(_DWORD, _DWORD))(*MEMORY[0xCC7FE4] + 12))(MEMORY[0xCC7FE4], MEMORY[0xCC7FF0]);
+    (*(void (__fastcall **)(_DWORD, _DWORD))(*(uint32_t *)(uintptr_t)MEMORY[0xCC7FE4] + 12))(MEMORY[0xCC7FE4], MEMORY[0xCC7FF0]);
     MEMORY[0xCC7FF0] = 0;
     MEMORY[0xCC7FF4] = 0;
     return 0;
@@ -105051,7 +105051,7 @@ sub_6087C54C__LABEL_19:
       v0 = 0;
       do
       {
-        (*(void (__fastcall **)(_DWORD, _DWORD))(*MEMORY[0xCC7FE8] + 12))(
+        (*(void (__fastcall **)(_DWORD, _DWORD))(*(uint32_t *)(uintptr_t)MEMORY[0xCC7FE8] + 12))(
           MEMORY[0xCC7FE8],
           *(_DWORD *)(MEMORY[0xCC7FF0] + 4 * v0));
         *(_DWORD *)(MEMORY[0xCC7FF0] + 4 * v0++) = 0;
@@ -111402,7 +111402,7 @@ sub_6087C54C__LABEL_19:
  * ============================================================================ */
   int __fastcall sub_60889224(int a1)
   {
-    (*(void (__fastcall **)(_DWORD))*MEMORY[0xCC801C])(MEMORY[0xCC801C]);
+    (*(void (__fastcall **)(_DWORD))*(uint32_t *)(uintptr_t)MEMORY[0xCC801C])(MEMORY[0xCC801C]);
     (*(void (__fastcall **)(int, _DWORD))(*(_DWORD *)a1 + 12))(a1, MEMORY[0xCC801C]);
     MEMORY[0xCC801C] = 0;
     return 0;
@@ -113337,7 +113337,7 @@ sub_6087C54C__LABEL_19:
  * ============================================================================ */
   int __fastcall sub_6088B694(int a1)
   {
-    (*(void (__fastcall **)(_DWORD))*MEMORY[0xCC8020])(MEMORY[0xCC8020]);
+    (*(void (__fastcall **)(_DWORD))*(uint32_t *)(uintptr_t)MEMORY[0xCC8020])(MEMORY[0xCC8020]);
     (*(void (__fastcall **)(int, _DWORD))(*(_DWORD *)a1 + 12))(a1, MEMORY[0xCC8020]);
     MEMORY[0xCC8020] = 0;
     return 0;
@@ -197968,7 +197968,7 @@ sub_608DF448__LABEL_158:
       sead__Framework__initialize(*a1);
     v1 = 0;
     if ( MEMORY[0xCCEEA4] )
-      v1 = *MEMORY[0xCCEEAC];
+      v1 = *(uint32_t *)(uintptr_t)MEMORY[0xCCEEAC];
     v4[0] = 12321336;
     v4[1] = "sead__ThreadMgr";
     v2 = sead__ExpHeap__create(0, v4, v1, 4, 1, 0);
@@ -198311,8 +198311,8 @@ sub_608DF448__LABEL_158:
     const char *v12; // [sp+Ch] [bp-4h]
   
     sead__Framework__initialize(a1);
-    v1 = *MEMORY[0xCCEEAC];
-    v2 = (*(int (__fastcall **)(_DWORD, int))(*(_DWORD *)*MEMORY[0xCCEEAC] + 64))(*MEMORY[0xCCEEAC], 4);
+    v1 = *(uint32_t *)(uintptr_t)MEMORY[0xCCEEAC];
+    v2 = (*(int (__fastcall **)(_DWORD, int))(*(_DWORD *)*(uint32_t *)(uintptr_t)MEMORY[0xCCEEAC] + 64))(*(uint32_t *)(uintptr_t)MEMORY[0xCCEEAC], 4);
     v3 = 1;
     v11 = 12321336;
     v12 = "sead__SystemManagers";
@@ -227856,7 +227856,7 @@ sub_608DF448__LABEL_158:
     if ( *(struct sead_IDisposer **)off_60C79A78 == a1 )
     {
       *(_DWORD *)off_60C79A78 = 0;
-      (*(void (__fastcall **)(_DWORD))(*MEMORY[0xCCFAF4] + 4))(MEMORY[0xCCFAF4]);
+      (*(void (__fastcall **)(_DWORD))(*(uint32_t *)(uintptr_t)MEMORY[0xCCFAF4] + 4))(MEMORY[0xCCFAF4]);
       MEMORY[0xCCFAF4] = 0;
     }
     return sead__IDisposer__dtor(a1);
@@ -227874,7 +227874,7 @@ sub_608DF448__LABEL_158:
     if ( *(struct sead_IDisposer **)off_60C79A78 == a1 )
     {
       *(_DWORD *)off_60C79A78 = 0;
-      (*(void (__fastcall **)(_DWORD))(*MEMORY[0xCCFAF4] + 4))(MEMORY[0xCCFAF4]);
+      (*(void (__fastcall **)(_DWORD))(*(uint32_t *)(uintptr_t)MEMORY[0xCCFAF4] + 4))(MEMORY[0xCCFAF4]);
       MEMORY[0xCCFAF4] = 0;
     }
     v2 = sead__IDisposer__dtor(a1);
@@ -233091,7 +233091,7 @@ sub_608DF448__LABEL_158:
     if ( *(struct sead_IDisposer **)off_60C79B48 == a1 )
     {
       *(_DWORD *)off_60C79B48 = 0;
-      (*(void (__fastcall **)(_DWORD))(*MEMORY[0xCCFC8C] + 4))(MEMORY[0xCCFC8C]);
+      (*(void (__fastcall **)(_DWORD))(*(uint32_t *)(uintptr_t)MEMORY[0xCCFC8C] + 4))(MEMORY[0xCCFC8C]);
       MEMORY[0xCCFC8C] = 0;
     }
     return sead__IDisposer__dtor(a1);
@@ -233109,7 +233109,7 @@ sub_608DF448__LABEL_158:
     if ( *(struct sead_IDisposer **)off_60C79B48 == a1 )
     {
       *(_DWORD *)off_60C79B48 = 0;
-      (*(void (__fastcall **)(_DWORD))(*MEMORY[0xCCFC8C] + 4))(MEMORY[0xCCFC8C]);
+      (*(void (__fastcall **)(_DWORD))(*(uint32_t *)(uintptr_t)MEMORY[0xCCFC8C] + 4))(MEMORY[0xCCFC8C]);
       MEMORY[0xCCFC8C] = 0;
     }
     v2 = sead__IDisposer__dtor(a1);
@@ -249962,7 +249962,7 @@ sub_60925854__LABEL_105:
  * ============================================================================ */
   int sub_60927FC0()
   {
-    return (__int16)*MEMORY[0xCD09BC];
+    return (__int16)*(uint32_t *)(uintptr_t)MEMORY[0xCD09BC];
   }
 
 /* ============================================================================
@@ -252065,7 +252065,7 @@ sub_60925854__LABEL_105:
  * ============================================================================ */
   int sub_6092A6FC()
   {
-    return (__int16)*MEMORY[0xCD09C0];
+    return (__int16)*(uint32_t *)(uintptr_t)MEMORY[0xCD09C0];
   }
 
 /* ============================================================================
@@ -252147,7 +252147,7 @@ sub_60925854__LABEL_105:
  * ============================================================================ */
   int sub_6092A914()
   {
-    return (__int16)*MEMORY[0xCD09C4];
+    return (__int16)*(uint32_t *)(uintptr_t)MEMORY[0xCD09C4];
   }
 
 /* ============================================================================
@@ -252191,7 +252191,7 @@ sub_60925854__LABEL_105:
  * ============================================================================ */
   int sub_6092AAA0()
   {
-    return (__int16)*MEMORY[0xCD09C8];
+    return (__int16)*(uint32_t *)(uintptr_t)MEMORY[0xCD09C8];
   }
 
 /* ============================================================================
@@ -253003,7 +253003,7 @@ sub_60925854__LABEL_105:
  * ============================================================================ */
   int sub_6092BEFC()
   {
-    return (__int16)*MEMORY[0xCD09E4];
+    return (__int16)*(uint32_t *)(uintptr_t)MEMORY[0xCD09E4];
   }
 
 /* ============================================================================
@@ -260265,7 +260265,7 @@ sub_60925854__LABEL_105:
     if ( *(struct sead_IDisposer **)off_60C79CB0 == a1 )
     {
       *(_DWORD *)off_60C79CB0 = 0;
-      (*(void (__fastcall **)(_DWORD))(*MEMORY[0xCD09EC] + 4))(MEMORY[0xCD09EC]);
+      (*(void (__fastcall **)(_DWORD))(*(uint32_t *)(uintptr_t)MEMORY[0xCD09EC] + 4))(MEMORY[0xCD09EC]);
       MEMORY[0xCD09EC] = 0;
     }
     return sead__IDisposer__dtor(a1);
@@ -260283,7 +260283,7 @@ sub_60925854__LABEL_105:
     if ( *(struct sead_IDisposer **)off_60C79CB0 == a1 )
     {
       *(_DWORD *)off_60C79CB0 = 0;
-      (*(void (__fastcall **)(_DWORD))(*MEMORY[0xCD09EC] + 4))(MEMORY[0xCD09EC]);
+      (*(void (__fastcall **)(_DWORD))(*(uint32_t *)(uintptr_t)MEMORY[0xCD09EC] + 4))(MEMORY[0xCD09EC]);
       MEMORY[0xCD09EC] = 0;
     }
     v2 = sead__IDisposer__dtor(a1);
@@ -263311,7 +263311,7 @@ sub_60925854__LABEL_105:
     if ( *(struct sead_IDisposer **)off_60C79CC4 == a1 )
     {
       *(_DWORD *)off_60C79CC4 = 0;
-      (*(void (__fastcall **)(_DWORD))(*MEMORY[0xCD09F8] + 4))(MEMORY[0xCD09F8]);
+      (*(void (__fastcall **)(_DWORD))(*(uint32_t *)(uintptr_t)MEMORY[0xCD09F8] + 4))(MEMORY[0xCD09F8]);
       MEMORY[0xCD09F8] = 0;
     }
     return sead__IDisposer__dtor(a1);
@@ -263329,7 +263329,7 @@ sub_60925854__LABEL_105:
     if ( *(struct sead_IDisposer **)off_60C79CC4 == a1 )
     {
       *(_DWORD *)off_60C79CC4 = 0;
-      (*(void (__fastcall **)(_DWORD))(*MEMORY[0xCD09F8] + 4))(MEMORY[0xCD09F8]);
+      (*(void (__fastcall **)(_DWORD))(*(uint32_t *)(uintptr_t)MEMORY[0xCD09F8] + 4))(MEMORY[0xCD09F8]);
       MEMORY[0xCD09F8] = 0;
     }
     v2 = sead__IDisposer__dtor(a1);
@@ -278392,7 +278392,7 @@ sub_60945324__LABEL_155:
     if ( *(struct sead_IDisposer **)off_60C79D4C == a1 )
     {
       *(_DWORD *)off_60C79D4C = 0;
-      (*(void (__fastcall **)(_DWORD))(*MEMORY[0xCD0A14] + 4))(MEMORY[0xCD0A14]);
+      (*(void (__fastcall **)(_DWORD))(*(uint32_t *)(uintptr_t)MEMORY[0xCD0A14] + 4))(MEMORY[0xCD0A14]);
       MEMORY[0xCD0A14] = 0;
     }
     return sead__IDisposer__dtor(a1);
@@ -278410,7 +278410,7 @@ sub_60945324__LABEL_155:
     if ( *(struct sead_IDisposer **)off_60C79D4C == a1 )
     {
       *(_DWORD *)off_60C79D4C = 0;
-      (*(void (__fastcall **)(_DWORD))(*MEMORY[0xCD0A14] + 4))(MEMORY[0xCD0A14]);
+      (*(void (__fastcall **)(_DWORD))(*(uint32_t *)(uintptr_t)MEMORY[0xCD0A14] + 4))(MEMORY[0xCD0A14]);
       MEMORY[0xCD0A14] = 0;
     }
     v2 = sead__IDisposer__dtor(a1);
@@ -280034,7 +280034,7 @@ sub_60945324__LABEL_155:
     if ( !a6 )
       v7 = *(_DWORD *)(a1 + 20);
     Object_resolveSlotFromGlobal(*(_DWORD *)(a3 + 28), a2);
-    (*(void (__fastcall **)(_DWORD, int))(*MEMORY[0xCCFC8C] + 16))(MEMORY[0xCCFC8C], a2);
+    (*(void (__fastcall **)(_DWORD, int))(*(uint32_t *)(uintptr_t)MEMORY[0xCCFC8C] + 16))(MEMORY[0xCCFC8C], a2);
     if ( *(_BYTE *)(a1 + 1624) && *(int *)(a1 + 1680) >= 2 )
     {
       v12 = screen_shot_ref_2(a1, a2, *(_DWORD *)(a3 + 28));
@@ -280138,7 +280138,7 @@ sub_60945324__LABEL_155:
       else
         sub_6093F664(v62, v57);
       Object_resolveSlotFromGlobal(v58, v62);
-      (*(void (__fastcall **)(_DWORD, int))(*MEMORY[0xCCFC8C] + 16))(MEMORY[0xCCFC8C], v62);
+      (*(void (__fastcall **)(_DWORD, int))(*(uint32_t *)(uintptr_t)MEMORY[0xCCFC8C] + 16))(MEMORY[0xCCFC8C], v62);
       v65 = (char *)&v67;
       v64 = 12322272;
       v66 = 256;
@@ -283457,7 +283457,7 @@ s_sOrder_d_ref__LABEL_111:
     if ( *(struct sead_IDisposer **)off_60C79D88 == a1 )
     {
       *(_DWORD *)off_60C79D88 = 0;
-      (*(void (__fastcall **)(_DWORD))(*MEMORY[0xCD0B40] + 4))(MEMORY[0xCD0B40]);
+      (*(void (__fastcall **)(_DWORD))(*(uint32_t *)(uintptr_t)MEMORY[0xCD0B40] + 4))(MEMORY[0xCD0B40]);
       MEMORY[0xCD0B40] = 0;
     }
     return sead__IDisposer__dtor(a1);
@@ -283475,7 +283475,7 @@ s_sOrder_d_ref__LABEL_111:
     if ( *(struct sead_IDisposer **)off_60C79D88 == a1 )
     {
       *(_DWORD *)off_60C79D88 = 0;
-      (*(void (__fastcall **)(_DWORD))(*MEMORY[0xCD0B40] + 4))(MEMORY[0xCD0B40]);
+      (*(void (__fastcall **)(_DWORD))(*(uint32_t *)(uintptr_t)MEMORY[0xCD0B40] + 4))(MEMORY[0xCD0B40]);
       MEMORY[0xCD0B40] = 0;
     }
     v2 = sead__IDisposer__dtor(a1);
@@ -297625,7 +297625,7 @@ s_sOrder_d_ref__LABEL_111:
     if ( *(struct sead_IDisposer **)off_60C79E14 == a1 )
     {
       *(_DWORD *)off_60C79E14 = 0;
-      (*(void (__fastcall **)(_DWORD))(*MEMORY[0xCD0B50] + 4))(MEMORY[0xCD0B50]);
+      (*(void (__fastcall **)(_DWORD))(*(uint32_t *)(uintptr_t)MEMORY[0xCD0B50] + 4))(MEMORY[0xCD0B50]);
       MEMORY[0xCD0B50] = 0;
     }
     return sead__IDisposer__dtor(a1);
@@ -297643,7 +297643,7 @@ s_sOrder_d_ref__LABEL_111:
     if ( *(struct sead_IDisposer **)off_60C79E14 == a1 )
     {
       *(_DWORD *)off_60C79E14 = 0;
-      (*(void (__fastcall **)(_DWORD))(*MEMORY[0xCD0B50] + 4))(MEMORY[0xCD0B50]);
+      (*(void (__fastcall **)(_DWORD))(*(uint32_t *)(uintptr_t)MEMORY[0xCD0B50] + 4))(MEMORY[0xCD0B50]);
       MEMORY[0xCD0B50] = 0;
     }
     v2 = sead__IDisposer__dtor(a1);
@@ -305560,7 +305560,7 @@ sub_60970920__LABEL_129:
         {
           ((int (*)(int, int, int))MEMORY[0xCC77F0])(*(_DWORD *)(a2 + 192), 1, *v16 + 32);
           if ( (*(_BYTE *)(a1 + 2353) & 0x10) != 0 )
-            (*(void (__fastcall **)(_DWORD, int))(*MEMORY[0xCCFC8C] + 16))(MEMORY[0xCCFC8C], a2);
+            (*(void (__fastcall **)(_DWORD, int))(*(uint32_t *)(uintptr_t)MEMORY[0xCCFC8C] + 16))(MEMORY[0xCCFC8C], a2);
           v18 -= 4;
           ++v16;
         }
@@ -305578,7 +305578,7 @@ sub_60970920__LABEL_129:
         {
           sub_609194C8(*v13);
           if ( (*(_BYTE *)(a1 + 2353) & 0x10) != 0 )
-            (*(void (__fastcall **)(_DWORD, int))(*MEMORY[0xCCFC8C] + 16))(MEMORY[0xCCFC8C], a2);
+            (*(void (__fastcall **)(_DWORD, int))(*(uint32_t *)(uintptr_t)MEMORY[0xCCFC8C] + 16))(MEMORY[0xCCFC8C], a2);
           v15 -= 4;
           ++v13;
         }
@@ -305586,7 +305586,7 @@ sub_60970920__LABEL_129:
       }
     }
     if ( (*(_BYTE *)(a1 + 2353) & 0x20) != 0 )
-      (*(void (__fastcall **)(_DWORD, int))(*MEMORY[0xCCFC8C] + 16))(MEMORY[0xCCFC8C], a2);
+      (*(void (__fastcall **)(_DWORD, int))(*(uint32_t *)(uintptr_t)MEMORY[0xCCFC8C] + 16))(MEMORY[0xCCFC8C], a2);
     result = 0;
     *(_DWORD *)(a1 + 2408) = 0;
     v26 = *(_DWORD **)(a1 + 3612);
@@ -306338,7 +306338,7 @@ sub_60970920__LABEL_129:
     *(_DWORD *)(a1 + 2028) = 12405792;
     default_ref_9419C8((_DWORD *)(a1 + 2072));
     *(_DWORD *)(a1 + 2072) = v24;
-    *(_DWORD *)(a1 + 1940) = (__int16)*MEMORY[0xCD09C8];
+    *(_DWORD *)(a1 + 1940) = (__int16)*(uint32_t *)(uintptr_t)MEMORY[0xCD09C8];
     return a1;
   }
 
@@ -307799,7 +307799,7 @@ sub_60970920__LABEL_129:
         *(float *)(v19 + 936) = v18;
       }
       v21 = (*(int (__fastcall **)(int))(*(_DWORD *)a2 + 88))(a2);
-      if ( v21 == (__int16)*MEMORY[0xCD09C0] )
+      if ( v21 == (__int16)*(uint32_t *)(uintptr_t)MEMORY[0xCD09C0] )
       {
         v22 = *(float *)(a2 + 212);
         sub_6090B1D8(a2 + 184);
@@ -307864,7 +307864,7 @@ sub_60970920__LABEL_129:
         *(_DWORD *)(v69 + 928) = MEMORY[0xB3B988];
         goto sub_6097A1CC__LABEL_47;
       }
-      if ( v21 == (__int16)*MEMORY[0xCD09C8] )
+      if ( v21 == (__int16)*(uint32_t *)(uintptr_t)MEMORY[0xCD09C8] )
       {
         v37 = a1;
         do
@@ -308006,7 +308006,7 @@ sub_60970920__LABEL_129:
         *(_DWORD *)(v84 + 928) = *(_DWORD *)(a2 + 292);
         goto sub_6097A1CC__LABEL_66;
       }
-      if ( v21 == (__int16)*MEMORY[0xCD09C4] )
+      if ( v21 == (__int16)*(uint32_t *)(uintptr_t)MEMORY[0xCD09C4] )
       {
         v52 = *(float *)(a2 + 240);
         sub_6090B1D8(a2 + 184);
@@ -309185,7 +309185,7 @@ sub_60970920__LABEL_129:
         if ( a1[403] > v5++ )
           v8 += v4;
         v4 += 216;
-        *(_BYTE *)(v8 + 212) = v7 != (__int16)*MEMORY[0xCD09C8];
+        *(_BYTE *)(v8 + 212) = v7 != (__int16)*(uint32_t *)(uintptr_t)MEMORY[0xCD09C8];
       }
       while ( v3 != v5 );
       return v2;
@@ -309229,7 +309229,7 @@ sub_60970920__LABEL_129:
         if ( *(_DWORD *)(a1 + 1580) > v6++ )
           v9 += v5;
         v5 += 216;
-        *(_BYTE *)(v9 + 212) = v8 != (__int16)*MEMORY[0xCD09C8];
+        *(_BYTE *)(v9 + 212) = v8 != (__int16)*(uint32_t *)(uintptr_t)MEMORY[0xCD09C8];
       }
       while ( v4 != v6 );
       return v3;
@@ -309531,14 +309531,14 @@ sub_60970920__LABEL_129:
         v5 += 216 * a3;
       result = (*(int (__fastcall **)(int))(*(_DWORD *)a4 + 88))(a4);
       v6 = 2;
-      if ( result == (__int16)*MEMORY[0xCD09C0] )
+      if ( result == (__int16)*(uint32_t *)(uintptr_t)MEMORY[0xCD09C0] )
         goto sub_6097C1C8__LABEL_9;
       v6 = 27;
-      if ( result == (__int16)*MEMORY[0xCD09C8] )
+      if ( result == (__int16)*(uint32_t *)(uintptr_t)MEMORY[0xCD09C8] )
         goto sub_6097C1C8__LABEL_9;
       v6 = 0;
       v7 = 0;
-      if ( result == (__int16)*MEMORY[0xCD09C4] )
+      if ( result == (__int16)*(uint32_t *)(uintptr_t)MEMORY[0xCD09C4] )
         v6 = 19;
       if ( (v6 & 2) != 0 )
       {
@@ -317614,7 +317614,7 @@ sub_60970920__LABEL_129:
     if ( *(struct sead_IDisposer **)off_60C79F48 == a1 )
     {
       *(_DWORD *)off_60C79F48 = 0;
-      (*(void (__fastcall **)(_DWORD))*MEMORY[0xCD0C24])(MEMORY[0xCD0C24]);
+      (*(void (__fastcall **)(_DWORD))*(uint32_t *)(uintptr_t)MEMORY[0xCD0C24])(MEMORY[0xCD0C24]);
       MEMORY[0xCD0C24] = 0;
     }
     return sead__IDisposer__dtor(a1);
@@ -317632,7 +317632,7 @@ sub_60970920__LABEL_129:
     if ( *(struct sead_IDisposer **)off_60C79F48 == a1 )
     {
       *(_DWORD *)off_60C79F48 = 0;
-      (*(void (__fastcall **)(_DWORD))*MEMORY[0xCD0C24])(MEMORY[0xCD0C24]);
+      (*(void (__fastcall **)(_DWORD))*(uint32_t *)(uintptr_t)MEMORY[0xCD0C24])(MEMORY[0xCD0C24]);
       MEMORY[0xCD0C24] = 0;
     }
     v2 = sead__IDisposer__dtor(a1);
@@ -318026,7 +318026,7 @@ sub_60970920__LABEL_129:
     if ( *(struct sead_IDisposer **)off_60C79F54 == a1 )
     {
       *(_DWORD *)off_60C79F54 = 0;
-      (*(void (__fastcall **)(_DWORD))(*MEMORY[0xCD0C2C] + 8))(MEMORY[0xCD0C2C]);
+      (*(void (__fastcall **)(_DWORD))(*(uint32_t *)(uintptr_t)MEMORY[0xCD0C2C] + 8))(MEMORY[0xCD0C2C]);
       MEMORY[0xCD0C2C] = 0;
     }
     return sead__IDisposer__dtor(a1);
@@ -318044,7 +318044,7 @@ sub_60970920__LABEL_129:
     if ( *(struct sead_IDisposer **)off_60C79F54 == a1 )
     {
       *(_DWORD *)off_60C79F54 = 0;
-      (*(void (__fastcall **)(_DWORD))(*MEMORY[0xCD0C2C] + 8))(MEMORY[0xCD0C2C]);
+      (*(void (__fastcall **)(_DWORD))(*(uint32_t *)(uintptr_t)MEMORY[0xCD0C2C] + 8))(MEMORY[0xCD0C2C]);
       MEMORY[0xCD0C2C] = 0;
     }
     v2 = sead__IDisposer__dtor(a1);
@@ -323555,7 +323555,7 @@ sub_60970920__LABEL_129:
     if ( *(struct sead_IDisposer **)off_60C79FE4 == a1 )
     {
       *(_DWORD *)off_60C79FE4 = 0;
-      (*(void (__fastcall **)(_DWORD))(*MEMORY[0xCD0C84] + 4))(MEMORY[0xCD0C84]);
+      (*(void (__fastcall **)(_DWORD))(*(uint32_t *)(uintptr_t)MEMORY[0xCD0C84] + 4))(MEMORY[0xCD0C84]);
       MEMORY[0xCD0C84] = 0;
     }
     return sead__IDisposer__dtor(a1);
@@ -323573,7 +323573,7 @@ sub_60970920__LABEL_129:
     if ( *(struct sead_IDisposer **)off_60C79FE4 == a1 )
     {
       *(_DWORD *)off_60C79FE4 = 0;
-      (*(void (__fastcall **)(_DWORD))(*MEMORY[0xCD0C84] + 4))(MEMORY[0xCD0C84]);
+      (*(void (__fastcall **)(_DWORD))(*(uint32_t *)(uintptr_t)MEMORY[0xCD0C84] + 4))(MEMORY[0xCD0C84]);
       MEMORY[0xCD0C84] = 0;
     }
     v2 = sead__IDisposer__dtor(a1);

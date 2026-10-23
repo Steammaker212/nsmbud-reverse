@@ -7144,7 +7144,7 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
  * ============================================================================ */
   int __fastcall sub_6060A430(int a1, int a2, int a3)
   {
-    return (*(int (__fastcall **)(_DWORD, const char *, int, int, _DWORD))(*MEMORY[0xC7F534] + 40))(
+    return (*(int (__fastcall **)(_DWORD, const char *, int, int, _DWORD))(*(uint32_t *)(uintptr_t)MEMORY[0xC7F534] + 40))(
              MEMORY[0xC7F534],
              "SE_OBJ_CMN_TOUCH_HARD",
              a3,
@@ -10954,7 +10954,7 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
  * ============================================================================ */
   int __fastcall sub_60611488(int a1, int a2, int a3)
   {
-    return (*(int (__fastcall **)(_DWORD, const char *, int, int, _DWORD))(*MEMORY[0xC7F534] + 40))(
+    return (*(int (__fastcall **)(_DWORD, const char *, int, int, _DWORD))(*(uint32_t *)(uintptr_t)MEMORY[0xC7F534] + 40))(
              MEMORY[0xC7F534],
              "SE_OBJ_CMN_TOUCH_HARD",
              a3,
@@ -17007,7 +17007,7 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
  * ============================================================================ */
   int __fastcall sub_6061C28C(int a1, int a2, int a3)
   {
-    return (*(int (__fastcall **)(_DWORD, const char *, int, int, _DWORD))(*MEMORY[0xC7F534] + 40))(
+    return (*(int (__fastcall **)(_DWORD, const char *, int, int, _DWORD))(*(uint32_t *)(uintptr_t)MEMORY[0xC7F534] + 40))(
              MEMORY[0xC7F534],
              "SE_OBJ_CMN_TOUCH_HARD",
              a3,
@@ -20096,7 +20096,7 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
  * ============================================================================ */
   int __fastcall sub_60621A8C(int a1, int a2)
   {
-    return (*(int (__fastcall **)(_DWORD, const char *, int, int, _DWORD))(*MEMORY[0xC7F534] + 40))(
+    return (*(int (__fastcall **)(_DWORD, const char *, int, int, _DWORD))(*(uint32_t *)(uintptr_t)MEMORY[0xC7F534] + 40))(
              MEMORY[0xC7F534],
              "SE_OBJ_CMN_TOUCH_HARD",
              a2,
@@ -27886,7 +27886,7 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
       if ( result == 1 )
       {
         v6 = *(_DWORD *)(v3 + 6240);
-        v7 = *(int (__fastcall **)(_DWORD, const char *, int, int, _DWORD))(*MEMORY[0xC7F534] + 40);
+        v7 = *(int (__fastcall **)(_DWORD, const char *, int, int, _DWORD))(*(uint32_t *)(uintptr_t)MEMORY[0xC7F534] + 40);
         if ( v6 < 3 )
           return v7(MEMORY[0xC7F534], "SE_BOSS_KOOPA_FIRE_DISAPP2", a3, 1, 0);
         else
@@ -63069,7 +63069,7 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
  * ============================================================================ */
   int __fastcall sub_6066A4B0(int a1, int a2, int a3)
   {
-    return (*(int (__fastcall **)(_DWORD, const char *, int, int, _DWORD))(*MEMORY[0xC7F534] + 40))(
+    return (*(int (__fastcall **)(_DWORD, const char *, int, int, _DWORD))(*(uint32_t *)(uintptr_t)MEMORY[0xC7F534] + 40))(
              MEMORY[0xC7F534],
              "SE_OBJ_CMN_TOUCH_HARD",
              a3,
@@ -67106,7 +67106,7 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
  * ============================================================================ */
   int __fastcall sub_60670DD8(int a1, int a2, int a3)
   {
-    return (*(int (__fastcall **)(_DWORD, const char *, int, int, _DWORD))(*MEMORY[0xC7F534] + 40))(
+    return (*(int (__fastcall **)(_DWORD, const char *, int, int, _DWORD))(*(uint32_t *)(uintptr_t)MEMORY[0xC7F534] + 40))(
              MEMORY[0xC7F534],
              "SE_OBJ_CMN_TOUCH_HARD",
              a3,
@@ -69278,7 +69278,7 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
  * ============================================================================ */
   int __fastcall SE_OBJ_TOUCH_STARLIFT_ref(int a1, int a2, int a3)
   {
-    return (*(int (__fastcall **)(_DWORD, const char *, int, int, _DWORD))(*MEMORY[0xC7F534] + 40))(
+    return (*(int (__fastcall **)(_DWORD, const char *, int, int, _DWORD))(*(uint32_t *)(uintptr_t)MEMORY[0xC7F534] + 40))(
              MEMORY[0xC7F534],
              "SE_OBJ_TOUCH_STARLIFT",
              a3,
@@ -82814,7 +82814,7 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
  * ============================================================================ */
   int __fastcall sub_6068A2AC(int a1, int a2, int a3)
   {
-    return (*(int (__fastcall **)(_DWORD, const char *, int, int, _DWORD))(*MEMORY[0xC7F534] + 40))(
+    return (*(int (__fastcall **)(_DWORD, const char *, int, int, _DWORD))(*(uint32_t *)(uintptr_t)MEMORY[0xC7F534] + 40))(
              MEMORY[0xC7F534],
              "SE_OBJ_CMN_TOUCH_HARD",
              a3,
@@ -85110,7 +85110,7 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
  * ============================================================================ */
   int __fastcall sub_6068D150(int a1, int a2, int a3)
   {
-    return (*(int (__fastcall **)(_DWORD, const char *, int, int, _DWORD))(*MEMORY[0xC7F534] + 40))(
+    return (*(int (__fastcall **)(_DWORD, const char *, int, int, _DWORD))(*(uint32_t *)(uintptr_t)MEMORY[0xC7F534] + 40))(
              MEMORY[0xC7F534],
              "SE_OBJ_CMN_TOUCH_HARD",
              a3,
@@ -87598,7 +87598,7 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
  * ============================================================================ */
   int __fastcall sub_60691F34(int a1, int a2, int a3)
   {
-    return (*(int (__fastcall **)(_DWORD, const char *, int, int, _DWORD))(*MEMORY[0xC7F534] + 40))(
+    return (*(int (__fastcall **)(_DWORD, const char *, int, int, _DWORD))(*(uint32_t *)(uintptr_t)MEMORY[0xC7F534] + 40))(
              MEMORY[0xC7F534],
              "SE_OBJ_CMN_TOUCH_HARD",
              a3,
@@ -88140,7 +88140,7 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
  * ============================================================================ */
   int __fastcall sub_60692724(int a1, int a2, int a3)
   {
-    return (*(int (__fastcall **)(_DWORD, const char *, int, int, _DWORD))(*MEMORY[0xC7F534] + 40))(
+    return (*(int (__fastcall **)(_DWORD, const char *, int, int, _DWORD))(*(uint32_t *)(uintptr_t)MEMORY[0xC7F534] + 40))(
              MEMORY[0xC7F534],
              "SE_OBJ_CMN_TOUCH_HARD",
              a3,
@@ -99692,7 +99692,7 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
  * ============================================================================ */
   int __fastcall sub_606A60EC(int a1, int a2, int a3)
   {
-    return (*(int (__fastcall **)(_DWORD, const char *, int, int, _DWORD))(*MEMORY[0xC7F534] + 40))(
+    return (*(int (__fastcall **)(_DWORD, const char *, int, int, _DWORD))(*(uint32_t *)(uintptr_t)MEMORY[0xC7F534] + 40))(
              MEMORY[0xC7F534],
              "SE_OBJ_CMN_TOUCH_HARD",
              a3,
@@ -101493,7 +101493,7 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
       }
       if ( !sub_606AE22C() )
   SE_OBJ_CMN_TOUCH_HARD_ref_6A8D78__LABEL_11:
-        (*(void (__fastcall **)(_DWORD, const char *, int, int, _DWORD))(*MEMORY[0xC7F534] + 40))(
+        (*(void (__fastcall **)(_DWORD, const char *, int, int, _DWORD))(*(uint32_t *)(uintptr_t)MEMORY[0xC7F534] + 40))(
           MEMORY[0xC7F534],
           "SE_OBJ_CMN_TOUCH_HARD",
           a1 + 6100,
@@ -101740,7 +101740,7 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
  * ============================================================================ */
   int __fastcall sub_606A93E4(int a1, int a2, int a3)
   {
-    return (*(int (__fastcall **)(_DWORD, const char *, int, int, _DWORD))(*MEMORY[0xC7F534] + 40))(
+    return (*(int (__fastcall **)(_DWORD, const char *, int, int, _DWORD))(*(uint32_t *)(uintptr_t)MEMORY[0xC7F534] + 40))(
              MEMORY[0xC7F534],
              "SE_OBJ_CMN_TOUCH_HARD",
              a3,
@@ -122496,7 +122496,7 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
  * ============================================================================ */
   int __fastcall sub_606CA980(int a1, int a2, int a3)
   {
-    return (*(int (__fastcall **)(_DWORD, const char *, int, int, _DWORD))(*MEMORY[0xC7F534] + 40))(
+    return (*(int (__fastcall **)(_DWORD, const char *, int, int, _DWORD))(*(uint32_t *)(uintptr_t)MEMORY[0xC7F534] + 40))(
              MEMORY[0xC7F534],
              "SE_OBJ_CMN_TOUCH_HARD",
              a3,
@@ -122849,7 +122849,7 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
  * ============================================================================ */
   int __fastcall sub_606CB268(int a1, int a2, int a3)
   {
-    return (*(int (__fastcall **)(_DWORD, const char *, int, int, _DWORD))(*MEMORY[0xC7F534] + 40))(
+    return (*(int (__fastcall **)(_DWORD, const char *, int, int, _DWORD))(*(uint32_t *)(uintptr_t)MEMORY[0xC7F534] + 40))(
              MEMORY[0xC7F534],
              "SE_OBJ_CMN_TOUCH_HARD",
              a3,
@@ -139092,7 +139092,7 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
         v24 = *(_DWORD *)(a1 + 108);
         v25 = v20;
         LOBYTE(v23) = 0;
-        return (*(int (__fastcall **)(_DWORD, const char *, int *, _DWORD, int *, int, _DWORD, int))(*MEMORY[0xC7F534] + 40))(
+        return (*(int (__fastcall **)(_DWORD, const char *, int *, _DWORD, int *, int, _DWORD, int))(*(uint32_t *)(uintptr_t)MEMORY[0xC7F534] + 40))(
                  MEMORY[0xC7F534],
                  "SE_PLY_TARZAN_KUSARI",
                  &v24,
@@ -139108,7 +139108,7 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
         v24 = *(_DWORD *)(a1 + 108);
         v25 = v21;
         LOBYTE(v23) = 0;
-        return (*(int (__fastcall **)(_DWORD, const char *, int *, _DWORD, int *, int, _DWORD, int))(*MEMORY[0xC7F534] + 40))(
+        return (*(int (__fastcall **)(_DWORD, const char *, int *, _DWORD, int *, int, _DWORD, int))(*(uint32_t *)(uintptr_t)MEMORY[0xC7F534] + 40))(
                  MEMORY[0xC7F534],
                  "SE_PLY_TARZAN_ROPE",
                  &v24,
@@ -140172,7 +140172,7 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
  * ============================================================================ */
   int __fastcall sub_606E6B00(int a1, int a2, int a3)
   {
-    return (*(int (__fastcall **)(_DWORD, const char *, int, int, _DWORD))(*MEMORY[0xC7F530] + 40))(
+    return (*(int (__fastcall **)(_DWORD, const char *, int, int, _DWORD))(*(uint32_t *)(uintptr_t)MEMORY[0xC7F530] + 40))(
              MEMORY[0xC7F530],
              "SE_EMY_CMN_TOUCH_HARD",
              a3,
@@ -165435,7 +165435,7 @@ SE_SYS_CE_ref_3__LABEL_11:
     if ( (struct sead_IDisposer *)MEMORY[0xCBD250] == a1 )
     {
       MEMORY[0xCBD250] = 0;
-      (*(void (__fastcall **)(_DWORD))*MEMORY[0xCBD254])(MEMORY[0xCBD254]);
+      (*(void (__fastcall **)(_DWORD))*(uint32_t *)(uintptr_t)MEMORY[0xCBD254])(MEMORY[0xCBD254]);
       MEMORY[0xCBD254] = 0;
     }
     return sead__IDisposer__dtor(a1);
@@ -165453,7 +165453,7 @@ SE_SYS_CE_ref_3__LABEL_11:
     if ( (struct sead_IDisposer *)MEMORY[0xCBD250] == a1 )
     {
       MEMORY[0xCBD250] = 0;
-      (*(void (__fastcall **)(_DWORD))*MEMORY[0xCBD254])(MEMORY[0xCBD254]);
+      (*(void (__fastcall **)(_DWORD))*(uint32_t *)(uintptr_t)MEMORY[0xCBD254])(MEMORY[0xCBD254]);
       MEMORY[0xCBD254] = 0;
     }
     v2 = sead__IDisposer__dtor(a1);
@@ -168493,7 +168493,7 @@ sub_60716A00__LABEL_21:
     if ( (struct sead_IDisposer *)MEMORY[0xCBD258] == a1 )
     {
       MEMORY[0xCBD258] = 0;
-      (*(void (__fastcall **)(_DWORD))*MEMORY[0xCBD25C])(MEMORY[0xCBD25C]);
+      (*(void (__fastcall **)(_DWORD))*(uint32_t *)(uintptr_t)MEMORY[0xCBD25C])(MEMORY[0xCBD25C]);
       MEMORY[0xCBD25C] = 0;
     }
     return sead__IDisposer__dtor(a1);
@@ -168511,7 +168511,7 @@ sub_60716A00__LABEL_21:
     if ( (struct sead_IDisposer *)MEMORY[0xCBD258] == a1 )
     {
       MEMORY[0xCBD258] = 0;
-      (*(void (__fastcall **)(_DWORD))*MEMORY[0xCBD25C])(MEMORY[0xCBD25C]);
+      (*(void (__fastcall **)(_DWORD))*(uint32_t *)(uintptr_t)MEMORY[0xCBD25C])(MEMORY[0xCBD25C]);
       MEMORY[0xCBD25C] = 0;
     }
     v2 = sead__IDisposer__dtor(a1);
@@ -178336,7 +178336,7 @@ sub_60721780__LABEL_56:
     if ( (struct sead_IDisposer *)MEMORY[0xCBD890] == a1 )
     {
       MEMORY[0xCBD890] = 0;
-      (*(void (__fastcall **)(_DWORD))*MEMORY[0xCBD894])(MEMORY[0xCBD894]);
+      (*(void (__fastcall **)(_DWORD))*(uint32_t *)(uintptr_t)MEMORY[0xCBD894])(MEMORY[0xCBD894]);
       MEMORY[0xCBD894] = 0;
     }
     return sead__IDisposer__dtor(a1);
@@ -178354,7 +178354,7 @@ sub_60721780__LABEL_56:
     if ( (struct sead_IDisposer *)MEMORY[0xCBD890] == a1 )
     {
       MEMORY[0xCBD890] = 0;
-      (*(void (__fastcall **)(_DWORD))*MEMORY[0xCBD894])(MEMORY[0xCBD894]);
+      (*(void (__fastcall **)(_DWORD))*(uint32_t *)(uintptr_t)MEMORY[0xCBD894])(MEMORY[0xCBD894]);
       MEMORY[0xCBD894] = 0;
     }
     v2 = sead__IDisposer__dtor(a1);
@@ -185298,7 +185298,7 @@ sub_60721780__LABEL_56:
     if ( (struct sead_IDisposer *)MEMORY[0xCBDBF4] == a1 )
     {
       MEMORY[0xCBDBF4] = 0;
-      (*(void (__fastcall **)(_DWORD))*MEMORY[0xCBDBF8])(MEMORY[0xCBDBF8]);
+      (*(void (__fastcall **)(_DWORD))*(uint32_t *)(uintptr_t)MEMORY[0xCBDBF8])(MEMORY[0xCBDBF8]);
       MEMORY[0xCBDBF8] = 0;
     }
     return sead__IDisposer__dtor(a1);
@@ -185316,7 +185316,7 @@ sub_60721780__LABEL_56:
     if ( (struct sead_IDisposer *)MEMORY[0xCBDBF4] == a1 )
     {
       MEMORY[0xCBDBF4] = 0;
-      (*(void (__fastcall **)(_DWORD))*MEMORY[0xCBDBF8])(MEMORY[0xCBDBF8]);
+      (*(void (__fastcall **)(_DWORD))*(uint32_t *)(uintptr_t)MEMORY[0xCBDBF8])(MEMORY[0xCBDBF8]);
       MEMORY[0xCBDBF8] = 0;
     }
     v2 = sead__IDisposer__dtor(a1);

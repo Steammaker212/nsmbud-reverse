@@ -4805,7 +4805,7 @@ static inline unsigned int uxtb16(unsigned int x)
     if ( (struct sead_IDisposer *)MEMORY[0xC9F2C8] == a1 )
     {
       MEMORY[0xC9F2C8] = 0;
-      (*(void (__fastcall **)(_DWORD))*MEMORY[0xC9F2CC])(MEMORY[0xC9F2CC]);
+      (*(void (__fastcall **)(_DWORD))*(uint32_t *)(uintptr_t)MEMORY[0xC9F2CC])(MEMORY[0xC9F2CC]);
       MEMORY[0xC9F2CC] = 0;
     }
     return sead__IDisposer__dtor(a1);
@@ -4823,7 +4823,7 @@ static inline unsigned int uxtb16(unsigned int x)
     if ( (struct sead_IDisposer *)MEMORY[0xC9F2C8] == a1 )
     {
       MEMORY[0xC9F2C8] = 0;
-      (*(void (__fastcall **)(_DWORD))*MEMORY[0xC9F2CC])(MEMORY[0xC9F2CC]);
+      (*(void (__fastcall **)(_DWORD))*(uint32_t *)(uintptr_t)MEMORY[0xC9F2CC])(MEMORY[0xC9F2CC]);
       MEMORY[0xC9F2CC] = 0;
     }
     v2 = sead__IDisposer__dtor(a1);
@@ -9802,7 +9802,7 @@ static inline unsigned int uxtb16(unsigned int x)
       {
         v9 = sub_60913508(v27);
         sub_60913814(v9);
-        (*(void (__fastcall **)(_DWORD, _DWORD *))(*MEMORY[0xCCFC8C] + 16))(MEMORY[0xCCFC8C], v27);
+        (*(void (__fastcall **)(_DWORD, _DWORD *))(*(uint32_t *)(uintptr_t)MEMORY[0xCCFC8C] + 16))(MEMORY[0xCCFC8C], v27);
         sub_6091361C(v27);
         sub_60913598(v27);
         v5 = 0;
@@ -32982,7 +32982,7 @@ static inline unsigned int uxtb16(unsigned int x)
     if ( (struct sead_IDisposer *)MEMORY[0xCA190C] == a1 )
     {
       MEMORY[0xCA190C] = 0;
-      (*(void (__fastcall **)(_DWORD))*MEMORY[0xCA1910])(MEMORY[0xCA1910]);
+      (*(void (__fastcall **)(_DWORD))*(uint32_t *)(uintptr_t)MEMORY[0xCA1910])(MEMORY[0xCA1910]);
       MEMORY[0xCA1910] = 0;
     }
     return sead__IDisposer__dtor(a1);
@@ -33000,7 +33000,7 @@ static inline unsigned int uxtb16(unsigned int x)
     if ( (struct sead_IDisposer *)MEMORY[0xCA190C] == a1 )
     {
       MEMORY[0xCA190C] = 0;
-      (*(void (__fastcall **)(_DWORD))*MEMORY[0xCA1910])(MEMORY[0xCA1910]);
+      (*(void (__fastcall **)(_DWORD))*(uint32_t *)(uintptr_t)MEMORY[0xCA1910])(MEMORY[0xCA1910]);
       MEMORY[0xCA1910] = 0;
     }
     v2 = sead__IDisposer__dtor(a1);
@@ -82410,7 +82410,7 @@ static inline unsigned int uxtb16(unsigned int x)
     if ( (struct sead_IDisposer *)MEMORY[0xCA7340] == a1 )
     {
       MEMORY[0xCA7340] = 0;
-      (*(void (__fastcall **)(_DWORD))*MEMORY[0xCA7344])(MEMORY[0xCA7344]);
+      (*(void (__fastcall **)(_DWORD))*(uint32_t *)(uintptr_t)MEMORY[0xCA7344])(MEMORY[0xCA7344]);
       MEMORY[0xCA7344] = 0;
     }
     return sead__IDisposer__dtor(a1);
@@ -82428,7 +82428,7 @@ static inline unsigned int uxtb16(unsigned int x)
     if ( (struct sead_IDisposer *)MEMORY[0xCA7340] == a1 )
     {
       MEMORY[0xCA7340] = 0;
-      (*(void (__fastcall **)(_DWORD))*MEMORY[0xCA7344])(MEMORY[0xCA7344]);
+      (*(void (__fastcall **)(_DWORD))*(uint32_t *)(uintptr_t)MEMORY[0xCA7344])(MEMORY[0xCA7344]);
       MEMORY[0xCA7344] = 0;
     }
     v2 = sead__IDisposer__dtor(a1);
@@ -113982,7 +113982,7 @@ static inline unsigned int uxtb16(unsigned int x)
     if ( (struct sead_IDisposer *)MEMORY[0xCAA44C] == a1 )
     {
       MEMORY[0xCAA44C] = 0;
-      (*(void (__fastcall **)(_DWORD))*MEMORY[0xCAA450])(MEMORY[0xCAA450]);
+      (*(void (__fastcall **)(_DWORD))*(uint32_t *)(uintptr_t)MEMORY[0xCAA450])(MEMORY[0xCAA450]);
       MEMORY[0xCAA450] = 0;
     }
     return sead__IDisposer__dtor(a1);
@@ -114000,7 +114000,7 @@ static inline unsigned int uxtb16(unsigned int x)
     if ( (struct sead_IDisposer *)MEMORY[0xCAA44C] == a1 )
     {
       MEMORY[0xCAA44C] = 0;
-      (*(void (__fastcall **)(_DWORD))*MEMORY[0xCAA450])(MEMORY[0xCAA450]);
+      (*(void (__fastcall **)(_DWORD))*(uint32_t *)(uintptr_t)MEMORY[0xCAA450])(MEMORY[0xCAA450]);
       MEMORY[0xCAA450] = 0;
     }
     v2 = sead__IDisposer__dtor(a1);
@@ -117536,7 +117536,7 @@ static inline unsigned int uxtb16(unsigned int x)
     if ( (struct sead_IDisposer *)MEMORY[0xCAAABC] == a1 )
     {
       MEMORY[0xCAAABC] = 0;
-      (*(void (__fastcall **)(_DWORD))*MEMORY[0xCAAAC0])(MEMORY[0xCAAAC0]);
+      (*(void (__fastcall **)(_DWORD))*(uint32_t *)(uintptr_t)MEMORY[0xCAAAC0])(MEMORY[0xCAAAC0]);
       MEMORY[0xCAAAC0] = 0;
     }
     return sead__IDisposer__dtor(a1);
@@ -117554,7 +117554,7 @@ static inline unsigned int uxtb16(unsigned int x)
     if ( (struct sead_IDisposer *)MEMORY[0xCAAABC] == a1 )
     {
       MEMORY[0xCAAABC] = 0;
-      (*(void (__fastcall **)(_DWORD))*MEMORY[0xCAAAC0])(MEMORY[0xCAAAC0]);
+      (*(void (__fastcall **)(_DWORD))*(uint32_t *)(uintptr_t)MEMORY[0xCAAAC0])(MEMORY[0xCAAAC0]);
       MEMORY[0xCAAAC0] = 0;
     }
     v2 = sead__IDisposer__dtor(a1);
@@ -127749,7 +127749,7 @@ static inline unsigned int uxtb16(unsigned int x)
     if ( (struct sead_IDisposer *)MEMORY[0xCABDE0] == a1 )
     {
       MEMORY[0xCABDE0] = 0;
-      (*(void (__fastcall **)(_DWORD))*MEMORY[0xCABDE4])(MEMORY[0xCABDE4]);
+      (*(void (__fastcall **)(_DWORD))*(uint32_t *)(uintptr_t)MEMORY[0xCABDE4])(MEMORY[0xCABDE4]);
       MEMORY[0xCABDE4] = 0;
     }
     return sead__IDisposer__dtor(a1);
@@ -127767,7 +127767,7 @@ static inline unsigned int uxtb16(unsigned int x)
     if ( (struct sead_IDisposer *)MEMORY[0xCABDE0] == a1 )
     {
       MEMORY[0xCABDE0] = 0;
-      (*(void (__fastcall **)(_DWORD))*MEMORY[0xCABDE4])(MEMORY[0xCABDE4]);
+      (*(void (__fastcall **)(_DWORD))*(uint32_t *)(uintptr_t)MEMORY[0xCABDE4])(MEMORY[0xCABDE4]);
       MEMORY[0xCABDE4] = 0;
     }
     v2 = sead__IDisposer__dtor(a1);
@@ -143724,7 +143724,7 @@ static inline unsigned int uxtb16(unsigned int x)
     if ( (struct sead_IDisposer *)MEMORY[0xCAD904] == a1 )
     {
       MEMORY[0xCAD904] = 0;
-      (*(void (__fastcall **)(_DWORD))*MEMORY[0xCAD908])(MEMORY[0xCAD908]);
+      (*(void (__fastcall **)(_DWORD))*(uint32_t *)(uintptr_t)MEMORY[0xCAD908])(MEMORY[0xCAD908]);
       MEMORY[0xCAD908] = 0;
     }
     return sead__IDisposer__dtor(a1);
@@ -143742,7 +143742,7 @@ static inline unsigned int uxtb16(unsigned int x)
     if ( (struct sead_IDisposer *)MEMORY[0xCAD904] == a1 )
     {
       MEMORY[0xCAD904] = 0;
-      (*(void (__fastcall **)(_DWORD))*MEMORY[0xCAD908])(MEMORY[0xCAD908]);
+      (*(void (__fastcall **)(_DWORD))*(uint32_t *)(uintptr_t)MEMORY[0xCAD908])(MEMORY[0xCAD908]);
       MEMORY[0xCAD908] = 0;
     }
     v2 = sead__IDisposer__dtor(a1);
@@ -149711,7 +149711,7 @@ static inline unsigned int uxtb16(unsigned int x)
     v25 = 0x100000;
     v37 = "Framework";
     if ( MEMORY[0xCCEEA4] )
-      v4 = *MEMORY[0xCCEEAC];
+      v4 = *(uint32_t *)(uintptr_t)MEMORY[0xCCEEAC];
     v5 = sead__ExpHeap__create(0, &v36, v4, 4, 1, 0);
     v6 = __operator_new_al(368, v5, 4);
     nnMain_helper(v6, &v13);
@@ -149723,7 +149723,7 @@ static inline unsigned int uxtb16(unsigned int x)
     v36 = 12321336;
     v37 = "FwGraphicSystem";
     if ( MEMORY[0xCCEEA4] )
-      v3 = *MEMORY[0xCCEEAC];
+      v3 = *(uint32_t *)(uintptr_t)MEMORY[0xCCEEAC];
     v8 = 0;
     v9 = sead__ExpHeap__create(0, &v36, v3, 4, 1, 0);
     nnMain_helper_8EA13C(v6, v9, v12);
@@ -149733,7 +149733,7 @@ static inline unsigned int uxtb16(unsigned int x)
     sub_608EF048(&v36, v11);
     nnMain_helper_8ED674(v11);
     if ( MEMORY[0xCCEEA4] )
-      v8 = *MEMORY[0xCCEEAC];
+      v8 = *(uint32_t *)(uintptr_t)MEMORY[0xCCEEAC];
     return (*(int (__fastcall **)(int, int, int *, _DWORD *))(*(_DWORD *)v6 + 20))(v6, v8, &v36, v11);
   }
 
@@ -188406,7 +188406,7 @@ static inline unsigned int uxtb16(unsigned int x)
     v4 = v3;
     AreaTask_getWrappedXPos(MEMORY[0xC99D70]);
     v6[0] = v4;
-    return (*(int (__fastcall **)(_DWORD, const char *, _DWORD *, int, _DWORD))(*MEMORY[0xC7F534] + 40))(
+    return (*(int (__fastcall **)(_DWORD, const char *, _DWORD *, int, _DWORD))(*(uint32_t *)(uintptr_t)MEMORY[0xC7F534] + 40))(
              MEMORY[0xC7F534],
              "SE_PLY_HIT_BROS_FLR_BOUND",
              v6,
@@ -189189,7 +189189,7 @@ static inline unsigned int uxtb16(unsigned int x)
       {
         result = *(unsigned __int8 *)(a1 + 72323);
         if ( *(_BYTE *)(a1 + 72323) )
-          return (*(int (__fastcall **)(_DWORD, const char *, int, _DWORD))(*MEMORY[0xC7F538] + 48))(
+          return (*(int (__fastcall **)(_DWORD, const char *, int, _DWORD))(*(uint32_t *)(uintptr_t)MEMORY[0xC7F538] + 48))(
                    MEMORY[0xC7F538],
                    "SE_AMB_MAGMA_RISE",
                    (int)(float)(*(float *)(MEMORY[0xCC6484] + 132)
@@ -189355,7 +189355,7 @@ static inline unsigned int uxtb16(unsigned int x)
                 v11 = *v9;
               *v2 = *v2 + v11;
               if ( !v12 )
-                return (*(int (__fastcall **)(_DWORD, const char *, int, _DWORD))(*MEMORY[0xC7F538] + 48))(
+                return (*(int (__fastcall **)(_DWORD, const char *, int, _DWORD))(*(uint32_t *)(uintptr_t)MEMORY[0xC7F538] + 48))(
                          MEMORY[0xC7F538],
                          "SE_AMB_MAGMA_RISE",
                          (int)(float)(*(float *)(MEMORY[0xCC6484] + 132) - (float)(*v3 - *(float *)(a1 + 6872))),
@@ -189994,7 +189994,7 @@ static inline unsigned int uxtb16(unsigned int x)
     ModelWrapper_updateModel(*(_DWORD **)v2);
     result = a1 + 6868;
     if ( *(float *)(a1 + 6868) != 0.0 )
-      return (*(int (__fastcall **)(_DWORD, const char *, int, _DWORD))(*MEMORY[0xC7F538] + 48))(
+      return (*(int (__fastcall **)(_DWORD, const char *, int, _DWORD))(*(uint32_t *)(uintptr_t)MEMORY[0xC7F538] + 48))(
                MEMORY[0xC7F538],
                "SE_AMB_POISON_RISE",
                (int)(float)(*(float *)(MEMORY[0xCC6484] + 132)
@@ -202922,7 +202922,7 @@ static inline unsigned int uxtb16(unsigned int x)
  * ============================================================================ */
   int __fastcall sub_605BE4E8(int a1, int a2, int a3)
   {
-    return (*(int (__fastcall **)(_DWORD, const char *, int, int, _DWORD))(*MEMORY[0xC7F534] + 40))(
+    return (*(int (__fastcall **)(_DWORD, const char *, int, int, _DWORD))(*(uint32_t *)(uintptr_t)MEMORY[0xC7F534] + 40))(
              MEMORY[0xC7F534],
              "SE_OBJ_CMN_TOUCH_HARD",
              a3,
@@ -205888,7 +205888,7 @@ static inline unsigned int uxtb16(unsigned int x)
                     v19 = "SE_OBJ_BROSFLOOR_WAVE_L";
                   else
                     v19 = "SE_OBJ_BROSFLOOR_WAVE_R";
-                  (*(void (__fastcall **)(_DWORD, const char *, float *, _DWORD))(*MEMORY[0xC7F534] + 36))(
+                  (*(void (__fastcall **)(_DWORD, const char *, float *, _DWORD))(*(uint32_t *)(uintptr_t)MEMORY[0xC7F534] + 36))(
                     MEMORY[0xC7F534],
                     v19,
                     v36,
@@ -208801,7 +208801,7 @@ sub_605C4308__LABEL_213:
   
     v3 = *(_DWORD *)(result + 4);
     if ( v3 == 2 )
-      return (*(int (__fastcall **)(_DWORD, const char *, int, int, _DWORD))(*MEMORY[0xC7F534] + 40))(
+      return (*(int (__fastcall **)(_DWORD, const char *, int, int, _DWORD))(*(uint32_t *)(uintptr_t)MEMORY[0xC7F534] + 40))(
                MEMORY[0xC7F534],
                "SE_EMY_CMN_TOUCH_DISAPPEAR",
                a3,
