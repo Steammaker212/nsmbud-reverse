@@ -66,6 +66,141 @@
    "CONFIRMED_FLATTENED": 42,
    "HARMLESS_SINGLE_LOAD": 4
   },
+  "unverified": [
+   {
+    "va": "0x60008608",
+    "name": "sub_60008608",
+    "chain": "v16->previous->previous",
+    "rewritten_to": "FIELD_U32(v16, 0x0)",
+    "reason": "chain rooted in local `v16`, not a parameter"
+   },
+   {
+    "va": "0x6015DD58",
+    "name": "sub_6015DD58",
+    "chain": "first->owner->field_70",
+    "rewritten_to": "FIELD_F32(first, 0x70)",
+    "reason": "no published corpus body"
+   },
+   {
+    "va": "0x6025E9EC",
+    "name": "BobOmb_vf159",
+    "chain": "v6->executer->vtable",
+    "rewritten_to": "FIELD_U32(v6, 0x0)",
+    "reason": "chain rooted in local `v6`, not a parameter"
+   },
+   {
+    "va": "0x602A929C",
+    "name": "Enemy__doStateChange",
+    "chain": "mgr->executer->vtable",
+    "rewritten_to": "FIELD_U32(mgr, 0x0)",
+    "reason": "chain rooted in local `mgr`, not a parameter"
+   },
+   {
+    "va": "0x60414344",
+    "name": "sub_60414344",
+    "chain": "v7->previous->previous",
+    "rewritten_to": "FIELD_U32(v7, 0x0)",
+    "reason": "no published corpus body"
+   },
+   {
+    "va": "0x60414344",
+    "name": "sub_60414344",
+    "chain": "v11->previous->previous",
+    "rewritten_to": "FIELD_U32(v11, 0x0)",
+    "reason": "no published corpus body"
+   },
+   {
+    "va": "0x604145D0",
+    "name": "sub_604145D0",
+    "chain": "v9->previous->previous",
+    "rewritten_to": "FIELD_U32(v9, 0x0)",
+    "reason": "no published corpus body"
+   },
+   {
+    "va": "0x604145D0",
+    "name": "sub_604145D0",
+    "chain": "v17->previous->previous",
+    "rewritten_to": "FIELD_U32(v17, 0x0)",
+    "reason": "no published corpus body"
+   },
+   {
+    "va": "0x604146FC",
+    "name": "sub_604146FC",
+    "chain": "v9->previous->previous",
+    "rewritten_to": "FIELD_U32(v9, 0x0)",
+    "reason": "no published corpus body"
+   },
+   {
+    "va": "0x604146FC",
+    "name": "sub_604146FC",
+    "chain": "v13->previous->previous",
+    "rewritten_to": "FIELD_U32(v13, 0x0)",
+    "reason": "no published corpus body"
+   },
+   {
+    "va": "0x605969F8",
+    "name": "sub_605969F8",
+    "chain": "v12->owner->_.vtable",
+    "rewritten_to": "FIELD_U32(v12, 0x0)",
+    "reason": "chain rooted in local `v12`, not a parameter"
+   },
+   {
+    "va": "0x60596ED8",
+    "name": "sub_60596ED8",
+    "chain": "v7->owner->_.vtable",
+    "rewritten_to": "FIELD_U32(v7, 0x0)",
+    "reason": "chain rooted in local `v7`, not a parameter"
+   },
+   {
+    "va": "0x608F01B0",
+    "name": "sub_608F01B0",
+    "chain": "previous->previous->previous",
+    "rewritten_to": "FIELD_U32(previous, 0x0)",
+    "reason": "chain rooted in local `previous`, not a parameter"
+   },
+   {
+    "va": "0x6099F1E8",
+    "name": "sub_6099F1E8",
+    "chain": "v21->next->previous",
+    "rewritten_to": "FIELD_U32(v21, 0x4)",
+    "reason": "chain rooted in local `v21`, not a parameter"
+   },
+   {
+    "va": "0x6099F5D4",
+    "name": "sub_6099F5D4",
+    "chain": "v10->next->previous",
+    "rewritten_to": "FIELD_U32(v10, 0x4)",
+    "reason": "chain rooted in local `v10`, not a parameter"
+   },
+   {
+    "va": "0x6099F9D0",
+    "name": "sub_6099F9D0",
+    "chain": "v17->next->previous",
+    "rewritten_to": "FIELD_U32(v17, 0x4)",
+    "reason": "chain rooted in local `v17`, not a parameter"
+   },
+   {
+    "va": "0x6099F9D0",
+    "name": "sub_6099F9D0",
+    "chain": "v45->next->previous",
+    "rewritten_to": "FIELD_U32(v45, 0x4)",
+    "reason": "chain rooted in local `v45`, not a parameter"
+   },
+   {
+    "va": "0x609A1624",
+    "name": "sub_609A1624",
+    "chain": "next->next->previous",
+    "rewritten_to": "FIELD_U32(next, 0x4)",
+    "reason": "chain rooted in local `next`, not a parameter"
+   },
+   {
+    "va": "0x609A4754",
+    "name": "sub_609A4754",
+    "chain": "v8->previous->next",
+    "rewritten_to": "FIELD_U32(v8, 0x4)",
+    "reason": "chain rooted in local `v8`, not a parameter"
+   }
+  ],
   "rows": [
    {
     "va": "0x600002A0",

@@ -1079,7 +1079,7 @@ def main():
     # Here each such function is disassembled: does the code really dereference
     # twice, and does the published C really show the summed offset?
     pub_by_va = {p["va"]: p for p in pop}
-    seen, verified_chain = set(), []
+    seen, verified_chain, unverified_chain = set(), [], []
     for e in cen["examples"]:
         key = (e["ea"], e["chain"], e["total"])
         if key in seen:
@@ -1087,13 +1087,29 @@ def main():
         seen.add(key)
         p = pub_by_va.get(e["ea"])
         if p is None:
+            unverified_chain.append({
+                "va": "0x%08X" % e["ea"], "name": e["name"], "chain": e["chain"],
+                "rewritten_to": e["replacement"],
+                "reason": "no published corpus body"})
             continue
         sig = FUNC_SIG.search(p["body"])
         if not sig:
+            unverified_chain.append({
+                "va": "0x%08X" % e["ea"], "name": e["name"], "chain": e["chain"],
+                "rewritten_to": e["replacement"], "reason": "no signature line"})
             continue
         pm = param_index_map(sig.group(2))
         base = e["chain"].split("->")[0].split("[")[0].strip()
         if base not in pm or pm[base] > 3:
+            # The chain is rooted in a local, not a parameter. The provenance
+            # walk is seeded from parameters only, so these are recorded as
+            # unverified rather than silently dropped -- spot checks show at
+            # least one of them is flattened too, so the confirmed count is a
+            # lower bound.
+            unverified_chain.append({
+                "va": "0x%08X" % e["ea"], "name": e["name"], "chain": e["chain"],
+                "rewritten_to": e["replacement"],
+                "reason": "chain rooted in local `%s`, not a parameter" % base})
             continue
         res = mc.analyze_param(p["va"], p["size"], pm[base])
         param_sites = [s for s in res["sites"] if s["param"] == pm[base]]
@@ -1290,6 +1306,7 @@ def main():
                       "pointer-typed member, re-disassembled at its own address",
             "suspected": len(verified_chain),
             "buckets": dict(chain_buckets),
+            "unverified": unverified_chain,
             "rows": verified_chain,
             "case_studies": chain_examples,
         },

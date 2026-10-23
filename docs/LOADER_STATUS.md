@@ -62,9 +62,30 @@ and named as mandatory in `hooks/hooks.hks`.
 
 | Measure | Value | How checked |
 | --- | --- | --- |
-| Functions decompiled | 46,879 | `verify_all.py` |
-| Compile clean (`-fsyntax-only`) | see `COMPILE_FAILURES.md` | measured this round |
+| Functions decompiled | 45,148 units | `measure_compile_failures.py` |
+| Compile clean (`-fsyntax-only`) | 37,789 (83.70%) | same run |
+| **Fail to compile** | **7,359 (16.30%)** | same run, bucketed by cause |
 | Named (not `sub_`) | 9,671 | database |
+
+All three previously published failure counts were wrong: `CORPUS_STATUS.md`
+said 9,339, this file said 9,092, and 7,303 was also in circulation. Measured:
+**7,359**. The bucketing shows 469 units fail on a *single* `member not found`
+error and 907 on a single `conflicting types` error, so those two causes are the
+cheapest mechanical wins.
+
+## Readability of the decompiled C
+
+The arrow-chain rewrite flattens pointer hops. `Actor__getProfileId` is published
+as `FIELD_U32(a1, 0x14)` when the code is two dereferences,
+`FIELD_U32(FIELD_U32(a1, 0xC), 0x8)` — the rewrite sums `0xC + 0x8` because
+`load_types()` strips the `*` from each member's type before walking the chain.
+
+Measured scope: 75 chains pass through a pointer hop (0.63% of 11,934 resolved),
+of which **42 are confirmed flattened across 35 functions**. This does not affect
+the hooks: prototypes are byte-identical in 35/35 cases, and both expression forms
+compile cleanly. It does affect 10 indirect calls across 8 functions, where the
+published code dispatches through the wrong pointer — `StateMgr__execute` is the
+clearest case. See `ARROW_CHAIN_AUDIT.md`.
 
 ## Loader
 
@@ -107,13 +128,17 @@ sweet-dx rejects `@` there with "Invalid symbol definition at line 1".
 | --- | --- |
 | "117 codedx names differ in kind" | **Wrong. Measured 45.** See `CODEDX_KIND_RECONCILIATION.md` |
 | of those, reconciled | 44 cosmetic, **1 genuinely unresolved** |
-| "9,092 / 7,303 / 9,339 units fail to compile" | Docs disagreed; measured this round in `COMPILE_FAILURES.md` |
+| "9,092 / 7,303 / 9,339 units fail to compile" | **All three wrong. Measured 7,359.** See `COMPILE_FAILURES.md` |
 | `sub_` functions left unnamed | 37,482, unchanged, deliberately |
 
 The 117 was never a measurement. It reproduces exactly as `414 − 262 − 31 − 4`
 using figures quoted elsewhere in this same document, and those inputs are
 themselves stale (measured: 329 match, 40 alias). No definition of "differs in
 kind" yields 117.
+
+The compile-failure count was quoted three different ways across the docs and
+none of them was measured. It is now one number from one run, with the script
+that reproduces it.
 
 ## Still open
 
@@ -124,6 +149,9 @@ kind" yields 117.
 3. **One codedx name pair is genuinely unresolved** (`0x00008A78`, the `const`
    qualifier on `seassureTerminationImpl_`). Not resolvable from disassembly: the
    qualifier is not encoded in the ARM calling convention.
-4. **The arrow-chain collapse.** The corpus renders two-dereference chains as one
-   `FIELD_U32(base, offset)`. Measured this round in `ARROW_CHAIN_AUDIT.md`; it
-   affects readability of bodies, not the prototypes the hooks rely on.
+4. **The arrow-chain collapse.** 42 confirmed flattened chains across 35
+   functions. It does not affect prototypes or the compile-clean count; it does
+   mis-target 10 indirect calls in 8 functions. See `ARROW_CHAIN_AUDIT.md`.
+5. **7,359 units still fail to compile.** Two causes account for 469 and 907
+   single-error units respectively and are the cheapest mechanical fixes; see
+   `COMPILE_FAILURES.md` for the full 18-bucket breakdown.
