@@ -27,7 +27,11 @@ def sources(root):
 
 
 def compile_one(path, inc):
-    proc = subprocess.run([CLANG, "-fsyntax-only", "-Wno-everything", "-I", inc,
+    # -m32 because this is a 32-bit ARM binary: on the host default target every pointer is 8 bytes and the
+    #   recovered struct offsets stop meaning anything.
+    # -D__fastcall= because Hex-Rays writes `int __fastcall f();` and clang does not implement __fastcall, so an
+    #   undefined keyword makes every unprototyped function an error unrelated to the C being checked.
+    proc = subprocess.run([CLANG, "-m32", "-D__fastcall=", "-fsyntax-only", "-Wno-everything", "-I", inc,
                            "-ferror-limit=1", path],
                           capture_output=True, text=True, errors="replace")
     diags = [l for l in (proc.stderr + proc.stdout).splitlines()

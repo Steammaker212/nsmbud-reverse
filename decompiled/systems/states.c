@@ -108856,11 +108856,11 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
             v24,
             v12,
             0);
-    v18 = vextq_s8((int8x16_t)vzipq_s32(v13, v13).val, (int8x16_t)0, 0xCu);
+    v18 = vextq_s8((int8x16_t)*vzipq_s32(v13, v13).val, (int8x16_t)0, 0xCu);
     v19 = vdupq_lane_s32(v12, 1);
-    v20 = vextq_s8((int8x16_t)vzipq_s32(v14, v14).val, (int8x16_t)0, 0xCu);
+    v20 = vextq_s8((int8x16_t)*vzipq_s32(v14, v14).val, (int8x16_t)0, 0xCu);
     v23[0] = vaddq_f32(vextq_s8(v18, v18, 4u), v15);
-    v21 = vextq_s8((int8x16_t)vzipq_s32(v19, v19).val, (int8x16_t)0, 0xCu);
+    v21 = vextq_s8((int8x16_t)*vzipq_s32(v19, v19).val, (int8x16_t)0, 0xCu);
     v23[1] = vaddq_f32(vextq_s8(v20, v20, 4u), v16);
     v23[2] = vaddq_f32(vextq_s8(v21, v21, 4u), v17);
     return sub_60644758(v5, (float *)v23, v6);
@@ -139610,10 +139610,10 @@ static inline double vmaxnm_f64(double a, double b) { return fmax(a, b); }
       v39.n64_u32[1] = 0;
       v21 = vdupq_lane_s32((int32x2_t)v34, 1);
       v22 = vdupq_lane_s32(v37, 1);
-      v23 = vextq_s8((int8x16_t)vzipq_s32(v21, v21).val, (int8x16_t)0LL, 0xCu);
+      v23 = vextq_s8((int8x16_t)*vzipq_s32(v21, v21).val, (int8x16_t)0LL, 0xCu);
       v24 = vdupq_lane_s32(v39, 1);
-      v25 = vextq_s8((int8x16_t)vzipq_s32(v22, v22).val, (int8x16_t)0LL, 0xCu);
-      v26 = vextq_s8((int8x16_t)vzipq_s32(v24, v24).val, (int8x16_t)0LL, 0xCu);
+      v25 = vextq_s8((int8x16_t)*vzipq_s32(v22, v22).val, (int8x16_t)0LL, 0xCu);
+      v26 = vextq_s8((int8x16_t)*vzipq_s32(v24, v24).val, (int8x16_t)0LL, 0xCu);
       v30 = vaddq_f32(
               vextq_s8(v23, v23, 4u),
               vmlaq_lane_f32(vmlaq_lane_f32(vmulq_n_f32(v40, v18 * v19), v41, v33, 1), v42, (float32x2_t)v34, 0));

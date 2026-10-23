@@ -1,3 +1,6 @@
+#ifndef NSMBUDX_RECOVERED_TYPES_H
+#define NSMBUDX_RECOVERED_TYPES_H
+
 #include "nsmbudx_value_types.h"
 
 /* Types recovered from main.i64 that this corpus had never declared.
@@ -93,15 +96,38 @@ typedef struct ActiveColliderMgr { uint8_t _opaque[0x40]; } ActiveColliderMgr;  
 typedef struct ActiveColliderMgrList { uint8_t _opaque[0xC]; } ActiveColliderMgrList;   /* sizeof 0xC */
 typedef struct ActiveColliderNode { uint8_t _opaque[0xC]; } ActiveColliderNode;   /* sizeof 0xC */
 typedef struct ActorBuildInfo {
-    int32_t settings1;   /* +0x000  from main.i64 */
-    int32_t settings2;   /* +0x004  from main.i64 */
-    uint8_t _pad_008[0x4];
-    struct Profile * profile;   /* +0x00C  from main.i64 */
-    struct Vec3 position;   /* +0x010  from main.i64 */
-    int32_t field_1C;   /* +0x01C  from main.i64 */
-    int8_t field_20;   /* +0x020  from main.i64 */
-    uint8_t _pad_021[0xB];
+    int32_t settings1;   /* +0x000  int */
+    int32_t settings2;   /* +0x004  int */
+    int32_t parentId;   /* +0x008  int */
+    struct Profile * profile;   /* +0x00C  Profile * */
+    struct Vec3 position;   /* +0x010  Vec3 */
+    int32_t field_1C;   /* +0x01C  int */
+    int8_t field_20;   /* +0x020  char */
+    int8_t eventId1;   /* +0x021  char */
+    int8_t eventId2;   /* +0x022  char */
+    int8_t field_23;   /* +0x023  char */
+    int8_t movementId;   /* +0x024  char */
+    int8_t linkId;   /* +0x025  char */
+    int8_t initStateFlag;   /* +0x026  char */
+    int8_t field_27;   /* +0x027  char */
+    int32_t field_28;   /* +0x028  int */
 } ActorBuildInfo;   /* sizeof 0x2C */
+_Static_assert(offsetof(ActorBuildInfo, settings1) == 0x0, "ActorBuildInfo.settings1 offset");
+_Static_assert(offsetof(ActorBuildInfo, settings2) == 0x4, "ActorBuildInfo.settings2 offset");
+_Static_assert(offsetof(ActorBuildInfo, parentId) == 0x8, "ActorBuildInfo.parentId offset");
+_Static_assert(offsetof(ActorBuildInfo, profile) == 0xC, "ActorBuildInfo.profile offset");
+_Static_assert(offsetof(ActorBuildInfo, position) == 0x10, "ActorBuildInfo.position offset");
+_Static_assert(offsetof(ActorBuildInfo, field_1C) == 0x1C, "ActorBuildInfo.field_1C offset");
+_Static_assert(offsetof(ActorBuildInfo, field_20) == 0x20, "ActorBuildInfo.field_20 offset");
+_Static_assert(offsetof(ActorBuildInfo, eventId1) == 0x21, "ActorBuildInfo.eventId1 offset");
+_Static_assert(offsetof(ActorBuildInfo, eventId2) == 0x22, "ActorBuildInfo.eventId2 offset");
+_Static_assert(offsetof(ActorBuildInfo, field_23) == 0x23, "ActorBuildInfo.field_23 offset");
+_Static_assert(offsetof(ActorBuildInfo, movementId) == 0x24, "ActorBuildInfo.movementId offset");
+_Static_assert(offsetof(ActorBuildInfo, linkId) == 0x25, "ActorBuildInfo.linkId offset");
+_Static_assert(offsetof(ActorBuildInfo, initStateFlag) == 0x26, "ActorBuildInfo.initStateFlag offset");
+_Static_assert(offsetof(ActorBuildInfo, field_27) == 0x27, "ActorBuildInfo.field_27 offset");
+_Static_assert(offsetof(ActorBuildInfo, field_28) == 0x28, "ActorBuildInfo.field_28 offset");
+_Static_assert(sizeof(ActorBuildInfo) == 0x2C, "ActorBuildInfo size");   /* sizeof 0x2C */
 typedef struct ActorInfo { uint8_t _opaque[0x24]; } ActorInfo;   /* sizeof 0x24 */
 typedef struct ActorScaler { uint8_t _opaque[0x20]; } ActorScaler;   /* sizeof 0x20 */
 typedef struct Amp { uint8_t _opaque[0x1B0D]; } Amp;   /* sizeof 0x1B0D */
@@ -163,7 +189,28 @@ typedef struct StateMethodExecuter {
 typedef struct StateVirtual { uint8_t _opaque[0x24]; } StateVirtual;   /* sizeof 0x24 */
 typedef struct StateWrapper { uint8_t _opaque[0x24]; } StateWrapper;   /* sizeof 0x24 */
 typedef struct TileCheck_Param { uint8_t _opaque[0xC]; } TileCheck_Param;   /* sizeof 0xC */
-typedef struct TileCheck_Result { uint8_t _opaque[0x24]; } TileCheck_Result;   /* sizeof 0x24 */
+typedef struct TileCheck_Result {
+    int8_t field_0;   /* +0x000  char */
+    uint8_t _pad_001[0x3];
+    float field_4;   /* +0x004  float */
+    float field_8;   /* +0x008  float */
+    int32_t field_C;   /* +0x00C  int */
+    int32_t field_10;   /* +0x010  int */
+    int32_t field_14;   /* +0x014  int */
+    int32_t field_18;   /* +0x018  int */
+    int32_t field_1C;   /* +0x01C  int */
+    int32_t field_20;   /* +0x020  int */
+} TileCheck_Result;   /* sizeof 0x24 */
+_Static_assert(offsetof(TileCheck_Result, field_0) == 0x0, "TileCheck_Result.field_0 offset");
+_Static_assert(offsetof(TileCheck_Result, field_4) == 0x4, "TileCheck_Result.field_4 offset");
+_Static_assert(offsetof(TileCheck_Result, field_8) == 0x8, "TileCheck_Result.field_8 offset");
+_Static_assert(offsetof(TileCheck_Result, field_C) == 0xC, "TileCheck_Result.field_C offset");
+_Static_assert(offsetof(TileCheck_Result, field_10) == 0x10, "TileCheck_Result.field_10 offset");
+_Static_assert(offsetof(TileCheck_Result, field_14) == 0x14, "TileCheck_Result.field_14 offset");
+_Static_assert(offsetof(TileCheck_Result, field_18) == 0x18, "TileCheck_Result.field_18 offset");
+_Static_assert(offsetof(TileCheck_Result, field_1C) == 0x1C, "TileCheck_Result.field_1C offset");
+_Static_assert(offsetof(TileCheck_Result, field_20) == 0x20, "TileCheck_Result.field_20 offset");
+_Static_assert(sizeof(TileCheck_Result) == 0x24, "TileCheck_Result size");   /* sizeof 0x24 */
 typedef struct TrampolineCloud { uint8_t _opaque[0x19E4]; } TrampolineCloud;   /* sizeof 0x19E4 */
 typedef struct UserInfo { uint8_t _opaque[0x18]; } UserInfo;   /* sizeof 0x18 */
 typedef struct _Unwind_Reason_Code { uint8_t _opaque[0x4]; } _Unwind_Reason_Code;   /* sizeof 0x4 */
@@ -239,3 +286,5 @@ extern uint8_t a0;
 
 /* ---- data labels the corpus subscripts ---- */
 extern uint8_t asc_60AE4148[];   /* data label, subscripted: declared as an array of unknown extent */
+
+#endif /* NSMBUDX_RECOVERED_TYPES_H */

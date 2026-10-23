@@ -195567,7 +195567,7 @@ sub_603F8408__LABEL_96:
       v12 = vzipq_s32(v9, v8);
       v13 = vzipq_s32(v11, v10);
       *a3 = vzipq_s32(v13.val[0], v12.val[0]);
-      a3[1].val[0] = (int32x4_t)vzipq_s32(v13.val[1], v12.val[1]).val;
+      a3[1].val[0] = (int32x4_t)*vzipq_s32(v13.val[1], v12.val[1]).val;
     }
     if ( a4 )
     {
@@ -195618,7 +195618,7 @@ sub_603F8408__LABEL_96:
     v5 = vzipq_s32(*v3, v3[2]);
     v6 = vzipq_s32(v3[1], v3[3]);
     *a3 = vzipq_s32(v5.val[0], v6.val[0]);
-    a3[1].val[0] = (int32x4_t)vzipq_s32(v5.val[1], v6.val[1]).val;
+    a3[1].val[0] = (int32x4_t)*vzipq_s32(v5.val[1], v6.val[1]).val;
     return a3 + 1;
   }
 

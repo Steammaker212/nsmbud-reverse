@@ -11,9 +11,12 @@
 #include <stdint.h>
 
 typedef struct Vec2 {
-    float x;   /* +0x000  from main.i64 */
-    uint8_t _pad_004[0x4];
+    float x;   /* +0x000  float */
+    float y;   /* +0x004  float */
 } Vec2;   /* sizeof 0x8 */
+_Static_assert(offsetof(Vec2, x) == 0x0, "Vec2.x offset");
+_Static_assert(offsetof(Vec2, y) == 0x4, "Vec2.y offset");
+_Static_assert(sizeof(Vec2) == 0x8, "Vec2 size");   /* sizeof 0x8 */
 
 typedef struct Vec3 {
     float x;   /* +0x000  from main.i64 */

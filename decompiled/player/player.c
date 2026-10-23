@@ -20103,8 +20103,8 @@ sub_60799BA0__LABEL_140:
             v11,
             0);
     v18 = vdupq_lane_s32(v15, 1);
-    v19 = vextq_s8((int8x16_t)vzipq_s32(v13, v13).val, (int8x16_t)0, 0xCu);
-    v20 = vextq_s8((int8x16_t)vzipq_s32(v14, v14).val, (int8x16_t)0, 0xCu);
+    v19 = vextq_s8((int8x16_t)*vzipq_s32(v13, v13).val, (int8x16_t)0, 0xCu);
+    v20 = vextq_s8((int8x16_t)*vzipq_s32(v14, v14).val, (int8x16_t)0, 0xCu);
     v21 = vmlaq_lane_f32(
             vmlaq_lane_f32(
               vmulq_n_f32(*(float32x4_t *)(v10 + 92), a2[4].n64_f32[0]),
@@ -20114,7 +20114,7 @@ sub_60799BA0__LABEL_140:
             v28,
             v15,
             0);
-    v22 = vextq_s8((int8x16_t)vzipq_s32(v18, v18).val, (int8x16_t)0, 0xCu);
+    v22 = vextq_s8((int8x16_t)*vzipq_s32(v18, v18).val, (int8x16_t)0, 0xCu);
     *(float32x4_t *)a2->n64_u64 = vaddq_f32(vextq_s8(v19, v19, 4u), v17);
     *(float32x4_t *)a2[2].n64_u64 = vaddq_f32(vextq_s8(v20, v20, 4u), vmlaq_lane_f32(v16, v28, v12, 0));
     *(float32x4_t *)a2[4].n64_u64 = vaddq_f32(vextq_s8(v22, v22, 4u), v21);
