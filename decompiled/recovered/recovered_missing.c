@@ -157,9 +157,9 @@ int __fastcall sub_609ACFA8();
 int __fastcall sub_609AD124();
 int sub_607E22E0();
 int sub_609ACF8C();
-sead_IDisposer *__fastcall sub_607FA930();
-sead_IDisposer *__fastcall sub_607FB104();
-sead_IDisposer *__fastcall sub_607FCB1C();
+struct sead_IDisposer *__fastcall sub_607FA930();
+struct sead_IDisposer *__fastcall sub_607FB104();
+struct sead_IDisposer *__fastcall sub_607FCB1C();
 sead_ListNode *__fastcall sub_609A5D84();
 signed int __fastcall sub_607E2F30();
 unsigned int *__fastcall sub_609AC040();
@@ -18982,7 +18982,7 @@ int __fastcall sub_607DADE0(int a1, int a2)
   int v3; // r1
   _DWORD *i; // r2
 
-  CalculateTask2_ctor((sead_IDisposer *)a1, a2, (int)"HDRumbleMgr");
+  CalculateTask2_ctor((struct sead_IDisposer *)a1, a2, (int)"HDRumbleMgr");
   *(_DWORD *)a1 = off_60C262E0;
   *(_BYTE *)(a1 + 192) = 0;
   *(_DWORD *)(a1 + 196) = 0;
@@ -19004,7 +19004,7 @@ int __fastcall sub_607DADE0(int a1, int a2)
   *(_DWORD *)(a1 + 13940) = 0;
   *(_DWORD *)(a1 + 216) = a1 + 224;
   *(_DWORD *)(a1 + 220) = 128;
-  sead_CriticalSection_CriticalSection((sead_IDisposer *)(a1 + 14048));
+  sead_CriticalSection_CriticalSection((struct sead_IDisposer *)(a1 + 14048));
   *(_DWORD *)(a1 + 14084) = 0;
   sub_607DB038(a1 + 14088);
   sub_607DB0D4(a1 + 15024);
@@ -19022,7 +19022,7 @@ int __fastcall sub_607DADE0(int a1, int a2)
   *(_DWORD *)(a1 + 16612) = 1114636288;
   *(_DWORD *)(a1 + 16616) = 1015580809;
   *(_DWORD *)(a1 + 16620) = 0;
-  sead_IDisposer_ctor((sead_IDisposer *)(a1 + 16624));
+  sead_IDisposer_ctor((struct sead_IDisposer *)(a1 + 16624));
   *(_DWORD *)(a1 + 16640) = &g_vtable_forsead_SafeStringBase_char;
   *(_DWORD *)(a1 + 16644) = &byte_60ABC94D;
   *(_DWORD *)(a1 + 16624) = off_60C5E9A4;
@@ -19033,7 +19033,7 @@ int __fastcall sub_607DADE0(int a1, int a2)
   *(_DWORD *)(a1 + 16668) = 0;
   *(_DWORD *)(a1 + 16672) = 0;
   *(_DWORD *)(a1 + 16660) = off_60BD8394;
-  sead_CriticalSection_CriticalSection((sead_IDisposer *)(a1 + 16692));
+  sead_CriticalSection_CriticalSection((struct sead_IDisposer *)(a1 + 16692));
   *(_BYTE *)(a1 + 16728) = 0;
   *(_DWORD *)(a1 + 16576) = 1065353216;
   *(_DWORD *)(a1 + 16580) = 1065353216;
@@ -24737,7 +24737,7 @@ StateMethodExecuter *__fastcall sub_607E2734(int a1)
 /* Recovered from main.idb: VA 0x607E2840  RVA 0x007E2840  size 0xFC */
 int __fastcall sub_607E2840(int a1, int a2)
 {
-  CalculateTask3_ctor((sead_IDisposer *)a1, a2, (int)"ChallengeSelectScene");
+  CalculateTask3_ctor((struct sead_IDisposer *)a1, a2, (int)"ChallengeSelectScene");
   *(_DWORD *)a1 = off_60C2693C;
   *(_DWORD *)(a1 + 192) = &off_60C269CC;
   *(_DWORD *)(a1 + 196) = &off_60C269DC;
@@ -24746,7 +24746,7 @@ int __fastcall sub_607E2840(int a1, int a2)
   *(_DWORD *)(a1 + 208) = 0;
   StateMgr_ctor((StateMgr *)(a1 + 212), (StateExecuter *)(a1 + 196), (StateBase *)&dword_60CC59FC);
   *(_DWORD *)(a1 + 192) = &off_60C269BC;
-  sead_IDisposer_ctor((sead_IDisposer *)(a1 + 228));
+  sead_IDisposer_ctor((struct sead_IDisposer *)(a1 + 228));
   *(_DWORD *)(a1 + 244) = &g_vtable_forsead_SafeStringBase_char;
   *(_DWORD *)(a1 + 248) = &byte_60ABC94D;
   *(_DWORD *)(a1 + 228) = off_60C5E9A4;
@@ -30243,7 +30243,7 @@ int __fastcall sub_607EBF2C(int a1)
   int v5; // r1
   int v6; // r3
   int v8; // [sp+8h] [bp-18h] BYREF
-  sead_IDisposer *(__fastcall *v9)(int); // [sp+Ch] [bp-14h]
+  struct sead_IDisposer *(__fastcall *v9)(int); // [sp+Ch] [bp-14h]
 
   v2 = dword_60CC62E4;
   v3 = *(_DWORD *)(dword_60C99DEC + 508);
@@ -30258,7 +30258,7 @@ int __fastcall sub_607EBF2C(int a1)
     v8 = 2;
     v4 = (int (*)())MultiPlayCourseSelectScene_create;
 LABEL_8:
-    v9 = (sead_IDisposer *(__fastcall *)(int))v4;
+    v9 = (struct sead_IDisposer *(__fastcall *)(int))v4;
     v5 = a1;
     v6 = 0;
     goto LABEL_9;
@@ -32441,7 +32441,7 @@ signed int __fastcall sub_607EF360(int a1)
 /* Recovered from main.idb: VA 0x607EF3BC  RVA 0x007EF3BC  size 0x178 */
 int __fastcall sub_607EF3BC(int a1, int a2)
 {
-  CalculateTask3_ctor((sead_IDisposer *)a1, a2, (int)"HelpMenuScene");
+  CalculateTask3_ctor((struct sead_IDisposer *)a1, a2, (int)"HelpMenuScene");
   *(_DWORD *)a1 = off_60C26FFC;
   *(_BYTE *)(a1 + 192) = 0;
   sub_6045BF30();
@@ -32456,7 +32456,7 @@ int __fastcall sub_607EF3BC(int a1, int a2)
   *(_DWORD *)(a1 + 2232) = 0;
   StateMgr_ctor((StateMgr *)(a1 + 2236), (StateExecuter *)(a1 + 2220), (StateBase *)&dword_60CC5DF0);
   *(_DWORD *)(a1 + 2216) = &off_60C2707C;
-  sead_IDisposer_ctor((sead_IDisposer *)(a1 + 2252));
+  sead_IDisposer_ctor((struct sead_IDisposer *)(a1 + 2252));
   *(_DWORD *)(a1 + 2268) = &g_vtable_forsead_SafeStringBase_char;
   *(_DWORD *)(a1 + 2272) = &byte_60ABC94D;
   *(_DWORD *)(a1 + 2252) = off_60C5E9A4;
@@ -32467,7 +32467,7 @@ int __fastcall sub_607EF3BC(int a1, int a2)
   *(_DWORD *)(a1 + 2296) = 0;
   *(_DWORD *)(a1 + 2300) = 0;
   *(_DWORD *)(a1 + 2288) = off_60BD8394;
-  sead_IDisposer_ctor((sead_IDisposer *)(a1 + 2320));
+  sead_IDisposer_ctor((struct sead_IDisposer *)(a1 + 2320));
   *(_DWORD *)(a1 + 2336) = &g_vtable_forsead_SafeStringBase_char;
   *(_DWORD *)(a1 + 2340) = &byte_60ABC94D;
   *(_DWORD *)(a1 + 2320) = off_60C5E9A4;
@@ -33076,7 +33076,7 @@ int __fastcall sub_607EFFF8(int a1, int a2, const char *a3)
 {
   sead_FaderTaskBase_FaderTaskBase(a1, a2, a3);
   *(_DWORD *)a1 = off_60C271A0;
-  sead_IDisposer_ctor((sead_IDisposer *)(a1 + 500));
+  sead_IDisposer_ctor((struct sead_IDisposer *)(a1 + 500));
   *(_DWORD *)(a1 + 516) = &g_vtable_forsead_SafeStringBase_char;
   *(_DWORD *)(a1 + 520) = &byte_60ABC94D;
   *(_DWORD *)(a1 + 500) = off_60C5E9A4;
@@ -33290,7 +33290,7 @@ int __fastcall sub_607F0458(int a1, int a2)
 {
   sead_FaderTaskBase_FaderTaskBase(a1, a2, "WipeFaderTask");
   *(_DWORD *)a1 = off_60C271A0;
-  sead_IDisposer_ctor((sead_IDisposer *)(a1 + 500));
+  sead_IDisposer_ctor((struct sead_IDisposer *)(a1 + 500));
   *(_DWORD *)(a1 + 516) = &g_vtable_forsead_SafeStringBase_char;
   *(_DWORD *)(a1 + 520) = &byte_60ABC94D;
   *(_DWORD *)(a1 + 500) = off_60C5E9A4;
@@ -33831,7 +33831,7 @@ signed int __fastcall sub_607F1084(int a1)
 /* Recovered from main.idb: VA 0x607F10E0  RVA 0x007F10E0  size 0x94 */
 int __fastcall sub_607F10E0(int a1, int a2)
 {
-  CalculateTask3_ctor((sead_IDisposer *)a1, a2, (int)"MovieScene");
+  CalculateTask3_ctor((struct sead_IDisposer *)a1, a2, (int)"MovieScene");
   *(_DWORD *)a1 = off_60C27344;
   *(_BYTE *)(a1 + 192) = 0;
   *(_DWORD *)(a1 + 196) = &off_60C273D4;
@@ -37431,7 +37431,7 @@ void __fastcall sub_607F5BE0(_DWORD *a1)
 int __fastcall sub_607F5CB4(int a1)
 {
   int v2; // r4
-  sead_IDisposer *v3; // r0
+  struct sead_IDisposer *v3; // r0
 
   v2 = dword_60CC62E4;
   if ( !dword_60CC62E4 )
@@ -37440,7 +37440,7 @@ int __fastcall sub_607F5CB4(int a1)
     sead_IDisposer_IDisposer((_DWORD *)v2, a1, 3u);
     *(_DWORD *)v2 = off_60C2786C;
     dword_60CC62E0 = v2;
-    v3 = sead_IDisposer_ctor((sead_IDisposer *)(v2 + 16));
+    v3 = sead_IDisposer_ctor((struct sead_IDisposer *)(v2 + 16));
     *(_DWORD *)(v2 + 16) = off_60C26570;
     *(_DWORD *)(v2 + 32) = 0;
     *(_DWORD *)(v2 + 36) = 0;
@@ -37592,7 +37592,7 @@ signed int __fastcall sub_607F6028(int a1, int a2, int a3, signed int a4)
   int (*v14)(); // r0
   bool v15; // zf
   int v16; // r5
-  sead_IDisposer *(__fastcall *v17)(int); // r0
+  struct sead_IDisposer *(__fastcall *v17)(int); // r0
   int v18; // r5
   int (*v19)(); // r0
   int *v20; // r1
@@ -37738,7 +37738,7 @@ LABEL_39:
         goto LABEL_57;
       }
       v34[28] = a1 + 16;
-      v17 = *(sead_IDisposer *(__fastcall **)(int))(a3 + 4);
+      v17 = *(struct sead_IDisposer *(__fastcall **)(int))(a3 + 4);
       if ( v17 == AreaTask_create )
       {
         v34[25] = **(_DWORD **)(a1 + 104);
@@ -38073,7 +38073,7 @@ int __fastcall sub_607F6C14(int a1, int a2)
   *(_DWORD *)a1 = off_60C278B0;
   sub_60519160(a1 + 568);
   *(_DWORD *)(a1 + 18872) = 5;
-  sead_IDisposer_ctor((sead_IDisposer *)(a1 + 18876));
+  sead_IDisposer_ctor((struct sead_IDisposer *)(a1 + 18876));
   *(_DWORD *)(a1 + 18892) = &g_vtable_forsead_SafeStringBase_char;
   *(_DWORD *)(a1 + 18896) = &byte_60ABC94D;
   *(_DWORD *)(a1 + 18876) = off_60C5E9A4;
@@ -38084,7 +38084,7 @@ int __fastcall sub_607F6C14(int a1, int a2)
   *(_DWORD *)(a1 + 18920) = 0;
   *(_DWORD *)(a1 + 18924) = 0;
   *(_DWORD *)(a1 + 18912) = off_60BD8394;
-  sead_IDisposer_ctor((sead_IDisposer *)(a1 + 18944));
+  sead_IDisposer_ctor((struct sead_IDisposer *)(a1 + 18944));
   *(_DWORD *)(a1 + 18960) = &g_vtable_forsead_SafeStringBase_char;
   *(_DWORD *)(a1 + 18964) = &byte_60ABC94D;
   *(_DWORD *)(a1 + 18944) = off_60C5E9A4;
@@ -38095,7 +38095,7 @@ int __fastcall sub_607F6C14(int a1, int a2)
   *(_DWORD *)(a1 + 18988) = 0;
   *(_DWORD *)(a1 + 18992) = 0;
   *(_DWORD *)(a1 + 18980) = off_60BD8394;
-  sead_IDisposer_ctor((sead_IDisposer *)(a1 + 19012));
+  sead_IDisposer_ctor((struct sead_IDisposer *)(a1 + 19012));
   *(_DWORD *)(a1 + 19028) = &g_vtable_forsead_SafeStringBase_char;
   *(_DWORD *)(a1 + 19032) = &byte_60ABC94D;
   *(_DWORD *)(a1 + 19012) = off_60C5E9A4;
@@ -38106,7 +38106,7 @@ int __fastcall sub_607F6C14(int a1, int a2)
   *(_DWORD *)(a1 + 19056) = 0;
   *(_DWORD *)(a1 + 19060) = 0;
   *(_DWORD *)(a1 + 19048) = off_60BD8394;
-  sead_IDisposer_ctor((sead_IDisposer *)(a1 + 19080));
+  sead_IDisposer_ctor((struct sead_IDisposer *)(a1 + 19080));
   *(_DWORD *)(a1 + 19096) = &g_vtable_forsead_SafeStringBase_char;
   *(_DWORD *)(a1 + 19100) = &byte_60ABC94D;
   *(_DWORD *)(a1 + 19080) = off_60C5E9A4;
@@ -38711,7 +38711,7 @@ signed int __fastcall sub_607F7930(int a1)
 /* Recovered from main.idb: VA 0x607F79B0  RVA 0x007F79B0  size 0x2F0 */
 int __fastcall sub_607F79B0(int a1, int a2)
 {
-  CalculateTask3_ctor((sead_IDisposer *)a1, a2, (int)"TheEndScene");
+  CalculateTask3_ctor((struct sead_IDisposer *)a1, a2, (int)"TheEndScene");
   *(_DWORD *)a1 = off_60C279E4;
   *(_BYTE *)(a1 + 192) = 0;
   *(_DWORD *)(a1 + 196) = &off_60C27A74;
@@ -38723,7 +38723,7 @@ int __fastcall sub_607F79B0(int a1, int a2)
   *(_DWORD *)(a1 + 196) = &off_60C27A64;
   sub_60558FBC(a1 + 232);
   sub_604B610C(a1 + 3828);
-  sead_IDisposer_ctor((sead_IDisposer *)(a1 + 9652));
+  sead_IDisposer_ctor((struct sead_IDisposer *)(a1 + 9652));
   *(_DWORD *)(a1 + 9668) = &g_vtable_forsead_SafeStringBase_char;
   *(_DWORD *)(a1 + 9672) = &byte_60ABC94D;
   *(_DWORD *)(a1 + 9652) = off_60C5E9A4;
@@ -38734,7 +38734,7 @@ int __fastcall sub_607F79B0(int a1, int a2)
   *(_DWORD *)(a1 + 9696) = 0;
   *(_DWORD *)(a1 + 9700) = 0;
   *(_DWORD *)(a1 + 9688) = off_60BD8394;
-  sead_IDisposer_ctor((sead_IDisposer *)(a1 + 9720));
+  sead_IDisposer_ctor((struct sead_IDisposer *)(a1 + 9720));
   *(_DWORD *)(a1 + 9736) = &g_vtable_forsead_SafeStringBase_char;
   *(_DWORD *)(a1 + 9740) = &byte_60ABC94D;
   *(_DWORD *)(a1 + 9720) = off_60C5E9A4;
@@ -38745,7 +38745,7 @@ int __fastcall sub_607F79B0(int a1, int a2)
   *(_DWORD *)(a1 + 9764) = 0;
   *(_DWORD *)(a1 + 9768) = 0;
   *(_DWORD *)(a1 + 9756) = off_60BD8394;
-  sead_IDisposer_ctor((sead_IDisposer *)(a1 + 9788));
+  sead_IDisposer_ctor((struct sead_IDisposer *)(a1 + 9788));
   *(_DWORD *)(a1 + 9804) = &g_vtable_forsead_SafeStringBase_char;
   *(_DWORD *)(a1 + 9808) = &byte_60ABC94D;
   *(_DWORD *)(a1 + 9788) = off_60C5E9A4;
@@ -38756,7 +38756,7 @@ int __fastcall sub_607F79B0(int a1, int a2)
   *(_DWORD *)(a1 + 9832) = 0;
   *(_DWORD *)(a1 + 9836) = 0;
   *(_DWORD *)(a1 + 9824) = off_60BD8394;
-  sead_IDisposer_ctor((sead_IDisposer *)(a1 + 9856));
+  sead_IDisposer_ctor((struct sead_IDisposer *)(a1 + 9856));
   *(_DWORD *)(a1 + 9872) = &g_vtable_forsead_SafeStringBase_char;
   *(_DWORD *)(a1 + 9876) = &byte_60ABC94D;
   *(_DWORD *)(a1 + 9856) = off_60C5E9A4;
@@ -39885,7 +39885,7 @@ int __fastcall sub_607F9250(int a1)
 /* Recovered from main.idb: VA 0x607F9380  RVA 0x007F9380  size 0x1D0 */
 int __fastcall sub_607F9380(int a1, int a2)
 {
-  CalculateTask3_ctor((sead_IDisposer *)a1, a2, (int)"WithMiiPackSelectScene");
+  CalculateTask3_ctor((struct sead_IDisposer *)a1, a2, (int)"WithMiiPackSelectScene");
   *(_DWORD *)a1 = off_60C27C1C;
   sub_6090A654((_DWORD *)(a1 + 192));
   sub_6090C6DC(a1 + 280);
@@ -39919,7 +39919,7 @@ int __fastcall sub_607F9380(int a1, int a2)
   *(_DWORD *)(a1 + 740) = 0;
   StateMgr_ctor((StateMgr *)(a1 + 744), (StateExecuter *)(a1 + 728), (StateBase *)&dword_60CC63E0);
   *(_DWORD *)(a1 + 724) = &off_60C27C9C;
-  sead_IDisposer_ctor((sead_IDisposer *)(a1 + 760));
+  sead_IDisposer_ctor((struct sead_IDisposer *)(a1 + 760));
   *(_DWORD *)(a1 + 776) = &g_vtable_forsead_SafeStringBase_char;
   *(_DWORD *)(a1 + 780) = &byte_60ABC94D;
   *(_DWORD *)(a1 + 760) = off_60C5E9A4;
@@ -39930,7 +39930,7 @@ int __fastcall sub_607F9380(int a1, int a2)
   *(_DWORD *)(a1 + 804) = 0;
   *(_DWORD *)(a1 + 808) = 0;
   *(_DWORD *)(a1 + 796) = off_60BD8394;
-  sead_IDisposer_ctor((sead_IDisposer *)(a1 + 828));
+  sead_IDisposer_ctor((struct sead_IDisposer *)(a1 + 828));
   *(_DWORD *)(a1 + 844) = &g_vtable_forsead_SafeStringBase_char;
   *(_DWORD *)(a1 + 848) = &byte_60ABC94D;
   *(_DWORD *)(a1 + 828) = off_60C5E9A4;
@@ -40586,7 +40586,7 @@ int __fastcall sub_607FA27C(int a1, int a2, int a3)
   int v7; // r0
   int v8; // r0
 
-  sead_IDisposer_ctor((sead_IDisposer *)a1);
+  sead_IDisposer_ctor((struct sead_IDisposer *)a1);
   *(_DWORD *)a1 = off_60C27D5C;
   sub_607FA20C((_BYTE *)(a1 + 16));
   *(_WORD *)(a1 + 28) = 0;
@@ -40881,9 +40881,9 @@ void __fastcall sub_607FA8C4(_DWORD *a1)
  * RVA 0x007FA930   size 0x2C   xrefs 0   recovered from main.i64
  * ============================================================================ */
 /* Recovered from main.idb: VA 0x607FA930  RVA 0x007FA930  size 0x2C */
-sead_IDisposer *__fastcall sub_607FA930(sead_IDisposer *a1)
+struct sead_IDisposer *__fastcall sub_607FA930(struct sead_IDisposer *a1)
 {
-  sead_IDisposer *result; // r0
+  struct sead_IDisposer *result; // r0
 
   result = sead_IDisposer_ctor(a1);
   result->vtable = (int)&off_60C27D6C;
@@ -41252,7 +41252,7 @@ LABEL_19:
  * RVA 0x007FB104   size 0x40   xrefs 0   recovered from main.i64
  * ============================================================================ */
 /* Recovered from main.idb: VA 0x607FB104  RVA 0x007FB104  size 0x40 */
-sead_IDisposer *__fastcall sub_607FB104(sead_IDisposer *a1, int a2, int a3)
+struct sead_IDisposer *__fastcall sub_607FB104(struct sead_IDisposer *a1, int a2, int a3)
 {
   sead_IDisposer_ctor(a1);
   a1->vtable = (int)&off_60C27D7C;
@@ -42022,9 +42022,9 @@ int __fastcall sub_607FCB00(int a1)
  * RVA 0x007FCB1C   size 0x2C   xrefs 0   recovered from main.i64
  * ============================================================================ */
 /* Recovered from main.idb: VA 0x607FCB1C  RVA 0x007FCB1C  size 0x2C */
-sead_IDisposer *__fastcall sub_607FCB1C(sead_IDisposer *a1, int a2)
+struct sead_IDisposer *__fastcall sub_607FCB1C(struct sead_IDisposer *a1, int a2)
 {
-  sead_IDisposer *result; // r0
+  struct sead_IDisposer *result; // r0
 
   result = sead_IDisposer_ctor(a1);
   result->vtable = (int)&off_60C27D9C;
@@ -42383,7 +42383,7 @@ int __fastcall sub_607FD550(int a1, _DWORD *a2, int a3)
   int v7; // r2
   int v8; // r3
 
-  sead_IDisposer_ctor((sead_IDisposer *)a1);
+  sead_IDisposer_ctor((struct sead_IDisposer *)a1);
   *(_DWORD *)a1 = &off_60C27DAC;
   v6 = a2[1];
   v7 = a2[2];
@@ -42741,7 +42741,7 @@ int __fastcall sub_607FDAD0(int a1, int a2, _BYTE *a3)
   int v7; // r5
   unsigned int v8; // r0
 
-  sead_IDisposer_ctor((sead_IDisposer *)a1);
+  sead_IDisposer_ctor((struct sead_IDisposer *)a1);
   *(_DWORD *)a1 = &off_60C27DBC;
   *(_BYTE *)(a1 + 16) = a3[13];
   *(_BYTE *)(a1 + 17) = a3[14];
@@ -42950,9 +42950,9 @@ LABEL_8:
  * RVA 0x007FEB48   size 0x44   xrefs 0   recovered from main.i64
  * ============================================================================ */
 /* Recovered from main.idb: VA 0x607FEB48  RVA 0x007FEB48  size 0x44 */
-sead_IDisposer *__fastcall sub_607FEB48(sead_IDisposer *a1, int a2)
+struct sead_IDisposer *__fastcall sub_607FEB48(struct sead_IDisposer *a1, int a2)
 {
-  sead_IDisposer *result; // r0
+  struct sead_IDisposer *result; // r0
 
   result = sead_IDisposer_ctor(a1);
   result->vtable = (int)&off_60C27DCC;
@@ -43056,9 +43056,9 @@ void __fastcall sub_607FED44(_DWORD *a1)
  * RVA 0x007FED54   size 0x4C   xrefs 0   recovered from main.i64
  * ============================================================================ */
 /* Recovered from main.idb: VA 0x607FED54  RVA 0x007FED54  size 0x4C */
-sead_IDisposer *__fastcall sub_607FED54(sead_IDisposer *a1, int a2, float a3, float a4)
+struct sead_IDisposer *__fastcall sub_607FED54(struct sead_IDisposer *a1, int a2, float a3, float a4)
 {
-  sead_IDisposer *result; // r0
+  struct sead_IDisposer *result; // r0
 
   result = sead_IDisposer_ctor(a1);
   result->vtable = (int)&off_60C27DDC;
@@ -43314,9 +43314,9 @@ float __fastcall sub_607FF554(float result, float a2, float a3, float a4, float 
  * RVA 0x007FF584   size 0x40   xrefs 0   recovered from main.i64
  * ============================================================================ */
 /* Recovered from main.idb: VA 0x607FF584  RVA 0x007FF584  size 0x40 */
-float __fastcall sub_607FF584(sead_IDisposer *a1, int a2)
+float __fastcall sub_607FF584(struct sead_IDisposer *a1, int a2)
 {
-  sead_IDisposer *v3; // r0
+  struct sead_IDisposer *v3; // r0
   float result; // s0
 
   v3 = sead_IDisposer_ctor(a1);
@@ -43345,7 +43345,7 @@ void __fastcall sub_607FF5C8(_DWORD *a1)
  * RVA 0x007FF5D8   size 0x38   xrefs 0   recovered from main.i64
  * ============================================================================ */
 /* Recovered from main.idb: VA 0x607FF5D8  RVA 0x007FF5D8  size 0x38 */
-sead_IDisposer *__fastcall sub_607FF5D8(sead_IDisposer *a1)
+struct sead_IDisposer *__fastcall sub_607FF5D8(struct sead_IDisposer *a1)
 {
   sead_IDisposer_ctor(a1);
   a1->vtable = (int)&off_60C27DFC;
@@ -43428,7 +43428,7 @@ void __fastcall sub_607FF78C(_DWORD *a1)
 /* Recovered from main.idb: VA 0x607FF79C  RVA 0x007FF79C  size 0x44 */
 int __fastcall sub_607FF79C(int a1)
 {
-  sead_IDisposer_ctor((sead_IDisposer *)a1);
+  sead_IDisposer_ctor((struct sead_IDisposer *)a1);
   *(_DWORD *)a1 = &off_60C27E0C;
   *(_WORD *)(a1 + 16) = 0;
   *(_WORD *)(a1 + 20) = 257;
@@ -43442,9 +43442,9 @@ int __fastcall sub_607FF79C(int a1)
  * RVA 0x007FF7E4   size 0x98   xrefs 0   recovered from main.i64
  * ============================================================================ */
 /* Recovered from main.idb: VA 0x607FF7E4  RVA 0x007FF7E4  size 0x98 */
-sead_IDisposer *__fastcall sub_607FF7E4(sead_IDisposer *a1, int a2)
+struct sead_IDisposer *__fastcall sub_607FF7E4(struct sead_IDisposer *a1, int a2)
 {
-  sead_IDisposer *result; // r0
+  struct sead_IDisposer *result; // r0
   int v4; // r2
   int v5; // r3
 
@@ -43521,7 +43521,7 @@ __n128 __fastcall sub_607FF8C4(int a1, int a2)
   float v4; // s4
   float v5; // s6
 
-  sub_607FF7E4((sead_IDisposer *)a1, a2);
+  sub_607FF7E4((struct sead_IDisposer *)a1, a2);
   *(_DWORD *)a1 = &off_60C27E1C;
   sub_607FFF80(a1 + 60, 1);
   sub_607FFF80(a1 + 76, 0);

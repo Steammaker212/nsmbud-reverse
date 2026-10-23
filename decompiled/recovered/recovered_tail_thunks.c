@@ -8,7 +8,7 @@ typedef struct nn_mii { uint8_t _opaque[0x4]; } nn_mii;
  *
  * These are 4- and 12-byte import/destructor thunks whose Hex-Rays signature is not parseable as C: template
  * arguments inside the name (`GetTouchScreenState<1u>()`), overloaded operators (`operator==`) and destructors
- * (`sead_IDisposer::~IDisposer`). They live in their own unit so the repaired recovered_missing.c is never
+ * (`struct sead_IDisposer::~IDisposer`). They live in their own unit so the repaired recovered_missing.c is never
  * regenerated -- rebuilding that file discards a thousand lines of accumulated repair which the merge scripts do
  * not themselves reproduce.
  */

@@ -4,7 +4,7 @@
 /* Forward prototypes. A call before the definition would otherwise be an implicit `int`
  * declaration, and the later real definition then conflicts with it. */
 int __cdecl _cxa_guard_acquire();
-sead_IDisposer *__fastcall CalculateTask3_ctor();
+struct sead_IDisposer *__fastcall CalculateTask3_ctor();
 void __cdecl _cxa_guard_release();
 
 
@@ -312,7 +312,7 @@ int __fastcall YoshiFlame_YoshiFlame(ActorBuildInfo *a1)
 /* Recovered from main.idb: VA 0x607DEED0  RVA 0x607DEED0  size 0x150 */
 int __fastcall BootScene_ctor(int a1, int a2)
 {
-  sead_IDisposer *v3; // r0
+  struct sead_IDisposer *v3; // r0
 
   CalculateTask3_ctor(a1, a2, (int)"BootScene");
   *(_DWORD *)a1 = off_60C26504;
@@ -323,7 +323,7 @@ int __fastcall BootScene_ctor(int a1, int a2)
   *(_DWORD *)(a1 + 208) = 0;
   StateMgr_ctor((StateMgr *)(a1 + 212), (StateExecuter *)(a1 + 196), (StateBase *)&dword_60CC5774);
   *(_DWORD *)(a1 + 192) = &off_60C26594;
-  sead_IDisposer_ctor((sead_IDisposer *)(a1 + 228));
+  sead_IDisposer_ctor((struct sead_IDisposer *)(a1 + 228));
   *(_DWORD *)(a1 + 244) = &g_vtable_for_sead_SafeStringBase_char_DWORD_a1_248_byte_60ABC94D_DWORD_a1_228_off_60C5E9A4_DWORD_a1_252_0_DWORD_a1_256_0_DWORD_a1_260_1_DWORD_a1_268_0_DWORD_a1_272_0_DWORD_a1_276_0_DWORD_a1_264_off_60BD8394_v3_sead_IDisposer_ctor_sead_IDisposer_a1_296_DWORD_a1_296_off_60C26570_DWORD_a1_312_0_DWORD_a1_316_0_DWORD_a1_320_v3_DWORD_a1_324_0_BYTE_a1_352_0_DWORD_a1_336_a1_DWORD_a1_340_sub_607DF058_DWORD_a1_344_0_DWORD_a1_332_off_60C265F0_DWORD_a1_328_a1_332_sub_6048210C_a1_356_BYTE_a1_3952_0_return_a1_ChallengeResultScene_ctor_RVA_0x007E0EE0_size_0x1BC_xrefs_0_recovered_from_main_i64_Recovered_from_main_idb_VA_0x607E0EE0_RVA_0x607E0EE0_size_0x1BC_int_fastcall_ChallengeResultScene_ctor_int_a1_int_a2_CalculateTask3_ctor_a1_a2_int_ChallengeResultScene_DWORD_a1_off_60C2670C_sub_6090A654_DWORD_a1_192_sub_6090C6DC_a1_280_DWORD_a1_452_off_60C2679C_DWORD_a1_456_off_60C267AC_DWORD_a1_460_off_60C267D0_DWORD_a1_464_a1_DWORD_a1_468_0_StateMgr_ctor_StateMgr_a1_472_StateExecuter_a1_456_StateBase_dword_60CC58C4_DWORD_a1_452_off_60C2678C_sead_IDisposer_ctor_sead_IDisposer_a1_488_DWORD_a1_504_vtable_forsead_SafeStringBase_char;
   *(_DWORD *)(a1 + 508) = &byte_60ABC94D;
   *(_DWORD *)(a1 + 488) = off_60C5E9A4;
@@ -334,7 +334,7 @@ int __fastcall BootScene_ctor(int a1, int a2)
   *(_DWORD *)(a1 + 532) = 0;
   *(_DWORD *)(a1 + 536) = 0;
   *(_DWORD *)(a1 + 524) = off_60BD8394;
-  sead_IDisposer_ctor((sead_IDisposer *)(a1 + 556));
+  sead_IDisposer_ctor((struct sead_IDisposer *)(a1 + 556));
   *(_DWORD *)(a1 + 572) = &g_vtable_for_sead_SafeStringBase_char_DWORD_a1_576_byte_60ABC94D_DWORD_a1_556_off_60C5E9A4_DWORD_a1_580_0_DWORD_a1_584_0_DWORD_a1_588_1_DWORD_a1_596_0_DWORD_a1_600_0_DWORD_a1_604_0_DWORD_a1_592_off_60BD8394_sead_IDisposer_ctor_sead_IDisposer_a1_624_DWORD_a1_640_vtable_forsead_SafeStringBase_char;
   *(_DWORD *)(a1 + 644) = &byte_60ABC94D;
   *(_DWORD *)(a1 + 624) = off_60C5E9A4;
@@ -376,7 +376,7 @@ int __fastcall ChallengeRetryScene_ctor(int a1, int a2)
   *(_DWORD *)(a1 + 468) = 0;
   StateMgr_ctor((StateMgr *)(a1 + 472), (StateExecuter *)(a1 + 456), (StateBase *)&dword_60CC59B0);
   *(_DWORD *)(a1 + 452) = &off_60C268A4;
-  sead_IDisposer_ctor((sead_IDisposer *)(a1 + 488));
+  sead_IDisposer_ctor((struct sead_IDisposer *)(a1 + 488));
   *(_DWORD *)(a1 + 504) = &g_vtable_for_sead_SafeStringBase_char_DWORD_a1_508_byte_60ABC94D_DWORD_a1_488_off_60C5E9A4_DWORD_a1_512_0_DWORD_a1_516_0_DWORD_a1_520_1_DWORD_a1_528_0_DWORD_a1_532_0_DWORD_a1_536_0_DWORD_a1_524_off_60BD8394_sub_6090A654_DWORD_a1_556_sub_6090C6DC_a1_644_sub_6045BF30_sub_6045BF30_sub_6045BF30_sub_6045BF30_sub_6045BF30_sub_60485A74_a1_2836_DWORD_a1_3448_0_return_a1_DarkCloudDemoScene_ctor_RVA_0x007E3508_size_0x13C_xrefs_0_recovered_from_main_i64_Recovered_from_main_idb_VA_0x607E3508_RVA_0x607E3508_size_0x13C_sead_IDisposer_fastcall_DarkCloudDemoScene_ctor_sead_IDisposer_a1_int_a2_CalculateTask3_ctor_int_a1_a2_int_DarkCloudDemoScene_a1_vtable_int_off_60C26AE0_sead_IDisposer_ctor_a1_12_a1_13_vtable_int_vtable_forsead_SafeStringBase_char;
   a1[13].containingHeap = (int)&byte_60ABC94D;
   a1[12].vtable = (int)off_60C5E9A4;
@@ -436,7 +436,7 @@ int __fastcall DemoScene_ctor(int a1, int a2)
 
   CalculateTask3_ctor(a1, a2, (int)"DemoScene");
   *(_DWORD *)a1 = off_60C26B88;
-  sead_IDisposer_ctor((sead_IDisposer *)(a1 + 192));
+  sead_IDisposer_ctor((struct sead_IDisposer *)(a1 + 192));
   v3 = 0;
   *(_DWORD *)(a1 + 208) = &g_vtable_for_sead_SafeStringBase_char_DWORD_a1_212_byte_60ABC94D_DWORD_a1_192_off_60C5E9A4_DWORD_a1_216_0_DWORD_a1_220_0_DWORD_a1_224_1_DWORD_a1_232_0_DWORD_a1_236_0_DWORD_a1_240_0_DWORD_a1_228_off_60BD8394_sead_IDisposer_ctor_sead_IDisposer_a1_260_DWORD_a1_276_vtable_forsead_SafeStringBase_char;
   *(_DWORD *)(a1 + 280) = &byte_60ABC94D;
@@ -448,7 +448,7 @@ int __fastcall DemoScene_ctor(int a1, int a2)
   *(_DWORD *)(a1 + 288) = 0;
   *(_DWORD *)(a1 + 292) = 1;
   *(_DWORD *)(a1 + 296) = off_60BD8394;
-  sead_IDisposer_ctor((sead_IDisposer *)(a1 + 328));
+  sead_IDisposer_ctor((struct sead_IDisposer *)(a1 + 328));
   *(_DWORD *)(a1 + 344) = &g_vtable_for_sead_SafeStringBase_char_DWORD_a1_348_byte_60ABC94D_DWORD_a1_328_off_60C5E9A4_DWORD_a1_352_0_DWORD_a1_368_0_DWORD_a1_372_0_DWORD_a1_376_0_DWORD_a1_356_0_DWORD_a1_360_1_DWORD_a1_364_off_60BD8394_sead_IDisposer_ctor_sead_IDisposer_a1_396_DWORD_a1_412_vtable_forsead_SafeStringBase_char;
   *(_DWORD *)(a1 + 416) = &byte_60ABC94D;
   *(_DWORD *)(a1 + 396) = off_60C5E9A4;
@@ -459,7 +459,7 @@ int __fastcall DemoScene_ctor(int a1, int a2)
   *(_DWORD *)(a1 + 424) = 0;
   *(_DWORD *)(a1 + 428) = 1;
   *(_DWORD *)(a1 + 432) = off_60BD8394;
-  sead_IDisposer_ctor((sead_IDisposer *)(a1 + 464));
+  sead_IDisposer_ctor((struct sead_IDisposer *)(a1 + 464));
   *(_DWORD *)(a1 + 480) = &g_vtable_for_sead_SafeStringBase_char_DWORD_a1_484_byte_60ABC94D_DWORD_a1_464_off_60C5E9A4_DWORD_a1_488_0_DWORD_a1_504_0_DWORD_a1_508_0_DWORD_a1_512_0_DWORD_a1_492_0_DWORD_a1_496_1_DWORD_a1_500_off_60BD8394_sead_IDisposer_ctor_sead_IDisposer_a1_532_DWORD_a1_548_vtable_forsead_SafeStringBase_char;
   *(_DWORD *)(a1 + 552) = &byte_60ABC94D;
   *(_DWORD *)(a1 + 532) = off_60C5E9A4;
@@ -506,7 +506,7 @@ int __fastcall DemoScene_ctor(int a1, int a2)
   *(_DWORD *)(a1 + 3936) = 0;
   *(_DWORD *)(a1 + 3416) = 0;
   *(_DWORD *)(a1 + 3420) = 0;
-  sead_IDisposer_ctor((sead_IDisposer *)(a1 + 3940));
+  sead_IDisposer_ctor((struct sead_IDisposer *)(a1 + 3940));
   *(_DWORD *)(a1 + 3956) = &g_vtable_for_sead_SafeStringBase_char_DWORD_a1_3960_byte_60ABC94D_DWORD_a1_3940_off_60C5E9A4_DWORD_a1_3964_0_DWORD_a1_3968_0_DWORD_a1_3972_1_DWORD_a1_3980_0_DWORD_a1_3984_0_DWORD_a1_3988_0_DWORD_a1_3976_off_60BD8394_v4_a1_20780_do_EffectWrapper_ctor_EffectWrapper_v4_v3_DWORD_v4_v3_off_60BC1450_v3_104_while_v3_425984_v5_0_v6_a1_463408_do_MovingSoundActor_ctor_MovingSoundActor_v6_v5_0_1_DWORD_v6_v5_off_60C26BF4_v5_308_while_v5_1261568_DWORD_a1_1725004_0_DWORD_a1_1725028_0_DWORD_a1_1725024_0_DWORD_a1_1725020_0_DWORD_a1_1725032_1065353216_DWORD_a1_1725036_dword_6086A208_DWORD_a1_1725064_0_DWORD_a1_1725060_0_DWORD_a1_1725056_0_DWORD_a1_1725052_0_DWORD_a1_1725048_0_DWORD_a1_1725044_0_DWORD_a1_1725040_0_DWORD_a1_1725016_a1_1725020_DWORD_a1_1725068_0_DWORD_a1_1725012_off_60C5A7FC_DWORD_a1_1725072_0_DWORD_a1_1725076_0_DWORD_a1_1725100_0_DWORD_a1_1725096_0_DWORD_a1_1725092_0_DWORD_a1_1725104_1065353216_DWORD_a1_1725108_dword_6086A208_DWORD_a1_1725136_0_DWORD_a1_1725132_0_DWORD_a1_1725128_0_DWORD_a1_1725124_0_DWORD_a1_1725120_0_DWORD_a1_1725116_0_DWORD_a1_1725112_0_DWORD_a1_1725088_a1_1725092_DWORD_a1_1725140_0_DWORD_a1_1725084_off_60C5A7FC_DWORD_a1_1725144_0_sub_6092D040_a1_1725152_DWORD_a1_1729180_0_DWORD_a1_1729184_0_return_a1_GameOverScene_ctor_RVA_0x007EC020_size_0xFC_xrefs_0_recovered_from_main_i64_Recovered_from_main_idb_VA_0x607EC020_RVA_0x607EC020_size_0xFC_int_fastcall_GameOverScene_ctor_int_a1_int_a2_CalculateTask3_ctor_a1_a2_int_GameOverScene_DWORD_a1_off_60C26DA4_DWORD_a1_192_off_60C26E34_DWORD_a1_196_off_60C26E44_DWORD_a1_200_off_60C26E68_DWORD_a1_204_a1_DWORD_a1_208_0_StateMgr_ctor_StateMgr_a1_212_StateExecuter_a1_196_StateBase_dword_60CC5B5C_DWORD_a1_192_off_60C26E24_sead_IDisposer_ctor_sead_IDisposer_a1_228_DWORD_a1_244_vtable_forsead_SafeStringBase_char;
   *(_DWORD *)(a1 + 248) = &byte_60ABC94D;
   *(_DWORD *)(a1 + 228) = off_60C5E9A4;
@@ -539,7 +539,7 @@ int __fastcall GameSetupScene_ctor(int a1, int a2)
   *(_DWORD *)(a1 + 212) = 0;
   StateMgr_ctor((StateMgr *)(a1 + 216), (StateExecuter *)(a1 + 200), (StateBase *)&dword_60CC5BAC);
   *(_DWORD *)(a1 + 196) = &off_60C26F3C;
-  sead_IDisposer_ctor((sead_IDisposer *)(a1 + 232));
+  sead_IDisposer_ctor((struct sead_IDisposer *)(a1 + 232));
   *(_DWORD *)(a1 + 248) = &g_vtable_for_sead_SafeStringBase_char_DWORD_a1_252_byte_60ABC94D_DWORD_a1_232_off_60C5E9A4_DWORD_a1_256_0_DWORD_a1_260_0_DWORD_a1_264_1_DWORD_a1_272_0_DWORD_a1_276_0_DWORD_a1_280_0_DWORD_a1_268_off_60BD8394_sead_IDisposer_ctor_sead_IDisposer_a1_300_DWORD_a1_300_off_60C5E9A4_DWORD_a1_316_vtable_forsead_SafeStringBase_char;
   *(_DWORD *)(a1 + 320) = &byte_60ABC94D;
   *(_DWORD *)(a1 + 324) = 0;
@@ -549,7 +549,7 @@ int __fastcall GameSetupScene_ctor(int a1, int a2)
   *(_DWORD *)(a1 + 344) = 0;
   *(_DWORD *)(a1 + 348) = 0;
   *(_DWORD *)(a1 + 336) = off_60BD8394;
-  sead_IDisposer_ctor((sead_IDisposer *)(a1 + 368));
+  sead_IDisposer_ctor((struct sead_IDisposer *)(a1 + 368));
   *(_DWORD *)(a1 + 368) = off_60C5E9A4;
   *(_DWORD *)(a1 + 384) = &g_vtable_for_sead_SafeStringBase_char_DWORD_a1_388_byte_60ABC94D_DWORD_a1_392_0_DWORD_a1_396_0_DWORD_a1_400_1_DWORD_a1_408_0_DWORD_a1_412_0_DWORD_a1_416_0_DWORD_a1_404_off_60BD8394_sead_IDisposer_ctor_sead_IDisposer_a1_436_DWORD_a1_436_off_60C5E9A4_DWORD_a1_452_vtable_forsead_SafeStringBase_char;
   *(_DWORD *)(a1 + 456) = &byte_60ABC94D;
@@ -610,7 +610,7 @@ int __fastcall MultiPlayCourseSelectScene_ctor(int a1, int a2)
   *(_DWORD *)(a1 + 208) = 0;
   StateMgr_ctor((StateMgr *)(a1 + 212), (StateExecuter *)(a1 + 196), (StateBase *)&dword_60CC5F28);
   *(_DWORD *)(a1 + 192) = &off_60C274A0;
-  sead_IDisposer_ctor((sead_IDisposer *)(a1 + 228));
+  sead_IDisposer_ctor((struct sead_IDisposer *)(a1 + 228));
   *(_DWORD *)(a1 + 244) = &g_vtable_for_sead_SafeStringBase_char_DWORD_a1_248_byte_60ABC94D_DWORD_a1_228_off_60C5E9A4_DWORD_a1_252_0_DWORD_a1_256_0_DWORD_a1_260_1_DWORD_a1_268_0_DWORD_a1_272_0_DWORD_a1_276_0_DWORD_a1_264_off_60BD8394_sead_IDisposer_ctor_sead_IDisposer_a1_296_DWORD_a1_296_off_60C5E9A4_DWORD_a1_312_vtable_forsead_SafeStringBase_char;
   *(_DWORD *)(a1 + 316) = &byte_60ABC94D;
   *(_DWORD *)(a1 + 320) = 0;
@@ -620,7 +620,7 @@ int __fastcall MultiPlayCourseSelectScene_ctor(int a1, int a2)
   *(_DWORD *)(a1 + 340) = 0;
   *(_DWORD *)(a1 + 344) = 0;
   *(_DWORD *)(a1 + 332) = off_60BD8394;
-  sead_IDisposer_ctor((sead_IDisposer *)(a1 + 364));
+  sead_IDisposer_ctor((struct sead_IDisposer *)(a1 + 364));
   *(_DWORD *)(a1 + 364) = off_60C5E9A4;
   *(_DWORD *)(a1 + 380) = &g_vtable_for_sead_SafeStringBase_char_DWORD_a1_384_byte_60ABC94D_DWORD_a1_388_0_DWORD_a1_392_0_DWORD_a1_396_1_DWORD_a1_404_0_DWORD_a1_408_0_DWORD_a1_412_0_DWORD_a1_400_off_60BD8394_sead_IDisposer_ctor_sead_IDisposer_a1_432_DWORD_a1_432_off_60C5E9A4_DWORD_a1_448_vtable_forsead_SafeStringBase_char;
   *(_DWORD *)(a1 + 452) = &byte_60ABC94D;
@@ -677,7 +677,7 @@ int __fastcall ResultScene_ctor(int a1, int a2)
   *(_DWORD *)(a1 + 208) = 0;
   StateMgr_ctor((StateMgr *)(a1 + 212), (StateExecuter *)(a1 + 196), (StateBase *)&dword_60CC6260);
   *(_DWORD *)(a1 + 192) = &off_60C27740;
-  sead_IDisposer_ctor((sead_IDisposer *)(a1 + 228));
+  sead_IDisposer_ctor((struct sead_IDisposer *)(a1 + 228));
   *(_DWORD *)(a1 + 244) = &g_vtable_for_sead_SafeStringBase_char_DWORD_a1_248_byte_60ABC94D_DWORD_a1_228_off_60C5E9A4_DWORD_a1_252_0_DWORD_a1_256_0_DWORD_a1_260_1_DWORD_a1_268_0_DWORD_a1_272_0_DWORD_a1_276_0_DWORD_a1_264_off_60BD8394_sead_IDisposer_ctor_sead_IDisposer_a1_296_DWORD_a1_312_vtable_forsead_SafeStringBase_char;
   *(_DWORD *)(a1 + 316) = &byte_60ABC94D;
   *(_DWORD *)(a1 + 296) = off_60C5E9A4;
@@ -688,7 +688,7 @@ int __fastcall ResultScene_ctor(int a1, int a2)
   *(_DWORD *)(a1 + 340) = 0;
   *(_DWORD *)(a1 + 344) = 0;
   *(_DWORD *)(a1 + 332) = off_60BD8394;
-  sead_IDisposer_ctor((sead_IDisposer *)(a1 + 364));
+  sead_IDisposer_ctor((struct sead_IDisposer *)(a1 + 364));
   *(_DWORD *)(a1 + 380) = &g_vtable_for_sead_SafeStringBase_char_DWORD_a1_384_byte_60ABC94D_DWORD_a1_364_off_60C5E9A4_DWORD_a1_388_0_DWORD_a1_392_0_DWORD_a1_396_1_DWORD_a1_404_0_DWORD_a1_408_0_DWORD_a1_412_0_DWORD_a1_400_off_60BD8394_sead_IDisposer_ctor_sead_IDisposer_a1_432_DWORD_a1_448_vtable_forsead_SafeStringBase_char;
   *(_DWORD *)(a1 + 452) = &byte_60ABC94D;
   *(_DWORD *)(a1 + 432) = off_60C5E9A4;
@@ -699,7 +699,7 @@ int __fastcall ResultScene_ctor(int a1, int a2)
   *(_DWORD *)(a1 + 476) = 0;
   *(_DWORD *)(a1 + 480) = 0;
   *(_DWORD *)(a1 + 468) = off_60BD8394;
-  sead_IDisposer_ctor((sead_IDisposer *)(a1 + 500));
+  sead_IDisposer_ctor((struct sead_IDisposer *)(a1 + 500));
   *(_DWORD *)(a1 + 516) = &g_vtable_for_sead_SafeStringBase_char_DWORD_a1_520_byte_60ABC94D_DWORD_a1_500_off_60C5E9A4_DWORD_a1_524_0_DWORD_a1_528_0_DWORD_a1_532_1_DWORD_a1_540_0_DWORD_a1_544_0_DWORD_a1_548_0_DWORD_a1_536_off_60BD8394_sead_IDisposer_ctor_sead_IDisposer_a1_568_DWORD_a1_584_vtable_forsead_SafeStringBase_char;
   *(_DWORD *)(a1 + 588) = &byte_60ABC94D;
   *(_DWORD *)(a1 + 568) = off_60C5E9A4;
@@ -710,7 +710,7 @@ int __fastcall ResultScene_ctor(int a1, int a2)
   *(_DWORD *)(a1 + 612) = 0;
   *(_DWORD *)(a1 + 616) = 0;
   *(_DWORD *)(a1 + 604) = off_60BD8394;
-  sead_IDisposer_ctor((sead_IDisposer *)(a1 + 636));
+  sead_IDisposer_ctor((struct sead_IDisposer *)(a1 + 636));
   *(_DWORD *)(a1 + 652) = &g_vtable_for_sead_SafeStringBase_char_DWORD_a1_656_byte_60ABC94D_DWORD_a1_636_off_60C5E9A4_DWORD_a1_660_0_DWORD_a1_664_0_DWORD_a1_668_1_DWORD_a1_676_0_DWORD_a1_680_0_DWORD_a1_684_0_DWORD_a1_672_off_60BD8394_sead_IDisposer_ctor_sead_IDisposer_a1_704_DWORD_a1_720_vtable_forsead_SafeStringBase_char;
   *(_DWORD *)(a1 + 724) = &byte_60ABC94D;
   *(_DWORD *)(a1 + 704) = off_60C5E9A4;
@@ -732,9 +732,9 @@ int __fastcall ResultScene_ctor(int a1, int a2)
  * RVA 0x007F5AD8   size 0x1C   xrefs 0   recovered from main.i64
  * ============================================================================ */
 /* Recovered from main.idb: VA 0x607F5AD8  RVA 0x607F5AD8  size 0x1C */
-sead_IDisposer *__fastcall CalculateTask3_ctor(sead_IDisposer *a1, int a2, int a3)
+struct sead_IDisposer *__fastcall CalculateTask3_ctor(struct sead_IDisposer *a1, int a2, int a3)
 {
-  sead_IDisposer *result; // r0
+  struct sead_IDisposer *result; // r0
 
   result = CalculateTask2_ctor(a1, a2, a3);
   result->vtable = (int)off_60C27800;
@@ -766,9 +766,9 @@ signed int __fastcall SceneMgr_doSceneChange(int a1, int a2, int *a3, int a4, in
  * RVA 0x007F89C4   size 0x24   xrefs 0   recovered from main.i64
  * ============================================================================ */
 /* Recovered from main.idb: VA 0x607F89C4  RVA 0x607F89C4  size 0x24 */
-sead_IDisposer *__fastcall TitleScene_ctor(sead_IDisposer *a1, int a2)
+struct sead_IDisposer *__fastcall TitleScene_ctor(struct sead_IDisposer *a1, int a2)
 {
-  sead_IDisposer *result; // r0
+  struct sead_IDisposer *result; // r0
 
   result = CalculateTask3_ctor(a1, a2, (int)"TitleScene");
   result->vtable = (int)off_60C27B24;
@@ -884,7 +884,7 @@ int __fastcall _aeabi_memclr8(void *a1, size_t a2)
  * RVA 0x009AD430   size 0xC   xrefs 0   recovered from main.i64
  * ============================================================================ */
 /* Recovered from main.idb: VA 0x609AD430  RVA 0x609AD430  size 0xC */
-int __fastcall nn_os_GetSystemTick(nn_os *v)
+int __fastcall nn_os_GetSystemTick(struct nn_os *v)
 {
   return __imp__ZN2nn2os13GetSystemTickEv(v);
 }
@@ -1024,7 +1024,7 @@ int nn_os_GetTlsValue()
  * RVA 0x009AD4D8   size 0xC   xrefs 0   recovered from main.i64
  * ============================================================================ */
 /* Recovered from main.idb: VA 0x609AD4D8  RVA 0x609AD4D8  size 0xC */
-int __fastcall nn_os_GetCurrentCoreNumber(nn_os *v)
+int __fastcall nn_os_GetCurrentCoreNumber(struct nn_os *v)
 {
   return __imp__ZN2nn2os20GetCurrentCoreNumberEv(v);
 }
@@ -1154,7 +1154,7 @@ int __fastcall nn_util_BinaryFileHeader_GetFirstBlock(nn_util_BinaryFileHeader *
  * RVA 0x009AD574   size 0xC   xrefs 0   recovered from main.i64
  * ============================================================================ */
 /* Recovered from main.idb: VA 0x609AD574  RVA 0x609AD574  size 0xC */
-int __fastcall nn_mii_GetExpressionCount(nn_mii *v, int a2)
+int __fastcall nn_mii_GetExpressionCount(struct nn_mii *v, int a2)
 {
   return __imp__ZN2nn3mii18GetExpressionCountEi(v, a2);
 }
@@ -1214,7 +1214,7 @@ void __fastcall _aeabi_memset8(void *a1, size_t a2, int a3)
  * RVA 0x009AD5BC   size 0xC   xrefs 0   recovered from main.i64
  * ============================================================================ */
 /* Recovered from main.idb: VA 0x609AD5BC  RVA 0x609AD5BC  size 0xC */
-int __fastcall nn_mii_Database_Database(nn_mii_Database *v)
+int __fastcall nn_mii_Database_Database(struct nn_mii_Database *v)
 {
   return __imp__ZN2nn3mii8DatabaseC1Ev(v);
 }
@@ -1224,7 +1224,7 @@ int __fastcall nn_mii_Database_Database(nn_mii_Database *v)
  * RVA 0x009AD5C8   size 0xC   xrefs 0   recovered from main.i64
  * ============================================================================ */
 /* Recovered from main.idb: VA 0x609AD5C8  RVA 0x609AD5C8  size 0xC */
-int __fastcall nn_mii_Database_Initialize(nn_mii_Database *v)
+int __fastcall nn_mii_Database_Initialize(struct nn_mii_Database *v)
 {
   return __imp__ZN2nn3mii8Database10InitializeEv(v);
 }
@@ -1254,7 +1254,7 @@ int nn_mii_Database_BuildRandom()
  * RVA 0x009AD5EC   size 0xC   xrefs 0   recovered from main.i64
  * ============================================================================ */
 /* Recovered from main.idb: VA 0x609AD5EC  RVA 0x609AD5EC  size 0xC */
-int __fastcall nn_mii_Database_Finalize(nn_mii_Database *v)
+int __fastcall nn_mii_Database_Finalize(struct nn_mii_Database *v)
 {
   return __imp__ZN2nn3mii8Database8FinalizeEv(v);
 }
@@ -1344,7 +1344,7 @@ int __fastcall nn_os_SetMemoryHeapSize(unsigned int a1)
  * RVA 0x009AD670   size 0xC   xrefs 0   recovered from main.i64
  * ============================================================================ */
 /* Recovered from main.idb: VA 0x609AD670  RVA 0x609AD670  size 0xC */
-int __fastcall nn_os_AllocateMemoryBlock(nn_os *v, unsigned int *a2, unsigned int a3)
+int __fastcall nn_os_AllocateMemoryBlock(struct nn_os *v, unsigned int *a2, unsigned int a3)
 {
   return __imp__ZN2nn2os19AllocateMemoryBlockEPjj(v, a2, a3);
 }
@@ -1354,7 +1354,7 @@ int __fastcall nn_os_AllocateMemoryBlock(nn_os *v, unsigned int *a2, unsigned in
  * RVA 0x009AD67C   size 0xC   xrefs 0   recovered from main.i64
  * ============================================================================ */
 /* Recovered from main.idb: VA 0x609AD67C  RVA 0x609AD67C  size 0xC */
-int __fastcall nn_os_GetHostArgc(nn_os *v)
+int __fastcall nn_os_GetHostArgc(struct nn_os *v)
 {
   return __imp__ZN2nn2os11GetHostArgcEv(v);
 }
@@ -1364,7 +1364,7 @@ int __fastcall nn_os_GetHostArgc(nn_os *v)
  * RVA 0x009AD688   size 0xC   xrefs 0   recovered from main.i64
  * ============================================================================ */
 /* Recovered from main.idb: VA 0x609AD688  RVA 0x609AD688  size 0xC */
-int __fastcall nn_os_GetHostArgv(nn_os *v)
+int __fastcall nn_os_GetHostArgv(struct nn_os *v)
 {
   return __imp__ZN2nn2os11GetHostArgvEv(v);
 }
@@ -1414,7 +1414,7 @@ float powf(float x, float y)
  * RVA 0x009AD6C4   size 0xC   xrefs 0   recovered from main.i64
  * ============================================================================ */
 /* Recovered from main.idb: VA 0x609AD6C4  RVA 0x609AD6C4  size 0xC */
-int __fastcall nn_prepo_PlayReport_PlayReport(nn_prepo_PlayReport *v)
+int __fastcall nn_prepo_PlayReport_PlayReport(struct nn_prepo_PlayReport *v)
 {
   return __imp__ZN2nn5prepo10PlayReportC1Ev(v);
 }
@@ -1424,7 +1424,7 @@ int __fastcall nn_prepo_PlayReport_PlayReport(nn_prepo_PlayReport *v)
  * RVA 0x009AD6D0   size 0xC   xrefs 0   recovered from main.i64
  * ============================================================================ */
 /* Recovered from main.idb: VA 0x609AD6D0  RVA 0x609AD6D0  size 0xC */
-int __fastcall nn_prepo_PlayReport_SetBuffer(nn_prepo_PlayReport *v, void *a2, unsigned int a3)
+int __fastcall nn_prepo_PlayReport_SetBuffer(struct nn_prepo_PlayReport *v, void *a2, unsigned int a3)
 {
   return __imp__ZN2nn5prepo10PlayReport9SetBufferEPvj(v, a2, a3);
 }
@@ -1434,7 +1434,7 @@ int __fastcall nn_prepo_PlayReport_SetBuffer(nn_prepo_PlayReport *v, void *a2, u
  * RVA 0x009AD6DC   size 0xC   xrefs 0   recovered from main.i64
  * ============================================================================ */
 /* Recovered from main.idb: VA 0x609AD6DC  RVA 0x609AD6DC  size 0xC */
-int __fastcall nn_prepo_PlayReport_SetEventId(nn_prepo_PlayReport *v, const char *a2)
+int __fastcall nn_prepo_PlayReport_SetEventId(struct nn_prepo_PlayReport *v, const char *a2)
 {
   return __imp__ZN2nn5prepo10PlayReport10SetEventIdEPKc(v, a2);
 }
@@ -1444,7 +1444,7 @@ int __fastcall nn_prepo_PlayReport_SetEventId(nn_prepo_PlayReport *v, const char
  * RVA 0x009AD6E8   size 0xC   xrefs 0   recovered from main.i64
  * ============================================================================ */
 /* Recovered from main.idb: VA 0x609AD6E8  RVA 0x609AD6E8  size 0xC */
-int __fastcall nn_prepo_PlayReport_Add(nn_prepo_PlayReport *v, const char *a2, __int64 a3)
+int __fastcall nn_prepo_PlayReport_Add(struct nn_prepo_PlayReport *v, const char *a2, __int64 a3)
 {
   return __imp__ZN2nn5prepo10PlayReport3AddEPKcx(v, a2, a3);
 }
@@ -1464,7 +1464,7 @@ int nn_prepo_PlayReport_Save()
  * RVA 0x009AD700   size 0xC   xrefs 0   recovered from main.i64
  * ============================================================================ */
 /* Recovered from main.idb: VA 0x609AD700  RVA 0x609AD700  size 0xC */
-int __fastcall nn_prepo_PlayReport_Save(nn_prepo_PlayReport *v)
+int __fastcall nn_prepo_PlayReport_Save(struct nn_prepo_PlayReport *v)
 {
   return __imp__ZN2nn5prepo10PlayReport4SaveEv(v);
 }
@@ -1544,7 +1544,7 @@ double scalbn(double x, int n)
  * RVA 0x009AD760   size 0xC   xrefs 0   recovered from main.i64
  * ============================================================================ */
 /* Recovered from main.idb: VA 0x609AD760  RVA 0x609AD760  size 0xC */
-int __fastcall nn_detail_UnexpectedDefaultImpl(nn_detail *v, const char *a2, const char *a3, int a4)
+int __fastcall nn_detail_UnexpectedDefaultImpl(struct nn_detail *v, const char *a2, const char *a3, int a4)
 {
   return __imp__ZN2nn6detail21UnexpectedDefaultImplEPKcS2_i(v, a2, a3, a4);
 }
@@ -2117,7 +2117,7 @@ int __fastcall nn_oe_TryPopNotificationMessage(nn_oe *v, unsigned int *a2)
  * RVA 0x009ADA48   size 0xC   xrefs 0   recovered from main.i64
  * ============================================================================ */
 /* Recovered from main.idb: VA 0x609ADA48  RVA 0x609ADA48  size 0xC */
-int __fastcall nn_diag_IsDebuggerAttached(nn_diag *v)
+int __fastcall nn_diag_IsDebuggerAttached(struct nn_diag *v)
 {
   return __imp__ZN2nn4diag18IsDebuggerAttachedEv(v);
 }
@@ -2197,7 +2197,7 @@ int nn_account_GetUserId()
  * RVA 0x009ADAA8   size 0xC   xrefs 0   recovered from main.i64
  * ============================================================================ */
 /* Recovered from main.idb: VA 0x609ADAA8  RVA 0x609ADAA8  size 0xC */
-int __fastcall nn_mem_StandardAllocator_StandardAllocator(nn_mem_StandardAllocator *v)
+int __fastcall nn_mem_StandardAllocator_StandardAllocator(struct nn_mem_StandardAllocator *v)
 {
   return __imp__ZN2nn3mem17StandardAllocatorC1Ev(v);
 }
@@ -2207,7 +2207,7 @@ int __fastcall nn_mem_StandardAllocator_StandardAllocator(nn_mem_StandardAllocat
  * RVA 0x009ADAB4   size 0xC   xrefs 0   recovered from main.i64
  * ============================================================================ */
 /* Recovered from main.idb: VA 0x609ADAB4  RVA 0x609ADAB4  size 0xC */
-int __fastcall nn_mem_StandardAllocator_Initialize(nn_mem_StandardAllocator *v, void *a2, unsigned int a3)
+int __fastcall nn_mem_StandardAllocator_Initialize(struct nn_mem_StandardAllocator *v, void *a2, unsigned int a3)
 {
   return __imp__ZN2nn3mem17StandardAllocator10InitializeEPvj(v, a2, a3);
 }
@@ -2217,7 +2217,7 @@ int __fastcall nn_mem_StandardAllocator_Initialize(nn_mem_StandardAllocator *v, 
  * RVA 0x009ADAC0   size 0xC   xrefs 0   recovered from main.i64
  * ============================================================================ */
 /* Recovered from main.idb: VA 0x609ADAC0  RVA 0x609ADAC0  size 0xC */
-int __fastcall nn_mem_StandardAllocator_Allocate(nn_mem_StandardAllocator *v, unsigned int a2)
+int __fastcall nn_mem_StandardAllocator_Allocate(struct nn_mem_StandardAllocator *v, unsigned int a2)
 {
   return __imp__ZN2nn3mem17StandardAllocator8AllocateEj(v, a2);
 }
@@ -2237,7 +2237,7 @@ int *_errno_location(void)
  * RVA 0x009ADAD8   size 0xC   xrefs 0   recovered from main.i64
  * ============================================================================ */
 /* Recovered from main.idb: VA 0x609ADAD8  RVA 0x609ADAD8  size 0xC */
-int __fastcall nn_mem_StandardAllocator_Free(nn_mem_StandardAllocator *v, void *a2)
+int __fastcall nn_mem_StandardAllocator_Free(struct nn_mem_StandardAllocator *v, void *a2)
 {
   return __imp__ZN2nn3mem17StandardAllocator4FreeEPv(v, a2);
 }
@@ -2247,7 +2247,7 @@ int __fastcall nn_mem_StandardAllocator_Free(nn_mem_StandardAllocator *v, void *
  * RVA 0x009ADAE4   size 0xC   xrefs 0   recovered from main.i64
  * ============================================================================ */
 /* Recovered from main.idb: VA 0x609ADAE4  RVA 0x609ADAE4  size 0xC */
-int __fastcall nn_mem_StandardAllocator_Reallocate(nn_mem_StandardAllocator *v, void *a2, unsigned int a3)
+int __fastcall nn_mem_StandardAllocator_Reallocate(struct nn_mem_StandardAllocator *v, void *a2, unsigned int a3)
 {
   return __imp__ZN2nn3mem17StandardAllocator10ReallocateEPvj(v, a2, a3);
 }
@@ -2257,7 +2257,7 @@ int __fastcall nn_mem_StandardAllocator_Reallocate(nn_mem_StandardAllocator *v, 
  * RVA 0x009ADAF0   size 0xC   xrefs 0   recovered from main.i64
  * ============================================================================ */
 /* Recovered from main.idb: VA 0x609ADAF0  RVA 0x609ADAF0  size 0xC */
-int __fastcall nn_mem_StandardAllocator_Allocate(nn_mem_StandardAllocator *v, unsigned int a2, unsigned int a3)
+int __fastcall nn_mem_StandardAllocator_Allocate(struct nn_mem_StandardAllocator *v, unsigned int a2, unsigned int a3)
 {
   return __imp__ZN2nn3mem17StandardAllocator8AllocateEjj(v, a2, a3);
 }
@@ -2307,7 +2307,7 @@ int __fastcall nn_util_BinaryFileHeader_GetRelocationTable(nn_util_BinaryFileHea
  * RVA 0x009ADB2C   size 0xC   xrefs 0   recovered from main.i64
  * ============================================================================ */
 /* Recovered from main.idb: VA 0x609ADB2C  RVA 0x609ADB2C  size 0xC */
-int __fastcall nn_util_RelocationTable_Relocate(nn_util_RelocationTable *v)
+int __fastcall nn_util_RelocationTable_Relocate(struct nn_util_RelocationTable *v)
 {
   return __imp__ZN2nn4util15RelocationTable8RelocateEv(v);
 }
@@ -2338,7 +2338,7 @@ int __fastcall nn_mii_ParamCharInfoAccessor_IsValid(nn_mii_ParamCharInfoAccessor
  * ============================================================================ */
 /* Recovered from main.idb: VA 0x609ADB50  RVA 0x609ADB50  size 0xC */
 int __fastcall nn_mii_detail_BufferAllocator_BufferAllocator(
-        nn_mii_detail_BufferAllocator *v,
+        struct nn_mii_detail_BufferAllocator *v,
         void *a2,
         unsigned int a3)
 {
@@ -2350,7 +2350,7 @@ int __fastcall nn_mii_detail_BufferAllocator_BufferAllocator(
  * RVA 0x009ADB5C   size 0xC   xrefs 0   recovered from main.i64
  * ============================================================================ */
 /* Recovered from main.idb: VA 0x609ADB5C  RVA 0x609ADB5C  size 0xC */
-int __fastcall nn_mii_detail_BufferAllocator_AlignUp(nn_mii_detail_BufferAllocator *v, unsigned int a2)
+int __fastcall nn_mii_detail_BufferAllocator_AlignUp(struct nn_mii_detail_BufferAllocator *v, unsigned int a2)
 {
   return __imp__ZN2nn3mii6detail15BufferAllocator7AlignUpEj(v, a2);
 }
@@ -2360,7 +2360,7 @@ int __fastcall nn_mii_detail_BufferAllocator_AlignUp(nn_mii_detail_BufferAllocat
  * RVA 0x009ADB68   size 0xC   xrefs 0   recovered from main.i64
  * ============================================================================ */
 /* Recovered from main.idb: VA 0x609ADB68  RVA 0x609ADB68  size 0xC */
-int __fastcall nn_mii_detail_BufferAllocator_Advance(nn_mii_detail_BufferAllocator *v, unsigned int a2)
+int __fastcall nn_mii_detail_BufferAllocator_Advance(struct nn_mii_detail_BufferAllocator *v, unsigned int a2)
 {
   return __imp__ZN2nn3mii6detail15BufferAllocator7AdvanceEj(v, a2);
 }
@@ -2450,7 +2450,7 @@ int nn_fs_MountSystemData()
  * RVA 0x009ADBE0   size 0xC   xrefs 0   recovered from main.i64
  * ============================================================================ */
 /* Recovered from main.idb: VA 0x609ADBE0  RVA 0x609ADBE0  size 0xC */
-int __fastcall nn_fs_Unmount(nn_fs *v, const char *a2)
+int __fastcall nn_fs_Unmount(struct nn_fs *v, const char *a2)
 {
   return __imp__ZN2nn2fs7UnmountEPKc(v, a2);
 }
@@ -2501,7 +2501,7 @@ int nn_fs_ReadFile()
  * ============================================================================ */
 /* Recovered from main.idb: VA 0x609ADC1C  RVA 0x609ADC1C  size 0xC */
 int __fastcall nn_mii_detail_CalculateSizeAndAlignment_CalculateSizeAndAlignment(
-        nn_mii_detail_CalculateSizeAndAlignment *v)
+        struct nn_mii_detail_CalculateSizeAndAlignment *v)
 {
   return __imp__ZN2nn3mii6detail25CalculateSizeAndAlignmentC1Ev(v);
 }
@@ -2512,7 +2512,7 @@ int __fastcall nn_mii_detail_CalculateSizeAndAlignment_CalculateSizeAndAlignment
  * ============================================================================ */
 /* Recovered from main.idb: VA 0x609ADC28  RVA 0x609ADC28  size 0xC */
 int __fastcall nn_mii_detail_CalculateSizeAndAlignment_AddSize(
-        nn_mii_detail_CalculateSizeAndAlignment *v,
+        struct nn_mii_detail_CalculateSizeAndAlignment *v,
         unsigned int a2)
 {
   return __imp__ZN2nn3mii6detail25CalculateSizeAndAlignment7AddSizeEj(v, a2);
@@ -2524,7 +2524,7 @@ int __fastcall nn_mii_detail_CalculateSizeAndAlignment_AddSize(
  * ============================================================================ */
 /* Recovered from main.idb: VA 0x609ADC34  RVA 0x609ADC34  size 0xC */
 int __fastcall nn_mii_detail_CalculateSizeAndAlignment_AddSizeWithAlignment(
-        nn_mii_detail_CalculateSizeAndAlignment *v,
+        struct nn_mii_detail_CalculateSizeAndAlignment *v,
         unsigned int a2,
         unsigned int a3)
 {
@@ -2536,7 +2536,7 @@ int __fastcall nn_mii_detail_CalculateSizeAndAlignment_AddSizeWithAlignment(
  * RVA 0x009ADC40   size 0xC   xrefs 0   recovered from main.i64
  * ============================================================================ */
 /* Recovered from main.idb: VA 0x609ADC40  RVA 0x609ADC40  size 0xC */
-int __fastcall nn_mii_detail_CalculateSizeAndAlignment_GetSize(nn_mii_detail_CalculateSizeAndAlignment *v)
+int __fastcall nn_mii_detail_CalculateSizeAndAlignment_GetSize(struct nn_mii_detail_CalculateSizeAndAlignment *v)
 {
   return __imp__ZNK2nn3mii6detail25CalculateSizeAndAlignment7GetSizeEv(v);
 }
@@ -2547,7 +2547,7 @@ int __fastcall nn_mii_detail_CalculateSizeAndAlignment_GetSize(nn_mii_detail_Cal
  * ============================================================================ */
 /* Recovered from main.idb: VA 0x609ADC58  RVA 0x609ADC58  size 0xC */
 int __fastcall nn_mii_detail_CalculateSizeAndAlignment_AddSizeWithAlignment(
-        nn_mii_detail_CalculateSizeAndAlignment *v,
+        struct nn_mii_detail_CalculateSizeAndAlignment *v,
         unsigned int a2,
         unsigned int a3,
         int a4)
@@ -3081,7 +3081,7 @@ int nn_mii_GetMoleColor()
  * ============================================================================ */
 /* Recovered from main.idb: VA 0x609ADED4  RVA 0x609ADED4  size 0xC */
 int __fastcall nn_util_DecompressZlib(
-        nn_util *v,
+        struct nn_util *v,
         void *a2,
         unsigned int a3,
         const void *a4,
@@ -3117,7 +3117,7 @@ int __fastcall nn_util_BinaryFileHeader_GetAlignment(nn_util_BinaryFileHeader *v
  * RVA 0x009ADEF8   size 0xC   xrefs 0   recovered from main.i64
  * ============================================================================ */
 /* Recovered from main.idb: VA 0x609ADEF8  RVA 0x609ADEF8  size 0xC */
-int __fastcall nn_util_ReferSymbol(nn_util *v, const void *a2)
+int __fastcall nn_util_ReferSymbol(struct nn_util *v, const void *a2)
 {
   return __imp__ZN2nn4util11ReferSymbolEPKv(v, a2);
 }
@@ -3127,7 +3127,7 @@ int __fastcall nn_util_ReferSymbol(nn_util *v, const void *a2)
  * RVA 0x009ADF04   size 0xC   xrefs 0   recovered from main.i64
  * ============================================================================ */
 /* Recovered from main.idb: VA 0x609ADF04  RVA 0x609ADF04  size 0xC */
-int __fastcall nn_util_PickOutCharacterFromUtf8String(nn_util *v, char *a2, const char **a3)
+int __fastcall nn_util_PickOutCharacterFromUtf8String(struct nn_util *v, char *a2, const char **a3)
 {
   return __imp__ZN2nn4util30PickOutCharacterFromUtf8StringEPcPPKc(v, a2, a3);
 }
@@ -3137,7 +3137,7 @@ int __fastcall nn_util_PickOutCharacterFromUtf8String(nn_util *v, char *a2, cons
  * RVA 0x009ADF10   size 0xC   xrefs 0   recovered from main.i64
  * ============================================================================ */
 /* Recovered from main.idb: VA 0x609ADF10  RVA 0x609ADF10  size 0xC */
-int __fastcall nn_util_ConvertCharacterUtf8ToUtf32(nn_util *v, unsigned int *a2, const char *a3)
+int __fastcall nn_util_ConvertCharacterUtf8ToUtf32(struct nn_util *v, unsigned int *a2, const char *a3)
 {
   return __imp__ZN2nn4util27ConvertCharacterUtf8ToUtf32EPjPKc(v, a2, a3);
 }
@@ -3147,7 +3147,7 @@ int __fastcall nn_util_ConvertCharacterUtf8ToUtf32(nn_util *v, unsigned int *a2,
  * RVA 0x009ADF1C   size 0xC   xrefs 0   recovered from main.i64
  * ============================================================================ */
 /* Recovered from main.idb: VA 0x609ADF1C  RVA 0x609ADF1C  size 0xC */
-int nn_util_SNPrintf(nn_util *v, char *a2, unsigned int a3, const char *a4, ...)
+int nn_util_SNPrintf(struct nn_util *v, char *a2, unsigned int a3, const char *a4, ...)
 {
   return __imp__ZN2nn4util8SNPrintfEPcjPKcz(v, a2, a3, a4);
 }
@@ -3237,7 +3237,7 @@ int __fastcall nn_util_BinaryBlockHeader_GetBlockSize(nn_util_BinaryBlockHeader 
  * RVA 0x009ADF88   size 0xC   xrefs 0   recovered from main.i64
  * ============================================================================ */
 /* Recovered from main.idb: VA 0x609ADF88  RVA 0x609ADF88  size 0xC */
-int __fastcall nn_lmem_CreateFrameHeap(nn_lmem *v, void *a2, unsigned int a3, int a4)
+int __fastcall nn_lmem_CreateFrameHeap(struct nn_lmem *v, void *a2, unsigned int a3, int a4)
 {
   return __imp__ZN2nn4lmem15CreateFrameHeapEPvji(v, a2, a3, a4);
 }
@@ -3672,7 +3672,7 @@ int nn_audio_SetPerformanceFrameBuffer()
  * RVA 0x009AE18C   size 0xC   xrefs 0   recovered from main.i64
  * ============================================================================ */
 /* Recovered from main.idb: VA 0x609AE18C  RVA 0x609AE18C  size 0xC */
-int __fastcall nn_audio_PerformanceInfo_PerformanceInfo(nn_audio_PerformanceInfo *v)
+int __fastcall nn_audio_PerformanceInfo_PerformanceInfo(struct nn_audio_PerformanceInfo *v)
 {
   return __imp__ZN2nn5audio15PerformanceInfoC1Ev(v);
 }
@@ -3682,7 +3682,7 @@ int __fastcall nn_audio_PerformanceInfo_PerformanceInfo(nn_audio_PerformanceInfo
  * RVA 0x009AE198   size 0xC   xrefs 0   recovered from main.i64
  * ============================================================================ */
 /* Recovered from main.idb: VA 0x609AE198  RVA 0x609AE198  size 0xC */
-int __fastcall nn_audio_PerformanceInfo_SetBuffer(nn_audio_PerformanceInfo *v, const void *a2, unsigned int a3)
+int __fastcall nn_audio_PerformanceInfo_SetBuffer(struct nn_audio_PerformanceInfo *v, const void *a2, unsigned int a3)
 {
   return __imp__ZN2nn5audio15PerformanceInfo9SetBufferEPKvj(v, a2, a3);
 }
@@ -3692,7 +3692,7 @@ int __fastcall nn_audio_PerformanceInfo_SetBuffer(nn_audio_PerformanceInfo *v, c
  * RVA 0x009AE1A4   size 0xC   xrefs 0   recovered from main.i64
  * ============================================================================ */
 /* Recovered from main.idb: VA 0x609AE1A4  RVA 0x609AE1A4  size 0xC */
-int __fastcall nn_audio_PerformanceInfo_MoveToNextFrame(nn_audio_PerformanceInfo *v)
+int __fastcall nn_audio_PerformanceInfo_MoveToNextFrame(struct nn_audio_PerformanceInfo *v)
 {
   return __imp__ZN2nn5audio15PerformanceInfo15MoveToNextFrameEv(v);
 }
@@ -3702,7 +3702,7 @@ int __fastcall nn_audio_PerformanceInfo_MoveToNextFrame(nn_audio_PerformanceInfo
  * RVA 0x009AE1BC   size 0xC   xrefs 0   recovered from main.i64
  * ============================================================================ */
 /* Recovered from main.idb: VA 0x609AE1BC  RVA 0x609AE1BC  size 0xC */
-int __fastcall nn_audio_PerformanceInfo_GetEntries(nn_audio_PerformanceInfo *v, int *a2)
+int __fastcall nn_audio_PerformanceInfo_GetEntries(struct nn_audio_PerformanceInfo *v, int *a2)
 {
   return __imp__ZN2nn5audio15PerformanceInfo10GetEntriesEPi(v, a2);
 }
@@ -3712,7 +3712,7 @@ int __fastcall nn_audio_PerformanceInfo_GetEntries(nn_audio_PerformanceInfo *v, 
  * RVA 0x009AE1C8   size 0xC   xrefs 0   recovered from main.i64
  * ============================================================================ */
 /* Recovered from main.idb: VA 0x609AE1C8  RVA 0x609AE1C8  size 0xC */
-int __fastcall nn_audio_PerformanceInfo_GetTotalProcessingTime(nn_audio_PerformanceInfo *v)
+int __fastcall nn_audio_PerformanceInfo_GetTotalProcessingTime(struct nn_audio_PerformanceInfo *v)
 {
   return __imp__ZN2nn5audio15PerformanceInfo22GetTotalProcessingTimeEv(v);
 }
@@ -4752,7 +4752,7 @@ int nn_fs_GetEntryType()
  * RVA 0x009AE6A8   size 0xC   xrefs 0   recovered from main.i64
  * ============================================================================ */
 /* Recovered from main.idb: VA 0x609AE6A8  RVA 0x609AE6A8  size 0xC */
-int __fastcall nn_fs_CreateFile(nn_fs *v, const char *a2, __int64 a3)
+int __fastcall nn_fs_CreateFile(struct nn_fs *v, const char *a2, __int64 a3)
 {
   return __imp__ZN2nn2fs10CreateFileEPKcx(v, a2, a3);
 }
@@ -4772,7 +4772,7 @@ int nn_fs_SetFileSize()
  * RVA 0x009AE6C0   size 0xC   xrefs 0   recovered from main.i64
  * ============================================================================ */
 /* Recovered from main.idb: VA 0x609AE6C0  RVA 0x609AE6C0  size 0xC */
-int __fastcall nn_fs_DeleteFile(nn_fs *v, const char *a2)
+int __fastcall nn_fs_DeleteFile(struct nn_fs *v, const char *a2)
 {
   return __imp__ZN2nn2fs10DeleteFileEPKc(v, a2);
 }
@@ -4822,7 +4822,7 @@ int nn_fs_ReadDirectory()
  * RVA 0x009AE6FC   size 0xC   xrefs 0   recovered from main.i64
  * ============================================================================ */
 /* Recovered from main.idb: VA 0x609AE6FC  RVA 0x609AE6FC  size 0xC */
-int __fastcall nn_fs_CreateDirectory(nn_fs *v, const char *a2)
+int __fastcall nn_fs_CreateDirectory(struct nn_fs *v, const char *a2)
 {
   return __imp__ZN2nn2fs15CreateDirectoryEPKc(v, a2);
 }
@@ -4832,7 +4832,7 @@ int __fastcall nn_fs_CreateDirectory(nn_fs *v, const char *a2)
  * RVA 0x009AE708   size 0xC   xrefs 0   recovered from main.i64
  * ============================================================================ */
 /* Recovered from main.idb: VA 0x609AE708  RVA 0x609AE708  size 0xC */
-int __fastcall nn_fs_CommitSaveData(nn_fs *v, const char *a2)
+int __fastcall nn_fs_CommitSaveData(struct nn_fs *v, const char *a2)
 {
   return __imp__ZN2nn2fs14CommitSaveDataEPKc(v, a2);
 }
@@ -4842,7 +4842,7 @@ int __fastcall nn_fs_CommitSaveData(nn_fs *v, const char *a2)
  * RVA 0x009AE714   size 0xC   xrefs 0   recovered from main.i64
  * ============================================================================ */
 /* Recovered from main.idb: VA 0x609AE714  RVA 0x609AE714  size 0xC */
-int __fastcall nn_fs_QueryMountRomCacheSize(nn_fs *v, unsigned int *a2)
+int __fastcall nn_fs_QueryMountRomCacheSize(struct nn_fs *v, unsigned int *a2)
 {
   return __imp__ZN2nn2fs22QueryMountRomCacheSizeEPj(v, a2);
 }
@@ -4852,7 +4852,7 @@ int __fastcall nn_fs_QueryMountRomCacheSize(nn_fs *v, unsigned int *a2)
  * RVA 0x009AE720   size 0xC   xrefs 0   recovered from main.i64
  * ============================================================================ */
 /* Recovered from main.idb: VA 0x609AE720  RVA 0x609AE720  size 0xC */
-int __fastcall nn_fs_MountRom(nn_fs *v, const char *a2, void *a3, unsigned int a4)
+int __fastcall nn_fs_MountRom(struct nn_fs *v, const char *a2, void *a3, unsigned int a4)
 {
   return __imp__ZN2nn2fs8MountRomEPKcPvj(v, a2, a3, a4);
 }
@@ -4888,7 +4888,7 @@ int __fastcall nv_InitializeGraphics(nv *v, void *a2, unsigned int a3)
  * ============================================================================ */
 /* Recovered from main.idb: VA 0x609AE744  RVA 0x609AE744  size 0xC */
 int __fastcall nn_mem_StandardAllocator_StandardAllocator(
-        nn_mem_StandardAllocator *v,
+        struct nn_mem_StandardAllocator *v,
         void *a2,
         unsigned int a3)
 {
@@ -4915,7 +4915,7 @@ int __fastcall nv_SetGraphicsDevtoolsAllocator(
  * RVA 0x009AE75C   size 0xC   xrefs 0   recovered from main.i64
  * ============================================================================ */
 /* Recovered from main.idb: VA 0x609AE75C  RVA 0x609AE75C  size 0xC */
-int __fastcall nn_vi_Initialize(nn_vi *v)
+int __fastcall nn_vi_Initialize(struct nn_vi *v)
 {
   return __imp__ZN2nn2vi10InitializeEv(v);
 }
@@ -4925,7 +4925,7 @@ int __fastcall nn_vi_Initialize(nn_vi *v)
  * RVA 0x009AE768   size 0xC   xrefs 0   recovered from main.i64
  * ============================================================================ */
 /* Recovered from main.idb: VA 0x609AE768  RVA 0x609AE768  size 0xC */
-int __fastcall nn_vi_OpenDefaultDisplay(nn_vi *v, Display **a2)
+int __fastcall nn_vi_OpenDefaultDisplay(struct nn_vi *v, Display **a2)
 {
   return __imp__ZN2nn2vi18OpenDefaultDisplayEPPNS0_7DisplayE(v, a2);
 }
@@ -5145,7 +5145,7 @@ int nn_os_GetThreadPriority()
  * RVA 0x009AE87C   size 0xC   xrefs 0   recovered from main.i64
  * ============================================================================ */
 /* Recovered from main.idb: VA 0x609AE87C  RVA 0x609AE87C  size 0xC */
-int __fastcall nn_os_GetCurrentStackInfo(nn_os *v, unsigned int *a2, unsigned int *a3)
+int __fastcall nn_os_GetCurrentStackInfo(struct nn_os *v, unsigned int *a2, unsigned int *a3)
 {
   return __imp__ZN2nn2os19GetCurrentStackInfoEPjS1_(v, a2, a3);
 }
@@ -5155,7 +5155,7 @@ int __fastcall nn_os_GetCurrentStackInfo(nn_os *v, unsigned int *a2, unsigned in
  * RVA 0x009AE888   size 0xC   xrefs 0   recovered from main.i64
  * ============================================================================ */
 /* Recovered from main.idb: VA 0x609AE888  RVA 0x609AE888  size 0xC */
-int __fastcall nn_os_GetThreadAvailableCoreMask(nn_os *v)
+int __fastcall nn_os_GetThreadAvailableCoreMask(struct nn_os *v)
 {
   return __imp__ZN2nn2os26GetThreadAvailableCoreMaskEv(v);
 }
@@ -5165,7 +5165,7 @@ int __fastcall nn_os_GetThreadAvailableCoreMask(nn_os *v)
  * RVA 0x009AE894   size 0xC   xrefs 0   recovered from main.i64
  * ============================================================================ */
 /* Recovered from main.idb: VA 0x609AE894  RVA 0x609AE894  size 0xC */
-int __fastcall nn_os_YieldThread(nn_os *v)
+int __fastcall nn_os_YieldThread(struct nn_os *v)
 {
   return __imp__ZN2nn2os11YieldThreadEv(v);
 }
@@ -5185,7 +5185,7 @@ int nn_os_ChangeThreadPriority()
  * RVA 0x009AE8AC   size 0xC   xrefs 0   recovered from main.i64
  * ============================================================================ */
 /* Recovered from main.idb: VA 0x609AE8AC  RVA 0x609AE8AC  size 0xC */
-int __fastcall nn_os_GetCurrentThread(nn_os *v)
+int __fastcall nn_os_GetCurrentThread(struct nn_os *v)
 {
   return __imp__ZN2nn2os16GetCurrentThreadEv(v);
 }
@@ -5215,7 +5215,7 @@ int nn_os_FreeTlsSlot()
  * RVA 0x009AE8D0   size 0xC   xrefs 0   recovered from main.i64
  * ============================================================================ */
 /* Recovered from main.idb: VA 0x609AE8D0  RVA 0x609AE8D0  size 0xC */
-int __fastcall nn_time_IsInitialized(nn_time *v)
+int __fastcall nn_time_IsInitialized(struct nn_time *v)
 {
   return __imp__ZN2nn4time13IsInitializedEv(v);
 }
@@ -5225,7 +5225,7 @@ int __fastcall nn_time_IsInitialized(nn_time *v)
  * RVA 0x009AE8DC   size 0xC   xrefs 0   recovered from main.i64
  * ============================================================================ */
 /* Recovered from main.idb: VA 0x609AE8DC  RVA 0x609AE8DC  size 0xC */
-int __fastcall nn_time_Initialize(nn_time *v)
+int __fastcall nn_time_Initialize(struct nn_time *v)
 {
   return __imp__ZN2nn4time10InitializeEv(v);
 }
@@ -5255,7 +5255,7 @@ int nn_time_ToCalendarTime()
  * RVA 0x009AE900   size 0xC   xrefs 0   recovered from main.i64
  * ============================================================================ */
 /* Recovered from main.idb: VA 0x609AE900  RVA 0x609AE900  size 0xC */
-int __fastcall nn_os_GetSystemTickFrequency(nn_os *v)
+int __fastcall nn_os_GetSystemTickFrequency(struct nn_os *v)
 {
   return __imp__ZN2nn2os22GetSystemTickFrequencyEv(v);
 }
@@ -5315,7 +5315,7 @@ float expf(float x)
  * RVA 0x009AE948   size 0xC   xrefs 0   recovered from main.i64
  * ============================================================================ */
 /* Recovered from main.idb: VA 0x609AE948  RVA 0x609AE948  size 0xC */
-int __fastcall nn_fontll_ScalableFontEngine_CheckGlyphExist(nn_fontll_ScalableFontEngine *v, unsigned int a2)
+int __fastcall nn_fontll_ScalableFontEngine_CheckGlyphExist(struct nn_fontll_ScalableFontEngine *v, unsigned int a2)
 {
   return __imp__ZN2nn6fontll18ScalableFontEngine15CheckGlyphExistEj(v, a2);
 }
@@ -5325,7 +5325,7 @@ int __fastcall nn_fontll_ScalableFontEngine_CheckGlyphExist(nn_fontll_ScalableFo
  * RVA 0x009AE954   size 0xC   xrefs 0   recovered from main.i64
  * ============================================================================ */
 /* Recovered from main.idb: VA 0x609AE954  RVA 0x609AE954  size 0xC */
-int __fastcall nn_fontll_ScalableFontEngine_SetFont(nn_fontll_ScalableFontEngine *v, char *a2)
+int __fastcall nn_fontll_ScalableFontEngine_SetFont(struct nn_fontll_ScalableFontEngine *v, char *a2)
 {
   return __imp__ZN2nn6fontll18ScalableFontEngine7SetFontEPc(v, a2);
 }
@@ -5335,7 +5335,7 @@ int __fastcall nn_fontll_ScalableFontEngine_SetFont(nn_fontll_ScalableFontEngine
  * RVA 0x009AE960   size 0xC   xrefs 0   recovered from main.i64
  * ============================================================================ */
 /* Recovered from main.idb: VA 0x609AE960  RVA 0x609AE960  size 0xC */
-int __fastcall nn_fontll_ScalableFontEngine_GetError(nn_fontll_ScalableFontEngine *v)
+int __fastcall nn_fontll_ScalableFontEngine_GetError(struct nn_fontll_ScalableFontEngine *v)
 {
   return __imp__ZN2nn6fontll18ScalableFontEngine8GetErrorEv(v);
 }
@@ -5345,7 +5345,7 @@ int __fastcall nn_fontll_ScalableFontEngine_GetError(nn_fontll_ScalableFontEngin
  * RVA 0x009AE96C   size 0xC   xrefs 0   recovered from main.i64
  * ============================================================================ */
 /* Recovered from main.idb: VA 0x609AE96C  RVA 0x609AE96C  size 0xC */
-int __fastcall nn_fontll_ScalableFontEngine_SetBoldWeight(nn_fontll_ScalableFontEngine *v, int a2)
+int __fastcall nn_fontll_ScalableFontEngine_SetBoldWeight(struct nn_fontll_ScalableFontEngine *v, int a2)
 {
   return __imp__ZN2nn6fontll18ScalableFontEngine13SetBoldWeightEi(v, a2);
 }
@@ -5356,7 +5356,7 @@ int __fastcall nn_fontll_ScalableFontEngine_SetBoldWeight(nn_fontll_ScalableFont
  * ============================================================================ */
 /* Recovered from main.idb: VA 0x609AE978  RVA 0x609AE978  size 0xC */
 int __fastcall nn_fontll_ScalableFontEngine_SetOutlineWidth(
-        nn_fontll_ScalableFontEngine *v,
+        struct nn_fontll_ScalableFontEngine *v,
         unsigned __int16 a2)
 {
   return __imp__ZN2nn6fontll18ScalableFontEngine15SetOutlineWidthEt(v, a2);

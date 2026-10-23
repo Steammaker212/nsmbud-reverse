@@ -555,7 +555,7 @@ int sub_6085F160();
 int sub_609A6D84();
 int sub_609A75E4();
 int sub_609AB74C();
-sead_IDisposer *__fastcall DarkCloudDemoScene_ctor();
+struct sead_IDisposer *__fastcall DarkCloudDemoScene_ctor();
 signed int CollisionActor_beforeExecute();
 signed int StageActor_beforeDraw();
 signed int StageActor_beforeExecute();
@@ -90029,7 +90029,7 @@ void __fastcall operator_delete_007DAD34(void *a1)
  * RVA 0x007DB2B0   size 0x4   xrefs 0   recovered from main.i64
  * ============================================================================ */
 /* Recovered from main.idb: VA 0x607DB2B0  RVA 0x007DB2B0  size 0x4 */
-int __fastcall sub_607DB2B0(sead_TaskBase *a1)
+int __fastcall sub_607DB2B0(struct sead_TaskBase *a1)
 {
   return sub_60818350(a1);
 }
@@ -90129,7 +90129,7 @@ void nullsub_5489()
  * RVA 0x007DF204   size 0x4   xrefs 0   recovered from main.i64
  * ============================================================================ */
 /* Recovered from main.idb: VA 0x607DF204  RVA 0x007DF204  size 0x4 */
-int __fastcall sub_607DF204(sead_TaskBase *a1)
+int __fastcall sub_607DF204(struct sead_TaskBase *a1)
 {
   return sub_607F5AF8(a1);
 }
@@ -90472,7 +90472,7 @@ int __fastcall ChallengeResultScene_ctor(int a1, int a2)
   *(_DWORD *)(a1 + 468) = 0;
   StateMgr_ctor((StateMgr *)(a1 + 472), (StateExecuter *)(a1 + 456), (StateBase *)&dword_60CC58C4);
   *(_DWORD *)(a1 + 452) = &off_60C2678C;
-  sead_IDisposer_ctor((sead_IDisposer *)(a1 + 488));
+  sead_IDisposer_ctor((struct sead_IDisposer *)(a1 + 488));
   *(_DWORD *)(a1 + 504) = &`vtable for'sead_SafeStringBase<char>;
   *(_DWORD *)(a1 + 508) = &byte_60ABC94D;
   *(_DWORD *)(a1 + 488) = off_60C5E9A4;
@@ -90483,7 +90483,7 @@ int __fastcall ChallengeResultScene_ctor(int a1, int a2)
   *(_DWORD *)(a1 + 532) = 0;
   *(_DWORD *)(a1 + 536) = 0;
   *(_DWORD *)(a1 + 524) = off_60BD8394;
-  sead_IDisposer_ctor((sead_IDisposer *)(a1 + 556));
+  sead_IDisposer_ctor((struct sead_IDisposer *)(a1 + 556));
   *(_DWORD *)(a1 + 572) = &`vtable for'sead_SafeStringBase<char>;
   *(_DWORD *)(a1 + 576) = &byte_60ABC94D;
   *(_DWORD *)(a1 + 556) = off_60C5E9A4;
@@ -90494,7 +90494,7 @@ int __fastcall ChallengeResultScene_ctor(int a1, int a2)
   *(_DWORD *)(a1 + 600) = 0;
   *(_DWORD *)(a1 + 604) = 0;
   *(_DWORD *)(a1 + 592) = off_60BD8394;
-  sead_IDisposer_ctor((sead_IDisposer *)(a1 + 624));
+  sead_IDisposer_ctor((struct sead_IDisposer *)(a1 + 624));
   *(_DWORD *)(a1 + 640) = &`vtable for'sead_SafeStringBase<char>;
   *(_DWORD *)(a1 + 644) = &byte_60ABC94D;
   *(_DWORD *)(a1 + 624) = off_60C5E9A4;
@@ -90533,7 +90533,7 @@ void nullsub_2168()
  * RVA 0x007E1184   size 0x4   xrefs 0   recovered from main.i64
  * ============================================================================ */
 /* Recovered from main.idb: VA 0x607E1184  RVA 0x007E1184  size 0x4 */
-int __fastcall sub_607E1184(sead_TaskBase *a1)
+int __fastcall sub_607E1184(struct sead_TaskBase *a1)
 {
   return sub_607F5AF8(a1);
 }
@@ -90677,7 +90677,7 @@ void nullsub_2171()
  * RVA 0x007E1EE4   size 0x4   xrefs 0   recovered from main.i64
  * ============================================================================ */
 /* Recovered from main.idb: VA 0x607E1EE4  RVA 0x007E1EE4  size 0x4 */
-int __fastcall sub_607E1EE4(sead_TaskBase *a1)
+int __fastcall sub_607E1EE4(struct sead_TaskBase *a1)
 {
   return sub_607F5AF8(a1);
 }
@@ -90937,7 +90937,7 @@ int __fastcall sub_607E3504(int a1)
  * RVA 0x007E3508   size 0x13C   xrefs 0   recovered from main.i64
  * ============================================================================ */
 /* Recovered from main.idb: VA 0x607E3508  RVA 0x007E3508  size 0x13C */
-sead_IDisposer *__fastcall DarkCloudDemoScene_ctor(sead_IDisposer *a1, int a2)
+struct sead_IDisposer *__fastcall DarkCloudDemoScene_ctor(struct sead_IDisposer *a1, int a2)
 {
   CalculateTask3_ctor((int)a1, a2, (int)"DarkCloudDemoScene");
   a1->vtable = (int)off_60C26AE0;
@@ -90992,7 +90992,7 @@ sead_IDisposer *__fastcall DarkCloudDemoScene_ctor(sead_IDisposer *a1, int a2)
  * RVA 0x007E3758   size 0x4   xrefs 0   recovered from main.i64
  * ============================================================================ */
 /* Recovered from main.idb: VA 0x607E3758  RVA 0x007E3758  size 0x4 */
-int __fastcall sub_607E3758(sead_TaskBase *a1)
+int __fastcall sub_607E3758(struct sead_TaskBase *a1)
 {
   return sub_607F5AF8(a1);
 }
@@ -91012,7 +91012,7 @@ void nullsub_2176()
  * RVA 0x007E55D8   size 0x4   xrefs 0   recovered from main.i64
  * ============================================================================ */
 /* Recovered from main.idb: VA 0x607E55D8  RVA 0x007E55D8  size 0x4 */
-int __fastcall sub_607E55D8(sead_TaskBase *a1)
+int __fastcall sub_607E55D8(struct sead_TaskBase *a1)
 {
   return sub_607F5AF8(a1);
 }
@@ -91203,7 +91203,7 @@ int __fastcall GameOverScene_ctor(int a1, int a2)
   *(_DWORD *)(a1 + 208) = 0;
   StateMgr_ctor((StateMgr *)(a1 + 212), (StateExecuter *)(a1 + 196), (StateBase *)&dword_60CC5B5C);
   *(_DWORD *)(a1 + 192) = &off_60C26E24;
-  sead_IDisposer_ctor((sead_IDisposer *)(a1 + 228));
+  sead_IDisposer_ctor((struct sead_IDisposer *)(a1 + 228));
   *(_DWORD *)(a1 + 244) = &`vtable for'sead_SafeStringBase<char>;
   *(_DWORD *)(a1 + 248) = &byte_60ABC94D;
   *(_DWORD *)(a1 + 228) = off_60C5E9A4;
@@ -91234,7 +91234,7 @@ void nullsub_2178()
  * RVA 0x007EC1C8   size 0x4   xrefs 0   recovered from main.i64
  * ============================================================================ */
 /* Recovered from main.idb: VA 0x607EC1C8  RVA 0x007EC1C8  size 0x4 */
-int __fastcall sub_607EC1C8(sead_TaskBase *a1)
+int __fastcall sub_607EC1C8(struct sead_TaskBase *a1)
 {
   return sub_607F5AF8(a1);
 }
@@ -91564,7 +91564,7 @@ void nullsub_2180()
  * RVA 0x007EDD34   size 0x4   xrefs 0   recovered from main.i64
  * ============================================================================ */
 /* Recovered from main.idb: VA 0x607EDD34  RVA 0x007EDD34  size 0x4 */
-int __fastcall sub_607EDD34(sead_TaskBase *a1)
+int __fastcall sub_607EDD34(struct sead_TaskBase *a1)
 {
   return sub_607F5AF8(a1);
 }
@@ -91694,7 +91694,7 @@ void nullsub_5554()
  * RVA 0x007EF61C   size 0x4   xrefs 0   recovered from main.i64
  * ============================================================================ */
 /* Recovered from main.idb: VA 0x607EF61C  RVA 0x007EF61C  size 0x4 */
-int __fastcall sub_607EF61C(sead_TaskBase *a1)
+int __fastcall sub_607EF61C(struct sead_TaskBase *a1)
 {
   return sub_607F5AF8(a1);
 }
@@ -91924,7 +91924,7 @@ void nullsub_5560()
  * RVA 0x007F120C   size 0x4   xrefs 0   recovered from main.i64
  * ============================================================================ */
 /* Recovered from main.idb: VA 0x607F120C  RVA 0x007F120C  size 0x4 */
-int __fastcall sub_607F120C(sead_TaskBase *a1)
+int __fastcall sub_607F120C(struct sead_TaskBase *a1)
 {
   return sub_607F5AF8(a1);
 }
@@ -92104,7 +92104,7 @@ void nullsub_2190()
  * RVA 0x007F1F14   size 0x4   xrefs 0   recovered from main.i64
  * ============================================================================ */
 /* Recovered from main.idb: VA 0x607F1F14  RVA 0x007F1F14  size 0x4 */
-int __fastcall sub_607F1F14(sead_TaskBase *a1)
+int __fastcall sub_607F1F14(struct sead_TaskBase *a1)
 {
   return sub_607F5AF8(a1);
 }
@@ -92804,7 +92804,7 @@ void nullsub_2201()
  * RVA 0x007F4F78   size 0x4   xrefs 0   recovered from main.i64
  * ============================================================================ */
 /* Recovered from main.idb: VA 0x607F4F78  RVA 0x007F4F78  size 0x4 */
-int __fastcall sub_607F4F78(sead_TaskBase *a1)
+int __fastcall sub_607F4F78(struct sead_TaskBase *a1)
 {
   return sub_607F5AF8(a1);
 }
@@ -92884,7 +92884,7 @@ int __fastcall sub_607F5810(int a1)
  * RVA 0x007F5AF8   size 0x4   xrefs 0   recovered from main.i64
  * ============================================================================ */
 /* Recovered from main.idb: VA 0x607F5AF8  RVA 0x007F5AF8  size 0x4 */
-int __fastcall sub_607F5AF8(sead_TaskBase *a1)
+int __fastcall sub_607F5AF8(struct sead_TaskBase *a1)
 {
   return sub_60818350(a1);
 }
@@ -93149,7 +93149,7 @@ void nullsub_2206()
  * RVA 0x007F7DA0   size 0x4   xrefs 0   recovered from main.i64
  * ============================================================================ */
 /* Recovered from main.idb: VA 0x607F7DA0  RVA 0x007F7DA0  size 0x4 */
-int __fastcall sub_607F7DA0(sead_TaskBase *a1)
+int __fastcall sub_607F7DA0(struct sead_TaskBase *a1)
 {
   return sub_607F5AF8(a1);
 }
@@ -93259,7 +93259,7 @@ int __fastcall sub_607F86E4(int a1)
  * RVA 0x007F8A04   size 0x4   xrefs 0   recovered from main.i64
  * ============================================================================ */
 /* Recovered from main.idb: VA 0x607F8A04  RVA 0x007F8A04  size 0x4 */
-int __fastcall sub_607F8A04(sead_TaskBase *a1)
+int __fastcall sub_607F8A04(struct sead_TaskBase *a1)
 {
   return sub_607F5AF8(a1);
 }
@@ -93349,7 +93349,7 @@ void nullsub_2209()
  * RVA 0x007F96DC   size 0x4   xrefs 0   recovered from main.i64
  * ============================================================================ */
 /* Recovered from main.idb: VA 0x607F96DC  RVA 0x007F96DC  size 0x4 */
-int __fastcall sub_607F96DC(sead_TaskBase *a1)
+int __fastcall sub_607F96DC(struct sead_TaskBase *a1)
 {
   return sub_607F5AF8(a1);
 }
@@ -96888,7 +96888,7 @@ void nullsub_2357()
  * RVA 0x009085F4   size 0x4   xrefs 0   recovered from main.i64
  * ============================================================================ */
 /* Recovered from main.idb: VA 0x609085F4  RVA 0x009085F4  size 0x4 */
-int __fastcall nn_os_YieldThread(nn_os *v)
+int __fastcall nn_os_YieldThread(struct nn_os *v)
 {
   return _ZN2nn2os11YieldThreadEv(v);
 }

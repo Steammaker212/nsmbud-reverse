@@ -198823,7 +198823,7 @@ sub_603F8408__LABEL_96:
   bool v36; // nf
   _DWORD *v37; // r0
   int v38; // r7
-  sead_IDisposer *v39; // r10
+  struct sead_IDisposer *v39; // r10
   int *containingHeap; // r9
   bool v41; // zf
   int (__fastcall ***v43)(_DWORD, int *); // [sp+Ch] [bp-304h]
@@ -198836,7 +198836,7 @@ sub_603F8408__LABEL_96:
   const char *v50; // [sp+54h] [bp-2BCh]
   const char *v51; // [sp+80h] [bp-290h]
   int v52; // [sp+84h] [bp-28Ch]
-  sead_IDisposer *v53; // [sp+88h] [bp-288h] BYREF
+  struct sead_IDisposer *v53; // [sp+88h] [bp-288h] BYREF
   int (**v54)(); // [sp+8Ch] [bp-284h] BYREF
   int *v55; // [sp+90h] [bp-280h]
   int v56; // [sp+94h] [bp-27Ch]
@@ -198844,10 +198844,10 @@ sub_603F8408__LABEL_96:
   _DWORD v58[12]; // [sp+D8h] [bp-238h] BYREF
   char v59; // [sp+108h] [bp-208h]
   int v60; // [sp+10Ch] [bp-204h]
-  sead_IDisposer v61; // [sp+110h] [bp-200h] BYREF
+  struct sead_IDisposer v61; // [sp+110h] [bp-200h] BYREF
   int v62; // [sp+120h] [bp-1F0h]
   int v63; // [sp+124h] [bp-1ECh]
-  sead_IDisposer *v64; // [sp+128h] [bp-1E8h]
+  struct sead_IDisposer *v64; // [sp+128h] [bp-1E8h]
   int v65; // [sp+12Ch] [bp-1E4h]
   int (**v66)(); // [sp+130h] [bp-1E0h] BYREF
   int *v67; // [sp+134h] [bp-1DCh]
@@ -199120,7 +199120,7 @@ PlayerStates_loadModelResources_helper_43B8B0__LABEL_93:
               if ( v38 )
               {
                 sub_60439ED4(v38, v43, &v70, 0, heap);
-                v39 = (sead_IDisposer *)__operator_new_al(0x40u, heap, 4);
+                v39 = (struct sead_IDisposer *)__operator_new_al(0x40u, heap, 4);
                 sead_IDisposer_ctor(v39);
                 v39->vtable = (int)off_60BFAA04;
                 v39[1].containingHeap = (int)&v39[1].field_C;

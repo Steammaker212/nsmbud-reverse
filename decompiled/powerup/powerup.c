@@ -7443,8 +7443,8 @@ static inline unsigned int uxtb16(unsigned int x)
 {
   int v1; // r7
   int v2; // r0
-  sead_IDisposer *(__fastcall *v3)(int); // r0
-  sead_IDisposer *(__fastcall *v4)(int); // r1
+  struct sead_IDisposer *(__fastcall *v3)(int); // r0
+  struct sead_IDisposer *(__fastcall *v4)(int); // r1
   bool v5; // zf
   int v6; // r1
   int v7; // r0
@@ -7491,7 +7491,7 @@ static inline unsigned int uxtb16(unsigned int x)
   int v48; // r0
   int v49; // r1
   int (*v50)(); // r0
-  sead_IDisposer *(__fastcall *v51)(int); // r1
+  struct sead_IDisposer *(__fastcall *v51)(int); // r1
   bool v52; // zf
   int v53; // r0
   int v54; // r0
@@ -7519,7 +7519,7 @@ static inline unsigned int uxtb16(unsigned int x)
   *(_DWORD *)(v1 + 76) = v2 - 1;
   if ( v2 > 1 || *(_DWORD *)(dword_60CC62E4 + 84) != 2 )
     goto sub_60459990__LABEL_18;
-  v3 = *(sead_IDisposer *(__fastcall **)(int))(dword_60CC62E4 + 88);
+  v3 = *(struct sead_IDisposer *(__fastcall **)(int))(dword_60CC62E4 + 88);
   if ( v3 == CourseSelectTask_create )
   {
     if ( dword_60C8C188 && *(_BYTE *)(dword_60C8C188 + 3225) )
@@ -7528,7 +7528,7 @@ sub_60459990__LABEL_17:
     sub_600241EC();
     goto sub_60459990__LABEL_18;
   }
-  v4 = (sead_IDisposer *(__fastcall *)(int))sub_600246FC;
+  v4 = (struct sead_IDisposer *(__fastcall *)(int))sub_600246FC;
   v5 = (char *)v3 == (char *)sub_600246FC;
   if ( (char *)v3 != (char *)sub_600246FC )
   {
@@ -7801,7 +7801,7 @@ sub_60459990__LABEL_124:
       v51 = CourseSelectTask_create;
       if ( (char *)v50 != (char *)CourseSelectTask_create )
       {
-        v51 = (sead_IDisposer *(__fastcall *)(int))sub_600246FC;
+        v51 = (struct sead_IDisposer *(__fastcall *)(int))sub_600246FC;
         v52 = v50 == sub_600246FC;
         if ( v50 != sub_600246FC )
         {
@@ -7812,7 +7812,7 @@ sub_60459990__LABEL_124:
           goto sub_60459990__LABEL_150;
         if ( dword_60C99DD4 )
         {
-          v51 = (sead_IDisposer *(__fastcall *)(int))sub_603FB2C8(dword_60C99DD4, v51);
+          v51 = (struct sead_IDisposer *(__fastcall *)(int))sub_603FB2C8(dword_60C99DD4, v51);
           v53 = 1;
           if ( !v51 )
             v53 = sub_6040E438(LevelInfo_instance);

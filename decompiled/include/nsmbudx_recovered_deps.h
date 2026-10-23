@@ -2063,7 +2063,9 @@ typedef void nn_web_ShowWebPageArg;
 typedef void nn_web_WebPageReturnValue;
 typedef void nv;
 typedef void sead_BufferedSafeStringBase;
-typedef void sead_IDisposer;
+/* sead::IDisposer is a real 0x10-byte class (vtable, containingHeap, field_8, field_C in main.i64). It had
+ * been declared `typedef void`, which turns every member access on it into 'not a structure or union'. */
+typedef struct sead_IDisposer { int32_t vtable; int32_t containingHeap; int32_t field_8; int32_t field_C; } sead_IDisposer;
 /* sead::ListNode is a 16-byte intrusive list node. Hex-Rays also reuses this type for SafeString's
  * inline character buffer, which is why bodies write through &v->previous -- the FIRST field, i.e. the
  * start of that buffer. The real two-pointer shape makes both uses valid C. */
