@@ -20,10 +20,10 @@ Enemy *__fastcall sub_606897FC(Enemy *a1, ActorBuildInfo *a2)
   Enemy__ctor(a1, a2);
   FIELD_U32(a1, 0x0) = (int)off_60C17140;
   memset(&a1[1], 0, 161);
-  SolidOnTopCollider_ctor((SolidOnTopCollider *)&a1[1]._._._.rotation.z);
-  a1[1]._._._.rotation.z = (int)SolidOnTopColliderWrapper_vtable;
+  SolidOnTopCollider_ctor((SolidOnTopCollider *)&FIELD_U32(a1 + (1) * 6300, 0xA4));
+  FIELD_U32(a1 + (1) * 6300, 0xA4) = (int)SolidOnTopColliderWrapper_vtable;
   memset(&a1[1]._._._.zoneId, 0, 48);
-  ColliderNode_ctor((ColliderNode *)&a1[1]._._._.field_224);
+  ColliderNode_ctor((ColliderNode *)&FIELD_U32(a1 + (1) * 6300, 0x224));
   a1[1]._._._.field_254.y = 0.0;
   a1[1]._._._.field_254.x = 0.0;
   a1[1]._._._.field_248.z = 0.0;
@@ -44,13 +44,13 @@ Enemy *__fastcall sub_606897FC(Enemy *a1, ActorBuildInfo *a2)
   LODWORD(a1[1]._._._.field_260.x) = v3;
   LODWORD(a1[1]._._._.field_254.z) = v4;
   SolidOnTopCollider_setPointMetaRelated(
-    (SolidOnTopCollider *)&a1[1]._._._.rotation.z,
+    (SolidOnTopCollider *)&FIELD_U32(a1 + (1) * 6300, 0xA4),
     1,
     (int)&a1[1]._._._.zoneId,
-    (int)&a1[1]._._._.field_224,
+    (int)&FIELD_U32(a1 + (1) * 6300, 0x224),
     v5);
-  SolidOnTopCollider_ctor((SolidOnTopCollider *)&a1[1]._._._.field_260.y);
-  LODWORD(a1[1]._._._.field_260.y) = SolidOnTopColliderWrapper_vtable;
+  SolidOnTopCollider_ctor((SolidOnTopCollider *)&FIELD_F32(a1 + (1) * 6300, 0x264));
+  LODWORD(FIELD_F32(a1 + (1) * 6300, 0x264)) = SolidOnTopColliderWrapper_vtable;
   memset(&a1[1]._._.collisionMgr[332], 0, 48);
   ColliderNode_ctor((ColliderNode *)&a1[1]._._.collisionMgr[348]);
   *(_DWORD *)&a1[1]._._.collisionMgr[400] = 0;
@@ -73,7 +73,7 @@ Enemy *__fastcall sub_606897FC(Enemy *a1, ActorBuildInfo *a2)
   *(_DWORD *)&a1[1]._._.collisionMgr[408] = v6;
   *(_DWORD *)&a1[1]._._.collisionMgr[404] = v7;
   SolidOnTopCollider_setPointMetaRelated(
-    (SolidOnTopCollider *)&a1[1]._._._.field_260.y,
+    (SolidOnTopCollider *)&FIELD_F32(a1 + (1) * 6300, 0x264),
     1,
     (int)&a1[1]._._.collisionMgr[332],
     (int)&a1[1]._._.collisionMgr[348],

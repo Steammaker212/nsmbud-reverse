@@ -20,7 +20,7 @@ StateActor *__fastcall sub_606F4044(StateActor *a1, ActorBuildInfo *a2)
   a1[1]._._._.id = 1137122418;
   a1[1]._._._.heap = 0;
   a1[1]._._._.profile = (Profile *)1130364928;
-  a1[1]._._._.field_2C = 0;
+  FIELD_U32(a1 + (1) * 6100, 0x2C) = 0;
   LOWORD(a1[1]._._._.field_30) = 0;
   a1[1]._._._.field_34 = 0;
   LOBYTE(a1[1]._._._.childCount) = 0;
@@ -35,7 +35,7 @@ StateActor *__fastcall sub_606F4044(StateActor *a1, ActorBuildInfo *a2)
   a1[1]._._.aCollider.field_FC = 0;
   a1[1]._._.aCollider.field_F8 = 0;
   a1[1]._._.aCollider.field_F4 = 0;
-  a1[1]._._.aCollider.field_F0 = 0;
+  FIELD_U32(a1 + (1) * 6100, 0x1AC) = 0;
   a1[1]._._.aCollider.field_EC = 0;
   a1[1]._._.aCollider.field_E8 = 0;
   a1[1]._._.aCollider.field_100 = 0x40000000;
@@ -54,7 +54,7 @@ StateActor *__fastcall sub_606F4044(StateActor *a1, ActorBuildInfo *a2)
   a1[1]._._.field_1F8 = 0.0;
   a1[1]._._.field_1F4 = 0.0;
   a1[1]._._.field_1F0 = 0;
-  a1[1]._._.field_1EC = 0.0;
+  FIELD_F32(a1 + (1) * 6100, 0x1EC) = 0.0;
   a1[1]._._.aCollider.field_12C = 0;
   a1[1]._._.field_204 = 2.0;
   LOBYTE(a1[1]._._.field_208) = 0;
@@ -66,7 +66,7 @@ StateActor *__fastcall sub_606F4044(StateActor *a1, ActorBuildInfo *a2)
   a1[1]._._.field_210 = 0.0;
   a1[1]._._.field_20C = 0.0;
   *(_DWORD *)&a1[1]._._.field_228 = 0x40000000;
-  LOBYTE(a1[1]._._.field_22C) = 0;
+  LOBYTE(FIELD_U32(a1 + (1) * 6100, 0x22C)) = 0;
   a1[1]._._.field_248.x = 0.0;
   a1[1]._._.effectOffset.z = 0.0;
   a1[1]._._.effectOffset.y = 0.0;
@@ -76,7 +76,7 @@ StateActor *__fastcall sub_606F4044(StateActor *a1, ActorBuildInfo *a2)
   a1[1]._._.field_230 = 0;
   a1[1]._._.field_248.y = 2.0;
   LOBYTE(a1[1]._._.field_248.z) = 0;
-  a1[1]._._.field_26C = 0;
+  FIELD_U32(a1 + (1) * 6100, 0x26C) = 0;
   a1[1]._._.field_260.z = 0.0;
   a1[1]._._.field_260.y = 0.0;
   a1[1]._._.field_260.x = 0.0;

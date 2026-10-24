@@ -83,8 +83,8 @@ int __fastcall sub_6043EB24(_DWORD *a1, void *a2)
       v8 = (sead_IDisposer *)operator_new_8DE25C(0x2Cu, a2, 4);
       memset(v8, 0, 44);
       sead__CriticalSection__ctor(v8);
-      v8[2].field_8 = 0;
-      v8[2].containingHeap = operator_new_8DE2C8(4 * v7, (int)a2, 4);
+      FIELD_U32(v8 + (2) * 16, 0x8) = 0;
+      FIELD_U32(v8 + (2) * 16, 0x4) = operator_new_8DE2C8(4 * v7, (int)a2, 4);
       FIELD_U32(v6, 184) = v8;
       v57 = operator_new_8DE25C(0x64u, a2, 4);
       sub_60420330(v57);
@@ -99,7 +99,7 @@ int __fastcall sub_6043EB24(_DWORD *a1, void *a2)
         v54 = 1;
         do
         {
-          *(_DWORD *)(v8[2].containingHeap + 4 * v9) = 0;
+          *(_DWORD *)(FIELD_U32(v8 + (2) * 16, 0x4) + 4 * v9) = 0;
           v11 = (_DWORD *)(*v10 + 56 * v9);
           sub_60420468(&s2[24 * v9], (int)v11);
           if ( v9 >= 1 )
@@ -108,7 +108,7 @@ int __fastcall sub_6043EB24(_DWORD *a1, void *a2)
             v13 = 0;
             v14 = 0;
             while ( memcmp(&s2[24 * v9], v12, 0x18u)
-                 || sub_60420704(*(_DWORD *)(v8[2].containingHeap + 4 * v14), v60, (_DWORD *)(*v10 + v13), v11) != 1 )
+                 || sub_60420704(*(_DWORD *)(FIELD_U32(v8 + (2) * 16, 0x4) + 4 * v14), v60, (_DWORD *)(*v10 + v13), v11) != 1 )
             {
               ++v14;
               v13 += 56;
@@ -116,14 +116,14 @@ int __fastcall sub_6043EB24(_DWORD *a1, void *a2)
               if ( v14 >= v9 )
                 goto LABEL_12;
             }
-            *(_DWORD *)(v8[2].containingHeap + 4 * v9) = *(_DWORD *)(v8[2].containingHeap + 4 * v14);
+            *(_DWORD *)(FIELD_U32(v8 + (2) * 16, 0x4) + 4 * v9) = *(_DWORD *)(FIELD_U32(v8 + (2) * 16, 0x4) + 4 * v14);
           }
 LABEL_12:
-          if ( !*(_DWORD *)(v8[2].containingHeap + 4 * v9) )
+          if ( !*(_DWORD *)(FIELD_U32(v8 + (2) * 16, 0x4) + 4 * v9) )
           {
             sub_60420378(v57, v60, (int)v11);
             v56[11] += FIELD_U16(v57, 4) & 0x3FFF;
-            *(_DWORD *)(v8[2].containingHeap + 4 * v9) = v57;
+            *(_DWORD *)(FIELD_U32(v8 + (2) * 16, 0x4) + 4 * v9) = v57;
             v15 = 0;
             v16 = FIELD_U8(v57, 76);
             v17 = v16 == 255;
@@ -259,7 +259,7 @@ LABEL_12:
         operator_delete(v49);
       }
       if ( (v54 & 1) != 0 )
-        v8[2].field_8 |= 1u;
+        FIELD_U32(v8 + (2) * 16, 0x8) |= 1u;
       v4 = v53 + 1;
       v3 = v56[6];
     }

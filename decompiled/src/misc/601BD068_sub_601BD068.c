@@ -14,12 +14,12 @@ int __fastcall sub_601BD068(Actor *a1, int *a2, int a3)
 
   result = Actor__getProfileId(a1);
   if ( result == 856 )
-    return sub_60793F04(*(_DWORD *)(*(&a1[11].childCount + (int)a1[18].field_20.previous) + 4), a2, a3);
+    return sub_60793F04(*(_DWORD *)(*(&FIELD_U32(a1 + (11) * 80, 0x28) + (int)FIELD_U32(a1 + (18) * 80, 0x20)) + 4), a2, a3);
   if ( result == 857 )
   {
-    *a2 = a1[1].vtable;
-    a2[1] = a1[1].heap;
-    result = a1[1].id;
+    *a2 = FIELD_U32(a1 + (1) * 80, 0x0);
+    a2[1] = FIELD_U32(a1 + (1) * 80, 0x4);
+    result = FIELD_U32(a1 + (1) * 80, 0x8);
     a2[2] = result;
   }
   return result;

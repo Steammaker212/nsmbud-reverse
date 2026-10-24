@@ -38,13 +38,13 @@ float __fastcall sub_60234B78(int a1, int a2, int a3, int a4, float32x2_t *a5, i
     sub_60234DE0(a1);
   }
   v20 = sub_602338CC((int *)(a1 + 60), a2, a3, a4, a5, a6, FIELD_U32(a1, 40) != 4, FIELD_U32(a1, 40) == 0);
-  v11 = a5[1].n64_u64[0];
+  v11 = FIELD_U64(a5 + (1) * 8, 0x0)[0];
   v19[0] = (float32x2_t)FIELD_U64(a5, 0x0)[0];
   v19[1].n64_u64[0] = v11;
-  v12 = a5[3].n64_u64[0];
+  v12 = FIELD_U64(a5 + (3) * 8, 0x0)[0];
   v19[2] = a5[2];
   v19[3].n64_u64[0] = v12;
-  v13 = a5[5].n64_u64[0];
+  v13 = FIELD_U64(a5 + (5) * 8, 0x0)[0];
   v19[4] = a5[4];
   v19[5].n64_u64[0] = v13;
   Mtx34_rotateY(v19, (unsigned int *)&v20);

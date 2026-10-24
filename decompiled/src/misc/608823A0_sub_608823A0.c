@@ -56,7 +56,7 @@ __n64 __fastcall sub_608823A0(
          1);
   v10 = vmlaq_lane_f32(
           vmlaq_lane_f32(
-            vmlaq_lane_f32(vmulq_n_f32(v6, a2[1].n64_f32[0]), (float32x4_t)0x40400000C0000000uLL, a4[1], 0),
+            vmlaq_lane_f32(vmulq_n_f32(v6, FIELD_F32(a2 + (1) * 8, 0x0)[0]), (float32x4_t)0x40400000C0000000uLL, a4[1], 0),
             v7,
             a3[1],
             0),

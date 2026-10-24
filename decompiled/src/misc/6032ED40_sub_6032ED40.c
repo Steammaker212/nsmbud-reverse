@@ -38,8 +38,8 @@ int __fastcall sub_6032ED40(int a1)
     v6 += 4 * v7;
   *(_DWORD *)(*(_DWORD *)v6 + 24) = 1065353216;
   EffectData_create(694, v1 - 516, 0, 0);
-  LOBYTE(v1[31].z) = 1;
-  LOBYTE(v1[1].y) = 1;
+  LOBYTE(FIELD_F32(v1 + (31) * 12, 0x8)) = 1;
+  LOBYTE(FIELD_F32(v1 + (1) * 12, 0x4)) = 1;
   v8 = ActiveColliderMgr_instance;
   ActiveColldierMgr_removeFromActiveList(ActiveColliderMgr_instance, (ActiveCollider *)&v1[-510].z);
   ActiveColldierMgr_removeFromCreateList(v8, (ActiveCollider *)&v1[-510].z);

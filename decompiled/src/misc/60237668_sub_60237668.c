@@ -34,10 +34,10 @@ _DWORD *__fastcall sub_60237668(_DWORD *result)
   if ( v2 )
   {
     v3 = result[5];
-    v4 = (float32x2_t *)(v2[18].n128_u32[1] + 16 * v3);
-    v5 = (unsigned __int32 *)(v2[20].n128_u32[2] + 16 * v3);
-    v6 = (unsigned __int32 *)(v2[20].n128_u32[1] + 16 * v3);
-    v7 = (unsigned int *)(v2[20].n128_u32[3] + 16 * v3);
+    v4 = (float32x2_t *)(FIELD_U32(v2 + (18) * 16, 0x0)[1] + 16 * v3);
+    v5 = (unsigned __int32 *)(FIELD_U32(v2 + (20) * 16, 0x0)[2] + 16 * v3);
+    v6 = (unsigned __int32 *)(FIELD_U32(v2 + (20) * 16, 0x0)[1] + 16 * v3);
+    v7 = (unsigned int *)(FIELD_U32(v2 + (20) * 16, 0x0)[3] + 16 * v3);
     if ( *(_BYTE *)(v2[8].n128_u32[2] + 1875) == 2 )
     {
       v8 = v2[37];
@@ -79,7 +79,7 @@ _DWORD *__fastcall sub_60237668(_DWORD *result)
             vmlaq_lane_f32(
               vmlaq_lane_f32(vmulq_lane_f32(v10, (float32x2_t)FIELD_U64(v4, 0x0)[0], 1), v11, (float32x2_t)FIELD_U64(v4, 0x0)[0], 0),
               v9,
-              (float32x2_t)v4[1].n64_u32[0],
+              (float32x2_t)FIELD_U32(v4 + (1) * 8, 0x0)[0],
               0));
     result = (_DWORD *)TileMgr_instance;
     if ( TileMgr_instance )

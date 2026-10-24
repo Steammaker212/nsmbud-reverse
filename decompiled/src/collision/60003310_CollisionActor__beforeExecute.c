@@ -25,7 +25,7 @@ signed int __fastcall CollisionActor__beforeExecute(StageActor *a1)
   v2 = 0;
   if ( StageActor__beforeExecute(a1) == 1 )
   {
-    CollisionMgr_vf18(&a1[1]._.heap);
+    CollisionMgr_vf18(&FIELD_U32(a1 + (1) * 644, 0x4));
     BYTE1(a1[9].aCollider.field_44) = 0;
     p_owner = &a1[9].aCollider.node3.owner;
     a1[9].aCollider.node3.prev = (ActiveColliderNode *)a1[9].aCollider.node3.owner;
@@ -36,8 +36,8 @@ signed int __fastcall CollisionActor__beforeExecute(StageActor *a1)
     {
       if ( (v5 & 0x10100) != 0 )
         BYTE1(a1[9].aCollider.field_44) = 1;
-      *p_owner = a1[4].aCollider.field_CC;
-      *p_next = a1[4].aCollider.field_D0;
+      *p_owner = FIELD_U32(a1 + (4) * 644, 0x188);
+      *p_next = FIELD_U32(a1 + (4) * 644, 0x18C);
     }
     else
     {

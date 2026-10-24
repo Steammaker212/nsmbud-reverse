@@ -14,9 +14,9 @@ void __fastcall sub_6020A794(Actor *a1)
   Actor *v3; // r0
 
   FIELD_U32(a1, 0x0) = (int)off_60BD89DC;
-  a1[5].profile = (Profile *)EffectWrapper_vtable;
-  p_profile = &a1[5].profile;
-  sub_60237560((int)&a1[5].profile);
+  FIELD_U32(a1 + (5) * 80, 0xC) = (Profile *)EffectWrapper_vtable;
+  p_profile = &FIELD_U32(a1 + (5) * 80, 0xC);
+  sub_60237560((int)&FIELD_U32(a1 + (5) * 80, 0xC));
   sead__IDisposer__dtor(p_profile);
   FIELD_U32(a1, 0x0) = (int)off_60BD525C;
   nullsub_691();

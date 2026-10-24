@@ -14,6 +14,6 @@ sead_IDisposer *__fastcall Yoshi_ctor_helper(sead_IDisposer *a1)
 
   result = sub_603E4258(a1);
   FIELD_U32(result, 0x0) = (int)off_60BF8DBC;
-  result[1].field_8 = 0;
+  FIELD_U32(result + (1) * 16, 0x8) = 0;
   return result;
 }

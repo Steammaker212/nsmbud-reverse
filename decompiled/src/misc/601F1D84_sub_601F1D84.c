@@ -12,7 +12,7 @@ void __fastcall sub_601F1D84(StateMgr *a1)
 {
   float v2; // s0
 
-  v2 = sub_608332CC(&a1[5], &a1[37].lastState, 0.2, 3.0, 2.0);
+  v2 = sub_608332CC(&a1[5], &FIELD_U32(a1 + (37) * 16, 0xC), 0.2, 3.0, 2.0);
   if ( v2 <= 0.00000011921 && v2 >= -0.00000011921 )
   {
     ((void (__fastcall *)(StateMgr *))FIELD_U32(a1, 0x0)[4].methodExecuter.owner)(a1);

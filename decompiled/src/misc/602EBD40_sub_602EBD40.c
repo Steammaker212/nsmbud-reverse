@@ -12,8 +12,8 @@ StateMethodExecuter *__fastcall sub_602EBD40(StateMethodExecuter *result)
 {
   if ( (result[44].currentState & 0x10000) != 0 )
   {
-    result[6].currentState = (int)result[46].owner;
-    result[8].owner = (void *)-1103101952;
+    FIELD_U32(result + (6) * 12, 0x8) = (int)FIELD_U32(result + (46) * 12, 0x4);
+    FIELD_U32(result + (8) * 12, 0x4) = (void *)-1103101952;
     return StateMgr__changeState((StateMgr *)&result[507], &stru_60C92684);
   }
   return result;

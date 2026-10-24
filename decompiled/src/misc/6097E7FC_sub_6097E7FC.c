@@ -45,11 +45,11 @@ int __fastcall sub_6097E7FC(float32x4_t *a1, _DWORD *a2, int a3, int a4)
 
   if ( a1[10].n128_u8[11] || (result = a1[10].n128_u8[12]) != 0 )
   {
-    result = a1[4].n128_u8[0];
+    result = FIELD_U32(a1 + (4) * 16, 0x0)[0];
     v8 = (result & 1) == 0;
     if ( (result & 1) != 0 )
     {
-      result = a1[4].n128_u8[1];
+      result = FIELD_U32(a1 + (4) * 16, 0x0)[1];
       v8 = result == 0;
     }
     if ( !v8 )
@@ -91,10 +91,10 @@ int __fastcall sub_6097E7FC(float32x4_t *a1, _DWORD *a2, int a3, int a4)
               (int)v38,
               0.0,
               300.0,
-              a1[3].n128_f32[3] * 0.5,
-              a1[3].n128_f32[3] * -0.5,
-              a1[3].n128_f32[2] * -0.5,
-              a1[3].n128_f32[2] * 0.5);
+              FIELD_F32(a1 + (3) * 16, 0x0)[3] * 0.5,
+              FIELD_F32(a1 + (3) * 16, 0x0)[3] * -0.5,
+              FIELD_F32(a1 + (3) * 16, 0x0)[2] * -0.5,
+              FIELD_F32(a1 + (3) * 16, 0x0)[2] * 0.5);
       v23 = (__int64 *)sub_6090BE54(v22);
       v24 = v23[6];
       v25 = v23[7];

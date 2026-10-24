@@ -15,10 +15,10 @@ sead_IDisposer *__fastcall sub_604ED870(sead_IDisposer *a1)
   FIELD_U32(a1, 0x0) = (int)&off_60BFD7AC;
   result = sub_6047611C(a1, (int)&a1[220], 1);
   FIELD_U32(result, 0x0) = (int)&off_60BFD7AC;
-  result[220].vtable = 0;
-  result[220].containingHeap = (int)&sead__SafeStringBase__vtable;
-  result[220].field_8 = (int)&byte_60B3BA34;
-  result[220].field_C = 0;
-  LOBYTE(result[221].vtable) = 0;
+  FIELD_U32(result + (220) * 16, 0x0) = 0;
+  FIELD_U32(result + (220) * 16, 0x4) = (int)&sead__SafeStringBase__vtable;
+  FIELD_U32(result + (220) * 16, 0x8) = (int)&byte_60B3BA34;
+  FIELD_U32(result + (220) * 16, 0xC) = 0;
+  LOBYTE(FIELD_U32(result + (221) * 16, 0x0)) = 0;
   return result;
 }

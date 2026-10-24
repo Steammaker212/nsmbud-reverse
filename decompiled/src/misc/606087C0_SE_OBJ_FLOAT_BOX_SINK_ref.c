@@ -147,7 +147,7 @@ int __fastcall SE_OBJ_FLOAT_BOX_SINK_ref(int a1, _DWORD *a2)
       }
       FIELD_U32(v8, 0x0) = 0;
       FIELD_U32(v8, 0x4) = 0;
-      v8[1].previous = 0;
+      FIELD_U32(v8 + (1) * 8, 0x0) = 0;
       sead__ListNode__insertFront(&v44, (sead_ListNode *)&FIELD_U32(v8, 0x4));
       ++v45;
       FIELD_U32(v8, 0x0) = *v7;
@@ -220,7 +220,7 @@ int __fastcall SE_OBJ_FLOAT_BOX_SINK_ref(int a1, _DWORD *a2)
                 i = 0;
               FIELD_U32(i, 0x0) = 0;
               FIELD_U32(i, 0x4) = 0;
-              i[1].previous = 0;
+              FIELD_U32(i + (1) * 8, 0x0) = 0;
               sead__ListNode__insertFront(v6, (sead_ListNode *)&FIELD_U32(i, 0x4));
               ++*v42;
               if ( i )

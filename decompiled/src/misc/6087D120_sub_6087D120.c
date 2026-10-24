@@ -265,7 +265,7 @@ _DWORD *__fastcall sub_6087D120(
       v58[1] = v78.val[3].n64_u64[0];
       v59 = (int8x8_t *)(v10 + i - 28);
       FIELD_U64(v59, 0x0)[0] = vtbl4_s8(v77, (int8x8_t)0x1716151413121110LL).n64_u64[0];
-      v59[1].n64_u64[0] = vtbl4_s8(v77, (int8x8_t)0xF0E0D0C0B0A0908LL).n64_u64[0];
+      FIELD_U64(v59 + (1) * 8, 0x0)[0] = vtbl4_s8(v77, (int8x8_t)0xF0E0D0C0B0A0908LL).n64_u64[0];
       *v57 = v78.val[0].n64_u64[0];
       v57[1] = v78.val[1].n64_u32[0];
       if ( !v41 )

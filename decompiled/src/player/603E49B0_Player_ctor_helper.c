@@ -14,10 +14,10 @@ sead_IDisposer *__fastcall Player_ctor_helper(sead_IDisposer *a1, int a2)
 
   result = sub_603E4258(a1);
   FIELD_U32(result, 0x0) = (int)off_60BF8DEC;
-  result[1].field_8 = a2;
-  LOBYTE(result[1].field_C) = 0;
-  BYTE1(result[1].field_C) = 0;
-  BYTE2(result[1].field_C) = 0;
-  result[2].vtable = 0;
+  FIELD_U32(result + (1) * 16, 0x8) = a2;
+  LOBYTE(FIELD_U32(result + (1) * 16, 0xC)) = 0;
+  BYTE1(FIELD_U32(result + (1) * 16, 0xC)) = 0;
+  BYTE2(FIELD_U32(result + (1) * 16, 0xC)) = 0;
+  FIELD_U32(result + (2) * 16, 0x0) = 0;
   return result;
 }

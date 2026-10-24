@@ -89,13 +89,13 @@ sead_ListNode *__fastcall sub_6099F9D0(sead_ListNode *a1, int a2, int a3)
 
   v3 = a1;
   v4 = a3;
-  previous = a1[5].previous;
+  previous = FIELD_U32(a1 + (5) * 8, 0x0);
   v7 = v3 + 3;
   if ( !a3 )
-    v4 = (int)v3[6].previous;
+    v4 = (int)FIELD_U32(v3 + (6) * 8, 0x0);
   if ( previous )
   {
-    v8 = (int)v3[4].previous;
+    v8 = (int)FIELD_U32(v3 + (4) * 8, 0x0);
     if ( v8 < a2 )
     {
       v77 = 0;
@@ -141,7 +141,7 @@ sead_ListNode *__fastcall sub_6099F9D0(sead_ListNode *a1, int a2, int a3)
       }
       v68 = v4;
       v69 = a2;
-      next = v3[3].next;
+      next = FIELD_U32(v3 + (3) * 8, 0x4);
       v74 = v3 + 3;
       v75 = v3;
       if ( next != v7 )
@@ -164,18 +164,18 @@ sead_ListNode *__fastcall sub_6099F9D0(sead_ListNode *a1, int a2, int a3)
             v18 = v72;
             FIELD_U32(v17, 0x0) = (sead_ListNode *)v72;
             FIELD_U32(v17, 0x4) = (sead_ListNode *)((char *)v17 + 12);
-            v17[1].previous = (sead_ListNode *)8;
+            FIELD_U32(v17 + (1) * 8, 0x0) = (sead_ListNode *)8;
             sead__BufferedSafeStringBase__assureTerminationImpl_const((int)v17);
             LOBYTE(FIELD_U32(v17, 0x4)) = 0;
             FIELD_U32(v17, 0x0) = (sead_ListNode *)v71;
-            v17[3].previous = v17 + 4;
-            v17[2].next = (sead_ListNode *)v18;
-            v17[3].next = (sead_ListNode *)128;
-            sead__BufferedSafeStringBase__assureTerminationImpl_const((int)&v17[2].next);
+            FIELD_U32(v17 + (3) * 8, 0x0) = v17 + 4;
+            FIELD_U32(v17 + (2) * 8, 0x4) = (sead_ListNode *)v18;
+            FIELD_U32(v17 + (3) * 8, 0x4) = (sead_ListNode *)128;
+            sead__BufferedSafeStringBase__assureTerminationImpl_const((int)&FIELD_U32(v17 + (2) * 8, 0x4));
             LOBYTE(v17[3].FIELD_U32(previous, 0x0)) = 0;
-            v17[2].next = (sead_ListNode *)v70;
-            v17[20].previous = 0;
-            v17[20].next = 0;
+            FIELD_U32(v17 + (2) * 8, 0x4) = (sead_ListNode *)v70;
+            FIELD_U32(v17 + (20) * 8, 0x0) = 0;
+            FIELD_U32(v17 + (20) * 8, 0x4) = 0;
             sead__ListNode__insertFront(&v76, v17 + 20);
             ++v77;
           }
@@ -207,19 +207,19 @@ sead_ListNode *__fastcall sub_6099F9D0(sead_ListNode *a1, int a2, int a3)
                 break;
               }
             }
-            v24 = v17[1].previous;
+            v24 = FIELD_U32(v17 + (1) * 8, 0x0);
             if ( v22 >= (int)v24 )
               v22 = (signed int)&v24[-1].next + 3;
             qmemcpy(v19, v20, v22);
             *((_BYTE *)&FIELD_U32(v19, 0x0) + v22) = 0;
           }
-          v25 = v17[3].previous;
-          ((void (__fastcall *)(sead_ListNode **))v16[2].next[1].next)(&v16[2].next);
-          v26 = v16[3].previous;
+          v25 = FIELD_U32(v17 + (3) * 8, 0x0);
+          ((void (__fastcall *)(sead_ListNode **))FIELD_U32(v16 + (2) * 8, 0x4)[1].next)(&FIELD_U32(v16 + (2) * 8, 0x4));
+          v26 = FIELD_U32(v16 + (3) * 8, 0x0);
           if ( v25 != v26 )
           {
-            ((void (__fastcall *)(sead_ListNode **))v16[2].next[1].next)(&v16[2].next);
-            v27 = v16[3].previous;
+            ((void (__fastcall *)(sead_ListNode **))FIELD_U32(v16 + (2) * 8, 0x4)[1].next)(&FIELD_U32(v16 + (2) * 8, 0x4));
+            v27 = FIELD_U32(v16 + (3) * 8, 0x0);
             v28 = 0;
             while ( *((_BYTE *)&FIELD_U32(v27, 0x0) + v28) )
             {
@@ -241,7 +241,7 @@ sead_ListNode *__fastcall sub_6099F9D0(sead_ListNode *a1, int a2, int a3)
                 break;
               }
             }
-            v29 = v17[3].next;
+            v29 = FIELD_U32(v17 + (3) * 8, 0x4);
             if ( v28 >= (int)v29 )
               v28 = (signed int)&v29[-1].next + 3;
             qmemcpy(v25, v26, v28);
@@ -253,32 +253,32 @@ sead_ListNode *__fastcall sub_6099F9D0(sead_ListNode *a1, int a2, int a3)
         }
         while ( &next[-20] != v73 );
       }
-      v30 = v3[5].previous;
+      v30 = FIELD_U32(v3 + (5) * 8, 0x0);
       v31 = v74;
       v32 = v69;
       if ( v30 )
       {
-        v33 = v3[3].next;
+        v33 = FIELD_U32(v3 + (3) * 8, 0x4);
         if ( v33 == v74 )
           goto LABEL_50;
         do
         {
           v34 = FIELD_U32(v33, 0x4);
           sead__ListNode__erase(v33);
-          --v3[4].previous;
-          v33[-20].previous = v3[4].next;
+          --FIELD_U32(v3 + (4) * 8, 0x0);
+          v33[-20].previous = FIELD_U32(v3 + (4) * 8, 0x4);
           v35 = v33 - 20;
           v33 = v34;
-          v3[4].next = v35;
+          FIELD_U32(v3 + (4) * 8, 0x4) = v35;
         }
         while ( v34 != v31 );
-        v30 = v3[5].previous;
+        v30 = FIELD_U32(v3 + (5) * 8, 0x0);
         if ( v30 )
 LABEL_50:
           operator_delete_8DE3FC(v30);
-        v3[4].next = 0;
-        v3[5].previous = 0;
-        v3[5].next = 0;
+        FIELD_U32(v3 + (4) * 8, 0x4) = 0;
+        FIELD_U32(v3 + (5) * 8, 0x0) = 0;
+        FIELD_U32(v3 + (5) * 8, 0x4) = 0;
       }
       if ( v32 >= 1 )
       {
@@ -286,7 +286,7 @@ LABEL_50:
         if ( v36 )
         {
           v37 = v32 - 1;
-          v3[4].next = v36;
+          FIELD_U32(v3 + (4) * 8, 0x4) = v36;
           if ( v32 >= 2 )
           {
             v38 = 0;
@@ -311,8 +311,8 @@ LABEL_50:
             }
           }
           v36[21 * v37].previous = 0;
-          v3[5].previous = v36;
-          v3[5].next = (sead_ListNode *)v32;
+          FIELD_U32(v3 + (5) * 8, 0x0) = v36;
+          FIELD_U32(v3 + (5) * 8, 0x4) = (sead_ListNode *)v32;
         }
       }
       v42 = v76.next;
@@ -325,30 +325,30 @@ LABEL_50:
         v70 = &off_60BD95A8;
         do
         {
-          v44 = v3[4].next;
+          v44 = FIELD_U32(v3 + (4) * 8, 0x4);
           v45 = 0;
           if ( v44 )
           {
-            v45 = v3[4].next;
-            v3[4].next = FIELD_U32(v44, 0x0);
+            v45 = FIELD_U32(v3 + (4) * 8, 0x4);
+            FIELD_U32(v3 + (4) * 8, 0x4) = FIELD_U32(v44, 0x0);
           }
           v46 = v72;
           FIELD_U32(v45, 0x0) = (sead_ListNode *)v72;
           FIELD_U32(v45, 0x4) = (sead_ListNode *)((char *)v45 + 12);
-          v45[1].previous = (sead_ListNode *)8;
+          FIELD_U32(v45 + (1) * 8, 0x0) = (sead_ListNode *)8;
           sead__BufferedSafeStringBase__assureTerminationImpl_const((int)v45);
           LOBYTE(FIELD_U32(v45, 0x4)) = 0;
           FIELD_U32(v45, 0x0) = (sead_ListNode *)v71;
-          v45[3].previous = v45 + 4;
-          v45[2].next = (sead_ListNode *)v46;
-          v45[3].next = (sead_ListNode *)128;
-          sead__BufferedSafeStringBase__assureTerminationImpl_const((int)&v45[2].next);
+          FIELD_U32(v45 + (3) * 8, 0x0) = v45 + 4;
+          FIELD_U32(v45 + (2) * 8, 0x4) = (sead_ListNode *)v46;
+          FIELD_U32(v45 + (3) * 8, 0x4) = (sead_ListNode *)128;
+          sead__BufferedSafeStringBase__assureTerminationImpl_const((int)&FIELD_U32(v45 + (2) * 8, 0x4));
           LOBYTE(v45[3].FIELD_U32(previous, 0x0)) = 0;
-          v45[2].next = (sead_ListNode *)v70;
-          v45[20].previous = 0;
-          v45[20].next = 0;
+          FIELD_U32(v45 + (2) * 8, 0x4) = (sead_ListNode *)v70;
+          FIELD_U32(v45 + (20) * 8, 0x0) = 0;
+          FIELD_U32(v45 + (20) * 8, 0x4) = 0;
           sead__ListNode__insertFront(v74, v45 + 20);
-          ++v3[4].previous;
+          ++FIELD_U32(v3 + (4) * 8, 0x0);
           v47 = FIELD_U32(v45, 0x4);
           ((void (__fastcall *)(sead_ListNode *))FIELD_U32(v43, 0x0)[1].next)(v43);
           v48 = FIELD_U32(v43, 0x4);
@@ -377,19 +377,19 @@ LABEL_50:
                 break;
               }
             }
-            v51 = v45[1].previous;
+            v51 = FIELD_U32(v45 + (1) * 8, 0x0);
             if ( v50 >= (int)v51 )
               v50 = (signed int)&v51[-1].next + 3;
             qmemcpy(v47, v48, v50);
             *((_BYTE *)&FIELD_U32(v47, 0x0) + v50) = 0;
           }
-          v52 = v45[3].previous;
-          ((void (__fastcall *)(sead_ListNode **))v43[2].next[1].next)(&v43[2].next);
-          v53 = v43[3].previous;
+          v52 = FIELD_U32(v45 + (3) * 8, 0x0);
+          ((void (__fastcall *)(sead_ListNode **))FIELD_U32(v43 + (2) * 8, 0x4)[1].next)(&FIELD_U32(v43 + (2) * 8, 0x4));
+          v53 = FIELD_U32(v43 + (3) * 8, 0x0);
           if ( v52 != v53 )
           {
-            ((void (__fastcall *)(sead_ListNode **))v43[2].next[1].next)(&v43[2].next);
-            v54 = v43[3].previous;
+            ((void (__fastcall *)(sead_ListNode **))FIELD_U32(v43 + (2) * 8, 0x4)[1].next)(&FIELD_U32(v43 + (2) * 8, 0x4));
+            v54 = FIELD_U32(v43 + (3) * 8, 0x0);
             v55 = 0;
             while ( *((_BYTE *)&FIELD_U32(v54, 0x0) + v55) )
             {
@@ -411,7 +411,7 @@ LABEL_50:
                 break;
               }
             }
-            v56 = v45[3].next;
+            v56 = FIELD_U32(v45 + (3) * 8, 0x4);
             if ( v55 >= (int)v56 )
               v55 = (signed int)&v56[-1].next + 3;
             qmemcpy(v52, v53, v55);
@@ -457,7 +457,7 @@ LABEL_94:
     if ( v61 )
     {
       v62 = a2 - 1;
-      v3[4].next = v61;
+      FIELD_U32(v3 + (4) * 8, 0x4) = v61;
       if ( a2 >= 2 )
       {
         v63 = 0;
@@ -482,8 +482,8 @@ LABEL_94:
         }
       }
       v61[21 * v62].previous = 0;
-      v3[5].previous = v61;
-      v3[5].next = (sead_ListNode *)a2;
+      FIELD_U32(v3 + (5) * 8, 0x0) = v61;
+      FIELD_U32(v3 + (5) * 8, 0x4) = (sead_ListNode *)a2;
     }
   }
   return v7;

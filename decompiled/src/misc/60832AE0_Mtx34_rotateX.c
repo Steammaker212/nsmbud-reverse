@@ -32,10 +32,10 @@ float32x2_t *__fastcall Mtx34_rotateX(float32x2_t *a1, unsigned int *a2)
   int32x2_t v21; // [sp+38h] [bp-40h]
   int32x2_t v22; // [sp+48h] [bp-30h]
 
-  v21.n64_u64[0] = a1[1].n64_u64[0];
-  v2 = a1[5].n64_u32[0];
-  v3 = a1[5].n64_u32[1];
-  v22.n64_u64[0] = a1[3].n64_u64[0];
+  v21.n64_u64[0] = FIELD_U64(a1 + (1) * 8, 0x0)[0];
+  v2 = FIELD_U32(a1 + (5) * 8, 0x0)[0];
+  v3 = FIELD_U32(a1 + (5) * 8, 0x0)[1];
+  v22.n64_u64[0] = FIELD_U64(a1 + (3) * 8, 0x0)[0];
   v4 = *a2;
   v5 = (float *)((char *)sinLutTable + ((v4 >> 20) & 0xFF0));
   LODWORD(v19) = 0;
@@ -52,12 +52,12 @@ float32x2_t *__fastcall Mtx34_rotateX(float32x2_t *a1, unsigned int *a2)
   v11 = vdupq_lane_s32(v22, 1);
   v12 = vextq_s8((int8x16_t)vzipq_s32(v7, v7).val, (int8x16_t)0, 0xCu);
   v13 = vmlaq_lane_f32(
-          vmlaq_lane_f32(vmulq_n_f32((float32x4_t)0x3F800000uLL, a1[2].n64_f32[0]), v9, a1[2], 1),
+          vmlaq_lane_f32(vmulq_n_f32((float32x4_t)0x3F800000uLL, FIELD_F32(a1 + (2) * 8, 0x0)[0]), v9, a1[2], 1),
           v10,
           v22,
           0);
   v14 = vmlaq_lane_f32(
-          vmlaq_lane_f32(vmulq_n_f32((float32x4_t)0x3F800000uLL, a1[4].n64_f32[0]), v9, a1[4], 1),
+          vmlaq_lane_f32(vmulq_n_f32((float32x4_t)0x3F800000uLL, FIELD_F32(a1 + (4) * 8, 0x0)[0]), v9, a1[4], 1),
           v10,
           (float32x2_t)__PAIR64__(v3, v2),
           0);

@@ -81,13 +81,13 @@ signed int __fastcall sub_602E5390(int a1)
     v3 = v3 + 1.0;
     ++v7;
     p_info = v11;
-    LODWORD(v10[1].position.x) = v36.n128_u32[3];
-    v10[1].position.y = v13 + -11.0;
-    v10[1].position.z = v14 - v3;
-    v10[1].scale.x = 0.95;
-    v10[1].scale.y = 0.95;
-    v10[1].scale.z = (float)((float)(v3 * 4.0) / 20.0) + 0.95;
-    v10[1].field_1C = 0;
+    LODWORD(FIELD_F32(v10 + (1) * 32, 0x4)) = v36.n128_u32[3];
+    FIELD_F32(v10 + (1) * 32, 0x8) = v13 + -11.0;
+    FIELD_F32(v10 + (1) * 32, 0xC) = v14 - v3;
+    FIELD_F32(v10 + (1) * 32, 0x10) = 0.95;
+    FIELD_F32(v10 + (1) * 32, 0x14) = 0.95;
+    FIELD_F32(v10 + (1) * 32, 0x18) = (float)((float)(v3 * 4.0) / 20.0) + 0.95;
+    FIELD_U32(v10 + (1) * 32, 0x1C) = 0;
   }
   while ( v7 != 6 );
   v35 = v8;
@@ -130,13 +130,13 @@ signed int __fastcall sub_602E5390(int a1)
     v37 = v31;
     v32 = vaddq_f32(vextq_s8(v30, v30, 4u), v29);
     v38 = v32;
-    LODWORD(v17[7].position.x) = v36.n128_u32[3];
-    v17[7].position.y = v31.n128_f32[3] + -11.5;
-    v17[7].position.z = v32.n128_f32[3] - v3;
-    v17[7].scale.x = 1.15;
-    v17[7].scale.y = 1.15;
-    v17[7].scale.z = (float)((float)(v3 * 4.0) / 20.0) + 2.0;
-    v17[7].field_1C = 0;
+    LODWORD(FIELD_F32(v17 + (7) * 32, 0x4)) = v36.n128_u32[3];
+    FIELD_F32(v17 + (7) * 32, 0x8) = v31.n128_f32[3] + -11.5;
+    FIELD_F32(v17 + (7) * 32, 0xC) = v32.n128_f32[3] - v3;
+    FIELD_F32(v17 + (7) * 32, 0x10) = 1.15;
+    FIELD_F32(v17 + (7) * 32, 0x14) = 1.15;
+    FIELD_F32(v17 + (7) * 32, 0x18) = (float)((float)(v3 * 4.0) / 20.0) + 2.0;
+    FIELD_U32(v17 + (7) * 32, 0x1C) = 0;
   }
   while ( v15 != 2 );
   return EnemyFreezeMgr_freeze((EnemyFreezeMgr *)(v34 + 6152), &info, 9u);

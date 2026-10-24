@@ -51,7 +51,7 @@ int __fastcall sub_60062960(int a1)
   v5 = sub_60421830(v4, Model2, 2, 1, 1, 1, 0);
   j_ModelWrapper_setupModel((int)v5, (int)v2, 0, 0);
   FIELD_U32(a1, 6304) = v4;
-  animations = (unsigned int)v4[1].texAnims.animations;
+  animations = (unsigned int)FIELD_U32(v4 + (1) * 48, 0x14);
   v7 = (int *)FIELD_U32(v4, 0xC);
   v8 = FIELD_U32(a1, 6300);
   if ( FIELD_U32(v4, 0x8) > animations )

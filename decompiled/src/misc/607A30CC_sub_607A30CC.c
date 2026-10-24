@@ -12,11 +12,11 @@ int __fastcall sub_607A30CC(StateMgr *a1)
 {
   int result; // r0
 
-  a1[75].nextState = (StateBase *)((int)a1[75].nextState & ~0x10u);
+  FIELD_U32(a1 + (75) * 16, 0x4) = (StateBase *)((int)FIELD_U32(a1 + (75) * 16, 0x4) & ~0x10u);
   sub_60767080(a1);
   result = 0;
   a1[598].nextState = 0;
-  if ( a1[82].currentMethodExecuter == (StateMethodExecuter *)-1 )
+  if ( FIELD_U32(a1 + (82) * 16, 0x8) == (StateMethodExecuter *)-1 )
   {
     a1[711].lastState = 0;
     return ((int (__fastcall *)(StateMgr *, _DWORD, _DWORD))FIELD_U32(a1, 0x0)[9].vtable)(a1, 0, 0);

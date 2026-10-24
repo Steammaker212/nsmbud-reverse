@@ -17,7 +17,7 @@ StateMethodExecuter *__fastcall sub_60488E40(StateMethodExecuter *result)
   if ( !*(_BYTE *)(result[3979].currentState + 3637) )
   {
     currentState_low = LOBYTE(result[3982].currentState);
-    p_currentState = (StateMgr *)&result[1].currentState;
+    p_currentState = (StateMgr *)&FIELD_U32(result + (1) * 12, 0x8);
     if ( currentState_low )
       v3 = (StateBase *)&unk_60C9F720;
     else

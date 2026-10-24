@@ -72,7 +72,7 @@ LABEL_11:
       v11 = result == 0;
       FIELD_U8(a1, 734) = 0;
       if ( result )
-        v11 = result[13].currentState == 4;
+        v11 = FIELD_U32(result + (13) * 12, 0x8) == 4;
       if ( v11 )
       {
         v12 = FIELD_U32(a1, 716);

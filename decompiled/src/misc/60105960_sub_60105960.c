@@ -17,7 +17,7 @@ StateMethodExecuter *__fastcall sub_60105960(StateMethodExecuter *result)
 
   v1 = result[556].currentState + dword_60C86250;
   result[556].currentState = v1;
-  *(float *)&result[9].vtable = *(float *)&result[9].vtable
+  *(float *)&FIELD_U32(result + (9) * 12, 0x0) = *(float *)&FIELD_U32(result + (9) * 12, 0x0)
                               + (float)((float)(*(float *)((char *)sinLutTable + ((v1 >> 20) & 0xFF0))
                                               + (float)((float)((float)(v1 & 0xFFFFFF)
                                                               * *(float *)((char *)&sinLutTable[1] + ((v1 >> 20) & 0xFF0)))
@@ -25,7 +25,7 @@ StateMethodExecuter *__fastcall sub_60105960(StateMethodExecuter *result)
                                       * 1.5);
   v2 = (unsigned int)result[557].vtable + dword_60C86254;
   result[557].vtable = (void *)v2;
-  result[13].currentState = (int)(float)((float)(int)result[557].owner
+  FIELD_U32(result + (13) * 12, 0x8) = (int)(float)((float)(int)result[557].owner
                                        * (float)(*(float *)((char *)sinLutTable + ((v2 >> 20) & 0xFF0))
                                                + (float)((float)((float)(v2 & 0xFFFFFF)
                                                                * *(float *)((char *)&sinLutTable[1]

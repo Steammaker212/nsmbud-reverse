@@ -52,7 +52,7 @@ signed int __fastcall ShellEnemy__beforeExecute(Enemy *a1)
     if ( v11 == (*((int (**)(void))Enemy_StateId_Frozen._._.vtable + 2))() )
     {
       a1[1]._._._.aCollider.node4.prev = 0;
-      *(double *)&a1[1]._._._.aCollider.node3.owner = ((double (__fastcall *)(ActiveColliderNode **))a1[1]._._._.aCollider.createNode.prev->owner)(&a1[1]._._._.aCollider.createNode.prev);
+      *(double *)&FIELD_U32(a1 + (1) * 6300, 0xE4) = ((double (__fastcall *)(ActiveColliderNode **))a1[1]._._._.aCollider.createNode.prev->owner)(&a1[1]._._._.aCollider.createNode.prev);
       a1[1]._._._.aCollider.node3.prev = v12;
     }
     ActorScaler_execute((ActorScaler *)&a1[1]._._._.aCollider.createNode.prev);

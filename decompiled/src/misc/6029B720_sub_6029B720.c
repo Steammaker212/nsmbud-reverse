@@ -11,6 +11,6 @@
 int __fastcall sub_6029B720(Actor *a1)
 {
   if ( *(_DWORD *)&a1[83].movementId == 1 && FIELD_U8(dword_60CC6D8C, 17) )
-    *(float *)&a1[1].field_20.previous = *(float *)&a1[1].field_20.previous + -64.0;
+    *(float *)&FIELD_U32(a1 + (1) * 80, 0x20) = *(float *)&FIELD_U32(a1 + (1) * 80, 0x20) + -64.0;
   return sub_60299850(a1);
 }

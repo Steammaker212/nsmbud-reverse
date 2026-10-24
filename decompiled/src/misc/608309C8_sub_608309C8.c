@@ -15,7 +15,7 @@ void __fastcall sub_608309C8(Actor *a1)
   FIELD_U32(a1, 0x0) = (int)off_60C2AED0;
   sub_603E4284(&a1[76].settings1);
   FIELD_U32(a1, 0x0) = (int)&CollisionActor__vtable;
-  CollisionMgr_dtor((int)&a1[8].id);
+  CollisionMgr_dtor((int)&FIELD_U32(a1 + (8) * 80, 0x8));
   v2 = StageActor__dtor(a1);
   operator_delete(v2);
 }

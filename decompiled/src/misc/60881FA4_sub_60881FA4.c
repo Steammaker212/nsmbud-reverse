@@ -27,7 +27,7 @@ float32x4_t *__fastcall sub_60881FA4(float32x4_t *result, unsigned __int32 a2)
 
   v2 = result;
   result[2].n128_u32[2] = a2;
-  for ( i = (float32x4_t *)result[20].n128_u32[0]; i; i = (float32x4_t *)i[7].n128_u32[2] )
+  for ( i = (float32x4_t *)FIELD_U32(result + (20) * 16, 0x0)[0]; i; i = (float32x4_t *)i[7].n128_u32[2] )
   {
     result = (float32x4_t *)*(unsigned __int8 *)(*(_DWORD *)(i[21].n128_u32[3] + 12) + 1879);
     if ( result == (float32x4_t *)1 )

@@ -12,8 +12,8 @@ StateMethodExecuter *__fastcall sub_6049B968(StateMethodExecuter *result)
 {
   _BYTE *currentState; // r1
 
-  currentState = (_BYTE *)result[302].currentState;
+  currentState = (_BYTE *)FIELD_U32(result + (302) * 12, 0x8);
   if ( !currentState[2691] && !currentState[2702] && !currentState[2690] )
-    return StateMgr__changeState((StateMgr *)&result[2], (StateBase *)result[3].owner);
+    return StateMgr__changeState((StateMgr *)&result[2], (StateBase *)FIELD_U32(result + (3) * 12, 0x4));
   return result;
 }

@@ -48,7 +48,7 @@ int __fastcall met_pata_ref(int a1)
   j_ModelWrapper_setupModel(v5, v2, 0, 0);
   FIELD_U32(a1, 6104) = v4;
   v6 = (_DWORD *)(a1 + 6104);
-  animations = (unsigned int)v4[1].texAnims.animations;
+  animations = (unsigned int)FIELD_U32(v4 + (1) * 48, 0x14);
   v8 = (int *)FIELD_U32(v4, 0xC);
   if ( FIELD_U32(v4, 0x8) > animations )
     v8 += animations;

@@ -14,6 +14,6 @@ int __fastcall sub_6069C17C(StageActor *a1)
 
   StageActor__cullCheck(a1, 0);
   if ( !v2 )
-    sub_6069E56C(&a1[1]._.heap, a1);
+    sub_6069E56C(&FIELD_U32(a1 + (1) * 644, 0x4), a1);
   return 1;
 }

@@ -27,7 +27,7 @@ StateActor *__fastcall Actor_honeBuzzy_2_build(ActorBuildInfo *a1)
   result[1]._._._.field_20.next = 0;
   result[1]._._._.field_20.previous = 0;
   result[1]._._._.field_30 = 0;
-  result[1]._._._.field_2C = 0;
+  FIELD_U32(result + (1) * 6100, 0x2C) = 0;
   result[1]._._._.childCount = 0;
   result[1]._._._.field_34 = 0;
   result[1]._._._.parent = 0;

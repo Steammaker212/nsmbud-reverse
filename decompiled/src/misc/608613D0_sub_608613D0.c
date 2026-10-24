@@ -23,21 +23,21 @@ int __fastcall sub_608613D0(float32x4_t *a1, _DWORD *a2, int a3, int a4, float32
 
   sub_60858D50(a1, (int)a2, a3, a4, a5);
   (*(void (__fastcall **)(float32x4_t *, _DWORD *))(FIELD_U32(a1, 0x0)[0] + 88))(a1, a2);
-  v8 = a1[4].n128_u8[0];
+  v8 = FIELD_U32(a1 + (4) * 16, 0x0)[0];
   v9 = (v8 & 1) == 0;
   if ( (v8 & 1) != 0 )
-    v9 = a1[4].n128_u8[2] == 0;
+    v9 = FIELD_U32(a1 + (4) * 16, 0x0)[2] == 0;
   if ( v9 )
   {
     if ( FIELD_U8(a3, 23) )
     {
       result = v8 & 0x7F;
-      a1[4].n128_u8[0] = result;
+      FIELD_U32(a1 + (4) * 16, 0x0)[0] = result;
     }
     else
     {
-      result = a1[4].n128_u8[4] & 0xEF;
-      a1[4].n128_u8[4] = result;
+      result = FIELD_U32(a1 + (4) * 16, 0x0)[4] & 0xEF;
+      FIELD_U32(a1 + (4) * 16, 0x0)[4] = result;
     }
   }
   else

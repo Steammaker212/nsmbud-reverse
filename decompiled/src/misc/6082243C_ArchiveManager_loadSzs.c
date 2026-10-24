@@ -87,14 +87,14 @@ LABEL_16:
   v18 = (sead_IDisposer *)operator_new_8DE25C(0x40u, a4, 4);
   sead_IDisposer_ctor(v18);
   FIELD_U32(v18, 0x0) = (int)off_60C2A5C0;
-  v18[1].containingHeap = (int)&v18[1].field_C;
-  v18[1].vtable = (int)&BufferedSafeStringBase_char_vtable_probably;
-  v18[1].field_8 = 32;
+  FIELD_U32(v18 + (1) * 16, 0x4) = (int)&FIELD_U32(v18 + (1) * 16, 0xC);
+  FIELD_U32(v18 + (1) * 16, 0x0) = (int)&BufferedSafeStringBase_char_vtable_probably;
+  FIELD_U32(v18 + (1) * 16, 0x8) = 32;
   sead__BufferedSafeStringBase__assureTerminationImpl_const((int)&v18[1]);
-  *(_BYTE *)v18[1].containingHeap = 0;
-  v18[1].vtable = (int)&off_60BD4C20;
-  v18[3].field_C = (int)v17;
-  containingHeap = (char *)v18[1].containingHeap;
+  *(_BYTE *)FIELD_U32(v18 + (1) * 16, 0x4) = 0;
+  FIELD_U32(v18 + (1) * 16, 0x0) = (int)&off_60BD4C20;
+  FIELD_U32(v18 + (3) * 16, 0xC) = (int)v17;
+  containingHeap = (char *)FIELD_U32(v18 + (1) * 16, 0x4);
   (*((void (__fastcall **)(sead__SafeString *))identifier->vtable + 3))(identifier);
   v20 = identifier->cstr;
   if ( containingHeap != v20 )
@@ -122,7 +122,7 @@ LABEL_16:
         break;
       }
     }
-    v24 = v18[1].field_8;
+    v24 = FIELD_U32(v18 + (1) * 16, 0x8);
     if ( v22 >= v24 )
       v22 = v24 - 1;
     qmemcpy(containingHeap, v20, v22);

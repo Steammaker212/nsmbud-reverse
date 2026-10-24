@@ -14,29 +14,29 @@ sead_IDisposer *__fastcall sub_60237870(sead_IDisposer *a1)
 
   result = sead_IDisposer_ctor(a1);
   FIELD_U32(result, 0x0) = (int)&off_60BD95C0;
-  result[1].vtable = 1065353216;
+  FIELD_U32(result + (1) * 16, 0x0) = 1065353216;
   result[1].containingHeap = 1065353216;
   result[1].field_8 = 1065353216;
   result[1].field_C = 1065353216;
-  result[2].vtable = 1065353216;
+  FIELD_U32(result + (2) * 16, 0x0) = 1065353216;
   result[2].containingHeap = 1065353216;
   result[2].field_8 = 1065353216;
   result[2].field_C = 1065353216;
-  result[3].vtable = 1065353216;
+  FIELD_U32(result + (3) * 16, 0x0) = 1065353216;
   result[3].containingHeap = 1065353216;
   result[3].field_8 = 1065353216;
   result[3].field_C = 1065353216;
-  result[4].vtable = 1065353216;
+  FIELD_U32(result + (4) * 16, 0x0) = 1065353216;
   result[4].containingHeap = 1065353216;
   result[4].field_8 = 1065353216;
   result[4].field_C = 1065353216;
-  result[5].vtable = 1065353216;
-  result[5].containingHeap = 1065353216;
+  FIELD_U32(result + (5) * 16, 0x0) = 1065353216;
+  FIELD_U32(result + (5) * 16, 0x4) = 1065353216;
   result[5].field_8 = 1065353216;
   result[5].field_C = 1065353216;
-  result[6].vtable = 1065353216;
-  result[6].containingHeap = 1065353216;
+  FIELD_U32(result + (6) * 16, 0x0) = 1065353216;
+  FIELD_U32(result + (6) * 16, 0x4) = 1065353216;
   result[6].field_8 = 1065353216;
-  result[6].field_C = 1065353216;
+  FIELD_U32(result + (6) * 16, 0xC) = 1065353216;
   return result;
 }

@@ -28,7 +28,7 @@ StateActor *__fastcall Actor_Peach_Demo_manage_Tag_build(ActorBuildInfo *a1)
   result[1]._._._.field_20.next = (sead_ListNode *)1056964608;
   result[1]._._._.field_34 = 0;
   result[1]._._._.field_30 = 0;
-  result[1]._._._.field_2C = 0;
+  FIELD_U32(result + (1) * 6100, 0x2C) = 0;
   result[1]._._._.childCount = 0;
   BYTE2(result[1]._._.field_64) = 0;
   LOWORD(result[1]._._.field_64) = 0;

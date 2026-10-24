@@ -39,10 +39,10 @@ int __fastcall sub_606A94C0(StageActor *a1)
   v10 = (ModelWrapper *)operator_new_8DE25C(0x30u, 0, 4);
   v11 = ModelWrapper_ctor(v10, Model2, 0, 0, 0, 0, 0);
   ModelWrapper_setup(v11, v8, 0, 0);
-  LODWORD(a1[9].aCollider.trapezoidOffsetTopLeft) = v10;
+  LODWORD(FIELD_F32(a1 + (9) * 644, 0x15C)) = v10;
   ShapedCollider_init((ShapedCollider *)&a1[9].aCollider.trapezoidOffsetBottomLeft, a1, (ShapedColliderInfo *)(v5 + 16));
   a1[10]._.field_30 = (int)&a1[10].aCollider.field_B4;
-  a1[10]._.settigns2 = (int)sub_606A968C;
+  FIELD_U32(a1 + (10) * 644, 0x18) = (int)sub_606A968C;
   a1[10]._.field_20.next = (sead_ListNode *)sub_606A96D8;
   a1[10]._.childCount = (int)sub_606A96F8;
   a1[10]._.field_2C = (int)sub_606A9718;

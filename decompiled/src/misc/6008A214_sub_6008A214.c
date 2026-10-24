@@ -65,7 +65,7 @@ int __fastcall sub_6008A214(Enemy *a1, ActiveCollider *a2, ActiveCollider *a3)
           ActiveCollider_getCenterY(a2);
           if ( v35 > v36 )
           {
-            if ( owner[2]._.field_20.previous == (sead_ListNode *)3 )
+            if ( FIELD_U32(owner + (2) * 644, 0x20) == (sead_ListNode *)3 )
             {
               sub_602A3178(owner, &dword_60CC4B7C);
               (*(void (__fastcall **)(Enemy *))(FIELD_U32(a1, 0x0) + 404))(a1);
@@ -82,7 +82,7 @@ int __fastcall sub_6008A214(Enemy *a1, ActiveCollider *a2, ActiveCollider *a3)
         if ( v37 <= 3 )
         {
           v31 = &FIELD_U32(a1, 0x0) + v37;
-          if ( v31[1579] >= 1 && owner[2]._.field_20.previous == (sead_ListNode *)3 )
+          if ( v31[1579] >= 1 && FIELD_U32(owner + (2) * 644, 0x20) == (sead_ListNode *)3 )
             goto LABEL_27;
         }
       }

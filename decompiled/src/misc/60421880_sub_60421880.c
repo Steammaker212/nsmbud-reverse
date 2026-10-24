@@ -12,18 +12,18 @@ int __fastcall sub_60421880(ModelWrapper *a1)
 {
   void *model; // r5
 
-  if ( LOBYTE(a1[1].texAnims.count) )
+  if ( LOBYTE(FIELD_U32(a1 + (1) * 48, 0x10)) )
   {
     ((void (__fastcall *)(ModelWrapper *))loc_60421C50)(&a1[1]);
     model = FIELD_U32(a1, 0x0);
     (*(void (__fastcall **)(void *, void **, float))(*(_DWORD *)FIELD_U32(a1, 0x0) + 164))(
       FIELD_U32(a1, 0x0),
-      a1[1].texAnims.animations,
-      *(float *)&a1[1].archive);
+      FIELD_U32(a1 + (1) * 48, 0x14),
+      *(float *)&FIELD_U32(a1 + (1) * 48, 0x4));
     (*(void (__fastcall **)(void *, int, float))(*(_DWORD *)model + 164))(
       model,
-      (int)a1[1].texAnims.animations ^ 1,
-      *(float *)&a1[1].model);
+      (int)FIELD_U32(a1 + (1) * 48, 0x14) ^ 1,
+      *(float *)&FIELD_U32(a1 + (1) * 48, 0x0));
   }
   return ModelWrapper_updateModel(a1);
 }

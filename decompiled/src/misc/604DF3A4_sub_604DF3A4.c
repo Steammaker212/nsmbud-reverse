@@ -11,6 +11,6 @@
 StateMethodExecuter *__fastcall sub_604DF3A4(StateMethodExecuter *result)
 {
   if ( !LOBYTE(result[386].vtable) )
-    return StateMgr__changeState((StateMgr *)&result[2], (StateBase *)result[3].owner);
+    return StateMgr__changeState((StateMgr *)&result[2], (StateBase *)FIELD_U32(result + (3) * 12, 0x4));
   return result;
 }

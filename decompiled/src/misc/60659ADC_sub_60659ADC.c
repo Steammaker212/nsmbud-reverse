@@ -21,6 +21,6 @@ Actor *__fastcall sub_60659ADC(Actor *a1)
   sead__IDisposer__dtor(p_settings1);
   SolidOnTopCollider_dtor(p_id);
   FIELD_U32(a1, 0x0) = (int)&CollisionActor__vtable;
-  CollisionMgr_dtor((int)&a1[8].id);
+  CollisionMgr_dtor((int)&FIELD_U32(a1 + (8) * 80, 0x8));
   return StageActor__dtor(a1);
 }

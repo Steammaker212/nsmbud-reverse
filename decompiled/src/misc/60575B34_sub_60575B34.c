@@ -15,7 +15,7 @@ int __fastcall sub_60575B34(ColliderBase *a1)
   (*(void (__fastcall **)(ColliderBase *, int *))(FIELD_U32(a1, 0x0) + 192))(a1, &dword_60CAE31C);
   ((void (__fastcall *)(ColliderBase *, int))loc_6057589C)(a1, 1);
   a1[21].field_E4 = 2;
-  a1[21].owner248Ptr = (Vec3 *)50;
+  FIELD_U32(a1 + (21) * 340, 0x9C) = (Vec3 *)50;
   a1[18].field_138 = (int)sub_605B3700;
   a1[18].field_13C = (int)sub_605B4010;
   a1[18].field_140 = (int)sub_605B4A6C;

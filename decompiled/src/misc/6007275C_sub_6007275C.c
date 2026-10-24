@@ -108,9 +108,9 @@ void __fastcall sub_6007275C(int a1, int a2)
             }
           }
           v34 = *(float **)(a1 + 152);
-          v35 = *(float *)&v3[1].field_20.previous
+          v35 = *(float *)&FIELD_U32(v3 + (1) * 80, 0x20)
               - (float)((float)(v34[1] + FIELD_F32(a1, 176)) + FIELD_F32(a1, 192));
-          v36 = *(float *)&v3[1].movementId - (float)((float)(*v34 + FIELD_F32(a1, 172)) + FIELD_F32(a1, 188));
+          v36 = *(float *)&FIELD_U8(v3 + (1) * 80, 0x1C) - (float)((float)(*v34 + FIELD_F32(a1, 172)) + FIELD_F32(a1, 188));
           v37 = sqrtf((float)(v35 * v35) + (float)(v36 * v36));
           if ( v37 > 0.0 )
           {
@@ -148,7 +148,7 @@ LABEL_19:
         if ( (unsigned int)*p_childCount <= 3 )
         {
           v25 = 0;
-          SE_PLY_CRASH_KOOPA_ref(v3, *(float *)&v3[1].movementId < FIELD_F32(v6, 108));
+          SE_PLY_CRASH_KOOPA_ref(v3, *(float *)&FIELD_U8(v3 + (1) * 80, 0x1C) < FIELD_F32(v6, 108));
           if ( (unsigned int)*p_childCount < 4 )
             v25 = *p_childCount;
           *(_WORD *)(v6 + 2 * v25 + 6140) = 32;

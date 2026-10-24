@@ -32,7 +32,7 @@ StateActor *__fastcall sub_6065E8D4(StateActor *a1, ActorBuildInfo *a2)
   a1[1]._._.aCollider.field_64 = 0x80000;
   a1[1]._._.aCollider.field_68 = 0x800000;
   *(_DWORD *)&a1[1]._._.aCollider.field_6C = 0x400000;
-  LOBYTE(a1[1]._._.aCollider.field_70) = 0;
+  LOBYTE(FIELD_U32(a1 + (1) * 6100, 0x12C)) = 0;
   SolidOnTopCollider_ctor((SolidOnTopCollider *)&a1[1]._._.aCollider.info.distToCenter.y);
   LODWORD(a1[1]._._.aCollider.info.distToCenter.y) = off_60BEE598;
   memset(&a1[1]._.collisionMgr[28], 0, 128);

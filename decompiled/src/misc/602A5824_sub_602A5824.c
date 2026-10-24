@@ -18,7 +18,7 @@ void __fastcall sub_602A5824(Actor *a1)
   sub_603E4284(&a1[77].field_10);
   PlayerLookTarget_vf0(v2);
   FIELD_U32(a1, 0x0) = (int)&CollisionActor__vtable;
-  CollisionMgr_dtor((int)&a1[8].id);
+  CollisionMgr_dtor((int)&FIELD_U32(a1 + (8) * 80, 0x8));
   v3 = StageActor__dtor(a1);
   operator_delete(v3);
 }

@@ -13,13 +13,13 @@ Actor *__fastcall sub_6016BC68(Actor *a1)
   Actor *parent; // r0
 
   FIELD_U32(a1, 0x0) = (int)&off_60BD4C5C;
-  parent = a1[6].parent;
+  parent = FIELD_U32(a1 + (6) * 80, 0x38);
   if ( parent )
   {
     operator_delete(parent);
-    a1[6].parent = 0;
+    FIELD_U32(a1 + (6) * 80, 0x38) = 0;
   }
-  nullsub_113(&a1[4].field_20);
-  nullsub_111(&a1[3].settigns2);
+  nullsub_113(&FIELD_U32(a1 + (4) * 80, 0x20));
+  nullsub_111(&FIELD_U32(a1 + (3) * 80, 0x18));
   return Actor__dtor(a1);
 }

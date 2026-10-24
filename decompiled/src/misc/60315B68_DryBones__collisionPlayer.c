@@ -109,7 +109,7 @@ void __fastcall DryBones__collisionPlayer(int *a1, ActiveCollider *a2, ActiveCol
       v11 = 12;
       if ( (float)(FIELD_F32(v10, 0x70) - FIELD_F32(v10, 0x24C)) > 0.0 )
         v11 = 0;
-      LOBYTE(v10[9].aCollider.field_120) = v11;
+      LOBYTE(FIELD_U32(v10 + (9) * 644, 0x1DC)) = v11;
     }
     v9 = 0;
     v12 = Enemy__processCollision((Enemy *)a1, a2, a3, 0);
@@ -129,7 +129,7 @@ void __fastcall DryBones__collisionPlayer(int *a1, ActiveCollider *a2, ActiveCol
     {
       v9 = 1;
     }
-    LOBYTE(v10[9].aCollider.field_120) = 0;
+    LOBYTE(FIELD_U32(v10 + (9) * 644, 0x1DC)) = 0;
   }
   if ( v9 )
     sub_60315974((int)a1, (int)a2, (int)a3);

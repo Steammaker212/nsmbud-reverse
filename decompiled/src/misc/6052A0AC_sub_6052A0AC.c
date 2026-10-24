@@ -12,12 +12,12 @@ StateMethodExecuter *__fastcall sub_6052A0AC(StateMethodExecuter *result)
 {
   int v1; // r1
 
-  v1 = result[254].currentState - 1;
-  result[254].currentState = v1;
+  v1 = FIELD_U32(result + (254) * 12, 0x8) - 1;
+  FIELD_U32(result + (254) * 12, 0x8) = v1;
   if ( !v1 )
   {
     HIBYTE(result[254].owner) = 0;
-    return StateMgr__changeState((StateMgr *)&result[1].currentState, (StateBase *)&unk_60CAA21C);
+    return StateMgr__changeState((StateMgr *)&FIELD_U32(result + (1) * 12, 0x8), (StateBase *)&unk_60CAA21C);
   }
   return result;
 }

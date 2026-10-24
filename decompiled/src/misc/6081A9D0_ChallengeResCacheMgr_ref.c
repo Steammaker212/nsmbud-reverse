@@ -14,7 +14,7 @@ sead_IDisposer *__fastcall ChallengeResCacheMgr_ref(sead_IDisposer *a1, int a2)
 
   result = CalculateTask2_ctor(a1, a2, (int)"ChallengeResCacheMgr");
   FIELD_U32(result, 0x0) = (int)off_60C2A3A4;
-  LOBYTE(result[12].vtable) = 0;
-  LOBYTE(result[12].field_8) = 0;
+  LOBYTE(FIELD_U32(result + (12) * 16, 0x0)) = 0;
+  LOBYTE(FIELD_U32(result + (12) * 16, 0x8)) = 0;
   return result;
 }

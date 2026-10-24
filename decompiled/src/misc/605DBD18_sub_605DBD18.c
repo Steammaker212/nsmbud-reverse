@@ -19,7 +19,7 @@ bool __fastcall sub_605DBD18(int a1, int a2)
   v4 = v2 == 0;
   if ( v2 )
   {
-    v2 = (Actor *)v2[1].field_40;
+    v2 = (Actor *)FIELD_U32(v2 + (1) * 80, 0x40);
     v4 = v2 == 0;
   }
   if ( !v4 )

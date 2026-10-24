@@ -15,10 +15,10 @@ StateMethodExecuter *__fastcall sub_60404320(StateMethodExecuter *result)
   StateMgr *p_owner; // r2
 
   v1 = dword_60C99E70;
-  if ( result[211].vtable == (void *)2 )
+  if ( FIELD_U32(result + (211) * 12, 0x0) == (void *)2 )
     v1 = -dword_60C99E70;
-  v2 = (int)result[40].vtable + v1;
-  result[40].vtable = (void *)v2;
+  v2 = (int)FIELD_U32(result + (40) * 12, 0x0) + v1;
+  FIELD_U32(result + (40) * 12, 0x0) = (void *)v2;
   if ( v1 < 0 )
   {
     if ( v2 > 0 )
@@ -28,8 +28,8 @@ StateMethodExecuter *__fastcall sub_60404320(StateMethodExecuter *result)
   {
     return result;
   }
-  p_owner = (StateMgr *)&result[3].owner;
-  result[40].vtable = 0;
+  p_owner = (StateMgr *)&FIELD_U32(result + (3) * 12, 0x4);
+  FIELD_U32(result + (40) * 12, 0x0) = 0;
   if ( HIBYTE(result[225].vtable) )
     return StateMgr__changeState(p_owner, (StateBase *)&dword_60C9A01C);
   else

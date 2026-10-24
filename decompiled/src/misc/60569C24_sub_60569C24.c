@@ -20,13 +20,13 @@ signed int __fastcall sub_60569C24(ColliderBase *a1)
 
   a1[21].field_E4 = 0;
   v2 = &a1[21].field_E4;
-  a1[21].owner248Ptr = (Vec3 *)49;
+  FIELD_U32(a1 + (21) * 340, 0x9C) = (Vec3 *)49;
   next = FIELD_U32(a1, 0x10)[0].next;
   v4 = ((unsigned int)next >> 8) & 1;
   a1[20].nodes[3].owner = (ColliderBase *)v4;
   a1[21].field_E8 = ((unsigned int)next >> 12) & 1;
   BYTE2(a1[20].nodes[5].owner) = 1;
-  *(_DWORD *)&a1[21].field_DC = 1096810496;
+  *(_DWORD *)&FIELD_U8(a1 + (21) * 340, 0xDC) = 1096810496;
   a1[21].field_E0 = -1056964608;
   HIBYTE(FIELD_U32(a1, 0x10)[5].prev) = byte_60B0536C[v4];
   ColliderBase_setType(a1 + 18, 7);
@@ -37,14 +37,14 @@ signed int __fastcall sub_60569C24(ColliderBase *a1)
     a1[21].owner56Ptr = 0;
     a1[21].owner57Ptr = 0;
     a1[21].field_E0 = -1040187392;
-    a1[1].owner56Ptr = (char *)1149239296;
-    a1[1].owner57Ptr = (char *)1149239296;
+    FIELD_U32(a1 + (1) * 340, 0xA0) = (char *)1149239296;
+    FIELD_U32(a1 + (1) * 340, 0xA4) = (char *)1149239296;
     a1[1].ownerPlayerIdPtr = (char *)1107296256;
     a1[1].distToCenter.x = 64.0;
     a1[1].distToCenter.y = 512.0;
-    a1[1].field_B4 = 1140850688;
-    a1[1].field_B8 = 1149239296;
-    a1[1].field_BC = 1024.0;
+    FIELD_U32(a1 + (1) * 340, 0xB4) = 1140850688;
+    FIELD_U32(a1 + (1) * 340, 0xB8) = 1149239296;
+    FIELD_F32(a1 + (1) * 340, 0xBC) = 1024.0;
     a1[21].field_8C = 1115684864;
     a1[21].owner = (StageActor *)1115684864;
     sub_605D0024(a1);

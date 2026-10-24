@@ -15,25 +15,25 @@ StateMethodExecuter *__fastcall sub_604046D4(StateMethodExecuter *result)
   float v3; // s4
   float v4; // s0
 
-  result[40].vtable = (char *)result[40].vtable + (unsigned int)result[223].owner;
-  result[36].currentState = 0;
-  v1 = *(float *)&result[37].vtable + *(float *)&result[215].owner;
-  *(float *)&result[37].vtable = v1;
-  v2 = *(float *)&result[214].currentState;
+  FIELD_U32(result + (40) * 12, 0x0) = (char *)FIELD_U32(result + (40) * 12, 0x0) + (unsigned int)FIELD_U32(result + (223) * 12, 0x4);
+  FIELD_U32(result + (36) * 12, 0x8) = 0;
+  v1 = *(float *)&FIELD_U32(result + (37) * 12, 0x0) + *(float *)&result[215].owner;
+  *(float *)&FIELD_U32(result + (37) * 12, 0x0) = v1;
+  v2 = *(float *)&FIELD_U32(result + (214) * 12, 0x8);
   if ( v1 < v2 )
-    *(float *)&result[37].vtable = v2;
-  result[37].owner = 0;
+    *(float *)&FIELD_U32(result + (37) * 12, 0x0) = v2;
+  FIELD_U32(result + (37) * 12, 0x4) = 0;
   if ( v1 < v2 )
     v1 = v2;
-  *(float *)&result[31].currentState = *(float *)&result[31].currentState + 0.0;
-  v3 = *(float *)&result[32].vtable + v1;
-  *(float *)&result[32].vtable = v3;
-  *(float *)&result[32].owner = *(float *)&result[32].owner + 0.0;
+  *(float *)&FIELD_U32(result + (31) * 12, 0x8) = *(float *)&FIELD_U32(result + (31) * 12, 0x8) + 0.0;
+  v3 = *(float *)&FIELD_U32(result + (32) * 12, 0x0) + v1;
+  *(float *)&FIELD_U32(result + (32) * 12, 0x0) = v3;
+  *(float *)&FIELD_U32(result + (32) * 12, 0x4) = *(float *)&FIELD_U32(result + (32) * 12, 0x4) + 0.0;
   v4 = *(float *)&result[213].currentState;
   if ( v3 < v4 )
   {
-    *(float *)&result[32].vtable = v4;
-    return StateMgr__changeState((StateMgr *)&result[3].owner, (StateBase *)&dword_60C99F5C);
+    *(float *)&FIELD_U32(result + (32) * 12, 0x0) = v4;
+    return StateMgr__changeState((StateMgr *)&FIELD_U32(result + (3) * 12, 0x4), (StateBase *)&dword_60C99F5C);
   }
   return result;
 }

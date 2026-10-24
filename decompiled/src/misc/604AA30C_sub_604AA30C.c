@@ -68,8 +68,8 @@ StateMethodExecuter *__fastcall sub_604AA30C(StateMethodExecuter *result)
   }
   else if ( !v4 )
   {
-    LOBYTE(result[4].currentState) = 1;
-    return StateMgr__changeState((StateMgr *)&result[3].owner, &stru_60CA1630);
+    LOBYTE(FIELD_U32(result + (4) * 12, 0x8)) = 1;
+    return StateMgr__changeState((StateMgr *)&FIELD_U32(result + (3) * 12, 0x4), &stru_60CA1630);
   }
   return result;
 }

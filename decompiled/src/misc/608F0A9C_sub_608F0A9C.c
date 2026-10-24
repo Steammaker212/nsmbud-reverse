@@ -45,15 +45,15 @@ LABEL_6:
   {
     while ( 1 )
     {
-      previous = next[1].previous;
-      if ( (int)previous[12].next < FIELD_U32(a3, 100) )
+      previous = FIELD_U32(next + (1) * 8, 0x0);
+      if ( (int)FIELD_U32(previous + (12) * 8, 0x4) < FIELD_U32(a3, 100) )
         break;
       next = FIELD_U32(next, 0x4);
       if ( next == a2 )
         goto LABEL_6;
     }
     v11 = FIELD_U32(a3, 64);
-    a2 = previous[8].previous;
+    a2 = FIELD_U32(previous + (8) * 8, 0x0);
     if ( v11 )
     {
       FIELD_U32(a3, 64) = 0;
@@ -64,6 +64,6 @@ LABEL_6:
     v10 = (sead_ListNode *)((char *)previous + 52);
   }
   sead__ListNode__insertFront(v10, (sead_ListNode *)(a3 + 52));
-  ++a2[1].previous;
+  ++FIELD_U32(a2 + (1) * 8, 0x0);
   return sead__CriticalSection__unlock(v3);
 }

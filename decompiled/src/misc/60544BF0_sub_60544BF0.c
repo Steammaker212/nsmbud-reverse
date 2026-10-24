@@ -23,7 +23,7 @@ StateMethodExecuter *__fastcall sub_60544BF0(StateMethodExecuter *result)
     }
     else if ( !v2 )
     {
-      result[3].owner = &dword_60CAC35C;
+      FIELD_U32(result + (3) * 12, 0x4) = &dword_60CAC35C;
       return StateMgr__changeState((StateMgr *)&result[2], (StateBase *)&dword_60CAC19C);
     }
   }

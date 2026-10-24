@@ -46,7 +46,7 @@ float32x2x2_t *__fastcall sub_6087E070(int8x8x2_t *a1, int a2, float32x2_t *a3)
          vaddq_f32(
            *(float32x4_t *)(a2 + 48),
            vmlaq_lane_f32(
-             vmlaq_lane_f32(vmulq_n_f32(*(float32x4_t *)a2, a3[6].n64_f32[0]), *(float32x4_t *)(a2 + 16), a3[6], 1),
+             vmlaq_lane_f32(vmulq_n_f32(*(float32x4_t *)a2, FIELD_F32(a3 + (6) * 8, 0x0)[0]), *(float32x4_t *)(a2 + 16), a3[6], 1),
              v40,
              a3[7],
              0)),
@@ -54,7 +54,7 @@ float32x2x2_t *__fastcall sub_6087E070(int8x8x2_t *a1, int a2, float32x2_t *a3)
   v5 = vmulq_f32(v4, v4);
   v6 = (int8x8x2_t)vmlaq_lane_f32(
                      vmlaq_lane_f32(
-                       vmulq_n_f32(*(float32x4_t *)a2, a3[2].n64_f32[0]),
+                       vmulq_n_f32(*(float32x4_t *)a2, FIELD_F32(a3 + (2) * 8, 0x0)[0]),
                        *(float32x4_t *)(a2 + 16),
                        a3[2],
                        1),

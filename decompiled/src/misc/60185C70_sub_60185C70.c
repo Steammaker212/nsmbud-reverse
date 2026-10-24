@@ -14,16 +14,16 @@ Actor *__fastcall sub_60185C70(Actor *a1, unsigned __int8 *a2)
 
   result = sub_60168634(a1, (int)a2);
   FIELD_U32(result, 0x0) = (int)off_60BD5200;
-  result[2].field_3C = 1065353216;
-  result[2].field_40 = 1065353216;
-  result[2].field_44 = 1065353216;
-  result[2].field_48 = 0;
-  result[2].field_4C = 0;
-  result[3].vtable = a2[34];
-  result[3].heap = a2[32];
-  result[3].id = a2[36];
-  result[3].profile = (Profile *)a2[33];
-  *(_DWORD *)&result[3].field_10 = 0;
-  LOBYTE(result[3].settings1) = 0;
+  FIELD_U32(result + (2) * 80, 0x3C) = 1065353216;
+  FIELD_U32(result + (2) * 80, 0x40) = 1065353216;
+  FIELD_U32(result + (2) * 80, 0x44) = 1065353216;
+  FIELD_U32(result + (2) * 80, 0x48) = 0;
+  FIELD_U32(result + (2) * 80, 0x4C) = 0;
+  FIELD_U32(result + (3) * 80, 0x0) = a2[34];
+  FIELD_U32(result + (3) * 80, 0x4) = a2[32];
+  FIELD_U32(result + (3) * 80, 0x8) = a2[36];
+  FIELD_U32(result + (3) * 80, 0xC) = (Profile *)a2[33];
+  *(_DWORD *)&FIELD_U8(result + (3) * 80, 0x10) = 0;
+  LOBYTE(FIELD_U32(result + (3) * 80, 0x14)) = 0;
   return result;
 }

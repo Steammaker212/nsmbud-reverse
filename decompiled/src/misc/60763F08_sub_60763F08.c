@@ -27,8 +27,8 @@ bool __fastcall sub_60763F08(StageActor *a1)
   int v16; // r1
   int v17; // r2
 
-  p_childCount = (int)&a1[2]._.childCount;
-  if ( sub_60001B14(a1, (int)&a1[2]._.childCount) != 1 || sub_600020C4((int)a1, p_childCount) )
+  p_childCount = (int)&FIELD_U32(a1 + (2) * 644, 0x28);
+  if ( sub_60001B14(a1, (int)&FIELD_U32(a1 + (2) * 644, 0x28)) != 1 || sub_600020C4((int)a1, p_childCount) )
     return 0;
   v3 = sub_6014B69C(p_childCount);
   v4 = v3 == 0;

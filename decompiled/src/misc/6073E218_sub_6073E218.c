@@ -10,7 +10,7 @@
 
 StateMethodExecuter *__fastcall sub_6073E218(StateMethodExecuter *result)
 {
-  if ( !HIWORD(result[669].currentState) && ((int)result[239].owner & 1) != 0 )
+  if ( !HIWORD(result[669].currentState) && ((int)FIELD_U32(result + (239) * 12, 0x4) & 1) != 0 )
     return sub_605D79D0((int)result, (StateBase *)&dword_60CBE088, 0);
   return result;
 }

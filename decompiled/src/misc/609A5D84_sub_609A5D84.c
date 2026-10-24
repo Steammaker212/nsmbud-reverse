@@ -62,11 +62,11 @@ sead_ListNode *__fastcall sub_609A5D84(sead_ListNode *a1, int a2, int a3)
 
   previous = a3;
   if ( !a3 )
-    previous = (int)a1[17].previous;
+    previous = (int)FIELD_U32(a1 + (17) * 8, 0x0);
   v50 = a1 + 14;
-  if ( a1[16].previous )
+  if ( FIELD_U32(a1 + (16) * 8, 0x0) )
   {
-    v5 = (signed int)a1[15].previous;
+    v5 = (signed int)FIELD_U32(a1 + (15) * 8, 0x0);
     if ( v5 < a2 )
     {
       v55 = 0;
@@ -112,7 +112,7 @@ sead_ListNode *__fastcall sub_609A5D84(sead_ListNode *a1, int a2, int a3)
         }
       }
       v48 = a1;
-      next = a1[14].next;
+      next = FIELD_U32(a1 + (14) * 8, 0x4);
       if ( next != v50 )
       {
         v14 = next - 3;
@@ -177,12 +177,12 @@ sead_ListNode *__fastcall sub_609A5D84(sead_ListNode *a1, int a2, int a3)
             *((_BYTE *)&FIELD_U32(v16, 0x0) + v19) = 0;
           }
           v22 = (sead_ListNode *)v15[260];
-          ((void (__fastcall *)(sead_ListNode **))v14[1].next[1].next)(&v14[1].next);
-          v23 = v14[2].previous;
+          ((void (__fastcall *)(sead_ListNode **))FIELD_U32(v14 + (1) * 8, 0x4)[1].next)(&FIELD_U32(v14 + (1) * 8, 0x4));
+          v23 = FIELD_U32(v14 + (2) * 8, 0x0);
           if ( v22 != v23 )
           {
-            ((void (__fastcall *)(sead_ListNode **))v14[1].next[1].next)(&v14[1].next);
-            v24 = v14[2].previous;
+            ((void (__fastcall *)(sead_ListNode **))FIELD_U32(v14 + (1) * 8, 0x4)[1].next)(&FIELD_U32(v14 + (1) * 8, 0x4));
+            v24 = FIELD_U32(v14 + (2) * 8, 0x0);
             v25 = 0;
             while ( *((_BYTE *)&FIELD_U32(v24, 0x0) + v25) )
             {
@@ -222,7 +222,7 @@ sead_ListNode *__fastcall sub_609A5D84(sead_ListNode *a1, int a2, int a3)
         if ( v27 )
         {
           v28 = a2 - 1;
-          v48[15].next = v27;
+          FIELD_U32(v48 + (15) * 8, 0x4) = v27;
           if ( a2 >= 2 )
           {
             v29 = 0;
@@ -246,33 +246,33 @@ sead_ListNode *__fastcall sub_609A5D84(sead_ListNode *a1, int a2, int a3)
             }
           }
           v27[4 * v28].previous = 0;
-          v48[16].previous = v27;
-          v48[16].next = (sead_ListNode *)a2;
+          FIELD_U32(v48 + (16) * 8, 0x0) = v27;
+          FIELD_U32(v48 + (16) * 8, 0x4) = (sead_ListNode *)a2;
         }
       }
       v32 = v53;
       if ( v51 )
       {
         v33 = 4 * v51;
-        v34 = (int)v48[15].previous;
+        v34 = (int)FIELD_U32(v48 + (15) * 8, 0x0);
         do
         {
-          if ( v34 < (int)v48[16].next )
+          if ( v34 < (int)FIELD_U32(v48 + (16) * 8, 0x4) )
           {
-            v35 = v48[15].next;
+            v35 = FIELD_U32(v48 + (15) * 8, 0x4);
             v36 = *v32;
             if ( v35 )
-              v48[15].next = FIELD_U32(v35, 0x0);
+              FIELD_U32(v48 + (15) * 8, 0x4) = FIELD_U32(v35, 0x0);
             else
               v35 = 0;
             sub_6097114C(v35, previous, v36, 4);
-            sub_6097114C(&v35[1].next, previous, v36 + 259, 4);
-            v35[3].previous = 0;
+            sub_6097114C(&FIELD_U32(v35 + (1) * 8, 0x4), previous, v36 + 259, 4);
+            FIELD_U32(v35 + (3) * 8, 0x0) = 0;
             v37 = v35 + 3;
             FIELD_U32(v37, 0x4) = 0;
             sead__ListNode__insertFront(v50, v37);
             v34 = (int)&v48[15].FIELD_U32(previous, 0x0) + 1;
-            v48[15].previous = (sead_ListNode *)v34;
+            FIELD_U32(v48 + (15) * 8, 0x0) = (sead_ListNode *)v34;
           }
           v33 -= 4;
           ++v32;
@@ -316,7 +316,7 @@ sead_ListNode *__fastcall sub_609A5D84(sead_ListNode *a1, int a2, int a3)
     if ( v41 )
     {
       v42 = a2 - 1;
-      a1[15].next = v41;
+      FIELD_U32(a1 + (15) * 8, 0x4) = v41;
       if ( a2 >= 2 )
       {
         v43 = 0;
@@ -340,8 +340,8 @@ sead_ListNode *__fastcall sub_609A5D84(sead_ListNode *a1, int a2, int a3)
         }
       }
       v41[4 * v42].previous = 0;
-      a1[16].previous = v41;
-      a1[16].next = (sead_ListNode *)a2;
+      FIELD_U32(a1 + (16) * 8, 0x0) = v41;
+      FIELD_U32(a1 + (16) * 8, 0x4) = (sead_ListNode *)a2;
     }
   }
   return v50;

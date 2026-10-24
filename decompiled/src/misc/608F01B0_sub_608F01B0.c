@@ -152,7 +152,7 @@ _DWORD *__fastcall sub_608F01B0(int a1, _DWORD *a2)
       do
       {
         v22 = *p_next;
-        previous = next[1].previous[4].previous;
+        previous = FIELD_U32(next + (1) * 8, 0x0)[4].previous;
         if ( previous )
           ((void (__fastcall *)(sead_ListNode *, _DWORD *))FIELD_U32(previous, 0x0))(previous, v5);
         p_next = &FIELD_U32(v22, 0x4);
@@ -167,18 +167,18 @@ _DWORD *__fastcall sub_608F01B0(int a1, _DWORD *a2)
       v25 = next;
       do
       {
-        v26 = next[1].previous;
+        v26 = FIELD_U32(next + (1) * 8, 0x0);
         v25 = FIELD_U32(v25, 0x4);
-        if ( LOBYTE(v26[7].previous) )
+        if ( LOBYTE(FIELD_U32(v26 + (7) * 8, 0x0)) )
         {
-          v27 = v26[3].next;
+          v27 = FIELD_U32(v26 + (3) * 8, 0x4);
           if ( v27 )
           {
-            v26[3].next = 0;
-            sead__ListNode__erase(&v26[2].previous);
-            --v27[1].previous;
+            FIELD_U32(v26 + (3) * 8, 0x4) = 0;
+            sead__ListNode__erase(&FIELD_U32(v26 + (2) * 8, 0x0));
+            --FIELD_U32(v27 + (1) * 8, 0x0);
           }
-          LOBYTE(v26[7].previous) = 0;
+          LOBYTE(FIELD_U32(v26 + (7) * 8, 0x0)) = 0;
         }
         next = v25;
       }

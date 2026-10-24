@@ -21,9 +21,9 @@ StateMethodExecuter *__fastcall sub_601F466C(StateMgr *a1)
     v3[1] = -1;
     v4 = -1;
     sub_601FA238(dword_60C8BF58, v3, 0x80000, 7);
-    a1[15].currentMethodExecuter = (StateMethodExecuter *)v4;
-    a1[15].executer = (StateExecuter *)7;
-    a1[37].executer = 0;
+    FIELD_U32(a1 + (15) * 16, 0x8) = (StateMethodExecuter *)v4;
+    FIELD_U32(a1 + (15) * 16, 0x0) = (StateExecuter *)7;
+    FIELD_U32(a1 + (37) * 16, 0x0) = 0;
     sub_6019EC34((_DWORD *)(dword_60CC6D78 + 456), v3);
     return StateMgr__changeState(a1 + 18, (StateBase *)&dword_60C8BA6C);
   }

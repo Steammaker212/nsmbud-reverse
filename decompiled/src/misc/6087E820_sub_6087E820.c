@@ -23,7 +23,7 @@ _QWORD *__fastcall sub_6087E820(unsigned __int64 *a1, float32x4_t *a2, float32x2
   __int64 v19; // d5
   unsigned __int64 v20; // d2
 
-  v3.n128_u64[0] = vmlaq_lane_f32(vmlaq_lane_f32(vmulq_n_f32(*a2, a3[2].n64_f32[0]), a2[1], a3[2], 1), a2[2], a3[3], 0).n128_u64[0];
+  v3.n128_u64[0] = vmlaq_lane_f32(vmlaq_lane_f32(vmulq_n_f32(*a2, FIELD_F32(a3 + (2) * 8, 0x0)[0]), a2[1], a3[2], 1), a2[2], a3[3], 0).n128_u64[0];
   v3.n128_u64[1] = 0;
   v4 = vmulq_f32((float32x4_t)v3.n128_u64[0], (float32x4_t)v3.n128_u64[0]);
   v4.n128_u64[0] = vadd_f32(*(float32x2_t *)&v4.n128_i8[8], (float32x2_t)v4.n128_u64[0]).n64_u64[0];

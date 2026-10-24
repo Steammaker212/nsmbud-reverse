@@ -30,43 +30,43 @@ int __fastcall sub_601F3140(StateMgr *a1)
   identifier.vtable = &sead__SafeStringBase__vtable;
   identifier.cstr = "cobShipKoopaJrBoro";
   v3 = (StateBase *)LoadResource(ResourceMgrRelated_instance, &identifier);
-  a1[19].nextState = v3;
+  FIELD_U32(a1 + (19) * 16, 0x4) = v3;
   identifier.vtable = &sead__SafeStringBase__vtable;
   identifier.cstr = "cobShipKoopaJrBoro";
   Model = (void *)Resource_getModel(v3, &identifier, 6, 1, 0, 0, 0, 0, 1, 0);
   v5 = (ModelWrapper *)operator_new_8DE25C(0x30u, 0, 4);
   v6 = ModelWrapper_ctor(v5, Model, 1, 0, 0, 0, 0);
   ModelWrapper_setup(v6, (int)v3, 0, 0);
-  a1[19].executer = (StateExecuter *)v5;
+  FIELD_U32(a1 + (19) * 16, 0x0) = (StateExecuter *)v5;
   (*(void (__fastcall **)(void *, StateMgr *))(*(_DWORD *)FIELD_U32(v5, 0x0) + 68))(FIELD_U32(v5, 0x0), v2);
   identifier.vtable = &sead__SafeStringBase__vtable;
   identifier.cstr = "cobShipKoopaJrJimen";
   v7 = (StateBase *)LoadResource(ResourceMgrRelated_instance, &identifier);
-  a1[19].lastState = v7;
+  FIELD_U32(a1 + (19) * 16, 0xC) = v7;
   identifier.vtable = &sead__SafeStringBase__vtable;
   identifier.cstr = "cs_ship_koopa_jimen";
   v8 = (void *)Resource_getModel(v7, &identifier, 6, 1, 0, 0, 0, 0, 1, 0);
   v9 = (ModelWrapper *)operator_new_8DE25C(0x30u, 0, 4);
   v10 = ModelWrapper_ctor(v9, v8, 1, 0, 0, 0, 0);
   ModelWrapper_setup(v10, (int)v7, 0, 0);
-  a1[19].currentMethodExecuter = (StateMethodExecuter *)v9;
+  FIELD_U32(a1 + (19) * 16, 0x8) = (StateMethodExecuter *)v9;
   v11 = FIELD_U32(v9, 0x0);
   v12 = *(void (__fastcall **)(void *, sead__SafeString *))(*(_DWORD *)FIELD_U32(v9, 0x0) + 68);
   identifier.vtable = 0;
   identifier.cstr = 0;
   v16 = 0;
   v12(v11, &identifier);
-  if ( a1[1].nextState )
+  if ( FIELD_U32(a1 + (1) * 16, 0x4) )
   {
     v13 = (StateBase *)&unk_60C8B990;
   }
   else
   {
-    a1[20].executer = a1[8].executer;
+    FIELD_U32(a1 + (20) * 16, 0x0) = FIELD_U32(a1 + (8) * 16, 0x0);
     v13 = (StateBase *)&dword_60C8B950;
   }
   StateMgr__changeState(a1 + 18, v13);
-  a1[13].nextState = (StateBase *)1140457472;
+  FIELD_U32(a1 + (13) * 16, 0x4) = (StateBase *)1140457472;
   *((_DWORD *)a1[19].FIELD_U32(executer, 0x0) + 9) = 0;
   sub_60427BC8(dword_60C9BBD4, a1[19].FIELD_U32(executer, 0x0), 7, 0);
   sub_60427BC8(dword_60C9BBD4, a1[19].FIELD_U32(currentMethodExecuter, 0x0), 7, 0);

@@ -38,7 +38,7 @@ int __fastcall sub_603ADD84(StateActor *a1)
   Vec2 v27; // [sp+0h] [bp-10h] BYREF
 
   v1 = 1000000000.0;
-  v2 = &a1[1]._._.field_22C;
+  v2 = &FIELD_U32(a1 + (1) * 6100, 0x22C);
   v3 = -1;
   v4 = FIELD_U32(PlayerMgr_instance, 32);
   v5 = v4 == 0;

@@ -89,15 +89,28 @@ and named as mandatory in `hooks/hooks.hks`.
 | Measure | Value | How checked |
 | --- | --- | --- |
 | Functions decompiled | 45,148 units | `measure_compile_failures.py` |
-| Compile clean (`-fsyntax-only`) | 37,789 (83.70%) | same run |
-| **Fail to compile** | **7,359 (16.30%)** | same run, bucketed by cause |
+| Compile clean (`-fsyntax-only`) | 38,916 (86.20%) | same run |
+| **Fail to compile** | **6,232 (13.80%)** | same run, bucketed by cause |
 | Named (not `sub_`) | 9,671 | database |
 
 All three previously published failure counts were wrong: `CORPUS_STATUS.md`
 said 9,339, this file said 9,092, and 7,303 was also in circulation. Measured:
-**7,359**. The bucketing shows 469 units fail on a *single* `member not found`
-error and 907 on a single `conflicting types` error, so those two causes are the
-cheapest mechanical wins.
+**6,232**. That figure was 7,359 before this round; the two buckets that looked
+like cheap wins each turned out to have a single root cause outside their own
+units, and fixing both took the corpus from 83.70% to 86.20% clean.
+
+| bucket | before | after |
+| --- | ---: | ---: |
+| `member not found` | 2,852 | 2,395 |
+| `conflicting types` | 1,136 | 258 |
+| `too few arguments` | 0 | 12 |
+| `too many arguments` | 0 | 1 |
+
+The two arity buckets were at 1,850 and 635 in the intermediate (ungated) attempt
+and are effectively gone now; the 13 that remain were already there.
+
+See `COMPILE_FAILURE_FIXES.md`, `INDEXED_ACCESS_FIX.md` and
+`PROTOTYPE_CONFLICT_FIX.md`.
 
 ## Readability of the decompiled C
 
@@ -159,7 +172,7 @@ sweet-dx rejects `@` there with "Invalid symbol definition at line 1".
 | --- | --- |
 | "117 codedx names differ in kind" | **Wrong. Measured 45.** See `CODEDX_KIND_RECONCILIATION.md` |
 | of those, reconciled | 44 cosmetic, **1 genuinely unresolved** |
-| "9,092 / 7,303 / 9,339 units fail to compile" | **All three wrong. Measured 7,359.** See `COMPILE_FAILURES.md` |
+| "9,092 / 7,303 / 9,339 units fail to compile" | **All three wrong. Measured 6,232.** See `COMPILE_FAILURES.md` |
 | `sub_` functions left unnamed | 37,482, unchanged, deliberately |
 
 The 117 was never a measurement. It reproduces exactly as `414 − 262 − 31 − 4`
@@ -180,9 +193,11 @@ that reproduces it.
 3. **One codedx name pair is genuinely unresolved** (`0x00008A78`, the `const`
    qualifier on `seassureTerminationImpl_`). Not resolvable from disassembly: the
    qualifier is not encoded in the ARM calling convention.
-4. **The arrow-chain collapse is fixed where it could be proven.** 16 units /
-   19 expressions repaired; 37 units / 46 expressions held back because the
-   disassembly does not corroborate the nested shape. See `ARROW_CHAIN_FIX.md`.
-5. **7,359 units still fail to compile.** Two causes account for 469 and 907
-   single-error units respectively and are the cheapest mechanical fixes; see
-   `COMPILE_FAILURES.md` for the full 18-bucket breakdown.
+4. **The arrow-chain collapse is fixed where it could be proven.** 977 units /
+   3,712 expressions repaired across both the pointer-hop and indexed-access
+   forms; 682 units / 3,614 expressions held back (46 for the two-load shape, 3,568
+   for indexed offsets the code does not show). See `ARROW_CHAIN_FIX.md` and
+   `INDEXED_ACCESS_FIX.md`.
+5. **6,232 units still fail to compile** (13.80%). 1,127 were fixed this round
+   with zero regressions; see `COMPILE_FAILURE_FIXES.md` for the two root causes
+   and `COMPILE_FAILURES.md` for the current bucket breakdown.

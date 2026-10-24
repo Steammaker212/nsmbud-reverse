@@ -22,9 +22,9 @@ int __fastcall sub_60470430(Actor *a1)
   v9 = 0;
   if ( sub_60463998(a1, &v9, 1, 0) == 1 )
   {
-    v3 = (unsigned int *)&a1[77].field_30;
-    sub_6046395C((int)a1, a1[77].field_30);
-    v4 = a1[77].field_30;
+    v3 = (unsigned int *)&FIELD_U32(a1 + (77) * 80, 0x30);
+    sub_6046395C((int)a1, FIELD_U32(a1 + (77) * 80, 0x30));
+    v4 = FIELD_U32(a1 + (77) * 80, 0x30);
     v1 = 0;
     if ( v4 >= 4 )
       v4 = 0;

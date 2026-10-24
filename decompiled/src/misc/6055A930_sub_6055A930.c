@@ -12,7 +12,7 @@ StateMethodExecuter *__fastcall sub_6055A930(StateMethodExecuter *result)
 {
   if ( BYTE2(result[336].currentState) )
     return StateMgr__changeState((StateMgr *)&result[2], (StateBase *)&dword_60CADB4C);
-  if ( LOBYTE(result[337].vtable) )
+  if ( LOBYTE(FIELD_U32(result + (337) * 12, 0x0)) )
     return StateMgr__changeState((StateMgr *)&result[2], (StateBase *)&dword_60CADB0C);
   return result;
 }

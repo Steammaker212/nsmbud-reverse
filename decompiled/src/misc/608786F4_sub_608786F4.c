@@ -59,8 +59,8 @@ int *__fastcall sub_608786F4(int *result, int a2, double a3)
         v16.n128_u64[0] = *(_QWORD *)(v7 - 7);
         v16.n128_u64[1] = *((unsigned int *)v7 - 5);
         v11[1] = vmlaq_f32(v11[1], v6, v16);
-        v11[4].n128_u32[0] |= ~*((_DWORD *)v7 - 11);
-        v11[4].n128_f32[1] = v11[4].n128_f32[1] + *(float *)&a3;
+        FIELD_U32(v11 + (4) * 16, 0x0)[0] |= ~*((_DWORD *)v7 - 11);
+        FIELD_F32(v11 + (4) * 16, 0x0)[1] = FIELD_F32(v11 + (4) * 16, 0x0)[1] + *(float *)&a3;
       }
       result = (int *)((char *)result + 1);
       v7 += 12;

@@ -29,7 +29,7 @@ StateMethodExecuter *__fastcall sub_6049D080(StateMethodExecuter *result)
       }
       else
       {
-        result[3].owner = &dword_60CA0FAC;
+        FIELD_U32(result + (3) * 12, 0x4) = &dword_60CA0FAC;
         return StateMgr__changeState((StateMgr *)&result[2], (StateBase *)&dword_60CA0ECC);
       }
     }
@@ -39,7 +39,7 @@ StateMethodExecuter *__fastcall sub_6049D080(StateMethodExecuter *result)
       if ( ((unsigned __int16)vtable & 0x4000) != 0 || (v4 = result[1827].currentState, (v4 & 0x4000) != 0) )
       {
         *p_currentState = 0;
-        result[3].owner = &dword_60CA0FAC;
+        FIELD_U32(result + (3) * 12, 0x4) = &dword_60CA0FAC;
         return StateMgr__changeState((StateMgr *)&result[2], (StateBase *)&dword_60CA0EAC);
       }
       else
@@ -57,7 +57,7 @@ StateMethodExecuter *__fastcall sub_6049D080(StateMethodExecuter *result)
         }
         else if ( (v5 & 0x2000) != 0 )
         {
-          result[3].owner = &dword_60CA0C6C;
+          FIELD_U32(result + (3) * 12, 0x4) = &dword_60CA0C6C;
           return StateMgr__changeState((StateMgr *)&result[2], (StateBase *)&dword_60CA0C4C);
         }
       }

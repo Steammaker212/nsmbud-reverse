@@ -16,7 +16,7 @@ StateMethodExecuter *__fastcall sub_603FBB70(int a1, void *a2)
   if ( result )
   {
     result[5].owner = a2;
-    result[4].owner = (void *)1;
+    FIELD_U32(result + (4) * 12, 0x4) = (void *)1;
     return StateMgr__changeState((StateMgr *)&result[2], &stru_60CAA520);
   }
   return result;

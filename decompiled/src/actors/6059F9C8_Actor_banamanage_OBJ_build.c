@@ -17,11 +17,11 @@ StageActor *__fastcall Actor_banamanage_OBJ_build(ActorBuildInfo *a1)
   v2 = (StageActor *)operator_new(0x298u);
   result = StageActor__ctor(v2, a1);
   FIELD_U32(result, 0x0) = (int)off_60C07D1C;
-  result[1]._.vtable = 0;
+  FIELD_U32(result + (1) * 644, 0x0) = 0;
   settings1 = FIELD_U32(result, 0x14);
-  result[1]._.heap = HIBYTE(settings1) & 0xF;
-  result[1]._.id = ((settings1 >> 4) & 7) + 1;
-  result[1]._.profile = (Profile *)BYTE1(settings1);
-  *(_DWORD *)&result[1]._.field_10 = BYTE2(settings1);
+  FIELD_U32(result + (1) * 644, 0x4) = HIBYTE(settings1) & 0xF;
+  FIELD_U32(result + (1) * 644, 0x8) = ((settings1 >> 4) & 7) + 1;
+  FIELD_U32(result + (1) * 644, 0xC) = (Profile *)BYTE1(settings1);
+  *(_DWORD *)&FIELD_U8(result + (1) * 644, 0x10) = BYTE2(settings1);
   return result;
 }

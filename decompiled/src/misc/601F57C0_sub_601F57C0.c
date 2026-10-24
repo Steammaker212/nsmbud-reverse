@@ -10,7 +10,7 @@
 
 StateMethodExecuter *__fastcall sub_601F57C0(StateMgr *a1)
 {
-  if ( a1[15].executer == (StateExecuter *)4 )
+  if ( FIELD_U32(a1 + (15) * 16, 0x0) == (StateExecuter *)4 )
     ((void (__fastcall *)(StateMgr *, _DWORD))FIELD_U32(a1, 0x0)[20].vtable)(a1, 0);
   else
     sub_601F74B4(a1);

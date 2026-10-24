@@ -43,7 +43,7 @@ int __fastcall obj_peach_question_ref(int a1)
   j_ModelWrapper_setupModel((int)v6, (int)v2, 0, 0);
   FIELD_U32(a1, 6100) = v5;
   v7 = (_DWORD **)(a1 + 6100);
-  animations = (unsigned int)v5[1].texAnims.animations;
+  animations = (unsigned int)FIELD_U32(v5 + (1) * 48, 0x14);
   v9 = (int *)FIELD_U32(v5, 0xC);
   if ( FIELD_U32(v5, 0x8) > animations )
     v9 += animations;
@@ -62,7 +62,7 @@ int __fastcall obj_peach_question_ref(int a1)
   v14 = sub_60421830(v13, v12, 1, 0, 0, 0, 0);
   j_ModelWrapper_setupModel((int)v14, (int)v3, 0, 0);
   v7[1] = &FIELD_U32(v13, 0x0);
-  v15 = (unsigned int)v13[1].texAnims.animations;
+  v15 = (unsigned int)FIELD_U32(v13 + (1) * 48, 0x14);
   v16 = (int *)FIELD_U32(v13, 0xC);
   if ( FIELD_U32(v13, 0x8) > v15 )
     v16 += v15;

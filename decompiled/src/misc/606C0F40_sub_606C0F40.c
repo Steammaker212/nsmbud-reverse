@@ -27,9 +27,9 @@ StateMethodExecuter *__fastcall sub_606C0F40(int a1)
     FIELD_F32(a1, 6100) = v3;
     FIELD_F32(a1, 6104) = v4;
     FIELD_F32(a1, 6108) = v5;
-    v6 = v4 + *(float *)&result[9].owner;
-    v7 = v5 + *(float *)&result[9].currentState;
-    FIELD_F32(a1, 108) = v3 + *(float *)&result[9].vtable;
+    v6 = v4 + *(float *)&FIELD_U32(result + (9) * 12, 0x4);
+    v7 = v5 + *(float *)&FIELD_U32(result + (9) * 12, 0x8);
+    FIELD_F32(a1, 108) = v3 + *(float *)&FIELD_U32(result + (9) * 12, 0x0);
     FIELD_F32(a1, 112) = v6;
     FIELD_F32(a1, 116) = v7;
     FIELD_U8(a1, 6116) = BYTE2(result[520].owner);

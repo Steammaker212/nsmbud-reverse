@@ -15,7 +15,7 @@ ActiveColliderMgr *__fastcall sub_603600B0(StageActor *a1)
   ActiveColliderMgr *result; // r0
 
   StageActor__addActiveColliders(a1);
-  v2 = (ActiveCollider *)&a1[19]._.field_34;
+  v2 = (ActiveCollider *)&FIELD_U32(a1 + (19) * 644, 0x34);
   v3 = ActiveColliderMgr_instance;
   result = (ActiveColliderMgr *)ActiveColliderMgr_isInActiveList(ActiveColliderMgr_instance, v2);
   if ( !result )

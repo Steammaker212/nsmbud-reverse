@@ -1078,7 +1078,7 @@ LABEL_562:
               v181 = FIELD_U32(next, 0x4);
               sead__ListNode__erase(next);
               v182 = next - 3;
-              --v179[15].previous;
+              --FIELD_U32(v179 + (15) * 8, 0x0);
               next[-2].next = (sead_ListNode *)&off_60BFA9C4;
               previous = next[-1].previous;
               if ( previous )
@@ -1088,8 +1088,8 @@ LABEL_562:
               if ( v184 )
                 operator_delete_8DE3FC(v184);
               next = v181;
-              FIELD_U32(v182, 0x0) = v179[15].next;
-              v179[15].next = v182;
+              FIELD_U32(v182, 0x0) = FIELD_U32(v179 + (15) * 8, 0x4);
+              FIELD_U32(v179 + (15) * 8, 0x4) = v182;
             }
             while ( v181 != &v179[14] );
           }
@@ -1103,19 +1103,19 @@ LABEL_562:
               v188 = *v186;
               if ( (int)(*v186)[15].previous < (int)(*v186)[16].next )
               {
-                v189 = v188[15].next;
+                v189 = FIELD_U32(v188 + (15) * 8, 0x4);
                 v190 = *v185;
                 if ( v189 )
-                  v188[15].next = FIELD_U32(v189, 0x0);
+                  FIELD_U32(v188 + (15) * 8, 0x4) = FIELD_U32(v189, 0x0);
                 else
                   v189 = 0;
                 sub_6097114C(v189, (int)heap, v190, 4);
-                sub_6097114C(&v189[1].next, (int)heap, v190 + 259, 4);
-                v189[3].previous = 0;
+                sub_6097114C(&FIELD_U32(v189 + (1) * 8, 0x4), (int)heap, v190 + 259, 4);
+                FIELD_U32(v189 + (3) * 8, 0x0) = 0;
                 v191 = v189 + 3;
                 FIELD_U32(v191, 0x4) = 0;
                 sead__ListNode__insertFront(v188 + 14, v191);
-                ++v188[15].previous;
+                ++FIELD_U32(v188 + (15) * 8, 0x0);
                 a2 = v249;
                 v186 = v228;
               }

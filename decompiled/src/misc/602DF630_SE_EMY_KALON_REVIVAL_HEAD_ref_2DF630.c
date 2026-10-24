@@ -50,11 +50,11 @@ ModelAnimation *__fastcall SE_EMY_KALON_REVIVAL_HEAD_ref_2DF630(int a1)
     mapPositionToScreen(&out, &position);
     j_SE_OBJ_FIRE_CANNON_BLAZE_ref_2_helper(v7, "SE_EMY_KALON_REVIVAL_HEAD", v6, &out, 0);
     result = **(ModelAnimation ***)(*(_DWORD *)v4 + 12);
-    v9 = result[1].field_0;
+    v9 = FIELD_U32(result + (1) * 28, 0x0);
     if ( (v9 & 0x30) != 0 )
     {
       FIELD_F32(result, 0x14) = 0.0;
-      result[1].field_0 = v9 | 2;
+      FIELD_U32(result + (1) * 28, 0x0) = v9 | 2;
       result = sub_6041838C((ModelAnimation *)&FIELD_U32(result, 0x4));
       *v3 = 0;
     }

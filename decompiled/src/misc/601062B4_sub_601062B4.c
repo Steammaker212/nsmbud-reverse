@@ -33,7 +33,7 @@ StateMethodExecuter *__fastcall sub_601062B4(StateMethodExecuter *result, int a2
     v3 = a2 == 0;
   if ( !v3 )
   {
-    result = (StateMethodExecuter *)result[12].vtable;
+    result = (StateMethodExecuter *)FIELD_U32(result + (12) * 12, 0x0);
     v4 = result == 0;
     if ( result )
     {

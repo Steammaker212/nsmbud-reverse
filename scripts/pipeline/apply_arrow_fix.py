@@ -86,14 +86,34 @@ def evaluate(base, index, toks, types, vt, nested: bool):
         if not info:
             continue
         off, macro, _mt, _p = info
+        off_total = pending + off
         if index.strip():
-            return None
-        return "%s(%s, 0x%X)" % (macro, expr, pending + off)
+            # Indexed access: a[i].m is base + i*sizeof(T) + off.
+            #
+            # There is no "old" form for these. The previous rewriter's CHAIN
+            # pattern required an arrow early, so `a1[8].id` never matched and
+            # survived into the corpus verbatim -- which is exactly why 448 units
+            # fail to compile with "no member named 'id'". Returning None for the
+            # old branch makes the caller take the source text as the old side.
+            if not nested:
+                return None
+            size = types.get(t, (0, {}))[0]
+            if not size:
+                return None
+            inner = index.strip()[1:-1].strip()
+            return "%s(%s + (%s) * %d, 0x%X)" % (macro, expr, inner, size, off_total)
+        return "%s(%s, 0x%X)" % (macro, expr, off_total)
     return None
 
 
 def expression_pairs(body, types):
-    """[(old_expr, new_expr)] derived per chain match, in source order."""
+    """[(old_expr, new_expr)] derived per chain match, in source order.
+
+    For an indexed access (`a1[8].id`) there is no old expression: the previous
+    rewriter never matched that shape, so the published corpus still contains the
+    original `a1[8].id` text and the pair is (that source text, the FIELD form).
+    `old` is therefore taken from the source span rather than from a re-render.
+    """
     vt = RA.var_types(body)
     pairs = []
     for m in CHAIN.finditer(body):
@@ -102,7 +122,12 @@ def expression_pairs(body, types):
             continue
         o = evaluate(base, index, toks, types, vt, nested=False)
         n = evaluate(base, index, toks, types, vt, nested=True)
-        if o is None or n is None or o == n:
+        if n is None:
+            continue
+        if o is None:
+            # Indexed: the "old" text is what is literally in the source.
+            o = m.group(0).strip()
+        if o == n:
             continue
         if (o, n) not in pairs:
             pairs.append((o, n))
@@ -137,6 +162,7 @@ def main() -> int:
     gate = None
     if opt.require_confirmed:
         import verify_arrow_fix as VF
+        import verify_indexed_fix as VI
         gate = VF
 
     with io.open(PRE, encoding="utf-8", errors="replace") as f:
@@ -156,10 +182,32 @@ def main() -> int:
             ea = r.get("ea") or 0
             if gate is not None:
                 va = ea if ea >= VF.BASE else VF.BASE + ea
-                insns = VF.instructions(VF.disasm(va, r.get("size") or 0x40))
+                text_d = VF.disasm(va, r.get("size") or 0x40)
+                insns = VF.instructions(text_d)
+                disps = VI.displacements(text_d)
                 order = VF.param_regs(body) if insns else []
                 keep = []
                 for o, n in pairs:
+                    # Indexed form: a[i].m -> FIELD(base + (i)*size, off).
+                    # The claim is a single byte offset, so the test is whether
+                    # that offset appears as a constant anywhere in the
+                    # function. This is weaker than the nested test (which also
+                    # requires ordering) but it is still a real check: an
+                    # indexed access that the code does not perform at that
+                    # offset is exactly what the stride-from-declared-type
+                    # assumption would get wrong.
+                    m_idx = VI.INDEXED.match(n)
+                    if m_idx:
+                        stride = int(m_idx.group(3))
+                        memoff = int(m_idx.group(4), 16)
+                        idxv = m_idx.group(2)
+                        claimed = (int(idxv) * stride + memoff) if idxv.isdigit() else memoff
+                        if claimed in disps:
+                            keep.append((o, n))
+                            continue
+                        held.append((r.get("name"), o, n,
+                                     "offset 0x%X not present in the function" % claimed))
+                        continue
                     parsed = VF.parse_nested(n)
                     if parsed and insns:
                         root, first, second = parsed

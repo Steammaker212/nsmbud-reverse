@@ -29,13 +29,13 @@ signed int __fastcall FlyingBlock__onCreate(ColliderBase *a1)
 
   a1[21].field_E4 = 0;
   v2 = &a1[21].field_E4;
-  a1[21].owner248Ptr = (Vec3 *)49;
+  FIELD_U32(a1 + (21) * 340, 0x9C) = (Vec3 *)49;
   next = FIELD_U32(a1, 0x10)[0].next;
   v4 = ((unsigned int)next >> 8) & 1;
   a1[20].nodes[3].owner = (ColliderBase *)v4;
   a1[21].field_E8 = ((unsigned int)next >> 12) & 1;
   a1[20].nodes[7].prev = (ColliderListNode *)(((unsigned int)FIELD_U32(a1, 0x10)[0].prev >> 13) & 1);
-  *(_DWORD *)&a1[21].field_DC = 1096810496;
+  *(_DWORD *)&FIELD_U8(a1 + (21) * 340, 0xDC) = 1096810496;
   a1[21].field_E0 = -1056964608;
   HIBYTE(FIELD_U32(a1, 0x10)[5].prev) = byte_60B0536C[v4];
   ColliderBase_setType(a1 + 18, 7);
@@ -71,7 +71,7 @@ signed int __fastcall FlyingBlock__onCreate(ColliderBase *a1)
     }
     ProfileId = Actor__getProfileId((Actor *)a1);
     v10 = dword_60568AFC;
-    a1[1].owner56Ptr = (char *)1149239296;
+    FIELD_U32(a1 + (1) * 340, 0xA0) = (char *)1149239296;
     if ( ProfileId == 290 )
       v10 = &dword_60568AFC[1];
     v11 = (char *)*v10;
@@ -79,13 +79,13 @@ signed int __fastcall FlyingBlock__onCreate(ColliderBase *a1)
     if ( ProfileId == 290 )
       v12 = &dword_60568B04[1];
     v13 = *v12;
-    a1[1].owner57Ptr = v11;
-    a1[1].distToCenter.y = 512.0;
-    a1[1].field_B4 = v13;
-    a1[1].field_B8 = 1149239296;
-    a1[1].field_BC = 1024.0;
-    a1[1].ownerPlayerIdPtr = (char *)1107296256;
-    a1[1].distToCenter.x = 64.0;
+    FIELD_U32(a1 + (1) * 340, 0xA4) = v11;
+    FIELD_F32(a1 + (1) * 340, 0xB0) = 512.0;
+    FIELD_U32(a1 + (1) * 340, 0xB4) = v13;
+    FIELD_U32(a1 + (1) * 340, 0xB8) = 1149239296;
+    FIELD_F32(a1 + (1) * 340, 0xBC) = 1024.0;
+    FIELD_U32(a1 + (1) * 340, 0xA8) = (char *)1107296256;
+    FIELD_F32(a1 + (1) * 340, 0xAC) = 64.0;
     a1[21].field_8C = 1115684864;
     a1[21].owner = (StageActor *)1115684864;
     sub_605D0024(a1);

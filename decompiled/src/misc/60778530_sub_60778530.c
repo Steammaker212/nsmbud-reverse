@@ -29,8 +29,8 @@ int __fastcall sub_60778530(sead_ListNode *a1, sead_ListNode *a2)
   result = Player_getActorSlotChecked(PlayerMgr_instance, a2);
   if ( !result )
     return result;
-  next = a1[17].next;
-  p_next = &a1[16].next;
+  next = FIELD_U32(a1 + (17) * 8, 0x4);
+  p_next = &FIELD_U32(a1 + (16) * 8, 0x4);
   if ( next != &a1[17] )
   {
     v7 = FIELD_F32(result, 9768);
@@ -67,45 +67,45 @@ int __fastcall sub_60778530(sead_ListNode *a1, sead_ListNode *a2)
           goto LABEL_13;
       }
     }
-    if ( (int)a1[18].previous >= (int)a1[19].next )
+    if ( (int)FIELD_U32(a1 + (18) * 8, 0x0) >= (int)FIELD_U32(a1 + (19) * 8, 0x4) )
       goto LABEL_23;
-    v15 = a1[18].next;
+    v15 = FIELD_U32(a1 + (18) * 8, 0x4);
     v12 = 0;
     if ( v15 )
     {
-      v12 = a1[18].next;
-      a1[18].next = FIELD_U32(v15, 0x0);
+      v12 = FIELD_U32(a1 + (18) * 8, 0x4);
+      FIELD_U32(a1 + (18) * 8, 0x4) = FIELD_U32(v15, 0x0);
     }
     FIELD_U32(v12, 0x0) = 0;
     FIELD_U32(v12, 0x4) = 0;
     v13 = (sead_ListNode *)&FIELD_U32(v12, 0x4);
-    v12[1].previous = 0;
+    FIELD_U32(v12 + (1) * 8, 0x0) = 0;
     v14 = next;
     goto LABEL_21;
   }
 LABEL_13:
-  if ( (int)a1[18].previous < (int)a1[19].next )
+  if ( (int)FIELD_U32(a1 + (18) * 8, 0x0) < (int)FIELD_U32(a1 + (19) * 8, 0x4) )
   {
-    v11 = a1[18].next;
+    v11 = FIELD_U32(a1 + (18) * 8, 0x4);
     v12 = 0;
     if ( v11 )
     {
-      v12 = a1[18].next;
-      a1[18].next = FIELD_U32(v11, 0x0);
+      v12 = FIELD_U32(a1 + (18) * 8, 0x4);
+      FIELD_U32(a1 + (18) * 8, 0x4) = FIELD_U32(v11, 0x0);
     }
     FIELD_U32(v12, 0x0) = 0;
     FIELD_U32(v12, 0x4) = 0;
     v13 = (sead_ListNode *)&FIELD_U32(v12, 0x4);
-    v12[1].previous = 0;
+    FIELD_U32(v12 + (1) * 8, 0x0) = 0;
     v14 = a1 + 17;
 LABEL_21:
     sead__ListNode__insertFront(v14, v13);
-    ++a1[18].previous;
+    ++FIELD_U32(a1 + (18) * 8, 0x0);
     if ( v12 )
       FIELD_U32(v12, 0x0) = a2;
   }
 LABEL_23:
-  v16 = a1[17].next;
+  v16 = FIELD_U32(a1 + (17) * 8, 0x4);
   result = (int)&v16[-1].next;
   if ( &v16[-1].next != p_next )
   {

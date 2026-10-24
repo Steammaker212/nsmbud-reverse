@@ -16,7 +16,7 @@ StateMethodExecuter *__fastcall sub_60530E50(StateMethodExecuter *result)
   void *owner; // r2
   bool v5; // zf
 
-  vtable = (unsigned int)result[4].vtable;
+  vtable = (unsigned int)FIELD_U32(result + (4) * 12, 0x0);
   if ( vtable >= 4 )
     vtable = 0;
   v2 = *(_DWORD *)(*(_DWORD *)(dword_60C99E60 + 4 * vtable + 4172) + 3044);
@@ -25,21 +25,21 @@ StateMethodExecuter *__fastcall sub_60530E50(StateMethodExecuter *result)
     v3 = 2;
   if ( v2 < 2 )
   {
-    owner = result[3].owner;
+    owner = FIELD_U32(result + (3) * 12, 0x4);
     if ( owner == (void *)1 )
     {
-      if ( v3 != 1 && !LOBYTE(result[6].owner) )
+      if ( v3 != 1 && !LOBYTE(FIELD_U32(result + (6) * 12, 0x4)) )
         return result;
     }
     else if ( !owner )
     {
       v5 = v3 == 0;
       if ( !v3 )
-        v5 = LOBYTE(result[6].owner) == 0;
+        v5 = LOBYTE(FIELD_U32(result + (6) * 12, 0x4)) == 0;
       if ( !v5 )
         return result;
     }
-    return StateMgr__changeState((StateMgr *)&result[1].currentState, (StateBase *)&dword_60CAAB34);
+    return StateMgr__changeState((StateMgr *)&FIELD_U32(result + (1) * 12, 0x8), (StateBase *)&dword_60CAAB34);
   }
   return result;
 }

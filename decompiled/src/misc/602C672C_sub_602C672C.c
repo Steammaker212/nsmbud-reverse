@@ -55,13 +55,13 @@ int __fastcall sub_602C672C(_DWORD *a1, ActiveCollider *a2, ActiveCollider *a3)
           *((_BYTE *)a1 + 6312) = 1;
       }
       v14 = *((float *)a1 + 27);
-      v15 = *(float *)&v7[1].movementId;
+      v15 = *(float *)&FIELD_U8(v7 + (1) * 80, 0x1C);
       v16 = a1[20];
       if ( v15 < v14 == v16 )
         goto LABEL_15;
       v17 = v15 == v14;
       if ( v15 == v14 )
-        v17 = v7[1].vtable == v16;
+        v17 = FIELD_U32(v7 + (1) * 80, 0x0) == v16;
       if ( v17 )
       {
 LABEL_15:

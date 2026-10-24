@@ -14,8 +14,8 @@ sead_IDisposer *__fastcall sub_607FA930(sead_IDisposer *a1)
 
   result = sead_IDisposer_ctor(a1);
   FIELD_U32(result, 0x0) = (int)off_60C27D6C;
-  LOBYTE(result[1].vtable) = 0;
-  result[1].containingHeap = 0;
-  result[1].field_8 = 0;
+  LOBYTE(FIELD_U32(result + (1) * 16, 0x0)) = 0;
+  FIELD_U32(result + (1) * 16, 0x4) = 0;
+  FIELD_U32(result + (1) * 16, 0x8) = 0;
   return result;
 }

@@ -14,11 +14,11 @@ void __fastcall sub_6046E40C(Actor *a1)
 
   FIELD_U32(a1, 0x0) = (int)off_60BFC3FC;
   PlayerLookTarget_vf0(&a1[78].id);
-  a1[76].field_40 = (int)EffectWrapper_vtable;
-  sub_60237560((int)&a1[76].field_40);
-  sead__IDisposer__dtor(&a1[76].field_40);
+  FIELD_U32(a1 + (76) * 80, 0x40) = (int)EffectWrapper_vtable;
+  sub_60237560((int)&FIELD_U32(a1 + (76) * 80, 0x40));
+  sead__IDisposer__dtor(&FIELD_U32(a1 + (76) * 80, 0x40));
   FIELD_U32(a1, 0x0) = (int)&CollisionActor__vtable;
-  CollisionMgr_dtor((int)&a1[8].id);
+  CollisionMgr_dtor((int)&FIELD_U32(a1 + (8) * 80, 0x8));
   v2 = StageActor__dtor(a1);
   operator_delete(v2);
 }

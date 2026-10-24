@@ -16,62 +16,62 @@ sead_ListNode *__fastcall sub_600A9AF8(sead_ListNode *a1, int a2, sead_ListNode 
   sead_ListNode *v7; // r1
 
   v4 = 0;
-  if ( (int)a1[1].previous < (int)a1[2].next )
+  if ( (int)FIELD_U32(a1 + (1) * 8, 0x0) < (int)FIELD_U32(a1 + (2) * 8, 0x4) )
   {
-    next = a1[1].next;
+    next = FIELD_U32(a1 + (1) * 8, 0x4);
     v4 = 0;
     v6 = next == 0;
     if ( next )
     {
       previous = FIELD_U32(next, 0x0);
-      v4 = a1[1].next;
+      v4 = FIELD_U32(a1 + (1) * 8, 0x4);
     }
     v7 = v4 + 3;
     if ( !v6 )
-      a1[1].next = previous;
-    v4[1].previous = 0;
+      FIELD_U32(a1 + (1) * 8, 0x4) = previous;
+    FIELD_U32(v4 + (1) * 8, 0x0) = 0;
     FIELD_U32(v4, 0x4) = v4;
     FIELD_U32(v4, 0x0) = v4;
-    v4[2].previous = 0;
-    v4[1].next = v7;
-    v4[3].previous = (sead_ListNode *)((char *)v4 + 44);
-    v4[5].next = v4 + 8;
-    v4[8].previous = (sead_ListNode *)((char *)v4 + 84);
-    v4[10].next = v4 + 13;
-    v4[13].previous = (sead_ListNode *)((char *)v4 + 124);
-    v4[15].next = v4 + 18;
-    v4[18].previous = (sead_ListNode *)((char *)v4 + 164);
-    v4[20].next = v4 + 23;
-    v4[23].previous = (sead_ListNode *)((char *)v4 + 204);
-    v4[25].next = v4 + 28;
-    v4[28].previous = (sead_ListNode *)((char *)v4 + 244);
-    v4[30].next = v4 + 33;
-    v4[33].previous = (sead_ListNode *)((char *)v4 + 284);
-    v4[35].next = v4 + 38;
-    v4[38].previous = (sead_ListNode *)((char *)v4 + 324);
-    v4[40].next = v4 + 43;
-    v4[43].previous = (sead_ListNode *)((char *)v4 + 364);
-    v4[45].next = v4 + 48;
-    v4[48].previous = (sead_ListNode *)((char *)v4 + 404);
-    v4[50].next = v4 + 53;
-    v4[53].previous = (sead_ListNode *)((char *)v4 + 444);
-    v4[55].next = v4 + 58;
-    v4[58].previous = (sead_ListNode *)((char *)v4 + 484);
-    v4[60].next = v4 + 63;
-    v4[63].previous = (sead_ListNode *)((char *)v4 + 524);
-    v4[65].next = v4 + 68;
-    v4[68].previous = (sead_ListNode *)((char *)v4 + 564);
-    v4[70].next = v4 + 73;
-    v4[73].previous = (sead_ListNode *)((char *)v4 + 604);
-    v4[75].next = v4 + 78;
-    v4[78].previous = (sead_ListNode *)((char *)v4 + 644);
-    v4[80].next = 0;
-    v4[2].previous = v7;
-    v4[2].next = (sead_ListNode *)32;
-    v4[83].previous = 0;
-    v4[83].next = 0;
+    FIELD_U32(v4 + (2) * 8, 0x0) = 0;
+    FIELD_U32(v4 + (1) * 8, 0x4) = v7;
+    FIELD_U32(v4 + (3) * 8, 0x0) = (sead_ListNode *)((char *)v4 + 44);
+    FIELD_U32(v4 + (5) * 8, 0x4) = v4 + 8;
+    FIELD_U32(v4 + (8) * 8, 0x0) = (sead_ListNode *)((char *)v4 + 84);
+    FIELD_U32(v4 + (10) * 8, 0x4) = v4 + 13;
+    FIELD_U32(v4 + (13) * 8, 0x0) = (sead_ListNode *)((char *)v4 + 124);
+    FIELD_U32(v4 + (15) * 8, 0x4) = v4 + 18;
+    FIELD_U32(v4 + (18) * 8, 0x0) = (sead_ListNode *)((char *)v4 + 164);
+    FIELD_U32(v4 + (20) * 8, 0x4) = v4 + 23;
+    FIELD_U32(v4 + (23) * 8, 0x0) = (sead_ListNode *)((char *)v4 + 204);
+    FIELD_U32(v4 + (25) * 8, 0x4) = v4 + 28;
+    FIELD_U32(v4 + (28) * 8, 0x0) = (sead_ListNode *)((char *)v4 + 244);
+    FIELD_U32(v4 + (30) * 8, 0x4) = v4 + 33;
+    FIELD_U32(v4 + (33) * 8, 0x0) = (sead_ListNode *)((char *)v4 + 284);
+    FIELD_U32(v4 + (35) * 8, 0x4) = v4 + 38;
+    FIELD_U32(v4 + (38) * 8, 0x0) = (sead_ListNode *)((char *)v4 + 324);
+    FIELD_U32(v4 + (40) * 8, 0x4) = v4 + 43;
+    FIELD_U32(v4 + (43) * 8, 0x0) = (sead_ListNode *)((char *)v4 + 364);
+    FIELD_U32(v4 + (45) * 8, 0x4) = v4 + 48;
+    FIELD_U32(v4 + (48) * 8, 0x0) = (sead_ListNode *)((char *)v4 + 404);
+    FIELD_U32(v4 + (50) * 8, 0x4) = v4 + 53;
+    FIELD_U32(v4 + (53) * 8, 0x0) = (sead_ListNode *)((char *)v4 + 444);
+    FIELD_U32(v4 + (55) * 8, 0x4) = v4 + 58;
+    FIELD_U32(v4 + (58) * 8, 0x0) = (sead_ListNode *)((char *)v4 + 484);
+    FIELD_U32(v4 + (60) * 8, 0x4) = v4 + 63;
+    FIELD_U32(v4 + (63) * 8, 0x0) = (sead_ListNode *)((char *)v4 + 524);
+    FIELD_U32(v4 + (65) * 8, 0x4) = v4 + 68;
+    FIELD_U32(v4 + (68) * 8, 0x0) = (sead_ListNode *)((char *)v4 + 564);
+    FIELD_U32(v4 + (70) * 8, 0x4) = v4 + 73;
+    FIELD_U32(v4 + (73) * 8, 0x0) = (sead_ListNode *)((char *)v4 + 604);
+    FIELD_U32(v4 + (75) * 8, 0x4) = v4 + 78;
+    FIELD_U32(v4 + (78) * 8, 0x0) = (sead_ListNode *)((char *)v4 + 644);
+    FIELD_U32(v4 + (80) * 8, 0x4) = 0;
+    FIELD_U32(v4 + (2) * 8, 0x0) = v7;
+    FIELD_U32(v4 + (2) * 8, 0x4) = (sead_ListNode *)32;
+    FIELD_U32(v4 + (83) * 8, 0x0) = 0;
+    FIELD_U32(v4 + (83) * 8, 0x4) = 0;
     sead__ListNode__insertFront(a1, v4 + 83);
-    ++a1[1].previous;
+    ++FIELD_U32(a1 + (1) * 8, 0x0);
   }
   return v4;
 }

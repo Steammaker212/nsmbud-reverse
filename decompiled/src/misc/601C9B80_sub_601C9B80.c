@@ -39,7 +39,7 @@ StateMethodExecuter *__fastcall sub_601C9B80(int a1)
   FIELD_F32(a1, 132) = v2 + FIELD_F32(a1, 132);
   FIELD_F32(a1, 136) = v2 + FIELD_F32(a1, 136);
   result = (StateMethodExecuter *)sub_601C6BF0(a1);
-  v4 = *(float *)&result[4].currentState;
+  v4 = *(float *)&FIELD_U32(result + (4) * 12, 0x8);
   v5 = FIELD_F32(a1, 960) - FIELD_F32(a1, 84);
   v6 = FIELD_F32(a1, 956) - FIELD_F32(a1, 80);
   v7 = FIELD_F32(a1, 964) - FIELD_F32(a1, 88);

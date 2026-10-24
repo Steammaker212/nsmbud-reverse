@@ -53,7 +53,7 @@ void __fastcall sub_6031467C(int a1, Vec3 *a2, int a3)
     {
       v12 = 477218588;
     }
-    v10[2].vtable = v12;
+    FIELD_U32(v10 + (2) * 80, 0x0) = v12;
     Actor__removeChild((Actor *)a1, v10);
     FIELD_U8(a1, 7673) = 1;
   }

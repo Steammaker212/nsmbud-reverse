@@ -12,8 +12,8 @@ StateMethodExecuter *__fastcall sub_60559F58(StateMethodExecuter *result)
 {
   int vtable; // r1
 
-  vtable = (int)result[308].vtable;
-  result[308].vtable = (void *)(vtable - 1);
+  vtable = (int)FIELD_U32(result + (308) * 12, 0x0);
+  FIELD_U32(result + (308) * 12, 0x0) = (void *)(vtable - 1);
   if ( vtable <= 1 )
     return StateMgr__changeState((StateMgr *)&result[2], (StateBase *)&dword_60CAD9F4);
   return result;

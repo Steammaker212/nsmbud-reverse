@@ -15,10 +15,10 @@ StateMethodExecuter *__fastcall sub_605CD6E8(StateMethodExecuter *result)
   int v3; // r2
   int v4; // r3
 
-  if ( !LOBYTE(result[7].currentState) )
+  if ( !LOBYTE(FIELD_U32(result + (7) * 12, 0x8)) )
   {
-    vtable = (int)result[5].vtable;
-    owner = result[5].owner;
+    vtable = (int)FIELD_U32(result + (5) * 12, 0x0);
+    owner = FIELD_U32(result + (5) * 12, 0x4);
     if ( (FIELD_U64(EventMgr__instance, 16) & *(_QWORD *)&result[4].vtable) != 0 )
       vtable = -vtable;
     if ( BYTE2(result[8].currentState) )
@@ -33,22 +33,22 @@ StateMethodExecuter *__fastcall sub_605CD6E8(StateMethodExecuter *result)
       if ( vtable < 0 )
       {
         v3 = (int)owner - v4;
-        result[5].owner = (void *)v3;
+        FIELD_U32(result + (5) * 12, 0x4) = (void *)v3;
         if ( v3 < vtable )
           v3 = vtable;
       }
       else
       {
         v3 = (int)owner + v4;
-        result[5].owner = (void *)v3;
+        FIELD_U32(result + (5) * 12, 0x4) = (void *)v3;
         if ( v3 > vtable )
           v3 = vtable;
       }
-      result[5].owner = (void *)v3;
+      FIELD_U32(result + (5) * 12, 0x4) = (void *)v3;
     }
-    *(_DWORD *)result[3].vtable += v3;
+    *(_DWORD *)FIELD_U32(result + (3) * 12, 0x0) += v3;
     if ( BYTE1(result[8].owner) )
-      return StateMgr__changeState((StateMgr *)&result[1].currentState, (StateBase *)&dword_60CB0FE4);
+      return StateMgr__changeState((StateMgr *)&FIELD_U32(result + (1) * 12, 0x8), (StateBase *)&dword_60CB0FE4);
   }
   return result;
 }

@@ -53,7 +53,7 @@ unsigned int __fastcall BoomBoomBase__collisionPlayer(Enemy *a1, ActiveCollider 
           else
           {
             v10 = owner;
-            if ( owner[2]._.field_20.previous == (sead_ListNode *)3 )
+            if ( FIELD_U32(owner + (2) * 644, 0x20) == (sead_ListNode *)3 )
             {
               sub_602A3178(owner, &dword_60CC4B7C);
               (*(void (__fastcall **)(Enemy *))(FIELD_U32(a1, 0x0) + 404))(a1);
@@ -92,7 +92,7 @@ unsigned int __fastcall BoomBoomBase__collisionPlayer(Enemy *a1, ActiveCollider 
         result = v9 & ((*(int (__fastcall **)(Enemy *))(FIELD_U32(a1, 0x0) + 888))(a1) ^ 1);
         if ( result == 1 )
         {
-          if ( v10[2]._.field_20.previous == (sead_ListNode *)3 )
+          if ( FIELD_U32(v10 + (2) * 644, 0x20) == (sead_ListNode *)3 )
           {
             sub_602A3178(v10, &dword_60CC4B7C);
             (*(void (__fastcall **)(Enemy *))(FIELD_U32(a1, 0x0) + 404))(a1);

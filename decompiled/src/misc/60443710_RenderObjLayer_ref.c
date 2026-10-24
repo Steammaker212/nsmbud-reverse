@@ -18,17 +18,17 @@ int __fastcall RenderObjLayer_ref(int a1, void *a2)
   v6[0] = &sead__SafeStringBase__vtable;
   v6[1] = "RenderObjLayer";
   v4 = sead_IDisposer_ctor(v3);
-  v4[1].vtable = (int)&sead__SafeStringBase__vtable;
-  v3[1].containingHeap = (int)&byte_60ABC94D;
+  FIELD_U32(v4 + (1) * 16, 0x0) = (int)&sead__SafeStringBase__vtable;
+  FIELD_U32(v3 + (1) * 16, 0x4) = (int)&byte_60ABC94D;
   FIELD_U32(v3, 0x0) = (int)off_60C5E9A4;
-  v3[1].field_8 = 0;
-  v3[1].field_C = -100;
-  v3[2].vtable = 1;
-  v3[2].field_8 = a1;
-  v3[2].field_C = (int)sub_604437E4;
-  v3[3].vtable = 0;
-  v3[2].containingHeap = (int)off_60BFAE6C;
+  FIELD_U32(v3 + (1) * 16, 0x8) = 0;
+  FIELD_U32(v3 + (1) * 16, 0xC) = -100;
+  FIELD_U32(v3 + (2) * 16, 0x0) = 1;
+  FIELD_U32(v3 + (2) * 16, 0x8) = a1;
+  FIELD_U32(v3 + (2) * 16, 0xC) = (int)sub_604437E4;
+  FIELD_U32(v3 + (3) * 16, 0x0) = 0;
+  FIELD_U32(v3 + (2) * 16, 0x4) = (int)off_60BFAE6C;
   sead__SafeStringBase__operator_assign((int)&v4[1], (int)v6);
-  v3[1].field_8 = 1;
+  FIELD_U32(v3 + (1) * 16, 0x8) = 1;
   return sub_609553AC(a1, v3);
 }

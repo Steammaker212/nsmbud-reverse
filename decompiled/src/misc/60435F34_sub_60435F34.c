@@ -34,7 +34,7 @@ int32x4x2_t *__fastcall sub_60435F34(int a1, int a2, int32x4x2_t *a3, _DWORD *a4
     v12 = vzipq_s32(v9, v8);
     v13 = vzipq_s32(v11, v10);
     *a3 = vzipq_s32(v13.val[0], v12.val[0]);
-    a3[1].val[0] = (int32x4_t)vzipq_s32(v13.val[1], v12.val[1]).val;
+    FIELD_U32(a3 + (1) * 32, 0x0)[0] = (int32x4_t)vzipq_s32(v13.val[1], v12.val[1]).val;
   }
   if ( a4 )
   {

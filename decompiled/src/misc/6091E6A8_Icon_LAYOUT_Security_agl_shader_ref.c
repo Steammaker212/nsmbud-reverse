@@ -14,8 +14,8 @@ sead_IDisposer *__fastcall Icon_LAYOUT_Security_agl_shader_ref(sead_IDisposer *a
 
   sead_IDisposer_ctor(a1);
   FIELD_U32(a1, 0x0) = (int)off_60C5D698;
-  a1[1].vtable = (int)&off_60C5D6A8;
-  memset(&a1[1].containingHeap, 0, 76);
+  FIELD_U32(a1 + (1) * 16, 0x0) = (int)&off_60C5D6A8;
+  memset(&FIELD_U32(a1 + (1) * 16, 0x4), 0, 76);
   v3[0] = &sead__SafeStringBase__vtable;
   v3[1] = "Icon = LAYOUT, Security = agl_shader";
   sub_60969510(&a1[1], v3);

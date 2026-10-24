@@ -16,10 +16,10 @@ StateMethodExecuter *__fastcall sub_603E95C8(StateMethodExecuter *result)
   int v4; // r1
   int v5; // r1
 
-  currentState = result[2].currentState;
+  currentState = FIELD_U32(result + (2) * 12, 0x8);
   if ( !currentState )
     return StateMgr__changeState((StateMgr *)&result[9], (StateBase *)&dword_60C99920);
-  result[2].currentState = currentState - 1;
+  FIELD_U32(result + (2) * 12, 0x8) = currentState - 1;
   if ( currentState != 136 )
   {
     if ( currentState != 1 )
@@ -38,6 +38,6 @@ StateMethodExecuter *__fastcall sub_603E95C8(StateMethodExecuter *result)
     FIELD_U32(v5, 1208) |= 0x2000000u;
   result = (StateMethodExecuter *)v2[11];
   if ( result )
-    result[100].currentState |= 0x2000000u;
+    FIELD_U32(result + (100) * 12, 0x8) |= 0x2000000u;
   return result;
 }

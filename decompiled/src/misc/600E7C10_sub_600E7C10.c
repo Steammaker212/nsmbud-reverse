@@ -46,7 +46,7 @@ int __fastcall sub_600E7C10(int a1)
   j_ModelWrapper_setupModel((int)v6, (int)v3, 0, 0);
   FIELD_U32(a1, 7096) = v5;
   v7 = (_DWORD *)(a1 + 7096);
-  animations = (unsigned int)v5[1].texAnims.animations;
+  animations = (unsigned int)FIELD_U32(v5 + (1) * 48, 0x14);
   v9 = (int *)FIELD_U32(v5, 0xC);
   if ( FIELD_U32(v5, 0x8) > animations )
     v9 += animations;
@@ -90,7 +90,7 @@ int __fastcall sub_600E7C10(int a1)
   v20 = sub_60421830(v19, v18, 2, 1, 2, 0, 0);
   j_ModelWrapper_setupModel((int)v20, (int)v3, 0, 0);
   v7[1] = v19;
-  v21 = (unsigned int)v19[1].texAnims.animations;
+  v21 = (unsigned int)FIELD_U32(v19 + (1) * 48, 0x14);
   v22 = (int *)FIELD_U32(v19, 0xC);
   if ( FIELD_U32(v19, 0x8) > v21 )
     v22 += v21;

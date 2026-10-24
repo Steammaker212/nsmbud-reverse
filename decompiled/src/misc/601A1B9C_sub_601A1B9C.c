@@ -11,6 +11,6 @@
 StateMethodExecuter *__fastcall sub_601A1B9C(StateMethodExecuter *result)
 {
   if ( !FIELD_U8(dword_60C99DD0, 3793) )
-    return StateMgr__changeState((StateMgr *)&result[238].currentState, (StateBase *)&dword_60C89E1C);
+    return StateMgr__changeState((StateMgr *)&FIELD_U32(result + (238) * 12, 0x8), (StateBase *)&dword_60C89E1C);
   return result;
 }

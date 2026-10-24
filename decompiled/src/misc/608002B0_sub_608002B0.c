@@ -96,9 +96,9 @@ float *__fastcall sub_608002B0(int a1)
       }
       if ( (*(int (__fastcall **)(Actor *, int *))FIELD_U32(v13, 0x0))(v13, &StageActor_RTTI) != 1 )
         goto LABEL_20;
-      v6 = *(float *)&v13[1].childCount;
-      v5 = v13[1].field_2C;
-      v3 = v13[1].field_30;
+      v6 = *(float *)&FIELD_U32(v13 + (1) * 80, 0x28);
+      v5 = FIELD_U32(v13 + (1) * 80, 0x2C);
+      v3 = FIELD_U32(v13 + (1) * 80, 0x30);
       if ( !*v7 && v6 != 0.0 )
         *v7 = 1;
       if ( (v2 & 1) == 0 )

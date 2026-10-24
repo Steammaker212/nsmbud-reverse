@@ -58,8 +58,8 @@ int __fastcall Actor_sunekuburoku_RDashfor_build_helper(int a1, ActorBuildInfo *
     v4[1]._._.nodes[7].owner = (ColliderBase *)1065353216;
     v4[1]._._.nodes[7].next = 0;
     v4[1]._._.nodes[7].prev = 0;
-    v4[1]._._.field_70 = 0.0;
-    v5 = (RectCollider *)&v4[1]._._.field_78 == (RectCollider *)(a1 + 23568);
+    FIELD_F32(v4 + (1) * 656, 0x70) = 0.0;
+    v5 = (RectCollider *)&FIELD_F32(v4 + (1) * 656, 0x78) == (RectCollider *)(a1 + 23568);
     v3 = (RectCollider *)((char *)v4 + 784);
   }
   while ( !v5 );

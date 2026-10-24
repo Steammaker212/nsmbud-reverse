@@ -20,17 +20,17 @@ Actor *__fastcall Actor_resuta_build(int a1)
   FIELD_U32(result, 0x0) = (int)off_60BFC4E4;
   v4 = FIELD_U32(a1, 20);
   v5 = FIELD_U32(a1, 24);
-  result[1].vtable = FIELD_U32(a1, 16);
+  FIELD_U32(result + (1) * 80, 0x0) = FIELD_U32(a1, 16);
   result[1].heap = v4;
   result[1].id = v5;
-  LOBYTE(result[1].profile) = FIELD_U8(a1, 32);
-  *(_DWORD *)&result[1].field_10 = (unsigned int)FIELD_U32(result, 0x14) >> 28;
-  LOBYTE(result[1].settings1) = 0;
-  BYTE1(result[1].settings1) = 1;
-  result[1].settigns2 = 2139095039;
-  *(_DWORD *)&result[1].movementId = 2139095039;
-  result[1].field_20.previous = (sead_ListNode *)-8388609;
-  result[1].field_20.next = (sead_ListNode *)-8388609;
-  result[1].childCount = 0;
+  LOBYTE(FIELD_U32(result + (1) * 80, 0xC)) = FIELD_U8(a1, 32);
+  *(_DWORD *)&FIELD_U8(result + (1) * 80, 0x10) = (unsigned int)FIELD_U32(result, 0x14) >> 28;
+  LOBYTE(FIELD_U32(result + (1) * 80, 0x14)) = 0;
+  BYTE1(FIELD_U32(result + (1) * 80, 0x14)) = 1;
+  FIELD_U32(result + (1) * 80, 0x18) = 2139095039;
+  *(_DWORD *)&FIELD_U8(result + (1) * 80, 0x1C) = 2139095039;
+  FIELD_U32(result + (1) * 80, 0x20) = (sead_ListNode *)-8388609;
+  FIELD_U32(result + (1) * 80, 0x24) = (sead_ListNode *)-8388609;
+  FIELD_U32(result + (1) * 80, 0x28) = 0;
   return result;
 }

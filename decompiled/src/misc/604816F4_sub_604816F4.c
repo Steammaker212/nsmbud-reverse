@@ -30,8 +30,8 @@ StateMethodExecuter *__fastcall sub_604816F4(StateMethodExecuter *result)
   _DWORD *v18; // r1
   int currentState; // r3
 
-  v1 = (unsigned int)result[303].owner + result[303].currentState;
-  result[303].owner = (void *)v1;
+  v1 = (unsigned int)FIELD_U32(result + (303) * 12, 0x4) + FIELD_U32(result + (303) * 12, 0x8);
+  FIELD_U32(result + (303) * 12, 0x4) = (void *)v1;
   v2 = *(float *)&result[302].owner;
   v3 = *(float *)&result[303].vtable;
   v4 = (float *)((char *)sinLutTable + ((v1 >> 20) & 0xFF0));
@@ -39,36 +39,36 @@ StateMethodExecuter *__fastcall sub_604816F4(StateMethodExecuter *result)
   v6 = v4[1];
   v7 = v4[2];
   v8 = v4[3];
-  v9 = *(float *)&result[301].owner;
+  v9 = *(float *)&FIELD_U32(result + (301) * 12, 0x4);
   v10 = 0;
   v11 = (float)(v1 & 0xFFFFFF) * 0.000000059605;
   v12 = *(float *)&result[302].vtable;
-  vtable = (float *)result[299].vtable;
+  vtable = (float *)FIELD_U32(result + (299) * 12, 0x0);
   vtable[8] = 0.0;
   vtable[6] = v9 - (float)(v12 * (float)(v7 + (float)(v11 * v8)));
   vtable[7] = v3 + (float)((float)(v5 + (float)(v6 * v11)) * v2);
   *((_BYTE *)vtable + 64) |= 0x10u;
-  v14 = (int)result[305].vtable;
+  v14 = (int)FIELD_U32(result + (305) * 12, 0x0);
   if ( v14 >= 1 )
   {
-    v15 = v14 - (unsigned int)result[305].owner;
+    v15 = v14 - (unsigned int)FIELD_U32(result + (305) * 12, 0x4);
     if ( v15 > 0 )
       v10 = (void *)v15;
-    result[305].vtable = v10;
-    *((_BYTE *)result[299].owner + 65) = (_BYTE)v10;
+    FIELD_U32(result + (305) * 12, 0x0) = v10;
+    *((_BYTE *)FIELD_U32(result + (299) * 12, 0x4) + 65) = (_BYTE)v10;
   }
-  v16 = (int)result[304].owner + 1;
-  v17 = (int)result[304].owner - 29 < 0;
-  result[304].owner = (void *)v16;
+  v16 = (int)FIELD_U32(result + (304) * 12, 0x4) + 1;
+  v17 = (int)FIELD_U32(result + (304) * 12, 0x4) - 29 < 0;
+  FIELD_U32(result + (304) * 12, 0x4) = (void *)v16;
   if ( v17 == __OFSUB__(v16, 30) )
   {
-    v18 = result[299].vtable;
-    currentState = result[301].currentState;
-    v18[6] = result[301].owner;
+    v18 = FIELD_U32(result + (299) * 12, 0x0);
+    currentState = FIELD_U32(result + (301) * 12, 0x8);
+    v18[6] = FIELD_U32(result + (301) * 12, 0x4);
     v18[7] = currentState;
     v18[8] = 0;
     *((_BYTE *)v18 + 64) |= 0x10u;
-    *((_BYTE *)result[299].vtable + 65) = 0;
+    *((_BYTE *)FIELD_U32(result + (299) * 12, 0x0) + 65) = 0;
     return StateMgr__changeState((StateMgr *)&result[2], (StateBase *)&dword_60C9EE68);
   }
   return result;

@@ -48,7 +48,7 @@ StateMethodExecuter *__fastcall sub_606DDFDC(StateMethodExecuter *result)
     v7 = v3;
   result[561].currentState = v7;
 LABEL_9:
-  result[13].owner = (char *)result[13].owner + v7;
+  FIELD_U32(result + (13) * 12, 0x4) = (char *)FIELD_U32(result + (13) * 12, 0x4) + v7;
   currentState_high = HIWORD(result[565].currentState);
   v9 = currentState_high == 0;
   if ( HIWORD(result[565].currentState) )

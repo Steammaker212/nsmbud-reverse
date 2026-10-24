@@ -19,7 +19,7 @@ char *__fastcall createWaterSplash(sead_ListNode *a1)
   v6[0] = &sead__SafeStringBase__vtable;
   result = "WaterSplashHeap";
   v6[1] = "WaterSplashHeap";
-  next = a1[2].next;
+  next = FIELD_U32(a1 + (2) * 8, 0x4);
   if ( next )
   {
     result = (char *)sub_608F882C(0, (int)v6, next, 4, 1, 0);
@@ -29,9 +29,9 @@ char *__fastcall createWaterSplash(sead_ListNode *a1)
       v5 = (void (__fastcall ***)(_DWORD))operator_new(0x68u);
       createWaterSplash_helper(v5);
       (**v5)(v5);
-      sead__ListNode__insertFront(a1 + 3, (sead_ListNode *)((char *)a1[4].next + (unsigned int)v5));
+      sead__ListNode__insertFront(a1 + 3, (sead_ListNode *)((char *)FIELD_U32(a1 + (4) * 8, 0x4) + (unsigned int)v5));
       result = (char *)&a1[4].FIELD_U32(previous, 0x0) + 1;
-      a1[4].previous = (sead_ListNode *)result;
+      FIELD_U32(a1 + (4) * 8, 0x0) = (sead_ListNode *)result;
       if ( v4 != 1 )
         return (char *)sead__HeapMgr__setCurrentHeap(sead__HeapMgr__sInstance, v4);
     }

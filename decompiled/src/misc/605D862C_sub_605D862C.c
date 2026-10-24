@@ -30,7 +30,7 @@ float32x2_t *__fastcall sub_605D862C(float32x2_t *a1)
   if ( sub_605DBD64(a1) )
     v2 = 0.0;
   else
-    v2 = a1[72].n64_f32[0];
+    v2 = FIELD_F32(a1 + (72) * 8, 0x0)[0];
   v3 = a1[20].n64_u32[0];
   v4 = a1[20].n64_u32[1];
   v16 = a1[19].n64_u32[1];
@@ -46,8 +46,8 @@ float32x2_t *__fastcall sub_605D862C(float32x2_t *a1)
   v14 = 0;
   LODWORD(v15) = 1065353216;
   HIDWORD(v11) = a1[13].n64_u32[1];
-  HIDWORD(v13) = a1[14].n64_u32[0];
-  HIDWORD(v15) = a1[14].n64_u32[1];
+  HIDWORD(v13) = FIELD_U32(a1 + (14) * 8, 0x0)[0];
+  HIDWORD(v15) = FIELD_U32(a1 + (14) * 8, 0x0)[1];
   Mtx34_rotateY(&v10, &v17);
   *((float *)&v11 + 1) = *((float *)&v11 + 1)
                        + (float)((float)((float)(v2 * v10.n64_f32[1]) + (float)(v10.n64_f32[0] * 0.0))

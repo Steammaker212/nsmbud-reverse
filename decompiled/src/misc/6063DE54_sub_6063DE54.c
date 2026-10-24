@@ -31,7 +31,7 @@ MultiStateActor *__fastcall sub_6063DE54(MultiStateActor *a1, ActorBuildInfo *a2
   a1[1]._._.field_274 = 0;
   a1[1]._._.field_270 = 0;
   a1[1]._._.field_26C = 0;
-  a1[1]._._.field_260.z = 0.0;
+  FIELD_F32(a1 + (1) * 6104, 0x268) = 0.0;
   a1[1]._._.field_260.y = 0.0;
   a1[1]._._.field_260.x = 0.0;
   v3 = a1[1]._._.field_224;

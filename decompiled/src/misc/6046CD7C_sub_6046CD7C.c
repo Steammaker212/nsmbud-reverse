@@ -13,7 +13,7 @@ int __fastcall sub_6046CD7C(Actor *a1)
   int v3; // [sp+4h] [bp-Ch] BYREF
 
   if ( sub_60463998(a1, &v3, 4, 1) == 1 )
-    SE_PLY_GET_ITEM_AGAIN_ref((int)a1, v3, a1[77].field_30);
+    SE_PLY_GET_ITEM_AGAIN_ref((int)a1, v3, FIELD_U32(a1 + (77) * 80, 0x30));
   nullsub_22();
   return sub_6046C3AC((int)a1);
 }

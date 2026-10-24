@@ -25,17 +25,17 @@ float32x4_t *__fastcall sub_602362F4(int a1, unsigned __int64 *a2)
     if ( FIELD_U32(a1, 56) == FIELD_U32(v5, 32) )
     {
       result = (float32x4_t *)sub_60881DE8(result);
-      if ( result[22].n128_i32[0] >= 1 )
+      if ( FIELD_U32(result + (22) * 16, 0x0)[0] >= 1 )
       {
         v7 = result == 0;
         if ( result )
           v7 = FIELD_U32(result, 0x0)[8] == 0;
         if ( !v7 )
         {
-          v8.n128_u64[1] = result[17].n128_u64[1];
+          v8.n128_u64[1] = FIELD_U64(result + (17) * 16, 0x0)[1];
           v8.n128_u64[0] = *a2;
-          result[17].n128_u64[0] = *a2;
-          result[17].n128_u64[1] = v8.n128_u64[1];
+          FIELD_U64(result + (17) * 16, 0x0)[0] = *a2;
+          FIELD_U64(result + (17) * 16, 0x0)[1] = v8.n128_u64[1];
           v9 = result + 14;
           result += 19;
           *result = vmulq_f32(v8, *v9);

@@ -38,7 +38,7 @@ int __fastcall GiantWiggler_onCreate_helper_2559BC(Enemy *a1)
   v2 = 0;
   v25 = a1[1]._._._._.field_2C;
   childCount = a1[1]._._._._.childCount;
-  next = a1[1]._._._._.field_20.next;
+  next = FIELD_U32(a1 + (1) * 6300, 0x24);
   y = FIELD_F32(a1, 0x70);
   x = FIELD_F32(a1, 0x6C);
   *(_WORD *)&v20.field_0 = 0;

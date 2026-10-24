@@ -73,7 +73,7 @@ StateActor *__fastcall Player_ctor(StateActor *a1, ActorBuildInfo *a2)
   LOBYTE(a1[1].states.executer.methodExecuter.vtable) = 0;
   a1[1].states.executer.vtable = 0;
   a1[1].states.vtable = 0;
-  a1[1]._.field_17AC = 0;
+  FIELD_U32(a1 + (1) * 6100, 0x17AC) = 0;
   LOBYTE(a1[1].states.manager.currentMethodExecuter) = 0;
   a1[1].states.manager.nextState = 0;
   a1[1].states.manager.executer = 0;
@@ -105,7 +105,7 @@ StateActor *__fastcall Player_ctor(StateActor *a1, ActorBuildInfo *a2)
   *(_DWORD *)&a1[2]._.collisionMgr[80] = 0;
   LOBYTE(a1[2]._._.field_260.x) = 0;
   a1[2]._._.field_254.z = 0.0;
-  a1[2]._._.field_254.y = 0.0;
+  FIELD_F32(a1 + (2) * 6100, 0x258) = 0.0;
   a1[2]._._.field_254.x = 0.0;
   a1[2]._._.field_248.z = 0.0;
   a1[2]._._.field_248.y = 0.0;

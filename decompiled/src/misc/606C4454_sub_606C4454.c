@@ -12,13 +12,13 @@ StateMethodExecuter *__fastcall sub_606C4454(StateMethodExecuter *result)
 {
   int v1; // r1
 
-  *(float *)&result[5].currentState = *(float *)&result[6].vtable + *(float *)&result[5].currentState;
-  v1 = result[6].currentState - 1;
-  result[6].currentState = v1;
+  *(float *)&FIELD_U32(result + (5) * 12, 0x8) = *(float *)&FIELD_U32(result + (6) * 12, 0x0) + *(float *)&FIELD_U32(result + (5) * 12, 0x8);
+  v1 = FIELD_U32(result + (6) * 12, 0x8) - 1;
+  FIELD_U32(result + (6) * 12, 0x8) = v1;
   if ( !v1 )
   {
-    result[6].currentState = (int)result[7].owner;
-    return StateMgr__changeState((StateMgr *)&result[1].currentState, (StateBase *)&dword_60CBAB60);
+    FIELD_U32(result + (6) * 12, 0x8) = (int)FIELD_U32(result + (7) * 12, 0x4);
+    return StateMgr__changeState((StateMgr *)&FIELD_U32(result + (1) * 12, 0x8), (StateBase *)&dword_60CBAB60);
   }
   return result;
 }

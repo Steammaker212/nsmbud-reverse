@@ -64,7 +64,7 @@ StateMethodExecuter *__fastcall sub_60555E90(StateMethodExecuter *result)
               v12 = v11[2689] == 0;
             if ( v12 || !v11[2691] && !v11[2690] )
             {
-              v13 = (_BYTE *)result[474].currentState;
+              v13 = (_BYTE *)FIELD_U32(result + (474) * 12, 0x8);
               v14 = v13 == 0;
               if ( v13 )
                 v14 = v13[2689] == 0;

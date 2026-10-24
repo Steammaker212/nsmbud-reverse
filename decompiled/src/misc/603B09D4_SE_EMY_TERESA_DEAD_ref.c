@@ -15,14 +15,14 @@ int __fastcall SE_EMY_TERESA_DEAD_ref(Vec3 *a1, float *a2)
   Vec2 v7; // [sp+8h] [bp+0h] BYREF
   Vec3 position; // [sp+10h] [bp+8h] BYREF
 
-  y = a1[9].y;
+  y = FIELD_F32(a1 + (9) * 12, 0x4);
   v5 = Global_BasicSoundActor1;
-  position.x = a1[9].x;
+  position.x = FIELD_F32(a1 + (9) * 12, 0x0);
   position.y = y;
   mapPositionToScreen(&v7, &position);
   sub_60813810(v5, (int)"SE_EMY_TERESA_DEAD", (int)&v7, 1, 0);
   EffectData_create(375, a1 + 535, 0, 0);
-  sub_602A6C70(&FIELD_F32(a1, 0x0), a1[9].x < *a2);
+  sub_602A6C70(&FIELD_F32(a1, 0x0), FIELD_F32(a1 + (9) * 12, 0x0) < *a2);
   StageActor__delete((StateActor *)a1, 1);
   return 1;
 }

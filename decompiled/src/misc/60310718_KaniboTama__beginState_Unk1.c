@@ -27,6 +27,6 @@ Enemy *__fastcall KaniboTama__beginState_Unk1(Enemy *a1)
     LOBYTE(FIELD_F32(p_speed, 0x0)) = 1;
   }
   FIELD_U32(a1, 0x26C) = (int)&a1[1]._._._.speed.z;
-  FIELD_U32(a1, 0x270) = (int)&a1[1]._._._.rotation.z;
+  FIELD_U32(a1, 0x270) = (int)&FIELD_U32(a1 + (1) * 6300, 0xA4);
   return (Enemy *)((char *)a1 + 6428);
 }

@@ -66,7 +66,7 @@ _DWORD *__fastcall sub_6019EEE8(_DWORD *a1)
       v5 = 1;
       v6 = (int *)&v4[3];
       v7 = v4 + 2;
-      p_next = &v4[3].next;
+      p_next = &FIELD_U32(v4 + (3) * 8, 0x4);
       do
       {
         sead__ListNode__insertFront(v7, (sead_ListNode *)((char *)*p_next + v3));

@@ -17,7 +17,7 @@ MultiStateActor *__fastcall Actor_akutarareexclusive_koin_build(ActorBuildInfo *
   FIELD_U32(v2, 0x0) = (int)off_60C04FDC;
   sub_6000BAC8(&v2[1]._._._.heap, FIELD_U32(v2, 0x8));
   v2[1]._._._.heap = (int)off_60C050A8;
-  v2[1]._._._.childCount = (int)v2;
+  FIELD_U32(v2 + (1) * 6104, 0x28) = (int)v2;
   v2[1]._._._.field_2C = 0;
   v2[1]._._._.field_30 = 0;
   v2[1]._._._.field_34 = 0;

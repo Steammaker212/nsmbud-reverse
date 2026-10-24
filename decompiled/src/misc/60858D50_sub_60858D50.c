@@ -47,7 +47,7 @@ int __fastcall sub_60858D50(float32x4_t *a1, int a2, int a3, int a4, float32x2_t
   float32x4_t v42; // 0:q10.16
   float32x4_t v43; // 0:q14.16
 
-  v8 = a1[4].n128_u8[0];
+  v8 = FIELD_U32(a1 + (4) * 16, 0x0)[0];
   v9 = (v8 & 1) == 0;
   if ( (v8 & 1) == 0 )
     v9 = FIELD_U8(a3, 21) == 0;
@@ -58,14 +58,14 @@ int __fastcall sub_60858D50(float32x4_t *a1, int a2, int a3, int a4, float32x2_t
       v10 = FIELD_U32(a1, 0x0)[3] == 0;
     if ( v10 )
     {
-      v11 = a1[4].n128_u8[1];
+      v11 = FIELD_U32(a1 + (4) * 16, 0x0)[1];
     }
     else
     {
-      a5.n64_u32[0] = (unsigned int)(float)((float)a1[4].n128_u8[1] * FIELD_F32(a3, 16));
+      a5.n64_u32[0] = (unsigned int)(float)((float)FIELD_U32(a1 + (4) * 16, 0x0)[1] * FIELD_F32(a3, 16));
       v11 = a5.n64_u32[0];
     }
-    a1[4].n128_u8[2] = v11;
+    FIELD_U32(a1 + (4) * 16, 0x0)[2] = v11;
     if ( v11 || (v8 & 2) == 0 || FIELD_U8(a3, 22) )
     {
       v12 = 1;
@@ -75,19 +75,19 @@ int __fastcall sub_60858D50(float32x4_t *a1, int a2, int a3, int a4, float32x2_t
         {
           v14 = FIELD_U32(a1, 0x0)[3];
           v15 = *(int32x2_t **)(a3 + 4);
-          v16 = a1[8].n128_u32[0];
+          v16 = FIELD_U32(a1 + (8) * 16, 0x0)[0];
           if ( v14 )
             v15 = (int32x2_t *)(v14 + 80);
           v17 = v15 + 4;
           v19.n64_u64[0] = FIELD_U64(v15, 0x0)[0];
-          v20.n64_u64[0] = v15[1].n64_u64[0];
+          v20.n64_u64[0] = FIELD_U64(v15 + (1) * 8, 0x0)[0];
           v18 = v15 + 2;
           a5.n64_u64[0] = FIELD_U64(v17, 0x0)[0];
-          v21.n64_u64[0] = v17[1].n64_u64[0];
+          v21.n64_u64[0] = FIELD_U64(v17 + (1) * 8, 0x0)[0];
           v42 = *(float32x4_t *)(v16 + 16);
           v22 = vdupq_lane_s32(v20, 1);
           v23 = vdupq_lane_s32(v21, 1);
-          v24.n64_u64[0] = v18[1].n64_u64[0];
+          v24.n64_u64[0] = FIELD_U64(v18 + (1) * 8, 0x0)[0];
           v25 = vdupq_lane_s32(v24, 1);
           v43 = *(float32x4_t *)(v16 + 32);
           v26 = vextq_s8((int8x16_t)vzipq_s32(v22, v22).val, (int8x16_t)0LL, 0xCu);
@@ -109,9 +109,9 @@ int __fastcall sub_60858D50(float32x4_t *a1, int a2, int a3, int a4, float32x2_t
         v12 = 0;
         if ( (a4 | ((unsigned __int8)(v8 & 0x10) >> 4)) == 1 )
         {
-          a1[4].n128_u8[0] = v8 & 0xEF;
+          FIELD_U32(a1 + (4) * 16, 0x0)[0] = v8 & 0xEF;
           sub_60858FD0(a1, a3, a5.n64_f32[0]);
-          v8 = a1[4].n128_u8[0];
+          v8 = FIELD_U32(a1 + (4) * 16, 0x0)[0];
 LABEL_22:
           v12 = 1;
         }
@@ -119,12 +119,12 @@ LABEL_22:
       v33 = (v8 & 2) == 0;
       if ( (v8 & 2) != 0 )
       {
-        v8 = a1[4].n128_u8[1];
+        v8 = FIELD_U32(a1 + (4) * 16, 0x0)[1];
         v33 = v8 == 255;
       }
       if ( v33 )
       {
-        for ( i = (float32x4_t *)a1[1].n128_u32[1]; i != &a1[1]; i = *((float32x4_t **)v35 + 2) )
+        for ( i = (float32x4_t *)FIELD_U32(a1 + (1) * 16, 0x0)[1]; i != &a1[1]; i = *((float32x4_t **)v35 + 2) )
         {
           v36 = i[-1].n128_u32[3];
           v35 = &i[-1].n128_i8[12];
@@ -143,7 +143,7 @@ LABEL_22:
         v38 = FIELD_U8(a3, 23);
         FIELD_F32(a3, 16) = (float)((float)v8 * v37) * 0.0039216;
         FIELD_U8(a3, 23) = 1;
-        for ( j = (float32x4_t *)a1[1].n128_u32[1]; j != &a1[1]; j = *((float32x4_t **)v40 + 2) )
+        for ( j = (float32x4_t *)FIELD_U32(a1 + (1) * 16, 0x0)[1]; j != &a1[1]; j = *((float32x4_t **)v40 + 2) )
         {
           v41 = j[-1].n128_u32[3];
           v40 = &j[-1].n128_i8[12];
@@ -152,18 +152,18 @@ LABEL_22:
         FIELD_F32(a3, 16) = v37;
         FIELD_U8(a3, 23) = v38;
       }
-      a1[4].n128_u8[0] |= 0x80u;
-      result = a1[4].n128_u8[4] | 0x10;
-      a1[4].n128_u8[4] = result;
+      FIELD_U32(a1 + (4) * 16, 0x0)[0] |= 0x80u;
+      result = FIELD_U32(a1 + (4) * 16, 0x0)[4] | 0x10;
+      FIELD_U32(a1 + (4) * 16, 0x0)[4] = result;
       return result;
     }
   }
   if ( a4 == 1 )
   {
     LOBYTE(v8) = v8 | 0x10;
-    a1[4].n128_u8[0] = v8;
+    FIELD_U32(a1 + (4) * 16, 0x0)[0] = v8;
   }
   result = v8 & 0x7F;
-  a1[4].n128_u8[0] = result;
+  FIELD_U32(a1 + (4) * 16, 0x0)[0] = result;
   return result;
 }

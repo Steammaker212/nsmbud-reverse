@@ -115,7 +115,7 @@ float32x4_t *__fastcall sub_60879FC0(
   float32x4_t v116; // 0:d22.8,8:d23.8
   float32x4_t v117; // 0:d30.8,8:d31.8
 
-  v7 = a1[4].n128_f32[1];
+  v7 = FIELD_F32(a1 + (4) * 16, 0x0)[1];
   v8 = a2 + 2;
   v9 = *v8;
   result = a1 + 2;

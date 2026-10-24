@@ -14,6 +14,6 @@ Actor *__fastcall sub_601A75F0(Actor *a1, unsigned __int8 *a2)
 
   result = sub_60185C70(a1, a2);
   FIELD_U32(result, 0x0) = (int)off_60BD6100;
-  result[3].settigns2 = -1;
+  FIELD_U32(result + (3) * 80, 0x18) = -1;
   return result;
 }

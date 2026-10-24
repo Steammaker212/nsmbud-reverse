@@ -20,7 +20,7 @@ const char *__fastcall BigBlockFragmentHeap_ref(sead_ListNode *a1, _DWORD *a2, i
   v11[0] = &sead__SafeStringBase__vtable;
   result = "BigBlockFragmentHeap";
   v11[1] = "BigBlockFragmentHeap";
-  next = a1[2].next;
+  next = FIELD_U32(a1 + (2) * 8, 0x4);
   if ( next )
   {
     result = (const char *)sub_608F882C(0, (int)v11, next, 4, 1, 0);
@@ -31,9 +31,9 @@ const char *__fastcall BigBlockFragmentHeap_ref(sead_ListNode *a1, _DWORD *a2, i
       v10 = (void (__fastcall ***)(_DWORD))operator_new(0xD4u);
       sub_603EC4AC((int)v10, v8, a2, a3 << 8);
       (**v10)(v10);
-      sead__ListNode__insertFront(a1 + 3, (sead_ListNode *)((char *)a1[4].next + (unsigned int)v10));
+      sead__ListNode__insertFront(a1 + 3, (sead_ListNode *)((char *)FIELD_U32(a1 + (4) * 8, 0x4) + (unsigned int)v10));
       result = (char *)&a1[4].FIELD_U32(previous, 0x0) + 1;
-      a1[4].previous = (sead_ListNode *)result;
+      FIELD_U32(a1 + (4) * 8, 0x0) = (sead_ListNode *)result;
       if ( v9 != 1 )
         return (const char *)sead__HeapMgr__setCurrentHeap(sead__HeapMgr__sInstance, v9);
     }

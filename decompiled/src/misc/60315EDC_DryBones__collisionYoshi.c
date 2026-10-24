@@ -71,12 +71,12 @@ LABEL_21:
     v14 = 12;
     if ( (float)(FIELD_F32(v13, 0x70) - FIELD_F32(v13, 0x24C)) > 0.0 )
       v14 = 0;
-    LOBYTE(v13[9].aCollider.field_120) = v14;
+    LOBYTE(FIELD_U32(v13 + (9) * 644, 0x1DC)) = v14;
   }
   v15 = Enemy__processCollision((Enemy *)a1, a2, a3, 0);
   if ( !v15 )
   {
-    LOBYTE(v13[9].aCollider.field_120) = 0;
+    LOBYTE(FIELD_U32(v13 + (9) * 644, 0x1DC)) = 0;
     goto LABEL_21;
   }
   if ( v15 != 2 )
@@ -87,5 +87,5 @@ LABEL_21:
     (*(void (__fastcall **)(int, int *))(*(_DWORD *)a1 + 192))(a1, &dword_60C9345C);
     FIELD_U8(a1, 7661) = 0;
   }
-  LOBYTE(v13[9].aCollider.field_120) = 0;
+  LOBYTE(FIELD_U32(v13 + (9) * 644, 0x1DC)) = 0;
 }

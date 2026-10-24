@@ -35,15 +35,15 @@ float32x4_t *__fastcall sub_608808A4(
   float v22; // s0
 
   v15 = result[8].n128_u32[2];
-  v16 = result[9].n128_u32[0];
+  v16 = FIELD_U32(result + (9) * 16, 0x0)[0];
   LODWORD(v17) = (FIELD_S32(v15, 2060) * (unsigned __int64)v16) >> 32;
   v18 = (float)FIELD_S32(v15, 2056) + 1.0;
-  result[9].n128_u32[0] = 1103515245 * v16 + 12345;
+  FIELD_U32(result + (9) * 16, 0x0)[0] = 1103515245 * v16 + 12345;
   v19 = v18 + (float)SLODWORD(v17);
   *a2 = v19;
-  v20 = result[6].n128_f32[0] * v19;
+  v20 = FIELD_F32(result + (6) * 16, 0x0)[0] * v19;
   *a2 = v20;
-  v21 = *(float *)(result[7].n128_u32[1] + 72);
+  v21 = *(float *)(FIELD_U32(result + (7) * 16, 0x0)[1] + 72);
   v22 = v21 * v20;
   *a2 = v22;
   if ( *(_BYTE *)(result[8].n128_u32[2] + 1880) )

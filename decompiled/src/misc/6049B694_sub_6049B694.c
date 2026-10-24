@@ -12,7 +12,7 @@ StateMethodExecuter *__fastcall sub_6049B694(StateMethodExecuter *result)
 {
   int currentState; // r1
 
-  currentState = result[302].currentState;
+  currentState = FIELD_U32(result + (302) * 12, 0x8);
   if ( currentState )
   {
     if ( !FIELD_U8(currentState, 2699) )

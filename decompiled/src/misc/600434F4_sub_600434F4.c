@@ -90,7 +90,7 @@ LABEL_4:
     v8 = sub_60421830(v7, Model2, 2, 1, 0, 0, 0);
     j_ModelWrapper_setupModel((int)v8, (int)v4, 0, 0);
     v5[1369] = (int)v7;
-    animations = (unsigned int)v7[1].texAnims.animations;
+    animations = (unsigned int)FIELD_U32(v7 + (1) * 48, 0x14);
     v10 = (int *)FIELD_U32(v7, 0xC);
     v11 = *v5;
     if ( FIELD_U32(v7, 0x8) > animations )
@@ -155,7 +155,7 @@ LABEL_4:
   v37 = sub_60421830(v36, v35, 2, 1, 1, 1, 0);
   j_ModelWrapper_setupModel((int)v37, (int)v33, 0, 0);
   v34[1] = (int)v36;
-  v38 = (unsigned int)v36[1].texAnims.animations;
+  v38 = (unsigned int)FIELD_U32(v36 + (1) * 48, 0x14);
   v39 = (int *)FIELD_U32(v36, 0xC);
   v40 = *v34;
   if ( FIELD_U32(v36, 0x8) > v38 )

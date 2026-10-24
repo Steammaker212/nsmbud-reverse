@@ -56,7 +56,7 @@ float __fastcall sub_606BD814(ActiveCollider *a1, int a2)
       }
       if ( (FIELD_U32(a2, 136) | 2) == 2 )
       {
-        heap_low = SLOBYTE(v2[1].heap);
+        heap_low = SLOBYTE(FIELD_U32(v2 + (1) * 80, 0x4));
         if ( heap_low <= 3 && !*(_WORD *)(owner + 2 * heap_low + 6128) )
         {
           v12 = FIELD_U8(owner, 6884) == 0;
@@ -76,7 +76,7 @@ float __fastcall sub_606BD814(ActiveCollider *a1, int a2)
                 CenterY = ActiveCollider_getCenterY((ActiveCollider *)a2);
                 if ( CenterY < ActiveCollider_getBottom(a1) )
                 {
-                  v14 = LOBYTE(v2[1].heap);
+                  v14 = LOBYTE(FIELD_U32(v2 + (1) * 80, 0x4));
                   v15 = 0;
                   if ( v14 < 4 )
                     v15 = (char)v14;
@@ -115,7 +115,7 @@ LABEL_37:
                 goto LABEL_37;
               }
               sub_605CC8F8(owner);
-              v21 = LOBYTE(v2[1].heap);
+              v21 = LOBYTE(FIELD_U32(v2 + (1) * 80, 0x4));
               v22 = 0;
               if ( v21 < 4 )
                 v22 = (char)v21;

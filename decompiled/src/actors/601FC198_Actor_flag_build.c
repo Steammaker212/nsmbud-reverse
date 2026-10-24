@@ -16,8 +16,8 @@ Actor *__fastcall Actor_flag_build(unsigned __int8 *a1)
   v2 = (Actor *)operator_new(0x11Cu);
   result = sub_601A75F0(v2, a1);
   FIELD_U32(result, 0x0) = (int)off_60BD81BC;
-  *(_DWORD *)&result[3].movementId = 0;
-  result[3].field_20.next = 0;
-  LOWORD(result[3].childCount) = a1[37];
+  *(_DWORD *)&FIELD_U8(result + (3) * 80, 0x1C) = 0;
+  FIELD_U32(result + (3) * 80, 0x24) = 0;
+  LOWORD(FIELD_U32(result + (3) * 80, 0x28)) = a1[37];
   return result;
 }

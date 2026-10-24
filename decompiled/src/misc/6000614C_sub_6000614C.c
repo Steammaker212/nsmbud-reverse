@@ -64,7 +64,7 @@ int __fastcall sub_6000614C(int a1, int a2, int a3)
       }
       if ( v15 )
         goto LABEL_29;
-      id = v14[1].id;
+      id = FIELD_U32(v14 + (1) * 24, 0x8);
       if ( (id & 0x80) != 0 )
         break;
       if ( (id & 0x100) != 0 && (*v12 & 0x1000000F) == 0 && (a3 & 4) == 0 )

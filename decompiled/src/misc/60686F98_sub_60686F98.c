@@ -138,7 +138,7 @@ int __fastcall sub_60686F98(int a1)
     j_ModelWrapper_setupModel(v55, v52, 0, 0);
     FIELD_U32(a1, 6116) = v54;
     v27 = a1 + 6116;
-    animations = (unsigned int)v54[1].texAnims.animations;
+    animations = (unsigned int)FIELD_U32(v54 + (1) * 48, 0x14);
     v57 = (int *)FIELD_U32(v54, 0xC);
     v30 = *v34;
     if ( FIELD_U32(v54, 0x8) > animations )
@@ -210,7 +210,7 @@ int __fastcall sub_60686F98(int a1)
     j_ModelWrapper_setupModel(v26, v23, 0, 0);
     FIELD_U32(a1, 6116) = v25;
     v27 = a1 + 6116;
-    v28 = (unsigned int)v25[1].texAnims.animations;
+    v28 = (unsigned int)FIELD_U32(v25 + (1) * 48, 0x14);
     v29 = (int *)FIELD_U32(v25, 0xC);
     v30 = *v5;
     if ( FIELD_U32(v25, 0x8) > v28 )

@@ -14,13 +14,13 @@ StateMethodExecuter *__fastcall sub_601F7A44(StateMgr *a1)
   int v3; // r0
 
   sub_601F74B4((int)a1);
-  result = (StateMethodExecuter *)a1[11].nextState;
+  result = (StateMethodExecuter *)FIELD_U32(a1 + (11) * 16, 0x4);
   if ( (int)result >= 596523236 )
   {
-    a1[56].lastState = (StateBase *)1077936128;
-    v3 = sub_608332B0(&a1[5], &a1[52].currentMethodExecuter);
-    a1[55].executer = (StateExecuter *)v3;
-    a1[12].executer = (StateExecuter *)v3;
+    FIELD_U32(a1 + (56) * 16, 0xC) = (StateBase *)1077936128;
+    v3 = sub_608332B0(&a1[5], &FIELD_U32(a1 + (52) * 16, 0x8));
+    FIELD_U32(a1 + (55) * 16, 0x0) = (StateExecuter *)v3;
+    FIELD_U32(a1 + (12) * 16, 0x0) = (StateExecuter *)v3;
     ((void (__fastcall *)(StateMgr *))FIELD_U32(a1, 0x0)[4].methodExecuter.owner)(a1);
     return StateMgr__changeState(a1 + 18, (StateBase *)&unk_60C8BA90);
   }

@@ -29,10 +29,18 @@ ARROW = re.compile(r"\b([A-Za-z_]\w*)\s*->\s*([A-Za-z_]\w*)")
 # struct object, not a pointer dereference, and rewriting it is neither needed
 # nor safe -- counting those as unresolved chains made 18,000 accesses look
 # like failures and dropped 996 functions from the corpus.
+#
+# The chain may continue with `->` OR `.`, and the first hop after the index may
+# be a dot. `a1[8].id` and `a1[1]._._._` are pointer arithmetic on the base type:
+# the index multiplies by sizeof(the type), then the member offsets apply. Those
+# were previously invisible to this pattern (it required an arrow early), so they
+# survived into the corpus unchanged and then failed to compile because the
+# struct does not declare the member -- 448 of the 469 single-error
+# "member not found" units, i.e. 96% of that bucket, with one cause.
 CHAIN = re.compile(
     r"\b([A-Za-z_]\w*)"
     r"((?:\s*\[\s*[^\]]+\s*\])?)"
-    r"(\s*->\s*[A-Za-z_]\w*(?:\s*(?:->|\.)\s*[A-Za-z_]\w*)*)")
+    r"(\s*(?:->|\.)\s*[A-Za-z_]\w*(?:\s*(?:->|\.)\s*[A-Za-z_]\w*)*)")
 
 
 def flatten_chain(chain: str):
@@ -199,12 +207,23 @@ def rewrite_body(body: str, types):
             off, macro, _mt, _last_is_ptr = info
             total = pending + off
 
-            if index.strip():
-                # An indexed access needs the element size of the object the
-                # index applies to, and this walker does not model which hop
-                # that is. Left verbatim rather than guessed.
-                unresolved += 1
-                return m.group(0)
+            size = types.get(t, (0, {}))[0]
+            idx = index.strip()
+            if idx:
+                # `a1[8].id` is pointer arithmetic on the base type: the index
+                # scales by sizeof(the type of a1), then the member offsets apply
+                # to that element. Measured against the machine code once rather
+                # than assumed: CollisionActor__dtor encodes `str r1,[r0],#648`
+                # for `a1[8].id` with id at 0x8, and 8 * 0x50 + 0x8 == 0x288 ==
+                # 648. When sizeof is unknown the expression is left verbatim,
+                # because guessing the stride would silently read the wrong
+                # element.
+                if not size:
+                    unresolved += 1
+                    return m.group(0)
+                inner = idx[1:-1].strip()
+                resolved += 1
+                return "%s(%s + (%s) * %d, 0x%X)" % (macro, expr, inner, size, total)
 
             resolved += 1
             return "%s(%s, 0x%X)" % (macro, expr, total)

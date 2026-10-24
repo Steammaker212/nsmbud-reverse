@@ -20,7 +20,7 @@ int __fastcall PowBlock_vf58(CollisionActor *a1)
   v2 = *(_DWORD *)&FIELD_U8(a1, 0x288)[2536];
   *(_DWORD *)&FIELD_U8(a1, 0x288)[2528] |= 0x60u;
   *(_DWORD *)&FIELD_U8(a1, 0x288)[2536] = v2 | 0x60;
-  direction = a1[1]._.direction;
+  direction = FIELD_U32(a1 + (1) * 6064, 0x50);
   if ( direction )
     FIELD_U32(direction, 136) |= 0x1000u;
   sub_605CCAB0(a1);

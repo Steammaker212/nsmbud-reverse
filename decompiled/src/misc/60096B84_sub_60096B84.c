@@ -64,7 +64,7 @@ void __fastcall sub_60096B84(int a1, int a2)
           {
             if ( (**(int (__fastcall ***)(int, int *))v10)(v10, &dword_60C81100) == 1 )
             {
-              FIELD_U32(v10, 9436) = SLOBYTE(v6[1].heap);
+              FIELD_U32(v10, 9436) = SLOBYTE(FIELD_U32(v6 + (1) * 80, 0x4));
               FIELD_U32(v10, 9440) = 60;
             }
           }
@@ -121,7 +121,7 @@ LABEL_27:
       else if ( Actor__getProfileId(v6) == 392 )
       {
         SE_BOSS_CMN_MAGIC_EXTINCT_ref_2(v7);
-        sub_602EE7B8(v6, v6[1].vtable, -1);
+        sub_602EE7B8(v6, FIELD_U32(v6 + (1) * 80, 0x0), -1);
       }
     }
   }

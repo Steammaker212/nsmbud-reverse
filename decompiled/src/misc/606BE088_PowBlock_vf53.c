@@ -31,13 +31,13 @@ StateMethodExecuter *__fastcall PowBlock_vf53(_DWORD *a1)
   {
     v5 = 939524096;
     v6 = 0;
-    if ( !result[6].currentState )
+    if ( !FIELD_U32(result + (6) * 12, 0x8) )
       v5 = -939524096;
     a1[40] += v5;
-    v7 = *(float *)&result[9].vtable - *(float *)&result[48].currentState;
+    v7 = *(float *)&FIELD_U32(result + (9) * 12, 0x0) - *(float *)&FIELD_U32(result + (48) * 12, 0x8);
     if ( v7 < 0.0 )
       v6 = 1;
-    if ( (float)(*(float *)&result[9].owner - *(float *)&result[49].vtable) > 0.0 && (a1[718] & 0x10400) == 0x400
+    if ( (float)(*(float *)&FIELD_U32(result + (9) * 12, 0x4) - *(float *)&FIELD_U32(result + (49) * 12, 0x0)) > 0.0 && (a1[718] & 0x10400) == 0x400
       || sub_605C9ACC((int)a1, 2) == 1 )
     {
       a1[20] = v6 ^ 1;
@@ -85,10 +85,10 @@ LABEL_24:
             v12 = a1[20];
             result = (StateMethodExecuter *)(a1 + 162);
             if ( (a1[((v12 + 18) >> 5) + 718] & (1 << ((v12 + 18) & 0x1F))) != 0
-              || ((int)*(&result[185].owner + ((v12 + 22) >> 5)) & (1 << ((v12 + 22) & 0x1F))) != 0 )
+              || ((int)*(&FIELD_U32(result + (185) * 12, 0x4) + ((v12 + 22) >> 5)) & (1 << ((v12 + 22) & 0x1F))) != 0 )
             {
               v13 = v12 + 28;
-              result = *((StateMethodExecuter **)&result[185].owner + (v13 >> 5));
+              result = *((StateMethodExecuter **)&FIELD_U32(result + (185) * 12, 0x4) + (v13 >> 5));
               if ( ((unsigned int)result & (1 << (v13 & 0x1F))) == 0 )
               {
                 a1[20] = v6 ^ 1;

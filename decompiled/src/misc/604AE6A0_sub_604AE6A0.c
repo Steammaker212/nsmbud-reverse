@@ -12,10 +12,10 @@ StateMethodExecuter *__fastcall sub_604AE6A0(StateMethodExecuter *result)
 {
   int currentState; // r2
 
-  currentState = result[295].currentState;
-  if ( result[295].owner > (void *)2 )
+  currentState = FIELD_U32(result + (295) * 12, 0x8);
+  if ( FIELD_U32(result + (295) * 12, 0x4) > (void *)2 )
     currentState += 40;
   if ( *(float *)(*(_DWORD *)currentState + 44) == 0.0 )
-    return StateMgr__changeState((StateMgr *)&result[1].currentState, (StateBase *)&dword_60CA17E8);
+    return StateMgr__changeState((StateMgr *)&FIELD_U32(result + (1) * 12, 0x8), (StateBase *)&dword_60CA17E8);
   return result;
 }

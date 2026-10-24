@@ -10,15 +10,15 @@
 
 int __fastcall sub_6067FF64(Actor *a1)
 {
-  a1[8].id = 0;
+  FIELD_U32(a1 + (8) * 80, 0x8) = 0;
   if ( Actor__getProfileId(a1) == 745 )
-    a1[8].id = 1;
-  a1[1].field_40 = 1065353216;
-  a1[1].field_44 = 1065353216;
-  a1[1].field_48 = 1065353216;
-  a1[1].field_4C = 0;
-  a1[2].vtable = 0;
-  a1[2].heap = 0;
+    FIELD_U32(a1 + (8) * 80, 0x8) = 1;
+  FIELD_U32(a1 + (1) * 80, 0x40) = 1065353216;
+  FIELD_U32(a1 + (1) * 80, 0x44) = 1065353216;
+  FIELD_U32(a1 + (1) * 80, 0x48) = 1065353216;
+  FIELD_U32(a1 + (1) * 80, 0x4C) = 0;
+  FIELD_U32(a1 + (2) * 80, 0x0) = 0;
+  FIELD_U32(a1 + (2) * 80, 0x4) = 0;
   R_kanban_ref(a1);
   sub_606801CC(a1);
   return 1;

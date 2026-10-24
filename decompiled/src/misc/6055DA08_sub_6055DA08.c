@@ -12,7 +12,7 @@ StateMethodExecuter *__fastcall sub_6055DA08(StateMethodExecuter *result)
 {
   if ( !BYTE2(result[394].owner) )
   {
-    result[3].owner = &dword_60CADED0;
+    FIELD_U32(result + (3) * 12, 0x4) = &dword_60CADED0;
     return StateMgr__changeState((StateMgr *)&result[2], (StateBase *)&dword_60CADDD0);
   }
   return result;

@@ -36,7 +36,7 @@ StateMethodExecuter *__fastcall sub_604C3D50(int a1)
     if ( ((unsigned __int16)result & 0x10F0) == 0 )
     {
       result = *(StateMethodExecuter **)(FIELD_U32(dword_60CCF448, 220) + 20);
-      if ( *(float *)&result[23].currentState == 0.0 && *(float *)&result[24].vtable == 0.0 )
+      if ( *(float *)&FIELD_U32(result + (23) * 12, 0x8) == 0.0 && *(float *)&FIELD_U32(result + (24) * 12, 0x0) == 0.0 )
         return StateMgr__changeState((StateMgr *)(a1 + 24), (StateBase *)&dword_60CA2DEC);
     }
   }

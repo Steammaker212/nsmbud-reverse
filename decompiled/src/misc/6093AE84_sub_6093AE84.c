@@ -60,10 +60,10 @@ _DWORD *__fastcall sub_6093AE84(int a1, int a2, float32x2_t *a3, float32x2_t *a4
   float32x4_t v55; // 0:q11.16
   float32x4_t v56; // 0:q15.16
 
-  v8.n64_u64[0] = a3[1].n64_u64[0];
-  v9.n64_u64[0] = a3[5].n64_u64[0];
-  v10.n64_u64[0] = a3[2].n64_u64[0];
-  v11.n64_u64[0] = a3[3].n64_u64[0];
+  v8.n64_u64[0] = FIELD_U64(a3 + (1) * 8, 0x0)[0];
+  v9.n64_u64[0] = FIELD_U64(a3 + (5) * 8, 0x0)[0];
+  v10.n64_u64[0] = FIELD_U64(a3 + (2) * 8, 0x0)[0];
+  v11.n64_u64[0] = FIELD_U64(a3 + (3) * 8, 0x0)[0];
   v12 = vdupq_lane_s32(v8, 1);
   v13 = vdupq_lane_s32(v9, 1);
   v14 = vmulq_n_f32(*(float32x4_t *)a2, v10.n64_f32[0]);
@@ -77,16 +77,16 @@ _DWORD *__fastcall sub_6093AE84(int a1, int a2, float32x2_t *a3, float32x2_t *a4
           v8,
           0);
   v18 = vdupq_lane_s32(v11, 1);
-  v19 = vmlaq_lane_f32(vmlaq_lane_f32(vmulq_n_f32(*(float32x4_t *)a2, a3[4].n64_f32[0]), v55, a3[4], 1), v56, v9, 0);
+  v19 = vmlaq_lane_f32(vmlaq_lane_f32(vmulq_n_f32(*(float32x4_t *)a2, FIELD_F32(a3 + (4) * 8, 0x0)[0]), v55, a3[4], 1), v56, v9, 0);
   v20 = vextq_s8((int8x16_t)vzipq_s32(v18, v18).val, (int8x16_t)0, 0xCu);
   v52 = vaddq_f32(vextq_s8(v15, v15, 4u), v17);
   v53 = vaddq_f32(vextq_s8(v20, v20, 4u), vmlaq_lane_f32(vmlaq_lane_f32(v14, v55, v10, 1), v56, v11, 0));
   v54 = vaddq_f32(vextq_s8(v16, v16, 4u), v19);
   *(float32x2_t *)&v20.n128_i8[8] = a4[1];
-  v21.n64_u64[0] = a4[3].n64_u64[0];
+  v21.n64_u64[0] = FIELD_U64(a4 + (3) * 8, 0x0)[0];
   v22 = vdupq_lane_s32(*(int32x2_t *)&v20.n128_i8[8], 1);
   v23 = vdupq_lane_s32(v21, 1);
-  v24.n64_u64[0] = a4[5].n64_u64[0];
+  v24.n64_u64[0] = FIELD_U64(a4 + (5) * 8, 0x0)[0];
   v25 = vmlaq_lane_f32(
           vmlaq_lane_f32(vmulq_n_f32(v52, FIELD_F32(a4, 0x0)[0]), v53, (float32x2_t)FIELD_U64(a4, 0x0)[0], 1),
           v54,
@@ -96,14 +96,14 @@ _DWORD *__fastcall sub_6093AE84(int a1, int a2, float32x2_t *a3, float32x2_t *a4
   v27 = vextq_s8((int8x16_t)vzipq_s32(v22, v22).val, (int8x16_t)0, 0xCu);
   v28 = vextq_s8((int8x16_t)vzipq_s32(v23, v23).val, (int8x16_t)0, 0xCu);
   v29 = vextq_s8(v27, v27, 4u);
-  v30 = vmlaq_lane_f32(vmlaq_lane_f32(vmulq_n_f32(v52, a4[2].n64_f32[0]), v53, a4[2], 1), v54, v21, 0);
+  v30 = vmlaq_lane_f32(vmlaq_lane_f32(vmulq_n_f32(v52, FIELD_F32(a4 + (2) * 8, 0x0)[0]), v53, a4[2], 1), v54, v21, 0);
   v31 = vextq_s8((int8x16_t)vzipq_s32(v26, v26).val, (int8x16_t)0, 0xCu);
   *(float32x2_t *)&v26.n128_i8[8] = a4[7];
   v32 = vaddq_f32(v29, v25);
-  v33 = vmlaq_lane_f32(vmlaq_lane_f32(vmulq_n_f32(v52, a4[4].n64_f32[0]), v53, a4[4], 1), v54, v24, 0);
+  v33 = vmlaq_lane_f32(vmlaq_lane_f32(vmulq_n_f32(v52, FIELD_F32(a4 + (4) * 8, 0x0)[0]), v53, a4[4], 1), v54, v24, 0);
   v34 = vdupq_lane_s32(*(int32x2_t *)&v26.n128_i8[8], 1);
   v35 = vmlaq_lane_f32(
-          vmlaq_lane_f32(vmulq_n_f32(v52, a4[6].n64_f32[0]), v53, a4[6], 1),
+          vmlaq_lane_f32(vmulq_n_f32(v52, FIELD_F32(a4 + (6) * 8, 0x0)[0]), v53, a4[6], 1),
           v54,
           *(float32x2_t *)&v26.n128_i8[8],
           0);
@@ -116,13 +116,13 @@ _DWORD *__fastcall sub_6093AE84(int a1, int a2, float32x2_t *a3, float32x2_t *a4
   v31.n128_u32[2] = *a7;
   v26.n128_u32[2] = a7[2];
   v37 = (float)((float)(v26.n128_f32[0] * FIELD_F32(a3, 0x0)[1]) + (float)(*(float *)a7 * FIELD_F32(a3, 0x0)[0]))
-      + (float)(v26.n128_f32[2] * a3[1].n64_f32[0]);
+      + (float)(v26.n128_f32[2] * FIELD_F32(a3 + (1) * 8, 0x0)[0]);
   v48 = v37;
-  v38 = (float)((float)(v26.n128_f32[0] * a3[2].n64_f32[1]) + (float)(v31.n128_f32[2] * a3[2].n64_f32[0]))
-      + (float)(v26.n128_f32[2] * a3[3].n64_f32[0]);
+  v38 = (float)((float)(v26.n128_f32[0] * FIELD_F32(a3 + (2) * 8, 0x0)[1]) + (float)(v31.n128_f32[2] * FIELD_F32(a3 + (2) * 8, 0x0)[0]))
+      + (float)(v26.n128_f32[2] * FIELD_F32(a3 + (3) * 8, 0x0)[0]);
   v49 = v38;
-  v39 = (float)((float)(v26.n128_f32[0] * a3[4].n64_f32[1]) + (float)(v31.n128_f32[2] * a3[4].n64_f32[0]))
-      + (float)(v26.n128_f32[2] * a3[5].n64_f32[0]);
+  v39 = (float)((float)(v26.n128_f32[0] * FIELD_F32(a3 + (4) * 8, 0x0)[1]) + (float)(v31.n128_f32[2] * FIELD_F32(a3 + (4) * 8, 0x0)[0]))
+      + (float)(v26.n128_f32[2] * FIELD_F32(a3 + (5) * 8, 0x0)[0]);
   v50 = v39;
   v40 = sqrtf((float)((float)(v38 * v38) + (float)(v37 * v37)) + (float)(v39 * v39));
   if ( v40 > 0.0 )

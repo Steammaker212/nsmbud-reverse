@@ -40,13 +40,13 @@ int __fastcall sub_602C89C4(int a1, ActiveCollider *a2, ActiveCollider *a3)
     && (Actor__getProfileId(v7) == 563 || Actor__getProfileId(v7) == 564) )
   {
     v10 = FIELD_F32(a1, 108);
-    v11 = *(float *)&v7[1].movementId;
+    v11 = *(float *)&FIELD_U8(v7 + (1) * 80, 0x1C);
     v12 = FIELD_U32(a1, 80);
     if ( v11 < v10 == v12 )
       goto LABEL_13;
     v13 = v11 == v10;
     if ( v11 == v10 )
-      v13 = v7[1].vtable == v12;
+      v13 = FIELD_U32(v7 + (1) * 80, 0x0) == v12;
     if ( v13 )
     {
 LABEL_13:

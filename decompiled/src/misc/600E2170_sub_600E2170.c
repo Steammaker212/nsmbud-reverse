@@ -16,8 +16,8 @@ signed int __fastcall sub_600E2170(EffectWrapper *a1)
   float v5; // s0
   Vec3 v7; // [sp+4h] [bp-2Ch] BYREF
 
-  v2 = *(float *)&a1[1]._.field_8;
-  v3 = *(float *)&a1[1]._.containingHeap;
+  v2 = *(float *)&FIELD_U32(a1 + (1) * 104, 0x8);
+  v3 = *(float *)&FIELD_U32(a1 + (1) * 104, 0x4);
   v4 = (*(float (__fastcall **)(EffectWrapper *))(FIELD_U32(a1, 0x0) + 204))(a1);
   v5 = (*(float (__fastcall **)(EffectWrapper *, float))(FIELD_U32(a1, 0x0) + 200))(a1, v4);
   v7.x = v3;

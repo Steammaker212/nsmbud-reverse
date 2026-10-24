@@ -19,11 +19,11 @@ StateMethodExecuter *__fastcall sub_601A1F90(StateMethodExecuter *result)
     v2 = dword_60AF5A10[v1];
     if ( v2 == 1 )
     {
-      return StateMgr__changeState((StateMgr *)&result[238].currentState, (StateBase *)&dword_60C89F9C);
+      return StateMgr__changeState((StateMgr *)&FIELD_U32(result + (238) * 12, 0x8), (StateBase *)&dword_60C89F9C);
     }
     else if ( !v2 )
     {
-      return StateMgr__changeState((StateMgr *)&result[238].currentState, (StateBase *)&dword_60C89F7C);
+      return StateMgr__changeState((StateMgr *)&FIELD_U32(result + (238) * 12, 0x8), (StateBase *)&dword_60C89F7C);
     }
   }
   return result;

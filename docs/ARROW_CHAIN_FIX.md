@@ -98,6 +98,18 @@ The 19 applied expressions leave the compile-clean count exactly where it was,
 because both the flat and nested forms are valid C of the same type. This repair
 is about what the C *means*, not about whether it parses.
 
+## The second, larger half: indexed access
+
+A follow-up measurement found that the same pattern also chose wrongly for
+`a1[8].id`, where the `CHAIN` regex required an arrow and so never matched at all.
+That shape accounted for 448 of the 469 single-error `member not found` units, and
+fixing it (977 units / 3,712 expressions, each corroborated against a real
+displacement) is what actually moved the compile count — 400 units went
+fail → pass from that change alone. See [`INDEXED_ACCESS_FIX.md`](INDEXED_ACCESS_FIX.md).
+
+The combined repair total across both forms is 977 units / 3,712 expressions, with
+682 units / 3,614 expressions held back.
+
 ## Still open
 
 The 46 held expressions are not certified either way. Each is a chain where the

@@ -32,7 +32,7 @@ Enemy *__fastcall KoopaTroopa_ctor(ActorBuildInfo *a1)
   *(float *)&v2[1]._._._.field_218 = y;
   *(float *)&v2[1]._._._.zoneId = x;
   v2[1]._._._.field_220 = 0;
-  v2[1]._._._.field_224 = FIELD_U32(v2, 0x14) & 1;
+  FIELD_U32(v2 + (1) * 6300, 0x224) = FIELD_U32(v2, 0x14) & 1;
   v2[1]._._._.field_234 = 0;
   v2[1]._._._.field_230 = 0;
   v2[1]._._._.field_22C = 0;

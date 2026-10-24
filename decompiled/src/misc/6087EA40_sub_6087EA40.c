@@ -30,7 +30,7 @@ int8x8x2_t *__fastcall sub_6087EA40(int8x8x2_t *a1, float32x4_t *a2, float32x2_t
   int8x8x2_t *result; // r0
 
   v5.n128_u64[1] = 0;
-  v3 = vmlaq_lane_f32(vmlaq_lane_f32(vmulq_n_f32(*a2, a3[2].n64_f32[0]), a2[1], a3[2], 1), a2[2], a3[3], 0);
+  v3 = vmlaq_lane_f32(vmlaq_lane_f32(vmulq_n_f32(*a2, FIELD_F32(a3 + (2) * 8, 0x0)[0]), a2[1], a3[2], 1), a2[2], a3[3], 0);
   v5.n128_f32[1] = -v3.n128_f32[0];
   v4 = vmulq_f32(v3, v3);
   v5.n128_u32[0] = v3.n128_u32[1];

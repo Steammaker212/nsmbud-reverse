@@ -10,7 +10,7 @@
 
 StateMethodExecuter *__fastcall sub_60749BB8(StateMethodExecuter *result)
 {
-  if ( !result[56].owner )
-    return StateMgr__changeState((StateMgr *)&result[59].owner, (StateBase *)&dword_60CBE760);
+  if ( !FIELD_U32(result + (56) * 12, 0x4) )
+    return StateMgr__changeState((StateMgr *)&FIELD_U32(result + (59) * 12, 0x4), (StateBase *)&dword_60CBE760);
   return result;
 }

@@ -12,8 +12,8 @@ StateMethodExecuter *__fastcall sub_607A5504(StateMethodExecuter *result)
 {
   bool v1; // zf
 
-  v1 = (result[101].currentState & 4) == 0;
-  if ( (result[101].currentState & 4) != 0 )
+  v1 = (FIELD_U32(result + (101) * 12, 0x8) & 4) == 0;
+  if ( (FIELD_U32(result + (101) * 12, 0x8) & 4) != 0 )
     v1 = (BYTE2(result[102].vtable) & 0x10) == 0;
   if ( !v1 )
     return sub_60766314((int)result, &stru_60CBF37C, 0);

@@ -20,7 +20,7 @@ int __fastcall sub_605D128C(int a1)
 
   v3 = (ModelWrapper **)(a1 + 6100);
   v2 = *(ModelWrapper **)(a1 + 6100);
-  animations = (unsigned int)v2[1].texAnims.animations;
+  animations = (unsigned int)FIELD_U32(v2 + (1) * 48, 0x14);
   v5 = FIELD_U32(v2, 0xC);
   if ( FIELD_U32(v2, 0x8) > animations )
     v5 += animations;

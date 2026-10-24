@@ -18,13 +18,13 @@ StateMethodExecuter *__fastcall sub_60529BCC(StateMethodExecuter *result)
   float v6; // s2
   int v7; // r2
 
-  currentState = result[252].currentState;
-  vtable = result[253].vtable;
+  currentState = FIELD_U32(result + (252) * 12, 0x8);
+  vtable = FIELD_U32(result + (253) * 12, 0x0);
   if ( vtable != (void *)currentState )
   {
     if ( FIELD_U8(dword_60C99DEC, 522) )
     {
-      v3 = result[252].currentState;
+      v3 = FIELD_U32(result + (252) * 12, 0x8);
       if ( !currentState )
         v3 = 1;
       v4 = (float *)((char *)&unk_60AF2954 + 4 * v3);
@@ -33,45 +33,45 @@ StateMethodExecuter *__fastcall sub_60529BCC(StateMethodExecuter *result)
     else
     {
       v5 = *(float *)&result[253].currentState;
-      if ( LOBYTE(result[255].owner) )
+      if ( LOBYTE(FIELD_U32(result + (255) * 12, 0x4)) )
       {
         v6 = 80.5;
 LABEL_14:
-        *(float *)&result[217].owner = v5 + v6;
+        *(float *)&FIELD_U32(result + (217) * 12, 0x4) = v5 + v6;
         if ( (unsigned int)vtable <= currentState )
         {
-          result[229].currentState = 2;
+          FIELD_U32(result + (229) * 12, 0x8) = 2;
           if ( BYTE2(result[227].currentState) || HIBYTE(result[227].currentState) )
-            return StateMgr__changeState((StateMgr *)&result[1].currentState, (StateBase *)&unk_60CAA17C);
+            return StateMgr__changeState((StateMgr *)&FIELD_U32(result + (1) * 12, 0x8), (StateBase *)&unk_60CAA17C);
           v7 = 6;
         }
         else
         {
-          result[229].currentState = 1;
+          FIELD_U32(result + (229) * 12, 0x8) = 1;
           if ( BYTE2(result[227].currentState) || HIBYTE(result[227].currentState) )
-            return StateMgr__changeState((StateMgr *)&result[1].currentState, (StateBase *)&unk_60CAA17C);
+            return StateMgr__changeState((StateMgr *)&FIELD_U32(result + (1) * 12, 0x8), (StateBase *)&unk_60CAA17C);
           v7 = 5;
         }
         HIBYTE(result[228].owner) = 1;
         HIBYTE(result[227].currentState) = 1;
-        result[45].owner = (void *)v7;
-        result[214].currentState = 0;
-        result[217].vtable = (void *)1065353216;
+        FIELD_U32(result + (45) * 12, 0x4) = (void *)v7;
+        FIELD_U32(result + (214) * 12, 0x8) = 0;
+        FIELD_U32(result + (217) * 12, 0x0) = (void *)1065353216;
         BYTE1(result[228].vtable) = 1;
-        return StateMgr__changeState((StateMgr *)&result[1].currentState, (StateBase *)&unk_60CAA17C);
+        return StateMgr__changeState((StateMgr *)&FIELD_U32(result + (1) * 12, 0x8), (StateBase *)&unk_60CAA17C);
       }
       v4 = (float *)((char *)&unk_60AF2954 + 4 * currentState);
     }
     v6 = *v4;
     goto LABEL_14;
   }
-  if ( LOBYTE(result[254].owner) )
-    return StateMgr__changeState((StateMgr *)&result[1].currentState, (StateBase *)&unk_60CAA19C);
-  if ( BYTE1(result[254].owner) )
-    return StateMgr__changeState((StateMgr *)&result[1].currentState, (StateBase *)&unk_60CAA1DC);
-  if ( BYTE2(result[254].owner) )
-    return StateMgr__changeState((StateMgr *)&result[1].currentState, (StateBase *)&unk_60CAA21C);
-  if ( HIBYTE(result[254].owner) )
-    return StateMgr__changeState((StateMgr *)&result[1].currentState, (StateBase *)&unk_60CAA23C);
+  if ( LOBYTE(FIELD_U32(result + (254) * 12, 0x4)) )
+    return StateMgr__changeState((StateMgr *)&FIELD_U32(result + (1) * 12, 0x8), (StateBase *)&unk_60CAA19C);
+  if ( BYTE1(FIELD_U32(result + (254) * 12, 0x4)) )
+    return StateMgr__changeState((StateMgr *)&FIELD_U32(result + (1) * 12, 0x8), (StateBase *)&unk_60CAA1DC);
+  if ( BYTE2(FIELD_U32(result + (254) * 12, 0x4)) )
+    return StateMgr__changeState((StateMgr *)&FIELD_U32(result + (1) * 12, 0x8), (StateBase *)&unk_60CAA21C);
+  if ( HIBYTE(FIELD_U32(result + (254) * 12, 0x4)) )
+    return StateMgr__changeState((StateMgr *)&FIELD_U32(result + (1) * 12, 0x8), (StateBase *)&unk_60CAA23C);
   return result;
 }

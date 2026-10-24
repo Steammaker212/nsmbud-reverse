@@ -29,5 +29,5 @@ StateMethodExecuter *__fastcall sub_607F14B8(StateMethodExecuter *result)
   {
     v1 = &dword_60CC5FA8;
   }
-  return StateMgr__changeState((StateMgr *)&result[17].currentState, (StateBase *)v1);
+  return StateMgr__changeState((StateMgr *)&FIELD_U32(result + (17) * 12, 0x8), (StateBase *)v1);
 }

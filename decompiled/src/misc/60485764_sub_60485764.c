@@ -15,7 +15,7 @@ StateMethodExecuter *__fastcall sub_60485764(int a1)
   result = (StateMethodExecuter *)sub_6047482C(FIELD_U32(a1, 4), 0);
   if ( !result )
     return StateMgr__changeState((StateMgr *)(a1 + 532), (StateBase *)&dword_60C9F300);
-  if ( *(float *)&result[3].currentState == 0.0 )
+  if ( *(float *)&FIELD_U32(result + (3) * 12, 0x8) == 0.0 )
   {
     result = (StateMethodExecuter *)HIBYTE(result[4].vtable);
     if ( ((unsigned __int8)result & 1) == 0 )

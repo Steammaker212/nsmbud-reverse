@@ -16,7 +16,7 @@ StateActor *__fastcall Actor_mid_pendulum_reru_build(ActorBuildInfo *a1)
   v2 = (StateActor *)operator_new(0x1810u);
   result = sub_606C103C(v2, a1);
   FIELD_U32(result, 0x0) = (int)off_60C0AC2C;
-  LOBYTE(result[1]._._._.field_2C) = 0;
+  LOBYTE(FIELD_U32(result + (1) * 6100, 0x2C)) = 0;
   result[1]._._._.childCount = 0;
   result[1]._._._.field_20.next = 0;
   result[1]._._._.field_20.previous = 0;

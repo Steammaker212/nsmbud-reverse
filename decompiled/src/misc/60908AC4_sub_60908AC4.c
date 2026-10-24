@@ -13,12 +13,12 @@ sead_IDisposer *__fastcall sub_60908AC4(sead_IDisposer *a1)
   int *p_containingHeap; // r0
 
   FIELD_U32(a1, 0x0) = (int)off_60C5CEF8;
-  p_containingHeap = &a1[1].containingHeap;
+  p_containingHeap = &FIELD_U32(a1 + (1) * 16, 0x4);
   *p_containingHeap = (int)p_containingHeap;
-  a1[1].field_8 = (int)p_containingHeap;
-  a1[1].field_C = 0;
+  FIELD_U32(a1 + (1) * 16, 0x8) = (int)p_containingHeap;
+  FIELD_U32(a1 + (1) * 16, 0xC) = 0;
   sead__CriticalSection__ctor(a1 + 2);
-  a1[4].containingHeap = 0;
-  nn__os__AllocateTlsSlot(&a1[4].field_8, 0);
+  FIELD_U32(a1 + (4) * 16, 0x4) = 0;
+  nn__os__AllocateTlsSlot(&FIELD_U32(a1 + (4) * 16, 0x8), 0);
   return a1;
 }

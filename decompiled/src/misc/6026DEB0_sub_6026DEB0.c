@@ -17,7 +17,7 @@ int __fastcall sub_6026DEB0(StageActor *a1)
   LODWORD(a1[10].effectOffset.x) = a1[14].aCollider.field_11C;
   (*(void (__fastcall **)(int *))(a1[10].aCollider.info.category + 28))(&a1[10].aCollider.info.category);
   LODWORD(a1[11].field_248.x) = a1[14].aCollider.field_120;
-  (*(void (__fastcall **)(int *))(a1[11].aCollider.info.field_24 + 28))(&a1[11].aCollider.info.field_24);
+  (*(void (__fastcall **)(int *))(FIELD_U32(a1 + (11) * 644, 0x154) + 28))(&FIELD_U32(a1 + (11) * 644, 0x154));
   LODWORD(a1[12].field_254.x) = a1[14].aCollider.field_124;
   (*(void (__fastcall **)(float *))(LODWORD(a1[12].aCollider.trapezoidOffsetTopRight) + 28))(&a1[12].aCollider.trapezoidOffsetTopRight);
   LODWORD(a1[13].field_260.x) = a1[14].aCollider.field_128;

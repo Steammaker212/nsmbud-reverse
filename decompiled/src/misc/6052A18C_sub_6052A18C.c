@@ -10,10 +10,10 @@
 
 StateMethodExecuter *__fastcall sub_6052A18C(StateMethodExecuter *result)
 {
-  if ( (*((_BYTE *)result[4].vtable + 44) & 1) != 0 )
+  if ( (*((_BYTE *)FIELD_U32(result + (4) * 12, 0x0) + 44) & 1) != 0 )
   {
-    *((_BYTE *)result[3].vtable + 64) &= ~1u;
-    return StateMgr__changeState((StateMgr *)&result[1].currentState, (StateBase *)&dword_60CAA284);
+    *((_BYTE *)FIELD_U32(result + (3) * 12, 0x0) + 64) &= ~1u;
+    return StateMgr__changeState((StateMgr *)&FIELD_U32(result + (1) * 12, 0x8), (StateBase *)&dword_60CAA284);
   }
   return result;
 }

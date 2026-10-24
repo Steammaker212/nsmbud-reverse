@@ -22,13 +22,13 @@ signed int __fastcall StageActor__befreDraw(Actor *a1)
   {
     if ( HIBYTE(a1[6].field_34) )
     {
-      v3 = a1[7].field_3C;
+      v3 = FIELD_U32(a1 + (7) * 80, 0x3C);
       if ( !v3 || FIELD_U32(v3, 12) != 2 )
       {
-        v4 = a1[7].field_40;
+        v4 = FIELD_U32(a1 + (7) * 80, 0x40);
         if ( !v4 || FIELD_U32(v4, 24) != 2 )
         {
-          if ( (a1[7].id & 2) == 0 )
+          if ( (FIELD_U32(a1 + (7) * 80, 0x8) & 2) == 0 )
             return 1;
           if ( !(*(int (__fastcall **)(Actor *))(FIELD_U32(a1, 0x0) + 124))(a1) )
             return 1;

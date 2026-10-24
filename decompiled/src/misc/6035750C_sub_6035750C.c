@@ -107,13 +107,13 @@ float32x2_t *__fastcall sub_6035750C(int a1, float32x2_t *a2)
   v25 = v31;
   result = a2 + 4;
   FIELD_U64(a2, 0x0)[0] = v30.n64_u64[0];
-  a2[1].n64_u64[0] = v25;
+  FIELD_U64(a2 + (1) * 8, 0x0)[0] = v25;
   v27 = a2 + 2;
   v28 = v33;
   FIELD_U64(v27, 0x0)[0] = v32;
-  v27[1].n64_u64[0] = v28;
+  FIELD_U64(v27 + (1) * 8, 0x0)[0] = v28;
   v29 = v35;
   FIELD_U64(result, 0x0)[0] = v34;
-  result[1].n64_u64[0] = v29;
+  FIELD_U64(result + (1) * 8, 0x0)[0] = v29;
   return result;
 }

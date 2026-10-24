@@ -14,13 +14,13 @@ sead_IDisposer *__fastcall sub_6043E8F0(sead_IDisposer *a1)
 
   result = sead_IDisposer_ctor(a1);
   FIELD_U32(result, 0x0) = (int)off_60BFAAF8;
-  result[1].vtable = (int)&off_60BFAB08;
-  result[1].containingHeap = 0;
-  result[1].field_8 = 0;
-  result[1].field_C = 0;
-  result[2].vtable = (int)&sead__SafeStringBase__vtable;
-  result[2].containingHeap = (int)&byte_60B3BA34;
-  result[2].field_8 = 0;
-  result[2].field_C = 0;
+  FIELD_U32(result + (1) * 16, 0x0) = (int)&off_60BFAB08;
+  FIELD_U32(result + (1) * 16, 0x4) = 0;
+  FIELD_U32(result + (1) * 16, 0x8) = 0;
+  FIELD_U32(result + (1) * 16, 0xC) = 0;
+  FIELD_U32(result + (2) * 16, 0x0) = (int)&sead__SafeStringBase__vtable;
+  FIELD_U32(result + (2) * 16, 0x4) = (int)&byte_60B3BA34;
+  FIELD_U32(result + (2) * 16, 0x8) = 0;
+  FIELD_U32(result + (2) * 16, 0xC) = 0;
   return result;
 }

@@ -10,7 +10,7 @@
 
 StateMethodExecuter *__fastcall sub_605C7220(StateMethodExecuter *result)
 {
-  if ( LOBYTE(result[245].vtable) != 255 )
-    return StateMgr__changeState((StateMgr *)&result[85].owner, &stru_60CB0B24);
+  if ( LOBYTE(FIELD_U32(result + (245) * 12, 0x0)) != 255 )
+    return StateMgr__changeState((StateMgr *)&FIELD_U32(result + (85) * 12, 0x4), &stru_60CB0B24);
   return result;
 }

@@ -46,7 +46,7 @@ int __fastcall skl_root_ref_1F0988(Actor *a1)
   float v35; // [sp+44h] [bp-14h]
 
   if ( !sub_60190968(dword_60C8996C) )
-    return (int)StateMgr__changeState((StateMgr *)&a1[3].field_30, (StateBase *)&dword_60C8B630);
+    return (int)StateMgr__changeState((StateMgr *)&FIELD_U32(a1 + (3) * 80, 0x30), (StateBase *)&dword_60C8B630);
   v2 = dword_60C8996C;
   result = sub_6019112C(dword_60C8996C);
   if ( FIELD_U8(v2, 1384) )
@@ -144,13 +144,13 @@ int __fastcall skl_root_ref_1F0988(Actor *a1)
         if ( result == 2 )
         {
           result = 120;
-          a1[8].field_48 = 120;
+          FIELD_U32(a1 + (8) * 80, 0x48) = 120;
         }
         return result;
       case 36:
         if ( (sub_601916F4(v2) == 9 || sub_601916F4(v2) == 10) && sub_601919B0((_DWORD *)dword_60C8996C, (int)a1) == 1 )
         {
-          v12 = (StateMgr *)&a1[3].field_30;
+          v12 = (StateMgr *)&FIELD_U32(a1 + (3) * 80, 0x30);
           (*(void (__fastcall **)(Actor *))(FIELD_U32(a1, 0x0) + 72))(a1);
           v11 = (StateBase *)&dword_60C8B630;
 LABEL_46:
@@ -168,19 +168,19 @@ LABEL_46:
         }
         (*(void (__fastcall **)(Actor *))(FIELD_U32(a1, 0x0) + 72))(a1);
         v18 = (int)&a1[8].field_20.FIELD_U32(previous, 0x0) + 1;
-        a1[8].field_20.previous = (sead_ListNode *)v18;
-        v19 = *(float *)&a1[8].field_10;
-        v20 = *(float *)&a1[8].movementId;
+        FIELD_U32(a1 + (8) * 80, 0x20) = (sead_ListNode *)v18;
+        v19 = *(float *)&FIELD_U8(a1 + (8) * 80, 0x10);
+        v20 = *(float *)&FIELD_U8(a1 + (8) * 80, 0x1C);
         if ( (v18 & 8) != 0 )
         {
           if ( (v18 & 4) == 0 )
           {
 LABEL_66:
             v21 = v19 - v20;
-            *(float *)&a1[8].field_10 = v21;
-            v22 = v20 + *(float *)&a1[8].settings1;
-            *(float *)&a1[8].settings1 = v22;
-            v23 = *(float *)&a1[8].settigns2 - v20;
+            *(float *)&FIELD_U8(a1 + (8) * 80, 0x10) = v21;
+            v22 = v20 + *(float *)&FIELD_U32(a1 + (8) * 80, 0x14);
+            *(float *)&FIELD_U32(a1 + (8) * 80, 0x14) = v22;
+            v23 = *(float *)&FIELD_U32(a1 + (8) * 80, 0x18) - v20;
             goto LABEL_67;
           }
         }
@@ -189,42 +189,42 @@ LABEL_66:
           goto LABEL_66;
         }
         v21 = v20 + v19;
-        *(float *)&a1[8].field_10 = v21;
-        v22 = *(float *)&a1[8].settings1 - v20;
-        *(float *)&a1[8].settings1 = v22;
-        v23 = v20 + *(float *)&a1[8].settigns2;
+        *(float *)&FIELD_U8(a1 + (8) * 80, 0x10) = v21;
+        v22 = *(float *)&FIELD_U32(a1 + (8) * 80, 0x14) - v20;
+        *(float *)&FIELD_U32(a1 + (8) * 80, 0x14) = v22;
+        v23 = v20 + *(float *)&FIELD_U32(a1 + (8) * 80, 0x18);
 LABEL_67:
-        *(float *)&a1[8].settigns2 = v23;
-        v24 = *(float *)&a1[7].field_4C;
-        a1[8].field_44 = 20;
-        *(float *)&a1[1].field_30 = v21 * v24;
-        *(float *)&a1[1].field_34 = v22 * v24;
-        *(float *)&a1[1].parent = v23 * v24;
+        *(float *)&FIELD_U32(a1 + (8) * 80, 0x18) = v23;
+        v24 = *(float *)&FIELD_U32(a1 + (7) * 80, 0x4C);
+        FIELD_U32(a1 + (8) * 80, 0x44) = 20;
+        *(float *)&FIELD_U32(a1 + (1) * 80, 0x30) = v21 * v24;
+        *(float *)&FIELD_U32(a1 + (1) * 80, 0x34) = v22 * v24;
+        *(float *)&FIELD_U32(a1 + (1) * 80, 0x38) = v23 * v24;
         v29.z = 0.0;
         v29.y = 0.0;
         v29.x = 0.0;
-        v25 = *(_DWORD *)a1[3].field_40;
+        v25 = *(_DWORD *)FIELD_U32(a1 + (3) * 80, 0x40);
         v26 = *(int (__fastcall **)(int, int *))(*(_DWORD *)v25 + 84);
         v30 = (int)&sead__SafeStringBase__vtable;
         v31 = (int)"skl_root";
         v27 = v26(v25, &v30);
-        (*(void (__fastcall **)(_DWORD, int, int *))(**(_DWORD **)a1[3].field_40 + 108))(
-          *(_DWORD *)a1[3].field_40,
+        (*(void (__fastcall **)(_DWORD, int, int *))(**(_DWORD **)FIELD_U32(a1 + (3) * 80, 0x40) + 108))(
+          *(_DWORD *)FIELD_U32(a1 + (3) * 80, 0x40),
           v27,
           &v30);
         v29.x = v33;
         v29.y = v34;
         v29.z = v35;
         if ( BYTE2(a1[9].id) )
-          p_parent = (EffectData *)&a1[3].field_48;
+          p_parent = (EffectData *)&FIELD_U32(a1 + (3) * 80, 0x48);
         else
-          p_parent = (EffectData *)&a1[4].parent;
-        return sub_602375C4(p_parent, 896, &v29, 0, (Vec3 *)&a1[6].field_40);
+          p_parent = (EffectData *)&FIELD_U32(a1 + (4) * 80, 0x38);
+        return sub_602375C4(p_parent, 896, &v29, 0, (Vec3 *)&FIELD_U32(a1 + (6) * 80, 0x40));
       case 91:
         v11 = (StateBase *)&unk_60C8B678;
         goto LABEL_51;
       case 92:
-        v12 = (StateMgr *)&a1[3].field_30;
+        v12 = (StateMgr *)&FIELD_U32(a1 + (3) * 80, 0x30);
         (*(void (__fastcall **)(Actor *, int))(FIELD_U32(a1, 0x0) + 320))(a1, 1);
         v11 = (StateBase *)&unk_60C8B69C;
         goto LABEL_46;
@@ -251,7 +251,7 @@ LABEL_67:
           return result;
         v11 = (StateBase *)&dword_60C8B630;
 LABEL_51:
-        v13 = (StateMgr *)&a1[3].field_30;
+        v13 = (StateMgr *)&FIELD_U32(a1 + (3) * 80, 0x30);
         return (int)StateMgr__changeState(v13, v11);
     }
   }
@@ -260,19 +260,19 @@ LABEL_51:
     case '[':
 LABEL_31:
       v8 = (int)&a1[8].field_20.FIELD_U32(previous, 0x0) + 1;
-      a1[8].field_20.previous = (sead_ListNode *)v8;
-      v9 = *(float *)&a1[8].field_10;
-      v10 = *(float *)&a1[8].movementId;
+      FIELD_U32(a1 + (8) * 80, 0x20) = (sead_ListNode *)v8;
+      v9 = *(float *)&FIELD_U8(a1 + (8) * 80, 0x10);
+      v10 = *(float *)&FIELD_U8(a1 + (8) * 80, 0x1C);
       if ( (v8 & 8) != 0 )
       {
         if ( (v8 & 4) == 0 )
         {
 LABEL_55:
           v14 = v9 - v10;
-          *(float *)&a1[8].field_10 = v14;
-          v15 = v10 + *(float *)&a1[8].settings1;
-          *(float *)&a1[8].settings1 = v15;
-          v16 = *(float *)&a1[8].settigns2 - v10;
+          *(float *)&FIELD_U8(a1 + (8) * 80, 0x10) = v14;
+          v15 = v10 + *(float *)&FIELD_U32(a1 + (8) * 80, 0x14);
+          *(float *)&FIELD_U32(a1 + (8) * 80, 0x14) = v15;
+          v16 = *(float *)&FIELD_U32(a1 + (8) * 80, 0x18) - v10;
           goto LABEL_56;
         }
       }
@@ -281,16 +281,16 @@ LABEL_55:
         goto LABEL_55;
       }
       v14 = v10 + v9;
-      *(float *)&a1[8].field_10 = v14;
-      v15 = *(float *)&a1[8].settings1 - v10;
-      *(float *)&a1[8].settings1 = v15;
-      v16 = v10 + *(float *)&a1[8].settigns2;
+      *(float *)&FIELD_U8(a1 + (8) * 80, 0x10) = v14;
+      v15 = *(float *)&FIELD_U32(a1 + (8) * 80, 0x14) - v10;
+      *(float *)&FIELD_U32(a1 + (8) * 80, 0x14) = v15;
+      v16 = v10 + *(float *)&FIELD_U32(a1 + (8) * 80, 0x18);
 LABEL_56:
-      *(float *)&a1[8].settigns2 = v16;
-      v17 = *(float *)&a1[7].field_4C;
-      *(float *)&a1[1].field_30 = v14 * v17;
-      *(float *)&a1[1].field_34 = v15 * v17;
-      *(float *)&a1[1].parent = v16 * v17;
+      *(float *)&FIELD_U32(a1 + (8) * 80, 0x18) = v16;
+      v17 = *(float *)&FIELD_U32(a1 + (7) * 80, 0x4C);
+      *(float *)&FIELD_U32(a1 + (1) * 80, 0x30) = v14 * v17;
+      *(float *)&FIELD_U32(a1 + (1) * 80, 0x34) = v15 * v17;
+      *(float *)&FIELD_U32(a1 + (1) * 80, 0x38) = v16 * v17;
       return skl_root_ref_1F115C(a1);
     case '$':
       result = sub_601916F4(v2);
@@ -302,8 +302,8 @@ LABEL_56:
         if ( result != 15 )
           return result;
       }
-      result = a1[8].field_44;
-      a1[8].field_44 = result - 1;
+      result = FIELD_U32(a1 + (8) * 80, 0x44);
+      FIELD_U32(a1 + (8) * 80, 0x44) = result - 1;
       if ( result == 1 )
         return result;
       if ( result <= 8 )
@@ -311,11 +311,11 @@ LABEL_56:
         v30 = 1065353216;
         v31 = 1065353216;
         v32 = 1065353216;
-        sub_608332CC(&a1[8].field_10, &v30, 0.5, 0.06, 0.04);
-        v7 = *(float *)&a1[7].field_4C;
-        *(float *)&a1[1].field_30 = *(float *)&a1[8].field_10 * v7;
-        *(float *)&a1[1].field_34 = v7 * *(float *)&a1[8].settings1;
-        *(float *)&a1[1].parent = v7 * *(float *)&a1[8].settigns2;
+        sub_608332CC(&FIELD_U8(a1 + (8) * 80, 0x10), &v30, 0.5, 0.06, 0.04);
+        v7 = *(float *)&FIELD_U32(a1 + (7) * 80, 0x4C);
+        *(float *)&FIELD_U32(a1 + (1) * 80, 0x30) = *(float *)&FIELD_U8(a1 + (8) * 80, 0x10) * v7;
+        *(float *)&FIELD_U32(a1 + (1) * 80, 0x34) = v7 * *(float *)&FIELD_U32(a1 + (8) * 80, 0x14);
+        *(float *)&FIELD_U32(a1 + (1) * 80, 0x38) = v7 * *(float *)&FIELD_U32(a1 + (8) * 80, 0x18);
         return (*(int (__fastcall **)(Actor *))(FIELD_U32(a1, 0x0) + 380))(a1);
       }
       goto LABEL_31;
@@ -323,10 +323,10 @@ LABEL_56:
       result = sub_601916F4(v2);
       if ( result == 2 )
       {
-        result = a1[8].field_48;
+        result = FIELD_U32(a1 + (8) * 80, 0x48);
         if ( result )
         {
-          a1[8].field_48 = result - 1;
+          FIELD_U32(a1 + (8) * 80, 0x48) = result - 1;
           if ( result == 1 )
           {
             return (*(int (__fastcall **)(Actor *))(FIELD_U32(a1, 0x0) + 72))(a1);
@@ -362,7 +362,7 @@ LABEL_56:
                 }
               }
             }
-            return sub_601E4C88(v4, v6, &a1[1].vtable);
+            return sub_601E4C88(v4, v6, &FIELD_U32(a1 + (1) * 80, 0x0));
           }
         }
       }

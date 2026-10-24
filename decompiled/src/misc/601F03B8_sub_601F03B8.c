@@ -86,8 +86,8 @@ StateMethodExecuter *__fastcall sub_601F03B8(int a1)
       if ( v16 > v17 )
         v15 += v17;
       result = *v15;
-      result[1].currentState = 1106247680;
-      result[2].owner = (void *)((int)result[2].owner | 2);
+      FIELD_U32(result + (1) * 12, 0x8) = 1106247680;
+      FIELD_U32(result + (2) * 12, 0x4) = (void *)((int)FIELD_U32(result + (2) * 12, 0x4) | 2);
       return result;
     case 2:
       v2 = (StateBase *)&unk_60C8B708;

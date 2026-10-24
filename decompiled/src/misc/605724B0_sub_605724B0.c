@@ -18,7 +18,7 @@ signed int __fastcall sub_605724B0(ColliderBase *a1)
   int v7; // r1
 
   a1[21].field_E4 = 1;
-  a1[21].owner248Ptr = (Vec3 *)48;
+  FIELD_U32(a1 + (21) * 340, 0x9C) = (Vec3 *)48;
   ColliderBase_setType(a1 + 18, 8);
   v2 = sub_60562ABC((int)a1);
   result = 2;
@@ -30,8 +30,8 @@ signed int __fastcall sub_605724B0(ColliderBase *a1)
     if ( ProfileId == 303 )
       v5 = &dword_60572590[1];
     v6 = (char *)*v5;
-    a1[1].owner56Ptr = (char *)*v5;
-    a1[1].owner57Ptr = v6;
+    FIELD_U32(a1 + (1) * 340, 0xA0) = (char *)*v5;
+    FIELD_U32(a1 + (1) * 340, 0xA4) = v6;
     LOBYTE(a1[21].field_EC) = 1;
     a1[21].field_94 = 1;
     if ( a1[20].nodes[3].next == (ColliderListNode *)21 )

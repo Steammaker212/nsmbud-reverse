@@ -27,7 +27,7 @@ StateMethodExecuter *__fastcall sub_6049D218(StateMethodExecuter *result)
     {
       if ( !currentState )
       {
-        result[3].owner = &dword_60CA0F6C;
+        FIELD_U32(result + (3) * 12, 0x4) = &dword_60CA0F6C;
         return StateMgr__changeState((StateMgr *)&result[2], (StateBase *)&dword_60CA0ECC);
       }
       return result;
@@ -43,7 +43,7 @@ StateMethodExecuter *__fastcall sub_6049D218(StateMethodExecuter *result)
       if ( result[1874].currentState < 3 || ((vtable | v3) & 0x2000) == 0 )
         return result;
 LABEL_11:
-      result[3].owner = &dword_60CA0C6C;
+      FIELD_U32(result + (3) * 12, 0x4) = &dword_60CA0C6C;
       result[1873].owner = 0;
       return StateMgr__changeState((StateMgr *)&result[2], (StateBase *)&dword_60CA0C4C);
     }
@@ -61,6 +61,6 @@ LABEL_11:
   if ( FIELD_U8(v7, 2689) )
     FIELD_U8(v7, 2695) = 1;
   result[388].currentState = 0;
-  result[3].owner = &dword_60CA0F6C;
+  FIELD_U32(result + (3) * 12, 0x4) = &dword_60CA0F6C;
   return StateMgr__changeState((StateMgr *)&result[2], (StateBase *)&dword_60CA0EAC);
 }

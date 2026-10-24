@@ -33,30 +33,30 @@ int __fastcall sub_6085DB04(float32x4_t *a1, int a2, int a3, int a4, float32x2_t
   v8 = a1[11].n128_u32[3];
   v9 = v8 == 0;
   if ( v8 )
-    v9 = a1[16].n128_u32[0] == 0;
+    v9 = FIELD_U32(a1 + (16) * 16, 0x0)[0] == 0;
   if ( v9 )
   {
 LABEL_11:
-    result = a1[4].n128_u8[4] & 0xEF;
-    a1[4].n128_u8[4] = result;
+    result = FIELD_U32(a1 + (4) * 16, 0x0)[4] & 0xEF;
+    FIELD_U32(a1 + (4) * 16, 0x0)[4] = result;
     return result;
   }
-  v10 = a1[4].n128_u8[0];
+  v10 = FIELD_U32(a1 + (4) * 16, 0x0)[0];
   v11 = (v10 & 1) == 0;
   if ( (v10 & 1) != 0 )
-    v11 = a1[4].n128_u8[2] == 0;
+    v11 = FIELD_U32(a1 + (4) * 16, 0x0)[2] == 0;
   if ( v11 )
   {
     if ( FIELD_U8(a3, 23) )
     {
       result = v10 & 0x7F;
-      a1[4].n128_u8[0] = result;
+      FIELD_U32(a1 + (4) * 16, 0x0)[0] = result;
       return result;
     }
     goto LABEL_11;
   }
-  sub_6084A204(a1[16].n128_i32[1], FIELD_U32(a2, 196));
-  sub_608672C4(a1[16].n128_u32[0], a2);
+  sub_6084A204(FIELD_U32(a1 + (16) * 16, 0x0)[1], FIELD_U32(a2, 196));
+  sub_608672C4(FIELD_U32(a1 + (16) * 16, 0x0)[0], a2);
   v13 = a1[13].n128_u16[4];
   if ( (v13 & 4) == 0 )
     return sub_6085D7E0((int)a1, a2);
@@ -66,7 +66,7 @@ LABEL_11:
     sub_6084CA5C((int)v20);
     v23 = a1[13].n128_u8[9] & 1;
     (*(void (__fastcall **)(float32x4_t *, _DWORD *))(FIELD_U32(a1, 0x0)[0] + 144))(a1, v20);
-    v21 = a1[16].n128_u32[1];
+    v21 = FIELD_U32(a1 + (16) * 16, 0x0)[1];
     sub_6084A098((int)v20);
     v14 = (int *)a1[15].n128_u32[3];
     v15 = a1[13].n128_u16[3];
@@ -85,7 +85,7 @@ LABEL_11:
     sub_6084E138((int)v20);
     v23 = a1[13].n128_u8[9] & 1;
     (*(void (__fastcall **)(float32x4_t *, _DWORD *))(FIELD_U32(a1, 0x0)[0] + 140))(a1, v20);
-    v21 = a1[16].n128_u32[1];
+    v21 = FIELD_U32(a1 + (16) * 16, 0x0)[1];
     sub_6084A098((int)v20);
     v17 = (int *)a1[15].n128_u32[3];
     v18 = a1[13].n128_u16[3];

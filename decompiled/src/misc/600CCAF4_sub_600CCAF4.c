@@ -16,6 +16,6 @@ Actor *__fastcall sub_600CCAF4(Actor *a1)
   sub_60237560((int)&a1[76].settings1);
   sead__IDisposer__dtor(&a1[76].settings1);
   FIELD_U32(a1, 0x0) = (int)&CollisionActor__vtable;
-  CollisionMgr_dtor(&a1[8].id);
+  CollisionMgr_dtor(&FIELD_U32(a1 + (8) * 80, 0x8));
   return StageActor__dtor(a1);
 }

@@ -12,9 +12,9 @@ StateMethodExecuter *__fastcall sub_607D885C(StateMethodExecuter *result)
 {
   __int16 v1; // r1
 
-  v1 = LOWORD(result[7].currentState) - 1;
-  LOWORD(result[7].currentState) = v1;
+  v1 = LOWORD(FIELD_U32(result + (7) * 12, 0x8)) - 1;
+  LOWORD(FIELD_U32(result + (7) * 12, 0x8)) = v1;
   if ( !v1 )
-    return StateMgr__changeState((StateMgr *)&result[1].currentState, (StateBase *)&dword_60CC56D4);
+    return StateMgr__changeState((StateMgr *)&FIELD_U32(result + (1) * 12, 0x8), (StateBase *)&dword_60CC56D4);
   return result;
 }

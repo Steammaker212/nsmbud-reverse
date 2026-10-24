@@ -21,9 +21,9 @@ StageActor *__fastcall sub_60767F80(StageActor *a1, int *a2, int a3)
   LODWORD(FIELD_F32(a1, 0x260)) = *a2;
   LODWORD(FIELD_F32(a1, 0x264)) = a2[1];
   LODWORD(FIELD_F32(a1, 0x268)) = a2[2];
-  *(_DWORD *)&a1[1]._.movementId = *a2;
-  a1[1]._.field_20.previous = (sead_ListNode *)a2[1];
-  a1[1]._.field_20.next = (sead_ListNode *)a2[2];
+  *(_DWORD *)&FIELD_U8(a1 + (1) * 644, 0x1C) = *a2;
+  FIELD_U32(a1 + (1) * 644, 0x20) = (sead_ListNode *)a2[1];
+  FIELD_U32(a1 + (1) * 644, 0x24) = (sead_ListNode *)a2[2];
   a1[15].field_5C = *a2;
   a1[15].field_60 = a2[1];
   LODWORD(a1[15].field_64) = a2[2];

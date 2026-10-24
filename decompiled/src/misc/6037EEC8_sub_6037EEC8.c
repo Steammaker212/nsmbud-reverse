@@ -17,7 +17,7 @@ int __fastcall sub_6037EEC8(Actor *a1)
     v2 = dword_6037EF28;
     if ( (FIELD_U32(a1, 0x18) & 0x100000) != 0 )
       v2 = &dword_6037EF28[1];
-    a1[1].field_20.next = (sead_ListNode *)*v2;
+    FIELD_U32(a1 + (1) * 80, 0x24) = (sead_ListNode *)*v2;
   }
   sub_602CB180((int)&a1[79].heap, (int)&a1[155].field_40, ((unsigned int)FIELD_U32(a1, 0x14) >> 8) & 0xF);
   return 1;

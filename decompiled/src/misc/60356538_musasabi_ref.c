@@ -28,7 +28,7 @@ int __fastcall musasabi_ref(int a1, int r1_0)
   v7 = sub_60421830(v6, Model2, 2, 1, 0, 0, 0);
   j_ModelWrapper_setupModel((int)v7, (int)v4, 0, 0);
   *(v3 - 20) = (int)v6;
-  animations = (unsigned int)v6[1].texAnims.animations;
+  animations = (unsigned int)FIELD_U32(v6 + (1) * 48, 0x14);
   v9 = (int *)FIELD_U32(v6, 0xC);
   if ( FIELD_U32(v6, 0x8) > animations )
     v9 += animations;

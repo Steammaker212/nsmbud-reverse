@@ -43,7 +43,7 @@ int __fastcall SolidOnTopCollider_initImpl(
       points = FIELD_U32(info, 0x10);
       v11 = (float *)FIELD_U32(this, 0x158);
       ++v8;
-      x = points[v7].x;
+      x = FIELD_F32(points + (v7) * 8, 0x0);
       v12 = &points[v7];
       v13 = x;
       if ( v9 )

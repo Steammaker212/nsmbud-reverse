@@ -150,29 +150,29 @@ int __fastcall sub_6087C54C(int a1, int a2)
     FIELD_U32(v5, 0x0)[1] = v8;
     FIELD_U32(v5, 0x0)[2] = v9;
     FIELD_U32(v5, 0x0)[3] = v10;
-    v5[1].n128_u32[0] = v11;
+    FIELD_U32(v5 + (1) * 16, 0x0)[0] = v11;
     v12 = *v6;
     v13 = v6[1];
     v14 = v6[2];
     v15 = v6[3];
     v16 = v6[4];
     v6 += 5;
-    v5[1].n128_u32[1] = v12;
-    v5[1].n128_u32[2] = v13;
-    v5[1].n128_u32[3] = v14;
-    v5[2].n128_u32[0] = v15;
-    v5[2].n128_u32[1] = v16;
+    FIELD_U32(v5 + (1) * 16, 0x0)[1] = v12;
+    FIELD_U32(v5 + (1) * 16, 0x0)[2] = v13;
+    FIELD_U32(v5 + (1) * 16, 0x0)[3] = v14;
+    FIELD_U32(v5 + (2) * 16, 0x0)[0] = v15;
+    FIELD_U32(v5 + (2) * 16, 0x0)[1] = v16;
     v17 = v6[1];
     v18 = v6[2];
     v19 = v6[3];
     v20 = v6[4];
     v21 = v6[5];
-    v5[2].n128_u32[2] = *v6;
-    v5[2].n128_u32[3] = v17;
-    v5[3].n128_u32[0] = v18;
-    v5[3].n128_u32[1] = v19;
-    v5[3].n128_u32[2] = v20;
-    v5[3].n128_u32[3] = v21;
+    FIELD_U32(v5 + (2) * 16, 0x0)[2] = *v6;
+    FIELD_U32(v5 + (2) * 16, 0x0)[3] = v17;
+    FIELD_U32(v5 + (3) * 16, 0x0)[0] = v18;
+    FIELD_U32(v5 + (3) * 16, 0x0)[1] = v19;
+    FIELD_U32(v5 + (3) * 16, 0x0)[2] = v20;
+    FIELD_U32(v5 + (3) * 16, 0x0)[3] = v21;
   }
   else
   {
@@ -180,19 +180,19 @@ int __fastcall sub_6087C54C(int a1, int a2)
     v113 = *(float32x4_t *)(a2 + 16);
     v118 = *(float32x4_t *)(a2 + 32);
     v122 = *(float32x4_t *)(a2 + 48);
-    v23 = vmlaq_lane_f32(vmulq_n_f32(*(float32x4_t *)a2, v3[10].n64_f32[0]), v113, v3[10], 1);
+    v23 = vmlaq_lane_f32(vmulq_n_f32(*(float32x4_t *)a2, FIELD_F32(v3 + (10) * 8, 0x0)[0]), v113, v3[10], 1);
     v24 = vmlaq_lane_f32(
-            vmlaq_lane_f32(vmulq_n_f32(*(float32x4_t *)a2, v3[6].n64_f32[0]), v113, v3[6], 1),
+            vmlaq_lane_f32(vmulq_n_f32(*(float32x4_t *)a2, FIELD_F32(v3 + (6) * 8, 0x0)[0]), v113, v3[6], 1),
             v118,
             v3[7],
             0);
     v25 = vmlaq_lane_f32(
-            vmlaq_lane_f32(vmulq_n_f32(*(float32x4_t *)a2, v3[8].n64_f32[0]), v113, v3[8], 1),
+            vmlaq_lane_f32(vmulq_n_f32(*(float32x4_t *)a2, FIELD_F32(v3 + (8) * 8, 0x0)[0]), v113, v3[8], 1),
             v118,
             v3[9],
             0);
     *v5 = vmlaq_lane_f32(
-            vmlaq_lane_f32(vmulq_n_f32(*(float32x4_t *)a2, v3[4].n64_f32[0]), v113, v3[4], 1),
+            vmlaq_lane_f32(vmulq_n_f32(*(float32x4_t *)a2, FIELD_F32(v3 + (4) * 8, 0x0)[0]), v113, v3[4], 1),
             v118,
             v3[5],
             0);
@@ -241,14 +241,14 @@ int __fastcall sub_6087C54C(int a1, int a2)
           v39 = FIELD_U32(v36, 0x0)[1];
           v40 = FIELD_U32(v36, 0x0)[2];
           v41 = FIELD_U32(v36, 0x0)[3];
-          v42 = v36[1].n128_u32[0];
-          v37 = &v36[1].n128_u32[1];
+          v42 = FIELD_U32(v36 + (1) * 16, 0x0)[0];
+          v37 = &FIELD_U32(v36 + (1) * 16, 0x0)[1];
           FIELD_U32(v33, 0x0)[0] = v38;
           FIELD_U32(v33, 0x0)[1] = v39;
           FIELD_U32(v33, 0x0)[2] = v40;
           FIELD_U32(v33, 0x0)[3] = v41;
-          v33[1].n128_u32[0] = v42;
-          v43 = &v33[1].n128_u32[1];
+          FIELD_U32(v33 + (1) * 16, 0x0)[0] = v42;
+          v43 = &FIELD_U32(v33 + (1) * 16, 0x0)[1];
           v44 = *v37;
           v45 = v37[1];
           v46 = v37[2];
@@ -275,16 +275,16 @@ int __fastcall sub_6087C54C(int a1, int a2)
         }
         else
         {
-          v77 = v36[3].n128_u64[0];
-          v78 = v36[3].n128_u64[1];
+          v77 = FIELD_U64(v36 + (3) * 16, 0x0)[0];
+          v78 = FIELD_U64(v36 + (3) * 16, 0x0)[1];
           v79.n64_u64[0] = (unsigned __int64)v3[12 * v31 + 2];
           v119 = v36[1];
           v80 = vmulq_n_f32(v36[2], v3[12 * v31 + 3].n64_f32[0]);
           *v33 = vmulq_n_f32(*v36, v79.n64_f32[0]);
           v33[1] = vmulq_lane_f32(v119, v79, 1);
           v33[2] = v80;
-          v33[3].n128_u64[0] = v77;
-          v33[3].n128_u64[1] = v78;
+          FIELD_U64(v33 + (3) * 16, 0x0)[0] = v77;
+          FIELD_U64(v33 + (3) * 16, 0x0)[1] = v78;
         }
         goto LABEL_19;
       }
@@ -293,14 +293,14 @@ int __fastcall sub_6087C54C(int a1, int a2)
         v54 = &v3[12 * v30];
         v114 = v36[1];
         v123 = v36[3];
-        v55 = vmlaq_lane_f32(vmlaq_lane_f32(vmulq_n_f32(*v36, v54[6].n64_f32[0]), v114, v54[6], 1), v36[2], v54[7], 0);
-        v56 = vmlaq_lane_f32(vmlaq_lane_f32(vmulq_n_f32(*v36, v54[8].n64_f32[0]), v114, v54[8], 1), v36[2], v54[9], 0);
+        v55 = vmlaq_lane_f32(vmlaq_lane_f32(vmulq_n_f32(*v36, FIELD_F32(v54 + (6) * 8, 0x0)[0]), v114, v54[6], 1), v36[2], v54[7], 0);
+        v56 = vmlaq_lane_f32(vmlaq_lane_f32(vmulq_n_f32(*v36, FIELD_F32(v54 + (8) * 8, 0x0)[0]), v114, v54[8], 1), v36[2], v54[9], 0);
         v57 = vmlaq_lane_f32(
-                vmlaq_lane_f32(vmulq_n_f32(*v36, v54[10].n64_f32[0]), v114, v54[10], 1),
+                vmlaq_lane_f32(vmulq_n_f32(*v36, FIELD_F32(v54 + (10) * 8, 0x0)[0]), v114, v54[10], 1),
                 v36[2],
                 v54[11],
                 0);
-        *v33 = vmlaq_lane_f32(vmlaq_lane_f32(vmulq_n_f32(*v36, v54[4].n64_f32[0]), v114, v54[4], 1), v36[2], v54[5], 0);
+        *v33 = vmlaq_lane_f32(vmlaq_lane_f32(vmulq_n_f32(*v36, FIELD_F32(v54 + (4) * 8, 0x0)[0]), v114, v54[4], 1), v36[2], v54[5], 0);
         v33[1] = v55;
         v58 = v33 + 3;
         v33[2] = v56;
@@ -321,29 +321,29 @@ int __fastcall sub_6087C54C(int a1, int a2)
           FIELD_U32(v33, 0x0)[1] = v83;
           FIELD_U32(v33, 0x0)[2] = v84;
           FIELD_U32(v33, 0x0)[3] = v85;
-          v33[1].n128_u32[0] = v86;
+          FIELD_U32(v33 + (1) * 16, 0x0)[0] = v86;
           v87 = FIELD_U32(v81, 0x0)[0];
           v88 = FIELD_U32(v81, 0x0)[1];
-          v89 = v81[1].n64_u32[0];
-          v90 = v81[1].n64_u32[1];
-          v91 = v81[2].n64_u32[0];
+          v89 = FIELD_U32(v81 + (1) * 8, 0x0)[0];
+          v90 = FIELD_U32(v81 + (1) * 8, 0x0)[1];
+          v91 = FIELD_U32(v81 + (2) * 8, 0x0)[0];
           v81 = (float32x2_t *)((char *)v81 + 20);
-          v33[1].n128_u32[1] = v87;
-          v33[1].n128_u32[2] = v88;
-          v33[1].n128_u32[3] = v89;
-          v33[2].n128_u32[0] = v90;
-          v33[2].n128_u32[1] = v91;
+          FIELD_U32(v33 + (1) * 16, 0x0)[1] = v87;
+          FIELD_U32(v33 + (1) * 16, 0x0)[2] = v88;
+          FIELD_U32(v33 + (1) * 16, 0x0)[3] = v89;
+          FIELD_U32(v33 + (2) * 16, 0x0)[0] = v90;
+          FIELD_U32(v33 + (2) * 16, 0x0)[1] = v91;
           v92 = FIELD_U32(v81, 0x0)[1];
-          v93 = v81[1].n64_u32[0];
-          v94 = v81[1].n64_u32[1];
-          v95 = v81[2].n64_u32[0];
-          v96 = v81[2].n64_u32[1];
-          v33[2].n128_u32[2] = FIELD_U32(v81, 0x0)[0];
-          v33[2].n128_u32[3] = v92;
-          v33[3].n128_u32[0] = v93;
-          v33[3].n128_u32[1] = v94;
-          v33[3].n128_u32[2] = v95;
-          v33[3].n128_u32[3] = v96;
+          v93 = FIELD_U32(v81 + (1) * 8, 0x0)[0];
+          v94 = FIELD_U32(v81 + (1) * 8, 0x0)[1];
+          v95 = FIELD_U32(v81 + (2) * 8, 0x0)[0];
+          v96 = FIELD_U32(v81 + (2) * 8, 0x0)[1];
+          FIELD_U32(v33 + (2) * 16, 0x0)[2] = FIELD_U32(v81, 0x0)[0];
+          FIELD_U32(v33 + (2) * 16, 0x0)[3] = v92;
+          FIELD_U32(v33 + (3) * 16, 0x0)[0] = v93;
+          FIELD_U32(v33 + (3) * 16, 0x0)[1] = v94;
+          FIELD_U32(v33 + (3) * 16, 0x0)[2] = v95;
+          FIELD_U32(v33 + (3) * 16, 0x0)[3] = v96;
           v2 = v105;
           v97 = vmulq_f32(v33[3], *(float32x4_t *)v3[12 * v31 + 2].n64_u64);
           v33[3] = v97;
@@ -352,14 +352,14 @@ int __fastcall sub_6087C54C(int a1, int a2)
           v124 = v36[3];
           v98 = vmulq_n_f32(*v36, v97.n128_f32[0]);
           v99 = vmlaq_lane_f32(
-                  vmlaq_lane_f32(vmulq_n_f32(*v36, v33[1].n128_f32[0]), v116, (float32x2_t)v33[1].n128_u64[0], 1),
+                  vmlaq_lane_f32(vmulq_n_f32(*v36, FIELD_F32(v33 + (1) * 16, 0x0)[0]), v116, (float32x2_t)FIELD_U64(v33 + (1) * 16, 0x0)[0], 1),
                   v121,
-                  *(float32x2_t *)&v33[1].n128_i8[8],
+                  *(float32x2_t *)&FIELD_U32(v33 + (1) * 16, 0x0)[8],
                   0);
           v100 = vmlaq_lane_f32(
-                   vmlaq_lane_f32(vmulq_n_f32(*v36, v33[2].n128_f32[0]), v116, (float32x2_t)v33[2].n128_u64[0], 1),
+                   vmlaq_lane_f32(vmulq_n_f32(*v36, FIELD_F32(v33 + (2) * 16, 0x0)[0]), v116, (float32x2_t)FIELD_U64(v33 + (2) * 16, 0x0)[0], 1),
                    v121,
-                   *(float32x2_t *)&v33[2].n128_i8[8],
+                   *(float32x2_t *)&FIELD_U32(v33 + (2) * 16, 0x0)[8],
                    0);
           *v33 = vmlaq_lane_f32(
                    vmlaq_lane_f32(vmulq_n_f32(*v36, FIELD_F32(v33, 0x0)[0]), v116, (float32x2_t)FIELD_U64(v33, 0x0)[0], 1),
@@ -383,7 +383,7 @@ int __fastcall sub_6087C54C(int a1, int a2)
         v60 = &v3[12 * v30];
         v61 = &v3[4 * v32 + 2];
         v62.n64_u64[0] = FIELD_U64(v61, 0x0)[0];
-        v63 = v61[1].n64_u64[0];
+        v63 = FIELD_U64(v61 + (1) * 8, 0x0)[0];
         v64 = v36 + 1;
         v58 = v33 + 3;
         v65 = v60 + 6;
@@ -394,13 +394,13 @@ int __fastcall sub_6087C54C(int a1, int a2)
         v33[1] = v68;
         v33[2] = v67;
         v33[3] = v112;
-        v69.n64_u64[0] = v60[4].n64_u64[0];
-        v70.n64_u64[0] = v60[5].n64_u64[0];
+        v69.n64_u64[0] = FIELD_U64(v60 + (4) * 8, 0x0)[0];
+        v70.n64_u64[0] = FIELD_U64(v60 + (5) * 8, 0x0)[0];
         v71 = v60 + 10;
         v60 += 8;
         v72 = vmlaq_lane_f32(vmlaq_lane_f32(vmulq_n_f32(v66, v69.n64_f32[0]), v68, v69, 1), v67, v70, 0);
         v73.n64_u64[0] = FIELD_U64(v60, 0x0)[0];
-        v74.n64_u64[0] = v60[1].n64_u64[0];
+        v74.n64_u64[0] = FIELD_U64(v60 + (1) * 8, 0x0)[0];
         v75 = vmlaq_lane_f32(
                 vmlaq_lane_f32(vmulq_n_f32(v66, FIELD_F32(v71, 0x0)[0]), v68, (float32x2_t)FIELD_U64(v71, 0x0)[0], 1),
                 v67,

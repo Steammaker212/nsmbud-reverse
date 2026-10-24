@@ -10,7 +10,7 @@
 
 StateMethodExecuter *__fastcall sub_60555718(StateMethodExecuter *result)
 {
-  if ( !LOBYTE(result[304].vtable) && !BYTE1(result[304].vtable) )
+  if ( !LOBYTE(FIELD_U32(result + (304) * 12, 0x0)) && !BYTE1(FIELD_U32(result + (304) * 12, 0x0)) )
     return StateMgr__changeState((StateMgr *)&result[2], (StateBase *)&dword_60CAD4A8);
   return result;
 }

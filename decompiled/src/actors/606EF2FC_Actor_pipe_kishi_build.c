@@ -16,16 +16,16 @@ StageActor *__fastcall Actor_pipe_kishi_build(ActorBuildInfo *a1)
   v2 = (StageActor *)operator_new(0x2B4u);
   result = StageActor__ctor(v2, a1);
   FIELD_U32(result, 0x0) = (int)&off_60C1FFF0;
-  result[1]._.settings1 = 0;
-  result[1]._.settigns2 = 0;
-  *(_DWORD *)&result[1]._.movementId = 0;
-  result[1]._.field_10 = 0;
-  result[1]._.profile = 0;
-  result[1]._.id = 0;
-  result[1]._.heap = 0;
-  result[1]._.vtable = 0;
-  LOWORD(result[1]._.field_20.previous) = 60;
-  HIWORD(result[1]._.field_20.previous) = 0;
-  LOBYTE(result[1]._.field_20.next) = 0;
+  FIELD_U32(result + (1) * 644, 0x14) = 0;
+  FIELD_U32(result + (1) * 644, 0x18) = 0;
+  *(_DWORD *)&FIELD_U8(result + (1) * 644, 0x1C) = 0;
+  FIELD_U8(result + (1) * 644, 0x10) = 0;
+  FIELD_U32(result + (1) * 644, 0xC) = 0;
+  FIELD_U32(result + (1) * 644, 0x8) = 0;
+  FIELD_U32(result + (1) * 644, 0x4) = 0;
+  FIELD_U32(result + (1) * 644, 0x0) = 0;
+  LOWORD(FIELD_U32(result + (1) * 644, 0x20)) = 60;
+  HIWORD(FIELD_U32(result + (1) * 644, 0x20)) = 0;
+  LOBYTE(FIELD_U32(result + (1) * 644, 0x24)) = 0;
   return result;
 }

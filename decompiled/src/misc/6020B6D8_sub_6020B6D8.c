@@ -12,10 +12,10 @@ StateMethodExecuter *__fastcall sub_6020B6D8(StateMethodExecuter *result)
 {
   int owner; // r1
 
-  owner = (int)result[44].owner;
+  owner = (int)FIELD_U32(result + (44) * 12, 0x4);
   if ( owner >= 1 )
-    result[44].owner = (void *)--owner;
+    FIELD_U32(result + (44) * 12, 0x4) = (void *)--owner;
   if ( !owner )
-    return StateMgr__changeState((StateMgr *)&result[23].currentState, (StateBase *)&dword_60C8CAB4);
+    return StateMgr__changeState((StateMgr *)&FIELD_U32(result + (23) * 12, 0x8), (StateBase *)&dword_60C8CAB4);
   return result;
 }

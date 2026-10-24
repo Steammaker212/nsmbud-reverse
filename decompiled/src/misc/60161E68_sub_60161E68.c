@@ -32,7 +32,7 @@ int __fastcall sub_60161E68(ColliderBase *a1, Vec3 **a2, float *a3)
   FIELD_F32(a1, 0xC0) = a3[3];
   FIELD_U32(a1, 0xF4) = (int)a3[5];
   ColliderBase_setSolidity(a1, 1);
-  vtable = a1[1]._.vtable;
+  vtable = FIELD_U32(a1 + (1) * 340, 0x0);
   if ( vtable >= 1 )
   {
     v7 = 0;
@@ -41,7 +41,7 @@ int __fastcall sub_60161E68(ColliderBase *a1, Vec3 **a2, float *a3)
     {
       v9 = vtable > (unsigned int)v8;
       v10 = *((_DWORD *)a3 + 4);
-      containingHeap = (_DWORD *)a1[1]._.containingHeap;
+      containingHeap = (_DWORD *)FIELD_U32(a1 + (1) * 340, 0x4);
       ++v8;
       v14 = *(_DWORD *)(v10 + v7);
       v12 = v10 + v7;
@@ -51,7 +51,7 @@ int __fastcall sub_60161E68(ColliderBase *a1, Vec3 **a2, float *a3)
       v7 += 8;
       *containingHeap = v13;
       containingHeap[1] = FIELD_U32(v12, 4);
-      vtable = a1[1]._.vtable;
+      vtable = FIELD_U32(a1 + (1) * 340, 0x0);
     }
     while ( v8 < vtable );
   }

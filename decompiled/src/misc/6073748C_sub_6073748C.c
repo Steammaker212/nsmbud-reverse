@@ -25,21 +25,21 @@ signed int __fastcall sub_6073748C(ColliderBase *a1)
   ActorBuildInfo v14; // [sp+24h] [bp-4Ch] BYREF
 
   a1[21].field_E4 = 0;
-  a1[21].owner248Ptr = (Vec3 *)49;
+  FIELD_U32(a1 + (21) * 340, 0x9C) = (Vec3 *)49;
   v2 = (ShapedCollider *)&a1[18];
   ColliderBase_setType(a1 + 18, 7);
   v3 = sub_605635AC((int)a1, 1, 1);
   result = 2;
   if ( v3 == 1 )
   {
-    a1[1].owner56Ptr = (char *)1132462080;
+    FIELD_U32(a1 + (1) * 340, 0xA0) = (char *)1132462080;
     a1[1].owner57Ptr = (char *)1140850688;
     a1[1].ownerPlayerIdPtr = (char *)1107296256;
-    a1[1].distToCenter.x = 32.0;
-    a1[1].distToCenter.y = 512.0;
-    a1[1].field_B4 = 1140850688;
-    a1[1].field_B8 = 1149239296;
-    a1[1].field_BC = 1024.0;
+    FIELD_F32(a1 + (1) * 340, 0xAC) = 32.0;
+    FIELD_F32(a1 + (1) * 340, 0xB0) = 512.0;
+    FIELD_U32(a1 + (1) * 340, 0xB4) = 1140850688;
+    FIELD_U32(a1 + (1) * 340, 0xB8) = 1149239296;
+    FIELD_F32(a1 + (1) * 340, 0xBC) = 1024.0;
     a1[21].field_8C = 1115684864;
     a1[21].owner = (StageActor *)1115684864;
     v5 = (int)FIELD_U32(a1, 0x10)[0].next & 0xF;

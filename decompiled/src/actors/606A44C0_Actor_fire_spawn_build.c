@@ -21,7 +21,7 @@ Enemy *__fastcall Actor_fire_spawn_build(ActorBuildInfo *a1)
   v2[1]._._._.field_B4 = 1065353216;
   v2[1]._._._.field_B8 = 1065353216;
   v2[1]._._._.rotation.y = -1;
-  v2[1]._._._.rotation.z = 255;
+  FIELD_U32(v2 + (1) * 6300, 0xA4) = 255;
   FIELD_U8(v2, 0x215) = 0;
   return v2;
 }

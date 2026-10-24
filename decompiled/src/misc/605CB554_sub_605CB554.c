@@ -25,9 +25,9 @@ unsigned int __fastcall sub_605CB554(int a1)
   if ( result )
   {
     sub_605CC4D8(a1);
-    if ( (float)(*(float *)&v3[9].owner - *(float *)&v3[49].vtable) > 0.0 && (FIELD_U32(a1, 2872) & 0x10400) == 0x400 )
+    if ( (float)(*(float *)&FIELD_U32(v3 + (9) * 12, 0x4) - *(float *)&FIELD_U32(v3 + (49) * 12, 0x0)) > 0.0 && (FIELD_U32(a1, 2872) & 0x10400) == 0x400 )
       return (unsigned int)SE_OBJ_TARU_BREAK_ref(a1, 0);
-    v4 = (float)(*(float *)&v3[9].vtable - *(float *)&v3[48].currentState) < 0.0;
+    v4 = (float)(*(float *)&FIELD_U32(v3 + (9) * 12, 0x0) - *(float *)&FIELD_U32(v3 + (48) * 12, 0x8)) < 0.0;
     if ( sub_605C9ACC(a1, v4) || sub_605C9ACC(a1, 2) == 1 )
     {
       FIELD_U32(a1, 80) = !v4;
@@ -48,7 +48,7 @@ unsigned int __fastcall sub_605CB554(int a1)
       result = LOBYTE(v3[575].vtable);
       if ( (result & 0x60) == 0 )
       {
-        result = (int)v3[576].vtable & 0x60;
+        result = (int)FIELD_U32(v3 + (576) * 12, 0x0) & 0x60;
         if ( result != 32 )
         {
           if ( (result = FIELD_U32(a1, 2872), (result & 0x440000) != 0) && (result & 0x10000000) == 0

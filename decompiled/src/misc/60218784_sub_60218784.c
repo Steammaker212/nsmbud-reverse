@@ -12,7 +12,7 @@ StateMethodExecuter *__fastcall sub_60218784(StateMethodExecuter *result)
 {
   int v1; // r1
 
-  v1 = **((_DWORD **)result[25].owner + 3);
+  v1 = **((_DWORD **)FIELD_U32(result + (25) * 12, 0x4) + 3);
   if ( FIELD_F32(v1, 20) > 15.0 )
     BYTE1(result[44].owner) = 0;
   if ( (FIELD_U8(v1, 28) & 0x20) != 0 )

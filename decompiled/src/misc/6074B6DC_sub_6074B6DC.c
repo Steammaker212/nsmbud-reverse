@@ -90,7 +90,7 @@ LABEL_13:
               v12 = ProfileId == 841;
             if ( v12 )
             {
-              vtable = v20[1].vtable;
+              vtable = FIELD_U32(v20 + (1) * 80, 0x0);
               v14 = (void *)(dword_60C9CF0C + 1340);
               v15 = ((3 * (unsigned __int64)sead__Random__getU32((void *)(dword_60C9CF0C + 1340))) >> 32) + 2;
               v16 = (unsigned int)v15 * (unsigned __int64)sead__Random__getU32(v14);

@@ -88,7 +88,7 @@ BossBase *__fastcall FinalBowser__ctor(BossBase *a1, ActorBuildInfo *a2)
   *(_DWORD *)&a1[3]._._._.collisionMgr[4788] = 0;
   *(_DWORD *)&a1[3]._._._.collisionMgr[4792] = 1065353216;
   a1[1]._._._._.direction = 0;
-  a1[1]._._._._._.field_4C = 0;
+  FIELD_U32(a1 + (1) * 7092, 0x4C) = 0;
   a1[1]._._._._._.field_48 = 0;
   a1[1]._._._._._.field_44 = 0;
   a1[1]._._._._._.field_40 = 0;
@@ -121,7 +121,7 @@ BossBase *__fastcall FinalBowser__ctor(BossBase *a1, ActorBuildInfo *a2)
   a1[1]._._._._.aCollider.createNode.owner = 0;
   a1[1]._._._._.aCollider.activeNode.prev = 0;
   a1[1]._._._._.aCollider.activeNode.next = 0;
-  a1[1]._._._._.aCollider.activeNode.owner = 0;
+  FIELD_U32(a1 + (1) * 7092, 0xCC) = 0;
   a1[1]._._._._.aCollider._.field_C = 0;
   a1[1]._._._._.aCollider.node4.prev = 0;
   a1[1]._._._._.aCollider.node4.next = 0;
@@ -131,7 +131,7 @@ BossBase *__fastcall FinalBowser__ctor(BossBase *a1, ActorBuildInfo *a2)
   a1[1]._._._._.aCollider.node3.owner = 0;
   a1[1]._._._._.aCollider.field_58 = 0;
   a1[1]._._._._.aCollider.field_54 = 0;
-  a1[1]._._._._.aCollider.field_50 = 0;
+  FIELD_U32(a1 + (1) * 7092, 0x10C) = 0;
   a1[1]._._._._.aCollider.field_4C = 0;
   a1[1]._._._._.aCollider.field_48 = 0;
   a1[1]._._._._.aCollider.field_44 = 0;

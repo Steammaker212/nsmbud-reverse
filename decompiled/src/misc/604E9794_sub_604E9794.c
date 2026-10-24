@@ -13,9 +13,9 @@ StateMethodExecuter *__fastcall sub_604E9794(StateMethodExecuter *result)
   void *v1; // r1
 
   v1 = *(void **)(dword_60C9A1F0 + 6500);
-  if ( result[45].owner != v1 )
+  if ( FIELD_U32(result + (45) * 12, 0x4) != v1 )
   {
-    result[45].owner = v1;
+    FIELD_U32(result + (45) * 12, 0x4) = v1;
     return StateMgr__changeState((StateMgr *)&result[378], (StateBase *)&dword_60CA5DA4);
   }
   return result;

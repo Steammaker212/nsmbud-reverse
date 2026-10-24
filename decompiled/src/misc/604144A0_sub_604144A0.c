@@ -30,7 +30,7 @@ sead_ListNode *__fastcall sub_604144A0(sead_ListNode *a1, int a2, int a3, float 
     v8 = (float)(-0.00030118 * 0.0) + 1.0;
     v9 = (float)(0.024541 * 0.0) + 0.0;
     v10 = *(float *)&FIELD_U32(result, 0x4);
-    v11 = *(float *)&result[1].previous;
+    v11 = *(float *)&FIELD_U32(result + (1) * 8, 0x0);
     v12 = (float)(a5 & 0xFFFFFF) * 0.000000059605;
     v13 = *(float *)((char *)sinLutTable + v7) + (float)(v12 * *(float *)((char *)&sinLutTable[1] + v7));
     v14 = *(float *)((char *)&sinLutTable[2] + v7) + (float)(v12 * *(float *)((char *)&sinLutTable[3] + v7));
@@ -44,10 +44,10 @@ sead_ListNode *__fastcall sub_604144A0(sead_ListNode *a1, int a2, int a3, float 
         + (float)((float)(v8 * v8) * v11);
     *(float *)&FIELD_U32(result, 0x0) = v15;
     *(float *)&FIELD_U32(result, 0x4) = v16;
-    *(float *)&result[1].previous = v17;
+    *(float *)&FIELD_U32(result + (1) * 8, 0x0) = v17;
     *(float *)&FIELD_U32(result, 0x0) = *a4 + v15;
     *(float *)&FIELD_U32(result, 0x4) = a4[1] + v16;
-    result[6].previous = (sead_ListNode *)((char *)result[6].previous + a5);
+    FIELD_U32(result + (6) * 8, 0x0) = (sead_ListNode *)((char *)FIELD_U32(result + (6) * 8, 0x0) + a5);
   }
   return result;
 }

@@ -15,10 +15,10 @@ StageActor *__fastcall WendyFloor__ctor(ActorBuildInfo *a1)
   v2 = (StageActor *)operator_new(0x5B8u);
   StageActor__ctor(v2, a1);
   FIELD_U32(v2, 0x0) = (int)off_60BD1818;
-  v2[1]._.vtable = 0;
-  sub_6012B2C0(&v2[1]._.heap);
-  v2[2].rotation.y = 0;
-  v2[2].rotation.z = 0;
-  v2[2].field_A8 = 0;
+  FIELD_U32(v2 + (1) * 644, 0x0) = 0;
+  sub_6012B2C0(&FIELD_U32(v2 + (1) * 644, 0x4));
+  FIELD_U32(v2 + (2) * 644, 0xA0) = 0;
+  FIELD_U32(v2 + (2) * 644, 0xA4) = 0;
+  FIELD_U32(v2 + (2) * 644, 0xA8) = 0;
   return v2;
 }

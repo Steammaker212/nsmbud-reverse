@@ -15,20 +15,20 @@ int __fastcall sub_60984AF0(float32x4_t *a1, int a2, int a3, int a4, float32x2_t
   unsigned int v11; // r0
   unsigned int v12; // r2
 
-  v9 = a1[17].n128_u32[1];
-  v10 = a1[17].n128_u32[0];
+  v9 = FIELD_U32(a1 + (17) * 16, 0x0)[1];
+  v10 = FIELD_U32(a1 + (17) * 16, 0x0)[0];
   if ( v9 )
   {
     v11 = FIELD_U32(v10, 44);
-    v12 = a1[17].n128_u32[2];
+    v12 = FIELD_U32(a1 + (17) * 16, 0x0)[2];
     if ( v9 == 1 )
     {
       if ( v12 >= v11 )
         goto LABEL_8;
       if ( v12 + 1 >= v11 )
       {
-        a1[17].n128_u32[1] = 2;
-        a1[17].n128_u32[2] = FIELD_U32(v10, 44);
+        FIELD_U32(a1 + (17) * 16, 0x0)[1] = 2;
+        FIELD_U32(a1 + (17) * 16, 0x0)[2] = FIELD_U32(v10, 44);
         a1[13].n128_u16[4] |= 4u;
         goto LABEL_8;
       }
@@ -40,7 +40,7 @@ int __fastcall sub_60984AF0(float32x4_t *a1, int a2, int a3, int a4, float32x2_t
   }
   sub_60984B90(a1, v10);
 LABEL_8:
-  if ( a1[17].n128_u32[1] != 2 )
+  if ( FIELD_U32(a1 + (17) * 16, 0x0)[1] != 2 )
     FIELD_U8(a3, 28) = 1;
   return sub_6085DB04(a1, a2, a3, a4, a5);
 }

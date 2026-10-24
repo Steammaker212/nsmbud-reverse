@@ -10,7 +10,7 @@
 
 int __fastcall sub_60299A50(Actor *a1)
 {
-  if ( a1[84].field_40 == 2 )
+  if ( FIELD_U32(a1 + (84) * 80, 0x40) == 2 )
     return (*(int (__fastcall **)(Actor *, StateVirtual *))(FIELD_U32(a1, 0x0) + 192))(a1, &stru_60C90908);
   if ( Actor__getProfileId(a1) == 479
     || Actor__getProfileId(a1) == 480

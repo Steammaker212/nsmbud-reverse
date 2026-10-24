@@ -16,9 +16,9 @@ StageActor *__fastcall Actor_kishikeronpa_build(ActorBuildInfo *a1)
   v2 = (StageActor *)operator_new(0x294u);
   result = StageActor__ctor(v2, a1);
   FIELD_U32(result, 0x0) = (int)off_60BF7A58;
-  result[1]._.vtable = 0;
-  result[1]._.heap = 0;
-  result[1]._.id = 0;
-  result[1]._.profile = 0;
+  FIELD_U32(result + (1) * 644, 0x0) = 0;
+  FIELD_U32(result + (1) * 644, 0x4) = 0;
+  FIELD_U32(result + (1) * 644, 0x8) = 0;
+  FIELD_U32(result + (1) * 644, 0xC) = 0;
   return result;
 }

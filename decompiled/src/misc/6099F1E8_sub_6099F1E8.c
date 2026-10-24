@@ -38,31 +38,31 @@ int __fastcall sub_6099F1E8(sead_ListNode *a1, int a2)
   signed int v29; // r5
   sead_ListNode *v30; // r0
 
-  previous = a1[5].previous;
+  previous = FIELD_U32(a1 + (5) * 8, 0x0);
   v5 = a1 + 3;
   if ( previous )
   {
-    next = a1[3].next;
+    next = FIELD_U32(a1 + (3) * 8, 0x4);
     if ( next == v5 )
       goto LABEL_5;
     do
     {
       v7 = FIELD_U32(next, 0x4);
       sead__ListNode__erase(next);
-      --a1[4].previous;
-      next[-20].previous = a1[4].next;
+      --FIELD_U32(a1 + (4) * 8, 0x0);
+      next[-20].previous = FIELD_U32(a1 + (4) * 8, 0x4);
       v8 = next - 20;
       next = v7;
-      a1[4].next = v8;
+      FIELD_U32(a1 + (4) * 8, 0x4) = v8;
     }
     while ( v7 != v5 );
-    previous = a1[5].previous;
+    previous = FIELD_U32(a1 + (5) * 8, 0x0);
     if ( previous )
 LABEL_5:
       operator_delete_8DE3FC(previous);
-    a1[4].next = 0;
-    a1[5].previous = 0;
-    a1[5].next = 0;
+    FIELD_U32(a1 + (4) * 8, 0x4) = 0;
+    FIELD_U32(a1 + (5) * 8, 0x0) = 0;
+    FIELD_U32(a1 + (5) * 8, 0x4) = 0;
   }
   v9 = dword_60C60DD4;
   if ( dword_60C60DD4 >= 1 )
@@ -71,7 +71,7 @@ LABEL_5:
     if ( v10 )
     {
       v11 = v9 - 1;
-      a1[4].next = v10;
+      FIELD_U32(a1 + (4) * 8, 0x4) = v10;
       if ( v9 >= 2 )
       {
         v12 = 0;
@@ -96,22 +96,22 @@ LABEL_5:
         }
       }
       v10[21 * v11].previous = 0;
-      a1[5].previous = v10;
-      a1[5].next = (sead_ListNode *)v9;
+      FIELD_U32(a1 + (5) * 8, 0x0) = v10;
+      FIELD_U32(a1 + (5) * 8, 0x4) = (sead_ListNode *)v9;
     }
   }
-  v16 = a1[3].next;
+  v16 = FIELD_U32(a1 + (3) * 8, 0x4);
   if ( v16 != v5 )
   {
     do
     {
       v17 = FIELD_U32(v16, 0x4);
       sead__ListNode__erase(v16);
-      --a1[4].previous;
-      v16[-20].previous = a1[4].next;
+      --FIELD_U32(a1 + (4) * 8, 0x0);
+      v16[-20].previous = FIELD_U32(a1 + (4) * 8, 0x4);
       v18 = v16 - 20;
       v16 = v17;
-      a1[4].next = v18;
+      FIELD_U32(a1 + (4) * 8, 0x4) = v18;
     }
     while ( v17 != v5 );
   }
@@ -122,29 +122,29 @@ LABEL_5:
     do
     {
       v21 = 0;
-      if ( (int)a1[4].previous < (int)a1[5].next )
+      if ( (int)FIELD_U32(a1 + (4) * 8, 0x0) < (int)FIELD_U32(a1 + (5) * 8, 0x4) )
       {
-        v21 = a1[4].next;
+        v21 = FIELD_U32(a1 + (4) * 8, 0x4);
         if ( v21 )
-          a1[4].next = FIELD_U32(v21, 0x0);
+          FIELD_U32(a1 + (4) * 8, 0x4) = FIELD_U32(v21, 0x0);
         else
           v21 = 0;
         FIELD_U32(v21, 0x0) = (sead_ListNode *)&BufferedSafeStringBase_char_vtable_probably;
         FIELD_U32(v21, 0x4) = (sead_ListNode *)((char *)v21 + 12);
-        v21[1].previous = (sead_ListNode *)8;
+        FIELD_U32(v21 + (1) * 8, 0x0) = (sead_ListNode *)8;
         sead__BufferedSafeStringBase__assureTerminationImpl_const((int)v21);
         LOBYTE(FIELD_U32(v21, 0x4)) = 0;
         FIELD_U32(v21, 0x0) = (sead_ListNode *)&off_60BD4B8C;
-        v21[3].previous = v21 + 4;
-        v21[2].next = (sead_ListNode *)&BufferedSafeStringBase_char_vtable_probably;
-        v21[3].next = (sead_ListNode *)128;
-        sead__BufferedSafeStringBase__assureTerminationImpl_const((int)&v21[2].next);
+        FIELD_U32(v21 + (3) * 8, 0x0) = v21 + 4;
+        FIELD_U32(v21 + (2) * 8, 0x4) = (sead_ListNode *)&BufferedSafeStringBase_char_vtable_probably;
+        FIELD_U32(v21 + (3) * 8, 0x4) = (sead_ListNode *)128;
+        sead__BufferedSafeStringBase__assureTerminationImpl_const((int)&FIELD_U32(v21 + (2) * 8, 0x4));
         LOBYTE(v21[3].FIELD_U32(previous, 0x0)) = 0;
-        v21[2].next = (sead_ListNode *)&off_60BD95A8;
-        v21[20].previous = 0;
-        v21[20].next = 0;
+        FIELD_U32(v21 + (2) * 8, 0x4) = (sead_ListNode *)&off_60BD95A8;
+        FIELD_U32(v21 + (20) * 8, 0x0) = 0;
+        FIELD_U32(v21 + (20) * 8, 0x4) = 0;
         sead__ListNode__insertFront(a1 + 3, v21 + 20);
-        ++a1[4].previous;
+        ++FIELD_U32(a1 + (4) * 8, 0x0);
       }
       v22 = FIELD_U32(v21, 0x4);
       v23 = *(sead_ListNode **)&off_60C60DB8[4 * v20];
@@ -171,13 +171,13 @@ LABEL_5:
             break;
           }
         }
-        v26 = v21[1].previous;
+        v26 = FIELD_U32(v21 + (1) * 8, 0x0);
         if ( v24 >= (int)v26 )
           v24 = (signed int)&v26[-1].next + 3;
         qmemcpy(FIELD_U32(v21, 0x4), v23, v24);
         *((_BYTE *)&FIELD_U32(v22, 0x0) + v24) = 0;
       }
-      v27 = (__int16 *)v21[3].previous;
+      v27 = (__int16 *)FIELD_U32(v21 + (3) * 8, 0x0);
       v28 = off_60C60DD0[v20];
       if ( v27 != v28 )
       {
@@ -202,10 +202,10 @@ LABEL_5:
             break;
           }
         }
-        v30 = v21[3].next;
+        v30 = FIELD_U32(v21 + (3) * 8, 0x4);
         if ( v29 >= (int)v30 )
           v29 = (signed int)&v30[-1].next + 3;
-        qmemcpy(v21[3].previous, v28, v29);
+        qmemcpy(FIELD_U32(v21 + (3) * 8, 0x0), v28, v29);
         *((_BYTE *)v27 + v29) = 0;
       }
       ++v20;

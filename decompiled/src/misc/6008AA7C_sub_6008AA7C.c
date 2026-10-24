@@ -62,7 +62,7 @@ signed int __fastcall sub_6008AA7C(StageActor *a1, int a2, int a3)
       return v8;
     }
   }
-  if ( (a1[11].zoneId & 2) != 0 )
+  if ( (FIELD_U8(a1 + (11) * 644, 0x214) & 2) != 0 )
   {
     v12 = StateMgr__getCurrentState((StateMgr *)&a1[9].aCollider.field_64);
     v13 = (*((int (__fastcall **)(StateBase *))FIELD_U32(v12, 0x0) + 2))(v12);

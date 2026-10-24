@@ -40,7 +40,7 @@ void __fastcall BobOmb_setupModel(Enemy *a1)
   }
   else
   {
-    animations = (unsigned int)v5[1].texAnims.animations;
+    animations = (unsigned int)FIELD_U32(v5 + (1) * 48, 0x14);
     v11 = FIELD_U32(v5, 0xC);
     if ( FIELD_U32(v5, 0x8) > animations )
       v11 += animations;

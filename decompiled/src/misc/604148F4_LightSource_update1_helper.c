@@ -26,8 +26,8 @@ sead_ListNode *__fastcall LightSource_update1_helper(sead_ListNode *a1)
       a1[21531].next = FIELD_U32(next, 0x0);
     }
     LightSource_update1_helper_helper_424120(v2);
-    v2[27].previous = 0;
-    v2[27].next = 0;
+    FIELD_U32(v2 + (27) * 8, 0x0) = 0;
+    FIELD_U32(v2 + (27) * 8, 0x4) = 0;
     sead__ListNode__insertFront(a1 + 21530, v2 + 27);
     ++FIELD_U32(v3, 0x0);
   }

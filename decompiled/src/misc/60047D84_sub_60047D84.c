@@ -125,7 +125,7 @@ LABEL_10:
       FIELD_U8(v24, 6796) = 1;
       FIELD_U8(a1, 11685) = 1;
       FIELD_U8(a1, 11686) = FIELD_U8(v24, 6797);
-      v25 = *(float *)&v13[1].field_20 + *(float *)&v13[7].field_28;
+      v25 = *(float *)&FIELD_U32(v13 + (1) * 76, 0x20) + *(float *)&FIELD_U32(v13 + (7) * 76, 0x28);
       FIELD_F32(a1, 11576) = v25;
       FIELD_U32(a1, 11580) = *v10;
       v26 = v25 - a3[0].x;

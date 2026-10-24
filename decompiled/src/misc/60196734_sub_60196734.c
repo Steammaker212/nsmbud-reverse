@@ -69,8 +69,8 @@ StateMethodExecuter *__fastcall sub_60196734(int a1)
                * 0.000000059605);
     FIELD_F32(a1, 84) = (float)(FIELD_F32(a1, 364) + 490.0) + (float)(FIELD_F32(a1, 464) * v7);
     result = *(StateMethodExecuter **)(a1 + 300);
-    currentState = result[5].currentState;
-    vtable = (char *)result[1].vtable;
+    currentState = FIELD_U32(result + (5) * 12, 0x8);
+    vtable = (char *)FIELD_U32(result + (1) * 12, 0x0);
     if ( FIELD_U32(result, 0x8) > currentState )
       vtable += 4 * currentState;
     if ( (*(_BYTE *)(*(_DWORD *)vtable + 28) & 0x20) != 0 )

@@ -23,6 +23,6 @@ signed int __fastcall sub_605D05CC(ColliderBase *a1)
     ColliderMgr_add(ColliderMgr_instance, v2);
     LOBYTE(a1[21].field_88) = 1;
   }
-  a1[21].owner248Ptr = (Vec3 *)48;
+  FIELD_U32(a1 + (21) * 340, 0x9C) = (Vec3 *)48;
   return 7296;
 }

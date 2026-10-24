@@ -14,23 +14,23 @@ StateMethodExecuter *__fastcall sub_606C43D8(StateMethodExecuter *result)
   int v2; // r1
   void *vtable; // r1
 
-  v1 = *(float *)&result[6].vtable + *((float *)&result[3].owner + 4 * LOBYTE(result[8].vtable));
-  *(float *)&result[6].vtable = v1;
-  *(float *)&result[5].currentState = v1 + *(float *)&result[5].currentState;
-  v2 = result[6].currentState - 1;
-  result[6].currentState = v2;
+  v1 = *(float *)&FIELD_U32(result + (6) * 12, 0x0) + *((float *)&FIELD_U32(result + (3) * 12, 0x4) + 4 * LOBYTE(FIELD_U32(result + (8) * 12, 0x0)));
+  *(float *)&FIELD_U32(result + (6) * 12, 0x0) = v1;
+  *(float *)&FIELD_U32(result + (5) * 12, 0x8) = v1 + *(float *)&FIELD_U32(result + (5) * 12, 0x8);
+  v2 = FIELD_U32(result + (6) * 12, 0x8) - 1;
+  FIELD_U32(result + (6) * 12, 0x8) = v2;
   if ( !v2 )
   {
-    vtable = result[7].vtable;
+    vtable = FIELD_U32(result + (7) * 12, 0x0);
     if ( vtable )
     {
-      result[6].currentState = (int)vtable;
-      return StateMgr__changeState((StateMgr *)&result[1].currentState, (StateBase *)&dword_60CBAB40);
+      FIELD_U32(result + (6) * 12, 0x8) = (int)vtable;
+      return StateMgr__changeState((StateMgr *)&FIELD_U32(result + (1) * 12, 0x8), (StateBase *)&dword_60CBAB40);
     }
     else
     {
-      result[6].currentState = (int)result[7].owner;
-      return StateMgr__changeState((StateMgr *)&result[1].currentState, (StateBase *)&dword_60CBAB60);
+      FIELD_U32(result + (6) * 12, 0x8) = (int)FIELD_U32(result + (7) * 12, 0x4);
+      return StateMgr__changeState((StateMgr *)&FIELD_U32(result + (1) * 12, 0x8), (StateBase *)&dword_60CBAB60);
     }
   }
   return result;

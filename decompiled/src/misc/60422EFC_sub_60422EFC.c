@@ -14,7 +14,7 @@ int __fastcall sub_60422EFC(sead_ListNode *a1, int a2)
 
   v4 = (int)&a1[81];
   sead__CriticalSection__lock((int)&a1[81]);
-  sead__ListNode__insertFront(a1 + 79, (sead_ListNode *)((char *)a1[80].next + a2));
-  ++a1[80].previous;
+  sead__ListNode__insertFront(a1 + 79, (sead_ListNode *)((char *)FIELD_U32(a1 + (80) * 8, 0x4) + a2));
+  ++FIELD_U32(a1 + (80) * 8, 0x0);
   return sead__CriticalSection__unlock(v4);
 }

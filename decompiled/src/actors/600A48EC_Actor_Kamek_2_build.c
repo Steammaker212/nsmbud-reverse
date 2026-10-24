@@ -17,11 +17,11 @@ Actor *__fastcall Actor_Kamek_2_build(int a1)
   v2 = (Actor *)operator_new(0x5Cu);
   result = Actor__ctor(v2, (ActorBuildInfo *)a1);
   FIELD_U32(result, 0x0) = (int)off_60BC8D18;
-  LOBYTE(result[1].id) = 0;
+  LOBYTE(FIELD_U32(result + (1) * 80, 0x8)) = 0;
   v4 = FIELD_U32(a1, 20);
-  result[1].vtable = FIELD_U32(a1, 16);
-  result[1].heap = v4;
+  FIELD_U32(result + (1) * 80, 0x0) = FIELD_U32(a1, 16);
+  FIELD_U32(result + (1) * 80, 0x4) = v4;
   if ( (FIELD_U32(result, 0x14) & 0x100000) != 0 )
-    LOBYTE(result[1].id) = 1;
+    LOBYTE(FIELD_U32(result + (1) * 80, 0x8)) = 1;
   return result;
 }

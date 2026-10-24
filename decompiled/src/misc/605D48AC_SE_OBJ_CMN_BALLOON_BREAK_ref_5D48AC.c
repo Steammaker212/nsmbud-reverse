@@ -16,9 +16,9 @@ int __fastcall SE_OBJ_CMN_BALLOON_BREAK_ref_5D48AC(Vec3 *a1)
   Vec3 position; // [sp+8h] [bp-18h] BYREF
 
   EffectData_create(443, a1 + 9, 0, (int)&a1[12]);
-  y = a1[9].y;
+  y = FIELD_F32(a1 + (9) * 12, 0x4);
   v3 = Global_BasicSoundActor2;
-  position.x = a1[9].x;
+  position.x = FIELD_F32(a1 + (9) * 12, 0x0);
   position.y = y;
   mapPositionToScreen(&v5, &position);
   return BasicSoundActor2_play(v3, "SE_OBJ_CMN_BALLOON_BREAK", &v5.x, 0);

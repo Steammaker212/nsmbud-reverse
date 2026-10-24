@@ -68,7 +68,7 @@ void __fastcall sub_600A7F7C(_DWORD *a1)
       v19 = v18 == 1;
       if ( v18 == 1 )
         v19 = FIELD_U8(v17, 0x13) == 0;
-      if ( v19 && BYTE1(v17[6].field_34) == 3 && (v17[7].id & 0x30) != 0 && Actor__getProfileId(v17) != 711 )
+      if ( v19 && BYTE1(v17[6].field_34) == 3 && (FIELD_U32(v17 + (7) * 80, 0x8) & 0x30) != 0 && Actor__getProfileId(v17) != 711 )
       {
         if ( ((unsigned int)dword_60C7B430 & ~(1611301184 << v8) & 1) == 0 && _cxa_guard_acquire(dword_60C7B430) )
         {

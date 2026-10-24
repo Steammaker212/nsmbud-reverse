@@ -103,7 +103,7 @@ StateMethodExecuter *__fastcall SE_SYS_BTN_OVER_ref_2(int a1)
         }
         if ( FIELD_U8(a1, 20546) )
           return result;
-        result = (StateMethodExecuter *)(*((_DWORD *)&result[1].owner + 101 * v6) | *(&FIELD_U32(result, 0x8) + 101 * v6));
+        result = (StateMethodExecuter *)(*((_DWORD *)&FIELD_U32(result + (1) * 12, 0x4) + 101 * v6) | *(&FIELD_U32(result, 0x8) + 101 * v6));
         if ( ((unsigned __int8)result & 0x40) != 0 )
         {
           if ( sub_60835008(result) != 1 )

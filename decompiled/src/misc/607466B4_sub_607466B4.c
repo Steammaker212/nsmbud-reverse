@@ -23,7 +23,7 @@ int __fastcall sub_607466B4(int a1)
   {
     if ( Actor__getProfileId(*(Actor **)(a1 + 56)) == 34 || (result = Actor__getProfileId(v3), result == 35) )
     {
-      result = v3[14].field_44;
+      result = FIELD_U32(v3 + (14) * 80, 0x44);
       FIELD_U32(a1, 124) = result;
     }
   }

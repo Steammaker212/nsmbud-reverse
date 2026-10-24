@@ -49,8 +49,8 @@ StateMethodExecuter *__fastcall sub_60196C38(int a1, float a2)
   else if ( !result )
   {
     result = *(StateMethodExecuter **)(a1 + 300);
-    currentState = result[5].currentState;
-    vtable = (char *)result[1].vtable;
+    currentState = FIELD_U32(result + (5) * 12, 0x8);
+    vtable = (char *)FIELD_U32(result + (1) * 12, 0x0);
     if ( FIELD_U32(result, 0x8) > currentState )
       vtable += 4 * currentState;
     if ( (*(_BYTE *)(*(_DWORD *)vtable + 28) & 0x20) != 0 )

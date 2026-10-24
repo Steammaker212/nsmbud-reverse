@@ -15,14 +15,14 @@ signed int __fastcall sub_605690F4(ColliderBase *a1)
 
   a1[21].field_E4 = 0;
   ColliderBase_setType(a1 + 18, 7);
-  a1[21].owner248Ptr = (Vec3 *)49;
+  FIELD_U32(a1 + (21) * 340, 0x9C) = (Vec3 *)49;
   a1[21].field_94 = 1;
   v2 = sub_60562ABC((int)a1);
   result = 2;
   if ( v2 == 1 )
   {
-    a1[1].owner56Ptr = (char *)1157627904;
-    a1[1].owner57Ptr = (char *)1140850688;
+    FIELD_U32(a1 + (1) * 340, 0xA0) = (char *)1157627904;
+    FIELD_U32(a1 + (1) * 340, 0xA4) = (char *)1140850688;
     if ( Actor__getProfileId((Actor *)a1) == 301 )
     {
       a1[18].field_144 = (int)sub_605639F0;

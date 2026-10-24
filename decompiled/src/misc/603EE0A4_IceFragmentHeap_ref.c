@@ -20,7 +20,7 @@ const char *__fastcall IceFragmentHeap_ref(sead_ListNode *a1, int a2, int a3, in
   v14[0] = &sead__SafeStringBase__vtable;
   result = "IceFragmentHeap";
   v14[1] = "IceFragmentHeap";
-  next = a1[2].next;
+  next = FIELD_U32(a1 + (2) * 8, 0x4);
   if ( next )
   {
     result = (const char *)sub_608F882C(0, (int)v14, next, 4, 1, 0);
@@ -31,9 +31,9 @@ const char *__fastcall IceFragmentHeap_ref(sead_ListNode *a1, int a2, int a3, in
       v13 = (void (__fastcall ***)(_DWORD))operator_new(0x6Cu);
       sub_603EED64(v13, v11, a2, a4, a5, a3);
       (**v13)(v13);
-      sead__ListNode__insertFront(a1 + 3, (sead_ListNode *)((char *)a1[4].next + (unsigned int)v13));
+      sead__ListNode__insertFront(a1 + 3, (sead_ListNode *)((char *)FIELD_U32(a1 + (4) * 8, 0x4) + (unsigned int)v13));
       result = (char *)&a1[4].FIELD_U32(previous, 0x0) + 1;
-      a1[4].previous = (sead_ListNode *)result;
+      FIELD_U32(a1 + (4) * 8, 0x0) = (sead_ListNode *)result;
       if ( v12 != 1 )
         return (const char *)sead__HeapMgr__setCurrentHeap(sead__HeapMgr__sInstance, v12);
     }

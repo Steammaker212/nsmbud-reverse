@@ -14,12 +14,12 @@ void __fastcall sub_601766B8(Actor *a1)
   Actor *v3; // r0
 
   FIELD_U32(a1, 0x0) = (int)off_60BD4E20;
-  a1[4].field_44 = (int)EffectWrapper_vtable;
-  v2 = &a1[4].field_44;
-  sub_60237560((int)&a1[4].field_44);
+  FIELD_U32(a1 + (4) * 80, 0x44) = (int)EffectWrapper_vtable;
+  v2 = &FIELD_U32(a1 + (4) * 80, 0x44);
+  sub_60237560((int)&FIELD_U32(a1 + (4) * 80, 0x44));
   sead__IDisposer__dtor(v2);
   FIELD_U32(a1, 0x0) = (int)off_60BD525C;
-  nullsub_691(&a1[4].heap);
+  nullsub_691(&FIELD_U32(a1 + (4) * 80, 0x4));
   v3 = Actor__dtor(a1);
   operator_delete(v3);
 }

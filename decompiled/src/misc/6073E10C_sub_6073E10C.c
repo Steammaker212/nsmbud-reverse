@@ -13,7 +13,7 @@ StateMethodExecuter *__fastcall sub_6073E10C(StateMethodExecuter *result)
   if ( !LOWORD(result[670].vtable) )
   {
     LOWORD(result[670].vtable) = 20;
-    result[10].owner = (void *)1065353216;
+    FIELD_U32(result + (10) * 12, 0x4) = (void *)1065353216;
   }
   if ( !LOWORD(result[670].owner) )
     return sub_605D79D0((int)result, (StateBase *)&dword_60CBE088, 0);

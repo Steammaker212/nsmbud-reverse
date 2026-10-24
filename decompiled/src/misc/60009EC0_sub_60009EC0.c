@@ -42,7 +42,7 @@ int __fastcall sub_60009EC0(sead_ListNode *a1)
   sead_ListNode *v31; // [sp+14h] [bp-4Ch]
   sead_ListNode *v32; // [sp+18h] [bp-48h]
 
-  next = a1[121].next;
+  next = FIELD_U32(a1 + (121) * 8, 0x4);
   v4 = a1 + 121;
   if ( next != &a1[121] )
   {
@@ -50,11 +50,11 @@ int __fastcall sub_60009EC0(sead_ListNode *a1)
     {
       v5 = FIELD_U32(next, 0x4);
       sead__ListNode__erase(next);
-      --a1[122].previous;
-      next[-1].next = a1[122].next;
+      --FIELD_U32(a1 + (122) * 8, 0x0);
+      next[-1].next = FIELD_U32(a1 + (122) * 8, 0x4);
       v6 = (sead_ListNode *)((char *)next - 4);
       next = v5;
-      a1[122].next = v6;
+      FIELD_U32(a1 + (122) * 8, 0x4) = v6;
     }
     while ( v5 != v4 );
   }
@@ -89,16 +89,16 @@ int __fastcall sub_60009EC0(sead_ListNode *a1)
         break;
       if ( !FIELD_U8(v12, 8480) && !FIELD_U8(v12, 6136) )
       {
-        v14 = v32[122].next;
+        v14 = FIELD_U32(v32 + (122) * 8, 0x4);
         if ( v14 )
-          v32[122].next = FIELD_U32(v14, 0x0);
+          FIELD_U32(v32 + (122) * 8, 0x4) = FIELD_U32(v14, 0x0);
         else
           v14 = 0;
         FIELD_U32(v14, 0x0) = 0;
         FIELD_U32(v14, 0x4) = 0;
-        v14[1].previous = 0;
+        FIELD_U32(v14 + (1) * 8, 0x0) = 0;
         sead__ListNode__insertFront(v4, (sead_ListNode *)&FIELD_U32(v14, 0x4));
-        ++v32[122].previous;
+        ++FIELD_U32(v32 + (122) * 8, 0x0);
         FIELD_U32(v14, 0x0) = (sead_ListNode *)v12;
       }
       v9 = (int)(v11 + 1);
@@ -106,7 +106,7 @@ int __fastcall sub_60009EC0(sead_ListNode *a1)
       v8 = ActorMgr__instance;
     }
   }
-  result = (int)v32[122].previous;
+  result = (int)FIELD_U32(v32 + (122) * 8, 0x0);
   if ( result >= 1 )
   {
     for ( j = 0; j < result; ++j )
@@ -143,7 +143,7 @@ int __fastcall sub_60009EC0(sead_ListNode *a1)
             }
           }
         }
-        result = (int)v32[122].previous;
+        result = (int)FIELD_U32(v32 + (122) * 8, 0x0);
       }
     }
     if ( result >= 1 )
@@ -163,7 +163,7 @@ int __fastcall sub_60009EC0(sead_ListNode *a1)
           if ( !v29 )
             FIELD_F32(v30, 116) = (float)((float)m * -32.0) + 1500.0;
         }
-        result = (int)v32[122].previous;
+        result = (int)FIELD_U32(v32 + (122) * 8, 0x0);
       }
     }
   }

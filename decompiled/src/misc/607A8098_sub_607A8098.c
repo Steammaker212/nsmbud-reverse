@@ -22,8 +22,8 @@ int __fastcall sub_607A8098(StateMgr *a1)
   if ( v3 == v4 && !a1[606].currentMethodExecuter )
   {
     ((void (__fastcall *)(StateMgr *))FIELD_U32(a1, 0x0)[76].vtable)(a1);
-    a1[76].currentMethodExecuter = (StateMethodExecuter *)((int)a1[76].currentMethodExecuter | 0x100000);
-    a1[75].nextState = (StateBase *)((int)a1[75].nextState | 0x100000);
+    FIELD_U32(a1 + (76) * 16, 0x8) = (StateMethodExecuter *)((int)FIELD_U32(a1 + (76) * 16, 0x8) | 0x100000);
+    FIELD_U32(a1 + (75) * 16, 0x4) = (StateBase *)((int)FIELD_U32(a1 + (75) * 16, 0x4) | 0x100000);
     a1[606].currentMethodExecuter = (StateMethodExecuter *)1;
     return 1;
   }

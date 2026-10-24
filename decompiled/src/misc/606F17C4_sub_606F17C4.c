@@ -12,7 +12,7 @@ StateMethodExecuter *__fastcall sub_606F17C4(StateMethodExecuter *result)
 {
   float v1; // s0
 
-  v1 = *(float *)&result[9].vtable;
+  v1 = *(float *)&FIELD_U32(result + (9) * 12, 0x0);
   if ( v1 > FIELD_F32(dword_60CC6484, 40) && v1 < FIELD_F32(dword_60CC6484, 48) )
     return StateMgr__changeState((StateMgr *)&result[507], (StateBase *)&dword_60CBC2BC);
   return result;

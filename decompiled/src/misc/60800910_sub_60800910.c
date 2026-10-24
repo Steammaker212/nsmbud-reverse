@@ -14,10 +14,10 @@ sead_IDisposer *__fastcall sub_60800910(sead_IDisposer *a1)
 
   result = sead_IDisposer_ctor(a1);
   FIELD_U32(result, 0x0) = (int)&off_60C27E3C;
-  result[1].vtable = 1065353216;
-  result[1].containingHeap = 1137122418;
-  result[1].field_8 = 1130364928;
-  result[1].field_C = 0;
-  result[2].vtable = 0;
+  FIELD_U32(result + (1) * 16, 0x0) = 1065353216;
+  FIELD_U32(result + (1) * 16, 0x4) = 1137122418;
+  FIELD_U32(result + (1) * 16, 0x8) = 1130364928;
+  FIELD_U32(result + (1) * 16, 0xC) = 0;
+  FIELD_U32(result + (2) * 16, 0x0) = 0;
   return result;
 }

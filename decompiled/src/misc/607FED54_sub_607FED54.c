@@ -14,10 +14,10 @@ sead_IDisposer *__fastcall sub_607FED54(sead_IDisposer *a1, int a2, float a3, fl
 
   result = sead_IDisposer_ctor(a1);
   FIELD_U32(result, 0x0) = (int)off_60C27DDC;
-  result[1].vtable = FIELD_U32(a2, 24);
-  result[1].containingHeap = 0;
-  *(float *)&result[1].field_8 = a3;
-  result[1].field_C = 0;
-  *(float *)&result[2].vtable = a4;
+  FIELD_U32(result + (1) * 16, 0x0) = FIELD_U32(a2, 24);
+  FIELD_U32(result + (1) * 16, 0x4) = 0;
+  *(float *)&FIELD_U32(result + (1) * 16, 0x8) = a3;
+  FIELD_U32(result + (1) * 16, 0xC) = 0;
+  *(float *)&FIELD_U32(result + (2) * 16, 0x0) = a4;
   return result;
 }

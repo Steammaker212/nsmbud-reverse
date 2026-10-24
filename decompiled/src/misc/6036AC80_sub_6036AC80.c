@@ -53,8 +53,8 @@ LABEL_5:
   }
   if ( !v6
     || (*(int (__fastcall **)(Actor *, int *))FIELD_U32(v6, 0x0))(v6, &dword_60C95E14) != 1
-    || (FIELD_U32(a1, 108) = *(_DWORD *)&v6[1].movementId,
-        FIELD_U32(a1, 112) = v6[1].field_20.previous,
+    || (FIELD_U32(a1, 108) = *(_DWORD *)&FIELD_U8(v6 + (1) * 80, 0x1C),
+        FIELD_U32(a1, 112) = FIELD_U32(v6 + (1) * 80, 0x20),
         v6[91].linkId) )
   {
     v7 = FIELD_U8(a1, 84);

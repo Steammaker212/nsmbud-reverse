@@ -12,9 +12,9 @@ StateMethodExecuter *__fastcall sub_60556084(StateMethodExecuter *result)
 {
   bool v1; // zf
 
-  v1 = LOBYTE(result[304].vtable) == 0;
-  if ( LOBYTE(result[304].vtable) )
-    v1 = BYTE1(result[304].vtable) == 0;
+  v1 = LOBYTE(FIELD_U32(result + (304) * 12, 0x0)) == 0;
+  if ( LOBYTE(FIELD_U32(result + (304) * 12, 0x0)) )
+    v1 = BYTE1(FIELD_U32(result + (304) * 12, 0x0)) == 0;
   if ( v1 && !BYTE1(result[965].owner) )
     return StateMgr__changeState((StateMgr *)&result[2], (StateBase *)&dword_60CAD468);
   return result;

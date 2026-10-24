@@ -18,9 +18,9 @@ Actor *__fastcall StageActor__dtor(Actor *a1)
   ActiveColliderMgr *v3; // r6
 
   FIELD_U32(a1, 0x0) = (int)&StageActor__vtable;
-  p_movementId = (ActiveCollider *)&a1[2].movementId;
+  p_movementId = (ActiveCollider *)&FIELD_U8(a1 + (2) * 80, 0x1C);
   v3 = ActiveColliderMgr_instance;
-  ActiveColldierMgr_removeFromActiveList(ActiveColliderMgr_instance, (ActiveCollider *)&a1[2].movementId);
+  ActiveColldierMgr_removeFromActiveList(ActiveColliderMgr_instance, (ActiveCollider *)&FIELD_U8(a1 + (2) * 80, 0x1C));
   ActiveColldierMgr_removeFromCreateList(v3, p_movementId);
   ActiveColldierMgr_removeFromList3(v3, (int)p_movementId);
   ActiveCollider_dtor(p_movementId);

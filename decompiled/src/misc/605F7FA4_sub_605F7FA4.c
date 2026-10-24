@@ -17,6 +17,6 @@ Enemy *__fastcall sub_605F7FA4(Enemy *a1, ActorBuildInfo *a2)
   result[1]._._._._.id = 0;
   *(_DWORD *)&result[1]._._._._.field_10 = 0;
   LOBYTE(result[1]._._._._.settigns2) = 1;
-  result[1]._._._._.field_20.next = (sead_ListNode *)-1;
+  FIELD_U32(result + (1) * 6300, 0x24) = (sead_ListNode *)-1;
   return result;
 }

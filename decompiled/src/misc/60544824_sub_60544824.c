@@ -10,7 +10,7 @@
 
 StateMethodExecuter *__fastcall sub_60544824(StateMethodExecuter *result)
 {
-  if ( *((_BYTE *)result[296].owner + 16) )
+  if ( *((_BYTE *)FIELD_U32(result + (296) * 12, 0x4) + 16) )
     return StateMgr__changeState((StateMgr *)&result[2], (StateBase *)&dword_60CABF5C);
   return result;
 }

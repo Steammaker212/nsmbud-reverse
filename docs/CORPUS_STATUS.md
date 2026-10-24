@@ -10,7 +10,7 @@ Measured, not asserted. Every number below comes from a script in
 | Functions in the database | 47,153 |
 | Carrying a readable name | 9,671 (20.51%) |
 | Still `sub_`/`nullsub_` | 37,482 |
-| Compiling clean, `clang -std=gnu89` | 37,789 / 45,148 (83.70%) |
+| Compiling clean, `clang -std=gnu89` | 38,916 / 45,148 (86.20%) |
 
 Names come from the Deluxe database itself. Neither the shipped symbol file
 (`sweetdx/symbols/nsmbudx.sym`) nor codedx's `main.sym` adds a name that the
@@ -41,7 +41,7 @@ readable C:
 | Measure | Value |
 | --- | --- |
 | Functions in the corpus (after veneer collapse) | 45,148 |
-| Compiling clean, `clang -std=gnu89` | 37,789 (83.70%) |
+| Compiling clean, `clang -std=gnu89` | 38,916 (86.20%) |
 | Excluded: no recoverable body | 274 |
 
 The 47,153 functions in the database collapse to 45,148 `.c` units because
@@ -49,7 +49,7 @@ The 47,153 functions in the database collapse to 45,148 `.c` units because
 the remaining difference is the 274 units with no recoverable body.
 
 The compile-clean figure is measured by
-`scripts/pipeline/measure_compile_failures.py`, which also buckets the 7,359
+`scripts/pipeline/measure_compile_failures.py`, which also buckets the 6,232
 failures by cause; see [`COMPILE_FAILURES.md`](COMPILE_FAILURES.md).
 
 Verified independently by re-running `verify_all.py` against the published
@@ -107,7 +107,7 @@ Three defects were found and fixed by measuring rather than assuming:
 
 ## What is still not decompiled to a clean compile
 
-The remaining 7,359 units (16.30%) fail for reasons that are understood and
+The remaining 6,232 units (13.80%) fail for reasons that are understood and
 listed here rather than hidden. The counts come from
 `measure_compile_failures.py`, which buckets each unit by the *kind* of its
 first error; [`COMPILE_FAILURES.md`](COMPILE_FAILURES.md) has the full

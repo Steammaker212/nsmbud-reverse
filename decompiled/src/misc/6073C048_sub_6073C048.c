@@ -15,7 +15,7 @@ StateMethodExecuter *__fastcall sub_6073C048(StateMethodExecuter *result)
 
   v1 = (int)result[567].vtable & 1;
   if ( v1 )
-    result[10].owner = 0;
+    FIELD_U32(result + (10) * 12, 0x4) = 0;
   if ( !HIWORD(result[669].currentState) )
   {
     v2 = v1 == 0;

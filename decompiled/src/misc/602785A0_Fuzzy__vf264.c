@@ -19,7 +19,7 @@ signed int __fastcall Fuzzy__vf264(Enemy *a1)
 
   profile = a1[1]._._._._.profile;
   FIELD_U32(profile, 0x14) = 1112014848;
-  profile[1].buildFunction = (void *)((int)profile[1].buildFunction | 2);
+  FIELD_U32(profile + (1) * 24, 0x4) = (void *)((int)FIELD_U32(profile + (1) * 24, 0x4) | 2);
   prev = (unsigned int)a1[1]._._._.aCollider.createNode.prev;
   if ( prev )
   {

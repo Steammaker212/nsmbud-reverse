@@ -15,7 +15,7 @@ void __fastcall Kanibo__beginState_Jump(Enemy *result)
   FIELD_F32(result, 0x80) = 0.0;
   FIELD_F32(result, 0x64) = -0.1875;
   result[1]._._._._.field_20.previous = (sead_ListNode *)LODWORD(FIELD_F32(result, 0x6C));
-  result[1]._._._._.field_20.next = (sead_ListNode *)LODWORD(FIELD_F32(result, 0x70));
+  FIELD_U32(result + (1) * 6300, 0x24) = (sead_ListNode *)LODWORD(FIELD_F32(result, 0x70));
   result[1]._._._._.childCount = LODWORD(FIELD_F32(result, 0x74));
   result[1]._._._._.field_3C = 0;
 }

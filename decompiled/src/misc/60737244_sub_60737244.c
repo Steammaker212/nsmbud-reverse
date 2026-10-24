@@ -11,9 +11,9 @@
 signed int __fastcall sub_60737244(Vec3 *a1)
 {
   EffectData_create(261, a1 + 9, 0, 0);
-  a1[9].z = a1[9].z + 2.0;
+  FIELD_F32(a1 + (9) * 12, 0x8) = FIELD_F32(a1 + (9) * 12, 0x8) + 2.0;
   a1[566].y = 0.0;
-  a1[10].y = -1.75;
+  FIELD_F32(a1 + (10) * 12, 0x4) = -1.75;
   BYTE2(a1[616].z) = 0;
   a1[567].x = 0.03;
   a1[567].y = 1.2;

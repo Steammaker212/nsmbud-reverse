@@ -142,7 +142,7 @@ int __fastcall sub_60374514(int a1)
                   if ( v25 == 531 || FIELD_U8(dword_60CC6D8C, 17) && v25 == 533 )
                   {
                     FIELD_U8(v23, 0x13) = 1;
-                    v26 = (_BYTE *)v23[7].field_48;
+                    v26 = (_BYTE *)FIELD_U32(v23 + (7) * 80, 0x48);
                     if ( v26 )
                       *v26 &= ~1u;
                   }

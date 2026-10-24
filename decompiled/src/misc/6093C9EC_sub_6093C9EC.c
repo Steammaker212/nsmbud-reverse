@@ -119,13 +119,13 @@ int __fastcall sub_6093C9EC(int a1, int a2, int a3, float *a4, int a5, float32x2
   sub_6042E898((float *)&v92, a4);
   v14.n128_u64[0] = *(_QWORD *)a5;
   v14.n128_u64[1] = FIELD_U64(a5, 8);
-  v15.n64_u64[0] = a6[1].n64_u64[0];
-  v16.n64_u64[0] = a6[7].n64_u64[0];
+  v15.n64_u64[0] = FIELD_U64(a6 + (1) * 8, 0x0)[0];
+  v16.n64_u64[0] = FIELD_U64(a6 + (7) * 8, 0x0)[0];
   v17 = vdupq_lane_s32(v15, 1);
   v18 = vdupq_lane_s32(v16, 1);
   v100 = *(float32x4_t *)(a5 + 16);
   v99 = *(float32x4_t *)(a5 + 32);
-  v19.n64_u64[0] = a6[5].n64_u64[0];
+  v19.n64_u64[0] = FIELD_U64(a6 + (5) * 8, 0x0)[0];
   v20 = vextq_s8((int8x16_t)vzipq_s32(v17, v17).val, (int8x16_t)0, 0xCu);
   v21 = vaddq_f32(
           vextq_s8(v20, v20, 4u),
@@ -136,11 +136,11 @@ int __fastcall sub_6093C9EC(int a1, int a2, int a3, float *a4, int a5, float32x2
             0));
   v22 = vextq_s8((int8x16_t)vzipq_s32(v18, v18).val, (int8x16_t)0, 0xCu);
   v23 = vdupq_lane_s32(v19, 1);
-  v24 = vmlaq_lane_f32(vmlaq_lane_f32(vmulq_n_f32(v14, a6[4].n64_f32[0]), v100, a6[4], 1), v99, v19, 0);
-  v25.n64_u64[0] = a6[3].n64_u64[0];
-  v26 = vmlaq_lane_f32(vmulq_n_f32(v14, a6[2].n64_f32[0]), v100, a6[2], 1);
+  v24 = vmlaq_lane_f32(vmlaq_lane_f32(vmulq_n_f32(v14, FIELD_F32(a6 + (4) * 8, 0x0)[0]), v100, a6[4], 1), v99, v19, 0);
+  v25.n64_u64[0] = FIELD_U64(a6 + (3) * 8, 0x0)[0];
+  v26 = vmlaq_lane_f32(vmulq_n_f32(v14, FIELD_F32(a6 + (2) * 8, 0x0)[0]), v100, a6[2], 1);
   v27 = vextq_s8((int8x16_t)vzipq_s32(v23, v23).val, (int8x16_t)0, 0xCu);
-  v28 = vmlaq_lane_f32(vmulq_n_f32(v14, a6[6].n64_f32[0]), v100, a6[6], 1);
+  v28 = vmlaq_lane_f32(vmulq_n_f32(v14, FIELD_F32(a6 + (6) * 8, 0x0)[0]), v100, a6[6], 1);
   v29 = vdupq_lane_s32(v25, 1);
   v30 = vextq_s8((int8x16_t)vzipq_s32(v29, v29).val, (int8x16_t)0, 0xCu);
   v31 = vaddq_f32(vextq_s8(v22, v22, 4u), vmlaq_lane_f32(v28, v99, v16, 0));

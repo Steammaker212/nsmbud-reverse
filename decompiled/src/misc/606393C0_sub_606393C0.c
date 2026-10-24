@@ -28,7 +28,7 @@ StateMethodExecuter *__fastcall sub_606393C0(StateMethodExecuter *result)
     v4 = FIELD_F32(v3, 108);
     v5 = 0;
     v6 = *(float *)&result[584].currentState;
-    v7 = v4 - *(float *)&result[9].vtable;
+    v7 = v4 - *(float *)&FIELD_U32(result + (9) * 12, 0x0);
     if ( v7 >= v6 )
     {
       v5 = 1;

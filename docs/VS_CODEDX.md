@@ -89,5 +89,5 @@ Not ready:
   `clang -fsyntax-only`; it is not linked into anything, and it is not a
   byte-exact reimplementation — control flow is faithful, but the C is written
   to be read, not to reproduce the object code.
-- 7,359 units still fail `-fsyntax-only`, so they cannot be lifted into a build
+- 6,232 units still fail `-fsyntax-only`, so they cannot be lifted into a build
   without fixing them first. See [`COMPILE_FAILURES.md`](COMPILE_FAILURES.md).

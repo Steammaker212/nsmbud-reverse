@@ -10,7 +10,7 @@
 
 StateMethodExecuter *__fastcall sub_6052A0E0(StateMethodExecuter *result)
 {
-  if ( (void *)result[4].currentState != result[4].owner )
-    return StateMgr__changeState((StateMgr *)&result[1].currentState, (StateBase *)&unk_60CAA2A4);
+  if ( (void *)FIELD_U32(result + (4) * 12, 0x8) != FIELD_U32(result + (4) * 12, 0x4) )
+    return StateMgr__changeState((StateMgr *)&FIELD_U32(result + (1) * 12, 0x8), (StateBase *)&unk_60CAA2A4);
   return result;
 }

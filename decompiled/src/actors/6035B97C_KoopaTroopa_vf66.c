@@ -70,7 +70,7 @@ unsigned int __fastcall KoopaTroopa_vf66(int a1, ActiveCollider *a2, ActiveColli
         }
         if ( !owner
           || (*(int (__fastcall **)(StageActor *, int *))FIELD_U32(owner, 0x0))(owner, &dword_60C7B378) != 1
-          || (owner[1].profileFlags & 0x40) == 0 )
+          || (FIELD_U32(owner + (1) * 644, 0x238) & 0x40) == 0 )
         {
           goto LABEL_25;
         }

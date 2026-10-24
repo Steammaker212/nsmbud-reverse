@@ -35,10 +35,10 @@ sead_ListNode *__fastcall sub_60414164(sead_ListNode *a1, int a2, _DWORD *a3)
       v3 = 0;
     v6 = &a1[2691 * v3];
     v7 = v6 + 3;
-    if ( (int)v6[3].previous >= (int)v6[4].next )
+    if ( (int)FIELD_U32(v6 + (3) * 8, 0x0) >= (int)v6[4].next )
       return v5;
-    next = v6[3].next;
-    p_next = &v6[3].next;
+    next = FIELD_U32(v6 + (3) * 8, 0x4);
+    p_next = &FIELD_U32(v6 + (3) * 8, 0x4);
     v9 = next;
     v5 = 0;
     if ( next )
@@ -47,9 +47,9 @@ sead_ListNode *__fastcall sub_60414164(sead_ListNode *a1, int a2, _DWORD *a3)
       *p_next = FIELD_U32(v9, 0x0);
     }
     qmemcpy(v5, a3, 0x4Cu);
-    v5[9].next = 0;
+    FIELD_U32(v5 + (9) * 8, 0x4) = 0;
     v11 = (sead_ListNode *)((char *)v5 + 76);
-    v5[10].previous = 0;
+    FIELD_U32(v5 + (10) * 8, 0x0) = 0;
     v12 = &a1[2691 * v3 + 2];
     goto LABEL_20;
   }
@@ -62,7 +62,7 @@ sead_ListNode *__fastcall sub_60414164(sead_ListNode *a1, int a2, _DWORD *a3)
     HIWORD(v16) = 1;
     v17 = &a1[2691 * v3];
     v7 = (sead_ListNode *)((char *)v17 + v16);
-    if ( (int)*(sead_ListNode **)((char *)&FIELD_U32(v17, 0x0) + v16) >= (int)*(sead_ListNode **)((char *)&v17[1].next + v16) )
+    if ( (int)*(sead_ListNode **)((char *)&FIELD_U32(v17, 0x0) + v16) >= (int)*(sead_ListNode **)((char *)&FIELD_U32(v17 + (1) * 8, 0x4) + v16) )
       return v5;
     v5 = 0;
     v20 = v17[10767].next;
@@ -74,9 +74,9 @@ sead_ListNode *__fastcall sub_60414164(sead_ListNode *a1, int a2, _DWORD *a3)
       *v18 = FIELD_U32(v19, 0x0);
     }
     qmemcpy(v5, a3, 0x4Cu);
-    v5[9].next = 0;
+    FIELD_U32(v5 + (9) * 8, 0x4) = 0;
     v11 = (sead_ListNode *)((char *)v5 + 76);
-    v5[10].previous = 0;
+    FIELD_U32(v5 + (10) * 8, 0x0) = 0;
     v12 = &a1[2691 * v3 + 10766];
 LABEL_20:
     sead__ListNode__insertFront(v12, v11);
@@ -95,13 +95,13 @@ LABEL_20:
       a1[10767].next = FIELD_U32(v14, 0x0);
     }
     qmemcpy(v13, a3, 0x4Cu);
-    v13[9].next = 0;
-    v13[10].previous = 0;
+    FIELD_U32(v13 + (9) * 8, 0x4) = 0;
+    FIELD_U32(v13 + (10) * 8, 0x0) = 0;
     sead__ListNode__insertFront(a1 + 10766, (sead_ListNode *)((char *)v13 + 76));
     ++a1[10767].previous;
     if ( v13 )
     {
-      v13[5].previous = 0;
+      FIELD_U32(v13 + (5) * 8, 0x0) = 0;
       return v13;
     }
   }

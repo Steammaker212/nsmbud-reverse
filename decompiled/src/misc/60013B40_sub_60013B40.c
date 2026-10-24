@@ -60,7 +60,7 @@ StateMethodExecuter *__fastcall sub_60013B40(int a1, float a2, float a3)
     if ( v5 > 6 )
     {
       result = *(StateMethodExecuter **)(a1 + 132);
-      if ( (int)&result[89478485].owner < 0 )
+      if ( (int)&FIELD_U32(result + (89478485) * 12, 0x4) < 0 )
       {
         FIELD_U32(a1, 92) = FIELD_U32(a1, 136);
         FIELD_U32(a1, 96) = 0;

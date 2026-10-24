@@ -10,7 +10,7 @@
 
 StateMethodExecuter *__fastcall sub_6052A120(StateMethodExecuter *result)
 {
-  if ( (*(_BYTE *)(result[3].currentState + 44) & 1) != 0 )
-    return StateMgr__changeState((StateMgr *)&result[1].currentState, (StateBase *)&dword_60CAA284);
+  if ( (*(_BYTE *)(FIELD_U32(result + (3) * 12, 0x8) + 44) & 1) != 0 )
+    return StateMgr__changeState((StateMgr *)&FIELD_U32(result + (1) * 12, 0x8), (StateBase *)&dword_60CAA284);
   return result;
 }

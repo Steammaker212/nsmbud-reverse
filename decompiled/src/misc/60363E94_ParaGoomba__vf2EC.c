@@ -25,15 +25,15 @@ int __fastcall ParaGoomba__vf2EC(Vec3 *a1)
     HIBYTE(a1[570].x) = 0;
     EffectData_create(274, a1 + 569, 0, 0);
     (*(void (__fastcall **)(Vec3 *))(LODWORD(FIELD_F32(a1, 0x0)) + 644))(a1);
-    y = a1[9].y;
+    y = FIELD_F32(a1 + (9) * 12, 0x4);
     v3 = Global_BasicSoundActor1;
-    position.x = a1[9].x;
+    position.x = FIELD_F32(a1 + (9) * 12, 0x0);
     position.y = y;
     mapPositionToScreen(&out, &position);
     sub_60813810(v3, (int)"SE_EMY_CMN_TOUCH_DISAPPEAR", (int)&out, 1, 0);
     return (*(int (__fastcall **)(Vec3 *, int *))(LODWORD(FIELD_F32(a1, 0x0)) + 192))(a1, &dword_60C94470);
   }
-  if ( (LOBYTE(a1[239].y) & 1) != 0 )
+  if ( (LOBYTE(FIELD_F32(a1 + (239) * 12, 0x4)) & 1) != 0 )
   {
     if ( !(*(int (__fastcall **)(Vec3 *))(LODWORD(FIELD_F32(a1, 0x0)) + 672))(a1) )
 LABEL_7:
@@ -43,8 +43,8 @@ LABEL_7:
   {
     goto LABEL_7;
   }
-  v5 = a1[9].y;
-  position.x = a1[9].x;
+  v5 = FIELD_F32(a1 + (9) * 12, 0x4);
+  position.x = FIELD_F32(a1 + (9) * 12, 0x0);
   position.y = v5;
   return SE_SYS_ref_2(SoundSystem_instance, &position, 3);
 }

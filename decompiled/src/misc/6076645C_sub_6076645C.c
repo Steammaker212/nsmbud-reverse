@@ -23,7 +23,7 @@ int __fastcall sub_6076645C(StateMgr *a1)
   int result; // r0
   StateBase *v13; // r0
 
-  a1[77].nextState = (StateBase *)((int)a1[77].nextState & ~0x8000u);
+  FIELD_U32(a1 + (77) * 16, 0x4) = (StateBase *)((int)FIELD_U32(a1 + (77) * 16, 0x4) & ~0x8000u);
   executer = a1[607].executer;
   v2 = a1 + 607;
   v3 = executer;
@@ -32,7 +32,7 @@ int __fastcall sub_6076645C(StateMgr *a1)
   nextState = a1[607].nextState;
   if ( nextState )
     a1[607].nextState = (StateBase *)((char *)nextState - 1);
-  v6 = a1[75].nextState;
+  v6 = FIELD_U32(a1 + (75) * 16, 0x4);
   StateMgr__execute(a1 + 605);
   sub_60768AE8(a1);
   v7 = FIELD_U32(dword_60C995D0, 32);
@@ -49,13 +49,13 @@ int __fastcall sub_6076645C(StateMgr *a1)
       v10 = (*((int (__fastcall **)(StateBase *))FIELD_U32(CurrentState, 0x0) + 2))(CurrentState);
       if ( v10 == (*(int (**)(void))(stru_60CBF37C + 8))() )
       {
-        nextState_low = SLOBYTE(a1[5].nextState);
+        nextState_low = SLOBYTE(FIELD_U32(a1 + (5) * 16, 0x4));
         if ( nextState_low >= 0 )
         {
           FIELD_U32(PlayerMgr_instance, 144) |= 1 << nextState_low;
-          FIELD_U8(dword_60C99DE4, 29) |= 1 << LOBYTE(a1[5].nextState);
-          a1[75].nextState = (StateBase *)((int)a1[75].nextState | 0x20);
-          a1[76].lastState = (StateBase *)((int)a1[76].lastState | 0x400000);
+          FIELD_U8(dword_60C99DE4, 29) |= 1 << LOBYTE(FIELD_U32(a1 + (5) * 16, 0x4));
+          FIELD_U32(a1 + (75) * 16, 0x4) = (StateBase *)((int)FIELD_U32(a1 + (75) * 16, 0x4) | 0x20);
+          FIELD_U32(a1 + (76) * 16, 0xC) = (StateBase *)((int)FIELD_U32(a1 + (76) * 16, 0xC) | 0x400000);
         }
         a1[606].currentMethodExecuter = 0;
         a1[606].lastState = 0;
@@ -68,11 +68,11 @@ int __fastcall sub_6076645C(StateMgr *a1)
     }
   }
   result = 0;
-  if ( (((int)a1[75].nextState | (unsigned int)v6) & 0x20) != 0 )
+  if ( (((int)FIELD_U32(a1 + (75) * 16, 0x4) | (unsigned int)v6) & 0x20) != 0 )
   {
-    v13 = a1[77].nextState;
+    v13 = FIELD_U32(a1 + (77) * 16, 0x4);
     if ( ((unsigned __int16)v13 & 0x8000) != 0 )
-      a1[77].nextState = (StateBase *)((unsigned int)v13 | 0x2000);
+      FIELD_U32(a1 + (77) * 16, 0x4) = (StateBase *)((unsigned int)v13 | 0x2000);
     sub_60761228(a1);
     return 1;
   }

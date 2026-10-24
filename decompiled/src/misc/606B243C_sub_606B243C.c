@@ -15,10 +15,10 @@ StateMethodExecuter *__fastcall sub_606B243C(StateMethodExecuter *result)
   int v3; // r1
   __int64 v4; // r2
 
-  owner = (int)result[3].owner;
+  owner = (int)FIELD_U32(result + (3) * 12, 0x4);
   if ( owner >= 1 )
-    result[3].owner = (void *)(owner - 1);
-  v2 = BYTE1(result[1].currentState);
+    FIELD_U32(result + (3) * 12, 0x4) = (void *)(owner - 1);
+  v2 = BYTE1(FIELD_U32(result + (1) * 12, 0x8));
   v3 = v2 - 33;
   HIDWORD(v4) = 1u >> (33 - v2);
   LODWORD(v4) = 1 << (v2 - 1);
@@ -30,11 +30,11 @@ StateMethodExecuter *__fastcall sub_606B243C(StateMethodExecuter *result)
   if ( (v4 & FIELD_U64(EventMgr__instance, 16)) != 0 )
   {
     if ( !BYTE1(result[4].owner) )
-      return StateMgr__changeState((StateMgr *)&result[16].owner, &stru_60CBA30C);
+      return StateMgr__changeState((StateMgr *)&FIELD_U32(result + (16) * 12, 0x4), &stru_60CBA30C);
   }
   else if ( BYTE1(result[4].owner) )
   {
-    return StateMgr__changeState((StateMgr *)&result[16].owner, &stru_60CBA32C);
+    return StateMgr__changeState((StateMgr *)&FIELD_U32(result + (16) * 12, 0x4), &stru_60CBA32C);
   }
   return result;
 }

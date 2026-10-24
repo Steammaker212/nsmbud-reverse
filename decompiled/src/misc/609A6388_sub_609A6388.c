@@ -30,14 +30,14 @@ int __fastcall sub_609A6388(sead_ListNode *a1, int a2, _DWORD *a3, int a4)
   v7 = 0;
   v8 = **(_BYTE **)(a2 + 4) == 0;
   if ( **(_BYTE **)(a2 + 4) )
-    v8 = a1[16].previous == 0;
+    v8 = FIELD_U32(a1 + (16) * 8, 0x0) == 0;
   if ( !v8 )
   {
-    previous = a1[15].previous;
-    next = a1[16].next;
+    previous = FIELD_U32(a1 + (15) * 8, 0x0);
+    next = FIELD_U32(a1 + (16) * 8, 0x4);
     if ( (int)previous < (int)next )
     {
-      v11 = a1[14].next;
+      v11 = FIELD_U32(a1 + (14) * 8, 0x4);
       v12 = a1 + 14;
       if ( v11 == &a1[14] )
       {
@@ -45,21 +45,21 @@ LABEL_18:
         v7 = 1;
         if ( (int)previous < (int)next )
         {
-          v18 = a1[15].next;
+          v18 = FIELD_U32(a1 + (15) * 8, 0x4);
           v19 = 0;
           v20 = v12;
           v21 = a3;
           if ( v18 )
           {
-            v19 = a1[15].next;
-            a1[15].next = FIELD_U32(v18, 0x0);
+            v19 = FIELD_U32(a1 + (15) * 8, 0x4);
+            FIELD_U32(a1 + (15) * 8, 0x4) = FIELD_U32(v18, 0x0);
           }
           sub_6097114C(v19, a4, (_DWORD *)a2, 4);
-          sub_6097114C(&v19[1].next, a4, v21, 4);
-          v19[3].previous = 0;
+          sub_6097114C(&FIELD_U32(v19 + (1) * 8, 0x4), a4, v21, 4);
+          FIELD_U32(v19 + (3) * 8, 0x0) = 0;
           v19[3].next = 0;
           sead__ListNode__insertFront(v20, v19 + 3);
-          ++a1[15].previous;
+          ++FIELD_U32(a1 + (15) * 8, 0x0);
         }
       }
       else
@@ -89,8 +89,8 @@ LABEL_18:
           v13 = v11 - 3;
           if ( &v11[-3] == &a1[11] )
           {
-            previous = a1[15].previous;
-            next = a1[16].next;
+            previous = FIELD_U32(a1 + (15) * 8, 0x0);
+            next = FIELD_U32(a1 + (16) * 8, 0x4);
             a3 = v23;
             v12 = a1 + 14;
             goto LABEL_18;

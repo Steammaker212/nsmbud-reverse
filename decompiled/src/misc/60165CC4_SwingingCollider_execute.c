@@ -19,18 +19,18 @@ int __fastcall SwingingCollider_execute(ColliderBase *a1)
   sub_601656B0((int)a1);
   (*(void (__fastcall **)(ColliderBase *))(FIELD_U32(a1, 0x0) + 52))(a1);
   SwingingCollider_execute_helper(a1);
-  (*(void (__fastcall **)(ColliderBase *))(a1[1]._.vtable + 16))(a1 + 1);
-  v2 = a1[1]._.field_C;
+  (*(void (__fastcall **)(ColliderBase *))(FIELD_U32(a1 + (1) * 340, 0x0) + 16))(a1 + 1);
+  v2 = FIELD_U32(a1 + (1) * 340, 0xC);
   if ( v2 >= 1 )
-    a1[1]._.field_C = v2 - 1;
-  owner = (int)a1[1].nodes[0].owner;
+    FIELD_U32(a1 + (1) * 340, 0xC) = v2 - 1;
+  owner = (int)FIELD_U32(a1 + (1) * 340, 0x10)[0].owner;
   if ( owner >= 1 )
-    a1[1].nodes[0].owner = (ColliderBase *)(owner - 1);
-  next = (int)a1[1].nodes[0].next;
+    FIELD_U32(a1 + (1) * 340, 0x10)[0].owner = (ColliderBase *)(owner - 1);
+  next = (int)FIELD_U32(a1 + (1) * 340, 0x10)[0].next;
   if ( next >= 1 )
-    a1[1].nodes[0].next = (ColliderListNode *)(next - 1);
-  result = (int)a1[1].nodes[0].prev;
+    FIELD_U32(a1 + (1) * 340, 0x10)[0].next = (ColliderListNode *)(next - 1);
+  result = (int)FIELD_U32(a1 + (1) * 340, 0x10)[0].prev;
   if ( result >= 1 )
-    a1[1].nodes[0].prev = (ColliderListNode *)--result;
+    FIELD_U32(a1 + (1) * 340, 0x10)[0].prev = (ColliderListNode *)--result;
   return result;
 }

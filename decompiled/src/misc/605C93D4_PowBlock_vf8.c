@@ -19,7 +19,7 @@ int __fastcall PowBlock_vf8(StageActor *a1)
     sub_6000897C((_DWORD *)ActorMgr__instance, (int)a1);
   else
     (*(void (__fastcall **)(StageActor *))(FIELD_U32(a1, 0x0) + 256))(a1);
-  trapezoidOffsetTopLeft = a1[9].aCollider.trapezoidOffsetTopLeft;
+  trapezoidOffsetTopLeft = FIELD_F32(a1 + (9) * 644, 0x15C);
   if ( trapezoidOffsetTopLeft != 0.0 )
     (*(void (__fastcall **)(float))(*(_DWORD *)LODWORD(trapezoidOffsetTopLeft) + 28))(COERCE_FLOAT(LODWORD(trapezoidOffsetTopLeft)));
   StageActor__cullCheck(a1, 0);

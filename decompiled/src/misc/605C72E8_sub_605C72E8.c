@@ -11,6 +11,6 @@
 StateMethodExecuter *__fastcall sub_605C72E8(StateMethodExecuter *result)
 {
   if ( --BYTE2(result[245].vtable) == 0 )
-    return StateMgr__changeState((StateMgr *)&result[85].owner, &stru_60CB0B64);
+    return StateMgr__changeState((StateMgr *)&FIELD_U32(result + (85) * 12, 0x4), &stru_60CB0B64);
   return result;
 }

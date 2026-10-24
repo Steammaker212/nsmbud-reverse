@@ -13,11 +13,11 @@ StateMethodExecuter *__fastcall sub_603E9488(StateMethodExecuter *result)
   int currentState; // r1
   int v2; // r1
 
-  currentState = result[2].currentState;
+  currentState = FIELD_U32(result + (2) * 12, 0x8);
   if ( !currentState )
     return StateMgr__changeState((StateMgr *)&result[9], (StateBase *)&dword_60C998E0);
   v2 = currentState - 1;
-  result[2].currentState = v2;
+  FIELD_U32(result + (2) * 12, 0x8) = v2;
   if ( !v2 )
     return StateMgr__changeState((StateMgr *)&result[9], (StateBase *)&dword_60C998E0);
   return result;

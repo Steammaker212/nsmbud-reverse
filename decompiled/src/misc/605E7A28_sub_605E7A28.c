@@ -24,28 +24,28 @@ StateMethodExecuter *__fastcall sub_605E7A28(StateMethodExecuter *result)
   int v12; // r1
   unsigned __int8 v13; // r2
 
-  owner = result[24].owner;
+  owner = FIELD_U32(result + (24) * 12, 0x4);
   if ( owner == (void *)2 )
   {
-    vtable = (char *)result[24].vtable;
-    if ( !vtable || (v3 = vtable - 1, (result[24].vtable = v3) == 0) )
+    vtable = (char *)FIELD_U32(result + (24) * 12, 0x0);
+    if ( !vtable || (v3 = vtable - 1, (FIELD_U32(result + (24) * 12, 0x0) = v3) == 0) )
     {
-      if ( result[19].vtable )
+      if ( FIELD_U32(result + (19) * 12, 0x0) )
       {
 LABEL_10:
-        result[24].owner = (void *)1;
+        FIELD_U32(result + (24) * 12, 0x4) = (void *)1;
         return result;
       }
-      return StateMgr__changeState((StateMgr *)&result[27].currentState, (StateBase *)&dword_60CB1BE8);
+      return StateMgr__changeState((StateMgr *)&FIELD_U32(result + (27) * 12, 0x8), (StateBase *)&dword_60CB1BE8);
     }
   }
   else if ( owner == (void *)1 )
   {
-    v4 = (char *)result[19].vtable;
+    v4 = (char *)FIELD_U32(result + (19) * 12, 0x0);
     if ( v4 )
     {
-      currentState = result[18].currentState;
-      v6 = result[18].owner;
+      currentState = FIELD_U32(result + (18) * 12, 0x8);
+      v6 = FIELD_U32(result + (18) * 12, 0x4);
       v7 = 0;
       v8 = v4 - 1;
       v9 = currentState + 1;
@@ -54,16 +54,16 @@ LABEL_10:
       v10 = __OFSUB__(currentState, v6);
       v11 = currentState - (_DWORD)v6;
       if ( v11 < 0 != v10 )
-        v11 = result[18].currentState;
-      v12 = *((_DWORD *)result[18].vtable + v11);
-      result[18].currentState = v9;
-      result[19].vtable = v8;
+        v11 = FIELD_U32(result + (18) * 12, 0x8);
+      v12 = *((_DWORD *)FIELD_U32(result + (18) * 12, 0x0) + v11);
+      FIELD_U32(result + (18) * 12, 0x8) = v9;
+      FIELD_U32(result + (19) * 12, 0x0) = v8;
       FIELD_U32(v12, 6264) |= 0x800000u;
-      result[24].owner = (void *)2;
-      v13 = LOBYTE(result[24].currentState) - 2;
+      FIELD_U32(result + (24) * 12, 0x4) = (void *)2;
+      v13 = LOBYTE(FIELD_U32(result + (24) * 12, 0x8)) - 2;
       if ( v13 <= 0x14u )
         v7 = (void *)dword_60B05BB0[(char)v13];
-      result[24].vtable = v7;
+      FIELD_U32(result + (24) * 12, 0x0) = v7;
     }
   }
   else if ( !owner && FIELD_S8(dword_60C9CF0C, 1404) >= 0 && !FIELD_U8(dword_60C9CF0C, 1406) )

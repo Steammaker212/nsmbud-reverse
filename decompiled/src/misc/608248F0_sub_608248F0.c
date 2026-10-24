@@ -162,7 +162,7 @@ int __fastcall sub_608248F0(int r0_0, void *a2)
   v71 = 0;
   v7 = sead_IDisposer_ctor(&a1);
   a1.vtable = (int)off_60C5CB68;
-  v73 = &v7[2].field_C;
+  v73 = &FIELD_U32(v7 + (2) * 16, 0xC);
   v72 = &BufferedSafeStringBase_char_vtable_probably;
   v74 = 32;
   sead__BufferedSafeStringBase__assureTerminationImpl_const((int)&v7[2]);

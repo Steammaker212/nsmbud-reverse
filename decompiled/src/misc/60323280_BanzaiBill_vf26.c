@@ -15,12 +15,12 @@ int __fastcall BanzaiBill_vf26(Actor *a1)
 
   if ( Actor__getProfileId(a1) == 630 || Actor__getProfileId(a1) == 632 )
   {
-    p_movementId = (Vec3 *)&a1[1].movementId;
+    p_movementId = (Vec3 *)&FIELD_U8(a1 + (1) * 80, 0x1C);
     v3 = 556;
   }
   else
   {
-    p_movementId = (Vec3 *)&a1[1].movementId;
+    p_movementId = (Vec3 *)&FIELD_U8(a1 + (1) * 80, 0x1C);
     v3 = 545;
   }
   return EffectData_create(v3, p_movementId, 0, 0);

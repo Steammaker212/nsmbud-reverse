@@ -25,6 +25,6 @@ int __fastcall sub_609A7DCC(_DWORD *a1, int a2, sead_ListNode *a3, int a4)
   }
   a1[4] = a3;
   sead__ListNode__insertFront(a3, v7);
-  ++a3[1].previous;
+  ++FIELD_U32(a3 + (1) * 8, 0x0);
   return (*(int (__fastcall **)(_DWORD *, int))(*a1 + 12))(a1, a4);
 }

@@ -15,6 +15,6 @@ StateMethodExecuter *__fastcall sub_6055DA94(StateMethodExecuter *result)
   owner = (int)result[1145].owner;
   result[1145].owner = (void *)(owner - 1);
   if ( owner <= 1 )
-    return StateMgr__changeState((StateMgr *)&result[2], (StateBase *)result[3].owner);
+    return StateMgr__changeState((StateMgr *)&result[2], (StateBase *)FIELD_U32(result + (3) * 12, 0x4));
   return result;
 }

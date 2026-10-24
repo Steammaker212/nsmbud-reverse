@@ -30,10 +30,10 @@ float32x2_t *__fastcall Mtx34_rotateZ(float32x2_t *a1, unsigned int *a2)
   int32x2_t v19; // [sp+38h] [bp-40h]
   int32x2_t v20; // [sp+48h] [bp-30h]
 
-  v19.n64_u64[0] = a1[1].n64_u64[0];
-  v2 = a1[5].n64_u32[0];
-  v3 = a1[5].n64_u32[1];
-  v20.n64_u64[0] = a1[3].n64_u64[0];
+  v19.n64_u64[0] = FIELD_U64(a1 + (1) * 8, 0x0)[0];
+  v2 = FIELD_U32(a1 + (5) * 8, 0x0)[0];
+  v3 = FIELD_U32(a1 + (5) * 8, 0x0)[1];
+  v20.n64_u64[0] = FIELD_U64(a1 + (3) * 8, 0x0)[0];
   v4 = *a2;
   v5 = (float *)((char *)sinLutTable + ((v4 >> 20) & 0xFF0));
   v6 = (float)(v4 & 0xFFFFFF) * 0.000000059605;
@@ -46,7 +46,7 @@ float32x2_t *__fastcall Mtx34_rotateZ(float32x2_t *a1, unsigned int *a2)
   v10.n128_u64[1] = 1065353216;
   v11 = vmlaq_lane_f32(
           vmlaq_lane_f32(
-            vmulq_n_f32((float32x4_t)v18, a1[2].n64_f32[0]),
+            vmulq_n_f32((float32x4_t)v18, FIELD_F32(a1 + (2) * 8, 0x0)[0]),
             (float32x4_t)__PAIR64__(v18, *v5 + (float)(v5[1] * v6)),
             a1[2],
             1),
@@ -55,7 +55,7 @@ float32x2_t *__fastcall Mtx34_rotateZ(float32x2_t *a1, unsigned int *a2)
           0);
   v12 = vmlaq_lane_f32(
           vmlaq_lane_f32(
-            vmulq_n_f32((float32x4_t)v18, a1[4].n64_f32[0]),
+            vmulq_n_f32((float32x4_t)v18, FIELD_F32(a1 + (4) * 8, 0x0)[0]),
             (float32x4_t)__PAIR64__(v18, *v5 + (float)(v5[1] * v6)),
             a1[4],
             1),

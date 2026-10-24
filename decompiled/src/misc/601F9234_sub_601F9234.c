@@ -32,35 +32,35 @@ float __fastcall sub_601F9234(StateMgr *a1, float result)
   int speed; // [sp+8h] [bp-30h] BYREF
   int target[11]; // [sp+Ch] [bp-2Ch] BYREF
 
-  switch ( (unsigned int)a1[37].nextState )
+  switch ( (unsigned int)FIELD_U32(a1 + (37) * 16, 0x4) )
   {
     case 0u:
-      nextState = a1[44].nextState;
-      a1[44].nextState = (StateBase *)((char *)nextState - 1);
+      nextState = FIELD_U32(a1 + (44) * 16, 0x4);
+      FIELD_U32(a1 + (44) * 16, 0x4) = (StateBase *)((char *)nextState - 1);
       if ( nextState == (StateBase *)41 )
       {
         v21 = sub_601FEE28(dword_60C8C188);
-        result = sub_6016BB6C(v21, 1, &a1[5].executer, (int)FIELD_U32(a1, 0x8), 0.0, 0, 0);
+        result = sub_6016BB6C(v21, 1, &FIELD_U32(a1 + (5) * 16, 0x0), (int)FIELD_U32(a1, 0x8), 0.0, 0, 0);
       }
       else if ( nextState == (StateBase *)1 )
       {
-        a1[37].nextState = (StateBase *)1;
+        FIELD_U32(a1 + (37) * 16, 0x4) = (StateBase *)1;
       }
       break;
     case 1u:
-      p_nextState = (int *)&a1[11].nextState;
-      sub_60832338((int *)&a1[11].nextState, (int *)&a1[12], (int *)&a1[43].lastState, (int *)&a1[44]);
+      p_nextState = (int *)&FIELD_U32(a1 + (11) * 16, 0x4);
+      sub_60832338((int *)&FIELD_U32(a1 + (11) * 16, 0x4), (int *)&a1[12], (int *)&FIELD_U32(a1 + (43) * 16, 0xC), (int *)&a1[44]);
       target[0] = 50331648;
       speed = 0x100000;
-      moveValueTo((int *)&a1[43].lastState, target, &speed);
+      moveValueTo((int *)&FIELD_U32(a1 + (43) * 16, 0xC), target, &speed);
       target[0] = 3145728;
       speed = 0x10000;
       moveValueTo((int *)&a1[44], target, &speed);
-      executer = (int)a1[12].executer;
+      executer = (int)FIELD_U32(a1 + (12) * 16, 0x0);
       v6 = executer;
       if ( executer < 0 )
       {
-        v6 = (int)a1[12].executer;
+        v6 = (int)FIELD_U32(a1 + (12) * 16, 0x0);
         if ( executer != 0x80000000 )
           v6 = -executer;
       }
@@ -76,34 +76,34 @@ float __fastcall sub_601F9234(StateMgr *a1, float result)
       }
       if ( (unsigned int)v8 >> 20 <= 2 )
       {
-        a1[11].nextState = (StateBase *)executer;
-        *(float *)&a1[36].currentMethodExecuter = (float)(*(float *)&a1[5].nextState - *(float *)&a1[38].executer)
+        FIELD_U32(a1 + (11) * 16, 0x4) = (StateBase *)executer;
+        *(float *)&FIELD_U32(a1 + (36) * 16, 0x8) = (float)(*(float *)&FIELD_U32(a1 + (5) * 16, 0x4) - *(float *)&FIELD_U32(a1 + (38) * 16, 0x0))
                                                 / (float)(sqrtf(
-                                                            (float)((float)(*(float *)&a1[5].currentMethodExecuter
-                                                                          - *(float *)&a1[38].nextState)
-                                                                  * (float)(*(float *)&a1[5].currentMethodExecuter
-                                                                          - *(float *)&a1[38].nextState))
-                                                          + (float)((float)(*(float *)&a1[5].executer
-                                                                          - *(float *)&a1[37].lastState)
-                                                                  * (float)(*(float *)&a1[5].executer
-                                                                          - *(float *)&a1[37].lastState)))
-                                                        / *(float *)&a1[12].currentMethodExecuter);
-        ++a1[37].nextState;
+                                                            (float)((float)(*(float *)&FIELD_U32(a1 + (5) * 16, 0x8)
+                                                                          - *(float *)&FIELD_U32(a1 + (38) * 16, 0x4))
+                                                                  * (float)(*(float *)&FIELD_U32(a1 + (5) * 16, 0x8)
+                                                                          - *(float *)&FIELD_U32(a1 + (38) * 16, 0x4)))
+                                                          + (float)((float)(*(float *)&FIELD_U32(a1 + (5) * 16, 0x0)
+                                                                          - *(float *)&FIELD_U32(a1 + (37) * 16, 0xC))
+                                                                  * (float)(*(float *)&FIELD_U32(a1 + (5) * 16, 0x0)
+                                                                          - *(float *)&FIELD_U32(a1 + (37) * 16, 0xC))))
+                                                        / *(float *)&FIELD_U32(a1 + (12) * 16, 0x8));
+        ++FIELD_U32(a1 + (37) * 16, 0x4);
         *(_BYTE *)(sub_601FEE28(dword_60C8C188) + 1369) = 1;
       }
       break;
     case 2u:
       ((void (__fastcall *)(StateMgr *))loc_60168DF8)(a1);
-      v9 = *(float *)&a1[5].executer - *(float *)&a1[37].lastState;
+      v9 = *(float *)&FIELD_U32(a1 + (5) * 16, 0x0) - *(float *)&FIELD_U32(a1 + (37) * 16, 0xC);
       v10 = sqrtf(
-              (float)((float)(*(float *)&a1[5].currentMethodExecuter - *(float *)&a1[38].nextState)
-                    * (float)(*(float *)&a1[5].currentMethodExecuter - *(float *)&a1[38].nextState))
+              (float)((float)(*(float *)&FIELD_U32(a1 + (5) * 16, 0x8) - *(float *)&FIELD_U32(a1 + (38) * 16, 0x4))
+                    * (float)(*(float *)&FIELD_U32(a1 + (5) * 16, 0x8) - *(float *)&FIELD_U32(a1 + (38) * 16, 0x4)))
             + (float)(v9 * v9));
-      v11 = (float)(*(float *)&a1[5].nextState - *(float *)&a1[38].executer)
-          / (float)(v10 / *(float *)&a1[12].currentMethodExecuter);
-      *(float *)&a1[36].currentMethodExecuter = v11;
+      v11 = (float)(*(float *)&FIELD_U32(a1 + (5) * 16, 0x4) - *(float *)&FIELD_U32(a1 + (38) * 16, 0x0))
+          / (float)(v10 / *(float *)&FIELD_U32(a1 + (12) * 16, 0x8));
+      *(float *)&FIELD_U32(a1 + (36) * 16, 0x8) = v11;
       ((void (__fastcall *)(StateMethodExecuter **, float, float, float, float))loc_60832560)(
-        &a1[7].currentMethodExecuter,
+        &FIELD_U32(a1 + (7) * 16, 0x8),
         -v11,
         0.1,
         0.1,
@@ -118,45 +118,45 @@ float __fastcall sub_601F9234(StateMgr *a1, float result)
       {
         target[0] = -1061811360;
         speed = 3145728;
-        moveValueTo((int *)&a1[11].nextState, target, &speed);
+        moveValueTo((int *)&FIELD_U32(a1 + (11) * 16, 0x4), target, &speed);
         ((void (__fastcall *)(StateMgr *, StateExecuter *))FIELD_U32(a1, 0x0)[20].methodExecuter.currentState)(
           a1,
-          a1[39].executer);
+          FIELD_U32(a1 + (39) * 16, 0x0));
         v13 = 0.142;
         v14 = 0.01;
       }
       ((void (__fastcall *)(StateMethodExecuter **, float, float, float, float))loc_60832560)(
-        &a1[12].currentMethodExecuter,
+        &FIELD_U32(a1 + (12) * 16, 0x8),
         v12,
         0.1,
         v13,
         v14);
       result = 150.0;
       if ( v10 < 150.0 )
-        ++a1[37].nextState;
+        ++FIELD_U32(a1 + (37) * 16, 0x4);
       break;
     case 3u:
       ((void (__fastcall *)(StateMgr *))loc_60168DF8)(a1);
-      v15 = *(float *)&a1[5].executer - *(float *)&a1[37].lastState;
+      v15 = *(float *)&FIELD_U32(a1 + (5) * 16, 0x0) - *(float *)&FIELD_U32(a1 + (37) * 16, 0xC);
       v16 = sqrtf(
-              (float)((float)(*(float *)&a1[5].currentMethodExecuter - *(float *)&a1[38].nextState)
-                    * (float)(*(float *)&a1[5].currentMethodExecuter - *(float *)&a1[38].nextState))
+              (float)((float)(*(float *)&FIELD_U32(a1 + (5) * 16, 0x8) - *(float *)&FIELD_U32(a1 + (38) * 16, 0x4))
+                    * (float)(*(float *)&FIELD_U32(a1 + (5) * 16, 0x8) - *(float *)&FIELD_U32(a1 + (38) * 16, 0x4)))
             + (float)(v15 * v15));
-      v17 = (float)(*(float *)&a1[5].nextState - *(float *)&a1[38].executer)
-          / (float)(v16 / *(float *)&a1[12].currentMethodExecuter);
-      *(float *)&a1[36].currentMethodExecuter = v17;
+      v17 = (float)(*(float *)&FIELD_U32(a1 + (5) * 16, 0x4) - *(float *)&FIELD_U32(a1 + (38) * 16, 0x0))
+          / (float)(v16 / *(float *)&FIELD_U32(a1 + (12) * 16, 0x8));
+      *(float *)&FIELD_U32(a1 + (36) * 16, 0x8) = v17;
       ((void (__fastcall *)(StateMethodExecuter **, float, float, float, float))loc_60832560)(
-        &a1[7].currentMethodExecuter,
+        &FIELD_U32(a1 + (7) * 16, 0x8),
         -v17,
         0.1,
         0.1,
         0.05);
       v18 = ((float (__fastcall *)(StateMgr *, StateExecuter *))FIELD_U32(a1, 0x0)[20].methodExecuter.currentState)(
               a1,
-              a1[39].executer);
-      p_currentMethodExecuter = (float *)&a1[12].currentMethodExecuter;
+              FIELD_U32(a1 + (39) * 16, 0x0));
+      p_currentMethodExecuter = (float *)&FIELD_U32(a1 + (12) * 16, 0x8);
       ((void (__fastcall *)(StateMethodExecuter **, float, float, float, float))loc_60832560)(
-        &a1[12].currentMethodExecuter,
+        &FIELD_U32(a1 + (12) * 16, 0x8),
         v18,
         0.1,
         0.142,
@@ -165,18 +165,18 @@ float __fastcall sub_601F9234(StateMgr *a1, float result)
       {
         target[0] = -1061811360;
         speed = 3145728;
-        moveValueTo((int *)&a1[11].nextState, target, &speed);
+        moveValueTo((int *)&FIELD_U32(a1 + (11) * 16, 0x4), target, &speed);
       }
       result = *p_currentMethodExecuter;
       if ( v16 < *p_currentMethodExecuter )
       {
-        a1[7].currentMethodExecuter = 0;
-        *(float *)&a1[12].currentMethodExecuter = ((float (__fastcall *)(StateMgr *, StateExecuter *))FIELD_U32(a1, 0x0)[20].methodExecuter.currentState)(
+        FIELD_U32(a1 + (7) * 16, 0x8) = 0;
+        *(float *)&FIELD_U32(a1 + (12) * 16, 0x8) = ((float (__fastcall *)(StateMgr *, StateExecuter *))FIELD_U32(a1, 0x0)[20].methodExecuter.currentState)(
                                                     a1,
-                                                    a1[39].executer);
-        v20 = a1[39].executer;
-        a1[36].lastState = (StateBase *)(0x100000000LL / (int)v20);
-        a1[12].executer = 0;
+                                                    FIELD_U32(a1 + (39) * 16, 0x0));
+        v20 = FIELD_U32(a1 + (39) * 16, 0x0);
+        FIELD_U32(a1 + (36) * 16, 0xC) = (StateBase *)(0x100000000LL / (int)v20);
+        FIELD_U32(a1 + (12) * 16, 0x0) = 0;
         ((void (__fastcall *)(StateMgr *, void *, _DWORD, _DWORD))FIELD_U32(a1, 0x0)[4].methodExecuter.owner)(
           a1,
           FIELD_U32(a1, 0x0)[4].methodExecuter.owner,

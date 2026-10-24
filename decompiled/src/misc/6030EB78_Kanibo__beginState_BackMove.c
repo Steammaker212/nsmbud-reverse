@@ -20,7 +20,7 @@ void __fastcall Kanibo__beginState_BackMove(Enemy *a1)
   sub_607160F4(
     TileMgr_instance,
     (int)(float)(FIELD_F32(a1, 0x6C) + (float)(v2 * 16.0)),
-    (unsigned __int16)(int)(float)-(float)(*(float *)&a1[1]._._._._.field_20.next + 24.0),
+    (unsigned __int16)(int)(float)-(float)(*(float *)&FIELD_U32(a1 + (1) * 6300, 0x24) + 24.0),
     (unsigned __int8)FIELD_U8(a1, 0x56),
     1);
   if ( (v3 & 0xF) != 0 )

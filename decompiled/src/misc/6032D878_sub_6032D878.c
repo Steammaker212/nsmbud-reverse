@@ -27,7 +27,7 @@ int __fastcall sub_6032D878(Vec3 *a1)
     if ( !*v4 )
     {
       v6 = 0;
-      if ( !LODWORD(a1[6].z) )
+      if ( !LODWORD(FIELD_F32(a1 + (6) * 12, 0x8)) )
         v6 = 0x80000000;
       a4 = v6;
       v7 = (LightSource *)&a1[630];

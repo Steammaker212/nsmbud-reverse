@@ -18,13 +18,13 @@ Actor *__fastcall Actor_CSW7_build(unsigned __int8 *a1)
   v2 = (Actor *)operator_new(0x128u);
   result = sub_601A75F0(v2, a1);
   FIELD_U32(result, 0x0) = (int)off_60BD8F08;
-  result[3].field_20.previous = 0;
-  result[3].field_20.next = (sead_ListNode *)2;
-  LOWORD(result[3].childCount) = 0;
-  BYTE2(result[3].childCount) = 0;
+  FIELD_U32(result + (3) * 80, 0x20) = 0;
+  FIELD_U32(result + (3) * 80, 0x24) = (sead_ListNode *)2;
+  LOWORD(FIELD_U32(result + (3) * 80, 0x28)) = 0;
+  BYTE2(FIELD_U32(result + (3) * 80, 0x28)) = 0;
   heap = result[3].heap;
   id = result[3].id;
-  result[3].field_2C = result[3].vtable;
+  FIELD_U32(result + (3) * 80, 0x2C) = FIELD_U32(result + (3) * 80, 0x0);
   result[3].field_30 = heap;
   result[3].field_34 = id;
   return result;

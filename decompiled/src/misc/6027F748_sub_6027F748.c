@@ -307,7 +307,7 @@ LABEL_14:
         break;
       case 1:
         U32 = sead__Random__getU32((void *)(dword_60C9CF0C + 1340));
-        v30 = (float *)v158[1]._._.aCollider.field_70;
+        v30 = (float *)FIELD_U32(v158 + (1) * 6100, 0x12C);
         v31 = (float)((float)(COERCE_FLOAT((U32 >> 9) | 0x3F800000) + -1.0) * 0.6) + 0.4;
         if ( *(_DWORD *)&v158[1]._._.aCollider.field_6C > v22 )
           v30 += v22;

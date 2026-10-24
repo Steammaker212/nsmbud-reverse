@@ -164,7 +164,7 @@ LABEL_31:
         v11 = FIELD_U32(v7, 15240);
         if ( v11 > 3 || FIELD_U8(v6, 0x54) != v11 )
         {
-          if ( (BYTE1(v6[1].effectOffset.x) & 1) != 0 )
+          if ( (BYTE1(FIELD_F32(v6 + (1) * 644, 0x23C)) & 1) != 0 )
           {
             v43 = 0;
             FIELD_U8(a2, 0x6E) |= 2u;
@@ -189,7 +189,7 @@ LABEL_31:
                 }
               }
             }
-            if ( (LOBYTE(v6[1].effectOffset.x) & 0x30) != 0 )
+            if ( (LOBYTE(FIELD_F32(v6 + (1) * 644, 0x23C)) & 0x30) != 0 )
             {
               (*(void (__fastcall **)(StageActor *, int, int))(FIELD_U32(v6, 0x0) + 1168))(v6, v7, 4);
               v15 = 0;
@@ -493,7 +493,7 @@ LABEL_62:
     v83 = (*((int (**)(void))stru_60C8E1CC._.vtable + 2))();
     v84 = v82 == v83;
     if ( v82 != v83 )
-      v84 = (v6[4].aCollider.field_6C & 1) == 0;
+      v84 = (FIELD_U8(v6 + (4) * 644, 0x128) & 1) == 0;
     if ( !v84 )
       goto LABEL_62;
   }

@@ -111,6 +111,6 @@ LABEL_15:
   v17 = FIELD_U32(a1, 16);
   v18 = sead_IDisposer_ctor(v16);
   FIELD_U32(v18, 0x0) = (int)off_60C2A5D0;
-  v18[1].vtable = v17;
+  FIELD_U32(v18 + (1) * 16, 0x0) = v17;
   return 1;
 }

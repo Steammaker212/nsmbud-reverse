@@ -46,7 +46,7 @@ float32x4_t *__fastcall sub_60878A58(float32x4_t *result, int a2, float a3)
         v22 = FIELD_U32(result, 0x0)[v9] & 0x7FFF;
         v11 = v22;
         v23 = a3;
-        (*(void (__fastcall **)(unsigned __int32, int *))(*(_DWORD *)v5[1].n128_u32[0] + 8))(v5[1].n128_u32[0], &v22);
+        (*(void (__fastcall **)(unsigned __int32, int *))(*(_DWORD *)FIELD_U32(v5 + (1) * 16, 0x0)[0] + 8))(FIELD_U32(v5 + (1) * 16, 0x0)[0], &v22);
         v12 = *(v10 - 3);
         v13 = *(v10 - 2);
         v14 = *(v10 - 1);
@@ -71,8 +71,8 @@ float32x4_t *__fastcall sub_60878A58(float32x4_t *result, int a2, float a3)
         v21.n128_u64[0] = *(_QWORD *)(v10 - 7);
         v21.n128_u64[1] = *((unsigned int *)v10 - 5);
         result[1] = vmlaq_f32(result[1], v17, v21);
-        result[4].n128_u32[0] |= ~*((_DWORD *)v10 - 11);
-        result[4].n128_f32[1] = v15.n64_f32[0] + result[4].n128_f32[1];
+        FIELD_U32(result + (4) * 16, 0x0)[0] |= ~*((_DWORD *)v10 - 11);
+        FIELD_F32(result + (4) * 16, 0x0)[1] = v15.n64_f32[0] + FIELD_F32(result + (4) * 16, 0x0)[1];
       }
       ++v9;
       v10 += 12;

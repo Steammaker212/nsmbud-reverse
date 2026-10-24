@@ -12,7 +12,7 @@ ColliderBase *__fastcall SwingingCollider_ctor(ColliderBase *a1)
 {
   ColliderBase_ctor(a1);
   FIELD_U32(a1, 0x0) = (int)SwingingCollider_vtable;
-  a1[1]._.vtable = (int)off_60BD4A50;
-  memset(&a1[1]._.containingHeap, 0, 0x58);
+  FIELD_U32(a1 + (1) * 340, 0x0) = (int)off_60BD4A50;
+  memset(&FIELD_U32(a1 + (1) * 340, 0x4), 0, 0x58);
   return a1;
 }

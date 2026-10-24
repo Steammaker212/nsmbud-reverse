@@ -14,7 +14,7 @@ signed int __fastcall sub_60096AE4(StageActor *a1)
 
   StageActor__cullCheck(a1, 0);
   StateMgr__execute((StateMgr *)&a1[9].aCollider.field_64);
-  CollisionMgr_process(&a1[1]._.heap);
+  CollisionMgr_process(&FIELD_U32(a1 + (1) * 644, 0x4));
   (*(void (__fastcall **)(StageActor *))(FIELD_U32(a1, 0x0) + 256))(a1);
   a2.x = FIELD_F32(a1, 0x6C) + FIELD_F32(a1, 0x23C);
   a2.y = FIELD_F32(a1, 0x70) + FIELD_F32(a1, 0x240);

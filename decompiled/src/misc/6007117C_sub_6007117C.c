@@ -92,7 +92,7 @@ void __fastcall sub_6007117C(ActiveCollider *a1, int a2)
           v22 = (FIELD_U32(v6, 0x14) & 0x100) == 0;
         if ( v22 && (v6[93].vtable & 1) != 0 )
         {
-          sub_602EE7B8(v6, v6[1].vtable, SLOBYTE(v6[1].heap));
+          sub_602EE7B8(v6, FIELD_U32(v6 + (1) * 80, 0x0), SLOBYTE(FIELD_U32(v6 + (1) * 80, 0x4)));
           FIELD_U8(a2, 110) |= 2u;
         }
       }
@@ -113,7 +113,7 @@ void __fastcall sub_6007117C(ActiveCollider *a1, int a2)
           }
           if ( v10 && (**(int (__fastcall ***)(int, int *))v10)(v10, &dword_60C81100) == 1 )
           {
-            if ( FIELD_U32(v10, 15240) != SLOBYTE(v6[1].heap) )
+            if ( FIELD_U32(v10, 15240) != SLOBYTE(FIELD_U32(v6 + (1) * 80, 0x4)) )
             {
               FIELD_U8(a1, 0x6E) |= 2u;
               v12 = *(float *)(sub_6075F950(v6) + 4);
@@ -121,7 +121,7 @@ void __fastcall sub_6007117C(ActiveCollider *a1, int a2)
               if ( v12 >= v13
                 && (*(int (__fastcall **)(Actor *, ActiveCollider *, int))(FIELD_U32(v6, 0x0) + 1164))(v6, a1, a2) == 1 )
               {
-                FIELD_U32(v10, 9436) = SLOBYTE(v6[1].heap);
+                FIELD_U32(v10, 9436) = SLOBYTE(FIELD_U32(v6 + (1) * 80, 0x4));
                 FIELD_U32(v10, 9440) = 60;
               }
             }

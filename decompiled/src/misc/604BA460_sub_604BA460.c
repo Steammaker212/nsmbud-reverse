@@ -12,8 +12,8 @@ StateMethodExecuter *__fastcall sub_604BA460(StateMethodExecuter *result)
 {
   int owner; // r1
 
-  owner = (int)result[307].owner;
-  result[307].owner = (void *)(owner + 1);
+  owner = (int)FIELD_U32(result + (307) * 12, 0x4);
+  FIELD_U32(result + (307) * 12, 0x4) = (void *)(owner + 1);
   if ( owner >= 9 )
     return StateMgr__changeState((StateMgr *)&result[2], (StateBase *)&dword_60CA25A0);
   return result;

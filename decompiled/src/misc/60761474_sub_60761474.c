@@ -129,7 +129,7 @@ LABEL_19:
     v13 = v12 == 0;
     if ( v12 )
     {
-      v12 = (Actor *)v12[1].field_40;
+      v12 = (Actor *)FIELD_U32(v12 + (1) * 80, 0x40);
       v13 = v12 == 0;
     }
     if ( !v13 && Actor__getProfileId(v12) == 90 )

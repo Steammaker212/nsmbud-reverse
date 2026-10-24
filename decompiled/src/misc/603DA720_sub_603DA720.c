@@ -30,13 +30,13 @@ StateMethodExecuter *__fastcall sub_603DA720(
       v8 = &result[i];
       *(float *)&a5 = *(float *)&result[i + 17].owner + -0.15;
       a5 = vmax_f32(*(float32x2_t *)&a5, a4).n64_f64[0];
-      v8[17].owner = (void *)LODWORD(a5);
-      *(float *)&FIELD_U32(v8, 0x0) = *(float *)&result[i].vtable + *(float *)&result[i + 17].vtable;
-      *(float *)&a5 = *(float *)&a5 + *(float *)&result[i].owner;
+      FIELD_U32(v8 + (17) * 12, 0x4) = (void *)LODWORD(a5);
+      *(float *)&FIELD_U32(v8, 0x0) = *(float *)&FIELD_U32(result + (i) * 12, 0x0) + *(float *)&result[i + 17].vtable;
+      *(float *)&a5 = *(float *)&a5 + *(float *)&FIELD_U32(result + (i) * 12, 0x4);
       FIELD_U32(v8, 0x4) = (void *)LODWORD(a5);
-      *(float *)&FIELD_U32(v8, 0x8) = *(float *)&result[i].currentState + *(float *)&result[i + 17].currentState;
-      v8[34].vtable = (char *)result[i + 34].vtable + 0x8000000;
-      v8[34].currentState = result[i + 34].currentState + 0x4000000;
+      *(float *)&FIELD_U32(v8, 0x8) = *(float *)&FIELD_U32(result + (i) * 12, 0x8) + *(float *)&result[i + 17].currentState;
+      FIELD_U32(v8 + (34) * 12, 0x0) = (char *)result[i + 34].vtable + 0x8000000;
+      FIELD_U32(v8 + (34) * 12, 0x8) = result[i + 34].currentState + 0x4000000;
       if ( *(float *)&a5 >= (float)(FIELD_F32(dword_60CC6484, 124) - FIELD_F32(dword_60CC6484, 108)) )
         goto LABEL_6;
       *((_BYTE *)&FIELD_U32(result, 0x0) + v6) = 1;

@@ -16,7 +16,7 @@ StateMethodExecuter *__fastcall sub_605E4094(StateMethodExecuter *result, int a2
   {
     v2 = FIELD_U32(a2, 80);
     if ( (v2 | 1) == 1 )
-      result[6].currentState = v2;
+      FIELD_U32(result + (6) * 12, 0x8) = v2;
     return sub_605D79D0((int)result, (StateBase *)&dword_60CB1B04, 0);
   }
   return result;

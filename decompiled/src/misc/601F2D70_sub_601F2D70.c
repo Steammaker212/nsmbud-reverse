@@ -13,9 +13,9 @@ Actor *__fastcall sub_601F2D70(Actor *a1)
   int *p_childCount; // r5
 
   FIELD_U32(a1, 0x0) = (int)off_60BD7140;
-  a1[5].childCount = (int)EffectWrapper_vtable;
-  p_childCount = &a1[5].childCount;
-  sub_60237560((int)&a1[5].childCount);
+  FIELD_U32(a1 + (5) * 80, 0x28) = (int)EffectWrapper_vtable;
+  p_childCount = &FIELD_U32(a1 + (5) * 80, 0x28);
+  sub_60237560((int)&FIELD_U32(a1 + (5) * 80, 0x28));
   sead__IDisposer__dtor(p_childCount);
   return Actor__dtor(a1);
 }

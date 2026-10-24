@@ -21,7 +21,7 @@ int __fastcall sub_608209E4(int a1, sead_ListNode *a2, int a3)
   {
     FIELD_U32(a1, 32) = a2;
     sead__ListNode__insertFront(a2, (sead_ListNode *)(a1 + 20));
-    ++a2[1].previous;
+    ++FIELD_U32(a2 + (1) * 8, 0x0);
   }
   return a1;
 }

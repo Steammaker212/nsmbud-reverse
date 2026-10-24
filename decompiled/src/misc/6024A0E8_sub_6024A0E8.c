@@ -14,7 +14,7 @@ int __fastcall sub_6024A0E8(Actor *a1)
   unsigned int settings1; // r1
   Actor *v4; // r1
 
-  a1[79].field_10 = 1;
+  FIELD_U8(a1 + (79) * 80, 0x10) = 1;
   result = 6340;
   settings1 = a1[79].settings1;
   if ( settings1 )

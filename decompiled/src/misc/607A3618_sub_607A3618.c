@@ -13,7 +13,7 @@ int __fastcall sub_607A3618(StageActor *a1, int *a2, int a3, int a4)
   int v8; // r0
   int result; // r0
 
-  (*(void (__fastcall **)(StageActor *, sead_ListNode *, int))(FIELD_U32(a1, 0x0) + 144))(a1, a1[2]._.field_20.previous, 1);
+  (*(void (__fastcall **)(StageActor *, sead_ListNode *, int))(FIELD_U32(a1, 0x0) + 144))(a1, FIELD_U32(a1 + (2) * 644, 0x20), 1);
   sub_607AA814(a1);
   sub_60767F80(a1, a2, a4);
   a1[17].field_208 = FIELD_F32(a1, 0x6C);

@@ -24,7 +24,7 @@ void __fastcall sub_606DD1C0(Actor *a1)
   sub_60237560((int)&a1[76].field_2C);
   sead__IDisposer__dtor(&a1[76].field_2C);
   FIELD_U32(a1, 0x0) = (int)&CollisionActor__vtable;
-  CollisionMgr_dtor((int)&a1[8].id);
+  CollisionMgr_dtor((int)&FIELD_U32(a1 + (8) * 80, 0x8));
   v2 = StageActor__dtor(a1);
   operator_delete(v2);
 }

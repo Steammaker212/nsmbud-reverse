@@ -42,13 +42,13 @@ StateMethodExecuter *__fastcall sub_605E59FC(
     if ( (BYTE1(result[567].owner) & 0x10) != 0 && LOBYTE(result[574].owner) && (int)result[575].owner < -1073741824 )
     {
       v8 = 0.0;
-      v9 = *(float *)&result[10].vtable;
+      v9 = *(float *)&FIELD_U32(result + (10) * 12, 0x0);
     }
     else
     {
-      a4.n64_u32[0] = (unsigned __int32)result[10].owner;
+      a4.n64_u32[0] = (unsigned __int32)FIELD_U32(result + (10) * 12, 0x4);
       a5.n64_u32[0] = 3.0;
-      v9 = *(float *)&result[10].vtable;
+      v9 = *(float *)&FIELD_U32(result + (10) * 12, 0x0);
       LODWORD(v8) = vmax_f32(a4, a5).n64_u32[0];
     }
     return (StateMethodExecuter *)sub_605D9504((int)result, 0, v9, v8);

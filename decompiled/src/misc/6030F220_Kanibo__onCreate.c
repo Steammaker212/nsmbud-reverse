@@ -41,7 +41,7 @@ int __fastcall Kanibo__onCreate(Enemy *a1)
   a1[1]._._._.direction = 3;
   FIELD_U32(a1, 0x26C) = (int)&a1[1]._._._._.field_40;
   LODWORD(a1[1]._._._.speed.z) = 1;
-  FIELD_U32(a1, 0x270) = (int)&a1[1]._._._.field_64;
+  FIELD_U32(a1, 0x270) = (int)&FIELD_F32(a1 + (1) * 6300, 0x64);
   LOBYTE(FIELD_U32(a1, 0x17A8)) = 1;
   *(double *)&a1[1]._._._.maxSpeed.z = ((double (__fastcall *)(float *))*(_DWORD *)LODWORD(a1[1]._._._.maxSpeed.y))(&a1[1]._._._.maxSpeed.y);
   a1[1]._._._.scale.y = v3;

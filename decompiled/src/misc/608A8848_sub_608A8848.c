@@ -47,7 +47,7 @@ int __fastcall sub_608A8848(
   v22 = vmulq_f32(v16, vrsqrtsq_f32(v16, vmulq_f32(v16, _Q9)));
   v23 = vbslq_s64(_Q2, (int64x2_t)0, vmulq_f32(_Q9, vmulq_f32(v22, vrsqrtsq_f32(v22, vmulq_f32(_Q9, v22)))));
   return sub_608A8A9C(
-           a12[6].n128_f32[0],
+           FIELD_F32(a12 + (6) * 16, 0x0)[0],
            v23.n128_f32[0],
            FIELD_F32(a11, 36),
            a14[1],

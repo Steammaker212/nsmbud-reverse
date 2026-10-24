@@ -283,7 +283,7 @@ signed int __fastcall FinalBowser__vf3FC(_DWORD *a1)
   do
   {
     ActiveCollider__init(v43, (StageActor *)a1, (ActiveColliderInfo *)&unk_60BC6DD8, 0);
-    LOBYTE(v43[1]._.vtable) = 0;
+    LOBYTE(FIELD_U32(v43 + (1) * 304, 0x0)) = 0;
     --v42;
     v43 = (ActiveCollider *)((char *)v43 + 308);
   }

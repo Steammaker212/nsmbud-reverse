@@ -24,7 +24,7 @@ int __fastcall sub_60874E50(int a1, float32x4_t *a2)
   {
     v5 = *a2;
     v6 = (float *)(a1 + 48);
-    v7 = a2[1].n128_f32[0];
+    v7 = FIELD_F32(a2 + (1) * 16, 0x0)[0];
     v8 = 0;
     while ( 1 )
     {

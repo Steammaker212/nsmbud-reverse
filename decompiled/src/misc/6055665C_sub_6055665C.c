@@ -16,7 +16,7 @@ StateMethodExecuter *__fastcall sub_6055665C(StateMethodExecuter *result)
 
   if ( !LOBYTE(result[571].currentState) )
   {
-    currentState = result[570].currentState;
+    currentState = FIELD_U32(result + (570) * 12, 0x8);
     v2 = (StateMgr *)&result[2];
     if ( currentState )
       v3 = &dword_60CAD5C8;

@@ -45,7 +45,7 @@ StateActor *__fastcall sub_606686DC(StateActor *a1, ActorBuildInfo *a2)
   category = a1[1]._._.aCollider.info.category;
   v4 = a1[1]._._.aCollider.info.field_14;
   a1[1]._._.aCollider.field_F4 = category;
-  a1[1]._._.aCollider.field_F0 = v4;
+  FIELD_U32(a1 + (1) * 6100, 0x1AC) = v4;
   a1[1]._._.aCollider.field_114 = category;
   a1[1]._._.aCollider.field_110 = v4;
   SolidOnTopCollider_setPointMetaRelated(

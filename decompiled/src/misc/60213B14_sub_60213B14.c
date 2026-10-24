@@ -14,17 +14,17 @@ StateMethodExecuter *__fastcall sub_60213B14(StateMethodExecuter *result)
   float v2; // s0
   int v3; // r1
 
-  v1 = result[35].currentState + 0x2000000;
-  result[35].currentState = v1;
+  v1 = FIELD_U32(result + (35) * 12, 0x8) + 0x2000000;
+  FIELD_U32(result + (35) * 12, 0x8) = v1;
   v2 = (float)(*(float *)((char *)sinLutTable + ((v1 >> 20) & 0xFF0))
              + (float)((float)((float)(v1 & 0xFFFFFF) * *(float *)((char *)&sinLutTable[1] + ((v1 >> 20) & 0xFF0)))
                      * 0.000000059605))
      * 12.0;
-  *(float *)&result[36].vtable = v2;
-  *(float *)&result[7].vtable = *(float *)&result[33].currentState + v2;
-  v3 = result[38].currentState - 1;
-  result[38].currentState = v3;
+  *(float *)&FIELD_U32(result + (36) * 12, 0x0) = v2;
+  *(float *)&FIELD_U32(result + (7) * 12, 0x0) = *(float *)&FIELD_U32(result + (33) * 12, 0x8) + v2;
+  v3 = FIELD_U32(result + (38) * 12, 0x8) - 1;
+  FIELD_U32(result + (38) * 12, 0x8) = v3;
   if ( !v3 )
-    return StateMgr__changeState((StateMgr *)&result[23].currentState, &stru_60C8D0A4);
+    return StateMgr__changeState((StateMgr *)&FIELD_U32(result + (23) * 12, 0x8), &stru_60C8D0A4);
   return result;
 }

@@ -13,7 +13,7 @@ StateMethodExecuter *__fastcall sub_6049440C(StateMethodExecuter *result)
   if ( dword_60C99DD0 )
   {
     if ( FIELD_U32(dword_60C99DD0, 3796) == 3 )
-      return StateMgr__changeState((StateMgr *)&result[1].currentState, (StateBase *)&unk_60CA0150);
+      return StateMgr__changeState((StateMgr *)&FIELD_U32(result + (1) * 12, 0x8), (StateBase *)&unk_60CA0150);
   }
   return result;
 }

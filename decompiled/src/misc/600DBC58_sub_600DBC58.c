@@ -36,7 +36,7 @@ __n64 __fastcall sub_600DBC58(__n64 **a1, float a2)
   v5 = a1[1];
   if ( v4 == (__n64 *)1 )
     return v5[1];
-  if ( v5[4].n64_f32[0] >= a2 )
+  if ( FIELD_F32(v5 + (4) * 8, 0x0)[0] >= a2 )
     return v5[1];
   v5 = *a1;
   if ( (*a1)[4].n64_f32[0] <= a2 )

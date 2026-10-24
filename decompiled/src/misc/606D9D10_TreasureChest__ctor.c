@@ -40,7 +40,7 @@ int __fastcall TreasureChest__ctor(ActorBuildInfo *a1)
   v3 = (sead_IDisposer *)operator_new(0x1Cu);
   v4 = sub_603E4258(v3);
   FIELD_U32(v4, 0x0) = (int)off_60BF922C;
-  LOBYTE(v4[1].field_8) = 0;
+  LOBYTE(FIELD_U32(v4 + (1) * 16, 0x8)) = 0;
   FIELD_U32(v2, 6604) = v4;
   PlayerLookTarget_ctor((PlayerLookTarget *)(v2 + 6608), FIELD_U32(v2, 8));
   FIELD_U32(v2, 6652) = 0;

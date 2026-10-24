@@ -14,6 +14,6 @@ sead_IDisposer *__fastcall Player_ctor_helper_3E568C(sead_IDisposer *a1, int a2)
 
   result = sub_603E4258(a1);
   FIELD_U32(result, 0x0) = (int)off_60BF8E5C;
-  result[1].field_8 = a2;
+  FIELD_U32(result + (1) * 16, 0x8) = a2;
   return result;
 }

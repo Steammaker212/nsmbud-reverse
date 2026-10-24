@@ -26,7 +26,7 @@ StateMethodExecuter *__fastcall sub_604C2720(StateMethodExecuter *result)
   {
     v2 = &dword_60CA2D0C;
 LABEL_9:
-    result[3].owner = v2;
+    FIELD_U32(result + (3) * 12, 0x4) = v2;
     v5 = BYTE2(result[1181].vtable);
     v3 = (StateMgr *)&result[2];
     if ( v5 )

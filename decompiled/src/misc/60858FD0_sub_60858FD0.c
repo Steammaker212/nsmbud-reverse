@@ -103,63 +103,63 @@ float32x4_t *__fastcall sub_60858FD0(float32x4_t *a1, int a2)
 
   v3 = *(int32x2_t **)(a2 + 4);
   v4 = (int32x2_t *)FIELD_U32(a1, 0x0)[3];
-  v5 = a1[3].n128_f32[0];
-  v6 = a1[3].n128_f32[1];
+  v5 = FIELD_F32(a1 + (3) * 16, 0x0)[0];
+  v6 = FIELD_F32(a1 + (3) * 16, 0x0)[1];
   if ( v4 )
     v3 = v4 + 10;
   v7 = FIELD_U8(a2, 20) == 0;
   if ( FIELD_U8(a2, 20) )
-    v7 = (a1[4].n128_u8[0] & 4) == 0;
+    v7 = (FIELD_U32(a1 + (4) * 16, 0x0)[0] & 4) == 0;
   if ( !v7 )
   {
     v6 = v6 * FIELD_F32(a2, 12);
     v5 = v5 * FIELD_F32(a2, 8);
   }
-  v8 = a1[4].n128_u8[3];
-  v9.n128_u32[3] = a1[1].n128_u32[2];
-  v10.n128_u32[3] = a1[1].n128_u32[3];
-  v11.n128_u32[3] = a1[2].n128_u32[0];
+  v8 = FIELD_U32(a1 + (4) * 16, 0x0)[3];
+  v9.n128_u32[3] = FIELD_U32(a1 + (1) * 16, 0x0)[2];
+  v10.n128_u32[3] = FIELD_U32(a1 + (1) * 16, 0x0)[3];
+  v11.n128_u32[3] = FIELD_U32(a1 + (2) * 16, 0x0)[0];
   v12 = (v8 >> 4) & 3;
   if ( v12 == 2 )
   {
-    v13 = v4[7].n64_f32[0];
+    v13 = FIELD_F32(v4 + (7) * 8, 0x0)[0];
     v14 = 0.5;
   }
   else
   {
     if ( v12 != 1 )
       goto LABEL_12;
-    v13 = v4[7].n64_f32[0];
+    v13 = FIELD_F32(v4 + (7) * 8, 0x0)[0];
     v14 = -0.5;
   }
   v9.n128_f32[3] = v9.n128_f32[3] + (float)(v13 * v14);
 LABEL_12:
   if ( v8 >> 6 == 2 )
   {
-    v15 = v4[7].n64_f32[1];
+    v15 = FIELD_F32(v4 + (7) * 8, 0x0)[1];
     v16 = -0.5;
   }
   else
   {
     if ( v8 >> 6 != 1 )
       goto LABEL_17;
-    v15 = v4[7].n64_f32[1];
+    v15 = FIELD_F32(v4 + (7) * 8, 0x0)[1];
     v16 = 0.5;
   }
   v10.n128_f32[3] = v10.n128_f32[3] + (float)(v15 * v16);
 LABEL_17:
-  v17 = a1[2].n128_f32[1];
+  v17 = FIELD_F32(a1 + (2) * 16, 0x0)[1];
   if ( v17 == 0.0 )
   {
-    v57 = a1[2].n128_f32[3];
+    v57 = FIELD_F32(a1 + (2) * 16, 0x0)[3];
     if ( v57 == 0.0 )
     {
       v80 = v3 + 4;
       v82.n64_u64[0] = FIELD_U64(v3, 0x0)[0];
-      v83 = v3[1].n64_u64[0];
+      v83 = FIELD_U64(v3 + (1) * 8, 0x0)[0];
       v81 = v3 + 2;
-      v90 = v81[1].n64_i64[0];
-      v91 = v80[1].n64_i64[0];
+      v90 = FIELD_U64(v81 + (1) * 8, 0x0)[0];
+      v91 = FIELD_U64(v80 + (1) * 8, 0x0)[0];
       *(float *)&v86 = v5 * v82.n64_f32[0];
       *((float *)&v86 + 1) = v6 * v82.n64_f32[1];
       LODWORD(v87) = v83;
@@ -182,10 +182,10 @@ LABEL_17:
                                       + (float)(v10.n128_f32[3] * FIELD_F32(v80, 0x0)[1]))
                               + (float)(v9.n128_f32[3] * FIELD_F32(v80, 0x0)[0]));
       v79 = v92;
-      a1[5].n128_u64[0] = v86;
-      a1[5].n128_u64[1] = v87;
-      a1[6].n128_u64[0] = v88;
-      a1[6].n128_u64[1] = v89;
+      FIELD_U64(a1 + (5) * 16, 0x0)[0] = v86;
+      FIELD_U64(a1 + (5) * 16, 0x0)[1] = v87;
+      FIELD_U64(a1 + (6) * 16, 0x0)[0] = v88;
+      FIELD_U64(a1 + (6) * 16, 0x0)[1] = v89;
       result = a1 + 7;
       goto LABEL_23;
     }
@@ -202,9 +202,9 @@ LABEL_17:
     v62 = *(float *)HIDWORD(v58) + (float)(*(float *)(HIDWORD(v58) + 8) * v60);
     v63 = *(float *)(HIDWORD(v58) + 4) + (float)(*(float *)(HIDWORD(v58) + 12) * v60);
     v65.n64_u64[0] = FIELD_U64(v3, 0x0)[0];
-    v66.n64_u64[0] = v3[1].n64_u64[0];
+    v66.n64_u64[0] = FIELD_U64(v3 + (1) * 8, 0x0)[0];
     v64 = v3 + 2;
-    v67.n64_u64[0] = v64[1].n64_u64[0];
+    v67.n64_u64[0] = FIELD_U64(v64 + (1) * 8, 0x0)[0];
     v68 = vdupq_lane_s32(v66, 1);
     v69 = vdupq_lane_s32(v67, 1);
     v70.n128_f32[1] = v6 * v62;
@@ -238,9 +238,9 @@ LABEL_17:
     v19 = (__int64)(float)(v17 * v18);
     v20 = (float *)((char *)&nn__util__detail__SinCosSampleTable + ((v19 >> 20) & 0xFF0));
     v84 = v5;
-    v21 = (__int64)(float)(a1[2].n128_f32[2] * v18);
+    v21 = (__int64)(float)(FIELD_F32(a1 + (2) * 16, 0x0)[2] * v18);
     v22 = (float *)((char *)&nn__util__detail__SinCosSampleTable + ((v21 >> 20) & 0xFF0));
-    v23 = (__int64)(float)(a1[2].n128_f32[3] * v18);
+    v23 = (__int64)(float)(FIELD_F32(a1 + (2) * 16, 0x0)[3] * v18);
     v24 = 0u;
     v25 = v23 & 0xFFFFFF;
     LODWORD(v23) = (char *)&nn__util__detail__SinCosSampleTable + (((unsigned int)v23 >> 20) & 0xFF0);
@@ -259,7 +259,7 @@ LABEL_17:
     v37 = v20[1] + (float)(v20[3] * v31);
     v38 = *v22 + (float)(v30 * v22[2]);
     v40.n64_u64[0] = FIELD_U64(v3, 0x0)[0];
-    v41.n64_u64[0] = v3[1].n64_u64[0];
+    v41.n64_u64[0] = FIELD_U64(v3 + (1) * 8, 0x0)[0];
     v39 = v3 + 2;
     v42 = vdupq_lane_s32(v41, 1);
     v11.n128_f32[2] = v34 * v38;
@@ -268,7 +268,7 @@ LABEL_17:
     v9.n128_f32[0] = v84 * (float)(v38 * v33);
     v10.n128_f32[1] = v85 * (float)((float)(v34 * v33) + (float)((float)(v37 * v36) * v35));
     v9.n128_f32[1] = v85 * (float)((float)((float)(v37 * v36) * v33) - (float)(v34 * v35));
-    v43.n64_u64[0] = v39[1].n64_u64[0];
+    v43.n64_u64[0] = FIELD_U64(v39 + (1) * 8, 0x0)[0];
     v10.n128_f32[2] = (float)(v36 * (float)(v34 * v35)) - (float)(v37 * v33);
     v9.n128_f32[2] = (float)(v36 * (float)(v34 * v33)) + (float)(v37 * v35);
     v44 = vdupq_lane_s32(v43, 1);

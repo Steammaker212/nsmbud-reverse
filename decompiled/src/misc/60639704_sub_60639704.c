@@ -21,7 +21,7 @@ StateActor *__fastcall sub_60639704(StateActor *a1, ActorBuildInfo *a2)
   *(_DWORD *)&a1[1]._._._.field_10 = 0;
   a1[1]._._._.settings1 = 0;
   sub_6063044C((int)&a1[1]._._._.settigns2);
-  a1[1]._._._.field_2C = 0;
+  FIELD_U32(a1 + (1) * 6100, 0x2C) = 0;
   a1[1]._._._.field_30 = 0;
   a1[1]._._._.field_34 = 0;
   a1[1]._._._.parent = 0;
@@ -34,7 +34,7 @@ StateActor *__fastcall sub_60639704(StateActor *a1, ActorBuildInfo *a2)
   *(_DWORD *)&a1[1]._._.playerId = 0;
   a1[1]._._.field_58 = 0;
   a1[1]._._.position.y = 0.0;
-  a1[1]._._.position.x = 0.0;
+  FIELD_F32(a1 + (1) * 6100, 0x6C) = 0.0;
   a1[1]._._.xAcceleration = 0.0;
   a1[1]._._.field_64 = 0.0;
   a1[1]._._.field_60 = 0;
@@ -87,7 +87,7 @@ StateActor *__fastcall sub_60639704(StateActor *a1, ActorBuildInfo *a2)
   a1[1]._._.aCollider.info.field_14 = 0;
   sead_IDisposer_ctor((sead_IDisposer *)&a1[1]._._.aCollider.trapezoidOffsetTopLeft);
   LODWORD(a1[1]._._.aCollider.trapezoidOffsetTopLeft) = off_60BC6E38;
-  a1[1]._._.aCollider.field_B0 = 0;
+  FIELD_U32(a1 + (1) * 6100, 0x16C) = 0;
   a1[1]._._.aCollider.field_B4 = 0;
   sub_6063044C((int)&a1[1]._._.aCollider.field_B8);
   a1[1]._._.aCollider.field_CC = 0;

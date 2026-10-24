@@ -13,12 +13,12 @@ StateMethodExecuter *__fastcall sub_603E5FC0(StateMethodExecuter *result)
   char *vtable; // r1
   char *v2; // r1
 
-  vtable = (char *)result[4].vtable;
+  vtable = (char *)FIELD_U32(result + (4) * 12, 0x0);
   if ( !vtable )
-    return StateMgr__changeState((StateMgr *)&result[6].owner, (StateBase *)&dword_60C99680);
+    return StateMgr__changeState((StateMgr *)&FIELD_U32(result + (6) * 12, 0x4), (StateBase *)&dword_60C99680);
   v2 = vtable - 1;
-  result[4].vtable = v2;
+  FIELD_U32(result + (4) * 12, 0x0) = v2;
   if ( !v2 )
-    return StateMgr__changeState((StateMgr *)&result[6].owner, (StateBase *)&dword_60C99680);
+    return StateMgr__changeState((StateMgr *)&FIELD_U32(result + (6) * 12, 0x4), (StateBase *)&dword_60C99680);
   return result;
 }

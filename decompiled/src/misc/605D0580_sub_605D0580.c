@@ -15,6 +15,6 @@ signed int __fastcall sub_605D0580(ColliderBase *a1)
   a1[18].field_140 = 0;
   ColliderBase_setType(a1 + 18, 1);
   a1[18].field_150 = 0;
-  a1[21].owner248Ptr = (Vec3 *)30;
+  FIELD_U32(a1 + (21) * 340, 0x9C) = (Vec3 *)30;
   return 7296;
 }

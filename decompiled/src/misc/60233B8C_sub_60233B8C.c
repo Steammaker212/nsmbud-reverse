@@ -64,22 +64,22 @@ sead_IDisposer *__fastcall sub_60233B8C(sead_IDisposer *a1, int a2, int a3)
 
   sead_IDisposer_ctor(a1);
   FIELD_U32(a1, 0x0) = (int)off_60BD9540;
-  a1[1].vtable = a3;
-  sub_60235850(&a1[1].containingHeap);
-  a1[2].field_8 = 0;
-  v6 = &a1[2].field_8;
-  a1[2].field_C = 0;
-  a1[3].vtable = 0;
-  sub_608DEB0C(&a1[2].field_8, 15, (int)&a1[3].containingHeap);
-  a1[7].vtable = 0;
-  a1[7].containingHeap = 0;
-  a1[7].field_8 = 0;
-  a1[7].field_C = 0;
-  v7 = (*(int (__fastcall **)(int))(*(_DWORD *)a1[1].vtable + 92))(a1[1].vtable);
+  FIELD_U32(a1 + (1) * 16, 0x0) = a3;
+  sub_60235850(&FIELD_U32(a1 + (1) * 16, 0x4));
+  FIELD_U32(a1 + (2) * 16, 0x8) = 0;
+  v6 = &FIELD_U32(a1 + (2) * 16, 0x8);
+  FIELD_U32(a1 + (2) * 16, 0xC) = 0;
+  FIELD_U32(a1 + (3) * 16, 0x0) = 0;
+  sub_608DEB0C(&FIELD_U32(a1 + (2) * 16, 0x8), 15, (int)&a1[3].containingHeap);
+  FIELD_U32(a1 + (7) * 16, 0x0) = 0;
+  FIELD_U32(a1 + (7) * 16, 0x4) = 0;
+  FIELD_U32(a1 + (7) * 16, 0x8) = 0;
+  FIELD_U32(a1 + (7) * 16, 0xC) = 0;
+  v7 = (*(int (__fastcall **)(int))(*(_DWORD *)FIELD_U32(a1 + (1) * 16, 0x0) + 92))(FIELD_U32(a1 + (1) * 16, 0x0));
   v8 = v7;
   if ( v7 <= 0 )
   {
-    v14 = &a1[7].field_C;
+    v14 = &FIELD_U32(a1 + (7) * 16, 0xC);
   }
   else
   {
@@ -98,10 +98,10 @@ sead_IDisposer *__fastcall sub_60233B8C(sead_IDisposer *a1, int a2, int a3)
         v11 += 72;
       }
       while ( 72 * v8 != v11 );
-      a1[7].vtable = v10;
-      a1[7].containingHeap = v8;
-      a1[7].field_8 = 0;
-      a1[7].field_C = 0;
+      FIELD_U32(a1 + (7) * 16, 0x0) = v10;
+      FIELD_U32(a1 + (7) * 16, 0x4) = v8;
+      FIELD_U32(a1 + (7) * 16, 0x8) = 0;
+      FIELD_U32(a1 + (7) * 16, 0xC) = 0;
     }
     (*(void (__fastcall **)(int *))(dword_60C8D920[0] + 12))(dword_60C8D920);
     v12 = 0;
@@ -159,22 +159,22 @@ sead_IDisposer *__fastcall sub_60233B8C(sead_IDisposer *a1, int a2, int a3)
       v30 = 0;
       do
       {
-        v31 = (*(int (__fastcall **)(int, int))(*(_DWORD *)a1[1].vtable + 88))(a1[1].vtable, v30);
+        v31 = (*(int (__fastcall **)(int, int))(*(_DWORD *)FIELD_U32(a1 + (1) * 16, 0x0) + 88))(FIELD_U32(a1 + (1) * 16, 0x0), v30);
         v56 = &sead__SafeStringBase__vtable;
         v57 = v31;
         (*(void (__fastcall **)(int *))(dword_60C8D920[0] + 12))(dword_60C8D920);
-        containingHeap = a1[7].containingHeap;
-        v33 = a1[7].field_C;
+        containingHeap = FIELD_U32(a1 + (7) * 16, 0x4);
+        v33 = FIELD_U32(a1 + (7) * 16, 0xC);
         v34 = 0;
         if ( v33 < containingHeap )
         {
-          a1[7].field_C = v33 + 1;
-          v35 = a1[7].field_8 + v33;
+          FIELD_U32(a1 + (7) * 16, 0xC) = v33 + 1;
+          v35 = FIELD_U32(a1 + (7) * 16, 0x8) + v33;
           v28 = __OFSUB__(v35, containingHeap);
           v36 = v35 - containingHeap;
           if ( v36 < 0 != v28 )
             v36 = v35;
-          v34 = a1[7].vtable + 72 * v36;
+          v34 = FIELD_U32(a1 + (7) * 16, 0x0) + 72 * v36;
         }
         sub_6023473C(v34, v30++, (unsigned __int8)byte_60C8D928, a1);
       }
@@ -188,7 +188,7 @@ sead_IDisposer *__fastcall sub_60233B8C(sead_IDisposer *a1, int a2, int a3)
         v18 = 0;
         while ( 1 )
         {
-          v19 = (*(int (__fastcall **)(int, int))(*(_DWORD *)a1[1].vtable + 88))(a1[1].vtable, v18);
+          v19 = (*(int (__fastcall **)(int, int))(*(_DWORD *)FIELD_U32(a1 + (1) * 16, 0x0) + 88))(FIELD_U32(a1 + (1) * 16, 0x0), v18);
           v56 = &sead__SafeStringBase__vtable;
           v57 = v19;
           (*(void (__fastcall **)(int *))(dword_60C8D920[0] + 12))(dword_60C8D920);
@@ -229,18 +229,18 @@ sead_IDisposer *__fastcall sub_60233B8C(sead_IDisposer *a1, int a2, int a3)
             v8 = v54;
           }
 LABEL_47:
-          v24 = a1[7].containingHeap;
-          v25 = a1[7].field_C;
+          v24 = FIELD_U32(a1 + (7) * 16, 0x4);
+          v25 = FIELD_U32(a1 + (7) * 16, 0xC);
           v26 = 0;
           if ( v25 < v24 )
           {
-            a1[7].field_C = v25 + 1;
-            v27 = a1[7].field_8 + v25;
+            FIELD_U32(a1 + (7) * 16, 0xC) = v25 + 1;
+            v27 = FIELD_U32(a1 + (7) * 16, 0x8) + v25;
             v28 = __OFSUB__(v27, v24);
             v29 = v27 - v24;
             if ( v29 < 0 != v28 )
               v29 = v27;
-            v26 = a1[7].vtable + 72 * v29;
+            v26 = FIELD_U32(a1 + (7) * 16, 0x0) + 72 * v29;
           }
           sub_6023473C(v26, v18, LOBYTE(dword_60C8D920[3 * v20 + 2]), a1);
 LABEL_52:
@@ -251,7 +251,7 @@ LABEL_52:
       v37 = 0;
       do
       {
-        v38 = (*(int (__fastcall **)(int, int))(*(_DWORD *)a1[1].vtable + 88))(a1[1].vtable, v37);
+        v38 = (*(int (__fastcall **)(int, int))(*(_DWORD *)FIELD_U32(a1 + (1) * 16, 0x0) + 88))(FIELD_U32(a1 + (1) * 16, 0x0), v37);
         v56 = &sead__SafeStringBase__vtable;
         v57 = v38;
         (*(void (__fastcall **)(int *))(dword_60C8D920[0] + 12))(dword_60C8D920);
@@ -275,44 +275,44 @@ LABEL_52:
           v39 = 1;
         }
 LABEL_69:
-        v41 = a1[7].containingHeap;
-        v42 = a1[7].field_C;
+        v41 = FIELD_U32(a1 + (7) * 16, 0x4);
+        v42 = FIELD_U32(a1 + (7) * 16, 0xC);
         v43 = 0;
         if ( v42 < v41 )
         {
-          a1[7].field_C = v42 + 1;
-          v44 = a1[7].field_8 + v42;
+          FIELD_U32(a1 + (7) * 16, 0xC) = v42 + 1;
+          v44 = FIELD_U32(a1 + (7) * 16, 0x8) + v42;
           v28 = __OFSUB__(v44, v41);
           v45 = v44 - v41;
           if ( v45 < 0 != v28 )
             v45 = v44;
-          v43 = a1[7].vtable + 72 * v45;
+          v43 = FIELD_U32(a1 + (7) * 16, 0x0) + 72 * v45;
         }
         sub_6023473C(v43, v37++, LOBYTE(dword_60C8D920[3 * v39 + 2]), a1);
       }
       while ( v37 != v8 );
 LABEL_74:
-      v6 = &a1[2].field_8;
+      v6 = &FIELD_U32(a1 + (2) * 16, 0x8);
     }
-    v14 = &a1[7].field_C;
+    v14 = &FIELD_U32(a1 + (7) * 16, 0xC);
   }
   if ( *v14 >= 1 )
   {
     Resource = LoadResource(ResourceMgrRelated_instance, &dword_60C8D938);
     sub_6042FDC8(dword_60C9C2D0, v6, *v14);
-    v47 = a1[2].field_8;
+    v47 = FIELD_U32(a1 + (2) * 16, 0x8);
     if ( v47 )
     {
-      vtable = a1[3].vtable;
+      vtable = FIELD_U32(a1 + (3) * 16, 0x0);
       v49 = 4 * v47;
       v50 = 0;
       do
       {
-        v51 = a1[7].containingHeap;
-        v52 = a1[7].field_8;
+        v51 = FIELD_U32(a1 + (7) * 16, 0x4);
+        v52 = FIELD_U32(a1 + (7) * 16, 0x8);
         if ( v50 + v52 >= v51 )
           v52 -= v51;
-        sub_60234748(a1[7].vtable + 72 * (v50 + v52), a2, Resource, *(_DWORD *)(vtable + 4 * v50));
+        sub_60234748(FIELD_U32(a1 + (7) * 16, 0x0) + 72 * (v50 + v52), a2, Resource, *(_DWORD *)(vtable + 4 * v50));
         v49 -= 4;
         ++v50;
       }

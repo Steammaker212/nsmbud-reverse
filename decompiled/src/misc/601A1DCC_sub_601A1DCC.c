@@ -11,6 +11,6 @@
 StateMethodExecuter *__fastcall sub_601A1DCC(StateMethodExecuter *result)
 {
   if ( FIELD_U32(dword_60C99DD0, 3796) == 3 )
-    return StateMgr__changeState((StateMgr *)&result[238].currentState, (StateBase *)&dword_60C89F1C);
+    return StateMgr__changeState((StateMgr *)&FIELD_U32(result + (238) * 12, 0x8), (StateBase *)&dword_60C89F1C);
   return result;
 }

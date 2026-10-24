@@ -15,8 +15,8 @@ int __fastcall sub_603E552C(sead_ListNode *a1, int a2)
   result = 0;
   if ( a2 && !FIELD_U32(a2, 20) && !FIELD_U32(a2, 16) )
   {
-    sead__ListNode__insertFront(a1 + 2, (sead_ListNode *)((char *)a1[3].next + a2));
-    ++a1[3].previous;
+    sead__ListNode__insertFront(a1 + 2, (sead_ListNode *)((char *)FIELD_U32(a1 + (3) * 8, 0x4) + a2));
+    ++FIELD_U32(a1 + (3) * 8, 0x0);
     return 1;
   }
   return result;

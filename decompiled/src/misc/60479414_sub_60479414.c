@@ -18,12 +18,12 @@ int __fastcall sub_60479414(int a1, int a2, int a3)
   FIELD_U32(a1, 12) = &off_60BFD114;
   v6 = sub_60475900((sead_IDisposer *)(a1 + 12), a1 + 3540, 1);
   FIELD_U32(v6, 0x0) = (int)&off_60BFD114;
-  v6[220].field_8 = 0;
-  v6[220].field_C = (int)&sead__SafeStringBase__vtable;
-  v6[221].vtable = (int)&byte_60B3BA34;
-  v6[221].containingHeap = 0;
-  LOBYTE(v6[221].field_8) = 0;
-  LOBYTE(v6[221].field_C) = 0;
+  FIELD_U32(v6 + (220) * 16, 0x8) = 0;
+  FIELD_U32(v6 + (220) * 16, 0xC) = (int)&sead__SafeStringBase__vtable;
+  FIELD_U32(v6 + (221) * 16, 0x0) = (int)&byte_60B3BA34;
+  FIELD_U32(v6 + (221) * 16, 0x4) = 0;
+  LOBYTE(FIELD_U32(v6 + (221) * 16, 0x8)) = 0;
+  LOBYTE(FIELD_U32(v6 + (221) * 16, 0xC)) = 0;
   if ( a2 && a3 >= 1 )
   {
     FIELD_U32(a1, 4) = a3;

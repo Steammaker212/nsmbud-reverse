@@ -16,7 +16,7 @@ StateMethodExecuter *__fastcall sub_6059DB90(StateMethodExecuter *result)
   owner = (char *)result[646].owner;
   if ( !owner || (v2 = owner - 1, (result[646].owner = v2) == 0) )
   {
-    result[6].currentState ^= 1u;
+    FIELD_U32(result + (6) * 12, 0x8) ^= 1u;
     return StateMgr__changeState((StateMgr *)&result[507], (StateBase *)&dword_60CAFC1C);
   }
   return result;

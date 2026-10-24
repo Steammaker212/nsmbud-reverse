@@ -16,7 +16,7 @@ StateMethodExecuter *__fastcall sub_60543B8C(StateMethodExecuter *result)
   {
     owner = (unsigned int)result[388].owner;
     if ( owner <= 0x19 && ((0x3FFFFFBu >> owner) & 1) != 0 )
-      result[3].owner = off_60C006E0[owner];
+      FIELD_U32(result + (3) * 12, 0x4) = off_60C006E0[owner];
     return StateMgr__changeState((StateMgr *)&result[2], (StateBase *)&dword_60CABF9C);
   }
   return result;

@@ -19,7 +19,7 @@ int __fastcall sub_6090261C(sead_ListNode *a1, sead_ListNode *a2, _DWORD *a3)
   sead_ListNode *v12; // r7
   int result; // r0
 
-  next = a2[4].next;
+  next = FIELD_U32(a2 + (4) * 8, 0x4);
   (*(void (__fastcall **)(_DWORD *))(*a3 + 12))(a3);
   v7 = (sead_ListNode *)a3[1];
   if ( next != v7 )
@@ -47,22 +47,22 @@ int __fastcall sub_6090261C(sead_ListNode *a1, sead_ListNode *a2, _DWORD *a3)
         break;
       }
     }
-    previous = a2[5].previous;
+    previous = FIELD_U32(a2 + (5) * 8, 0x0);
     if ( v9 >= (int)previous )
       v9 = (signed int)&previous[-1].next + 3;
     qmemcpy(next, v7, v9);
     *((_BYTE *)&FIELD_U32(next, 0x0) + v9) = 0;
   }
-  v12 = a2[3].next;
+  v12 = FIELD_U32(a2 + (3) * 8, 0x4);
   if ( v12 )
   {
-    a2[3].next = 0;
-    sead__ListNode__erase(&a2[2].previous);
-    --v12[1].previous;
+    FIELD_U32(a2 + (3) * 8, 0x4) = 0;
+    sead__ListNode__erase(&FIELD_U32(a2 + (2) * 8, 0x0));
+    --FIELD_U32(v12 + (1) * 8, 0x0);
   }
-  a2[3].next = a1 + 2;
+  FIELD_U32(a2 + (3) * 8, 0x4) = a1 + 2;
   sead__ListNode__insertFront(a1 + 2, a2 + 2);
   result = (int)&a1[3].FIELD_U32(previous, 0x0) + 1;
-  a1[3].previous = (sead_ListNode *)result;
+  FIELD_U32(a1 + (3) * 8, 0x0) = (sead_ListNode *)result;
   return result;
 }

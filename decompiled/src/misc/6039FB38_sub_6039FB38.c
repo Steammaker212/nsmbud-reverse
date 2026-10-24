@@ -51,61 +51,61 @@ float32x2_t *__fastcall sub_6039FB38(int a1, float32x2_t *a2)
     v28[0] = 0x80000000 - v28[0];
   FIELD_U32(a2, 0x0)[0] = 1065353216;
   FIELD_U32(a2, 0x0)[1] = 0;
-  a2[1].n64_u32[0] = 0;
-  a2[2].n64_u32[0] = 0;
-  a2[2].n64_u32[1] = 1065353216;
-  a2[3].n64_u32[0] = 0;
-  a2[4].n64_u32[0] = 0;
-  a2[4].n64_u32[1] = 0;
-  a2[5].n64_u32[0] = 1065353216;
-  a2[1].n64_u32[1] = v10;
-  a2[3].n64_u32[1] = v8;
-  a2[5].n64_u32[1] = v9;
+  FIELD_U32(a2 + (1) * 8, 0x0)[0] = 0;
+  FIELD_U32(a2 + (2) * 8, 0x0)[0] = 0;
+  FIELD_U32(a2 + (2) * 8, 0x0)[1] = 1065353216;
+  FIELD_U32(a2 + (3) * 8, 0x0)[0] = 0;
+  FIELD_U32(a2 + (4) * 8, 0x0)[0] = 0;
+  FIELD_U32(a2 + (4) * 8, 0x0)[1] = 0;
+  FIELD_U32(a2 + (5) * 8, 0x0)[0] = 1065353216;
+  FIELD_U32(a2 + (1) * 8, 0x0)[1] = v10;
+  FIELD_U32(a2 + (3) * 8, 0x0)[1] = v8;
+  FIELD_U32(a2 + (5) * 8, 0x0)[1] = v9;
   v26 = (unsigned __int8)byte_60AFE3F4[FIELD_U32(a1, 80)] << 30;
   Mtx34_rotateY(a2, (unsigned int *)&v26);
   v11 = FIELD_F32(a1, 148) * 7.0;
-  a2[1].n64_f32[1] = a2[1].n64_f32[1]
+  FIELD_F32(a2 + (1) * 8, 0x0)[1] = FIELD_F32(a2 + (1) * 8, 0x0)[1]
                    + (float)((float)((float)(v11 * FIELD_F32(a2, 0x0)[1]) + (float)(FIELD_F32(a2, 0x0)[0] * 0.0))
-                           + (float)(a2[1].n64_f32[0] * 0.0));
-  a2[3].n64_f32[1] = a2[3].n64_f32[1]
-                   + (float)((float)((float)(v11 * a2[2].n64_f32[1]) + (float)(a2[2].n64_f32[0] * 0.0))
-                           + (float)(a2[3].n64_f32[0] * 0.0));
-  a2[5].n64_f32[1] = a2[5].n64_f32[1]
-                   + (float)((float)((float)(v11 * a2[4].n64_f32[1]) + (float)(a2[4].n64_f32[0] * 0.0))
-                           + (float)(a2[5].n64_f32[0] * 0.0));
+                           + (float)(FIELD_F32(a2 + (1) * 8, 0x0)[0] * 0.0));
+  FIELD_F32(a2 + (3) * 8, 0x0)[1] = FIELD_F32(a2 + (3) * 8, 0x0)[1]
+                   + (float)((float)((float)(v11 * FIELD_F32(a2 + (2) * 8, 0x0)[1]) + (float)(FIELD_F32(a2 + (2) * 8, 0x0)[0] * 0.0))
+                           + (float)(FIELD_F32(a2 + (3) * 8, 0x0)[0] * 0.0));
+  FIELD_F32(a2 + (5) * 8, 0x0)[1] = FIELD_F32(a2 + (5) * 8, 0x0)[1]
+                   + (float)((float)((float)(v11 * FIELD_F32(a2 + (4) * 8, 0x0)[1]) + (float)(FIELD_F32(a2 + (4) * 8, 0x0)[0] * 0.0))
+                           + (float)(FIELD_F32(a2 + (5) * 8, 0x0)[0] * 0.0));
   Mtx34_rotateX(a2, &v27);
   v12 = FIELD_F32(a2, 0x0)[1];
   v13 = FIELD_F32(a1, 148) * -7.0;
   v14 = FIELD_F32(a2, 0x0)[0] * 0.0;
-  v15 = a2[1].n64_f32[0] * 0.0;
-  v16 = a2[1].n64_f32[1] + (float)((float)(v14 + (float)(v13 * v12)) + v15);
-  a2[1].n64_f32[1] = v16;
-  v17 = a2[2].n64_f32[1];
-  v18 = a2[2].n64_f32[0] * 0.0;
-  v19 = a2[3].n64_f32[0] * 0.0;
-  v20 = a2[3].n64_f32[1] + (float)((float)(v18 + (float)(v13 * v17)) + v19);
-  a2[3].n64_f32[1] = v20;
-  v21 = a2[4].n64_f32[1];
-  v22 = a2[4].n64_f32[0] * 0.0;
-  v23 = a2[5].n64_f32[0] * 0.0;
-  v24 = a2[5].n64_f32[1] + (float)((float)(v22 + (float)(v13 * v21)) + v23);
-  a2[5].n64_f32[1] = v24;
+  v15 = FIELD_F32(a2 + (1) * 8, 0x0)[0] * 0.0;
+  v16 = FIELD_F32(a2 + (1) * 8, 0x0)[1] + (float)((float)(v14 + (float)(v13 * v12)) + v15);
+  FIELD_F32(a2 + (1) * 8, 0x0)[1] = v16;
+  v17 = FIELD_F32(a2 + (2) * 8, 0x0)[1];
+  v18 = FIELD_F32(a2 + (2) * 8, 0x0)[0] * 0.0;
+  v19 = FIELD_F32(a2 + (3) * 8, 0x0)[0] * 0.0;
+  v20 = FIELD_F32(a2 + (3) * 8, 0x0)[1] + (float)((float)(v18 + (float)(v13 * v17)) + v19);
+  FIELD_F32(a2 + (3) * 8, 0x0)[1] = v20;
+  v21 = FIELD_F32(a2 + (4) * 8, 0x0)[1];
+  v22 = FIELD_F32(a2 + (4) * 8, 0x0)[0] * 0.0;
+  v23 = FIELD_F32(a2 + (5) * 8, 0x0)[0] * 0.0;
+  v24 = FIELD_F32(a2 + (5) * 8, 0x0)[1] + (float)((float)(v22 + (float)(v13 * v21)) + v23);
+  FIELD_F32(a2 + (5) * 8, 0x0)[1] = v24;
   if ( FIELD_U8(a1, 6408) )
   {
-    a2[1].n64_f32[1] = v16 + (float)((float)(v14 + (float)(v4 * v12)) + v15);
-    a2[3].n64_f32[1] = v20 + (float)((float)(v18 + (float)(v4 * v17)) + v19);
-    a2[5].n64_f32[1] = v24 + (float)((float)(v22 + (float)(v4 * v21)) + v23);
+    FIELD_F32(a2 + (1) * 8, 0x0)[1] = v16 + (float)((float)(v14 + (float)(v4 * v12)) + v15);
+    FIELD_F32(a2 + (3) * 8, 0x0)[1] = v20 + (float)((float)(v18 + (float)(v4 * v17)) + v19);
+    FIELD_F32(a2 + (5) * 8, 0x0)[1] = v24 + (float)((float)(v22 + (float)(v4 * v21)) + v23);
     Mtx34_rotateX(a2, (unsigned int *)(a1 + 6360));
     Mtx34_rotateZ(a2, (unsigned int *)(a1 + 6368));
-    a2[1].n64_f32[1] = a2[1].n64_f32[1]
+    FIELD_F32(a2 + (1) * 8, 0x0)[1] = FIELD_F32(a2 + (1) * 8, 0x0)[1]
                      + (float)((float)((float)(FIELD_F32(a2, 0x0)[0] * 0.0) - (float)(FIELD_F32(a2, 0x0)[1] * v4))
-                             + (float)(a2[1].n64_f32[0] * 0.0));
-    a2[3].n64_f32[1] = a2[3].n64_f32[1]
-                     + (float)((float)((float)(a2[2].n64_f32[0] * 0.0) - (float)(a2[2].n64_f32[1] * v4))
-                             + (float)(a2[3].n64_f32[0] * 0.0));
-    a2[5].n64_f32[1] = a2[5].n64_f32[1]
-                     + (float)((float)((float)(a2[4].n64_f32[0] * 0.0) - (float)(a2[4].n64_f32[1] * v4))
-                             + (float)(a2[5].n64_f32[0] * 0.0));
+                             + (float)(FIELD_F32(a2 + (1) * 8, 0x0)[0] * 0.0));
+    FIELD_F32(a2 + (3) * 8, 0x0)[1] = FIELD_F32(a2 + (3) * 8, 0x0)[1]
+                     + (float)((float)((float)(FIELD_F32(a2 + (2) * 8, 0x0)[0] * 0.0) - (float)(FIELD_F32(a2 + (2) * 8, 0x0)[1] * v4))
+                             + (float)(FIELD_F32(a2 + (3) * 8, 0x0)[0] * 0.0));
+    FIELD_F32(a2 + (5) * 8, 0x0)[1] = FIELD_F32(a2 + (5) * 8, 0x0)[1]
+                     + (float)((float)((float)(FIELD_F32(a2 + (4) * 8, 0x0)[0] * 0.0) - (float)(FIELD_F32(a2 + (4) * 8, 0x0)[1] * v4))
+                             + (float)(FIELD_F32(a2 + (5) * 8, 0x0)[0] * 0.0));
   }
   v26 = (unsigned __int8)byte_60AFE3F4[FIELD_U32(a1, 80) ^ 1] << 30;
   Mtx34_rotateY(a2, (unsigned int *)&v26);

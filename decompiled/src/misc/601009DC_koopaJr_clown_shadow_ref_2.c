@@ -57,7 +57,7 @@ int __fastcall koopaJr_clown_shadow_ref_2(int a1)
   v6 = sub_60421830(v5, Model2, 2, 1, 1, 1, 0);
   j_ModelWrapper_setupModel((int)v6, (int)v2, 0, 0);
   FIELD_U32(a1, 6304) = v5;
-  animations = (unsigned int)v5[1].texAnims.animations;
+  animations = (unsigned int)FIELD_U32(v5 + (1) * 48, 0x14);
   v8 = (int *)FIELD_U32(v5, 0xC);
   v9 = FIELD_U32(a1, 6300);
   if ( FIELD_U32(v5, 0x8) > animations )

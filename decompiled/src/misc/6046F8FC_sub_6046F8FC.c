@@ -18,9 +18,9 @@ int __fastcall sub_6046F8FC(Actor *a1)
   v2 = 0;
   if ( sub_60463998(a1, &v6, 1, 0) == 1 )
   {
-    v3 = (unsigned int *)&a1[77].field_30;
-    sub_6046395C((int)a1, a1[77].field_30);
-    ActorSlotChecked = Player_getActorSlotChecked(PlayerMgr_instance, a1[77].field_30);
+    v3 = (unsigned int *)&FIELD_U32(a1 + (77) * 80, 0x30);
+    sub_6046395C((int)a1, FIELD_U32(a1 + (77) * 80, 0x30));
+    ActorSlotChecked = Player_getActorSlotChecked(PlayerMgr_instance, FIELD_U32(a1 + (77) * 80, 0x30));
     if ( ActorSlotChecked )
       (*(void (__fastcall **)(int, _DWORD, _DWORD))(*(_DWORD *)ActorSlotChecked + 1200))(ActorSlotChecked, 0, 0);
     v2 = 1;

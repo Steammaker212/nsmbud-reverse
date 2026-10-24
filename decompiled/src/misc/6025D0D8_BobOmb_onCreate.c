@@ -83,7 +83,7 @@ signed int __fastcall BobOmb_onCreate(Enemy *a1)
   FIELD_U32(a1, 0x1804) = 2;
   BobOmb_decideFirstState(a1);
   *(double *)&a1[1]._._._.aCollider.field_E0 = ((double (__fastcall *)(int *))*(_DWORD *)a1[1]._._._.aCollider.field_DC)(&a1[1]._._._.aCollider.field_DC);
-  a1[1]._._._.aCollider.field_E8 = v8;
+  FIELD_U32(a1 + (1) * 6300, 0x1A4) = v8;
   BobOmb_onCreate_helper((float *)&FIELD_U32(a1, 0x0));
   return 1;
 }

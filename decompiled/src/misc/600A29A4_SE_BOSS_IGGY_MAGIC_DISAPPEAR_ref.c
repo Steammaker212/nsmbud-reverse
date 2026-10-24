@@ -22,7 +22,7 @@ signed int __fastcall SE_BOSS_IGGY_MAGIC_DISAPPEAR_ref(StageActor *a1)
 
   StageActor__cullCheck(a1, 0);
   StateMgr__execute((StateMgr *)&a1[9].aCollider.field_64);
-  CollisionMgr_process(&a1[1]._.heap);
+  CollisionMgr_process(&FIELD_U32(a1 + (1) * 644, 0x4));
   if ( (*(int (__fastcall **)(StageActor *))(FIELD_U32(a1, 0x0) + 300))(a1) )
   {
     if ( !LOBYTE(a1[10].aCollider.info.field_10) )

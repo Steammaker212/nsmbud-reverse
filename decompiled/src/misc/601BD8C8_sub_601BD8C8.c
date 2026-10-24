@@ -80,7 +80,7 @@ unsigned int __fastcall sub_601BD8C8(__n64 *a1)
   v19 = v19 - (float)(v14 * 30.0);
   v20 = v20 - (float)(v15 * 30.0);
   v21 = v21 - (float)(v16 * 30.0);
-  a1[120].n64_u64[0] = sub_601BA56C((int)a1, &v19, v11).n64_u64[0];
+  FIELD_U64(a1 + (120) * 8, 0x0)[0] = sub_601BA56C((int)a1, &v19, v11).n64_u64[0];
   a1[121].n64_u32[0] = v17;
   result = a1[138].n64_u32[1] & 0xFFFFFFFC;
   a1[138].n64_u32[1] = result;

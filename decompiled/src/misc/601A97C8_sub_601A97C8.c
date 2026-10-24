@@ -15,19 +15,19 @@ StateMethodExecuter *__fastcall sub_601A97C8(StateMethodExecuter *result)
   char *owner; // r3
   int v4; // r2
 
-  *(float *)&result[7].vtable = *(float *)&result[7].vtable + 1.0;
-  vtable = (char *)result[33].vtable;
+  *(float *)&FIELD_U32(result + (7) * 12, 0x0) = *(float *)&FIELD_U32(result + (7) * 12, 0x0) + 1.0;
+  vtable = (char *)FIELD_U32(result + (33) * 12, 0x0);
   if ( !vtable )
-    return StateMgr__changeState((StateMgr *)&result[23].currentState, (StateBase *)&unk_60C8A42C);
+    return StateMgr__changeState((StateMgr *)&FIELD_U32(result + (23) * 12, 0x8), (StateBase *)&unk_60C8A42C);
   v2 = vtable - 1;
-  result[33].vtable = vtable - 1;
-  owner = (char *)result[33].owner;
+  FIELD_U32(result + (33) * 12, 0x0) = vtable - 1;
+  owner = (char *)FIELD_U32(result + (33) * 12, 0x4);
   if ( (int)vtable > (int)owner )
   {
-    v4 = (int)result[15].vtable + 130150524;
+    v4 = (int)FIELD_U32(result + (15) * 12, 0x0) + 130150524;
     if ( v2 == owner )
       v4 = -1073741824;
-    result[15].vtable = (void *)v4;
+    FIELD_U32(result + (15) * 12, 0x0) = (void *)v4;
   }
   return result;
 }

@@ -12,8 +12,8 @@ StateMethodExecuter *__fastcall sub_60529D80(StateMethodExecuter *result)
 {
   if ( !BYTE1(result[228].currentState) )
   {
-    result[253].vtable = (void *)result[252].currentState;
-    return StateMgr__changeState((StateMgr *)&result[1].currentState, (StateBase *)&dword_60CAA15C);
+    FIELD_U32(result + (253) * 12, 0x0) = (void *)FIELD_U32(result + (252) * 12, 0x8);
+    return StateMgr__changeState((StateMgr *)&FIELD_U32(result + (1) * 12, 0x8), (StateBase *)&dword_60CAA15C);
   }
   return result;
 }

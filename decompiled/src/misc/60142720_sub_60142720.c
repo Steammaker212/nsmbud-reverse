@@ -41,7 +41,7 @@ signed int __fastcall sub_60142720(StageActor *a1)
     else
       v8 = (float)v7 / (float)(*(int (__fastcall **)(StageActor *))(FIELD_U32(a1, 0x0) + 260))(a1);
     *(float *)&a1[9].aCollider.field_D8 = v8 * *(float *)&a1[9].aCollider.field_FC;
-    a1[9].aCollider.field_E0 = LODWORD(FIELD_F32(a1, 0x6C));
+    FIELD_U32(a1 + (9) * 644, 0x19C) = LODWORD(FIELD_F32(a1, 0x6C));
     a1[9].aCollider.field_E4 = LODWORD(FIELD_F32(a1, 0x70));
     a1[9].aCollider.field_E8 = LODWORD(FIELD_F32(a1, 0x74));
     LightMask__update((LightMask *)&a1[9].aCollider.field_D4);

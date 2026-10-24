@@ -23,7 +23,7 @@ signed int __fastcall sub_605733AC(ColliderBase *a1)
   {
     sub_60563AB8(a1);
     if ( *v2 != 2 )
-      a1[21].owner248Ptr = (Vec3 *)48;
+      FIELD_U32(a1 + (21) * 340, 0x9C) = (Vec3 *)48;
     result = 1;
     LOBYTE(a1[21].field_EC) = 1;
     a1[21].field_94 = 1;

@@ -164,6 +164,6 @@ int __fastcall sub_6086F270(
               0)),
           v20);
   *a1 = vzipq_s32(v59.val[0], v58.val[0]);
-  a1[1].val[0] = (int32x4_t)vzipq_s32(v59.val[1], v58.val[1]).val;
+  FIELD_U32(a1 + (1) * 32, 0x0)[0] = (int32x4_t)vzipq_s32(v59.val[1], v58.val[1]).val;
   return 48;
 }

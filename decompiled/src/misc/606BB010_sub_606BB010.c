@@ -26,7 +26,7 @@ MultiStateActor *__fastcall sub_606BB010(MultiStateActor *a1, ActorBuildInfo *a2
   a1[1]._._.aCollider.field_F8 = 0;
   a1[1]._._.aCollider.field_F4 = 0;
   a1[1]._._.aCollider.field_F0 = 0;
-  a1[1]._._.aCollider.field_EC = 0;
+  FIELD_U32(a1 + (1) * 6104, 0x1A8) = 0;
   a1[1]._._.aCollider.field_E8 = 0;
   a1[1]._._.aCollider.field_FC = 0;
   a1[1]._._.aCollider.field_100 = 0;

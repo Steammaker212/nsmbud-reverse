@@ -15,7 +15,7 @@ int __fastcall BanzaiBill_vf53(Actor *a1)
   result = Actor__getProfileId(a1);
   if ( result == 629 )
   {
-    a1[2].heap = 0;
+    FIELD_U32(a1 + (2) * 80, 0x4) = 0;
     return 0;
   }
   return result;

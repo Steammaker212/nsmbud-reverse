@@ -48,7 +48,7 @@ int __fastcall sub_6058AB24(StageActor *a1)
     if ( !v8 )
     {
       MovementHandler__execute((MovementHandler *)&a1[10].field_228);
-      if ( LODWORD(a1[10].field_254.y) == 1 && a1[10].field_26C != 1 )
+      if ( LODWORD(FIELD_F32(a1 + (10) * 644, 0x258)) == 1 && a1[10].field_26C != 1 )
       {
         if ( (FIELD_U32(a1, 0x18) & 1) != 0 )
         {

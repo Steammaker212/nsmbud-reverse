@@ -16,12 +16,12 @@ StageActor *__fastcall Actor_mid_pendulum_build(ActorBuildInfo *a1)
   v2 = (StageActor *)operator_new(0x2A0u);
   result = StageActor__ctor(v2, a1);
   FIELD_U32(result, 0x0) = (int)off_60C0ABA0;
-  LOBYTE(result[1]._.settigns2) = 0;
-  result[1]._.vtable = 0;
-  result[1]._.heap = 0;
-  result[1]._.id = 0;
-  result[1]._.profile = 0;
-  *(_DWORD *)&result[1]._.field_10 = 0;
-  result[1]._.settings1 = 0;
+  LOBYTE(FIELD_U32(result + (1) * 644, 0x18)) = 0;
+  FIELD_U32(result + (1) * 644, 0x0) = 0;
+  FIELD_U32(result + (1) * 644, 0x4) = 0;
+  FIELD_U32(result + (1) * 644, 0x8) = 0;
+  FIELD_U32(result + (1) * 644, 0xC) = 0;
+  *(_DWORD *)&FIELD_U8(result + (1) * 644, 0x10) = 0;
+  FIELD_U32(result + (1) * 644, 0x14) = 0;
   return result;
 }

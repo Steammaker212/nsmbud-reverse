@@ -16,14 +16,14 @@ Actor *__fastcall Actor_CSo_build(unsigned __int8 *a1)
   v2 = (Actor *)operator_new(0x130u);
   result = sub_601A75F0(v2, a1);
   FIELD_U32(result, 0x0) = (int)off_60BD86F0;
-  *(_DWORD *)&result[3].movementId = 0;
-  result[3].field_20.previous = 0;
-  result[3].field_20.next = (sead_ListNode *)-1;
-  result[3].childCount = 0;
-  result[3].field_2C = 0;
-  result[3].field_30 = 0;
-  result[3].field_34 = 1065353216;
-  result[3].parent = (Actor *)1065353216;
-  LOBYTE(result[3].field_3C) = 0;
+  *(_DWORD *)&FIELD_U8(result + (3) * 80, 0x1C) = 0;
+  FIELD_U32(result + (3) * 80, 0x20) = 0;
+  FIELD_U32(result + (3) * 80, 0x24) = (sead_ListNode *)-1;
+  FIELD_U32(result + (3) * 80, 0x28) = 0;
+  FIELD_U32(result + (3) * 80, 0x2C) = 0;
+  FIELD_U32(result + (3) * 80, 0x30) = 0;
+  FIELD_U32(result + (3) * 80, 0x34) = 1065353216;
+  FIELD_U32(result + (3) * 80, 0x38) = (Actor *)1065353216;
+  LOBYTE(FIELD_U32(result + (3) * 80, 0x3C)) = 0;
   return result;
 }

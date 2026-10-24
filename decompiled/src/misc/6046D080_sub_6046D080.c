@@ -28,7 +28,7 @@ StageActor *__fastcall sub_6046D080(StageActor *a1)
   if ( v5 )
     (*(void (__fastcall **)(StageActor *))(FIELD_U32(a1, 0x0) + 224))(a1);
   else
-    a1[9].aCollider.field_E0 = -1;
+    FIELD_U32(a1 + (9) * 644, 0x19C) = -1;
   result = StageActor__accelerateX(a1);
   x = FIELD_F32(a1, 0x78);
   FIELD_F32(a1, 0x6C) = FIELD_F32(a1, 0x6C) + x;

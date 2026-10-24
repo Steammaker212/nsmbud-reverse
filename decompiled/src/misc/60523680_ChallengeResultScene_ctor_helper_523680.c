@@ -13,13 +13,13 @@ sead_IDisposer *__fastcall ChallengeResultScene_ctor_helper_523680(sead_IDispose
   sead_IDisposer *result; // r0
 
   FIELD_U32(a1, 0x0) = (int)&off_60BFD114;
-  result = sub_60475900(a1, (int)&a1[220].field_8, 1);
+  result = sub_60475900(a1, (int)&FIELD_U32(a1 + (220) * 16, 0x8), 1);
   FIELD_U32(result, 0x0) = (int)&off_60BFD114;
-  result[220].field_8 = 0;
-  result[220].field_C = (int)&sead__SafeStringBase__vtable;
-  result[221].vtable = (int)&byte_60B3BA34;
-  result[221].containingHeap = 0;
-  LOBYTE(result[221].field_8) = 0;
-  LOBYTE(result[221].field_C) = 0;
+  FIELD_U32(result + (220) * 16, 0x8) = 0;
+  FIELD_U32(result + (220) * 16, 0xC) = (int)&sead__SafeStringBase__vtable;
+  FIELD_U32(result + (221) * 16, 0x0) = (int)&byte_60B3BA34;
+  FIELD_U32(result + (221) * 16, 0x4) = 0;
+  LOBYTE(FIELD_U32(result + (221) * 16, 0x8)) = 0;
+  LOBYTE(FIELD_U32(result + (221) * 16, 0xC)) = 0;
   return result;
 }

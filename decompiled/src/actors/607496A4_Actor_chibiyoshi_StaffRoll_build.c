@@ -16,6 +16,6 @@ StageActor *__fastcall Actor_chibiyoshi_StaffRoll_build(ActorBuildInfo *a1)
   v2 = (StageActor *)operator_new(0x2DCu);
   result = sub_60748A1C(v2, a1, 0);
   FIELD_U32(result, 0x0) = (int)&off_60C2371C;
-  result[1].playerId = 0;
+  FIELD_U8(result + (1) * 644, 0x54) = 0;
   return result;
 }

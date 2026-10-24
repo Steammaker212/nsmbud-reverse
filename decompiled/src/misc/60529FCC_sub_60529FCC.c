@@ -13,7 +13,7 @@ StateMethodExecuter *__fastcall sub_60529FCC(int a1)
   StateMethodExecuter *result; // r0
 
   result = *(StateMethodExecuter **)(FIELD_U32(a1, 60) + 4);
-  if ( result[2].owner != (void *)192 )
+  if ( FIELD_U32(result + (2) * 12, 0x4) != (void *)192 )
   {
     (*((void (__fastcall **)(StateMethodExecuter *, int, float, float, float))FIELD_U32(result, 0x0) + 21))(
       result,

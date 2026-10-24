@@ -49,9 +49,9 @@ _DWORD *__fastcall sub_60878C48(_DWORD *result, int a2, float a3)
         v14.n128_u64[0] = FIELD_U64(v9, 16);
         v14.n128_u64[1] = FIELD_U32(v9, 24);
         v12[1] = vmlaq_f32(v12[1], v13, v14);
-        result = (_DWORD *)(v12[4].n128_u32[0] | ~*(_DWORD *)v9);
-        v12[4].n128_u32[0] = (unsigned __int32)result;
-        v12[4].n128_f32[1] = v3.n64_f32[0] + v12[4].n128_f32[1];
+        result = (_DWORD *)(FIELD_U32(v12 + (4) * 16, 0x0)[0] | ~*(_DWORD *)v9);
+        FIELD_U32(v12 + (4) * 16, 0x0)[0] = (unsigned __int32)result;
+        FIELD_F32(v12 + (4) * 16, 0x0)[1] = v3.n64_f32[0] + FIELD_F32(v12 + (4) * 16, 0x0)[1];
       }
       ++v10;
       v9 += 48;

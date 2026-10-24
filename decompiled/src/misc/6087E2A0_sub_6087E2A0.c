@@ -38,7 +38,7 @@ int8x8x2_t *__fastcall sub_6087E2A0(int8x8x2_t *a1, float32x4_t *a2, float32x2_t
   float32x2x2_t *v38; // r1
   int8x8x2_t *result; // r0
 
-  v3 = vmlaq_lane_f32(vmlaq_lane_f32(vmulq_n_f32(*a2, a3[2].n64_f32[0]), a2[1], a3[2], 1), a2[2], a3[3], 0);
+  v3 = vmlaq_lane_f32(vmlaq_lane_f32(vmulq_n_f32(*a2, FIELD_F32(a3 + (2) * 8, 0x0)[0]), a2[1], a3[2], 1), a2[2], a3[3], 0);
   v4.n128_u64[0] = 0xBF800000BF800000LL;
   v4.n128_u64[1] = 3212836864LL;
   v5 = vmulq_f32(v3, v3);
@@ -46,7 +46,7 @@ int8x8x2_t *__fastcall sub_6087E2A0(int8x8x2_t *a1, float32x4_t *a2, float32x2_t
                      vaddq_f32(
                        a2[3],
                        vmlaq_lane_f32(
-                         vmlaq_lane_f32(vmulq_n_f32(*a2, a3[6].n64_f32[0]), a2[1], a3[6], 1),
+                         vmlaq_lane_f32(vmulq_n_f32(*a2, FIELD_F32(a3 + (6) * 8, 0x0)[0]), a2[1], a3[6], 1),
                          a2[2],
                          a3[7],
                          0)),

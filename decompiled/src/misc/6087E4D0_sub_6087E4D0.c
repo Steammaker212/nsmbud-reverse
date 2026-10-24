@@ -45,7 +45,7 @@ float32x2x2_t *__fastcall sub_6087E4D0(int8x8x2_t *a1, float32x4_t *a2, float32x
   v5 = vmulq_f32(
          vaddq_f32(
            a2[3],
-           vmlaq_lane_f32(vmlaq_lane_f32(vmulq_n_f32(*a2, a3[6].n64_f32[0]), a2[1], a3[6], 1), a2[2], a3[7], 0)),
+           vmlaq_lane_f32(vmlaq_lane_f32(vmulq_n_f32(*a2, FIELD_F32(a3 + (6) * 8, 0x0)[0]), a2[1], a3[6], 1), a2[2], a3[7], 0)),
          v6);
   v6.n128_u64[0] = 0;
   v6.n128_u32[2] = 0;

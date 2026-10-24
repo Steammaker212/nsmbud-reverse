@@ -96,8 +96,8 @@ int __fastcall sub_60883B64(
     v24 = FIELD_U32(a14, 12);
     FIELD_U32(a8, 0x0)[0] = *(_DWORD *)a14;
     FIELD_U32(a8, 0x0)[1] = v22;
-    a8[1].n64_u32[0] = v23;
-    a8[1].n64_u32[1] = v24;
+    FIELD_U32(a8 + (1) * 8, 0x0)[0] = v23;
+    FIELD_U32(a8 + (1) * 8, 0x0)[1] = v24;
   }
   else
   {
@@ -124,7 +124,7 @@ int __fastcall sub_60883B64(
         v29.n128_u32[1] = FIELD_U32(v26, 8);
         a4.n128_u32[1] = FIELD_U32(v26, 4);
         a5.val[0] = (int8x8_t)FIELD_U64(v27, 0x0)[0];
-        v29.n128_u32[0] = v27[1].n64_u32[0];
+        v29.n128_u32[0] = FIELD_U32(v27 + (1) * 8, 0x0)[0];
         a4.n128_u32[0] = FIELD_U32(v27, 0x0)[1];
         v29.n128_u64[1] = v28[2];
         a4.n128_u64[1] = v28[1];
@@ -195,17 +195,17 @@ int __fastcall sub_60883B64(
              v17);
       *(float *)&a2 = FIELD_F32(a8, 0x0)[0] + a1.n128_f32[0];
       *((float *)&a2 + 1) = FIELD_F32(a8, 0x0)[1] + a1.n128_f32[1];
-      a4.n128_f32[0] = a8[1].n64_f32[0] + a1.n128_f32[2];
+      a4.n128_f32[0] = FIELD_F32(a8 + (1) * 8, 0x0)[0] + a1.n128_f32[2];
     }
     else
     {
       *(float *)&a2 = FIELD_F32(a8, 0x0)[0] + (float)(v17 * a1.n128_f32[0]);
       *((float *)&a2 + 1) = FIELD_F32(a8, 0x0)[1] + (float)(v17 * a1.n128_f32[1]);
-      a4.n128_f32[0] = a8[1].n64_f32[0] + (float)(v17 * a1.n128_f32[2]);
+      a4.n128_f32[0] = FIELD_F32(a8 + (1) * 8, 0x0)[0] + (float)(v17 * a1.n128_f32[2]);
     }
     *(_QWORD *)&a3 = a4.n128_u32[0];
     FIELD_F64(a8, 0x0)[0] = a2;
-    a8[1].n64_u64[0] = a4.n128_u32[0];
+    FIELD_U64(a8 + (1) * 8, 0x0)[0] = a4.n128_u32[0];
   }
   result = FIELD_U32(a11, 348);
   if ( FIELD_U8(result, 3) )
@@ -261,20 +261,20 @@ int __fastcall sub_60883B64(
         v67 = dword_60CC8010;
         FIELD_U16(a11, 140) = v66 + 1;
         v68.n64_u64[0] = FIELD_U64(a8, 0x0)[0];
-        v69 = a8[1].n64_u64[0];
+        v69 = FIELD_U64(a8 + (1) * 8, 0x0)[0];
         v70 = v67 + 16 * (v66 & 0x1FF);
         a1.n128_f32[0] = FIELD_F32(a8, 0x0)[0] + (float)(*(float *)v70 * *(float *)&v74);
         FIELD_U64(a8, 0x0)[0] = a1.n128_u64[0];
-        a8[1].n64_u64[0] = v69;
+        FIELD_U64(a8 + (1) * 8, 0x0)[0] = v69;
         a1.n128_f32[1] = v68.n64_f32[1] + (float)(FIELD_F32(v70, 4) * *((float *)&v74 + 1));
         FIELD_U64(a8, 0x0)[0] = a1.n128_u64[0];
-        a8[1].n64_u64[0] = v69;
+        FIELD_U64(a8 + (1) * 8, 0x0)[0] = v69;
         LODWORD(a2) = FIELD_U32(v70, 8);
         LODWORD(a3) = v75;
         a1.n128_f32[2] = *(float *)&v69 + (float)(*(float *)&a2 * *(float *)&v75);
         a1.n128_u32[3] = 0;
         FIELD_U64(a8, 0x0)[0] = a1.n128_u64[0];
-        a8[1].n64_u64[0] = a1.n128_u32[2];
+        FIELD_U64(a8 + (1) * 8, 0x0)[0] = a1.n128_u32[2];
       }
       result = FIELD_U32(a11, 348);
     }

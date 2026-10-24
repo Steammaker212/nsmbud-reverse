@@ -128,9 +128,9 @@ LABEL_24:
       sead__IDisposer__ctor(&FIELD_U32(v19, 0x4), a3, 0);
       FIELD_U32(v19, 0x0) = (int)off_60C5D4F4;
       FIELD_U32(v19, 0x4) = (int)off_60C5D508;
-      v19[1].containingHeap = 1;
-      v19[1].field_8 = 0;
-      v19[1].field_C = 0;
+      FIELD_U32(v19 + (1) * 16, 0x4) = 1;
+      FIELD_U32(v19 + (1) * 16, 0x8) = 0;
+      FIELD_U32(v19 + (1) * 16, 0xC) = 0;
       sead__CriticalSection__ctor(v19 + 2);
       v21 = FIELD_U32(a1, 56);
       if ( v21 < FIELD_U32(a1, 60) )

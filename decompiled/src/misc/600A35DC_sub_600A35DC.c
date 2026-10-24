@@ -29,6 +29,6 @@ Actor *__fastcall sub_600A35DC(Actor *a1)
   sead__IDisposer__dtor(&a1[77].field_40);
   LightSource__dtor(&a1[76].field_20.previous);
   FIELD_U32(a1, 0x0) = (int)&CollisionActor__vtable;
-  CollisionMgr_dtor(&a1[8].id);
+  CollisionMgr_dtor(&FIELD_U32(a1 + (8) * 80, 0x8));
   return StageActor__dtor(a1);
 }

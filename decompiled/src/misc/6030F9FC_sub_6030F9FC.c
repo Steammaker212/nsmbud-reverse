@@ -85,10 +85,10 @@ int __fastcall sub_6030F9FC(Enemy *a1)
           result = (*(int (__fastcall **)(Actor *, int *))FIELD_U32(v3, 0x0))(v3, &StageActor_RTTI);
           if ( result == 1 )
           {
-            v3[1].field_20.next = *(sead_ListNode **)&a1[1]._._._._.movementId;
-            v3[1].field_20.previous = (sead_ListNode *)a1[1]._._._._.settigns2;
+            FIELD_U32(v3 + (1) * 80, 0x24) = *(sead_ListNode **)&a1[1]._._._._.movementId;
+            FIELD_U32(v3 + (1) * 80, 0x20) = (sead_ListNode *)a1[1]._._._._.settigns2;
             result = a1[1]._._._._.settings1;
-            *(_DWORD *)&v3[1].movementId = result;
+            *(_DWORD *)&FIELD_U8(v3 + (1) * 80, 0x1C) = result;
           }
         }
       }

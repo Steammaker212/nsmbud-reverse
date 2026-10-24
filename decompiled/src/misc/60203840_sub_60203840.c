@@ -14,9 +14,9 @@ void __fastcall sub_60203840(Actor *a1)
   Actor *v3; // r0
 
   FIELD_U32(a1, 0x0) = (int)off_60BD8600;
-  a1[4].field_3C = (int)EffectWrapper_vtable;
-  v2 = &a1[4].field_3C;
-  sub_60237560((int)&a1[4].field_3C);
+  FIELD_U32(a1 + (4) * 80, 0x3C) = (int)EffectWrapper_vtable;
+  v2 = &FIELD_U32(a1 + (4) * 80, 0x3C);
+  sub_60237560((int)&FIELD_U32(a1 + (4) * 80, 0x3C));
   sead__IDisposer__dtor(v2);
   FIELD_U32(a1, 0x0) = (int)off_60BD525C;
   nullsub_691();

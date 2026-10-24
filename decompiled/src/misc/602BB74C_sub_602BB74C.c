@@ -21,9 +21,9 @@ float __fastcall sub_602BB74C(CollisionActor *a1)
   {
     p_prev = &a1[1]._.aCollider.node3.prev;
     prev = a1[1]._.aCollider.node3.prev;
-    owner = prev[1].owner;
+    owner = FIELD_U32(prev + (1) * 12, 0x0);
     v5 = FIELD_U32(prev, 0x8);
-    v6 = prev[5].prev;
+    v6 = FIELD_U32(prev + (5) * 12, 0x8);
     v7 = 2147500000.0 * 4.2;
     if ( v5 > v6 )
       owner = (ActiveCollider *)((char *)owner + 4 * (_DWORD)v6);

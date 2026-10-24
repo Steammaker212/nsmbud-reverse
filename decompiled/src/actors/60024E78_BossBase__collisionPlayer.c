@@ -45,7 +45,7 @@ unsigned int __fastcall BossBase__collisionPlayer(BossBase *a1, ActiveCollider *
       playerId = FIELD_U8(owner, 0x54);
       if ( playerId <= 3
         && (v10 = &FIELD_U32(a1, 0x0) + playerId, v12 = v10[1579], v11 = v10 + 1579, v12 >= 1)
-        && owner[2]._.field_20.previous == (sead_ListNode *)3 )
+        && FIELD_U32(owner + (2) * 644, 0x20) == (sead_ListNode *)3 )
       {
         sub_602A3178(owner, &dword_60CC4B7C);
         (*(void (__fastcall **)(BossBase *))(FIELD_U32(a1, 0x0) + 0x194))(a1);

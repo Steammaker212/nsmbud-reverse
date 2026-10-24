@@ -171,14 +171,14 @@ int __fastcall sub_608831F0(
             (float32x4_t)0);
     *(float *)&v47 = *((float *)v10 + 4) * v46.n128_f32[0];
     FIELD_U64(a4, 0x0)[0] = v47;
-    a4[1].n64_u64[0] = *(unsigned __int64 *)&v57.val[0].n128_i8[8];
+    FIELD_U64(a4 + (1) * 8, 0x0)[0] = *(unsigned __int64 *)&v57.val[0].n128_i8[8];
     *((float *)&v47 + 1) = *((float *)v10 + 4) * v46.n128_f32[1];
     FIELD_U64(a4, 0x0)[0] = v47;
-    a4[1].n64_u64[0] = *(unsigned __int64 *)&v57.val[0].n128_i8[8];
+    FIELD_U64(a4 + (1) * 8, 0x0)[0] = *(unsigned __int64 *)&v57.val[0].n128_i8[8];
     v48 = v46.n128_f32[2] * *((float *)v10 + 4);
 LABEL_19:
     FIELD_U64(a4, 0x0)[0] = v47;
-    a4[1].n64_u64[0] = LODWORD(v48);
+    FIELD_U64(a4 + (1) * 8, 0x0)[0] = LODWORD(v48);
     result = FIELD_U32(a9, 4) + 1;
     FIELD_U32(a9, 4) = result;
     return result;
@@ -187,38 +187,38 @@ LABEL_19:
   if ( !*v10 )
   {
     v49.n64_u64[0] = FIELD_U64(a3, 0x0)[0];
-    v50 = a3[1].n64_u64[0];
+    v50 = FIELD_U64(a3 + (1) * 8, 0x0)[0];
     if ( FIELD_F32(a3, 0x0)[1] >= v12 )
       return result;
     v49.n64_u32[1] = *((_DWORD *)v10 + 1);
     FIELD_U64(a3, 0x0)[0] = v49.n64_u64[0];
-    a3[1].n64_u64[0] = v50;
-    v51 = a4[1].n64_u64[0];
+    FIELD_U64(a3 + (1) * 8, 0x0)[0] = v50;
+    v51 = FIELD_U64(a4 + (1) * 8, 0x0)[0];
     v52 = *((float *)v10 + 2);
     v53 = -(float)(v52 * FIELD_F32(a4, 0x0)[1]);
     LODWORD(v54) = FIELD_U32(a4, 0x0)[0];
     v55 = v52 * FIELD_F32(a4, 0x0)[1];
     *((float *)&v54 + 1) = v53;
     FIELD_U64(a4, 0x0)[0] = v54;
-    a4[1].n64_u64[0] = v51;
+    FIELD_U64(a4 + (1) * 8, 0x0)[0] = v51;
     *(float *)&v47 = *(float *)&v54 * *((float *)v10 + 4);
     FIELD_U64(a4, 0x0)[0] = v47;
-    a4[1].n64_u64[0] = v51;
+    FIELD_U64(a4 + (1) * 8, 0x0)[0] = v51;
     *((float *)&v47 + 1) = -(float)(v55 * *((float *)v10 + 4));
     FIELD_U64(a4, 0x0)[0] = v47;
-    a4[1].n64_u64[0] = v51;
+    FIELD_U64(a4 + (1) * 8, 0x0)[0] = v51;
     v48 = *(float *)&v51 * *((float *)v10 + 4);
     goto LABEL_19;
   }
   if ( result == 1 )
   {
     v20.n64_u64[0] = FIELD_U64(a3, 0x0)[0];
-    v21 = a3[1].n64_u64[0];
+    v21 = FIELD_U64(a3 + (1) * 8, 0x0)[0];
     if ( FIELD_F32(a3, 0x0)[1] < v12 )
     {
       v20.n64_u32[1] = *((_DWORD *)v10 + 1);
       FIELD_U64(a3, 0x0)[0] = v20.n64_u64[0];
-      a3[1].n64_u64[0] = v21;
+      FIELD_U64(a3 + (1) * 8, 0x0)[0] = v21;
 LABEL_14:
       *a5 = a1;
     }

@@ -40,15 +40,15 @@ sead_IDisposer *__fastcall timg___Combined_bntx_ref(sead_IDisposer *a1, int a2, 
   sead_IDisposer_ctor(a1);
   v8 = 0;
   FIELD_U32(a1, 0x0) = (int)off_60C5FF88;
-  a1[2].vtable = (int)&a1[2].field_8;
-  a1[1].vtable = 0;
-  a1[1].containingHeap = 0;
-  a1[1].field_8 = a2;
-  a1[1].field_C = (int)&BufferedSafeStringBase_char_vtable_probably;
-  a1[2].containingHeap = 64;
-  sead__BufferedSafeStringBase__assureTerminationImpl_const((int)&a1[1].field_C);
-  a1[1].field_C = (int)&off_60BD4C08;
-  vtable = (void *)a1[2].vtable;
+  FIELD_U32(a1 + (2) * 16, 0x0) = (int)&FIELD_U32(a1 + (2) * 16, 0x8);
+  FIELD_U32(a1 + (1) * 16, 0x0) = 0;
+  FIELD_U32(a1 + (1) * 16, 0x4) = 0;
+  FIELD_U32(a1 + (1) * 16, 0x8) = a2;
+  FIELD_U32(a1 + (1) * 16, 0xC) = (int)&BufferedSafeStringBase_char_vtable_probably;
+  FIELD_U32(a1 + (2) * 16, 0x4) = 64;
+  sead__BufferedSafeStringBase__assureTerminationImpl_const((int)&FIELD_U32(a1 + (1) * 16, 0xC));
+  FIELD_U32(a1 + (1) * 16, 0xC) = (int)&off_60BD4C08;
+  vtable = (void *)FIELD_U32(a1 + (2) * 16, 0x0);
   (*(void (__fastcall **)(_DWORD *))(*a3 + 12))(a3);
   v10 = (const void *)a3[1];
   if ( vtable != v10 )
@@ -75,15 +75,15 @@ sead_IDisposer *__fastcall timg___Combined_bntx_ref(sead_IDisposer *a1, int a2, 
         break;
       }
     }
-    containingHeap = a1[2].containingHeap;
+    containingHeap = FIELD_U32(a1 + (2) * 16, 0x4);
     if ( v8 >= containingHeap )
       v8 = containingHeap - 1;
     qmemcpy(vtable, v10, v8);
     *((_BYTE *)vtable + v8) = 0;
   }
-  a1[1].field_C = (int)&off_60BD4BF0;
-  a1[6].field_8 = (int)a4;
-  a1[6].field_C = 0;
+  FIELD_U32(a1 + (1) * 16, 0xC) = (int)&off_60BD4BF0;
+  FIELD_U32(a1 + (6) * 16, 0x8) = (int)a4;
+  FIELD_U32(a1 + (6) * 16, 0xC) = 0;
   v14 = (_DWORD *)sub_608649B0((int)v26, a4);
   v24 = 0;
   v25 = 0;
@@ -97,7 +97,7 @@ sead_IDisposer *__fastcall timg___Combined_bntx_ref(sead_IDisposer *a1, int a2, 
     if ( !v17 )
     {
       v18 = (_DWORD *)sub_60998E80(v16);
-      a1[6].field_C = (int)v18;
+      FIELD_U32(a1 + (6) * 16, 0xC) = (int)v18;
       if ( !*(_BYTE *)(v18[16] + 272) )
       {
         v19 = *(_DWORD **)(dword_60CCF464 + 36);

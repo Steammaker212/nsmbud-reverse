@@ -16,19 +16,19 @@ StateMethodExecuter *__fastcall sub_6051E8CC(StateMethodExecuter *result)
 
   if ( HIBYTE(result[395].currentState) )
   {
-    currentState = result[394].currentState;
+    currentState = FIELD_U32(result + (394) * 12, 0x8);
     switch ( currentState )
     {
       case 2:
         return StateMgr__changeState((StateMgr *)&result[2], (StateBase *)&dword_60CA90F4);
       case 1:
         *((_BYTE *)result[1253].vtable + 64) &= ~1u;
-        *((_BYTE *)result[1253].owner + 64) &= ~1u;
+        *((_BYTE *)FIELD_U32(result + (1253) * 12, 0x4) + 64) &= ~1u;
         LOBYTE(result[1253].currentState) = 1;
         return StateMgr__changeState((StateMgr *)&result[2], (StateBase *)&dword_60CA90B4);
       case 0:
         *((_BYTE *)result[1253].vtable + 64) &= ~1u;
-        *((_BYTE *)result[1253].owner + 64) &= ~1u;
+        *((_BYTE *)FIELD_U32(result + (1253) * 12, 0x4) + 64) &= ~1u;
         LOBYTE(result[1253].currentState) = 1;
         return StateMgr__changeState((StateMgr *)&result[2], (StateBase *)&dword_60CA9094);
     }

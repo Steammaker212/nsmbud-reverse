@@ -69,7 +69,7 @@ float32x4_t *__fastcall sub_60897698(
   int32x4x2_t v64; // 0:q1.16,16:q12.16
 
   v9.n64_u32[0] = a3[4].n128_u32[2];
-  v12 = *(_DWORD *)(a3[21].n128_u32[3] + 480);
+  v12 = *(_DWORD *)(FIELD_U32(a3 + (21) * 16, 0x0)[3] + 480);
   LODWORD(a8) = FIELD_U32(v12, 32);
   v13.n128_u64[0] = FIELD_U64(v12, 16);
   if ( (FIELD_U8(v12, 1) & 1) != 0 )

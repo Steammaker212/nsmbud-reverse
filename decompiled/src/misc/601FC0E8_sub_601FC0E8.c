@@ -13,9 +13,9 @@ Actor *__fastcall sub_601FC0E8(Actor *a1)
   Actor **p_parent; // r5
 
   FIELD_U32(a1, 0x0) = (int)off_60BD814C;
-  a1[3].parent = (Actor *)EffectWrapper_vtable;
-  p_parent = &a1[3].parent;
-  sub_60237560((int)&a1[3].parent);
+  FIELD_U32(a1 + (3) * 80, 0x38) = (Actor *)EffectWrapper_vtable;
+  p_parent = &FIELD_U32(a1 + (3) * 80, 0x38);
+  sub_60237560((int)&FIELD_U32(a1 + (3) * 80, 0x38));
   sead__IDisposer__dtor(p_parent);
   return Actor__dtor(a1);
 }

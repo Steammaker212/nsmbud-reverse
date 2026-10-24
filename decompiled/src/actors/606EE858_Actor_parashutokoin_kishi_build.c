@@ -26,6 +26,6 @@ MultiStateActor *__fastcall Actor_parashutokoin_kishi_build(ActorBuildInfo *a1)
   *(_DWORD *)&result[1]._._._.movementId = -1082130432;
   result[1]._._._.field_20.previous = (sead_ListNode *)-1082130432;
   result[1]._._._.field_20.next = (sead_ListNode *)-1082130432;
-  result[1]._._._.childCount = -1082130432;
+  FIELD_U32(result + (1) * 6104, 0x28) = -1082130432;
   return result;
 }

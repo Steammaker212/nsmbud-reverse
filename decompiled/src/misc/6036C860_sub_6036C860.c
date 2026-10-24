@@ -62,10 +62,10 @@ LABEL_33:
     {
       if ( a3 == 1 )
       {
-        if ( ((int)v8[86].field_20.previous & 0x2000040) != 0 )
+        if ( ((int)FIELD_U32(v8 + (86) * 80, 0x20) & 0x2000040) != 0 )
           goto LABEL_33;
       }
-      else if ( !a3 && ((int)v8[86].field_20.previous & 0x1000020) != 0 )
+      else if ( !a3 && ((int)FIELD_U32(v8 + (86) * 80, 0x20) & 0x1000020) != 0 )
       {
         goto LABEL_33;
       }

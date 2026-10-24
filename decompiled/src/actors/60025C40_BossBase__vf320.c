@@ -33,7 +33,7 @@ Actor **BossBase__vf320()
       v5 = v4 == 1;
       if ( v4 == 1 )
         v5 = FIELD_U8(v3, 0x13) == 0;
-      if ( v5 && (v3[7].id & 0xB0) != 0 )
+      if ( v5 && (FIELD_U32(v3 + (7) * 80, 0x8) & 0xB0) != 0 )
       {
         if ( Actor__getProfileId(v3) != 853 )
           (*(void (__fastcall **)(Actor *))(FIELD_U32(v3, 0x0) + 104))(v3);

@@ -133,7 +133,7 @@ signed int __fastcall KoopaTroopa_onCreate(Enemy *a1)
   FIELD_F32(a1, 0x74) = v16;
 LABEL_25:
   KoopaTroopa_onCreate_helper_35A5CC((int)a1);
-  v20 = a1[1]._._._.field_224;
+  v20 = FIELD_U32(a1 + (1) * 6300, 0x224);
   if ( v20 == 1 )
   {
     v21 = (_DWORD *)(EnemyCounterMaybe_instance + 196);

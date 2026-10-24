@@ -25,17 +25,17 @@ int32x4_t *__fastcall sub_602368E0(int32x4_t *a1)
   int32x4x2_t v14; // 0:q8.16,16:q9.16
   int32x4x2_t v15; // 0:q10.16,16:q11.16
 
-  v4 = a1[3].n128_u32[1];
+  v4 = FIELD_U32(a1 + (3) * 16, 0x0)[1];
   result = (int32x4_t *)((char *)a1 + 52);
   v3 = v4;
-  if ( v4 && a1[3].n128_u32[2] == FIELD_U32(v3, 32) )
+  if ( v4 && FIELD_U32(a1 + (3) * 16, 0x0)[2] == FIELD_U32(v3, 32) )
   {
     result = (int32x4_t *)sub_60881DE8(result);
-    if ( result[22].n128_i32[0] >= 1 && FIELD_U32(result, 0x0)[8] )
+    if ( FIELD_U32(result + (22) * 16, 0x0)[0] >= 1 && FIELD_U32(result, 0x0)[8] )
     {
       v14 = vzipq_s32(*a1, a1[1]);
       v15 = vzipq_s32(a1[2], (int32x4_t)0);
-      if ( a1[3].n128_u8[0] )
+      if ( FIELD_U32(a1 + (3) * 16, 0x0)[0] )
       {
         v11[0] = vextq_s8(vextq_s8(v14.val[0], v14.val[0], 8u), v15.val[0], 8u);
         v11[1] = vextq_s8(v14.val[0], vextq_s8(v15.val[0], v14.val[0], 8u), 8u);
@@ -65,8 +65,8 @@ int32x4_t *__fastcall sub_602368E0(int32x4_t *a1)
         v7.n128_u64[1] = 1065353216;
         result[7] = v9;
         result[8] = v10;
-        result[14].n128_u64[0] = 0x3F8000003F800000LL;
-        result[14].n128_u64[1] = 1065353216;
+        FIELD_U64(result + (14) * 16, 0x0)[0] = 0x3F8000003F800000LL;
+        FIELD_U64(result + (14) * 16, 0x0)[1] = 1065353216;
         result[19] = vmulq_f32(result[17], v7);
         result[1].n128_u32[1] = 1;
       }
@@ -74,8 +74,8 @@ int32x4_t *__fastcall sub_602368E0(int32x4_t *a1)
     else
     {
       result = 0;
-      a1[3].n128_u32[1] = 0;
-      a1[3].n128_u32[2] = -1;
+      FIELD_U32(a1 + (3) * 16, 0x0)[1] = 0;
+      FIELD_U32(a1 + (3) * 16, 0x0)[2] = -1;
     }
   }
   return result;

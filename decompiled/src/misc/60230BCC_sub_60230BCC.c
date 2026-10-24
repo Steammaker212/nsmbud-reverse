@@ -68,11 +68,11 @@ sead_IDisposer *__fastcall sub_60230BCC(sead_IDisposer *a1, int a2, int a3)
 
   sead_IDisposer_ctor(a1);
   FIELD_U32(a1, 0x0) = (int)&off_60BD9484;
-  a1[1].vtable = a3;
-  a1[1].containingHeap = 0;
-  a1[1].field_8 = 0;
-  a1[1].field_C = 0;
-  a1[2].vtable = 0;
+  FIELD_U32(a1 + (1) * 16, 0x0) = a3;
+  FIELD_U32(a1 + (1) * 16, 0x4) = 0;
+  FIELD_U32(a1 + (1) * 16, 0x8) = 0;
+  FIELD_U32(a1 + (1) * 16, 0xC) = 0;
+  FIELD_U32(a1 + (2) * 16, 0x0) = 0;
   v6 = (*(int (__fastcall **)(int))(*(_DWORD *)a3 + 92))(a3);
   v7 = v6;
   if ( v6 >= 1 )
@@ -100,10 +100,10 @@ sead_IDisposer *__fastcall sub_60230BCC(sead_IDisposer *a1, int a2, int a3)
         v12 += 28;
       }
       while ( v12 != (_DWORD *)v13 );
-      a1[1].containingHeap = (int)v11;
-      a1[1].field_8 = v7;
-      a1[1].field_C = 0;
-      a1[2].vtable = 0;
+      FIELD_U32(a1 + (1) * 16, 0x4) = (int)v11;
+      FIELD_U32(a1 + (1) * 16, 0x8) = v7;
+      FIELD_U32(a1 + (1) * 16, 0xC) = 0;
+      FIELD_U32(a1 + (2) * 16, 0x0) = 0;
     }
     (*(void (__fastcall **)(int *))(dword_60C8D8E8[0] + 12))(dword_60C8D8E8);
     v14 = 0;
@@ -161,13 +161,13 @@ sead_IDisposer *__fastcall sub_60230BCC(sead_IDisposer *a1, int a2, int a3)
       v37 = 0;
       do
       {
-        (*(void (__fastcall **)(int, int))(*(_DWORD *)a1[1].vtable + 88))(a1[1].vtable, v37);
+        (*(void (__fastcall **)(int, int))(*(_DWORD *)FIELD_U32(a1 + (1) * 16, 0x0) + 88))(FIELD_U32(a1 + (1) * 16, 0x0), v37);
         (*(void (__fastcall **)(int *))(dword_60C8D8E8[0] + 12))(dword_60C8D8E8);
-        vtable = a1[2].vtable;
-        v39 = a1[1].field_8;
-        a1[2].vtable = vtable + 1;
-        containingHeap = a1[1].containingHeap;
-        v41 = a1[1].field_C + vtable;
+        vtable = FIELD_U32(a1 + (2) * 16, 0x0);
+        v39 = FIELD_U32(a1 + (1) * 16, 0x8);
+        FIELD_U32(a1 + (2) * 16, 0x0) = vtable + 1;
+        containingHeap = FIELD_U32(a1 + (1) * 16, 0x4);
+        v41 = FIELD_U32(a1 + (1) * 16, 0xC) + vtable;
         v32 = __OFSUB__(v41, v39);
         v42 = v41 - v39;
         if ( v42 < 0 != v32 )
@@ -191,7 +191,7 @@ sead_IDisposer *__fastcall sub_60230BCC(sead_IDisposer *a1, int a2, int a3)
         v20 = &sead__SafeStringBase__vtable;
         while ( 1 )
         {
-          v21 = (*(int (__fastcall **)(int, int))(*(_DWORD *)a1[1].vtable + 88))(a1[1].vtable, v19);
+          v21 = (*(int (__fastcall **)(int, int))(*(_DWORD *)FIELD_U32(a1 + (1) * 16, 0x0) + 88))(FIELD_U32(a1 + (1) * 16, 0x0), v19);
           v60 = v20;
           v61 = v21;
           (*(void (__fastcall **)(int *))(dword_60C8D8E8[0] + 12))(dword_60C8D8E8);
@@ -233,12 +233,12 @@ sead_IDisposer *__fastcall sub_60230BCC(sead_IDisposer *a1, int a2, int a3)
             v20 = v24;
           }
 LABEL_46:
-          v27 = a1[2].vtable;
-          v28 = a1[1].field_8;
+          v27 = FIELD_U32(a1 + (2) * 16, 0x0);
+          v28 = FIELD_U32(a1 + (1) * 16, 0x8);
           v29 = 3 * v22;
-          a1[2].vtable = v27 + 1;
-          v30 = a1[1].containingHeap;
-          v31 = a1[1].field_C + v27;
+          FIELD_U32(a1 + (2) * 16, 0x0) = v27 + 1;
+          v30 = FIELD_U32(a1 + (1) * 16, 0x4);
+          v31 = FIELD_U32(a1 + (1) * 16, 0xC) + v27;
           v32 = __OFSUB__(v31, v28);
           v33 = v31 - v28;
           if ( v33 < 0 != v32 )
@@ -258,7 +258,7 @@ LABEL_49:
       v46 = 0;
       do
       {
-        v47 = (*(int (__fastcall **)(int, int))(*(_DWORD *)a1[1].vtable + 88))(a1[1].vtable, v46);
+        v47 = (*(int (__fastcall **)(int, int))(*(_DWORD *)FIELD_U32(a1 + (1) * 16, 0x0) + 88))(FIELD_U32(a1 + (1) * 16, 0x0), v46);
         v60 = &sead__SafeStringBase__vtable;
         v61 = v47;
         (*(void (__fastcall **)(int *))(dword_60C8D8E8[0] + 12))(dword_60C8D8E8);
@@ -282,12 +282,12 @@ LABEL_49:
           v48 = 1;
         }
 LABEL_64:
-        v50 = a1[2].vtable;
-        v51 = a1[1].field_8;
-        a1[2].vtable = v50 + 1;
-        v52 = a1[1].containingHeap;
+        v50 = FIELD_U32(a1 + (2) * 16, 0x0);
+        v51 = FIELD_U32(a1 + (1) * 16, 0x8);
+        FIELD_U32(a1 + (2) * 16, 0x0) = v50 + 1;
+        v52 = FIELD_U32(a1 + (1) * 16, 0x4);
         v53 = dword_60C8D8E8[3 * v48 + 2];
-        v54 = a1[1].field_C + v50;
+        v54 = FIELD_U32(a1 + (1) * 16, 0xC) + v50;
         v32 = __OFSUB__(v54, v51);
         v55 = v54 - v51;
         if ( v55 < 0 != v32 )

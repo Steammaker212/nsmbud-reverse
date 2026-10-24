@@ -38,7 +38,7 @@ float *__fastcall sub_608747A0(
   v8 = a3;
   a7.n64_u32[0] = 953267991;
   result = (float *)&a2[1];
-  v11 = a3[1].n128_f32[0];
+  v11 = FIELD_F32(a3 + (1) * 16, 0x0)[0];
   v12 = vsubq_f32(*a3, *a2);
   v13 = vmulq_f32(v12, v12);
   *(float *)&a8 = (float)(v11 - *result) * (float)(v11 - *result);
@@ -47,10 +47,10 @@ float *__fastcall sub_608747A0(
   if ( v14 >= vmax_f32(*(float32x2_t *)&a8, a7).n64_f32[0] )
   {
     *(float *)&a4 = v14 * (float)(1.0 / sqrtf(v14));
-    v24 = (float)(*(float *)&a4 + (float)(a2[1].n128_f32[0] + a3[1].n128_f32[0])) * 0.5;
-    *(float *)&a4 = (float)(v24 - a2[1].n128_f32[0]) / *(float *)&a4;
+    v24 = (float)(*(float *)&a4 + (float)(FIELD_F32(a2 + (1) * 16, 0x0)[0] + FIELD_F32(a3 + (1) * 16, 0x0)[0])) * 0.5;
+    *(float *)&a4 = (float)(v24 - FIELD_F32(a2 + (1) * 16, 0x0)[0]) / *(float *)&a4;
     *a1 = vmlaq_f32(*a2, v12, vdupq_lane_s32(*(int32x2_t *)&a4, 0));
-    a1[1].n128_f32[0] = v24;
+    FIELD_F32(a1 + (1) * 16, 0x0)[0] = v24;
   }
   else
   {

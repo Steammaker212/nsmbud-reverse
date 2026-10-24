@@ -76,7 +76,7 @@ int __fastcall sub_60238D98(_DWORD *a1)
                 {
                   if ( *(_BYTE *)(*(_DWORD *)(*(_DWORD *)(v10 + 4 * j + 88) + 12) + 2017) == 1 )
                   {
-                    v13 = (int32x4_t *)v7[48].n128_u32[j];
+                    v13 = (int32x4_t *)FIELD_U32(v7 + (48) * 16, 0x0)[j];
                     if ( v13 )
                     {
                       do
@@ -135,7 +135,7 @@ int __fastcall sub_60238D98(_DWORD *a1)
                 {
                   if ( !*(_BYTE *)(*(_DWORD *)(*(_DWORD *)(v18 + 4 * k + 88) + 12) + 2017) )
                   {
-                    v21 = (int32x4_t *)v7[48].n128_u32[k];
+                    v21 = (int32x4_t *)FIELD_U32(v7 + (48) * 16, 0x0)[k];
                     if ( v21 )
                     {
                       do

@@ -19,18 +19,18 @@ sead_ListNode *__fastcall sub_609A4754(int a1, sead_ListNode *a2, int a3, sead_L
     CurrentHeap_const = (sead_ListNode *)sead__HeapMgr__getCurrentHeap_const(sead__HeapMgr__sInstance);
   v8 = (sead_ListNode *)operator_new_8DE25C(0x34u, CurrentHeap_const, 4);
   FIELD_U32(v8, 0x0) = (sead_ListNode *)&off_60C60DE0;
-  v8[2].previous = 0;
-  v8[1].next = 0;
-  v8[1].previous = 0;
+  FIELD_U32(v8 + (2) * 8, 0x0) = 0;
+  FIELD_U32(v8 + (1) * 8, 0x4) = 0;
+  FIELD_U32(v8 + (1) * 8, 0x0) = 0;
   FIELD_U32(v8, 0x4) = 0;
-  v8[4].previous = 0;
-  v8[3].next = v8 + 3;
-  v8[3].previous = v8 + 3;
-  v8[6].previous = 0;
-  v8[5].next = 0;
-  v8[5].previous = 0;
-  v8[4].next = 0;
-  v8[2].next = a4;
+  FIELD_U32(v8 + (4) * 8, 0x0) = 0;
+  FIELD_U32(v8 + (3) * 8, 0x4) = v8 + 3;
+  FIELD_U32(v8 + (3) * 8, 0x0) = v8 + 3;
+  FIELD_U32(v8 + (6) * 8, 0x0) = 0;
+  FIELD_U32(v8 + (5) * 8, 0x4) = 0;
+  FIELD_U32(v8 + (5) * 8, 0x0) = 0;
+  FIELD_U32(v8 + (4) * 8, 0x4) = 0;
+  FIELD_U32(v8 + (2) * 8, 0x4) = a4;
   if ( a1 )
   {
     sub_609A125C((int)v8, a1, CurrentHeap_const, a3);
@@ -46,6 +46,6 @@ sead_ListNode *__fastcall sub_609A4754(int a1, sead_ListNode *a2, int a3, sead_L
     FIELD_U32(v8, 0x4) = (sead_ListNode *)sub_609A59D0(v10);
     sub_6099F1E8(v8, (int)CurrentHeap_const);
   }
-  v8[6].previous = CurrentHeap_const;
+  FIELD_U32(v8 + (6) * 8, 0x0) = CurrentHeap_const;
   return v8;
 }

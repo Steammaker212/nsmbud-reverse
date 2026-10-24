@@ -58,7 +58,7 @@ int __fastcall sub_600CA2A8(int a1)
             v10 = v9 == 0;
             if ( v9 )
             {
-              v9 = (Actor *)v9[1].field_40;
+              v9 = (Actor *)FIELD_U32(v9 + (1) * 80, 0x40);
               v10 = v9 == 0;
             }
             if ( v10 || (result = Actor__getProfileId(v9), result != 264) )

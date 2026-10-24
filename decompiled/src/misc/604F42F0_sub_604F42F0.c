@@ -33,7 +33,7 @@ StateMethodExecuter *__fastcall sub_604F42F0(int a1)
       result = (StateMethodExecuter *)(a1 + 7548);
       if ( v5 < 0x100 )
         result = (StateMethodExecuter *)((char *)result + v5);
-      LOBYTE(result[41].currentState) = 1;
+      LOBYTE(FIELD_U32(result + (41) * 12, 0x8)) = 1;
     }
   }
   return result;

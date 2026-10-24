@@ -18,7 +18,7 @@ Actor *__fastcall Actor_Kamek_build(int a1)
   result = Actor__ctor(v2, (ActorBuildInfo *)a1);
   FIELD_U32(result, 0x0) = (int)off_60BC8CCC;
   v4 = FIELD_U32(a1, 20);
-  result[1].vtable = FIELD_U32(a1, 16);
-  result[1].heap = v4;
+  FIELD_U32(result + (1) * 80, 0x0) = FIELD_U32(a1, 16);
+  FIELD_U32(result + (1) * 80, 0x4) = v4;
   return result;
 }

@@ -20,15 +20,15 @@ int __fastcall sub_606E7190(Actor *a1, int a2, int a3)
   bool v11; // zf
 
   v3 = FIELD_U32(a3, 64);
-  v5 = *(float *)&a1[1].movementId;
-  vtable = a1[1].vtable;
+  v5 = *(float *)&FIELD_U8(a1 + (1) * 80, 0x1C);
+  vtable = FIELD_U32(a1 + (1) * 80, 0x0);
   v7 = FIELD_F32(v3, 108);
   ProfileId = Actor__getProfileId((Actor *)v3);
   if ( ProfileId == Actor__getProfileId(a1) )
   {
     if ( v7 < v5 == vtable )
       goto LABEL_7;
-    v9 = *(float *)&a1[1].movementId;
+    v9 = *(float *)&FIELD_U8(a1 + (1) * 80, 0x1C);
     v10 = FIELD_F32(v3, 108);
     v11 = v10 == v9;
     if ( v10 == v9 )
@@ -36,8 +36,8 @@ int __fastcall sub_606E7190(Actor *a1, int a2, int a3)
     if ( v11 )
     {
 LABEL_7:
-      a1[1].vtable ^= 1u;
-      *(float *)&a1[1].childCount = -*(float *)&a1[1].childCount;
+      FIELD_U32(a1 + (1) * 80, 0x0) ^= 1u;
+      *(float *)&FIELD_U32(a1 + (1) * 80, 0x28) = -*(float *)&FIELD_U32(a1 + (1) * 80, 0x28);
       if ( !LOBYTE(a1[78].field_48) )
       {
         (*(void (__fastcall **)(Actor *))(FIELD_U32(a1, 0x0) + 660))(a1);

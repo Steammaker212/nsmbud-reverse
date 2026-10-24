@@ -61,7 +61,7 @@ StateMethodExecuter *__fastcall sub_605567A0(StateMethodExecuter *result)
               v12 = v11[2689] == 0;
             if ( v12 || !v11[2699] )
             {
-              v13 = result[474].currentState;
+              v13 = FIELD_U32(result + (474) * 12, 0x8);
               if ( !v13 )
                 return StateMgr__changeState((StateMgr *)&result[2], (StateBase *)&dword_60CAD5E8);
               v14 = FIELD_U8(v13, 2689) == 0;

@@ -16,16 +16,16 @@ Actor *__fastcall Actor_CSwarudomove_pipe_build(unsigned __int8 *a1)
   v2 = (Actor *)operator_new(0x138u);
   result = sub_601A75F0(v2, a1);
   FIELD_U32(result, 0x0) = (int)off_60BD90B8;
-  *(_DWORD *)&result[3].movementId = &off_60BD90A4;
-  result[3].field_20.previous = (sead_ListNode *)result;
-  result[3].field_20.next = 0;
-  result[3].field_34 = 0;
-  result[3].parent = (Actor *)-1;
-  result[3].field_3C = 0;
-  result[3].field_40 = 0;
-  result[3].field_44 = 0;
-  result[3].childCount = 0;
-  result[3].field_2C = 0;
-  result[3].field_30 = 0;
+  *(_DWORD *)&FIELD_U8(result + (3) * 80, 0x1C) = &off_60BD90A4;
+  FIELD_U32(result + (3) * 80, 0x20) = (sead_ListNode *)result;
+  FIELD_U32(result + (3) * 80, 0x24) = 0;
+  FIELD_U32(result + (3) * 80, 0x34) = 0;
+  FIELD_U32(result + (3) * 80, 0x38) = (Actor *)-1;
+  FIELD_U32(result + (3) * 80, 0x3C) = 0;
+  FIELD_U32(result + (3) * 80, 0x40) = 0;
+  FIELD_U32(result + (3) * 80, 0x44) = 0;
+  FIELD_U32(result + (3) * 80, 0x28) = 0;
+  FIELD_U32(result + (3) * 80, 0x2C) = 0;
+  FIELD_U32(result + (3) * 80, 0x30) = 0;
   return result;
 }

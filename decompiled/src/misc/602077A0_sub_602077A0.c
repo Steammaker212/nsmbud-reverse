@@ -12,9 +12,9 @@ StateMethodExecuter *__fastcall sub_602077A0(StateMethodExecuter *result)
 {
   int v1; // r1
 
-  v1 = result[29].currentState - 1;
-  result[29].currentState = v1;
+  v1 = FIELD_U32(result + (29) * 12, 0x8) - 1;
+  FIELD_U32(result + (29) * 12, 0x8) = v1;
   if ( !v1 )
-    return StateMgr__changeState((StateMgr *)&result[24].currentState, (StateBase *)&unk_60C8C72C);
+    return StateMgr__changeState((StateMgr *)&FIELD_U32(result + (24) * 12, 0x8), (StateBase *)&unk_60C8C72C);
   return result;
 }

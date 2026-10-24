@@ -10,12 +10,12 @@
 
 StateMethodExecuter *__fastcall sub_607DECB4(StateMethodExecuter *result)
 {
-  if ( !LOBYTE(result[328].currentState) )
-    ++result[329].vtable;
-  if ( LOBYTE(result[329].owner) )
+  if ( !LOBYTE(FIELD_U32(result + (328) * 12, 0x8)) )
+    ++FIELD_U32(result + (329) * 12, 0x0);
+  if ( LOBYTE(FIELD_U32(result + (329) * 12, 0x4)) )
   {
-    if ( result[329].vtable >= (void *)0xB4 )
-      return StateMgr__changeState((StateMgr *)&result[17].currentState, (StateBase *)&dword_60CC5794);
+    if ( FIELD_U32(result + (329) * 12, 0x0) >= (void *)0xB4 )
+      return StateMgr__changeState((StateMgr *)&FIELD_U32(result + (17) * 12, 0x8), (StateBase *)&dword_60CC5794);
   }
   return result;
 }

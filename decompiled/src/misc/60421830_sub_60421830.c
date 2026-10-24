@@ -19,6 +19,6 @@ ModelWrapper *__fastcall sub_60421830(
 {
   ModelWrapper_ctor(a1, a2, a3, numTexAnims, numShuAnims, numVisAnims, numShaAnims);
   sub_60421BAC(&a1[1]);
-  a1[1].texAnims.animations = 0;
+  FIELD_U32(a1 + (1) * 48, 0x14) = 0;
   return a1;
 }

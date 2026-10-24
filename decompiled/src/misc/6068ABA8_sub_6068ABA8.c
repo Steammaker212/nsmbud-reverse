@@ -12,9 +12,9 @@ sead_IDisposer *__fastcall sub_6068ABA8(sead_IDisposer *a1)
 {
   sead_IDisposer_ctor(a1);
   FIELD_U32(a1, 0x0) = (int)off_60C17448;
-  a1[1].vtable = 0;
-  a1[1].containingHeap = 0;
-  agl_TextureData_ref(&a1[1].field_8);
-  agl_TextureData_ref(&a1[18].field_8);
+  FIELD_U32(a1 + (1) * 16, 0x0) = 0;
+  FIELD_U32(a1 + (1) * 16, 0x4) = 0;
+  agl_TextureData_ref(&FIELD_U32(a1 + (1) * 16, 0x8));
+  agl_TextureData_ref(&FIELD_U32(a1 + (18) * 16, 0x8));
   return a1;
 }

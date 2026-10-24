@@ -124,10 +124,10 @@ int __fastcall sub_60939898(int a1, int32x2_t *a2, float *a3, int a4, float a5, 
   v95.n128_u64[0] = 0;
   v95.n128_u64[1] = LODWORD(a5);
   v12.n64_u64[0] = FIELD_U64(a2, 0x0)[0];
-  v13.n64_u64[0] = a2[1].n64_u64[0];
+  v13.n64_u64[0] = FIELD_U64(a2 + (1) * 8, 0x0)[0];
   v11 = a2 + 2;
-  v14.n64_u64[0] = v9[1].n64_u64[0];
-  v15.n64_u64[0] = v11[1].n64_u64[0];
+  v14.n64_u64[0] = FIELD_U64(v9 + (1) * 8, 0x0)[0];
+  v15.n64_u64[0] = FIELD_U64(v11 + (1) * 8, 0x0)[0];
   v16 = vdupq_lane_s32(v13, 1);
   v17 = vdupq_lane_s32(v15, 1);
   v18.n128_u64[0] = 0;

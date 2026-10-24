@@ -10,7 +10,7 @@
 
 StateMethodExecuter *__fastcall sub_60710434(StateMethodExecuter *result)
 {
-  if ( --LOBYTE(result[570].currentState) == 0 )
+  if ( --LOBYTE(FIELD_U32(result + (570) * 12, 0x8)) == 0 )
     return StateMgr__changeState((StateMgr *)&result[507], (StateBase *)&dword_60CBD1C8);
   return result;
 }

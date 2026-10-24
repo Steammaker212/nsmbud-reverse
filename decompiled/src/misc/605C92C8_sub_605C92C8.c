@@ -20,7 +20,7 @@ StateActor *__fastcall sub_605C92C8(StateActor *a1, ActorBuildInfo *a2, int a3, 
   v7 = 0;
   result = sub_605CC1F8(a1, a2, v6);
   FIELD_U32(result, 0x0) = (int)off_60C0A5B0;
-  result[1]._._._.field_2C = a3;
+  FIELD_U32(result + (1) * 6100, 0x2C) = a3;
   result[1]._._._.field_30 = 0;
   return result;
 }

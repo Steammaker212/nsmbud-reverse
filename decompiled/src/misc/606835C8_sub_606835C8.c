@@ -15,9 +15,9 @@ ActiveColliderMgr *__fastcall sub_606835C8(ActiveColliderMgr *result)
 
   if ( BYTE1(result[117].createList.vtable) )
   {
-    p_last = (ActiveCollider *)&result[2].list4.last;
+    p_last = (ActiveCollider *)&FIELD_U32(result + (2) * 64, 0x3C);
     v2 = ActiveColliderMgr_instance;
-    ActiveColldierMgr_removeFromActiveList(ActiveColliderMgr_instance, (ActiveCollider *)&result[2].list4.last);
+    ActiveColldierMgr_removeFromActiveList(ActiveColliderMgr_instance, (ActiveCollider *)&FIELD_U32(result + (2) * 64, 0x3C));
     ActiveColldierMgr_removeFromCreateList(v2, p_last);
     return ActiveColldierMgr_removeFromList3(v2, (int)p_last);
   }

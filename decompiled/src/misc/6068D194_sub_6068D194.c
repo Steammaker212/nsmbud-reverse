@@ -26,7 +26,7 @@ StateActor *__fastcall sub_6068D194(StateActor *a1, ActorBuildInfo *a2)
   a1[1]._._.field_5C = 1065353216;
   a1[1]._._.position.z = 0.0;
   a1[1]._._.position.y = 0.0;
-  a1[1]._._.position.x = 0.0;
+  FIELD_F32(a1 + (1) * 6100, 0x6C) = 0.0;
   a1[1]._._.xAcceleration = 0.0;
   a1[1]._._.field_64 = 0.0;
   a1[1]._._.field_60 = 0;

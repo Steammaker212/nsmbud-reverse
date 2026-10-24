@@ -11,5 +11,5 @@
 int __fastcall sub_60559CF0(StateMgr *a1)
 {
   StateMgr__execute(a1 + 3);
-  return sub_60473B58(&a1[4].executer, 0xEu, 0);
+  return sub_60473B58(&FIELD_U32(a1 + (4) * 16, 0x0), 0xEu, 0);
 }

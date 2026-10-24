@@ -13,7 +13,7 @@ StateMethodExecuter *__fastcall sub_60560A90(StateMethodExecuter *result)
   void *owner; // r1
   bool v2; // zf
 
-  owner = result[3].owner;
+  owner = FIELD_U32(result + (3) * 12, 0x4);
   if ( owner == (void *)8 )
     return StateMgr__changeState((StateMgr *)&result[2], (StateBase *)&dword_60CAE180);
   if ( owner != (void *)4 )

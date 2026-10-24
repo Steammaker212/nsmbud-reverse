@@ -12,12 +12,12 @@ StateMethodExecuter *__fastcall sub_601A9890(StateMethodExecuter *result)
 {
   int vtable; // r1
 
-  *(float *)&result[7].vtable = *(float *)&result[7].vtable + -1.0;
-  vtable = (int)result[33].vtable;
+  *(float *)&FIELD_U32(result + (7) * 12, 0x0) = *(float *)&FIELD_U32(result + (7) * 12, 0x0) + -1.0;
+  vtable = (int)FIELD_U32(result + (33) * 12, 0x0);
   if ( !vtable )
-    return StateMgr__changeState((StateMgr *)&result[23].currentState, (StateBase *)&dword_60C8A3EC);
-  result[33].vtable = (void *)(vtable - 1);
+    return StateMgr__changeState((StateMgr *)&FIELD_U32(result + (23) * 12, 0x8), (StateBase *)&dword_60C8A3EC);
+  FIELD_U32(result + (33) * 12, 0x0) = (void *)(vtable - 1);
   if ( vtable <= 67 )
-    result[15].vtable = (char *)result[15].vtable - 130150524;
+    FIELD_U32(result + (15) * 12, 0x0) = (char *)FIELD_U32(result + (15) * 12, 0x0) - 130150524;
   return result;
 }

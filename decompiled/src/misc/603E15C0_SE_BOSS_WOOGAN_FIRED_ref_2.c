@@ -52,7 +52,7 @@ int __fastcall SE_BOSS_WOOGAN_FIRED_ref_2(int a1, int a2)
     result = BYTE1(v5[6].field_34);
     if ( (unsigned int)(result - 1) < 2 )
     {
-      if ( v5[16].field_20.next == (sead_ListNode *)5 )
+      if ( FIELD_U32(v5 + (16) * 80, 0x24) == (sead_ListNode *)5 )
         return (*(int (__fastcall **)(_DWORD, int, int))(FIELD_U32(v5, 0x0) + 1164))(FIELD_U32(a2, 64), a1, a2);
       else
         return (*(int (__fastcall **)(Actor *, int, int))(FIELD_U32(v5, 0x0) + 1168))(v5, v6, 9);

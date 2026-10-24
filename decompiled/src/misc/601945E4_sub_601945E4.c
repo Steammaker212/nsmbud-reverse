@@ -15,7 +15,7 @@ int __fastcall sub_601945E4(StateMgr *a1)
   int result; // r0
   int v5; // [sp+4h] [bp-14h]
 
-  v2 = *(_DWORD *)a1[16].lastState[1].id;
+  v2 = *(_DWORD *)FIELD_U32(a1 + (16) * 16, 0xC)[1].id;
   v3 = dword_60C8996C;
   v5 = sub_6019112C(dword_60C8996C);
   if ( FIELD_U8(v3, 1384) )
@@ -42,7 +42,7 @@ int __fastcall sub_601945E4(StateMgr *a1)
   {
     if ( v5 != 238 )
       return ((int (__fastcall *)(StateMgr *))FIELD_U32(a1, 0x0)[4].methodExecuter.owner)(a1);
-    result = (int)a1[20].executer;
+    result = (int)FIELD_U32(a1 + (20) * 16, 0x0);
     if ( result == 18 )
       return ((int (__fastcall *)(StateMgr *))FIELD_U32(a1, 0x0)[4].methodExecuter.owner)(a1);
   }

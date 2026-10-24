@@ -12,9 +12,9 @@ StateMethodExecuter *__fastcall sub_601ED664(StateMethodExecuter *result)
 {
   char *owner; // r1
 
-  owner = (char *)result[31].owner;
+  owner = (char *)FIELD_U32(result + (31) * 12, 0x4);
   if ( !owner )
     return StateMgr__changeState((StateMgr *)&result[25], (StateBase *)&unk_60C8B2CC);
-  result[31].owner = owner - 1;
+  FIELD_U32(result + (31) * 12, 0x4) = owner - 1;
   return result;
 }

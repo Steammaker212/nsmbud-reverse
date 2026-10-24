@@ -30,7 +30,7 @@ StateActor *__fastcall Actor_ball_surekoin_parent_build(ActorBuildInfo *a1)
   result[1]._._.maxSpeed.y = 0.0;
   result[1]._._.scale.y = 0.0;
   result[1]._._.rotation.y = 0;
-  result[1]._._.field_AC = 0;
+  FIELD_U32(result + (1) * 6100, 0xAC) = 0;
   result[1]._._.aCollider.activeNode.owner = 0;
   return result;
 }

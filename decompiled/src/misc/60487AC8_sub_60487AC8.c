@@ -54,7 +54,7 @@ StateMethodExecuter *__fastcall sub_60487AC8(int a1)
     if ( v10 > 4 )
       v11 += 20;
     result = *v11;
-    if ( *(float *)&result[3].currentState == 0.0 )
+    if ( *(float *)&FIELD_U32(result + (3) * 12, 0x8) == 0.0 )
     {
       v12 = 1;
       *v3 = v8;

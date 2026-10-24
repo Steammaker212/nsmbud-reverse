@@ -81,7 +81,7 @@ int __fastcall ArchiveManagerMaybe_loadPack(int r0_0, _DWORD *a2, int a3)
   v60 = 0;
   v5 = sead_IDisposer_ctor(&a1);
   a1.vtable = (int)off_60C5CB68;
-  v62 = &v5[2].field_C;
+  v62 = &FIELD_U32(v5 + (2) * 16, 0xC);
   v61 = &BufferedSafeStringBase_char_vtable_probably;
   v63 = 32;
   sead__BufferedSafeStringBase__assureTerminationImpl_const((int)&v5[2]);
@@ -192,14 +192,14 @@ int __fastcall ArchiveManagerMaybe_loadPack(int r0_0, _DWORD *a2, int a3)
       v33 = (const char *)v34;
       sead_IDisposer_ctor(v12);
       FIELD_U32(v12, 0x0) = (int)off_60C2A5C0;
-      v12[1].containingHeap = (int)&v12[1].field_C;
-      v12[1].vtable = (int)&BufferedSafeStringBase_char_vtable_probably;
-      v12[1].field_8 = 32;
+      FIELD_U32(v12 + (1) * 16, 0x4) = (int)&FIELD_U32(v12 + (1) * 16, 0xC);
+      FIELD_U32(v12 + (1) * 16, 0x0) = (int)&BufferedSafeStringBase_char_vtable_probably;
+      FIELD_U32(v12 + (1) * 16, 0x8) = 32;
       sead__BufferedSafeStringBase__assureTerminationImpl_const((int)&v12[1]);
-      *(_BYTE *)v12[1].containingHeap = 0;
-      v12[1].vtable = (int)&off_60BD4C20;
-      v12[3].field_C = v9;
-      containingHeap = (char *)v12[1].containingHeap;
+      *(_BYTE *)FIELD_U32(v12 + (1) * 16, 0x4) = 0;
+      FIELD_U32(v12 + (1) * 16, 0x0) = (int)&off_60BD4C20;
+      FIELD_U32(v12 + (3) * 16, 0xC) = v9;
+      containingHeap = (char *)FIELD_U32(v12 + (1) * 16, 0x4);
       ((void (__fastcall *)(int (***)()))v32[3])(&v32);
       v14 = v33;
       if ( containingHeap != v33 )
@@ -226,7 +226,7 @@ int __fastcall ArchiveManagerMaybe_loadPack(int r0_0, _DWORD *a2, int a3)
             break;
           }
         }
-        v16 = v12[1].field_8;
+        v16 = FIELD_U32(v12 + (1) * 16, 0x8);
         if ( v15 >= v16 )
           v15 = v16 - 1;
         qmemcpy(containingHeap, v14, v15);

@@ -67,7 +67,7 @@ int __fastcall FinalBowser__vf3EC(int *a1)
   v7 = sub_60421830(v6, Model, 2, 1, 1, 0, 0);
   j_ModelWrapper_setupModel((int)v7, (int)v2, (int)&v28, (int)heap);
   a1[1778] = (int)v6;
-  animations = (unsigned int)v6[1].texAnims.animations;
+  animations = (unsigned int)FIELD_U32(v6 + (1) * 48, 0x14);
   v9 = (int *)FIELD_U32(v6, 0xC);
   if ( FIELD_U32(v6, 0x8) > animations )
     v9 += animations;

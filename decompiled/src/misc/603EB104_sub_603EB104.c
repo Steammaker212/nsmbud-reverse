@@ -12,15 +12,15 @@ StateMethodExecuter *__fastcall sub_603EB104(StateMethodExecuter *result)
 {
   char *owner; // r1
 
-  owner = (char *)result[2].owner;
+  owner = (char *)FIELD_U32(result + (2) * 12, 0x4);
   if ( !owner )
-    return StateMgr__changeState((StateMgr *)&result[4].currentState, (StateBase *)&dword_60C99AA8);
-  result[2].owner = owner - 1;
+    return StateMgr__changeState((StateMgr *)&FIELD_U32(result + (4) * 12, 0x8), (StateBase *)&dword_60C99AA8);
+  FIELD_U32(result + (2) * 12, 0x4) = owner - 1;
   if ( owner != (char *)36 )
   {
     if ( owner != (char *)1 )
       return result;
-    return StateMgr__changeState((StateMgr *)&result[4].currentState, (StateBase *)&dword_60C99AA8);
+    return StateMgr__changeState((StateMgr *)&FIELD_U32(result + (4) * 12, 0x8), (StateBase *)&dword_60C99AA8);
   }
   return (StateMethodExecuter *)sub_603EB3C0();
 }

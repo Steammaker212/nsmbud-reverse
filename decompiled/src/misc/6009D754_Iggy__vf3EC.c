@@ -38,7 +38,7 @@ int __fastcall Iggy__vf3EC(int a1)
   v5 = sub_60421830(v4, Model2, 2, 1, 2, 0, 0);
   j_ModelWrapper_setupModel((int)v5, (int)ResArchiveById, 0, 0);
   FIELD_U32(a1, 7096) = v4;
-  animations = (unsigned int)v4[1].texAnims.animations;
+  animations = (unsigned int)FIELD_U32(v4 + (1) * 48, 0x14);
   v7 = (int *)FIELD_U32(v4, 0xC);
   if ( FIELD_U32(v4, 0x8) > animations )
     v7 += animations;
@@ -62,7 +62,7 @@ int __fastcall Iggy__vf3EC(int a1)
   v13 = sub_60421830(v12, v11, 2, 1, 2, 0, 0);
   j_ModelWrapper_setupModel((int)v13, (int)ResArchiveById, 0, 0);
   FIELD_U32(a1, 7100) = v12;
-  v14 = (unsigned int)v12[1].texAnims.animations;
+  v14 = (unsigned int)FIELD_U32(v12 + (1) * 48, 0x14);
   v15 = (int *)FIELD_U32(v12, 0xC);
   if ( FIELD_U32(v12, 0x8) > v14 )
     v15 += v14;

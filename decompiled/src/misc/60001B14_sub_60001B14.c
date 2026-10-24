@@ -33,34 +33,34 @@ int __fastcall sub_60001B14(StageActor *a1, int a2)
     if ( !v6 )
       goto LABEL_14;
   }
-  else if ( v5 == v6 || v5[1].field_40 == v6[1].field_40 )
+  else if ( v5 == v6 || FIELD_U32(v5 + (1) * 80, 0x40) == FIELD_U32(v6 + (1) * 80, 0x40) )
   {
     return v4;
   }
-  parent = v6[1].parent;
+  parent = FIELD_U32(v6 + (1) * 80, 0x38);
   if ( ((unsigned __int16)parent & 0x1000) != 0 )
     return v4;
-  v9 = ((int)v6[1].parent & 0x800) == 0;
+  v9 = ((int)FIELD_U32(v6 + (1) * 80, 0x38) & 0x800) == 0;
   if ( ((unsigned __int16)parent & 0x800) != 0 )
-    v9 = v6[3].field_3C == 31;
+    v9 = FIELD_U32(v6 + (3) * 80, 0x3C) == 31;
   if ( !v9 )
     return v4;
 LABEL_14:
   if ( v5 )
   {
-    v10 = v5[1].parent;
+    v10 = FIELD_U32(v5 + (1) * 80, 0x38);
     if ( ((unsigned __int16)v10 & 0x1000) != 0 )
       return v4;
-    v11 = ((int)v5[1].parent & 0x800) == 0;
+    v11 = ((int)FIELD_U32(v5 + (1) * 80, 0x38) & 0x800) == 0;
     if ( ((unsigned __int16)v10 & 0x800) != 0 )
-      v11 = v5[3].field_3C == 31;
+      v11 = FIELD_U32(v5 + (3) * 80, 0x3C) == 31;
     if ( !v11 )
       return v4;
   }
   v12 = v6 == 0;
   if ( v6 )
   {
-    v6 = (Actor *)v6[1].field_40;
+    v6 = (Actor *)FIELD_U32(v6 + (1) * 80, 0x40);
     v12 = v6 == 0;
   }
   if ( !v12 && Actor__getProfileId(v6) == 350 )

@@ -22,9 +22,9 @@ int __fastcall sub_602FE2EC(CollisionActor *a1)
   v2 = CollisionActor__handleSpeed(a1);
   v3 = CollisionMgr_process(FIELD_U8(a1, 0x288), v2);
   prev = a1[1]._.aCollider.node3.prev;
-  owner = prev[1].owner;
+  owner = FIELD_U32(prev + (1) * 12, 0x0);
   v6 = FIELD_U32(prev, 0x8);
-  v7 = prev[5].prev;
+  v7 = FIELD_U32(prev + (5) * 12, 0x8);
   if ( v6 > v7 )
     owner = (ActiveCollider *)((char *)owner + 4 * (_DWORD)v7);
   result = *(unsigned __int8 *)(FIELD_U32(owner, 0x0) + 28);

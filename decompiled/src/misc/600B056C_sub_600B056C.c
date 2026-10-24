@@ -14,8 +14,8 @@ signed int __fastcall sub_600B056C(StageActor *a1)
   Vec3 a2; // [sp+14h] [bp-14h] BYREF
 
   StageActor__cullCheck(a1, 0);
-  CollisionMgr_process(&a1[1]._.heap);
-  v2 = *(_DWORD *)&a1[4].aCollider.field_6C;
+  CollisionMgr_process(&FIELD_U32(a1 + (1) * 644, 0x4));
+  v2 = *(_DWORD *)&FIELD_U8(a1 + (4) * 644, 0x128);
   if ( (v2 & 1) != 0
     || (v2 & 0x10400) == 0x400
     || (v2 & 0x440000) != 0 && (v2 & 0x10000000) == 0

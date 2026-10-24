@@ -46,9 +46,9 @@ int __fastcall sub_60953384(int result, sead_ListNode **a2, int a3, sead_ListNod
         v13 = v10 + 1;
         if ( (((a5 << 6) - 64) & 0x40) == 0 )
         {
-          v10[1].previous = 0;
-          v10[1].next = 0;
-          v10[2].previous = 0;
+          FIELD_U32(v10 + (1) * 8, 0x0) = 0;
+          FIELD_U32(v10 + (1) * 8, 0x4) = 0;
+          FIELD_U32(v10 + (2) * 8, 0x0) = 0;
           memset(&v10[3], 0, 44);
           v13 = v11 + 9;
         }
@@ -58,38 +58,38 @@ int __fastcall sub_60953384(int result, sead_ListNode **a2, int a3, sead_ListNod
           {
             FIELD_U32(v13, 0x0) = 0;
             FIELD_U32(v13, 0x4) = 0;
-            v13[1].previous = 0;
+            FIELD_U32(v13 + (1) * 8, 0x0) = 0;
             memset(&v13[2], 0, 44);
-            v13[8].previous = 0;
-            v13[8].next = 0;
-            v13[9].previous = 0;
+            FIELD_U32(v13 + (8) * 8, 0x0) = 0;
+            FIELD_U32(v13 + (8) * 8, 0x4) = 0;
+            FIELD_U32(v13 + (9) * 8, 0x0) = 0;
             memset(&v13[10], 0, 44);
             v13 += 16;
           }
           while ( v13 != &v12[8 * a5] );
         }
-        v8[3].previous = (sead_ListNode *)a5;
-        v8[3].next = v12;
+        FIELD_U32(v8 + (3) * 8, 0x0) = (sead_ListNode *)a5;
+        FIELD_U32(v8 + (3) * 8, 0x4) = v12;
       }
     }
-    previous = v8[3].previous;
+    previous = FIELD_U32(v8 + (3) * 8, 0x0);
     if ( previous )
     {
-      next = v8[3].next;
+      next = FIELD_U32(v8 + (3) * 8, 0x4);
       do
       {
-        next[1].next = 0;
-        next[7].next = 0;
-        sead__ListNode__insertFront(v8 + 8, (sead_ListNode *)((char *)v8[9].next + (unsigned int)next));
+        FIELD_U32(next + (1) * 8, 0x4) = 0;
+        FIELD_U32(next + (7) * 8, 0x4) = 0;
+        sead__ListNode__insertFront(v8 + 8, (sead_ListNode *)((char *)FIELD_U32(v8 + (9) * 8, 0x4) + (unsigned int)next));
         previous = (sead_ListNode *)((char *)previous - 1);
         next += 8;
-        ++v8[9].previous;
+        ++FIELD_U32(v8 + (9) * 8, 0x0);
       }
       while ( previous );
     }
     v16 = sub_608DE574((int **)&v8[8]);
     if ( v16 )
-      v17 = (sead_ListNode **)((char *)v16 - (char *)v8[9].next);
+      v17 = (sead_ListNode **)((char *)v16 - (char *)FIELD_U32(v8 + (9) * 8, 0x4));
     else
       v17 = 0;
     v18 = a2[1];
@@ -98,15 +98,15 @@ int __fastcall sub_60953384(int result, sead_ListNode **a2, int a3, sead_ListNod
     v17[1] = v18;
     v17[2] = v19;
     v17[3] = a4;
-    sead__ListNode__insertFront(v8 + 6, (sead_ListNode *)((char *)v8[7].next + (unsigned int)v17));
-    ++v8[7].previous;
+    sead__ListNode__insertFront(v8 + 6, (sead_ListNode *)((char *)FIELD_U32(v8 + (7) * 8, 0x4) + (unsigned int)v17));
+    ++FIELD_U32(v8 + (7) * 8, 0x0);
     v20 = v17[1];
     v21 = v17[2];
     FIELD_U32(v8, 0x4) = *v17;
-    v8[1].previous = v20;
-    v8[1].next = v21;
+    FIELD_U32(v8 + (1) * 8, 0x0) = v20;
+    FIELD_U32(v8 + (1) * 8, 0x4) = v21;
     result = (int)v17[1] + (_DWORD)v17[3];
-    v8[2].previous = (sead_ListNode *)result;
+    FIELD_U32(v8 + (2) * 8, 0x0) = (sead_ListNode *)result;
   }
   return result;
 }

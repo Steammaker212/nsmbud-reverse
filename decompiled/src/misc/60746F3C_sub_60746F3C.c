@@ -21,7 +21,7 @@ StateMethodExecuter *__fastcall sub_60746F3C(StateMgr *a1, StateMethodExecuter *
   result = (StateMethodExecuter *)(*(int (**)(void))(dword_60CBE500 + 8))();
   if ( (StateMethodExecuter *)v6 == result )
   {
-    a1[44].currentMethodExecuter = a2;
+    FIELD_U32(a1 + (44) * 16, 0x8) = a2;
     return StateMgr__changeState(v4, &stru_60CBE520);
   }
   return result;

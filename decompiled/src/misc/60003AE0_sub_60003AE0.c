@@ -16,10 +16,10 @@ int __fastcall sub_60003AE0(StageActor *a1)
   result = 0;
   if ( !FIELD_U8(a1, 0x218) )
   {
-    v3 = sub_60001B14(a1, (int)&a1[1]._.heap);
+    v3 = sub_60001B14(a1, (int)&FIELD_U32(a1 + (1) * 644, 0x4));
     result = 1;
     if ( !v3 )
-      return sub_60001814(a1, (int)&a1[1]._.heap);
+      return sub_60001814(a1, (int)&FIELD_U32(a1 + (1) * 644, 0x4));
   }
   return result;
 }

@@ -15,7 +15,7 @@ StateMethodExecuter *__fastcall sub_6053C06C(StateMethodExecuter *result)
   if ( HIBYTE(result[1393].owner) && result[1392].owner == (void *)6 )
   {
     BYTE1(result[4373].currentState) = 1;
-    result[4].owner = &dword_60CAB7F4;
+    FIELD_U32(result + (4) * 12, 0x4) = &dword_60CAB7F4;
     return StateMgr__changeState((StateMgr *)&result[3], (StateBase *)&dword_60CAB5D4);
   }
   else if ( !BYTE2(result[1393].currentState) && !BYTE2(result[4217].vtable) )
@@ -24,7 +24,7 @@ StateMethodExecuter *__fastcall sub_6053C06C(StateMethodExecuter *result)
     {
       BYTE1(result[4373].currentState) = 1;
       result[1392].owner = (void *)6;
-      result[4].owner = &dword_60CAB7F4;
+      FIELD_U32(result + (4) * 12, 0x4) = &dword_60CAB7F4;
       return StateMgr__changeState((StateMgr *)&result[3], (StateBase *)&dword_60CAB5B4);
     }
     else if ( result[4371].vtable )

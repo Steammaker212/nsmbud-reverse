@@ -17,7 +17,7 @@ StateMethodExecuter *__fastcall sub_605E9904(StateMethodExecuter *result)
   int currentState; // r2
 
   v1 = result;
-  vtable = (char *)result[3].vtable;
+  vtable = (char *)FIELD_U32(result + (3) * 12, 0x0);
   if ( vtable )
   {
     for ( i = 0; i != vtable; ++i )
@@ -26,7 +26,7 @@ StateMethodExecuter *__fastcall sub_605E9904(StateMethodExecuter *result)
       currentState = v1[2].currentState;
       if ( (int)&i[currentState] >= (int)owner )
         currentState -= (int)owner;
-      result = *((StateMethodExecuter **)v1[2].vtable + (_DWORD)&i[currentState]);
+      result = *((StateMethodExecuter **)FIELD_U32(v1 + (2) * 12, 0x0) + (_DWORD)&i[currentState]);
       if ( (BYTE2(result[522].vtable) & 0x40) == 0 )
         result = sub_605E1C04(result);
     }

@@ -22,7 +22,7 @@ MultiStateActor *__fastcall Actor_NEXTGOTOburoku_build(ActorBuildInfo *a1)
   *(_DWORD *)&result[1]._._._.movementId = 2139095039;
   result[1]._._._.field_20.previous = (sead_ListNode *)2139095039;
   result[1]._._._.field_20.next = (sead_ListNode *)-8388609;
-  result[1]._._._.childCount = -8388609;
+  FIELD_U32(result + (1) * 6104, 0x28) = -8388609;
   result[1]._._._.field_11 = 0;
   BYTE1(result[1]._._._.profile) = 0;
   BYTE1(result[1]._._._.id) = 0;

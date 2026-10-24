@@ -10,7 +10,7 @@
 
 StateMethodExecuter *__fastcall sub_606F8BA8(StateMethodExecuter *result)
 {
-  if ( *((_BYTE *)result[512].vtable + 7764) )
+  if ( *((_BYTE *)FIELD_U32(result + (512) * 12, 0x0) + 7764) )
   {
     result[511].owner = (void *)1;
     return StateMgr__changeState((StateMgr *)&result[507], &stru_60CBC4B0);

@@ -14,9 +14,9 @@ int __fastcall sub_6097CB4C(float32x4_t *a1, int a2, int a3, int a4, float32x2_t
 
   if ( a1[11].n128_u8[1] )
   {
-    v9 = (a1[4].n128_u8[0] & 1) == 0;
-    if ( (a1[4].n128_u8[0] & 1) != 0 )
-      v9 = a1[4].n128_u8[1] == 0;
+    v9 = (FIELD_U32(a1 + (4) * 16, 0x0)[0] & 1) == 0;
+    if ( (FIELD_U32(a1 + (4) * 16, 0x0)[0] & 1) != 0 )
+      v9 = FIELD_U32(a1 + (4) * 16, 0x0)[1] == 0;
     if ( !v9 )
     {
       ((void (__fastcall *)(float32x4_t *))loc_6097CBA8)(a1);

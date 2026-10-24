@@ -17,7 +17,7 @@ signed int __fastcall sub_6056A200(ColliderBase *a1)
 
   a1[21].field_E4 = 0;
   v2 = &a1[21].field_E4;
-  a1[21].owner248Ptr = (Vec3 *)49;
+  FIELD_U32(a1 + (21) * 340, 0x9C) = (Vec3 *)49;
   ColliderBase_setType(a1 + 18, 7);
   v3 = sub_6056EAA4((int)a1);
   result = 2;

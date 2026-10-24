@@ -26,7 +26,7 @@ Enemy *__fastcall Actor_giant_SumoBro_patsu_build(ActorBuildInfo *a1)
   result[1]._._._._.heap = 0;
   result[1]._._._._.field_2C = 0;
   result[1]._._._._.childCount = 0;
-  result[1]._._._._.field_20.next = 0;
+  FIELD_U32(result + (1) * 6300, 0x24) = 0;
   result[1]._._._._.field_20.previous = 0;
   return result;
 }

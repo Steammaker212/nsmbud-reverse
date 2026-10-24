@@ -15,8 +15,8 @@ float __fastcall sub_607FF584(sead_IDisposer *a1, int a2)
 
   v3 = sead_IDisposer_ctor(a1);
   FIELD_U32(v3, 0x0) = (int)off_60C27DEC;
-  *(float *)&v3[1].vtable = (float)FIELD_S16(a2, 4);
+  *(float *)&FIELD_U32(v3 + (1) * 16, 0x0) = (float)FIELD_S16(a2, 4);
   result = (float)FIELD_S16(a2, 6);
-  *(float *)&v3[1].containingHeap = result;
+  *(float *)&FIELD_U32(v3 + (1) * 16, 0x4) = result;
   return result;
 }

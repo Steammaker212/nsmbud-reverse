@@ -25,7 +25,7 @@ Enemy *__fastcall GiantWiggler_ctor(Enemy *a1, ActorBuildInfo *a2)
   a1[1]._._._.aCollider.createNode.owner = (ActiveCollider *)0x3F800000;
   a1[1]._._._.aCollider.createNode.next = (ActiveColliderNode *)0x3F800000;
   a1[1]._._._.aCollider.createNode.prev = (ActiveColliderNode *)0x3F800000;
-  a1[1]._._._.aCollider.node3.owner = (ActiveCollider *)0x3F800000;
+  FIELD_U32(a1 + (1) * 6300, 0xE4) = (ActiveCollider *)0x3F800000;
   a1[1]._._._.aCollider.node3.next = (ActiveColliderNode *)0x3F800000;
   a1[1]._._._.aCollider.node3.prev = (ActiveColliderNode *)0x3F800000;
   a1[1]._._._.aCollider.node4.owner = (ActiveCollider *)0x3F800000;
@@ -40,7 +40,7 @@ Enemy *__fastcall GiantWiggler_ctor(Enemy *a1, ActorBuildInfo *a2)
     *((_DWORD *)v5 - 8) = 0;
     *((_DWORD *)v5 - 7) = 0;
     *((_DWORD *)v5 - 6) = 0;
-    *(int *)((char *)&a1[1]._._._.aCollider.field_68 + v3) = 0;
+    *(int *)((char *)&FIELD_U32(a1 + (1) * 6300, 0x124) + v3) = 0;
     *(float *)((char *)&FIELD_F32(p_info, 0x0) + v3) = 0.0;
     v3 += 64;
     *((_DWORD *)v5 + 5) = 0;

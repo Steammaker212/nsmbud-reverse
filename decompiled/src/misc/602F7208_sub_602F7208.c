@@ -29,7 +29,7 @@ StateMethodExecuter *__fastcall sub_602F7208(Enemy *a1)
     FIELD_U32(a1, 0xA0) = Enemy_CommonRotations[FIELD_U32(a1, 0x50)];
     profile = a1[1]._._._._.profile;
     FIELD_U32(profile, 0x14) = 1114636288;
-    profile[1].buildFunction = (void *)((int)profile[1].buildFunction | 2);
+    FIELD_U32(profile + (1) * 24, 0x4) = (void *)((int)FIELD_U32(profile + (1) * 24, 0x4) | 2);
     Animation_update((int)a1[1]._._._._.profile);
     v6 = *(int (__fastcall **)(Enemy *, int *))(FIELD_U32(a1, 0x0) + 192);
     return (StateMethodExecuter *)v6(a1, &dword_60C928B0);

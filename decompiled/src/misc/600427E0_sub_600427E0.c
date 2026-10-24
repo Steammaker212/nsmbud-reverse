@@ -85,8 +85,8 @@ void __fastcall sub_600427E0(int a1, int a2, int a3)
         v16 = (*((int (__fastcall **)(StateBase *))FIELD_U32(v15, 0x0) + 2))(v15);
         if ( v16 == (*((int (**)(void))BobOmb_StateID_Walk._.vtable + 2))() )
         {
-          vtable = v5[1].vtable;
-          v18 = FIELD_F32(a2, 84) - *(float *)&v5[1].movementId;
+          vtable = FIELD_U32(v5 + (1) * 80, 0x0);
+          v18 = FIELD_F32(a2, 84) - *(float *)&FIELD_U8(v5 + (1) * 80, 0x1C);
           if ( !vtable && v18 > 0.0 || vtable == 1 && v18 < 0.0 )
             (*(void (__fastcall **)(Actor *, State *))(FIELD_U32(v5, 0x0) + 192))(v5, &BobOmb_StateID_Turn);
         }
@@ -99,7 +99,7 @@ void __fastcall sub_600427E0(int a1, int a2, int a3)
             v25 = StateMgr__getCurrentState((StateMgr *)&v5[76].heap);
             v26 = (*((int (__fastcall **)(StateBase *))FIELD_U32(v25, 0x0) + 2))(v25);
             if ( v26 != (*((int (**)(void))BobOmb_StateID_BowserJrW7_2._.vtable + 2))() )
-              *(float *)&v5[1].childCount = *(float *)&v5[1].childCount * -0.5;
+              *(float *)&FIELD_U32(v5 + (1) * 80, 0x28) = *(float *)&FIELD_U32(v5 + (1) * 80, 0x28) * -0.5;
           }
         }
       }
@@ -113,7 +113,7 @@ void __fastcall sub_600427E0(int a1, int a2, int a3)
       v22 = (*((int (__fastcall **)(StateBase *))FIELD_U32(v21, 0x0) + 2))(v21);
       if ( v22 == (*((int (**)(void))BobOmb_StateID_Walk._.vtable + 2))() )
       {
-        v5[1].childCount = dword_60AF5270[v5[1].vtable];
+        FIELD_U32(v5 + (1) * 80, 0x28) = dword_60AF5270[FIELD_U32(v5 + (1) * 80, 0x0)];
         v5[1].field_2C = 1077936128;
         v5[1].field_30 = 0;
       }

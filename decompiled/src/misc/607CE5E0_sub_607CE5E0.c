@@ -14,9 +14,9 @@ unsigned int __fastcall sub_607CE5E0(StageActor *a1, int *a2, int a3, int a4)
   char v9; // r12
   unsigned int result; // r0
 
-  (*(void (__fastcall **)(StageActor *, sead_ListNode *, int))(FIELD_U32(a1, 0x0) + 144))(a1, a1[2]._.field_20.previous, 1);
+  (*(void (__fastcall **)(StageActor *, sead_ListNode *, int))(FIELD_U32(a1, 0x0) + 144))(a1, FIELD_U32(a1 + (2) * 644, 0x20), 1);
   sub_60767F80(a1, a2, a4);
-  a1[1].field_230 |= 0x40u;
+  FIELD_U32(a1 + (1) * 644, 0x230) |= 0x40u;
   sub_60767E04(a1, (int)a2, a3);
   sub_607CFB38(a1, &dword_60CC5398);
   v8 = (int (__fastcall ***)(_DWORD, int *))sub_607CFB50(a1);
@@ -30,7 +30,7 @@ unsigned int __fastcall sub_607CE5E0(StageActor *a1, int *a2, int a3, int a4)
   if ( (**v8)(v8, &dword_60C7B370) == 1 )
 LABEL_6:
     sub_607CFC14(a1);
-  result = a1[1].field_230 & 0xFFFFFFBF;
-  a1[1].field_230 = result;
+  result = FIELD_U32(a1 + (1) * 644, 0x230) & 0xFFFFFFBF;
+  FIELD_U32(a1 + (1) * 644, 0x230) = result;
   return result;
 }

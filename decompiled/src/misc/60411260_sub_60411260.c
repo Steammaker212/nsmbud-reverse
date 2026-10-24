@@ -144,8 +144,8 @@ int32x4_t *__fastcall sub_60411260(int *a1, float *a2, float *a3)
     v42[4] = (float)((float)(v38 * (float)(v43 + 0.0)) + (float)(v39 * v44)) + (float)(v37 * v45);
     if ( v33 == 12 )
       break;
-    v41 = result[1].n128_f32[0];
-    v40 = result[1].n128_f32[1];
+    v41 = FIELD_F32(result + (1) * 16, 0x0)[0];
+    v40 = FIELD_F32(result + (1) * 16, 0x0)[1];
     v33 += 4;
     result = (int32x4_t *)((char *)result + 12);
   }

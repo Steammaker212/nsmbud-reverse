@@ -80,7 +80,7 @@ void __fastcall sub_6087DEC4(_DWORD *a1, int a2)
         v20 = a1[4] + (v12 << 6);
         v34 = *(float32x4_t *)v20;
         v38 = *(float32x4_t *)(v20 + 32);
-        v21 = v10[1].val;
+        v21 = FIELD_U32(v10 + (1) * 32, 0x0);
         v36 = *(float32x4_t *)(v20 + 16);
         v22 = v10;
         v10 = (int32x4x2_t *)((char *)v10 + 48);
@@ -128,7 +128,7 @@ void __fastcall sub_6087DEC4(_DWORD *a1, int a2)
         v35 = *(int32x4_t *)(v29 + 32);
         v31 = v27;
         v37 = *(int32x4_t *)(v29 + 16);
-        v32 = v27[1].val;
+        v32 = FIELD_U32(v27 + (1) * 32, 0x0);
         v27 = (int32x4x2_t *)((char *)v27 + 48);
         v39 = vzipq_s32(v33, v35);
         v42 = vzipq_s32(v37, *v30);

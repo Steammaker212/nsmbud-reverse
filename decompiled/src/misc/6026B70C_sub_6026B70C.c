@@ -37,7 +37,7 @@ void __fastcall sub_6026B70C(Enemy *a1, int a2, ActiveCollider *a3)
   }
   else
   {
-    if ( !LOBYTE(a1[1]._._._._.field_20.next)
+    if ( !LOBYTE(FIELD_U32(a1 + (1) * 6300, 0x24))
       || (Bottom = ActiveCollider_getBottom((ActiveCollider *)a2), Bottom > ActiveCollider_getCenterY(a3)) )
     {
       FIELD_U32(a2, 120) = 0;
@@ -68,7 +68,7 @@ LABEL_3:
     {
       if ( FIELD_U8(v12, 0x215) == 1 )
       {
-        if ( v12[2]._.field_20.previous == (sead_ListNode *)3 )
+        if ( FIELD_U32(v12 + (2) * 644, 0x20) == (sead_ListNode *)3 )
         {
           (*(void (__fastcall **)(Enemy *, StageActor *))(FIELD_U32(a1, 0x0) + 388))(a1, v12);
           (*(void (__fastcall **)(Enemy *))(FIELD_U32(a1, 0x0) + 404))(a1);
@@ -77,7 +77,7 @@ LABEL_3:
         else
         {
           vtable = FIELD_U32(a1, 0x0);
-          if ( (v12[1].profileFlags & 0x40) != 0 )
+          if ( (FIELD_U32(v12 + (1) * 644, 0x238) & 0x40) != 0 )
           {
             (*(void (__fastcall **)(Enemy *, StageActor *))(vtable + 400))(a1, v12);
             sub_602A3124(a1, v12);

@@ -12,15 +12,15 @@ int __fastcall sub_605BE584(ColliderBase *a1, int a2, float a3)
 {
   int v3; // r2
 
-  if ( LOBYTE(a1[1].field_144) )
+  if ( LOBYTE(FIELD_U32(a1 + (1) * 340, 0x144)) )
   {
-    v3 = ((int)(float)(*(float *)&a1[1].field_140 - a3) + 192) / 48;
+    v3 = ((int)(float)(*(float *)&FIELD_U32(a1 + (1) * 340, 0x140) - a3) + 192) / 48;
     if ( v3 <= 0 )
       v3 = 0;
     if ( v3 >= 7 )
       v3 = 7;
     *(_BYTE *)(a2 + 84 * v3 + 80) = 1;
-    LOBYTE(a1[1].field_144) = 0;
+    LOBYTE(FIELD_U32(a1 + (1) * 340, 0x144)) = 0;
   }
   return ShapedCollider_execute(a1);
 }

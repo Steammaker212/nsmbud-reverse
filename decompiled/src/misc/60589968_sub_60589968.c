@@ -62,7 +62,7 @@ int __fastcall sub_60589968(StageActor *a1)
       goto LABEL_30;
     }
     MovementHandler__execute((MovementHandler *)&a1[10].field_228);
-    if ( LODWORD(a1[10].field_254.y) == 1 && a1[10].field_26C != 1 )
+    if ( LODWORD(FIELD_F32(a1 + (10) * 644, 0x258)) == 1 && a1[10].field_26C != 1 )
     {
       if ( a1[11].aCollider.field_E0 == 1 )
       {
@@ -72,7 +72,7 @@ int __fastcall sub_60589968(StageActor *a1)
         {
           if ( a1[11].direction )
           {
-            a1[11].aCollider.activeNode.prev = (ActiveColliderNode *)31;
+            FIELD_U32(a1 + (11) * 644, 0xD4) = (ActiveColliderNode *)31;
             (*(void (__fastcall **)(StageActor *, void *))(FIELD_U32(a1, 0x0) + 192))(a1, &unk_60CAF318);
           }
         }
@@ -95,7 +95,7 @@ int __fastcall sub_60589968(StageActor *a1)
           }
           if ( !parent || (*(int (__fastcall **)(Actor *, int *))FIELD_U32(parent, 0x0))(parent, &StageActor_RTTI) != 1 )
             goto LABEL_28;
-          v10 = a1[11].aCollider.field_DC + parent[2].heap;
+          v10 = a1[11].aCollider.field_DC + FIELD_U32(parent + (2) * 80, 0x4);
 LABEL_27:
           FIELD_U32(a1, 0xA4) = v10;
 LABEL_28:

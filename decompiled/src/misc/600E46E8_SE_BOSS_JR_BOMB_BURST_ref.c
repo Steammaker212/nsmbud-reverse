@@ -23,7 +23,7 @@ signed int __fastcall SE_BOSS_JR_BOMB_BURST_ref(Vec3 *a1)
 
   v2 = a1 + 9;
   y = a1[9].y;
-  v10.x = a1[9].x;
+  v10.x = FIELD_F32(a1 + (9) * 12, 0x0);
   v10.y = y;
   v10.z = 4500.0;
   position.x = v10.x;
@@ -42,9 +42,9 @@ signed int __fastcall SE_BOSS_JR_BOMB_BURST_ref(Vec3 *a1)
   LightSource_update1((LightSource *)&a1[589], 38, v2, 0, 0, 0, 0, 0, 0);
   ColliderMgr_removeRelated1(ColliderMgr_instance, (ColliderBase *)&a1[508].z);
   v6 = ActiveColliderMgr_instance;
-  ActiveColldierMgr_removeFromActiveList(ActiveColliderMgr_instance, (ActiveCollider *)&a1[549].y);
-  ActiveColldierMgr_removeFromCreateList(v6, (ActiveCollider *)&a1[549].y);
-  ActiveColldierMgr_removeFromList3(v6, (int)&a1[549].y);
+  ActiveColldierMgr_removeFromActiveList(ActiveColliderMgr_instance, (ActiveCollider *)&FIELD_F32(a1 + (549) * 12, 0x4));
+  ActiveColldierMgr_removeFromCreateList(v6, (ActiveCollider *)&FIELD_F32(a1 + (549) * 12, 0x4));
+  ActiveColldierMgr_removeFromList3(v6, (int)&FIELD_F32(a1 + (549) * 12, 0x4));
   HIBYTE(a1[44].y) = 0;
   LODWORD(a1[547].y) = 10;
   return 6568;

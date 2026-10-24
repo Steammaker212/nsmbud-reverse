@@ -24,8 +24,8 @@ int __fastcall sub_60463998(Actor *a1, _DWORD *a2, int a3, int a4)
 
   v7 = 0;
   *a2 = 0;
-  v11 = &a1[77].field_30;
-  v10 = a1[77].field_30;
+  v11 = &FIELD_U32(a1 + (77) * 80, 0x30);
+  v10 = FIELD_U32(a1 + (77) * 80, 0x30);
   if ( v10 != -1 )
   {
     if ( v10 >= 4 )

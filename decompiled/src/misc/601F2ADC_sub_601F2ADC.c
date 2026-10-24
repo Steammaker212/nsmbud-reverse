@@ -52,6 +52,6 @@ int __fastcall sub_601F2ADC(Actor *a1)
     v4 = 37;
   }
   result = sub_601E4EA4(v2, v4, 0, (int)&a1[1], 1);
-  a1[8].field_4C = result;
+  FIELD_U32(a1 + (8) * 80, 0x4C) = result;
   return result;
 }

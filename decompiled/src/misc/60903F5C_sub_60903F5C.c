@@ -17,18 +17,18 @@ sead_IDisposer *__fastcall sub_60903F5C(sead_IDisposer *a1, unsigned int a2, int
 
   v4 = 0;
   FIELD_U32(a1, 0x0) = (int)sead_Decompressor_vtable;
-  a1[1].vtable = 0;
-  a1[1].containingHeap = 0;
-  a1[1].field_8 = (int)a1;
-  a1[1].field_C = 0;
+  FIELD_U32(a1 + (1) * 16, 0x0) = 0;
+  FIELD_U32(a1 + (1) * 16, 0x4) = 0;
+  FIELD_U32(a1 + (1) * 16, 0x8) = (int)a1;
+  FIELD_U32(a1 + (1) * 16, 0xC) = 0;
   sead_IDisposer_ctor(a1);
   FIELD_U32(a1, 0x0) = (int)sead_Decompressor_vtable;
-  a1[2].containingHeap = (int)&a1[2].field_C;
-  a1[2].vtable = (int)&BufferedSafeStringBase_char_vtable_probably;
-  a1[2].field_8 = 32;
+  FIELD_U32(a1 + (2) * 16, 0x4) = (int)&FIELD_U32(a1 + (2) * 16, 0xC);
+  FIELD_U32(a1 + (2) * 16, 0x0) = (int)&BufferedSafeStringBase_char_vtable_probably;
+  FIELD_U32(a1 + (2) * 16, 0x8) = 32;
   sead__BufferedSafeStringBase__assureTerminationImpl_const((int)&a1[2]);
-  a1[2].vtable = (int)&off_60BD4C38;
-  containingHeap = (char *)a1[2].containingHeap;
+  FIELD_U32(a1 + (2) * 16, 0x0) = (int)&off_60BD4C38;
+  containingHeap = (char *)FIELD_U32(a1 + (2) * 16, 0x4);
   if ( containingHeap != "szs" )
   {
     while ( aSzs[v4] )
@@ -45,18 +45,18 @@ sead_IDisposer *__fastcall sub_60903F5C(sead_IDisposer *a1, unsigned int a2, int
       }
       v4 += 2;
     }
-    v8 = a1[2].field_8;
+    v8 = FIELD_U32(a1 + (2) * 16, 0x8);
     if ( v4 >= v8 )
       v4 = v8 - 1;
-    qmemcpy((void *)a1[2].containingHeap, "szs", v4);
+    qmemcpy((void *)FIELD_U32(a1 + (2) * 16, 0x4), "szs", v4);
     containingHeap[v4] = 0;
   }
-  a1[2].vtable = (int)&off_60BD4C20;
+  FIELD_U32(a1 + (2) * 16, 0x0) = (int)&off_60BD4C20;
   FIELD_U32(a1, 0x0) = (int)off_60C5CBDC;
   v9 = (a2 + 31) & 0xFFFFFFE0;
   if ( a3 )
     v9 = a2;
-  a1[4].field_C = v9;
-  a1[5].vtable = a3;
+  FIELD_U32(a1 + (4) * 16, 0xC) = v9;
+  FIELD_U32(a1 + (5) * 16, 0x0) = a3;
   return a1;
 }

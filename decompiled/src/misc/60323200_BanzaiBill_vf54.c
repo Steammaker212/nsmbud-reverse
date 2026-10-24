@@ -19,7 +19,7 @@ int __fastcall BanzaiBill_vf54(Actor *a1)
   if ( result == 629 )
   {
     result = a1[91].childCount;
-    a1[2].heap = result;
+    FIELD_U32(a1 + (2) * 80, 0x4) = result;
   }
   return result;
 }

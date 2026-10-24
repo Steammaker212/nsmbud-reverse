@@ -29,59 +29,59 @@ sead_IDisposer *__fastcall sub_6075B604(sead_IDisposer *a1, int r1_0, int a3)
   FIELD_U32(a1, 0x0) = (int)&off_60C240C4;
   LODWORD(v20[0]) = &sead__SafeStringBase__vtable;
   HIDWORD(v20[0]) = "MiiMdl";
-  a1[1].vtable = LoadResource(ResourceMgrRelated_instance, v20);
+  FIELD_U32(a1 + (1) * 16, 0x0) = LoadResource(ResourceMgrRelated_instance, v20);
   LODWORD(v20[0]) = &sead__SafeStringBase__vtable;
   HIDWORD(v20[0]) = "CommonAnm";
-  a1[1].containingHeap = LoadResource(ResourceMgrRelated_instance, v20);
-  a1[1].field_8 = 0;
-  a1[1].field_C = r1_0;
-  a1[2].vtable = 1065353216;
-  a1[2].containingHeap = a3;
-  a1[2].field_8 = 0;
+  FIELD_U32(a1 + (1) * 16, 0x4) = LoadResource(ResourceMgrRelated_instance, v20);
+  FIELD_U32(a1 + (1) * 16, 0x8) = 0;
+  FIELD_U32(a1 + (1) * 16, 0xC) = r1_0;
+  FIELD_U32(a1 + (2) * 16, 0x0) = 1065353216;
+  FIELD_U32(a1 + (2) * 16, 0x4) = a3;
+  FIELD_U32(a1 + (2) * 16, 0x8) = 0;
   memset(v20, 0, 12);
   sub_608DEB0C(v20, 1, (int)&v20[1] + 4);
   if ( SLODWORD(v20[0]) < SHIDWORD(v20[0]) )
-    *(_DWORD *)(LODWORD(v20[1]) + 4 * LODWORD(v20[0])++) = a1[1].containingHeap;
-  vtable = (void *)a1[1].vtable;
+    *(_DWORD *)(LODWORD(v20[1]) + 4 * LODWORD(v20[0])++) = FIELD_U32(a1 + (1) * 16, 0x4);
+  vtable = (void *)FIELD_U32(a1 + (1) * 16, 0x0);
   a2[0].vtable = &sead__SafeStringBase__vtable;
   a2[0].cstr = "MiiB_capture_model";
   Model2 = (void *)Resource_getModel2(vtable, a2, 1, 0, 0, 0, 0, 0, 0);
   v8 = (ModelWrapper *)operator_new_8DE25C(0x30u, 0, 4);
   v9 = ModelWrapper_ctor(v8, Model2, 1, 0, 0, 0, 0);
   ModelWrapper_setup(v9, vtable, (int *)v20, 0);
-  a1[1].field_8 = (int)v8;
-  containingHeap = a1[1].containingHeap;
+  FIELD_U32(a1 + (1) * 16, 0x8) = (int)v8;
+  containingHeap = FIELD_U32(a1 + (1) * 16, 0x4);
   v11 = (int)*FIELD_U32(v8, 0xC);
   LODWORD(v20[0]) = &sead__SafeStringBase__vtable;
   HIDWORD(v20[0]) = "capture_pose";
   SkeletalAnim_play(v11, containingHeap, (const char **)v20);
   v12 = operator_new(0x4C8u);
-  a1[2].field_8 = sub_60436A4C(v12);
+  FIELD_U32(a1 + (2) * 16, 0x8) = sub_60436A4C(v12);
   sub_604186F8((int)v20);
   sub_6042A9E8(dword_60C9C0FC, v20, 4u);
-  sub_6042F294(a2, &a1[1].field_C);
+  sub_6042F294(a2, &FIELD_U32(a1 + (1) * 16, 0xC));
   qmemcpy(v20, a2, 0x5Cu);
-  sub_60436B70((_DWORD *)a1[2].field_8, v20, 4u, a1[2].containingHeap, 0);
+  sub_60436B70((_DWORD *)FIELD_U32(a1 + (2) * 16, 0x8), v20, 4u, FIELD_U32(a1 + (2) * 16, 0x4), 0);
   v20[0] = 0x3F0000003F000000LL;
   v20[1] = 0x3F8000003F000000LL;
-  v13 = a1[2].field_8;
+  v13 = FIELD_U32(a1 + (2) * 16, 0x8);
   if ( v13 )
   {
     v20[0] = sub_6043779C(v13);
     v20[1] = v14;
-    v15 = (float)((float)sub_604377CC(a1[2].field_8) * 0.0031496) + 0.4;
+    v15 = (float)((float)sub_604377CC(FIELD_U32(a1 + (2) * 16, 0x8)) * 0.0031496) + 0.4;
   }
   else
   {
     v15 = 0.4;
   }
-  v16 = *(_DWORD *)a1[1].field_8;
+  v16 = *(_DWORD *)FIELD_U32(a1 + (1) * 16, 0x8);
   if ( v16 )
   {
     v17 = (*(int (__fastcall **)(int, _DWORD))(*(_DWORD *)v16 + 132))(v16, 0);
     if ( v17 )
       (*(void (__fastcall **)(int, _DWORD, _QWORD *))(*(_DWORD *)v17 + 12))(v17, 0, v20);
-    *(float *)&a1[2].vtable = v15;
+    *(float *)&FIELD_U32(a1 + (2) * 16, 0x0) = v15;
   }
   return a1;
 }

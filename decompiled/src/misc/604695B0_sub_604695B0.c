@@ -17,6 +17,6 @@ int __fastcall sub_604695B0(Actor *a1)
   v2 = sub_60463998(a1, &v4, 7, 1);
   result = 0;
   if ( v2 == 1 )
-    return SE_PLY_GET_ITEM_AGAIN_ref((int)a1, v4, a1[77].field_30);
+    return SE_PLY_GET_ITEM_AGAIN_ref((int)a1, v4, FIELD_U32(a1 + (77) * 80, 0x30));
   return result;
 }

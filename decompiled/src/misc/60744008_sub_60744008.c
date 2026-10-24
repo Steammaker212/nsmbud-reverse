@@ -17,6 +17,6 @@ Actor *__fastcall sub_60744008(Actor *a1)
   sub_607440CC(&a1[83].field_30);
   sub_607442CC(v2);
   FIELD_U32(a1, 0x0) = (int)&CollisionActor__vtable;
-  CollisionMgr_dtor((int)&a1[8].id);
+  CollisionMgr_dtor((int)&FIELD_U32(a1 + (8) * 80, 0x8));
   return StageActor__dtor(a1);
 }

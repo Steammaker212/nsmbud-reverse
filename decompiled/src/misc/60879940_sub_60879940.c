@@ -73,7 +73,7 @@ int *__fastcall sub_60879940(int *result, int a2)
         v10[1].n64_u32[0] = v12;
         v10[1].n64_u32[1] = v13;
         v14 = v8[1];
-        v5[4].n64_u64[0] = *v8;
+        FIELD_U64(v5 + (4) * 8, 0x0)[0] = *v8;
         v5[5].n64_u64[0] = v14;
         v15.n128_u64[0] = -1;
         v15.n128_u64[1] = 0xFFFFFFFFLL;
@@ -109,7 +109,7 @@ int *__fastcall sub_60879940(int *result, int a2)
         v30.val[1].n64_u64[0] = v28.val[1].n64_u64[0];
         FIELD_U64(v5, 0x0)[0] = vtbl4_s8(v28, (int8x8_t)0x70605041B1A1918LL).n64_u64[0];
         v5[1].n64_u64[0] = vtbl4_s8(v28, (int8x8_t)0xF0E0D0C1F1E1D1CLL).n64_u64[0];
-        v5[2].n64_u64[0] = vtbl4_s8(v30, (int8x8_t)0x1716151413121110LL).n64_u64[0];
+        FIELD_U64(v5 + (2) * 8, 0x0)[0] = vtbl4_s8(v30, (int8x8_t)0x1716151413121110LL).n64_u64[0];
         v5[3].n64_u64[0] = vtbl4_s8(v30, (int8x8_t)0xF0E0D0C0B0A0908LL).n64_u64[0];
         v2 = *((_WORD *)result + 3);
       }

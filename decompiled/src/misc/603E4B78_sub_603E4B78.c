@@ -42,7 +42,7 @@ bool __fastcall sub_603E4B78(int a1, Actor *a2)
         v8 = (*(int (__fastcall **)(Actor *, int *))FIELD_U32(a2, 0x0))(a2, &dword_60C7B370);
         v9 = v8 == 1;
         if ( v8 == 1 )
-          v9 = (a2[15].isDeleted & 8) == 0;
+          v9 = (FIELD_U8(a2 + (15) * 80, 0x13) & 8) == 0;
         if ( v9 )
           return 1;
       }

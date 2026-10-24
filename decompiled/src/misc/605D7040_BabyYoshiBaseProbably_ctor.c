@@ -27,13 +27,13 @@ CollisionActor *__fastcall BabyYoshiBaseProbably_ctor(CollisionActor *a1, ActorB
   LOBYTE(a1[1]._.aCollider._.field_8) = 0;
   HIBYTE(a1[1]._.aCollider._.field_8) = 0;
   BYTE2(a1[1]._.aCollider._.field_8) = 0;
-  a1[1]._.aCollider.activeNode.next = (ActiveColliderNode *)&off_60C0B41C;
+  FIELD_U32(a1 + (1) * 6064, 0xD0) = (ActiveColliderNode *)&off_60C0B41C;
   a1[1]._.aCollider.activeNode.prev = (ActiveColliderNode *)&off_60C0B42C;
   a1[1]._.aCollider.createNode.owner = (ActiveCollider *)&off_60C0B450;
   a1[1]._.aCollider.createNode.next = (ActiveColliderNode *)a1;
   a1[1]._.aCollider.createNode.prev = 0;
   StateMgr_ctor((StateMgr *)&a1[1]._.aCollider.node3, (StateExecuter *)&a1[1]._.aCollider.activeNode.prev, &NullState);
-  a1[1]._.aCollider.activeNode.next = (ActiveColliderNode *)&off_60C0B40C;
+  FIELD_U32(a1 + (1) * 6064, 0xD0) = (ActiveColliderNode *)&off_60C0B40C;
   a1[1]._.aCollider.node4.next = 0;
   a1[1]._.aCollider.node4.prev = 0;
   a1[1]._.aCollider.owner = 0;
@@ -41,7 +41,7 @@ CollisionActor *__fastcall BabyYoshiBaseProbably_ctor(CollisionActor *a1, ActorB
   a1[1]._.aCollider.field_48 = 0;
   a1[1]._.aCollider.field_44 = 0;
   a1[1]._.aCollider.field_50 = 0;
-  LOBYTE(a1[1]._.aCollider.field_54) = -1;
+  LOBYTE(FIELD_U32(a1 + (1) * 6064, 0x110)) = -1;
   a1[1]._.aCollider.field_58 = 0;
   a1[1]._.aCollider.field_5C = 0;
   LOBYTE(a1[1]._.aCollider.field_60) = 0;
@@ -55,7 +55,7 @@ CollisionActor *__fastcall BabyYoshiBaseProbably_ctor(CollisionActor *a1, ActorB
   a1[1]._.aCollider.info.field_10 = 0;
   a1[1]._.aCollider.info.distToEdge.y = 0.0;
   a1[1]._.aCollider.info.field_14 = 0;
-  a1[1]._.aCollider.info.mask = 0;
+  FIELD_U32(a1 + (1) * 6064, 0x150) = 0;
   a1[1]._.aCollider.info.field_1C = 0;
   a1[1]._.aCollider.info.category = 0;
   a1[1]._.aCollider.info.field_24 = (int)&off_60C0B41C;

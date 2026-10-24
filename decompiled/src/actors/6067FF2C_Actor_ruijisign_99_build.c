@@ -16,6 +16,6 @@ StageActor *__fastcall Actor_ruijisign_99_build(ActorBuildInfo *a1)
   v2 = (StageActor *)operator_new(0x28Cu);
   result = StageActor__ctor(v2, a1);
   FIELD_U32(result, 0x0) = (int)off_60C16B00;
-  result[1]._.heap = 0;
+  FIELD_U32(result + (1) * 644, 0x4) = 0;
   return result;
 }

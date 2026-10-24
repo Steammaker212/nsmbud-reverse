@@ -131,14 +131,14 @@ int __fastcall Icon_NOTE_ref(int a1, int a2, int a3)
         {
           v20 = sead_IDisposer_ctor(v19);
           FIELD_U32(v20, 0x0) = (int)off_60C5D6C8;
-          v20[1].vtable = (int)&off_60C5D6D8;
-          v20[1].field_8 = 1;
-          v20[1].field_C = 0;
-          v20[2].vtable = 0;
-          v20[2].containingHeap = 0;
-          v20[2].field_8 = 0;
-          v20[2].field_C = 0;
-          v20[3].vtable = 0;
+          FIELD_U32(v20 + (1) * 16, 0x0) = (int)&off_60C5D6D8;
+          FIELD_U32(v20 + (1) * 16, 0x8) = 1;
+          FIELD_U32(v20 + (1) * 16, 0xC) = 0;
+          FIELD_U32(v20 + (2) * 16, 0x0) = 0;
+          FIELD_U32(v20 + (2) * 16, 0x4) = 0;
+          FIELD_U32(v20 + (2) * 16, 0x8) = 0;
+          FIELD_U32(v20 + (2) * 16, 0xC) = 0;
+          FIELD_U32(v20 + (3) * 16, 0x0) = 0;
           v19 = (sead_IDisposer *)((char *)v20 + 52);
         }
         while ( v19 != (sead_IDisposer *)v18 );

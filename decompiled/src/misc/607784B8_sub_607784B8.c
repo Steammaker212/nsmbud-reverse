@@ -14,21 +14,21 @@ sead_ListNode *__fastcall sub_607784B8(sead_ListNode *a1, sead_ListNode *a2)
   sead_ListNode *next; // r1
   sead_ListNode *v6; // r7
 
-  previous = a1[9].previous;
-  if ( (int)previous < (int)a1[10].next )
+  previous = FIELD_U32(a1 + (9) * 8, 0x0);
+  if ( (int)previous < (int)FIELD_U32(a1 + (10) * 8, 0x4) )
   {
-    next = a1[9].next;
+    next = FIELD_U32(a1 + (9) * 8, 0x4);
     v6 = 0;
     if ( next )
     {
-      v6 = a1[9].next;
-      a1[9].next = FIELD_U32(next, 0x0);
+      v6 = FIELD_U32(a1 + (9) * 8, 0x4);
+      FIELD_U32(a1 + (9) * 8, 0x4) = FIELD_U32(next, 0x0);
     }
     FIELD_U32(v6, 0x0) = 0;
     FIELD_U32(v6, 0x4) = 0;
-    v6[1].previous = 0;
+    FIELD_U32(v6 + (1) * 8, 0x0) = 0;
     sead__ListNode__insertFront(a1 + 8, (sead_ListNode *)&FIELD_U32(v6, 0x4));
-    ++a1[9].previous;
+    ++FIELD_U32(a1 + (9) * 8, 0x0);
     if ( v6 )
       FIELD_U32(v6, 0x0) = a2;
   }

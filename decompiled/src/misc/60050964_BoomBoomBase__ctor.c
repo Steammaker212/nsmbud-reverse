@@ -15,7 +15,7 @@ BossBase *__fastcall BoomBoomBase__ctor(BossBase *a1, ActorBuildInfo *a2)
   a1[1]._._._._._.vtable = 0x3FB33333;
   a1[1]._._._._._.heap = dword_60C807F0;
   a1[1]._._._._._.id = dword_60C807F4;
-  a1[1]._._._._._.profile = (Profile *)40;
+  FIELD_U32(a1 + (1) * 7092, 0xC) = (Profile *)40;
   *(_DWORD *)&a1[1]._._._._._.field_10 = -1021313024;
   a1[1]._._._._._.settings1 = 1126170624;
   a1[1]._._._._._.settigns2 = -1088841318;
@@ -31,7 +31,7 @@ BossBase *__fastcall BoomBoomBase__ctor(BossBase *a1, ActorBuildInfo *a2)
   a1[1]._._._._._.field_40 = 1071057470;
   a1[1]._._._._._.field_44 = 30;
   a1[1]._._._._._.field_48 = 4;
-  a1[1]._._._._._.field_4C = 40;
+  FIELD_U32(a1 + (1) * 7092, 0x4C) = 40;
   a1[1]._._._._.direction = 1118699520;
   *(_DWORD *)&a1[1]._._._._.playerId = 1121714176;
   a1[1]._._._._.field_58 = 1102577664;

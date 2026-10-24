@@ -16,7 +16,7 @@ Actor *__fastcall Actor_PeachCastle_1door_build(unsigned __int8 *a1)
   v2 = (Actor *)operator_new(0x114u);
   result = sub_601A75F0(v2, a1);
   FIELD_U32(result, 0x0) = (int)off_60BD6514;
-  *(_DWORD *)&result[3].movementId = 0;
-  LOBYTE(result[3].field_20.previous) = 0;
+  *(_DWORD *)&FIELD_U8(result + (3) * 80, 0x1C) = 0;
+  LOBYTE(FIELD_U32(result + (3) * 80, 0x20)) = 0;
   return result;
 }

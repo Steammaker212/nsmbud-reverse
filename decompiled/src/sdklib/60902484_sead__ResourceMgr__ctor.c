@@ -22,14 +22,14 @@ sead_ListNode *__fastcall sead__ResourceMgr__ctor(sead_ListNode *a1)
 
   v2 = a1 + 2;
   v3 = (sead_ListNode *)((char *)a1 + 28);
-  a1[2].previous = v2;
-  a1[2].next = v2;
-  a1[3].previous = 0;
-  a1[3].next = v3;
-  a1[4].previous = v3;
-  a1[4].next = 0;
-  a1[5].previous = 0;
-  a1[5].next = 0;
+  FIELD_U32(a1 + (2) * 8, 0x0) = v2;
+  FIELD_U32(a1 + (2) * 8, 0x4) = v2;
+  FIELD_U32(a1 + (3) * 8, 0x0) = 0;
+  FIELD_U32(a1 + (3) * 8, 0x4) = v3;
+  FIELD_U32(a1 + (4) * 8, 0x0) = v3;
+  FIELD_U32(a1 + (4) * 8, 0x4) = 0;
+  FIELD_U32(a1 + (5) * 8, 0x0) = 0;
+  FIELD_U32(a1 + (5) * 8, 0x4) = 0;
   if ( sead__HeapMgr__sInstance )
   {
     ContainHeap_const = sead__HeapMgr__findContainHeap_const(sead__HeapMgr__sInstance, (int)a1);
@@ -49,8 +49,8 @@ sead_ListNode *__fastcall sead__ResourceMgr__ctor(sead_ListNode *a1)
     **(_BYTE **)(v5 + 36) = 0;
     FIELD_U32(v5, 32) = &off_60BD4C20;
     *(_DWORD *)v5 = off_60BFCA34;
-    a1[5].previous = (sead_ListNode *)v5;
-    a1[5].next = (sead_ListNode *)v5;
+    FIELD_U32(a1 + (5) * 8, 0x0) = (sead_ListNode *)v5;
+    FIELD_U32(a1 + (5) * 8, 0x4) = (sead_ListNode *)v5;
     v7 = *(char **)(v5 + 36);
     if ( v7 != &byte_60ABC94D )
     {
@@ -70,7 +70,7 @@ sead_ListNode *__fastcall sead__ResourceMgr__ctor(sead_ListNode *a1)
     }
     FIELD_U32(v5, 28) = v2;
     sead__ListNode__insertFront(v2, v6);
-    ++a1[3].previous;
+    ++FIELD_U32(a1 + (3) * 8, 0x0);
   }
   return a1;
 }

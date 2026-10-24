@@ -17,14 +17,14 @@ sead_IDisposer *__fastcall sub_60726854(int a1)
   if ( !dword_60CBD894 )
   {
     v2 = (sead_IDisposer *)operator_new_8DE2C8(0x130u, a1, 4);
-    v3 = sead__IDisposer__ctor(&v2[1].vtable, a1, 3u);
-    v2[1].vtable = (int)off_60C21D9C;
+    v3 = sead__IDisposer__ctor(&FIELD_U32(v2 + (1) * 16, 0x0), a1, 3u);
+    FIELD_U32(v2 + (1) * 16, 0x0) = (int)off_60C21D9C;
     dword_60CBD890 = (int)v3;
     sead_IDisposer_ctor(v2);
     FIELD_U32(v2, 0x0) = (int)off_60C21DAC;
-    v2[2].vtable = 0;
-    sub_6090C6DC((int)&v2[2].field_C);
-    sub_6090A654(&v2[13].field_8);
+    FIELD_U32(v2 + (2) * 16, 0x0) = 0;
+    sub_6090C6DC((int)&FIELD_U32(v2 + (2) * 16, 0xC));
+    sub_6090A654(&FIELD_U32(v2 + (13) * 16, 0x8));
     dword_60CBD894 = (int)v2;
   }
   return v2;
