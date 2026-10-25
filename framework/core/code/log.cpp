@@ -34,4 +34,62 @@ void LogLine::put(u32 v)
     buf[len] = '\0';
 }
 
+void LogLine::put(s32 v)
+{
+    if (v < 0)
+    {
+        if (len < sizeof(buf) - 1)
+            buf[len++] = '-';
+        // Negate in unsigned space so INT_MIN does not overflow.
+        put(0u - (u32)v);
+        return;
+    }
+    put((u32)v);
+}
+
+void LogLine::put(bool v)
+{
+    put(v ? "true" : "false");
+}
+
+void LogLine::put(f32 v)
+{
+    if (!(v == v))            // NaN
+    {
+        put("nan");
+        return;
+    }
+
+    if (v < 0.0f)
+    {
+        if (len < sizeof(buf) - 1)
+            buf[len++] = '-';
+        v = -v;
+    }
+    if (v > 32767.0f)         // far outside any coordinate; keep it short
+    {
+        put("inf");
+        return;
+    }
+
+    u32 whole = (u32)v;
+    // Round the fraction rather than truncate, so 12.9999 prints as 13.000.
+    u32 frac = (u32)((v - (f32)whole) * 1000.0f + 0.5f);
+    if (frac >= 1000)
+    {
+        whole += 1;
+        frac = 0;
+    }
+
+    put(whole);
+    put(".");
+
+    char digits[3] = { char('0' + (frac / 100) % 10),
+                       char('0' + (frac / 10) % 10),
+                       char('0' + frac % 10) };
+    for (u32 i = 0; i < 3 && len < sizeof(buf) - 1; i++)
+        buf[len++] = digits[i];
+    buf[len] = '\0';
+}
+
 } // namespace nsmbudx

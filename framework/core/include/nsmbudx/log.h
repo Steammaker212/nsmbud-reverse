@@ -24,6 +24,12 @@ struct LogLine
 
     void put(const char* s);
     void put(u32 v);
+    void put(s32 v);
+    void put(bool v);
+    // Fixed point, 3 decimals -- no printf in a -nostdlib module. This overload
+    // is also what keeps a float argument from being ambiguous between the two
+    // integer overloads.
+    void put(f32 v);
 };
 
 template <typename... Parts>
