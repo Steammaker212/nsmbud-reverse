@@ -11,7 +11,7 @@ Reusable code for sweet-dx mods. A mod pulls parts in by listing them in its
 | `resources` | `nsmbudx::ScopedNameRemap` swaps archive/model names inside the game's own code; `isArchiveLoaded()` | `ResArchiveMgr::get` `0x43B548`, `ResArchive::getModel` `0x430090` |
 | `items` | `nsmbudx::blockItems::registerContents(21..31, profile)` puts any actor inside ?-blocks and bricks | `getContents` `0x563294`, spawnPowerup `0x5B5A3C`/`0x5B5FA8`, `ItemMgr::spawnItem` `0x4663F4` |
 | `actors` | `NSMBUDX_ACTOR_VARIANT`: a new sprite made from any vanilla actor with your archive/model; `cVariant_AirSwim` lets water actors move through air; per-variant enemy hit rules (`Immune`, `SameAs`) and damage-mask edits | `checkLiquidCollisions` `0x151ED8` (air-swim only) |
-| `player` | `nsmbudx::suits::overrideColor/clear/refresh`: your own suit colours (a frame of the PB/PH/PC_switch texture animations) for a player in a given colour type | `MarioModel::setColorType` `0x75A6E4` |
+| `player` | `nsmbudx::suits::showColorAs/overrideColor/clear/refresh`: a power-up's own suit colours, on every character (borrow another colour type's look, or your own frame of the PB/PH/PC_switch animations on Mario/Luigi) | the three model classes' `setColorType`: `0x75A6E4`, `0x757B58`, `0x75D3AC` |
 | `diagnostics` | the archive guard logs any archive the game looks up but never loaded, just before the null dereference | archive manager `getFile` `0x8226EC` |
 
 `resources` and `items` need `core`, `items` also uses `game`, and `actors`

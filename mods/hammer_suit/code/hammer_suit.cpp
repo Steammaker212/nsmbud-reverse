@@ -30,13 +30,17 @@
 // a Mushroom first, like every other flower block.
 #define HAMMER_BLOCK_CONTENTS       21
 
-// The suit's colours: a frame of the player model's PB_switch / PH_switch /
-// PC_switch texture-pattern animations (framework/player). 0 Normal, 1 Fire,
-// 2 Ice. Add a 4th frame to those animations in your Mario/Luigi model
-// archives and set this to 3.0f for a real Hammer Suit. Until then 2.0f
-// borrows the Ice colours so the hammer thrower looks different. -1 = keep
-// the Fire colours.
-#define HAMMER_SUIT_FRAME           2.0f
+// The suit's colours (framework/player). HAMMER_SUIT_COLORS borrows a look the
+// game already has, on every character (Mario, Luigi, the Toads):
+// nsmbudx::suits::cColor_Ice (default), cColor_Normal, or cColor_Fire to keep
+// the Fire look.
+#define HAMMER_SUIT_COLORS          nsmbudx::suits::cColor_Ice
+
+// A real Hammer Suit: add a 4th frame to the PB_switch / PH_switch / PC_switch
+// texture-pattern animations in your Mario and Luigi model archives and set
+// this to 3.0f. Mario and Luigi then use that frame; other characters keep
+// HAMMER_SUIT_COLORS. -1 = off.
+#define HAMMER_SUIT_FRAME           -1.0f
 
 // =====================================================================
 //
@@ -259,8 +263,9 @@ extern "C" int HammerFlower_grant(StageActor* item)
     if (collector >= 0 && collector < 4 && itemCollector(item) == collector) {
         bool hammer = isHammerFlower(item);
         sHammerThrower[collector] = hammer;
-        if (hammer && HAMMER_SUIT_FRAME >= 0.0f)
-            nsmbudx::suits::overrideColor(collector, nsmbudx::suits::cColor_Fire, HAMMER_SUIT_FRAME);
+        if (hammer)
+            nsmbudx::suits::overrideColor(collector, nsmbudx::suits::cColor_Fire,
+                                          HAMMER_SUIT_FRAME, HAMMER_SUIT_COLORS);
         else
             nsmbudx::suits::clear(collector);
         // Takes effect with the coming mode change, or now if already Fire.

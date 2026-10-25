@@ -206,30 +206,43 @@ See [mods/bee/](../mods/bee/) for a complete example. To tell your variant apart
 ## 7d. Give a power-up its own suit colours
 
 A suit's colours are one frame of the player model's colour-switch animations
-(`PB_switch` body, `PH_switch` head, `PC_switch` cap): **0 Normal, 1 Fire,
-2 Ice**. `MarioModel::setColorType` (`0x6075A6E4`) picks the frame. A new look
-takes two steps:
+(`PB_switch` body, `PH_switch` head, `PC_switch` Mario's cap). Each model class
+has its own routine (virtual slot 44) that picks the frame:
 
-1. **Assets:** add a frame (e.g. frame 3, your colours) to those texture-pattern
-   animations in the Mario and Luigi model archives.
-2. **Code** (`framework/player`, add `player` to `requires.txt`):
+| Class | Routine | Frames |
+|---|---|---|
+| MarioModel (Mario, Luigi) | `0x6075A6E4` | 0 Normal, 1 Fire, 2 Ice |
+| KinopioModel (Toads) | `0x60757B58` | 3×(type−2) + 0 Normal, 1 Fire, 2 Ice |
+| vtable `0x60C240DC` (unidentified) | `0x6075D3AC` | 3×variant + 0/1/2 |
+
+`framework/player` (add `player` to `requires.txt`) changes the look two ways:
 
 ```cpp
 #include "nsmbudx/suits.h"
-nsmbudx::suits::overrideColor(playerNo, nsmbudx::suits::cColor_Fire, 3.0f);
-nsmbudx::suits::refresh(playerNo);   // apply now if the mode doesn't change
+using namespace nsmbudx::suits;
+
+// Borrow another colour type's look, on every character, no assets needed:
+showColorAs(playerNo, cColor_Fire, cColor_Ice);
+
+// Or your own frame on Mario and Luigi (add frame 3 to their switch
+// animations), with a fallback look for everyone else:
+overrideColor(playerNo, cColor_Fire, 3.0f, cColor_Ice);
+
+refresh(playerNo);   // apply now if the mode doesn't change
 ```
 
-While set, a Normal- or Small-body player given the Fire colours gets your
-frame instead. Taking damage changes the colour type, so the vanilla look comes
-back by itself; `clear(playerNo)` removes it. Before editing assets, use frame
-`2.0f` (the Ice colours) to see it working. The Hammer Suit does exactly this
-(`HAMMER_SUIT_FRAME`).
+The model still records the colour type the game asked for, so taking damage
+brings the vanilla look back by itself; `clear(playerNo)` removes the override.
+The Hammer Suit does exactly this (`HAMMER_SUIT_COLORS`, `HAMMER_SUIT_FRAME`).
+
+Never call one class's routine on another's model: past `+0x1E0` the layouts
+differ (MarioModel's `+0x224` is the bonus cap, a Toad's is not), and that is
+how the first Hammer Flower build crashed when a Toad collected it (ledger
+F0061). `refresh` goes through the model's own vtable.
 
 The full mechanism and the per-mode tables (body, size, height) are in
 [readable/player/PlayerModel.cpp](../readable/player/PlayerModel.cpp) and
-`framework/game/include/game/player.h`. Toad, Toadette and Nabbit use other
-model classes and are not covered yet.
+`framework/game/include/game/player.h`.
 
 ## 7e. Change how an enemy reacts to attacks
 

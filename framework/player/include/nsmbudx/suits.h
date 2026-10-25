@@ -1,29 +1,36 @@
 // nsmbudx/suits.h -- give a power-up its own suit colours.
 //
-// How the game colours suits (ledger F0049-F0052): the Normal and Small player
-// bodies carry texture-pattern animations "PB_switch" (body), "PH_switch"
-// (head) and "PC_switch" (bonus cap). MarioModel::setColorType (0x6075A6E4)
-// plays them and freezes them on a frame:
+// How the game colours suits (ledger F0049-F0052, F0061-F0063): the player
+// bodies carry texture-pattern animations ("PB_switch" body, "PH_switch" head,
+// "PC_switch" Mario's bonus cap) frozen on one frame. Each player-model class
+// has its own routine (virtual slot 44) that picks the frame:
 //
-//   frame 0   Normal            frame 1   Fire (and the P-Acorn, on the Squirrel body)
-//   frame 2   Ice               Propeller and Penguin have their own models
+//   MarioModel (Mario, Luigi)   frame 0 Normal, 1 Fire, 2 Ice
+//   KinopioModel (Toads)        frame 3*(type-2) + 0 Normal, 1 Fire, 2 Ice
 //
-// So a new suit look is one more frame in those animations (an asset edit of
-// the player model archive), plus code that selects it. This does the code:
+// Two ways to change a power-up's look:
 //
-//   nsmbudx::suits::overrideColor(playerNo, nsmbudx::suits::cColor_Fire, 3.0f);
-//   nsmbudx::suits::refresh(playerNo);    // apply now, even without a mode change
+//  * Borrow another colour type's look, on every character (no asset edits):
 //
-// While an override is set, whenever the game gives that player the named
-// colour type on the Normal or Small body, the frame becomes yours. Other
-// colour types and bodies are untouched, so taking damage restores the vanilla
-// look by itself.
+//      nsmbudx::suits::showColorAs(playerNo, nsmbudx::suits::cColor_Fire,
+//                                  nsmbudx::suits::cColor_Ice);
 //
-// Until your model has the extra frame, pick an existing one (e.g. 2.0f, the
-// Ice colours) to see the system working.
+//    Whenever the game gives that player the Fire colours, the model's own
+//    routine draws the Ice ones instead, with the right frames for Mario,
+//    Luigi or a Toad.
 //
-// Covers Mario and Luigi (MarioModel). Toad, Toadette and Nabbit use other
-// model classes that are not mapped yet.
+//  * A frame of your own (an asset edit: add frame 3 to the Mario and Luigi
+//    switch animations), with a fallback look for the other characters:
+//
+//      nsmbudx::suits::overrideColor(playerNo, nsmbudx::suits::cColor_Fire, 3.0f,
+//                                    nsmbudx::suits::cColor_Ice);
+//
+// Then apply it now, even without a mode change:
+//
+//      nsmbudx::suits::refresh(playerNo);
+//
+// Only the named colour type is affected and the model still records the type
+// the game asked for, so taking damage restores the vanilla look by itself.
 //
 // Deluxe (Switch) v1.0.0 only.
 
@@ -43,11 +50,18 @@ enum ColorType : u32
     cColor_Ice     = 3,
 };
 
-void overrideColor(u32 playerNo, ColorType when, f32 frame);
+// When the player gets `when`, draw the `showAs` colours instead (every model class).
+void showColorAs(u32 playerNo, ColorType when, ColorType showAs);
+
+// When the player gets `when`: Mario and Luigi on the Normal or Small body take
+// `frame`; every other character (or frame < 0) takes the `elsewhere` colours,
+// and cColor_Invalid there leaves them vanilla.
+void overrideColor(u32 playerNo, ColorType when, f32 frame, ColorType elsewhere = cColor_Invalid);
+
 void clear(u32 playerNo);
 
-// Re-run the player's colour selection now (after collecting an item that
-// does not change the mode, for example).
+// Re-run the player's colour selection now, through the model's own routine
+// (after collecting an item that does not change the mode, for example).
 void refresh(u32 playerNo);
 
 } // namespace suits

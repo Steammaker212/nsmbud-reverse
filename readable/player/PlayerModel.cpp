@@ -5,7 +5,8 @@
 // addresses given, using framework/game/include/game/player.h. The Wii U
 // decomp (red-pro2 src/player/PlayerModel.cpp, MarioModel.cpp) has the same
 // structure; Deluxe offsets and tables were read from the binary. Evidence:
-// data/findings/ledger.csv F0049-F0055. Documents the game; not compiled.
+// data/findings/ledger.csv F0049-F0055, F0061-F0063. Documents the game;
+// not compiled.
 //
 // Deluxe (Switch) v1.0.0.
 
@@ -94,3 +95,61 @@ void MarioModel::setColorType(PlayerColor color, bool keepHeadKonst3)
     if (!keepHeadKonst3 && mpHeadModel)
         resetTevKColor3Alpha(mpHeadModel->model);           // sub_6078EFFC
 }
+
+// ---- the other model classes ------------------------------------------------
+//
+// setColorType is virtual (slot 44, vtable +0xB0) and each player-model class
+// has its own; the layouts agree up to +0x1E0 and differ after it (F0061).
+// MarioModel's +0x224 is the bonus cap; KinopioModel has none, and calling
+// MarioModel's routine on a Toad dereferences whatever lives there.
+
+// 0x60B0A798: first colour frame of each Toad type (+0xA4 = 2, 3, 4).
+static const f32 cKinopioFrameBase[3] = { 0.0f, 3.0f, 6.0f };
+
+// 0x60757B58 (KinopioModel, vtable 0x60C23E94; never a defined function).
+void KinopioModel::setColorType(PlayerColor color, bool keepHeadKonst3)
+{
+    if (mColorType == color)                                // +0x1E0
+        return;
+    mColorType = color;
+
+    f32 frame = 0.0f;
+    switch (mNowBodyID) {                                   // +0x12C
+    case PlayerBody::Normal:
+    case PlayerBody::Small: {
+        u32 t = mType - 2;                                  // +0xA4
+        frame = t <= 2 ? cKinopioFrameBase[t] : 0.0f;
+        frame += color == PlayerColor::Ice  ? 2.0f
+               : color == PlayerColor::Fire ? 1.0f : 0.0f;
+        break;
+    }
+    case PlayerBody::Propeller:
+    case PlayerBody::Penguin:
+        frame = mType == 3 ? 1.0f : 0.0f;
+        break;
+    case PlayerBody::Squirrel:
+        frame = (mType == 3 ? 1.0f : 0.0f) + (mPlayerMode == PlayerMode::PAcorn ? 2.0f : 0.0f);
+        break;
+    default:
+        break;
+    }
+
+    // Switch-animation name tables: head 0x60CBEF30, body 0x60CBEF60 (+ body*8).
+    TexAnim* head = mpHeadModel->texAnims[0];               // +0x124, not null-checked
+    head->play(mpModelRes, cKinopioHeadSwitchAnm[mNowBodyID]);
+    head->frameCtrl.setRepeat(false);
+    head->rate = 0.0f;  head->frame = frame;  head->flags |= 2;
+
+    TexAnim* body = mpModel->texAnims[0];                   // +0x18
+    body->play(mpModelRes, cKinopioBodySwitchAnm[mNowBodyID]);
+    body->frameCtrl.setRepeat(false);
+    body->rate = 0.0f;  body->frame = frame;  body->flags |= 2;
+
+    if (!keepHeadKonst3)
+        resetTevKColor3Alpha(mpHeadModel->model);           // sub_6078EFFC
+}
+
+// 0x6075D3AC (vtable 0x60C240DC; which character uses it is not established):
+// frame = variant*3 + 1 Fire / 2 Ice on Normal/Small, with variant a u32 at
+// +0x224 that 0x6075D518 sets (clamped to 3, then re-applies the colour).
+// Binds body +0x18 and head +0x498.

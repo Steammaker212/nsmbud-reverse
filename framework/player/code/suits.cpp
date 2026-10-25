@@ -1,15 +1,25 @@
 // suits.cpp -- see nsmbudx/suits.h.
 //
-// Layout read from MarioModel::setColorType (0x6075A6E4, never a defined
-// function; ledger F0050-F0052):
+// Three player-model classes have their own colour routine, all virtual slot
+// 44 (vtable +0xB0) and none a defined function in the database (ledger
+// F0050, F0061-F0063):
 //
-//   model+0x010  model resource          model+0x0A4  type (1 = Luigi)
-//   model+0x018  body ModelWrapper*      model+0x124  head ModelWrapper* (may be null)
+//   MarioModel    vtable 0x60C23FAC  0x6075A6E4  head +0x124, body +0x018, bonus cap +0x224
+//   KinopioModel  vtable 0x60C23E94  0x60757B58  head +0x124, body +0x018
+//   vtable 0x60C240DC (unidentified)   0x6075D3AC  body +0x018, head +0x498; +0x224 = colour variant
+//
+// Shared by all three:
+//
+//   model+0x010  model resource          model+0x0A4  type (0 Mario, 1 Luigi, 2-4 Toads)
 //   model+0x12C  body id (0 Normal, 1 Small, 2 Propeller, 3 Penguin, 4 Squirrel)
 //   model+0x1D8  player mode             model+0x1E0  current colour type
-//   model+0x224  bonus cap ModelWrapper*
 //   wrapper+0x14 -> texture animations; [0] is the colour switch animation
 //   anim+0x14 frame (f32), anim+0x18 rate, anim+0x1C flags (|= 2 after a change)
+//
+// The layouts differ past that: MarioModel's +0x224 is the bonus cap wrapper,
+// the third class's is an integer. Calling MarioModel's routine on another
+// class reads a pointer that is not one (the Toad crash, F0061), so every call
+// here goes through the model's own vtable.
 //
 // Player -> model: *(*(player + 0x288) + 4), the model manager createFireBall
 // asks for the wrist joint (F0015).
@@ -21,11 +31,16 @@ extern "C" u8 PlayerMgr_instance[];   // generated game API: 0x60CC436C, holds P
 
 namespace {
 
+constexpr u32 cSetColorTypeSlot = 0xB0 / 4;
+
+typedef void (*SetColorTypeFn)(void* model, u32 colorType, bool keepHeadKonst3);
+
 struct Override
 {
     bool active;
     u32 when;
-    f32 frame;
+    f32 frame;      // < 0: none (MarioModel only)
+    u32 showAs;     // cColor_Invalid: none (every class)
 };
 
 Override sOverrides[4];
@@ -42,6 +57,11 @@ inline void* modelOf(void* player)
     return mgr ? *(void**)((u8*)mgr + 4) : nullptr;
 }
 
+inline u32& colorTypeOf(void* model)
+{
+    return *(u32*)((u8*)model + 0x1E0);
+}
+
 s32 playerOfModel(void* model)
 {
     for (u32 i = 0; i < 4; i++)
@@ -49,6 +69,14 @@ s32 playerOfModel(void* model)
             if (modelOf(p) == model)
                 return i;
     return -1;
+}
+
+const Override* overrideFor(void* model, u32 colorType)
+{
+    s32 n = playerOfModel(model);
+    if (n < 0 || !sOverrides[n].active || sOverrides[n].when != colorType)
+        return nullptr;
+    return &sOverrides[n];
 }
 
 void setFrame(void* wrapper, f32 frame)
@@ -63,33 +91,70 @@ void setFrame(void* wrapper, f32 frame)
     *(u32*)(anim + 0x1C) |= 2;
 }
 
+// Runs one class's routine. showAs: the routine picks that colour's frames
+// for this class and character, then the model records the colour the game
+// asked for, so damage and mode changes behave as without the override.
+bool runShowAs(SetColorTypeFn orig, void* model, u32 colorType, bool keepHeadKonst3, const Override* o)
+{
+    if (!o || o->showAs == nsmbudx::suits::cColor_Invalid)
+        return false;
+    if (colorTypeOf(model) == colorType)      // the routine's own "unchanged" check
+        return true;
+    orig(model, o->showAs, keepHeadKonst3);
+    colorTypeOf(model) = colorType;
+    return true;
+}
+
 } // namespace
 
 extern "C" void Suits_setColorType_orig(void* model, u32 colorType, bool keepHeadKonst3);
+extern "C" void Suits_kinopioSetColorType_orig(void* model, u32 colorType, bool keepHeadKonst3);
+extern "C" void Suits_model3SetColorType_orig(void* model, u32 colorType, bool keepHeadKonst3);
 
+// MarioModel (Mario, Luigi): a frame override first, else showAs.
 extern "C" void Suits_setColorType(void* model, u32 colorType, bool keepHeadKonst3)
 {
-    Suits_setColorType_orig(model, colorType, keepHeadKonst3);
+    const Override* o = overrideFor(model, colorType);
+    if ((!o || o->frame < 0.0f) && runShowAs(&Suits_setColorType_orig, model, colorType, keepHeadKonst3, o))
+        return;
 
-    s32 n = playerOfModel(model);
-    if (n < 0 || !sOverrides[n].active || sOverrides[n].when != colorType)
+    Suits_setColorType_orig(model, colorType, keepHeadKonst3);
+    if (!o || o->frame < 0.0f)
         return;
     u32 body = *(u32*)((u8*)model + 0x12C);
     if (body > 1)                       // only Normal and Small carry the switch frames
         return;
-    f32 frame = sOverrides[n].frame;
-    setFrame(*(void**)((u8*)model + 0x018), frame);   // body
-    setFrame(*(void**)((u8*)model + 0x124), frame);   // head
-    setFrame(*(void**)((u8*)model + 0x224), frame);   // bonus cap
+    setFrame(*(void**)((u8*)model + 0x018), o->frame);   // body
+    setFrame(*(void**)((u8*)model + 0x124), o->frame);   // head
+    setFrame(*(void**)((u8*)model + 0x224), o->frame);   // bonus cap
+}
+
+// KinopioModel and the third class: frames are per character, so only showAs.
+extern "C" void Suits_kinopioSetColorType(void* model, u32 colorType, bool keepHeadKonst3)
+{
+    if (!runShowAs(&Suits_kinopioSetColorType_orig, model, colorType, keepHeadKonst3, overrideFor(model, colorType)))
+        Suits_kinopioSetColorType_orig(model, colorType, keepHeadKonst3);
+}
+
+extern "C" void Suits_model3SetColorType(void* model, u32 colorType, bool keepHeadKonst3)
+{
+    if (!runShowAs(&Suits_model3SetColorType_orig, model, colorType, keepHeadKonst3, overrideFor(model, colorType)))
+        Suits_model3SetColorType_orig(model, colorType, keepHeadKonst3);
 }
 
 namespace nsmbudx {
 namespace suits {
 
-void overrideColor(u32 playerNo, ColorType when, f32 frame)
+void overrideColor(u32 playerNo, ColorType when, f32 frame, ColorType elsewhere)
 {
     if (playerNo < 4)
-        sOverrides[playerNo] = { true, (u32)when, frame };
+        sOverrides[playerNo] = { true, (u32)when, frame, (u32)elsewhere };
+}
+
+void showColorAs(u32 playerNo, ColorType when, ColorType showAs)
+{
+    if (playerNo < 4)
+        sOverrides[playerNo] = { true, (u32)when, -1.0f, (u32)showAs };
 }
 
 void clear(u32 playerNo)
@@ -103,9 +168,12 @@ void refresh(u32 playerNo)
     void* model = modelOf(playerAt(playerNo));
     if (!model)
         return;
-    u32 current = *(u32*)((u8*)model + 0x1E0);
-    *(u32*)((u8*)model + 0x1E0) = cColor_Invalid;      // the routine skips an unchanged type
-    Suits_setColorType(model, current ? current : (u32)cColor_Normal, false);
+    SetColorTypeFn setColorType = (SetColorTypeFn)(*(void***)model)[cSetColorTypeSlot];
+    if (!setColorType)
+        return;
+    u32 current = colorTypeOf(model);
+    colorTypeOf(model) = cColor_Invalid;      // the routines skip an unchanged type
+    setColorType(model, current ? current : (u32)cColor_Normal, false);
 }
 
 } // namespace suits
