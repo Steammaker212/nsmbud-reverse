@@ -111,9 +111,59 @@ constexpr u32 kBounceCooldown = 8;
 u32 g_bounceCooldown = 0;
 
 // Is the player wearing the suit this mod hijacks?
+//
+// IMPORTANT: this dereferences player+0x528, so it may only be called on an
+// object that is definitely a BrosBase. The onExecute hook guarantees that (the
+// game called *this* horse's own BrosBase::onExecute, so `self` is a player).
+// It must NOT be called on an arbitrary actor from the overlap hook -- a plain
+// StageActor is only 0x284 bytes, so reading +0x528 there would run off the end
+// of the allocation. `slidePlayers` below is how the overlap hook identifies
+// players instead: by pointer equality, with no dereference at all.
 inline bool wearingSuit(void* player)
 {
     return *modeAt(player) == (u32)SLIDE_REQUIRES_MODE;
+}
+
+// Players currently known to be sliding, remembered from onExecute.
+//
+// The overlap hook runs for every collider pair in the scene, so it cannot ask
+// "is this a player?" by reading player-only fields. What it can do cheaply and
+// safely is compare an Actor* against a small set of pointers that onExecute has
+// already vouched for. Comparing pointers never touches the pointee, so a stale
+// entry cannot fault.
+constexpr u32 kMaxPlayers = 4;
+void* g_slidePlayers[kMaxPlayers] = {};
+
+void rememberSlidePlayer(void* player)
+{
+    for (u32 i = 0; i < kMaxPlayers; ++i)
+        if (g_slidePlayers[i] == player)
+            return;
+    for (u32 i = 0; i < kMaxPlayers; ++i)
+    {
+        if (g_slidePlayers[i] == nullptr)
+        {
+            g_slidePlayers[i] = player;
+            return;
+        }
+    }
+}
+
+void forgetSlidePlayer(void* player)
+{
+    for (u32 i = 0; i < kMaxPlayers; ++i)
+        if (g_slidePlayers[i] == player)
+            g_slidePlayers[i] = nullptr;
+}
+
+bool isRememberedSlidePlayer(void* actor)
+{
+    if (actor == nullptr)
+        return false;
+    for (u32 i = 0; i < kMaxPlayers; ++i)
+        if (g_slidePlayers[i] == actor)
+            return true;
+    return false;
 }
 
 inline void setSpeedX(void* player, f32 v)
@@ -303,6 +353,8 @@ extern "C" int SlideSuit_onExecute(void* self)
 
     if (wearingSuit(self))
     {
+        rememberSlidePlayer(self);
+
         const bool bounced = handleWallContact(self, playerNo);
         driveSlide(self);
 
@@ -312,6 +364,12 @@ extern "C" int SlideSuit_onExecute(void* self)
             nsmbudx::log("slide: bounced, now dir=", (u32)*dirAt(self),
                          " out=", collisionOutput(self));
         }
+    }
+    else
+    {
+        // Not in the suit any more (or never was): stop offering this pointer to
+        // the overlap hook, so a powered-down player stops bumping blocks.
+        forgetSlidePlayer(self);
     }
 
 #if SLIDE_LOG
@@ -353,14 +411,19 @@ extern "C" bool SlideSuit_doOverlap(void* ac1, void* ac2)
 {
     ++g_bumpTick;
 
-    // Only worth doing while a suited player is moving fast enough to matter.
-    // Both sides are checked because either could be the player.
+    // Identify the player by pointer equality against what onExecute vouched
+    // for. Do NOT call wearingSuit() on these owners: the overlap hook sees
+    // every actor in the scene, and most of them are far smaller than
+    // player+0x528.
     void* owner1 = *(void**)((char*)ac1 + 0x40);
     void* owner2 = *(void**)((char*)ac2 + 0x40);
 
-    if (owner1 && wearingSuit(owner1))
+    const bool p1 = isRememberedSlidePlayer(owner1);
+    const bool p2 = isRememberedSlidePlayer(owner2);
+
+    if (p1 && !p2)
         bumpBlock(owner2, 0);
-    else if (owner2 && wearingSuit(owner2))
+    else if (p2 && !p1)
         bumpBlock(owner1, 0);
 
     return SlideSuit_doOverlap_orig(ac1, ac2);

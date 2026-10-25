@@ -92,6 +92,20 @@ some other way simply would not be bumped -- failing in the safe direction.
 A per-block cooldown stops one slide from spawning 30 items, since the pair
 overlaps for several frames.
 
+### A safety detail worth reading
+
+The overlap hook runs for **every collider pair in the scene**, so it cannot ask
+"is this owner a player?" by reading `player+0x528` the way the `onExecute` hook
+does. A plain `StageActor` is only `0x284` bytes, so that read would run off the
+end of the allocation on almost every actor in the level.
+
+So the two hooks share identity differently: `onExecute` pushes its `self` into a
+small table of known sliding players (it is *guaranteed* to be a BrosBase, since
+the game called that class's own `onExecute`), and the overlap hook only ever
+**compares pointers** against that table. Comparing a pointer does not touch the
+pointee, so a stale entry cannot fault. The entry is removed again as soon as the
+player loses the suit.
+
 ## What is **not** done
 
 **Ice balls are not inherited.** Firing them is the suit's attack action and it
