@@ -16,6 +16,8 @@
 | | `fetch.py` | Hex-Rays text for one address, with address tags kept (`--tags`), a vtable dump (`--vtable A --count N`), and a disassembly fallback when the decompiler refuses |
 | | `dump_range.py` | One review file for a whole class: `--out x.c 0xADDR ...` or `--lo/--hi` over a range |
 | | `elf.py` | Read the rebased ELF directly, with no IDA session: `sections`, `rd`, `str`, `f32`, `dis` (`--thumb`). Deterministic where the RPC intermittently fails, and it decodes functions IDA left undefined |
+| | `sarc.py` | Unpack a `.szs`: Yaz0 inflate + SARC. `list`, `tree`, `cat`, `info`, `hexdump` |
+| | `bfres.py` | Read a Switch BFRES model: `info`, `anims` (the skeletal animation names), `strings`, `sections`. Little-endian; the Wii U layout differs |
 | `pipeline/` | (see its README) | Builds the decompiled corpus in `decompiled/src/` |
 
 ## The loose scripts here

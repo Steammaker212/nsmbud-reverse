@@ -37,6 +37,10 @@ venv/
 Thumbs.db
 desktop.ini
 
+# ---- Extracted archive scratch (scripts/sarc.py output) ----
+.rea/*.bfres
+.rea/*.bfsha
+
 # ---- Local scratch ----
 *.tmp
 *.bak

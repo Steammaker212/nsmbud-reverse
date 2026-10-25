@@ -56,6 +56,32 @@ Until the archive exists the Shy Guy shows the Goombrat's model and the log says
 `remap: archive 'kakibo' is not loaded` -- useful for testing the mechanics
 before any art exists.
 
+### What the vanilla archive actually contains
+
+Read out of the shipped `kakibo.Nin_NX_NVN.szs` with
+[`scripts/sarc.py`](../../scripts/sarc.py) and [`scripts/bfres.py`](../../scripts/bfres.py)
+(ledger F0102-F0105):
+
+```
+kakibo.Nin_NX_NVN.szs        Yaz0 -> SARC, 2 files
+  output.bfres                 the model
+  Wii_UBER.Nin_NX_NVN.bfsha    the shader archive
+
+output.bfres                 FRES, little-endian
+  animations   damage, hikkuri, walk, walk0, walk1     <- only 5
+  materials    mat_kakibo_body, mat_kakibo_eye
+```
+
+So the Goombrat ships exactly `walk`, `walk0` and `walk1`, plus `damage` and
+`hikkuri` which this mod does not need. `walk1` is the big track (1224 bytes
+in one copy); `walk` and `walk0` are 96-byte stubs, i.e. near-static poses --
+the walk cycle is essentially all in `walk1`. A Shy Guy can therefore get away
+with three cheap animations, but `walk1` is the one that has to look right.
+
+Note the archive is *not* large: two files, two materials, one skeleton. A
+replacement does not need to be complex.
+
+
 ## Place it
 
 Sprite **737** in Yaz0moto (the `steam-dx-test` patch lists it under *Enemies*).
