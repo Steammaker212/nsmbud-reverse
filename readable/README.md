@@ -11,6 +11,7 @@ headers in [`framework/game/`](../framework/game/), which share these names.
 | File | Covers |
 |---|---|
 | [engine/Actor.cpp](engine/Actor.cpp) | the actor tower and the state machine: `Actor` (0x50) → `StageActor` (0x284) → `CollisionActor` → `StateActor`/`MultiStateActor` → `Enemy`; `ActorMgr::create`'s three-way verdict, how an actor's id and heap are chosen (by profile id), why collision size comes from `ActorInfo` and not the model, and `StateMgr` |
+| [engine/ArchiveMgr.cpp](engine/ArchiveMgr.cpp) | how a profile's archives are loaded: the per-id resource tables, `"Model/%s.Nin_NX_NVN.szs"` built at load time, the `hasResourceLoaded` guard, and the `block_ice` special case |
 | [map_obj/BlockBase.cpp](map_obj/BlockBase.cpp) | ?-blocks and bricks: contents → content code, what each code does when hit, spawning a power-up |
 | [item/ItemMgr.cpp](item/ItemMgr.cpp) | content code → item → profile, the player-mode gate, the single spawn funnel |
 | [player/PlayerModel.cpp](player/PlayerModel.cpp) | power-up mode → body model, and how suit colours are chosen (`setColorType`) |
