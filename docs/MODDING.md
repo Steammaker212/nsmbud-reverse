@@ -203,6 +203,34 @@ How it works:
 
 See [mods/bee/](../mods/bee/) for a complete example. To tell your variant apart in a hook (its runtime profile is the vanilla one), use `nsmbudx::variantProfileOf(actor)`; [mods/p_acorn/](../mods/p_acorn/) does that to make the Acorn grant mode 8.
 
+## 7d. Give a power-up its own suit colours
+
+A suit's colours are one frame of the player model's colour-switch animations
+(`PB_switch` body, `PH_switch` head, `PC_switch` cap): **0 Normal, 1 Fire,
+2 Ice**. `MarioModel::setColorType` (`0x6075A6E4`) picks the frame. A new look
+takes two steps:
+
+1. **Assets:** add a frame (e.g. frame 3, your colours) to those texture-pattern
+   animations in the Mario and Luigi model archives.
+2. **Code** (`framework/player`, add `player` to `requires.txt`):
+
+```cpp
+#include "nsmbudx/suits.h"
+nsmbudx::suits::overrideColor(playerNo, nsmbudx::suits::cColor_Fire, 3.0f);
+nsmbudx::suits::refresh(playerNo);   // apply now if the mode doesn't change
+```
+
+While set, a Normal- or Small-body player given the Fire colours gets your
+frame instead. Taking damage changes the colour type, so the vanilla look comes
+back by itself; `clear(playerNo)` removes it. Before editing assets, use frame
+`2.0f` (the Ice colours) to see it working. The Hammer Suit does exactly this
+(`HAMMER_SUIT_FRAME`).
+
+The full mechanism and the per-mode tables (body, size, height) are in
+[readable/player/PlayerModel.cpp](../readable/player/PlayerModel.cpp) and
+`framework/game/include/game/player.h`. Toad, Toadette and Nabbit use other
+model classes and are not covered yet.
+
 ## 8. Log and debug
 
 ```cpp

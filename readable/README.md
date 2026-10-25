@@ -12,6 +12,7 @@ headers in [`framework/game/`](../framework/game/), which share these names.
 |---|---|
 | [map_obj/BlockBase.cpp](map_obj/BlockBase.cpp) | ?-blocks and bricks: contents → content code, what each code does when hit, spawning a power-up |
 | [item/ItemMgr.cpp](item/ItemMgr.cpp) | content code → item → profile, the player-mode gate, the single spawn funnel |
+| [player/PlayerModel.cpp](player/PlayerModel.cpp) | power-up mode → body model, and how suit colours are chosen (`setColorType`) |
 | [enemy/Pukupuku.cpp](enemy/Pukupuku.cpp) | the Cheep Cheep family (530–538): profile → mode, facing, model and animation names, states, the water-surface clamp, formations |
 
 Coverage grows one verified subsystem at a time; [docs/RE_PLAN.md](../docs/RE_PLAN.md)

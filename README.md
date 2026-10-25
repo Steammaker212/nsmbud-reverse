@@ -25,6 +25,7 @@ No game files are distributed here. You need your own `main` NSO. See [NOTICE.md
 | **Help reverse engineer** | [docs/RE_PLAN.md](docs/RE_PLAN.md): which sources to trust, how a finding is verified, and the phases |
 | **Read the game as clean C++** | [readable/](readable/): hand-reconstructed, verified subsystems with real names (blocks and items so far) |
 | **Make a new enemy from an existing one** | `framework/actors` + [mods/bee/](mods/bee/): any vanilla actor becomes a new sprite with your model (the Bee is a flying Cheep Cheep) |
+| **Give a power-up its own suit colours** | `framework/player` + [docs/MODDING.md](docs/MODDING.md) §7d: suits are a texture-animation frame; add one and select it |
 | **Get the P-Acorn from ?-blocks** | [mods/p_acorn/](mods/p_acorn/): the P-Acorn exists in the game but no level gives it; contents 22 now does |
 | **Put a new power-up in ?-blocks** | `framework/items` + [docs/MODDING.md](docs/MODDING.md) §7b: block contents 21–31 are free for mods |
 | **Read the raw decompiled game** | [decompiled/src/](decompiled/src/): 45,148 functions, one C file each (see the caveat below) |
@@ -42,6 +43,7 @@ framework/       reusable code mods pull in through requires.txt
   game/            codedx-style class headers (game/block.h: BlockBase, ItemMgr)
   items/           custom ?-block / brick contents -> any profile
   actors/          new sprites from vanilla actors with your model (+ air-swim)
+  player/          suit colours per power-up
   resources/       ScopedNameRemap: your archive/model names in the game's own code
   diagnostics/     archive guard: names a missing archive before the crash
 sdk/             generated game API (header, .sym, hookable.csv)

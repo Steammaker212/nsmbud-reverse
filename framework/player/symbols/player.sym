@@ -1,0 +1,3 @@
+# framework/player. RVA = VA - 0x60000000. Deluxe (Switch) v1.0.0.
+# PlayerMgr* PlayerMgr::instance; players at +0x30, 4 entries (ledger F0020).
+PlayerMgr_instance = 0x00CC436C;

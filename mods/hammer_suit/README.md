@@ -98,6 +98,8 @@ The evidence for every offset is in
 
 - The hammer-thrower flag lives in memory. After a reboot, a saved Fire suit
   throws fireballs until a Hammer Flower is collected again.
-- The **player's** suit still looks like Fire Mario. Swapping the player model is
-  the next research item: the lead is `P_FireFlower_00` (`0x604F9090`), status
-  **unknown**.
+- **Suit colours:** a hammer thrower gets frame `HAMMER_SUIT_FRAME` of the
+  player's colour-switch animations (framework/player). The default `2.0f`
+  borrows the Ice colours; add a 4th frame to `PB_switch` / `PH_switch` /
+  `PC_switch` in the Mario/Luigi model archives and set `3.0f` for a real
+  Hammer Suit. Toad, Toadette and Nabbit keep the Fire colours for now.

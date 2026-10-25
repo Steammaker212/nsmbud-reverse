@@ -1,0 +1,9 @@
+@ framework/player: suit colours. MarioModel::setColorType (0x6075A6E4) is not
+@ a defined function in the database; its entry is `push {r4-r7, r11, lr}`,
+@ position-independent, so the trampoline can replay it.
+
+Suits_setColorType:
+    type:       hook
+    address:    0x0075A6E4
+    symbol:     Suits_setColorType
+    trampoline: Suits_setColorType_orig
