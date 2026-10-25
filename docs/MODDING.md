@@ -273,6 +273,39 @@ you want a rule for an attack the base enemy ignores. The Bee has a one-line
 example: `BEE_FIREPROOF`. The dispatchers are reconstructed in
 [readable/enemy/EnemyDamage.cpp](../readable/enemy/EnemyDamage.cpp).
 
+## 7f. Change what Yoshi does
+
+Yoshi (profile 442) is a PlayerBase with a second state machine for his mouth.
+What happens to anything he eats is decided by the eaten actor's **EatData**
+(`actor+0x26C`; type at `+0x10`): when the tongue comes back, type 5
+(YoshiFire) or 6 (YoshiFireIce) is swapped for a YoshiFlame (profile 478) he
+spits. Enemy fireballs are type 5, which is why eating one gives fire breath.
+`framework/yoshi` (add `yoshi` to `requires.txt`):
+
+```cpp
+#include "nsmbudx/yoshi.h"
+nsmbudx::yoshi::setBreathFromEnemies(yoshi::EatType::YoshiFire);   // every enemy -> fire
+nsmbudx::yoshi::setEatType(actor, yoshi::EatType::YoshiFireIce);   // this one -> ice
+void* held = nsmbudx::yoshi::mouthActor(yoshiActor);
+```
+
+[mods/yoshi_fire/](../mods/yoshi_fire/) is the first line as a whole mod.
+
+His numbers need no code. These constants are loaded at run time and read
+only by Yoshi, so a sweet-dx `data` hook changes them
+([mods/yoshi_tuning/](../mods/yoshi_tuning/)):
+
+| What | Address (RVA) | Vanilla |
+|---|---|---|
+| fruits per egg | `0x00B0C0C8` | `5` (u32) |
+| flutter-jump length | `0x00B0C0CC` | `30` frames (u32) |
+| flutter lift while falling fast | `0x007D3F94` | `0.2` (f32) |
+| flutter lift after that | `0x007D3F98` | `0.07` (f32) |
+
+The class layout, all 16 overridden/own states, the mouth states and the
+eggs are in `framework/game/include/game/yoshi.h` and
+[readable/player/Yoshi.cpp](../readable/player/Yoshi.cpp).
+
 ## 8. Log and debug
 
 ```cpp

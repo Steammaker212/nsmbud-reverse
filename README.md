@@ -28,6 +28,7 @@ No game files are distributed here. You need your own `main` NSO. See [NOTICE.md
 | **Change what hurts an enemy** | `framework/actors` hit rules + [docs/MODDING.md](docs/MODDING.md) §7e: fireproof, shell-proof, "dies to ice like a Star", per sprite |
 | **Give a power-up its own suit colours** | `framework/player` + [docs/MODDING.md](docs/MODDING.md) §7d: suits are a texture-animation frame; add one and select it |
 | **Make a custom world map** | [docs/WORLDMAP.md](docs/WORLDMAP.md) + `scripts/worldmap/wmtool.py`: the CSV format, every limit, point → level mapping; `check` tells you if the world can be explored |
+| **Change Yoshi** | [docs/MODDING.md](docs/MODDING.md) §7f: fire/ice breath from any enemy ([mods/yoshi_fire/](mods/yoshi_fire/)), fruits per egg and flutter length as data patches ([mods/yoshi_tuning/](mods/yoshi_tuning/)) |
 | **Get the P-Acorn from ?-blocks** | [mods/p_acorn/](mods/p_acorn/): the P-Acorn exists in the game but no level gives it; contents 22 now does |
 | **Put a new power-up in ?-blocks** | `framework/items` + [docs/MODDING.md](docs/MODDING.md) §7b: block contents 21–31 are free for mods |
 | **Read the raw decompiled game** | [decompiled/src/](decompiled/src/): 45,148 functions, one C file each (see the caveat below) |
