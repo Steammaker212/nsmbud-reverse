@@ -27,10 +27,16 @@
 //
 // `Enemy::collisionPenguinSlide` (0x602A675C) is twelve bytes:
 //
-//     return (*(int (**)(int))(*(_DWORD *)a1 + 0x118))(a1);   // vtable +0x118
+//     ldr r3,[r0] ; ldr r3,[r3,#0x118] ; bx r3      ; vtable +0x118
 //
 // i.e. it forwards straight to the enemy's `collisionSlide` unless the class
-// overrides it. The overriders listed in the database are:
+// overrides it. Note the two slots are *different* entries:
+//
+//     Enemy vtable +0x118   collisionSlide          0x602A5C00
+//     Enemy vtable +0x12C   collisionPenguinSlide   0x602A675C
+//
+// so +0x118 above is the forward target, not the slot this function lives in.
+// The overriders listed in the database are:
 //
 //     Amp          0x602593EC
 //     Fuzzy        0x60277EC4
@@ -45,8 +51,14 @@
 // attack type 10 therefore cannot get it wrong: the game decides what each enemy
 // does with a slide, and it decides it per class, exactly as for the real suit.
 //
+// How type 10 reaches that slot: `Enemy::vfEC` (0x602A27E8) is the dispatcher.
+// It reads `acOther->info.category` (collider+0x8C) and compares it down a chain
+// -- `cmp r0,#0xa` at 0x602A2804 is the Penguin Slip case -- then calls the
+// matching vtable slot. Before calling it checks `[other+0x95] & 4` (an attack
+// flag on the other collider) and `Enemy+0x1805 & 2`.
+//
 // This is the important design consequence for a copy of the suit: nothing in
-// the mod needs to know the enemy table. Set the attack type on the player's
+// the mod needs to know the enemy table. Set the category on the player's
 // collider and the existing per-class dispatch does the rest.
 
 

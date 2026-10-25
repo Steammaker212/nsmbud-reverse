@@ -179,6 +179,39 @@ inline u32 collisionOutput(void* player)
 }
 
 // =====================================================================
+//  Making the slide an attack
+// =====================================================================
+//
+// Attack types are published through the collider's `info.category` field --
+// ActiveColliderInfo is at collider+0x74 and `category` at +0x18, so
+// collider+0x8C, which on an actor is +0x148 (aCollider is at +0xBC).
+//
+// The value really is the framework's Attack enum. `Enemy::vfEC` (0x602A27E8)
+// is the dispatcher and compares it down a chain:
+//
+//     cmp r0,#3    -> Star          cmp r0,#0xa   -> PenguinSlip
+//     cmp r0,#8    -> NetPunch      cmp r0,#0xd   -> SpinFall
+//     cmp r0,#0x11 -> Cannon        cmp r0,#0x19  -> Unk25
+//
+// which is exactly Attack::Star / NetPunch / PenguinSlip / SpinFall / Cannon /
+// Unk25. Each branch then calls the matching vtable slot -- PenguinSlip reaches
+// Enemy vtable +0x12C (`hitPenguinSlide`), where the enemy's own
+// `collisionPenguinSlide` decides the reaction.
+//
+// The trick is *when* to publish it. Writing 10 permanently would also apply to
+// every other interaction the player has, so instead we swap it in only for the
+// duration of one collider-pair test: set, run the game's own doOverlapMaybe
+// (which invokes both callbacks), then restore. The enemy's dispatcher therefore
+// sees a penguin slide, and nothing outside that call ever does.
+constexpr u32 kColliderCategory = 0x8C;   // collider+0x8C == actor+0x148
+constexpr u32 kAttackPenguinSlip = 10;
+
+u32* playerCategory(void* actor)
+{
+    return (u32*)((char*)actor + kColliderCategory);
+}
+//
+// =====================================================================
 //  Block bumps
 // =====================================================================
 //
@@ -426,5 +459,26 @@ extern "C" bool SlideSuit_doOverlap(void* ac1, void* ac2)
     else if (p2 && !p1)
         bumpBlock(owner1, 0);
 
-    return SlideSuit_doOverlap_orig(ac1, ac2);
+    // Publish Penguin Slip for exactly the duration of this pair test.
+    //
+    // The game's doOverlapMaybe runs both callbacks; the enemy side dispatches
+    // on acOther->info.category, so a player that reports category 10 here gets
+    // the enemy's collisionPenguinSlide reaction. Restoring afterwards means the
+    // overwritten value never escapes into the rest of the frame.
+    void* playerCollider = nullptr;
+    u32   savedCategory  = 0;
+
+    if (p1 || p2)
+    {
+        playerCollider = p1 ? ac1 : ac2;
+        savedCategory  = *(u32*)((char*)playerCollider + kColliderCategory);
+        *(u32*)((char*)playerCollider + kColliderCategory) = kAttackPenguinSlip;
+    }
+
+    const bool result = SlideSuit_doOverlap_orig(ac1, ac2);
+
+    if (playerCollider != nullptr)
+        *(u32*)((char*)playerCollider + kColliderCategory) = savedCategory;
+
+    return result;
 }

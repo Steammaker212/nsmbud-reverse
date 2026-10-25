@@ -15,6 +15,7 @@ this mod is the thin layer on top.
 | Faster than the suit | `SLIDE_SPEED` = 6.0 against the suit's ~2.7 slide |
 | Reverses on impact | Reads `CollisionMgr::output` bits 18/19 (wall right/left) and flips `direction`, with a cooldown |
 | Triggers the block hit | Hooks `ActiveCollider_doOverlapMaybe`, recognises a player/block pair, and calls the block's own bump handler |
+| Sliding hurts enemies | Publishes `Attack::PenguinSlip` (10) into the player collider's `category` for the duration of one pair test, then restores it |
 | Model spins | Adds `SLIDE_SPIN` to `StageActor::rotation.z` each frame |
 | Feels like ice | Nothing to do -- see below |
 
@@ -106,6 +107,28 @@ the game called that class's own `onExecute`), and the overlap hook only ever
 pointee, so a stale entry cannot fault. The entry is removed again as soon as the
 player loses the suit.
 
+## The slide as an attack
+
+Attack types are published through the player collider's `info.category`
+(`collider+0x8C`, i.e. `actor+0x148`). The value really is the `Attack` enum:
+`Enemy::vfEC` (`0x602A27E8`) is the dispatcher and compares it down a chain --
+`#3` Star, `#8` NetPunch, `#0xa` **PenguinSlip**, `#0xd` SpinFall, `#0x11`
+Cannon, `#0x19` Unk25 -- then calls the matching virtual. Penguin Slip reaches
+`Enemy` vtable `+0x12C`, where each class's own `collisionPenguinSlide` decides
+the reaction.
+
+The important bit is *when* to publish it. Writing 10 permanently would change
+every interaction the player has, so the mod swaps it in only for the duration of
+one collider-pair test: save, set 10, run the game's own `doOverlapMaybe` (which
+invokes both callbacks), restore. The enemy sees a penguin slide; nothing
+outside that call ever does. The emitted code shows the save/set/restore
+(`ldr r7,[r6,#0x8c]`, `mov r3,#10`, `str r3,[r6,#0x8c]`, `str r7,[r6,#0x8c]`).
+
+One slot worth not confusing: `Enemy` vtable **+0x118** is `collisionSlide`
+(`0x602A5C00`) and **+0x12C** is `collisionPenguinSlide` (`0x602A675C`). The
+latter is a 12-byte forwarder that calls `+0x118`, so `+0x118` appearing inside
+it is the *target*, not its own offset.
+
 ## What is **not** done
 
 **Ice balls are not inherited.** Firing them is the suit's attack action and it
@@ -113,12 +136,11 @@ runs through `BrosBase::createProjectile` / `throwProjectile`, which are
 `ret`-only stubs in the base class that each character overrides. A copy of the
 suit does not get them for free; that would be a separate hook.
 
-**The slide attack type is not set either.** The mod moves fast and bounces, but
-it does not publish `Attack::PenguinSlip` (10) on the player's collider at
-`+0x8C`, so enemies do not yet react to the slide as an attack. The mechanism is
-reversed and documented in `readable/player/PenguinSuit.cpp`; wiring it up needs
-the per-frame value the game already writes to be restored afterwards, which
-deserves its own test pass rather than being guessed at here.
+**Nothing here has been run in-game.** The build passes and both hooks resolve,
+and the offsets in the emitted code have been checked by disassembly -- but the
+behaviour is unverified on hardware. The first thing to watch is the log: it
+prints the mode, direction, rotation and collision output for the first frames,
+then says `bounced` on wall contact and `bumped a block` on a block hit.
 
 ## Configuration
 
