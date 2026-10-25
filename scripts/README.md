@@ -13,6 +13,9 @@
 | `ida/` | `ida_rpc.py` | Talk to a live IDA (ida-pro-mcp, JSON-RPC on 127.0.0.1:13337). Writes are refused unless a saved-as copy is open |
 | | `export_decompiled.py` | Export every function's Hex-Rays output (read-only) |
 | | `plan_types.py`, `apply_types.py` | Plan struct types and `this` prototypes from the corpus; apply them to the copy |
+| | `fetch.py` | Hex-Rays text for one address, with address tags kept (`--tags`), a vtable dump (`--vtable A --count N`), and a disassembly fallback when the decompiler refuses |
+| | `dump_range.py` | One review file for a whole class: `--out x.c 0xADDR ...` or `--lo/--hi` over a range |
+| | `elf.py` | Read the rebased ELF directly, with no IDA session: `sections`, `rd`, `str`, `f32`, `dis` (`--thumb`). Deterministic where the RPC intermittently fails, and it decodes functions IDA left undefined |
 | `pipeline/` | (see its README) | Builds the decompiled corpus in `decompiled/src/` |
 
 ## The loose scripts here

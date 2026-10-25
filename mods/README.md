@@ -15,6 +15,7 @@ python scripts/sdk/make_mod_project.py --mod mods/hammer_suit --mod mods/bee --m
 | [yoshi_fire](yoshi_fire/) | Every enemy Yoshi eats becomes fire (or ice) breath (framework/yoshi) | — | built, awaiting test |
 | [yoshi_tuning](yoshi_tuning/) | Yoshi's numbers as data patches: an egg every 3 fruits, a 60-frame flutter jump | — | built, awaiting test |
 | [worldmap_log](worldmap_log/) | Logs every parsed world map at boot, to check a custom world (framework/worldmap) | — | built, awaiting test |
+| [shy_guy](shy_guy/) | A Shy Guy with the Goombrat's mechanics: it turns at ledges (framework/actors) | 737 | built, awaiting test |
 | [p_acorn](p_acorn/) | The P-Acorn (mode 8) from ?-blocks/bricks (contents 22) and as a sprite; the game never gives it in levels | 736 | verified in-game |
 | [diag_passthrough](diag_passthrough/) | The Hammer Suit's hook with nothing in it, to tell "the mod's logic" apart from "the module or the content" | — | diagnostic |
 

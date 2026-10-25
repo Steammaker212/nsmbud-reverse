@@ -1,0 +1,6 @@
+# framework components this mod needs
+actors
+game
+
+# The Goomba family header (framework/game/include/game/goomba.h) documents the
+# offsets and the Goombrat gate this mod relies on.
