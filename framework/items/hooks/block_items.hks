@@ -1,0 +1,31 @@
+@ Custom block contents (framework/items). Every entry is position-independent
+@ (`ldr r0,[r0,#0x18]` or a `push`), so each trampoline can replay it.
+
+@ BlockBase::getContents (vtable +0x168 of 27 block classes); not a defined
+@ function in the database, read from the disassembly.
+BlockItems_getContents:
+    type:       hook
+    address:    0x00563294
+    symbol:     BlockItems_getContents
+    trampoline: BlockItems_getContents_orig
+
+@ Block spawnPowerup, single item
+BlockItems_spawnSingle:
+    type:       hook
+    address:    0x005B5A3C
+    symbol:     BlockItems_spawnSingle
+    trampoline: BlockItems_spawnSingle_orig
+
+@ Block spawnPowerup, one item per player
+BlockItems_spawnMulti:
+    type:       hook
+    address:    0x005B5FA8
+    symbol:     BlockItems_spawnMulti
+    trampoline: BlockItems_spawnMulti_orig
+
+@ ItemMgr::spawnItem: the funnel every block, brick and crate item goes through
+BlockItems_spawnItem:
+    type:       hook
+    address:    0x004663F4
+    symbol:     BlockItems_spawnItem
+    trampoline: BlockItems_spawnItem_orig

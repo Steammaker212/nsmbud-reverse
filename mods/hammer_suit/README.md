@@ -41,10 +41,11 @@ automatically in any level that contains a Hammer Flower.
 
 ## Placing it
 
-In your level editor, add a sprite with id **734**. No vanilla sprite places a
-Fire Flower directly; they come from blocks. So test it first; this is item 3 in
-the test table below. Getting it out of ?-blocks needs a new block-contents value,
-which is planned.
+- **In a ?-block or brick (v3):** set the block's contents to **21**
+  (`HAMMER_BLOCK_CONTENTS`): settings2 low nybble `5`, plus bit 28 set. Small
+  players get a Mushroom first, like any flower block.
+- **Directly:** add a sprite with id **734**. No vanilla sprite places a Fire
+  Flower directly, so test this one.
 
 ## Build
 

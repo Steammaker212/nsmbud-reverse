@@ -146,6 +146,28 @@ Place sprite 735 in your level editor. To reuse an existing actor's behaviour,
 pass the game's own factory as the build function. The Hammer Flower does this
 with `Actor_faiyafurawa_build`.
 
+## 7b. Put a new power-up in ?-blocks and bricks
+
+Blocks store a 5-bit contents value. The game defines 0–20 and leaves
+**21–31 free**. With `framework/items` (add `items` and `game` to `requires.txt`):
+
+```cpp
+#include "nsmbudx/block_items.h"
+
+struct InBlocks
+{
+    InBlocks() { nsmbudx::blockItems::registerContents(21, ProfileId::MyPowerup); }
+};
+static InBlocks inBlocks;
+```
+
+In the level editor, set the block's contents to **21**: settings2 low nybble
+`5`, plus bit 28 set. The block behaves like a power-up block: it bounces, and a
+small player gets a Mushroom first, as with every flower block. Pass `false` as
+the third argument to skip that rule. The full pipeline, with the vanilla
+contents table, is in [readable/map_obj/BlockBase.cpp](../readable/map_obj/BlockBase.cpp)
+and [readable/item/ItemMgr.cpp](../readable/item/ItemMgr.cpp).
+
 ## 8. Log and debug
 
 ```cpp
