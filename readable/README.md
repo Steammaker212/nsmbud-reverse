@@ -16,6 +16,7 @@ headers in [`framework/game/`](../framework/game/), which share these names.
 | [map_obj/BlockBase.cpp](map_obj/BlockBase.cpp) | ?-blocks and bricks: contents → content code, what each code does when hit, spawning a power-up |
 | [item/ItemMgr.cpp](item/ItemMgr.cpp) | content code → item → profile, the player-mode gate, the single spawn funnel |
 | [player/PlayerModel.cpp](player/PlayerModel.cpp) | power-up mode → body model, and how suit colours are chosen (`setColorType`) |
+| [player/PenguinSuit.cpp](player/PenguinSuit.cpp) | the Penguin Suit: it is a mode (5), not an actor; the slide is attack type 10 with a per-enemy dispatch; the block bump is a virtual whose base is empty; rotation is an integer `Vec3i` the turn code accumulates into directly |
 | [enemy/EnemyDamage.cpp](enemy/EnemyDamage.cpp) | how every enemy decides what a hit does: the player, Yoshi, baby Yoshi and projectile dispatchers, their damage-mask gates and the 17 reactions |
 | [enemy/Goomba.cpp](enemy/Goomba.cpp) | the Goomba family (467-473, 892-893): profile 467/468 from one registration, why a Goombrat turns at ledges, the walk decision, the type nybbles, the class layout |
 | [enemy/Pukupuku.cpp](enemy/Pukupuku.cpp) | the Cheep Cheep family (530–538): profile → mode, facing, model and animation names, states, the water-surface clamp, formations |

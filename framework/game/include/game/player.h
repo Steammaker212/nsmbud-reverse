@@ -58,3 +58,23 @@ struct MarioModelFields
 //   player+0x2C7C-> next mode (sub_607A27A8 writes it; any mode accepted)
 //   player+0x2F10-> facing index used for projectiles
 //   PlayerMgr::instance (0x60CC436C) +0x30 -> Player*[4]
+//
+// Added with the Penguin Suit work (ledger F0131-F0136):
+//
+//   player+0x0A0 is StageActor::rotation.y. BrosBase::executeState_Move
+//   accumulates the turn directly into it (add to the word at +0xA0, then snap
+//   to a per-direction target, compared as *integers*) rather than keeping a
+//   separate accumulator, so rotation *is* the accumulated value. Writing
+//   rotation.z spins the model with no extra step.
+//
+//   The slide has its own attack type: Attack::PenguinSlip == 10, published on
+//   the player's collider at +0x8C (ActiveColliderInfo::category). Every enemy
+//   has a collisionPenguinSlide virtual (Enemy vtable +0x118) that forwards to
+//   its own collisionSlide unless the class overrides it, so publishing type 10
+//   gets the right reaction for the entire cast for free.
+//
+// Turn/rotation constants, all integer, all indexed by direction 0/1:
+//   0x60AF1F98  increment { 0x08000000, 0xF8000000 }  (+/- 11.25 degrees)
+//   0x60AFE3E4  snap      { 0x20000000, 0xE0000000 }  (+/- 45 degrees)
+// A full turn is 2^32, so 0x01000000 is 5.625 degrees per frame.
+

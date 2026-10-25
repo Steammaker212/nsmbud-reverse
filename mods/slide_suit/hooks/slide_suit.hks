@@ -1,0 +1,14 @@
+@ Slide Suit: a Penguin Suit that always slides, bounces off walls, and spins.
+@ Deluxe (Switch) v1.0.0 only.
+@
+@ BrosBase::onExecute (0x60263D10, RVA 0x00263D10). Chosen because the player
+@ runs it every frame in every state -- it is the function that calls
+@ StateMgr::execute itself -- so one hook covers Move, Jump, Attack and the rest.
+@ sdk/data/hookable.csv: 308 bytes, entry "push {r4, r5, r6, lr}" (0xe92d4070),
+@ trampoline_safe = yes.
+
+SlideSuit_onExecute:
+    type:       hook
+    address:    0x00263D10
+    symbol:     SlideSuit_onExecute
+    trampoline: SlideSuit_onExecute_orig
