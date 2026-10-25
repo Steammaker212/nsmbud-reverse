@@ -1,4 +1,4 @@
-﻿# readable
+# readable
 
 The game's source, reconstructed by hand into readable C++ in the style of the
 Wii U decomp (red-pro2) and codedx: real names, real control flow, one file per
@@ -23,6 +23,7 @@ headers in [`framework/game/`](../framework/game/), which share these names.
 | [enemy/Goomba.cpp](enemy/Goomba.cpp) | the Goomba family (467-473, 892-893): profile 467/468 from one registration, why a Goombrat turns at ledges, the walk decision, the type nybbles, the class layout |
 | [enemy/Pukupuku.cpp](enemy/Pukupuku.cpp) | the Cheep Cheep family (530–538): profile → mode, facing, model and animation names, states, the water-surface clamp, formations |
 | [enemy/Choropoo.cpp](enemy/Choropoo.cpp) | the Rocky Wrench (called `choropoo` in every asset — "rocky wrench" exists nowhere in the binary): a four-actor mechanism, two colliders, and a spanner that is a 512-sample hand-position ring buffer rather than a spawned projectile |
+| [actor/ActorSpawner.cpp](actor/ActorSpawner.cpp) | the custom actor spawner (codedx's `ActorSpawner`, re-reversed for Deluxe): what a placement field can carry, `ActorMgr::create`'s verdict arithmetic, and the one codedx offset that must not be copied — the event mask is at `EventMgr+0x10`, not `+0x0` |
 
 Coverage grows one verified subsystem at a time; [docs/RE_PLAN.md](../docs/RE_PLAN.md)
 gives the order. Where a detail isn't established, the code says so in a comment
