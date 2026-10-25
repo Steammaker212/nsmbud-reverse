@@ -24,6 +24,7 @@ headers in [`framework/game/`](../framework/game/), which share these names.
 | [enemy/Pukupuku.cpp](enemy/Pukupuku.cpp) | the Cheep Cheep family (530–538): profile → mode, facing, model and animation names, states, the water-surface clamp, formations |
 | [enemy/Choropoo.cpp](enemy/Choropoo.cpp) | the Rocky Wrench (called `choropoo` in every asset — "rocky wrench" exists nowhere in the binary): a four-actor mechanism, two colliders, and a spanner that is a 512-sample hand-position ring buffer rather than a spawned projectile |
 | [actor/ActorSpawner.cpp](actor/ActorSpawner.cpp) | the custom actor spawner (codedx's `ActorSpawner`, re-reversed for Deluxe): what a placement field can carry, `ActorMgr::create`'s verdict arithmetic, and the one codedx offset that must not be copied — the event mask is at `EventMgr+0x10`, not `+0x0` |
+| [engine/ActorMgr.cpp](engine/ActorMgr.cpp) | the manager every actor is built through: `create`'s real dispatch order (it calls `beforeCreate` → `onCreate` → `afterCreate` itself; the base `afterCreate` is a bare `bx lr`), the `3 - onCreate()` verdict arithmetic, why `onCreate` must return **1** for a `StageActor` to snapshot its spawn position, the two separate flags at `+0x12`/`+0x13`, and the unloaded-archive sentinel check that makes spawning an unresident profile do nothing instead of crash |
 
 Coverage grows one verified subsystem at a time; [docs/RE_PLAN.md](../docs/RE_PLAN.md)
 gives the order. Where a detail isn't established, the code says so in a comment

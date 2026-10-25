@@ -84,7 +84,7 @@
 //
 //     actor = build(actorMgr, buildInfo, /*r2=*/1);
 //     if (!actor) return 0;
-//     if (actor->flag18) {                 // already "delete me"
+//     if (actor->removeRequested) {        // +0x12, NOT +0x13 (see below)
 //         if (unk == 1) { remove(actor); return actor; }
 //         if (unk == 0) { insertFront(list); count++; }
 //         return actor;
@@ -94,18 +94,32 @@
 //     afterCreate(actor, max(0, 3 - verdict));
 //     ...
 //
+// Note the flag. The test at 0x6000815C is `ldrb r0,[r5,#0x12]`, which is
+// "a removal was requested", not the isDeleted byte at +0x13. The two are
+// distinct and cleared together in the constructor (0x60002CC8/0x60002CCC);
+// conflating them is an easy and silent mistake (F0193).
+//
 // Surveying all 323 call sites to create: 287 pass 0, 19 pass 1. So 0 is the
 // ordinary "create and put it in the list" path -- which is what a spawner
 // wants, and what codedx passes.
 //
 // The onCreate verdict is the part worth knowing if you write your own spawner
 // target: the game computes `max(0, 3 - verdict)` and passes that to
-// afterCreate. Returning 1 (success) yields 2, returning 2 yields 1, returning
-// 3 yields 0. codedx's `return 2` for "no event configured" therefore is not
-// "destroy" -- it lands in the `verdict >= 2` branch, which marks the actor
-// deleted (+18) and does NOT insert it into the list. The effect is a clean
-// self-removal, so the intent survives, but it is not the same mechanism as
-// returning 3.
+// afterCreate. Returning 0 yields 3, returning 1 yields 2, returning 2 yields
+// 1, returning 3 yields 0. codedx's `return 2` for "no event configured"
+// therefore is not "destroy" -- it lands in the `verdict >= 2` branch, which
+// marks the actor deleted (+18) and does NOT insert it into the list. The effect
+// is a clean self-removal, so the intent survives, but it is not the same
+// mechanism as returning 3.
+//
+// One consequence is easy to miss and was only found while re-deriving create
+// for readable/engine/ActorMgr.cpp (F0194, F0198). StageActor::afterCreate
+// (0x60000694) copies the actor's position triple +0x6C/+0x70/+0x74 into the
+// spawn and home triples at +0x248 and +0x260 ONLY when its argument equals 2,
+// i.e. only when onCreate returned 1. So an actor whose onCreate returns
+// anything else is created but never latches its spawn position. If you write a
+// custom actor that comes out at the origin instead of where you placed it, the
+// return value of your onCreate is the first thing to check.
 //
 // ===========================================================================
 // THE EVENT SYSTEM DOES EXIST ON DELUXE -- WITH ONE CATCH
