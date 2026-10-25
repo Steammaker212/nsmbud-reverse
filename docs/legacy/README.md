@@ -1,3 +1,5 @@
+> **Legacy.** These reports predate [the plan](../RE_PLAN.md). Treat every claim as a lead until it is re-verified and recorded in `data/findings/ledger.csv`.
+
 # NSMBUDX (Switch) — `main.nso` analysis kit
 
 Reverse-engineering kit for the Nintendo Switch build of *New Super Mario Bros.

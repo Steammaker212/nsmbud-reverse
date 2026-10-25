@@ -11,7 +11,7 @@ rewritten. The rest are held and listed.
 
 ## The bug
 
-[`scripts/pipeline/rewrite_arrows.py`](../scripts/pipeline/rewrite_arrows.py)
+[`scripts/pipeline/rewrite_arrows.py`](../../scripts/pipeline/rewrite_arrows.py)
 renders Hex-Rays `a->b->c` as one `FIELD_*(a, offset)`. It did that by *summing*
 member offsets, which is only valid when every hop is an embedded member (offset
 added to the same object). A hop through a pointer dereferences:

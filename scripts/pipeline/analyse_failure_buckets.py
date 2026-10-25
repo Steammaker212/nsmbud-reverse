@@ -1,6 +1,6 @@
 """Find the actual, mechanical cause inside the two cheapest failure buckets.
 
-docs/COMPILE_FAILURES.md says 469 units fail on a single "member not found" error
+docs/legacy/COMPILE_FAILURES.md says 469 units fail on a single "member not found" error
 and 907 on a single "conflicting types" error, and calls those the cheap wins.
 "Cheap" has to be earned: this script groups the diagnostics by the specific
 symbol involved and prints the groups that repeat, so a fix can be aimed at a

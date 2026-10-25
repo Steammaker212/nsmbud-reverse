@@ -21,7 +21,7 @@ from collections import Counter
 
 DEFAULT_TREE = os.path.join(
     os.path.dirname(os.path.dirname(os.path.abspath(__file__))),
-    "New Super Mario Bros U Deluxe (NSP)(Base Game) Tree.txt",
+    "research/reference/NSP_base_game_tree.txt",
 )
 
 

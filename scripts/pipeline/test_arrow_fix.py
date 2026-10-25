@@ -1,7 +1,7 @@
 """Prove the pointer-aware rewrite against the audit's own measured cases.
 
 Each case is a function whose published C was flattened, with the correct
-nested form read off the disassembly by docs/ARROW_CHAIN_AUDIT.md section 5.
+nested form read off the disassembly by docs/legacy/ARROW_CHAIN_AUDIT.md section 5.
 The test runs the actual rewrite_body() over the actual pre-rewrite body and
 requires the actual output to contain the correct expression.
 

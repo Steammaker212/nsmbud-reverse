@@ -94,7 +94,7 @@ def load_types(path: str):
     `*(a + off_p + off_x)`. Summing the offsets is only valid for anonymous
     bases, which are embedded at offset 0 and not dereferenced. Dropping the
     pointer-ness here is what produced the flattened chains in
-    docs/ARROW_CHAIN_AUDIT.md -- 42 confirmed cases across 35 functions, 10 of
+    docs/legacy/ARROW_CHAIN_AUDIT.md -- 42 confirmed cases across 35 functions, 10 of
     which feed an indirect call whose target is therefore wrong.
 
     Only members whose bit offset is byte-aligned can be expressed as a byte

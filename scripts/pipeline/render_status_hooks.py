@@ -1,4 +1,4 @@
-"""Regenerate the hook table inside docs/LOADER_STATUS.md from hooks/hooks.hks.
+"""Regenerate the hook table inside docs/legacy/LOADER_STATUS.md from hooks/hooks.hks.
 
 A hand-maintained table drifts from the build the first time a hook is added or
 retired. This rewrites only the region between the two marker comments, so the
@@ -67,7 +67,7 @@ def main() -> int:
     rows = parse(repo / "hooks" / "hooks.hks")
     block = render(rows)
 
-    doc = repo / "docs" / "LOADER_STATUS.md"
+    doc = repo / "docs" / "legacy" / "LOADER_STATUS.md"
     text = io.open(doc, encoding="utf-8").read()
     if BEGIN in text and END in text:
         pre = text[: text.index(BEGIN)]

@@ -260,7 +260,7 @@ validate(CHEEP, "Cheep Cheep Family",
 # (full restatement, no dropped fields, valid XML), but its central claim is
 # unverified: IDA showed dword_60B04164 is indexed by a virtual-call result, not by
 # the raw contents byte, and no index base reproduces the editor's 16 labels
-# (best fit 3/16). See docs/IDA_VERIFICATION.md.
+# (best fit 3/16). See docs/legacy/IDA_VERIFICATION.md.
 print(f"\n{'=' * 68}\n  Hammer Question Block  [UNRELEASED]"
       f"\n{'=' * 68}")
 print("  NOTE: the contents -> item mapping is UNRESOLVED. The checks below verify")

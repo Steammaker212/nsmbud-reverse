@@ -10,7 +10,7 @@ Inputs (read-only):
 
 Outputs (written):
     data/recovered/codedx_kind_reconciliation.json   full per-symbol classification
-    docs/CODEDX_KIND_RECONCILIATION.md               the report
+    docs/legacy/CODEDX_KIND_RECONCILIATION.md               the report
 
 Method
 ------
@@ -54,7 +54,7 @@ CODEDX_SYM = Path(r"C:\Users\Saif Khan\Downloads\codedx\main.sym")
 OUR_SYM = ROOT / "data" / "loader" / "main.sym"
 OUR_CSV = ROOT / "data" / "loader" / "symbols.csv"
 JSON_OUT = ROOT / "data" / "recovered" / "codedx_kind_reconciliation.json"
-MD_OUT = ROOT / "docs" / "CODEDX_KIND_RECONCILIATION.md"
+MD_OUT = ROOT / "docs" / "legacy" / "CODEDX_KIND_RECONCILIATION.md"
 
 CODE_SECTIONS = {".text", ".plt", ".init", ".fini", ".itcm.text"}
 
@@ -770,7 +770,7 @@ def build_report(res: dict) -> str:
     A("")
     A("## 2. The documented count of 117 is wrong")
     A("")
-    A("`docs/LOADER_STATUS.md` lines 97-98 say *\"117 main.sym names differ from "
+    A("`docs/legacy/LOADER_STATUS.md` lines 97-98 say *\"117 main.sym names differ from "
       "ours in kind, not identity (template forms, operator new[])\"*. "
       "Measured, that set is **%d**, not 117." % t["KIND_DIFFERENT"])
     A("")
@@ -1109,7 +1109,7 @@ def main(argv: list[str] | None = None) -> int:
                                     "with it disabled yields identical buckets",
         },
         "documented_claim": {
-            "source": "docs/LOADER_STATUS.md:97",
+            "source": "docs/legacy/LOADER_STATUS.md:97",
             "text": "117 main.sym names differ from ours in kind, not identity "
                     "(template forms, operator new[])",
             "claimed": 117,

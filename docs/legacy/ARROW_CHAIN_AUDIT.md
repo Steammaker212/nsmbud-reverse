@@ -12,7 +12,7 @@ correct in general, and this document measures how often that matters.
 
 ## 1. The mechanism (read from the code, then confirmed on real output)
 
-[`scripts/pipeline/rewrite_arrows.py`](../scripts/pipeline/rewrite_arrows.py)
+[`scripts/pipeline/rewrite_arrows.py`](../../scripts/pipeline/rewrite_arrows.py)
 walks a chain hop by hop and accumulates `total += off` for every member,
 ignoring whether the hop dereferenced a pointer. The reason it can do this is
 in `load_types()`: it stores each member's type with the `*` **stripped**, so
@@ -52,7 +52,7 @@ false flattening, not a hypothetical one.
 
 ## 2. How the measurement was built
 
-[`scripts/pipeline/audit_arrow_chains.py`](../scripts/pipeline/audit_arrow_chains.py)
+[`scripts/pipeline/audit_arrow_chains.py`](../../scripts/pipeline/audit_arrow_chains.py)
 compares two independent descriptions of the same function:
 
 * **What the C claims.** The single `FIELD_*(param, off)` expression in each
@@ -456,6 +456,6 @@ Inputs, all read (never assumed):
 * `C:\Users\Saif Khan\Downloads\main.idb\_work\export_vt\all_functions.jsonl` —
   the pre-rewrite export, 47,153 functions.
 
-Results: [`data/recovered/arrow_chain_audit.json`](../data/recovered/arrow_chain_audit.json),
+Results: [`data/recovered/arrow_chain_audit.json`](../../data/recovered/arrow_chain_audit.json),
 containing the full 457-function frame, the 495-function stride sample, all
 chain-verification rows and the per-case disassembly quoted above.

@@ -46,7 +46,7 @@ That article is worth reading for a second reason: a clean build and a byte-exac
 proved nothing about correctness. The real defects passed every check in this repo at the
 time, including a validator that compared hook bytes to a reference image — because the
 hooks *did* reproduce the reference image faithfully. They were simply hooked to the
-wrong things. See [docs/IDA_VERIFICATION.md](docs/IDA_VERIFICATION.md).
+wrong things. See [docs/legacy/IDA_VERIFICATION.md](docs/legacy/IDA_VERIFICATION.md).
 
 The article also documents a mistake I made *while writing it*: I removed six hooks
 believing they pointed table lookups at executable code, when the words are PC-relative

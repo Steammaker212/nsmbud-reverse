@@ -30,7 +30,7 @@ type. That is why every real symbol says SafeStringBase.
 THE FIX
 =======
 Make sead.h include sead/safestring.h and stop redefining SafeString. Verified from
-IDA (see docs/IDA_VERIFICATION.md): the constructor at 0x60017F6C never reads its 4th
+IDA (see docs/legacy/IDA_VERIFICATION.md): the constructor at 0x60017F6C never reads its 4th
 argument at all -- it overwrites R3 immediately -- so the 4th parameter's static type
 only affects mangling, never behaviour. Aligning it with the real mangling is safe.
 """

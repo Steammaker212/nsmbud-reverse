@@ -1,7 +1,7 @@
 """Measure, per translation unit, whether the published corpus compiles.
 
 The repository has carried three different "units fail to compile" numbers
-(9,339 in docs/CORPUS_STATUS.md, 9,092 in docs/LOADER_STATUS.md, 7,303
+(9,339 in docs/legacy/CORPUS_STATUS.md, 9,092 in docs/legacy/LOADER_STATUS.md, 7,303
 elsewhere). This script exists to replace all of them with one measured number
 and a breakdown by diagnostic *kind*, so the next fix can be chosen from
 evidence instead of from a claim.
@@ -47,7 +47,7 @@ REPO = Path(__file__).resolve().parents[2]
 SRC = REPO / "decompiled" / "src"
 INCLUDE = SRC / "include"
 OUT_JSON = REPO / "data" / "recovered" / "compile_failures.json"
-OUT_MD = REPO / "docs" / "COMPILE_FAILURES.md"
+OUT_MD = REPO / "docs" / "legacy" / "COMPILE_FAILURES.md"
 
 # `path:line:col: error: message` / `...: fatal error: message`.
 # Windows paths contain a drive colon, so the file match is non-greedy and the
@@ -567,8 +567,8 @@ def main() -> int:
             for g in sorted(total_by_group)
         ],
         "claimed_in_docs": {
-            "docs/CORPUS_STATUS.md": 9339,
-            "docs/LOADER_STATUS.md": 9092,
+            "docs/legacy/CORPUS_STATUS.md": 9339,
+            "docs/legacy/LOADER_STATUS.md": 9092,
             "other_claim_seen": 7303,
         },
         # One record per failing unit, as required.

@@ -13,7 +13,7 @@ modder actually reads:
   data/loader/symbols.csv   same, with the marker in a column
   hooks/hooks.hks           every hook site
   loader/README.md          the loader as a whole
-  docs/DELUXE_ONLY.md       the index
+  docs/legacy/DELUXE_ONLY.md       the index
 
 A `wiiu-reference` checkout, when present, is used only to *detect* where the two
 builds differ. It is never a source of names or addresses.
@@ -151,14 +151,14 @@ def main() -> int:
            "`main.sym` without the marker, so an unmarked artefact cannot be "
            "committed by accident.",
            ""]
-    (repo / "docs" / "DELUXE_ONLY.md").write_text("\n".join(doc))
+    (repo / "docs" / "legacy" / "DELUXE_ONLY.md").write_text("\n".join(doc))
 
     print("marked main.sym: %d symbols" % summary.get("main.sym", 0))
     print("marked symbols.csv: %d rows" % summary.get("symbols.csv", 0))
     print("marked hooks.hks: %d hooks" % summary.get("hooks", 0))
     print("marked stub_maplist.txt: %d veneers"
           % summary.get("stub_maplist", 0))
-    print("wrote docs/DELUXE_ONLY.md")
+    print("wrote docs/legacy/DELUXE_ONLY.md")
     return 0
 
 

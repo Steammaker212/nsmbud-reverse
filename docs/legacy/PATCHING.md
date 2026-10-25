@@ -1,7 +1,7 @@
 # Making a mod: from a function to a patch
 
 This is the practical guide. It assumes you have read
-[`loader/README.md`](../loader/README.md) for the build mechanics.
+[`loader/README.md`](../../loader/README.md) for the build mechanics.
 
 The goal of this document is narrower: **given a gameplay behaviour you want to
 change, how do you find the code that implements it, and how do you hook it
