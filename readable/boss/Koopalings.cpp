@@ -125,8 +125,8 @@ constexpr u32 kKoopalingBaseVtable = 0x60BC91CC;
 // and the clearest statement of how the siblings differ in "feel".
 //
 //   slot    Larry  Lemmy  Morton  Wendy  Ludwig  Iggy   Roy     base
-//   +0x448   1.20   1.25    1.20   1.20    1.30  1.20   1.20    0.0
-//   +0x46C   0.50   0.50    0.50   0.50    0.60  0.50   0.50    0.0
+//   +0x448   1.20   1.25    1.20   1.20    1.30  1.20   1.20    1.0
+//   +0x46C   0.50   0.50    0.50   0.50    0.60  0.50   0.50    0.5
 //   +0x47C  64.00  64.00    0.00  64.00   64.00 64.00 112.00    0.0
 //   +0x49C  -1.00  11.00   -1.00  -1.00   -1.00 15.00  -1.00    0.0
 //   +0x4A0   1.00   5.00    1.00   1.00    1.00  1.00   1.00    0.0
@@ -135,10 +135,19 @@ constexpr u32 kKoopalingBaseVtable = 0x60BC91CC;
 //   +0x4B0  10.00   0.00    0.00   0.00   10.00 10.00   0.00    0.0
 //   +0x4CC  10.00   0.00   14.00  14.00   10.00 10.00  10.00    0.0
 //
-// The base class returns **0.0** for all nine, so a sibling that leaves a slot
-// alone gets zero, not a sane default -- which is why all seven override all
-// nine. -1.00 at +0x49C for four siblings is a sentinel, and only Lemmy (11) and
-// Iggy (15) use it, the two whose fights revolve around a thrown object.
+// The base class is NOT uniformly zero. It returns 1.0 at +0x448 (0x600B7EC8),
+// 0.5 at +0x46C (0x600A13A4, a `vmov.f32 s0,#0.5` one-liner) and 0.0 for the
+// other seven (0x600AB7A4.., each `vldr s0,[pc]` + `bx lr` over a zero word).
+// So the two "speed-looking" slots have sane defaults and the rest do not, which
+// is why every sibling still overrides all nine but only seven need it.
+//
+// Note the +0x47C base (0x600A13D8) sits in a dense run of constant-returning
+// thunks (0x600A13E8 is `15.0f`), so those offsets are NOT a dedicated
+// getter block -- the base simply reused nearby constants. Do not read the
+// base's return value as documentation of the slot's meaning.
+//
+// -1.00 at +0x49C for four siblings is a sentinel, and only Lemmy (11) and
+// Iggy (15) use the slot, the two whose fights revolve around a thrown object.
 //
 // Interpretation is deliberately conservative here: these are *verified
 // constants in verified slots*, but their units are not established. +0x448
@@ -192,9 +201,10 @@ const KoopalingTuning kTuning[7] =
 //   2. A vtable that overrides the 26 contract slots. Missing +0x370 is the
 //      classic failure: the boss dies and the arena never opens.
 //
-//   3. The 9 tuning constants. Because the base returns 0.0 for all of them, an
-//      omitted slot is not "default behaviour" -- it is zero, so override all
-//      nine even if you want the vanilla-looking values.
+//   3. The 9 tuning constants. The base supplies a real default for only two of
+//      them (1.0 at +0x448, 0.5 at +0x46C); the other seven fall back to 0.0,
+//      so an omitted slot there is not "default behaviour" but zero. Override
+//      all nine unless you have verified a specific one is unused.
 //
 //   4. A level with a Kupper door (sprite 609 / profile 261) whose link id
 //      matches +0x1FB8.

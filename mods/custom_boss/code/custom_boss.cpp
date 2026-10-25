@@ -42,6 +42,9 @@
 // Log the fight as it happens. Leave 1 while testing.
 #define BOSS_LOG            1
 
+// Pick which sibling's speed numbers to use: 1 = Lemmy's, 0 = Ludwig's.
+#define CUSTOM_BOSS_PROFILE_LEMMY 1
+
 // =====================================================================
 //  Offsets (all from readable/boss/Lemmy.cpp)
 // =====================================================================
@@ -149,4 +152,75 @@ extern "C" u32 CustomBoss_vf2FC(void* self)
 {
     (void)self;
     return BOSS_PHASE_HITS;
+}
+
+
+// =====================================================================
+//  Per-Koopaling tuning (readable/boss/Koopalings.cpp)
+// =====================================================================
+//
+// The nine tuning slots are the only place the seven siblings differ in plain
+// numbers rather than code. They are listed here so a custom fight can pick a
+// sibling's numbers -- or mix them -- without touching the binary.
+//
+// Vanilla, as the game holds it:
+//
+//   sibling  +0x448  +0x46C  +0x47C  +0x49C  +0x4A8
+//   Larry     1.20    0.50    64.0    -1.0    17.0
+//   Lemmy     1.25    0.50    64.0    11.0    22.0
+//   Morton    1.20    0.50     0.0    -1.0    10.0
+//   Wendy     1.20    0.50    64.0    -1.0    10.0
+//   Ludwig    1.30    0.60    64.0    -1.0    17.0
+//   Iggy      1.20    0.50    64.0    15.0     3.0
+//   Roy       1.20    0.50   112.0    -1.0     8.0
+//
+// The base defaults for +0x448 and +0x46C are real (1.0 and 0.5); the other
+// seven default to 0.0. So a custom boss that wants "sane defaults" must set at
+// least those seven explicitly -- see F0165.
+//
+// Example "faster, tankier Lemmy": reuse Lemmy's row but raise the speed slots.
+// These are compile-time choices on purpose; the mod is a demonstration, not a
+// config system.
+#if CUSTOM_BOSS_PROFILE_LEMMY
+constexpr f32 kBossSpeedA = 1.25f;   // +0x448, vanilla Lemmy
+constexpr f32 kBossSpeedB = 0.50f;   // +0x46C
+#else
+constexpr f32 kBossSpeedA = 1.30f;   // Ludwig's faster value
+constexpr f32 kBossSpeedB = 0.60f;
+#endif
+
+
+// =====================================================================
+//  Hooks: the two speed getters
+// =====================================================================
+//
+// +0x448 base = 0x600B7EC8 (`1.0f`), +0x46C base = 0x600A13A4 (`0.5f`).
+//
+// Whether a hook here reaches a given sibling depends on whether that sibling
+// overrode the slot, and the answer differs per slot -- verified, not assumed:
+//
+//   Lemmy  +0x448 -> 0x600DEE24  (his own, 1.25f)   -- hook does NOT reach him
+//   Lemmy  +0x46C -> 0x600A13A4  (the BASE, 0.5f)   -- hook DOES reach him
+//   Morton +0x448 -> 0x600F14BC  (his own)
+//   Morton +0x47C -> 0x600F46B0  (his own, 0.0f)
+//
+// So Lemmy inherits his phase-speed constant and overrides his walk speed. This
+// is the general trap in retuning a boss: a slot in the "overridden by all
+// seven" list is *not* uniformly overridden -- +0x46C is 0.50 for six siblings
+// precisely because several of them point at this same base function.
+//
+// Both are 8-byte `vmov.f32 s0,#k ; bx lr` one-liners with no room for a
+// branch-back, so each returns its constant directly and never calls the
+// original. Because there is no call into the original, there is no soft/hard
+// float ABI transition to worry about: we simply leave the value in s0.
+extern "C" float CustomBoss_vf448(void* self)
+{
+    (void)self;
+    return kBossSpeedA;
+}
+
+extern "C" float CustomBoss_vf46C(void* self)
+{
+    (void)self;
+    return kBossSpeedB;
 }

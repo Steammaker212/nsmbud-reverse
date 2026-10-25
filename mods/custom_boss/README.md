@@ -1,4 +1,4 @@
-# custom_boss
+﻿# custom_boss
 
 A custom boss fight built on the reversed World 1 boss (Lemmy), and the harness
 for finding out how the fight actually behaves at runtime.
@@ -13,13 +13,36 @@ this README is about using it.
 |---|---|---|
 | Total HP | `BossBase::vf314` returns `BOSS_TOTAL_HP` (12) instead of 24 | If stamina is that virtual, the fight halves |
 | Hits per phase | `BoomBoomBase::vf2FC` returns `BOSS_PHASE_HITS` (3) instead of 6 | 12/3 keeps four phases — if the phase count changes as predicted, the ratio is the model |
+| Walk speed | `+0x448` (base `0x600B7EC8`, `1.0f`) returns 1.25 | Lemmy *overrides* this slot, so a hook here should not reach him — a negative control |
+| Phase speed | `+0x46C` (base `0x600A13A4`, `0.5f`) returns 0.5 | Lemmy does **not** override this slot, so the same hook *should* reach him — a positive control |
 | Fight observation | Hooks `BossBase::vf15C` and logs HP, phase size, link id | Every collision converges there |
 
-The two HP hooks are one-instruction patches (`mov r0,#imm ; bx lr`) with no
+The two speed hooks are a matched pair on purpose, and they are the most
+instructive thing in the mod. `+0x448` and `+0x46C` are both in the list of
+slots "overridden by all seven Koopalings" — but that does not mean seven
+*implementations*. Six siblings leave `+0x46C` pointing at the same base
+function, and Lemmy is one of them:
+
+```
+Lemmy  +0x448 -> 0x600DEE24   his own     hook does NOT reach him
+Lemmy  +0x46C -> 0x600A13A4   the BASE    hook DOES reach him
+```
+
+So "overridden by all seven" is a statement about the *vtable slot differing
+from the base*, not about each sibling owning code. Always resolve the slot's
+actual target before assuming a base patch reaches a boss.
+
+The two HP hooks and the two speed hooks are all one-instruction patches with no
 trampoline — the vanilla bodies are 8 bytes, so there is literally no room for a
-branch-back. The overlap of `vf2FC` is what makes this work for the Koopalings:
-`+0x2FC` is pure virtual in `BossBase`, and neither `KoopalingBase` nor Lemmy
-overrides it, so both inherit the `BoomBoomBase` implementation of `return 6`.
+branch-back. Verified emitted code:
+
+```
+CustomBoss_vf314   mov r0, #12 ; bx lr
+CustomBoss_vf2FC   mov r0, #3  ; bx lr
+CustomBoss_vf448   vmov.f32 s0, #1.25 ; bx lr
+CustomBoss_vf46C   vmov.f32 s0, #0.5  ; bx lr
+```
+
 
 ## How a boss fight actually works (short version)
 

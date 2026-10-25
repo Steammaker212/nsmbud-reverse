@@ -36,3 +36,13 @@ CustomBoss_vf2FC:
     type:       hook
     address:    0x004F320
     symbol:     CustomBoss_vf2FC
+
+CustomBoss_vf448:
+    type:       hook
+    address:    0x000B7EC8
+    symbol:     CustomBoss_vf448
+
+CustomBoss_vf46C:
+    type:       hook
+    address:    0x000A13A4
+    symbol:     CustomBoss_vf46C
