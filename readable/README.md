@@ -22,6 +22,7 @@ headers in [`framework/game/`](../framework/game/), which share these names.
 | [enemy/EnemyDamage.cpp](enemy/EnemyDamage.cpp) | how every enemy decides what a hit does: the player, Yoshi, baby Yoshi and projectile dispatchers, their damage-mask gates and the 17 reactions |
 | [enemy/Goomba.cpp](enemy/Goomba.cpp) | the Goomba family (467-473, 892-893): profile 467/468 from one registration, why a Goombrat turns at ledges, the walk decision, the type nybbles, the class layout |
 | [enemy/Pukupuku.cpp](enemy/Pukupuku.cpp) | the Cheep Cheep family (530–538): profile → mode, facing, model and animation names, states, the water-surface clamp, formations |
+| [enemy/Choropoo.cpp](enemy/Choropoo.cpp) | the Rocky Wrench (called `choropoo` in every asset — "rocky wrench" exists nowhere in the binary): a four-actor mechanism, two colliders, and a spanner that is a 512-sample hand-position ring buffer rather than a spawned projectile |
 
 Coverage grows one verified subsystem at a time; [docs/RE_PLAN.md](../docs/RE_PLAN.md)
 gives the order. Where a detail isn't established, the code says so in a comment
