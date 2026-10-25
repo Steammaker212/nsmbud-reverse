@@ -266,6 +266,10 @@ def main() -> int:
         # field is restated under its own name in the first list; the new name
         # belongs to the requirednybble=13 variant.
         ("20", "Contains", "Contains (extended)"),
+        # Same shape on the bricks whose list is titled "Contents". Again the
+        # base list is untouched and the new name is the gated variant only.
+        ("20", "Contents", "Contents (extended)"),
+        ("20", "Content", "Content (extended)"),
     }
     bad_retitle = [r for r in retitled if (r[1], r[2], r[3]) not in ALLOWED_RETITLE]
     check("overrides do not silently retitle a base field", not bad_retitle,

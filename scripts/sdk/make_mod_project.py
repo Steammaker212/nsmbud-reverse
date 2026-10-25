@@ -35,6 +35,10 @@ from pathlib import Path
 
 SYM_LINE = re.compile(r"^\s*([A-Za-z_.$][\w.$]*)\s*=\s*(0x[0-9A-Fa-f]+)\s*;?\s*(?:#.*)?$")
 
+# New Super Mario Bros. U Deluxe. romfs assets live under
+# atmosphere/contents/<title id>/romfs/, the same path LayeredFS expects.
+TITLE_ID = "0100EA80032EA000"
+
 
 def copy_tree(src: Path, dst: Path) -> None:
     if src.is_dir():
@@ -227,6 +231,20 @@ def main() -> int:
     if not subsdk:
         print("FAIL: sweet-dx produced no subsdk0")
         return 1
+
+    # romfs: sweet-dx only writes exefs/subsdk0 and the IPS patch, so a mod that
+    # ships assets (a custom model archive, say) needs its tree copied into the
+    # same title folder. Mirror the layout the game already uses:
+    #   romfs/Model/<archive>.Nin_NX_NVN.szs
+    # mods/<name>/romfs/ is the convention; nothing is copied if it is absent.
+    romfs_src = [m / "romfs" for m in mods if (m / "romfs").is_dir()]
+    if romfs_src:
+        romfs_dst = output / "atmosphere" / "contents" / TITLE_ID / "romfs"
+        for r in romfs_src:
+            copy_tree(r, romfs_dst)
+        added = sum(len(list(r.rglob("*.*"))) for r in romfs_src)
+        print(f"romfs: {added} file(s) -> {romfs_dst}")
+
     return subprocess.run([sys.executable, "-I", str(repo / "scripts/sdk/inspect_subsdk.py"),
                            str(subsdk)]).returncode
 

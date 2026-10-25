@@ -307,4 +307,214 @@
         <value    nybble="13-18" title="Spawned Settings 2 (low)" category="spawned actor" comment="Copied to every spawned actor as settings2 bits 8-31." />
         <value    nybble="20"    title="Spawned Settings 2 (high)" category="spawned actor" comment="Copied to every spawned actor as settings2 bits 0-3." />
     </sprite>
+
+
+    <sprite id="148" name="Brick Block - Uses Lines" notes="A brick block that follows a line. Contents 21 is the Hammer Flower and 22 the P-Acorn (tick Extended contents).">
+		<checkbox nybble="8" title="Counter-Clockwise" comment="When checked, makes the ? block go counter clockwise." category="behavior" />
+		<value nybble="11" title="Unknown Value 11" />
+		<checkbox nybble="16" title="Faster Movement" comment="Ticking this would make the ? block move faster." category="behavior" />
+		<checkbox nybble="13" title="Extended contents (+16)" comment="Adds 16 to the contents (bit 28 of settings2). Contents 16 is the Acorn; 21 is the Hammer Flower, 22 the P-Acorn. 23-31 are unused by the game and can be claimed by mods (framework/items)." category="behavior" />
+		<list nybble="20" title="Contents" comment="Contents of the brick block." category="behavior">
+			<entry value="0">Nothing</entry>
+			<entry value="1">1 coin</entry>
+			<entry value="2">Fire flower</entry>
+			<entry value="3">Fire Flower</entry>
+			<entry value="4">Propeller Mushroom</entry>
+			<entry value="5">Penguin Suit</entry>
+			<entry value="6">Mini mushroom</entry>
+			<entry value="7">Star</entry>
+			<entry value="8">Continuous star</entry>
+			<entry value="9">Yoshi egg</entry>
+			<entry value="10">10-Coin</entry>
+			<entry value="11">1-UP</entry>
+			<entry value="12">Vine</entry>
+			<entry value="13">Spring</entry>
+			<entry value="14">Super mushroom (if small)</entry>
+			<entry value="15">Ice flower</entry>
+		</list>
+		<list nybble="20" title="Contents (extended)" comment="Contents 16-31. 21 needs the hammer_suit mod and 22 the p_acorn mod; an unregistered 23-31 makes the game read past its contents table." category="behavior" requirednybble="13" requiredval="1">
+			<entry value="0">16: Acorn Mushroom</entry>
+			<entry value="1">17: Super Crown (1 player; coin otherwise)</entry>
+			<entry value="2">18: Coin or Mushroom (game decides)</entry>
+			<entry value="3">19: Acorn Mushroom (variant)</entry>
+			<entry value="4">20: Yoshi egg</entry>
+			<entry value="5">21: HAMMER FLOWER (hammer_suit mod)</entry>
+			<entry value="6">22: P-ACORN (p_acorn mod)</entry>
+			<entry value="7">23: (free for mods)</entry>
+			<entry value="8">24: (free for mods)</entry>
+			<entry value="9">25: (free for mods)</entry>
+			<entry value="10">26: (free for mods)</entry>
+			<entry value="11">27: (free for mods)</entry>
+			<entry value="12">28: (free for mods)</entry>
+			<entry value="13">29: (free for mods)</entry>
+			<entry value="14">30: (free for mods)</entry>
+			<entry value="15">31: (free for mods)</entry>
+		</list>
+	</sprite>
+
+    <sprite id="422" name="Big Brick Block">
+		<value nybble="14" title="Unknown Value 14" />
+		<checkbox nybble="13" title="Extended contents (+16)" comment="Adds 16 to the contents (bit 28 of settings2). Contents 16 is the Acorn; 21 is the Hammer Flower, 22 the P-Acorn. 23-31 are unused by the game and can be claimed by mods (framework/items)." category="behavior" />
+		<list nybble="20" title="Contains" comment="Value 10: Breaks when hit by shell from the sides. " category="behavior">
+			<entry value="0">Nothing</entry>
+			<entry value="1">One Coin</entry>
+			<entry value="2">Fire Flower</entry>
+			<entry value="3">Fire Flower</entry>
+			<entry value="4">Propeller Suit</entry>
+			<entry value="5">Penguin Suit</entry>
+			<entry value="6">Mini Mushroom</entry>
+			<entry value="7">Star</entry>
+			<entry value="8">UNUSED</entry>
+			<entry value="9">Yoshi</entry>
+			<entry value="10">10 coins</entry>
+			<entry value="11">1-up</entry>
+			<entry value="12">Vine</entry>
+			<entry value="13">Spring</entry>
+			<entry value="14">Mushroom if small</entry>
+			<entry value="15">Ice Flower</entry>
+		</list>
+		<list nybble="20" title="Contains (extended)" comment="Contents 16-31. 21 needs the hammer_suit mod and 22 the p_acorn mod; an unregistered 23-31 makes the game read past its contents table." category="behavior" requirednybble="13" requiredval="1">
+			<entry value="0">16: Acorn Mushroom</entry>
+			<entry value="1">17: Super Crown (1 player; coin otherwise)</entry>
+			<entry value="2">18: Coin or Mushroom (game decides)</entry>
+			<entry value="3">19: Acorn Mushroom (variant)</entry>
+			<entry value="4">20: Yoshi egg</entry>
+			<entry value="5">21: HAMMER FLOWER (hammer_suit mod)</entry>
+			<entry value="6">22: P-ACORN (p_acorn mod)</entry>
+			<entry value="7">23: (free for mods)</entry>
+			<entry value="8">24: (free for mods)</entry>
+			<entry value="9">25: (free for mods)</entry>
+			<entry value="10">26: (free for mods)</entry>
+			<entry value="11">27: (free for mods)</entry>
+			<entry value="12">28: (free for mods)</entry>
+			<entry value="13">29: (free for mods)</entry>
+			<entry value="14">30: (free for mods)</entry>
+			<entry value="15">31: (free for mods)</entry>
+		</list>
+	</sprite>
+
+    <sprite id="526" name="Screen-following Brick Block">
+		<checkbox nybble="10" title="Z-Order" comment="Makes the sprite be on Layer 2." category="behavior" />
+		<checkbox nybble="13" title="Extended contents (+16)" comment="Adds 16 to the contents (bit 28 of settings2). Contents 16 is the Acorn; 21 is the Hammer Flower, 22 the P-Acorn. 23-31 are unused by the game and can be claimed by mods (framework/items)." category="behavior" />
+		<list nybble="20" title="Contains" comment="What the block contains." category="behavior">
+			<entry value="0">Nothing</entry>
+			<entry value="1">1 coin</entry>
+			<entry value="2">Fire flower</entry>
+			<entry value="3">Fire Flower</entry>
+			<entry value="4">Propeller Mushroom</entry>
+			<entry value="5">Penguin Suit</entry>
+			<entry value="6">Mini mushroom</entry>
+			<entry value="7">Star</entry>
+			<entry value="8">Continuous star</entry>
+			<entry value="9">Yoshi egg</entry>
+			<entry value="10">10-Coin</entry>
+			<entry value="11">1-UP</entry>
+			<entry value="12">Vine</entry>
+			<entry value="13">Spring</entry>
+			<entry value="14">Super mushroom (if small)</entry>
+			<entry value="15">Ice flower</entry>
+		</list>
+		<list nybble="20" title="Contains (extended)" comment="Contents 16-31. 21 needs the hammer_suit mod and 22 the p_acorn mod; an unregistered 23-31 makes the game read past its contents table." category="behavior" requirednybble="13" requiredval="1">
+			<entry value="0">16: Acorn Mushroom</entry>
+			<entry value="1">17: Super Crown (1 player; coin otherwise)</entry>
+			<entry value="2">18: Coin or Mushroom (game decides)</entry>
+			<entry value="3">19: Acorn Mushroom (variant)</entry>
+			<entry value="4">20: Yoshi egg</entry>
+			<entry value="5">21: HAMMER FLOWER (hammer_suit mod)</entry>
+			<entry value="6">22: P-ACORN (p_acorn mod)</entry>
+			<entry value="7">23: (free for mods)</entry>
+			<entry value="8">24: (free for mods)</entry>
+			<entry value="9">25: (free for mods)</entry>
+			<entry value="10">26: (free for mods)</entry>
+			<entry value="11">27: (free for mods)</entry>
+			<entry value="12">28: (free for mods)</entry>
+			<entry value="13">29: (free for mods)</entry>
+			<entry value="14">30: (free for mods)</entry>
+			<entry value="15">31: (free for mods)</entry>
+		</list>
+	</sprite>
+
+    <sprite id="704" name="Brick Block (2) - NSLU" notes="Maybe a there's a checkbox on a nybble to make this contain an acorn mushroom. Contents 21 is the Hammer Flower and 22 the P-Acorn (tick Extended contents).">
+		<value nybble="6" title="Unknown Value 6" />
+		<checkbox nybble="13" title="Extended contents (+16)" comment="Adds 16 to the contents (bit 28 of settings2). Contents 16 is the Acorn; 21 is the Hammer Flower, 22 the P-Acorn. 23-31 are unused by the game and can be claimed by mods (framework/items)." category="behavior" />
+		<list nybble="20" title="Contents" comment="What the brick block contains." category="behavior">
+			<entry value="0">Nothing</entry>
+			<entry value="1">1 coin</entry>
+			<entry value="2">Fire Flower</entry>
+			<entry value="3">Fire Flower</entry>
+			<entry value="4">Propeller Mushroom</entry>
+			<entry value="5">Penguin Suit</entry>
+			<entry value="6">Mini mushroom</entry>
+			<entry value="7">Star</entry>
+			<entry value="8">Continuous star</entry>
+			<entry value="9">Yoshi egg</entry>
+			<entry value="10">10-Coin</entry>
+			<entry value="11">1-UP</entry>
+			<entry value="12">Vine</entry>
+			<entry value="13">Spring</entry>
+			<entry value="14">Super mushroom (if small)</entry>
+			<entry value="15">Ice flower</entry>
+		</list>
+		<list nybble="20" title="Contents (extended)" comment="Contents 16-31. 21 needs the hammer_suit mod and 22 the p_acorn mod; an unregistered 23-31 makes the game read past its contents table." category="behavior" requirednybble="13" requiredval="1">
+			<entry value="0">16: Acorn Mushroom</entry>
+			<entry value="1">17: Super Crown (1 player; coin otherwise)</entry>
+			<entry value="2">18: Coin or Mushroom (game decides)</entry>
+			<entry value="3">19: Acorn Mushroom (variant)</entry>
+			<entry value="4">20: Yoshi egg</entry>
+			<entry value="5">21: HAMMER FLOWER (hammer_suit mod)</entry>
+			<entry value="6">22: P-ACORN (p_acorn mod)</entry>
+			<entry value="7">23: (free for mods)</entry>
+			<entry value="8">24: (free for mods)</entry>
+			<entry value="9">25: (free for mods)</entry>
+			<entry value="10">26: (free for mods)</entry>
+			<entry value="11">27: (free for mods)</entry>
+			<entry value="12">28: (free for mods)</entry>
+			<entry value="13">29: (free for mods)</entry>
+			<entry value="14">30: (free for mods)</entry>
+			<entry value="15">31: (free for mods)</entry>
+		</list>
+		<value nybble="21-22" title="Movement ID" id_type="movement" category="movement" />
+	</sprite>
+
+    <sprite id="706" name="Pivotal-rotation-controlled Brick Block - NSLU 9-9">
+		<value nybble="6" title="Unknown Value 6" />
+		<checkbox nybble="13" title="Extended contents (+16)" comment="Adds 16 to the contents (bit 28 of settings2). Contents 16 is the Acorn; 21 is the Hammer Flower, 22 the P-Acorn. 23-31 are unused by the game and can be claimed by mods (framework/items)." category="behavior" />
+		<list nybble="20" title="Contents" comment="What the Brick Block contains." category="behavior">
+			<entry value="0">Nothing</entry>
+			<entry value="1">1 coin</entry>
+			<entry value="2">Fire Flower</entry>
+			<entry value="3">Fire Flower</entry>
+			<entry value="4">Propeller Mushroom</entry>
+			<entry value="5">Penguin Suit</entry>
+			<entry value="6">Mini mushroom</entry>
+			<entry value="7">Star</entry>
+			<entry value="8">Continuous star</entry>
+			<entry value="9">Yoshi egg</entry>
+			<entry value="10">10-Coin</entry>
+			<entry value="11">1-UP</entry>
+			<entry value="12">Vine</entry>
+			<entry value="13">Spring</entry>
+			<entry value="14">Super mushroom (if small)</entry>
+			<entry value="15">Ice flower</entry>
+		</list>
+		<list nybble="20" title="Contents (extended)" comment="Contents 16-31. 21 needs the hammer_suit mod and 22 the p_acorn mod; an unregistered 23-31 makes the game read past its contents table." category="behavior" requirednybble="13" requiredval="1">
+			<entry value="0">16: Acorn Mushroom</entry>
+			<entry value="1">17: Super Crown (1 player; coin otherwise)</entry>
+			<entry value="2">18: Coin or Mushroom (game decides)</entry>
+			<entry value="3">19: Acorn Mushroom (variant)</entry>
+			<entry value="4">20: Yoshi egg</entry>
+			<entry value="5">21: HAMMER FLOWER (hammer_suit mod)</entry>
+			<entry value="6">22: P-ACORN (p_acorn mod)</entry>
+			<entry value="7">23: (free for mods)</entry>
+			<entry value="8">24: (free for mods)</entry>
+			<entry value="9">25: (free for mods)</entry>
+			<entry value="10">26: (free for mods)</entry>
+			<entry value="11">27: (free for mods)</entry>
+			<entry value="12">28: (free for mods)</entry>
+			<entry value="13">29: (free for mods)</entry>
+			<entry value="14">30: (free for mods)</entry>
+			<entry value="15">31: (free for mods)</entry>
+		</list>
+		<value nybble="21-22" title="Movement ID" comment="Use this to link the block to a movement controller." id_type="movement" category="movement" />
+	</sprite>
 </sprites>

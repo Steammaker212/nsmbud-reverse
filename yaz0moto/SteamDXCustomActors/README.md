@@ -44,6 +44,29 @@ how the stale nightly copy was caught.
 | 737 | Shy Guy | `mods/shy_guy` | 4 |
 | 738 | Actor Spawner (custom) | `mods/custom_spawner` | 7 |
 
+Seven **base** sprites are also overridden, to give them the extended contents
+list (16–31) so the two new power-ups are placeable inside them:
+
+| ID | Name | Fields added |
+|---|---|---|
+| 59 | Question Block | checkbox 13, list 20 (gated) |
+| 60 | Brick Block | checkbox 13, list 20 (gated) |
+| 148 | Brick Block - Uses Lines | checkbox 13, list 20 (gated) |
+| 422 | Big Brick Block | checkbox 13, list 20 (gated) |
+| 526 | Screen-following Brick Block | checkbox 13, list 20 (gated) |
+| 704 | Brick Block (2) - NSLU | checkbox 13, list 20 (gated) |
+| 706 | Pivotal-rotation-controlled Brick Block - NSLU 9-9 | checkbox 13, list 20 (gated) |
+
+That checkbox is bit 28 of `settings2`, and the game does the arithmetic itself:
+`BlockBase::getContents` returns `(settings2 & 0xF) | ((settings2 >> 24) & 0x10)`,
+so ticking it turns contents *N* into *N + 16*. The vanilla game already ships
+the same checkbox on 20 sprites. **Contents 21 is the Hammer Flower and 22 the
+P-Acorn**, matching `HAMMER_BLOCK_CONTENTS 21` in `mods/hammer_suit` and
+`PACORN_BLOCK_CONTENTS 22` in `mods/p_acorn`. 23–31 are unclaimed.
+
+Every base field is copied verbatim, so with the box unticked the block behaves
+exactly as it does in the base game.
+
 727, 729 and 733 are deliberately absent: codedx's template has sprites in
 `spriteToProfileList` for them (ModelTest, BombBros, KoopaShellBros) but never
 defines a `Profile`, so they cannot be placed.
@@ -84,6 +107,64 @@ same thing through 738:
 Nybble 19 is the spawn count because the count is `(settings2 >> 4) & 0xF`, and
 `settings2` spans nybbles 13–20 with nybble 20 at bits 0–3. That places bits 4–7
 on nybble 19, so 13–18 and 20 are what the child actually receives.
+
+## Giving the Hammer Flower its own model
+
+The item needs a romfs archive, not a sprite here. The path is fixed by the
+game: an archive is
+
+```
+romfs/Model/<archive>.Nin_NX_NVN.szs
+```
+
+and the model is a name *inside* that archive. `nsmbudx/name_remap.h` documents
+the substitution mechanism, and `mods/hammer_suit/code/hammer_suit.cpp` sets the
+two names at the top:
+
+```c
+#define HAMMER_ITEM_ARCHIVE         "hammer"   // -> Model/hammer.Nin_NX_NVN.szs
+#define HAMMER_ITEM_MODEL           "hammer"   // -> the model inside it
+```
+
+So to test a custom Hammer Flower model, put it at:
+
+```
+...\mods\<project>\romfs\Model\hammer.Nin_NX_NVN.szs
+```
+
+Layout inside, by analogy with every other item/model archive in the game (the
+codedx showcase keeps one example per actor, e.g. `Model/mrsun.Nin_NX_NVN.szs`):
+
+- **Yaz0-compressed SARC**, little-endian, holding two entries
+- `Wii_UBER.Nin_NX_NVN.bfsha` — the shader archive
+- `output.bfres` — the model
+- an `FMDL` whose name is the model name, i.e. `hammer`
+- skeletal animations named **`out`, `out2`, `out3`, `wait`, `wait2`**
+
+Those five names are not guesses: they are the string literals in the six
+Fire Flower item functions the mod hooks
+(`0x6045D980`, `0x6045DA4C`, `0x6045DB18`, `0x6045DBF8`, `0x6045DCC4`). An
+archive without them builds and loads, then fails at the first animation.
+
+Three things that will otherwise waste your time:
+
+- **A missing archive does not crash.** `ScopedNameRemap` checks the lookup
+  result and falls back to the vanilla name, logging
+  `remap: archive 'hammer' is not loaded; using 'I_fireflower'`. If the Hammer
+  Flower still looks like a Fire Flower, that log line is the answer — the
+  archive is not loaded, not merely misnamed.
+- **The archive must be referenced to be loaded.** Loading is driven by the
+  profile's resource list, which `hammer_suit` already registers
+  (`hammer`, `I_fireflower`, `bros`). Dropping the file in romfs is enough only
+  because that list already names it.
+- **`hammer_suit` prefers `hammer` and falls back to `I_fireflower`.** Your
+  working tree currently sets both to `"hammer"`, so the game is looking for the
+  new archive first. If you want to compare against the retail look, that is the
+  one line to change.
+
+`make_mod_project.py` copies `mods/<name>/romfs/` into
+`atmosphere/contents/0100EA80032EA000/romfs/`, so the build output is already
+laid out for LayeredFS.
 
 ## The base data this patch depends on
 

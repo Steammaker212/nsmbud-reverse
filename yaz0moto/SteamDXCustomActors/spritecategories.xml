@@ -20,5 +20,12 @@
             <attach sprite="728" />
             <attach sprite="730" />
         </category>
+        <category name="Blocks (extended contents)">
+            <attach sprite="148" />
+            <attach sprite="422" />
+            <attach sprite="526" />
+            <attach sprite="704" />
+            <attach sprite="706" />
+        </category>
     </view>
 </views>
