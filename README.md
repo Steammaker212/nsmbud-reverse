@@ -24,6 +24,7 @@ No game files are distributed here. You need your own `main` NSO. See [NOTICE.md
 | **Look up what we know** | [data/findings/ledger.csv](data/findings/ledger.csv): every finding with its address, evidence and grade |
 | **Help reverse engineer** | [docs/RE_PLAN.md](docs/RE_PLAN.md): which sources to trust, how a finding is verified, and the phases |
 | **Read the game as clean C++** | [readable/](readable/): hand-reconstructed, verified subsystems with real names (blocks and items so far) |
+| **Make a new enemy from an existing one** | `framework/actors` + [mods/bee/](mods/bee/): any vanilla actor becomes a new sprite with your model (the Bee is a flying Cheep Cheep) |
 | **Put a new power-up in ?-blocks** | `framework/items` + [docs/MODDING.md](docs/MODDING.md) §7b: block contents 21–31 are free for mods |
 | **Read the raw decompiled game** | [decompiled/src/](decompiled/src/): 45,148 functions, one C file each (see the caveat below) |
 
@@ -31,12 +32,14 @@ No game files are distributed here. You need your own `main` NSO. See [NOTICE.md
 
 ```
 mods/            mods you can build (each has a README)
-  hammer_suit/     Hammer Flower power-up
+  hammer_suit/     Hammer Flower power-up (sprite 734, block contents 21)
+  bee/             a flying Cheep Cheep with a bee model (sprite 735)
   diag_passthrough/  diagnostic: the hammer hook doing nothing
 framework/       reusable code mods pull in through requires.txt
   core/            nsmbudx::log -> the Ryujinx log
   game/            codedx-style class headers (game/block.h: BlockBase, ItemMgr)
   items/           custom ?-block / brick contents -> any profile
+  actors/          new sprites from vanilla actors with your model (+ air-swim)
   resources/       ScopedNameRemap: your archive/model names in the game's own code
   diagnostics/     archive guard: names a missing archive before the crash
 sdk/             generated game API (header, .sym, hookable.csv)

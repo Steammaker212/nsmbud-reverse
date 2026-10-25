@@ -57,9 +57,9 @@ def add_profiles(src: Path, profiles: list[list[str]]) -> None:
     """Append mod profiles to codedx's ProfileId enum and sprite table.
 
     The tables are the template's (codedx is never vendored here), so they are
-    edited in the assembled copy only. Each new sprite id must be the next one
-    after the table's last entry: a gap or a clash would silently map a level's
-    sprite to the wrong actor.
+    edited in the assembled copy only. Sprite ids are fixed by profiles.txt and
+    never shift: a clash is refused, and a gap (a mod that owns the ids before
+    this one is not in the build) is filled with profile 0.
     """
     pid_h = src / "include" / "profileid.h"
     prof_cpp = src / "code" / "profile.cpp"
@@ -72,12 +72,19 @@ def add_profiles(src: Path, profiles: list[list[str]]) -> None:
     last = max(int(n) for n in re.findall(r"//\s*(\d+)\s*$", body, re.M))
 
     lines = []
-    for name, sprite in profiles:
+    for name, sprite in sorted(profiles, key=lambda p: int(p[1])):
         sprite = int(sprite)
-        if sprite != last + 1:
-            raise SystemExit(f"profiles.txt: {name} wants sprite {sprite}, next free is {last + 1}")
+        if sprite <= last:
+            raise SystemExit(f"profiles.txt: {name} wants sprite {sprite}, which is already taken")
         if re.search(rf"\b{name}\b", enum):
             raise SystemExit(f"profiles.txt: ProfileId::{name} already exists")
+        # Sprite ids are part of the level files and must never shift. When a
+        # mod is built without the mods that own the ids before it, the gap is
+        # filled with profile 0 (a flag-switch tag that does nothing visible).
+        while last + 1 < sprite:
+            last += 1
+            lines.append(f"    0,  // {last} (owned by a mod not in this build)")
+            print(f"note: sprite {last} has no profile in this build")
         enum = enum.replace("\n    Num", f"\n    {name},\n\n    Num", 1)
         lines.append(f"    ProfileId::{name},  // {sprite}")
         last = sprite
@@ -132,7 +139,9 @@ def check_symbols(sym_dir: Path, module_owned: set[str]) -> int:
 def main() -> int:
     ap = argparse.ArgumentParser(description=__doc__.split("\n")[0])
     ap.add_argument("--repo", default=".")
-    ap.add_argument("--mod", required=True)
+    ap.add_argument("--mod", required=True, action="append",
+                    help="a mod folder; repeat to build several mods into one subsdk0 "
+                         "(only one subsdk0 can load, so a release build lists them all)")
     ap.add_argument("--sweetdx", required=True, help="sweet-dx checkout (has build/source)")
     ap.add_argument("--nso", required=True, help="retail main NSO")
     ap.add_argument("--out", required=True)
@@ -148,7 +157,7 @@ def main() -> int:
     args = ap.parse_args()
 
     repo = Path(args.repo).resolve()
-    mod = (repo / args.mod).resolve()
+    mods = [(repo / m).resolve() for m in args.mod]
     sweetdx = Path(args.sweetdx).resolve()
     template = sweetdx / "build" / "source"
     out = Path(args.out).resolve()
@@ -166,19 +175,30 @@ def main() -> int:
     shutil.copy2(template / "symbols" / "main.sym", src / "symbols" / "main.sym")
     copy_tree(repo / "sdk" / "include", src / "include")
     copy_tree(repo / "sdk" / "symbols", src / "symbols")
-    components = [row[0] for row in list_file(mod / "requires.txt")]
+    # Framework parts: what the mods ask for, plus what those parts ask for.
+    wanted = [row[0] for mod in mods for row in list_file(mod / "requires.txt")]
     if args.with_diagnostics:
-        components.append("diagnostics")
+        wanted.append("diagnostics")
+    components: list[str] = []
+    while wanted:
+        comp = wanted.pop(0)
+        if comp in components:
+            continue
+        if not (repo / "framework" / comp).is_dir():
+            raise SystemExit(f"requires.txt: no framework component '{comp}'")
+        components.append(comp)
+        wanted += [row[0] for row in list_file(repo / "framework" / comp / "requires.txt")]
+
     for sub in ("code", "hooks", "symbols", "include"):
-        copy_tree(mod / sub, src / sub)
+        for mod in mods:
+            copy_tree(mod / sub, src / sub)
         for comp in components:
-            if not (repo / "framework" / comp).is_dir():
-                raise SystemExit(f"requires.txt: no framework component '{comp}'")
             copy_tree(repo / "framework" / comp / sub, src / sub)
+    print("mods: " + ", ".join(m.name for m in mods))
     if components:
         print("framework: " + ", ".join(components))
 
-    profiles = list_file(mod / "profiles.txt")
+    profiles = [row for mod in mods for row in list_file(mod / "profiles.txt")]
     if profiles:
         if not args.with_template_code:
             raise SystemExit("profiles.txt needs --with-template-code (codedx's profile system)")

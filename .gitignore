@@ -91,5 +91,6 @@ sweetdx/build_test.log
 # source/nso/main (no extension, so *.nso does not catch it), the GPL-3.0
 # codedx template code, and the built subsdk0/IPS. None of it is ours to ship.
 mods/*/build*/
+mods/build*/
 mods/*/sd_backup_*/
 **/nso/main

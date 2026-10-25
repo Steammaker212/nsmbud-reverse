@@ -168,6 +168,41 @@ the third argument to skip that rule. The full pipeline, with the vanilla
 contents table, is in [readable/map_obj/BlockBase.cpp](../readable/map_obj/BlockBase.cpp)
 and [readable/item/ItemMgr.cpp](../readable/item/ItemMgr.cpp).
 
+## 7c. A new sprite from any vanilla actor, with your model
+
+`framework/actors` turns a vanilla actor into a new sprite that uses your
+archive and model. It keeps the same code, the same settings nybbles, and the
+same states:
+
+```cpp
+#include "nsmbudx/actor_variant.h"
+
+NSMBUDX_ACTOR_VARIANT(beeVariant,
+    ProfileId::Bee,            // add "Bee 735" to profiles.txt
+    530,                       // base: Cheep Cheep (profile ids: codedx doc/profiles.csv)
+    "Bee",
+    nsmbudx::cVariant_AirSwim, // optional: a water actor moves through air
+    { { "pukupuku", "bee", "pukupuku", "bee" } });   // archive, then model, from -> to
+```
+
+What you need to know for a given base actor:
+
+- **Its archive and model names.** Run `python scripts/sdk/profile_resources.py`
+  with the profile id, or check its `readable/` file.
+- **The animation names it plays.** Your archive needs them; the names are listed
+  in its `readable/` file. For the Cheep Cheep they are `swim` (skeletal) and
+  `pukupuku` (texture).
+
+How it works:
+
+1. The base actor is built with its own factory, as its own profile, so all of
+   its settings logic still applies.
+2. It gets a private copy of its vtable, in which the 13 lifecycle virtuals run
+   with your names swapped.
+3. Your archives load with any level that contains the sprite.
+
+See [mods/bee/](../mods/bee/) for a complete example.
+
 ## 8. Log and debug
 
 ```cpp

@@ -46,7 +46,8 @@ struct NameRemap
 class ScopedNameRemap
 {
 public:
-    explicit ScopedNameRemap(const NameRemap& remap);
+    explicit ScopedNameRemap(const NameRemap& remap) : ScopedNameRemap(&remap, 1) {}
+    ScopedNameRemap(const NameRemap* remaps, u32 count);   // first match wins
     ~ScopedNameRemap();
 
     ScopedNameRemap(const ScopedNameRemap&) = delete;
@@ -54,6 +55,7 @@ public:
 
 private:
     const NameRemap* mPrev;
+    u32 mPrevCount;
     void* mPrevThread;
 };
 
