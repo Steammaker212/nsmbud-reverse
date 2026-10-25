@@ -1,0 +1,9 @@
+<?xml version="1.0"?>
+<game name="Project-SteamDX Custom Actors"
+      version="1.0"
+      description="Custom actors for the Steam Super Mario Bros. DX mod"
+      base="New Super Mario Bros. U Deluxe">
+
+    <file name="spritedata"       path="spritedata.xml"       patch="true" />
+    <file name="spritecategories" path="spritecategories.xml" patch="true" />
+</game>

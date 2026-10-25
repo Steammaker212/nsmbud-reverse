@@ -19,11 +19,42 @@ import os
 import re
 import sys
 import xml.etree.ElementTree as ET
+from pathlib import Path
 
-G = (r"C:\Users\Saif Khan\Documents\Switch Modding Project"
-     r"\Yaz0moto-v67344c6-Windows-x64\miyamotodata\games\NSMBU")
-REPO = r"C:\Users\Saif Khan\Downloads\nsmbud-reverse"
-MAP = r"C:\Users\Saif Khan\Downloads\main.idb\sprite_map.json"
+
+def _find_base_game() -> str:
+    """Locate the Yaz0moto NSMBU base data.
+
+    This used to be a hardcoded path to one specific version, which broke the
+    moment the editor was updated (and silently pointed at a directory that no
+    longer existed). Search for the newest install that actually contains the
+    base spritedata instead, and fail loudly if there is none.
+    """
+    roots = [
+        Path(r"C:\Users\Saif Khan\Documents\Switch Modding Project"),
+        Path(r"C:\Users\Saif Khan\Downloads"),
+    ]
+    best = None
+    for root in roots:
+        if not root.is_dir():
+            continue
+        for d in root.glob("Yaz0moto*"):
+            g = d / "miyamotodata" / "games" / "NSMBU" / "spritedata.xml"
+            if g.is_file():
+                m = g.stat().st_mtime
+                if best is None or m > best[0]:
+                    best = (m, g.parent)
+    if best is None:
+        raise SystemExit(
+            "No Yaz0moto install with NSMBU game data found. Looked under:\n  "
+            + "\n  ".join(str(r) for r in roots)
+        )
+    return str(best[1])
+
+
+G = _find_base_game()
+REPO = str(Path(__file__).resolve().parent.parent)
+MAP = str(Path(REPO).parent / "main.idb" / "sprite_map.json")
 
 CHEEP = os.path.join(REPO, "yaz0moto", "CheepCheepFamily")
 HAMMER = os.path.join(REPO, "yaz0moto", "HammerQuestionBlock")

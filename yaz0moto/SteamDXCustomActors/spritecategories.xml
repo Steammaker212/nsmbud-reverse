@@ -1,0 +1,24 @@
+<?xml version="1.0"?>
+<views>
+    <view name="Project-SteamDX">
+        <category name="Enemies">
+            <attach sprite="724-725" />
+            <attach sprite="735" />
+            <attach sprite="737" />
+        </category>
+        <category name="Items">
+            <attach sprite="731" />
+            <attach sprite="734" />
+            <attach sprite="736" />
+        </category>
+        <category name="Platforms">
+            <attach sprite="732" />
+        </category>
+        <category name="Controllers">
+            <attach sprite="726" />
+            <attach sprite="738" />
+            <attach sprite="728" />
+            <attach sprite="730" />
+        </category>
+    </view>
+</views>

@@ -7,6 +7,7 @@ the [Yaz0moto](https://github.com/Steammaker212/Yaz0moto) patch format.
 |---|---|---|
 | [`CheepCheepFamily/`](./CheepCheepFamily/) | Exposes the movement binding on all 18 Cheep Cheep sprites, plus a dedicated view | Works, not tested in-game |
 | [`HammerQuestionBlock/`](./HammerQuestionBlock/) | Relabels the two block-contents entries that already give the Hammer | Works with the Hammer build |
+| [`SteamDXCustomActors/`](./SteamDXCustomActors/) | The custom-actor patch for the Project-SteamDX build: 12 sprites (codedx's 724–732 plus this project's 734–738) and the full 5-bit block contents | 23/23 structural checks; not tested in-game |
 | [`HAMMER_LIMITATION.md`](./HAMMER_LIMITATION.md) | Why a Hammer cannot be *added* as a new value | Proof, 16/16 checks |
 
 ## The short version on the Hammer
@@ -27,9 +28,17 @@ Details and the full evidence: [`HAMMER_LIMITATION.md`](./HAMMER_LIMITATION.md).
 ## Verify
 
 ```
-python ../scripts/validate_yaz0moto_patch.py      # 12/12
-python ../scripts/prove_hammer_not_patchable.py   # 16/16
+python ../scripts/validate_yaz0moto_patch.py       # 19/19
+python ../scripts/validate_steam_dx_patch.py       # 23/23
+python ../scripts/prove_hammer_not_patchable.py    # 16/16
 ```
 
-Both read the retail image and the editor's own data files. If output ever
+All three read the retail image and the editor's own data files. If output ever
 disagrees with the docs, the docs are wrong.
+
+`validate_steam_dx_patch.py` also compares every installed copy of the
+custom-actor patch against this repo's copy. The editor looks in either
+`yaz0data/patches/` or `miyamotodata/patches/` depending on the build, and both
+layouts are in use on this machine — a patch edited in one is invisible to the
+other, which is exactly how a stale copy was found holding 12 sprites when the
+repo had 14.
