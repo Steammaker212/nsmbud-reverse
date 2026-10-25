@@ -1,4 +1,4 @@
-# readable
+﻿# readable
 
 The game's source, reconstructed by hand into readable C++ in the style of the
 Wii U decomp (red-pro2) and codedx: real names, real control flow, one file per
@@ -18,6 +18,7 @@ headers in [`framework/game/`](../framework/game/), which share these names.
 | [player/PlayerModel.cpp](player/PlayerModel.cpp) | power-up mode → body model, and how suit colours are chosen (`setColorType`) |
 | [player/PenguinSuit.cpp](player/PenguinSuit.cpp) | the Penguin Suit: it is a mode (5), not an actor; the slide is attack type 10 with a per-enemy dispatch; the block bump is a virtual whose base is empty; rotation is an integer `Vec3i` the turn code accumulates into directly |
 | [boss/Lemmy.cpp](boss/Lemmy.cpp) | World 1's boss and every Koopaling: stamina is two constant virtuals (24 HP, 6 per phase = 4 phases); being hit funnels through `vf15C`; winning opens a Kupper door by *link id*, not a goal pole — the actual level requirement |
+| [boss/Koopalings.cpp](boss/Koopalings.cpp) | all seven siblings as one table: 26 slots are the per-sibling contract, 31 are individual behaviour, and 9 are pure tuning constants — plus why a missed slot gives you 0.0, not a default |
 | [enemy/EnemyDamage.cpp](enemy/EnemyDamage.cpp) | how every enemy decides what a hit does: the player, Yoshi, baby Yoshi and projectile dispatchers, their damage-mask gates and the 17 reactions |
 | [enemy/Goomba.cpp](enemy/Goomba.cpp) | the Goomba family (467-473, 892-893): profile 467/468 from one registration, why a Goombrat turns at ledges, the walk decision, the type nybbles, the class layout |
 | [enemy/Pukupuku.cpp](enemy/Pukupuku.cpp) | the Cheep Cheep family (530–538): profile → mode, facing, model and animation names, states, the water-surface clamp, formations |
@@ -29,3 +30,4 @@ gives the order. Where a detail isn't established, the code says so in a comment
 The machine-generated C for **every** function is in
 [`decompiled/src/`](../decompiled/src/). It's complete but hard to read; this
 folder is the readable layer on top.
+
