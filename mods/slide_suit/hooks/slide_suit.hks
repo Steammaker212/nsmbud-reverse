@@ -12,3 +12,16 @@ SlideSuit_onExecute:
     address:    0x00263D10
     symbol:     SlideSuit_onExecute
     trampoline: SlideSuit_onExecute_orig
+
+@ ActiveCollider_doOverlapMaybe (0x601597E8, RVA 0x001597E8) -- the collider-pair
+@ test. It invokes the callbacks of BOTH colliders, so hooking it is how a
+@ player-side mod learns which block it is touching. The block's bump handler is
+@ BlockBase vtable+0x0A8 (vf16C 0x605640BC), verified exactly before dispatch.
+@ sdk/data/hookable.csv: 576 bytes, entry "push {r4, r5, r6, r7, r8, r9, r10,
+@ r11, lr}" (0xe92d4ff0), trampoline_safe = yes.
+
+SlideSuit_doOverlap:
+    type:       hook
+    address:    0x001597E8
+    symbol:     SlideSuit_doOverlap
+    trampoline: SlideSuit_doOverlap_orig

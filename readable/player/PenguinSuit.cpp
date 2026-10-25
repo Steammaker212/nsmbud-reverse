@@ -85,47 +85,51 @@ bool CollisionActor::isTouchingWall() const
 // Triggering the block-from-below event
 // ---------------------------------------------------------------------------
 //
-// Hitting a block from underneath is a virtual on the block, not an event id:
+// Hitting a block from underneath is a virtual on the block, not an event id.
+// There are **two** relevant virtuals and it matters which one you call:
 //
-//     virtual void damageFromUnder();       vtable slot 0x60C011B4
+//     vtable+0x0A8   vf16C             the real bump handler (0x605640BC)
+//     vtable+0x1DC   damageFromUnder   empty in BlockBase (0x60563A08)
 //
-// `BlockBase::damageFromUnder` (0x60563A08) is *empty* -- four bytes, `bx lr`
-// (raw 1eff2fe1) -- and so is `StageActor::damageFromUnder` (0x600027A8). Every
-// block that reacts overrides it. So calling it on any block is safe: a block
-// with no reaction has none.
+// `BlockBase::vf16C` opens with `movw r0,#0x1ac8` / `ldr r0,[r5,r0]!` /
+// `cmp r0,#0xd`, i.e. it loads the block's content code and compares it against
+// 13, then selects 12 or 14 from the hit result and calls the spawn path. That
+// is the "?block was bumped" behaviour. `BlockCoinBase` then plays it through
+// `beginState_BumpUp` (0x605B6648) and friends.
 //
-// **But damageFromUnder is not what makes a ?-block bump.** The real handler is
-// `BlockBase::vf16C` (0x605640BC), which reads the block's content code
-// (+0x1AC8), compares it against 13, picks 12 or 14 from the hit result and
-// calls the spawn path -- and `BlockCoinBase` then drives the actual animation
-// through its BumpUp / BumpDown states (0x605B6648 onward). A mod that only
-// calls damageFromUnder gets nothing visible from a ?-block.
+// `damageFromUnder` is a separate, deliberately-empty hook for subclasses that
+// want to react without the standard bump. Calling only that one produces
+// nothing visible from a ?-block -- which is the mistake I made first and
+// corrected in F0138.
 //
-// The fields an initiator has to supply, because the block reads them:
+// The fields an initiator supplies, because the handler reads them:
 //
 //     block + 0x1ACC   hitPlayerNo     which player hit it (s32)
 //     block + 0x1AC8   contentCode     what it contains
 //     block + 0x1AD8   moveType        selects the bump animation
 //
-// Which leads to the practical question this project cannot yet answer: **how to
-// find the block you are touching.** That is `ColliderMgr`'s overlap query, and
-// while `ColliderMgr_add` (0x60153 5AC), the five `removeFromListN` helpers and
-// `ColliderMgr_removeRelated1/2` are all identified, no function that returns
-// "the colliders overlapping this one" has been reversed. `TileCheck_check`
-// (0x6015DA30) is the tile-level query the game uses for floor/wall probing, but
-// it needs a TileCheck instance and the TileMgr, and it answers about *tiles*,
-// not about block actors.
-//
-// There is also a strong hint that no such query is needed at all. `BrosBase`
-// has collision virtuals for players, Yoshi, iceballs, propeller drill, hammer
-// and star, but **none for blocks** -- block contact is handled by the block's
-// own collider callback, not by the player. That is consistent with the player
-// never knowing which block it touched: the block decides, through its own
-// virtuals, when it is hit.
+// And the exptable way to find the block at all: `ActiveCollider_doOverlapMaybe`
+// (0x601597E8) invokes **both** colliders' callbacks for an overlapping pair --
+// `blx r2` four times, twice for `ac1->info.callback` and twice for
+// `ac2->info.callback`. So when the player's callback runs, the *other*
+// argument is the block's collider, and `collider->owner` (ActiveCollider+0x40)
+// is the block actor. The mod uses that instead of searching for a block.
 void BlockBase::hitFromUnder(s32 playerNo)
 {
     this->hitPlayerNo = playerNo;
-    this->damageFromUnder();        // virtual: the subclass's reaction
+
+    // vf16C is the bump itself. Called through the vtable so subclasses that
+    // override it (BabyYoshiBlock, FlyingBlockForAmbush) get their own version.
+    typedef void (*BumpFn)(void*);
+    BumpFn bump = (BumpFn)(*(void***)this)[0x0A8 / 4];
+    if (bump)
+        bump(this);
+}
+
+// The block's collider hands us the actor. ActiveCollider::owner is +0x40.
+static BlockBase* blockFromCollider(void* collider)
+{
+    return (BlockBase*)(*(void**)((char*)collider + 0x40));
 }
 
 

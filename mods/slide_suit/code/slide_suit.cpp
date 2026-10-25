@@ -128,6 +128,113 @@ inline u32 collisionOutput(void* player)
     return *(u32*)((char*)player + 0x288 + 0x8B0);
 }
 
+// =====================================================================
+//  Block bumps
+// =====================================================================
+//
+// ActiveCollider_doOverlapMaybe (0x601597E8) is the collider-pair test, and it
+// invokes the callbacks of **both** colliders -- `blx r2` four times, twice for
+// each side. So when it is about to run the pair (player, block) we have both
+// colliders in hand, which is the only place a player-side hook can learn which
+// block it is touching.
+//
+// BlockBase's bump handler is vf16C at vtable+0x0A8 (0x605640BC). It is NOT
+// damageFromUnder (vtable+0x1DC), which is empty in the base class -- calling
+// that one does nothing visible to a ?-block. vf16C opens by loading
+// contentCode at +0x1AC8 and comparing it with 13.
+constexpr u32 kBlockBumpVtOffset = 0x0A8;
+constexpr u32 kBlockHitPlayerNo  = 0x1ACC;
+constexpr u32 kBlockContentCode  = 0x1AC8;
+
+// Per-block cooldown, keyed by actor pointer. A slide overlaps the same block
+// for several frames, and bumping it every frame would fire the item spawn
+// repeatedly. Small fixed table, because the number of blocks a sliding player
+// can be touching at once is tiny.
+struct BumpRecord { void* block; u32 frames; };
+constexpr u32 kMaxBumpRecords = 8;
+BumpRecord g_bumpRecords[kMaxBumpRecords] = {};
+u32 g_bumpTick = 0;
+u32 g_loggedBumps = 0;
+
+// Is this actor actually a block? This check is not optional.
+//
+// The bump is a virtual call through vtable+0x0A8. Every other kind of actor has
+// a *different* vtable, so calling slot 0x0A8 on an enemy would jump into an
+// unrelated function with the wrong arguments -- a crash, not a no-op.
+//
+// The test is exact rather than heuristic: BlockBase's constructor installs one
+// of three implementations into that slot, and any actor whose slot holds one of
+// them was built by BlockBase. The three are the shared handler and the only two
+// overrides (from vf16C's "Overridden by" list):
+//
+//     0x605640BC  BlockBase::vf16C            (shared by every other block)
+//     0x60569738  FlyingBlockForAmbush::vf16C
+//     0x60576938  BabyYoshiBlock::vf16C
+//
+// A block that overrode it some other way would simply not be bumped, which is
+// the safe direction to fail in.
+constexpr u32 kBlockVf16C_Base      = 0x605640BC;
+constexpr u32 kBlockVf16C_Ambush    = 0x60569738;
+constexpr u32 kBlockVf16C_BabyYoshi = 0x60576938;
+
+void* blockBumpFn(void* actor)
+{
+    if (actor == nullptr)
+        return nullptr;
+
+    void* fn = (*(void***)actor)[kBlockBumpVtOffset / 4];
+    const u32 v = (u32)fn;
+    if (v == kBlockVf16C_Base || v == kBlockVf16C_Ambush || v == kBlockVf16C_BabyYoshi)
+        return fn;
+    return nullptr;
+}
+
+// Returns true if this block may be bumped now (and starts its cooldown).
+bool claimBump(void* block)
+{
+    for (u32 i = 0; i < kMaxBumpRecords; ++i)
+    {
+        if (g_bumpRecords[i].block == block)
+        {
+            if (g_bumpTick < g_bumpRecords[i].frames)
+                return false;
+            g_bumpRecords[i].frames = g_bumpTick + 30;
+            return true;
+        }
+    }
+    for (u32 i = 0; i < kMaxBumpRecords; ++i)
+    {
+        if (g_bumpRecords[i].block == nullptr)
+        {
+            g_bumpRecords[i].block  = block;
+            g_bumpRecords[i].frames = g_bumpTick + 30;
+            return true;
+        }
+    }
+    return false;   // table full: stay quiet rather than spam a bump
+}
+
+void bumpBlock(void* block, s32 playerNo)
+{
+    // Verify before anything else: this is the difference between "bump a block"
+    // and "call a random virtual on an enemy".
+    void* bump = blockBumpFn(block);
+    if (bump == nullptr)
+        return;
+    if (!claimBump(block))
+        return;
+
+    *(s32*)((char*)block + kBlockHitPlayerNo) = playerNo;
+
+    ((void (*)(void*))bump)(block);
+    if (g_loggedBumps < 4)
+    {
+        ++g_loggedBumps;
+        nsmbudx::log("slide: bumped a block, content=",
+                     *(u32*)((char*)block + kBlockContentCode));
+    }
+}
+
 // Force constant horizontal motion in the facing direction and spin the model.
 void driveSlide(void* player)
 {
@@ -224,4 +331,37 @@ extern "C" int SlideSuit_onExecute(void* self)
 #endif
 
     return result;
+}
+
+
+// =====================================================================
+//  Hook: ActiveCollider_doOverlapMaybe (RVA 0x001597E8)
+// =====================================================================
+//
+// This is where the block bump becomes possible at all. The function is called
+// for every collider pair the collision manager is considering, and it runs the
+// callbacks of both sides. Hooking it gives us the pair before the game reacts,
+// so we can recognise "player <-> block" and bump the block ourselves.
+//
+// It is a safe trampoline: `push {r4, r5, r6, r7, r8, r9, r10, r11, lr}`
+// (0xe92d4ff0), trampoline_safe = yes.
+//
+// The arguments are the two colliders. ActiveCollider::owner is +0x40.
+extern "C" bool SlideSuit_doOverlap_orig(void* ac1, void* ac2);
+
+extern "C" bool SlideSuit_doOverlap(void* ac1, void* ac2)
+{
+    ++g_bumpTick;
+
+    // Only worth doing while a suited player is moving fast enough to matter.
+    // Both sides are checked because either could be the player.
+    void* owner1 = *(void**)((char*)ac1 + 0x40);
+    void* owner2 = *(void**)((char*)ac2 + 0x40);
+
+    if (owner1 && wearingSuit(owner1))
+        bumpBlock(owner2, 0);
+    else if (owner2 && wearingSuit(owner2))
+        bumpBlock(owner1, 0);
+
+    return SlideSuit_doOverlap_orig(ac1, ac2);
 }

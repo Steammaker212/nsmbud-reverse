@@ -14,6 +14,7 @@ this mod is the thin layer on top.
 | Always sliding | Writes `speed.x` to `SLIDE_SPEED` every frame and clears `CollisionActor+0x17AC` so the friction code does not eat it |
 | Faster than the suit | `SLIDE_SPEED` = 6.0 against the suit's ~2.7 slide |
 | Reverses on impact | Reads `CollisionMgr::output` bits 18/19 (wall right/left) and flips `direction`, with a cooldown |
+| Triggers the block hit | Hooks `ActiveCollider_doOverlapMaybe`, recognises a player/block pair, and calls the block's own bump handler |
 | Model spins | Adds `SLIDE_SPIN` to `StageActor::rotation.z` each frame |
 | Feels like ice | Nothing to do -- see below |
 
@@ -61,28 +62,49 @@ it to a per-direction integer target, which is why a full turn is `2^32`:
 
 At 60 fps the default is 675°/s -- visibly spinning, not a blur.
 
+## The block trigger
+
+This is the piece that needed the most care, and it went through a correction.
+
+`ActiveCollider_doOverlapMaybe` (`0x601597E8`) is the collider-pair test. Its
+important property is that it invokes the callbacks of **both** colliders (`blx
+r2` four times, twice per side). That is the only place a player-side hook can
+learn *which block it is touching* -- otherwise the player never knows.
+
+When the pair looks like (suited player, block), the mod calls the block's real
+bump handler: `BlockBase` vtable **+0x0A8** (`vf16C`, `0x605640BC`), which loads
+`contentCode` (`+0x1AC8`), compares it with 13, and calls the spawn path.
+`BlockCoinBase` then plays the bump animation.
+
+Two things that are easy to get wrong here:
+
+**It is not `damageFromUnder`.** That virtual lives at vtable `+0x1DC` and is
+deliberately empty in `BlockBase` (`bx lr`) -- it is a hook for subclasses, not
+the bump. Calling it produces no visible reaction from a ?-block.
+
+**The vtable call is verified, not assumed.** Calling slot `+0x0A8` on a
+non-block would jump into an unrelated function with the wrong arguments. So the
+mod checks the slot against the only three implementations that exist
+(`0x605640BC` shared, `0x60569738` FlyingBlockForAmbush, `0x60576938`
+BabyYoshiBlock) and does nothing if it does not match. A block that overrode it
+some other way simply would not be bumped -- failing in the safe direction.
+
+A per-block cooldown stops one slide from spawning 30 items, since the pair
+overlaps for several frames.
+
 ## What is **not** done
 
-Two things, stated plainly rather than left to be discovered:
-
-**1. The block trigger is not wired up.** The request was that a collision
-"triggers the event of hitting that block". The event exists and is reversed:
-`BlockBase::damageFromUnder` (`0x60563A08`, vtable slot `0x60C011B4`) is a
-virtual that the base class leaves **empty**, so calling it does nothing on a
-block with no reaction and the right thing on one that has. The real bump
-handler is `BlockBase::vf16C` (`0x605640BC`), which reads `contentCode`
-(`+0x1AC8`).
-
-What is missing is *finding the block you are touching*. That needs
-`ColliderMgr`'s overlap query, which this project has not reversed far enough to
-call safely, and guessing at it would risk corrupting the stage. So the mod
-currently does the reversal only, and the block trigger is left to the game's
-own contact handling. **This is the main outstanding piece.**
-
-**2. Ice balls are not inherited.** Firing them is the suit's attack action and
-it runs through `BrosBase::createProjectile` / `throwProjectile`, which are
+**Ice balls are not inherited.** Firing them is the suit's attack action and it
+runs through `BrosBase::createProjectile` / `throwProjectile`, which are
 `ret`-only stubs in the base class that each character overrides. A copy of the
 suit does not get them for free; that would be a separate hook.
+
+**The slide attack type is not set either.** The mod moves fast and bounces, but
+it does not publish `Attack::PenguinSlip` (10) on the player's collider at
+`+0x8C`, so enemies do not yet react to the slide as an attack. The mechanism is
+reversed and documented in `readable/player/PenguinSuit.cpp`; wiring it up needs
+the per-frame value the game already writes to be restored afterwards, which
+deserves its own test pass rather than being guessed at here.
 
 ## Configuration
 
