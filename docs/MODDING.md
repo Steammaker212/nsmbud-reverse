@@ -201,7 +201,7 @@ How it works:
    with your names swapped.
 3. Your archives load with any level that contains the sprite.
 
-See [mods/bee/](../mods/bee/) for a complete example.
+See [mods/bee/](../mods/bee/) for a complete example. To tell your variant apart in a hook (its runtime profile is the vanilla one), use `nsmbudx::variantProfileOf(actor)`; [mods/p_acorn/](../mods/p_acorn/) does that to make the Acorn grant mode 8.
 
 ## 8. Log and debug
 

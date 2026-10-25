@@ -25,6 +25,7 @@ No game files are distributed here. You need your own `main` NSO. See [NOTICE.md
 | **Help reverse engineer** | [docs/RE_PLAN.md](docs/RE_PLAN.md): which sources to trust, how a finding is verified, and the phases |
 | **Read the game as clean C++** | [readable/](readable/): hand-reconstructed, verified subsystems with real names (blocks and items so far) |
 | **Make a new enemy from an existing one** | `framework/actors` + [mods/bee/](mods/bee/): any vanilla actor becomes a new sprite with your model (the Bee is a flying Cheep Cheep) |
+| **Get the P-Acorn from ?-blocks** | [mods/p_acorn/](mods/p_acorn/): the P-Acorn exists in the game but no level gives it; contents 22 now does |
 | **Put a new power-up in ?-blocks** | `framework/items` + [docs/MODDING.md](docs/MODDING.md) §7b: block contents 21–31 are free for mods |
 | **Read the raw decompiled game** | [decompiled/src/](decompiled/src/): 45,148 functions, one C file each (see the caveat below) |
 
@@ -34,6 +35,7 @@ No game files are distributed here. You need your own `main` NSO. See [NOTICE.md
 mods/            mods you can build (each has a README)
   hammer_suit/     Hammer Flower power-up (sprite 734, block contents 21)
   bee/             a flying Cheep Cheep with a bee model (sprite 735)
+  p_acorn/         the unobtainable P-Acorn in ?-blocks (contents 22, sprite 736)
   diag_passthrough/  diagnostic: the hammer hook doing nothing
 framework/       reusable code mods pull in through requires.txt
   core/            nsmbudx::log -> the Ryujinx log

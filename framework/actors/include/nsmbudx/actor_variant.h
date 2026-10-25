@@ -58,6 +58,12 @@ enum ActorVariantOption : u32
     // the actor while the variant's code runs, so the clamp never pulls it down
     // and it moves through air exactly as it would through water.
     cVariant_AirSwim = 1 << 0,
+
+    // Don't add the replacement archives to the profile's load list. Use it for
+    // archives that live inside the game's packs (already loaded, or loaded by
+    // other code), where asking the profile system to load a file that may not
+    // exist on its own is a risk. The remap still falls back if it isn't loaded.
+    cVariant_NoArchiveLoad = 1 << 1,
 };
 
 struct ActorVariant
@@ -68,6 +74,11 @@ struct ActorVariant
     u32 options;                           // ActorVariantOption bits
     NameRemap remaps[cMaxVariantRemaps];   // unused entries left zero
 };
+
+// The variant profile id an actor was built as, or 0 for any other actor. A
+// variant's runtime profile is the vanilla one (so the game's profile checks
+// keep working); use this to tell your variant apart in a hook.
+u32 variantProfileOf(const void* actor);
 
 // Constructs the variant's profile and registers it. Runs from a static
 // constructor, after the game has registered its own profiles.

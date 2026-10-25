@@ -4,7 +4,7 @@ Each folder is one mod. Only one `subsdk0` can load, so a release build lists
 every mod you use:
 
 ```sh
-python scripts/sdk/make_mod_project.py --mod mods/hammer_suit --mod mods/bee \
+python scripts/sdk/make_mod_project.py --mod mods/hammer_suit --mod mods/bee --mod mods/p_acorn \
     --sweetdx "<sweet-dx dir>" --nso <main> --out mods/build_all --build --with-template-code
 ```
 
@@ -12,6 +12,7 @@ python scripts/sdk/make_mod_project.py --mod mods/hammer_suit --mod mods/bee \
 |---|---|---|---|
 | [hammer_suit](hammer_suit/) | The Hammer Flower power-up: throws Hammer Bros hammers, comes in ?-blocks/bricks as contents 21, model names configurable | 734 | v1 verified in-game; v2/v3 built, awaiting test |
 | [bee](bee/) | A Cheep Cheep that flies, with your bee model (framework/actors) | 735 | built, awaiting test |
+| [p_acorn](p_acorn/) | The P-Acorn (mode 8) from ?-blocks/bricks (contents 22) and as a sprite; the game never gives it in levels | 736 | built, awaiting test |
 | [diag_passthrough](diag_passthrough/) | The Hammer Suit's hook with nothing in it, to tell "the mod's logic" apart from "the module or the content" | — | diagnostic |
 
 Sprite ids are fixed in each mod's `profiles.txt` and never shift. Build a mod on

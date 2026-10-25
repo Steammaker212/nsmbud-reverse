@@ -195,6 +195,12 @@ extern "C" u32 Variant_checkLiquid(void* result, f32* surfaceY, const Vec3* posi
 
 namespace nsmbudx {
 
+u32 variantProfileOf(const void* actor)
+{
+    Variant* v = actor ? byActor((Actor*)actor) : nullptr;
+    return v ? v->def->profileId : 0;
+}
+
 ActorVariantRegistration::ActorVariantRegistration(const ActorVariant& def)
     : mOk(false)
 {
@@ -227,8 +233,9 @@ ActorVariantRegistration::ActorVariantRegistration(const ActorVariant& def)
                 return;
         new (v.resourceStorage[count++]) sead::SafeString(name);
     };
-    for (u32 i = 0; i < v.numRemaps; i++)
-        add(def.remaps[i].archiveTo);
+    if (!(def.options & cVariant_NoArchiveLoad))
+        for (u32 i = 0; i < v.numRemaps; i++)
+            add(def.remaps[i].archiveTo);
     const sead::SafeString* vanilla = Profile::getResourceList(def.baseProfileId);
     u8 vanillaCount = Profile::getResourceCount(def.baseProfileId);
     for (u32 i = 0; vanilla && i < vanillaCount && count < 2 * cMaxVariantRemaps; i++)
