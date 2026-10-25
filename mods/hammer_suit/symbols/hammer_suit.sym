@@ -1,0 +1,12 @@
+# Game symbols the hammer suit needs that the generated game API does not carry.
+# Deluxe (Switch) v1.0.0 only. RVA = VA - 0x60000000.
+
+# createFireBall calls it as (player, "SE_PLY_THROW_FIRE", 0, 0) before spawning.
+Player_playSound = 0x007734E8;
+
+# The hammer's thrown state. The held state's execute (sub_6013F218) switches to it
+# when the Bro lets go; its begin (sub_6013F3D8) sets the arc and enables the collider.
+HammerActor_StateThrown = 0x00C87CE4;
+
+# The Fire Flower's ActorInfo, as registerProfile_faiyafurawa (0x6045E25C) passes it.
+FireFlower_actorInfo = 0x00B02594;

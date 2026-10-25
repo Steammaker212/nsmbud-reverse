@@ -1,0 +1,5 @@
+class,offset,name,type,source
+Player,0x528,mMode,_DWORD,"docs/HAMMER_POWERUP_REPORT.md:23,765 (power-up state; ==2 is Fire)"
+Player,0x2C68,mModelMgr,_DWORD,README.md player field list (model manager pointer)
+Player,0x2C78,mModePrev,_DWORD,README.md player field list
+Player,0x2C7C,mModeNext,_DWORD,"docs/HAMMER_POWERUP_REPORT.md:432 (written by sub_607A27A8)"

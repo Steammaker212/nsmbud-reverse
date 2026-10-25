@@ -85,3 +85,11 @@ atmosphere/
 
 # ---- SweetDX build logs: local diagnostics, not deliverables ----
 sweetdx/build_test.log
+
+# ---- Mod builds (scripts/sdk/make_mod_project.py) ----
+# Each build/ holds an assembled sweet-dx tree: a copy of the game's NSO at
+# source/nso/main (no extension, so *.nso does not catch it), the GPL-3.0
+# codedx template code, and the built subsdk0/IPS. None of it is ours to ship.
+mods/*/build*/
+mods/*/sd_backup_*/
+**/nso/main

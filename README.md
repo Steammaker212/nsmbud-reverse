@@ -38,6 +38,21 @@ file_off = VA - 0x60000288 + 0x6e4
 
 ---
 
+## Modding framework (sweet-dx)
+
+| Path | What it is |
+|---|---|
+| [`docs/RE_PLAN.md`](docs/RE_PLAN.md) | **How this game is reverse engineered from now on**: source tiers (binary/runtime > RicBent's database and codedx > Wii U decomp > older findings here), the verify loop, and the phases |
+| [`data/findings/ledger.csv`](data/findings/ledger.csv) | Every finding with its address, evidence and grade (`seen-runtime` / `seen-static` / `inferred`) |
+| [`mods/hammer_suit/`](mods/hammer_suit/) | Hammer Flower power-up. v1 (every Fire Flower throws hammers) is **verified in-game**; v2 adds the new item (sprite 734) and model names you can change in one place |
+| [`framework/`](framework/) | Reusable pieces: `core` (logging to the Ryujinx log), `resources` (scoped archive/model name remapping), `diagnostics` (names a missing archive before the game crashes on it) |
+| [`sdk/`](sdk/) | Generated game API: 7,079 game functions callable by name (`include/nsmbudx/game.h`, `symbols/nsmbudx_game.sym`), plus which 6,771 are safe to hook with a trampoline |
+| [`scripts/sdk/`](scripts/sdk/) | Build a mod (`make_mod_project.py`), check a built module (`inspect_subsdk.py`), read crash logs (`symbolize_crash.py`), and check levels (`course_sprites.py`, `course_tilesets.py`) |
+
+Older findings below this point are **quarantined** until re-verified; see the plan.
+
+---
+
 ## Layout
 
 | Path | Contents |
