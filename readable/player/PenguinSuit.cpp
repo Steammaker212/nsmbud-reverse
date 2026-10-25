@@ -87,23 +87,41 @@ bool CollisionActor::isTouchingWall() const
 //
 // Hitting a block from underneath is a virtual on the block, not an event id:
 //
-//     virtual void damageFromUnder();       vtable slot at 0x60C011B4
+//     virtual void damageFromUnder();       vtable slot 0x60C011B4
 //
-// `BlockBase::damageFromUnder` (0x60563A08) is *empty* -- four bytes, `bx lr`.
-// Every block that does something on a bump overrides it (the ?-block, the
-// brick), and the base class deliberately does nothing, so calling it on any
-// block is safe: a block with no reaction has no reaction.
+// `BlockBase::damageFromUnder` (0x60563A08) is *empty* -- four bytes, `bx lr`
+// (raw 1eff2fe1) -- and so is `StageActor::damageFromUnder` (0x600027A8). Every
+// block that reacts overrides it. So calling it on any block is safe: a block
+// with no reaction has none.
 //
-// The pieces a caller must supply, because the block uses them to decide:
+// **But damageFromUnder is not what makes a ?-block bump.** The real handler is
+// `BlockBase::vf16C` (0x605640BC), which reads the block's content code
+// (+0x1AC8), compares it against 13, picks 12 or 14 from the hit result and
+// calls the spawn path -- and `BlockCoinBase` then drives the actual animation
+// through its BumpUp / BumpDown states (0x605B6648 onward). A mod that only
+// calls damageFromUnder gets nothing visible from a ?-block.
+//
+// The fields an initiator has to supply, because the block reads them:
 //
 //     block + 0x1ACC   hitPlayerNo     which player hit it (s32)
 //     block + 0x1AC8   contentCode     what it contains
 //     block + 0x1AD8   moveType        selects the bump animation
 //
-// So a slide that "hits the block" is: find the block you are overlapping, set
-// hitPlayerNo, then call its damageFromUnder through its own vtable. Calling the
-// base implementation directly would bypass the subclass and do nothing, which
-// is the one way to get this wrong.
+// Which leads to the practical question this project cannot yet answer: **how to
+// find the block you are touching.** That is `ColliderMgr`'s overlap query, and
+// while `ColliderMgr_add` (0x60153 5AC), the five `removeFromListN` helpers and
+// `ColliderMgr_removeRelated1/2` are all identified, no function that returns
+// "the colliders overlapping this one" has been reversed. `TileCheck_check`
+// (0x6015DA30) is the tile-level query the game uses for floor/wall probing, but
+// it needs a TileCheck instance and the TileMgr, and it answers about *tiles*,
+// not about block actors.
+//
+// There is also a strong hint that no such query is needed at all. `BrosBase`
+// has collision virtuals for players, Yoshi, iceballs, propeller drill, hammer
+// and star, but **none for blocks** -- block contact is handled by the block's
+// own collider callback, not by the player. That is consistent with the player
+// never knowing which block it touched: the block decides, through its own
+// virtuals, when it is hit.
 void BlockBase::hitFromUnder(s32 playerNo)
 {
     this->hitPlayerNo = playerNo;
