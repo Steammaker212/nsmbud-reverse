@@ -231,6 +231,35 @@ The full mechanism and the per-mode tables (body, size, height) are in
 `framework/game/include/game/player.h`. Toad, Toadette and Nabbit use other
 model classes and are not covered yet.
 
+## 7e. Change how an enemy reacts to attacks
+
+Every enemy decides what a hit does in seven dispatchers (player, Yoshi, baby
+Yoshi, enemy, projectiles, …). Each one checks the enemy's **damage mask**
+(collider `+0x94`: bit N = attack N can hurt it), then calls one of **17
+reactions**. These are vtable slots `+0x114` (Star) to `+0x154`; all are listed
+with their attacks in `framework/game/include/game/enemy.h`. A
+`framework/actors` variant can override them:
+
+```cpp
+#include "game/enemy.h"
+NSMBUDX_ACTOR_VARIANT(armoredBee, ProfileId::ArmoredBee, 530, "ArmoredBee",
+    nsmbudx::cVariant_AirSwim,
+    { { "pukupuku", "bee", "pukupuku", "bee" } },
+    { { EnemyVt::hitFire, nsmbudx::HitReaction::Immune, 0 },                 // fireballs do nothing
+      { EnemyVt::hitIce,  nsmbudx::HitReaction::SameAs, EnemyVt::hitStar } }, // ice kills like a Star
+    0,                         // damage-mask bits to set (let an attack through)
+    1u << 9);                  // ...and to clear (here: shells, attack 9)
+```
+
+- `Immune` makes the reaction report "not consumed".
+- `SameAs` runs another reaction instead.
+- The mask edits apply right after the enemy's own `onCreate`.
+
+An attack whose mask bit is clear never reaches its reaction, so set the bit if
+you want a rule for an attack the base enemy ignores. The Bee has a one-line
+example: `BEE_FIREPROOF`. The dispatchers are reconstructed in
+[readable/enemy/EnemyDamage.cpp](../readable/enemy/EnemyDamage.cpp).
+
 ## 8. Log and debug
 
 ```cpp

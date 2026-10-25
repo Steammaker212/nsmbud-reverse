@@ -38,6 +38,15 @@
 //  * The actor's profile stays the vanilla one at runtime, so profile-id
 //    checks behave as for the original.
 //
+// Enemy hit rules (after the remaps):
+//
+//   NSMBUDX_ACTOR_VARIANT(armoredBee, ProfileId::ArmoredBee, 530, "ArmoredBee",
+//       nsmbudx::cVariant_AirSwim,
+//       { { "pukupuku", "bee", "pukupuku", "bee" } },
+//       { { EnemyVt::hitFire, nsmbudx::HitReaction::Immune },          // fireballs bounce off
+//         { EnemyVt::hitIce,  nsmbudx::HitReaction::SameAs, EnemyVt::hitStar } },  // ice kills outright
+//       0, 0);
+//
 // Up to 8 variants per build. Deluxe (Switch) v1.0.0 only.
 
 #pragma once
@@ -66,6 +75,24 @@ enum ActorVariantOption : u32
     cVariant_NoArchiveLoad = 1 << 1,
 };
 
+constexpr u32 cMaxHitRules = 8;
+
+// What an enemy variant does when one of its reactions is triggered. Slots
+// are the EnemyVt::hit* offsets in game/enemy.h (0x114-0x154).
+enum class HitReaction : u32
+{
+    Default = 0,    // the vanilla reaction
+    Immune,         // the hit has no effect (the callback reports "not consumed")
+    SameAs,         // react as the `asIf` reaction would (e.g. die to a fireball like a Star)
+};
+
+struct HitRule
+{
+    u32 slot;               // EnemyVt::hit* offset; 0 ends the list
+    HitReaction reaction;
+    u32 asIf;               // EnemyVt::hit* offset, for SameAs
+};
+
 struct ActorVariant
 {
     u32 profileId;
@@ -73,6 +100,14 @@ struct ActorVariant
     const char* name;
     u32 options;                           // ActorVariantOption bits
     NameRemap remaps[cMaxVariantRemaps];   // unused entries left zero
+
+    // Enemies only. Rules apply when a dispatcher calls the reaction; the
+    // damage mask decides whether it gets called at all (an attack whose bit
+    // is clear never reaches its reaction), so set bits here to let an attack
+    // through, or clear them to block it before any reaction runs.
+    HitRule hitRules[cMaxHitRules];
+    u32 vsDamageSet;                       // OR-ed into the collider's damage mask after onCreate
+    u32 vsDamageClear;                     // then these bits are cleared
 };
 
 // The variant profile id an actor was built as, or 0 for any other actor. A

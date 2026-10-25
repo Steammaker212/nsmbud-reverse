@@ -37,6 +37,7 @@ struct Variant
     sead::SafeString* resources() { return (sead::SafeString*)resourceStorage; }
     void* vtable[cVtableSlots];     // the copy new actors point at
     void* original[LastWrapped + 1];
+    void** vanilla;                 // the vanilla vtable, for hit rules
     bool vtableReady;
 };
 
@@ -130,9 +131,58 @@ void wrapVoid(Actor* actor)
     ((void (*)(Actor*))v->original[S])(actor);
 }
 
+// onCreate also applies the variant's damage-mask edits (enemies), once the
+// vanilla onCreate has built the collider from its CollisionData.
+u32 wrapOnCreate(Actor* actor)
+{
+    Variant* v = byActor(actor);
+    u32 r;
+    {
+        VariantScope scope(v);
+        r = ((u32 (*)(Actor*))v->original[OnCreate])(actor);
+    }
+    if (v->def->vsDamageSet || v->def->vsDamageClear) {
+        u32& mask = *(u32*)((u8*)actor + 0xBC + 0x94);      // aCollider.info.vs_damage (F0010)
+        mask = (mask | v->def->vsDamageSet) & ~v->def->vsDamageClear;
+    }
+    return r;
+}
+
+// ---- enemy hit rules ----------------------------------------------------------
+
+constexpr u32 cFirstHit = 0x114 / 4, cLastHit = 0x154 / 4;
+
+typedef bool (*HitFn)(Actor*, void*, void*);
+
+template <u32 Index>
+bool wrapHit(Actor* actor, void* self, void* other)
+{
+    Variant* v = byActor(actor);
+    for (u32 i = 0; i < nsmbudx::cMaxHitRules && v->def->hitRules[i].slot; i++) {
+        const nsmbudx::HitRule& r = v->def->hitRules[i];
+        if (r.slot / 4 != Index)
+            continue;
+        if (r.reaction == nsmbudx::HitReaction::Immune)
+            return false;
+        if (r.reaction == nsmbudx::HitReaction::SameAs && r.asIf)
+            return ((HitFn)v->vanilla[r.asIf / 4])(actor, self, other);
+    }
+    return ((HitFn)v->vanilla[Index])(actor, self, other);
+}
+
+// One wrapper per reaction slot, 0x114 (index 69) to 0x154 (index 85).
+void* const kHitWrappers[] = {
+    (void*)&wrapHit<69>, (void*)&wrapHit<70>, (void*)&wrapHit<71>, (void*)&wrapHit<72>,
+    (void*)&wrapHit<73>, (void*)&wrapHit<74>, (void*)&wrapHit<75>, (void*)&wrapHit<76>,
+    (void*)&wrapHit<77>, (void*)&wrapHit<78>, (void*)&wrapHit<79>, (void*)&wrapHit<80>,
+    (void*)&wrapHit<81>, (void*)&wrapHit<82>, (void*)&wrapHit<83>, (void*)&wrapHit<84>,
+    (void*)&wrapHit<85>,
+};
+static_assert(sizeof(kHitWrappers) / sizeof(void*) == cLastHit - cFirstHit + 1, "hit slots");
+
 void* const kWrappers[LastWrapped + 1] = {
     nullptr, nullptr, nullptr, nullptr,
-    (void*)&wrapU32<BeforeCreate>,  (void*)&wrapU32<OnCreate>,  (void*)&wrapVoidU32<AfterCreate>,
+    (void*)&wrapU32<BeforeCreate>,  (void*)&wrapOnCreate,       (void*)&wrapVoidU32<AfterCreate>,
     (void*)&wrapU32<BeforeExecute>, (void*)&wrapU32<OnExecute>, (void*)&wrapVoidU32<AfterExecute>,
     (void*)&wrapVoid<FinalExecute>,
     (void*)&wrapU32<BeforeDraw>,    (void*)&wrapU32<OnDraw>,    (void*)&wrapVoidU32<AfterDraw>,
@@ -162,6 +212,13 @@ Actor* buildVariant(const ActorBuildInfo* buildInfo)
         for (u32 s = FirstWrapped; s <= LastWrapped; s++) {
             v->original[s] = vanilla[s];
             v->vtable[s] = kWrappers[s];
+        }
+        v->vanilla = vanilla;
+        // Only the reactions a rule names are wrapped; the rest stay vanilla.
+        for (u32 i = 0; i < nsmbudx::cMaxHitRules && v->def->hitRules[i].slot; i++) {
+            u32 idx = v->def->hitRules[i].slot / 4;
+            if (idx >= cFirstHit && idx <= cLastHit)
+                v->vtable[idx] = kHitWrappers[idx - cFirstHit];
         }
         v->vtableReady = true;
     } else if (vanilla[FirstWrapped] != v->original[FirstWrapped]) {

@@ -25,6 +25,7 @@ No game files are distributed here. You need your own `main` NSO. See [NOTICE.md
 | **Help reverse engineer** | [docs/RE_PLAN.md](docs/RE_PLAN.md): which sources to trust, how a finding is verified, and the phases |
 | **Read the game as clean C++** | [readable/](readable/): hand-reconstructed, verified subsystems with real names (blocks and items so far) |
 | **Make a new enemy from an existing one** | `framework/actors` + [mods/bee/](mods/bee/): any vanilla actor becomes a new sprite with your model (the Bee is a flying Cheep Cheep) |
+| **Change what hurts an enemy** | `framework/actors` hit rules + [docs/MODDING.md](docs/MODDING.md) §7e: fireproof, shell-proof, "dies to ice like a Star", per sprite |
 | **Give a power-up its own suit colours** | `framework/player` + [docs/MODDING.md](docs/MODDING.md) §7d: suits are a texture-animation frame; add one and select it |
 | **Get the P-Acorn from ?-blocks** | [mods/p_acorn/](mods/p_acorn/): the P-Acorn exists in the game but no level gives it; contents 22 now does |
 | **Put a new power-up in ?-blocks** | `framework/items` + [docs/MODDING.md](docs/MODDING.md) §7b: block contents 21–31 are free for mods |

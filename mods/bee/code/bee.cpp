@@ -25,6 +25,10 @@
 // through the air the way a Cheep Cheep moves through water.
 #define BEE_OPTIONS         nsmbudx::cVariant_AirSwim
 
+// 1: fireballs bounce off the Bee (framework/actors hit rules; ice, stomps,
+// stars and shells still work). 0: it reacts exactly like a Cheep Cheep.
+#define BEE_FIREPROOF       0
+
 // =====================================================================
 //
 // Everything else is framework/actors: the Bee is the game's own Cheep Cheep
@@ -35,6 +39,7 @@
 // Deluxe (Switch) v1.0.0 only.
 
 #include "profileid.h"
+#include "game/enemy.h"
 #include "nsmbudx/actor_variant.h"
 
 NSMBUDX_ACTOR_VARIANT(beeVariant,
@@ -42,4 +47,10 @@ NSMBUDX_ACTOR_VARIANT(beeVariant,
     {
         { "pukupuku",       BEE_ARCHIVE, "pukupuku",       BEE_MODEL },
         { "pukupuku_mecha", BEE_ARCHIVE, "pukupuku_mecha", BEE_MODEL },
-    });
+    },
+    {
+#if BEE_FIREPROOF
+        { EnemyVt::hitFire, nsmbudx::HitReaction::Immune, 0 },
+#endif
+    },
+    0, 0);
