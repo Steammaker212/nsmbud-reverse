@@ -27,6 +27,7 @@ No game files are distributed here. You need your own `main` NSO. See [NOTICE.md
 | **Make a new enemy from an existing one** | `framework/actors` + [mods/bee/](mods/bee/): any vanilla actor becomes a new sprite with your model (the Bee is a flying Cheep Cheep) |
 | **Change what hurts an enemy** | `framework/actors` hit rules + [docs/MODDING.md](docs/MODDING.md) §7e: fireproof, shell-proof, "dies to ice like a Star", per sprite |
 | **Give a power-up its own suit colours** | `framework/player` + [docs/MODDING.md](docs/MODDING.md) §7d: suits are a texture-animation frame; add one and select it |
+| **Make a custom world map** | [docs/WORLDMAP.md](docs/WORLDMAP.md) + `scripts/worldmap/wmtool.py`: the CSV format, every limit, point → level mapping; `check` tells you if the world can be explored |
 | **Get the P-Acorn from ?-blocks** | [mods/p_acorn/](mods/p_acorn/): the P-Acorn exists in the game but no level gives it; contents 22 now does |
 | **Put a new power-up in ?-blocks** | `framework/items` + [docs/MODDING.md](docs/MODDING.md) §7b: block contents 21–31 are free for mods |
 | **Read the raw decompiled game** | [decompiled/src/](decompiled/src/): 45,148 functions, one C file each (see the caveat below) |
@@ -50,11 +51,13 @@ framework/       reusable code mods pull in through requires.txt
 sdk/             generated game API (header, .sym, hookable.csv)
 scripts/
   sdk/             the mod toolchain: build, inspect, check levels, read crash logs
+  worldmap/        wmtool.py: dump, check (limits + can it be explored), rebuild world maps
   ida/             live-IDA tools (ida-pro-mcp), type planning, export
   pipeline/        builds the decompiled corpus
   (loose scripts)  earlier one-off research scripts, see scripts/README.md
 docs/
   MODDING.md       the guide
+  WORLDMAP.md      world maps: format, limits, custom worlds
   RE_PLAN.md       the reverse-engineering plan
   legacy/          earlier reports, quarantined until re-verified
 data/
