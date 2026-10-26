@@ -1,5 +1,6 @@
 /* SledgeBro_ctor
  * address: 0x602D5210   size: 548   group: misc
+ * sym: # SledgeBro_ctor as UNKNOWN
  * Decompiled from the retail Deluxe (Switch) main module v1.0.0.
  */
 #include "nsmbudx_field.h"

@@ -1,5 +1,6 @@
 /* sead__SafeStringBase__dtor
  * address: 0x60007BEC   size: 4   group: sdklib
+ * sym: sead::SafeStringBase<char>::~SafeStringBase() as D2
  * Decompiled from the retail Deluxe (Switch) main module v1.0.0.
  */
 #include "nsmbudx_field.h"

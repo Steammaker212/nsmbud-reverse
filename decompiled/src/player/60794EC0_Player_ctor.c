@@ -1,5 +1,6 @@
 /* Player_ctor
  * address: 0x60794EC0   size: 1996   group: player
+ * sym: # Player_ctor as UNKNOWN
  * Decompiled from the retail Deluxe (Switch) main module v1.0.0.
  */
 #include "nsmbudx_field.h"

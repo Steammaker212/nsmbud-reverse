@@ -1,5 +1,6 @@
 /* nn__mem__StandardAllocator__ctor_9AE744
  * address: 0x609AE744   size: 12   group: sdklib
+ * sym: nn::mem::StandardAllocator::StandardAllocator(void*, unsigned int) as C1
  * Decompiled from the retail Deluxe (Switch) main module v1.0.0.
  */
 #include "nsmbudx_field.h"

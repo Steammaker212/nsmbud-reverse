@@ -1,5 +1,6 @@
 /* MovingSoundActorHandle_dtorFree
  * address: 0x60026D94   size: 48   group: misc
+ * sym: # MovingSoundActorHandle_dtorFree as UNKNOWN
  * Decompiled from the retail Deluxe (Switch) main module v1.0.0.
  */
 #include "nsmbudx_field.h"

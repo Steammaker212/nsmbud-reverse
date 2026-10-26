@@ -1,5 +1,6 @@
 /* ShapedCollider_dtorFree
  * address: 0x60161BDC   size: 16   group: misc
+ * sym: # ShapedCollider_dtorFree as UNKNOWN
  * Decompiled from the retail Deluxe (Switch) main module v1.0.0.
  */
 #include "nsmbudx_field.h"

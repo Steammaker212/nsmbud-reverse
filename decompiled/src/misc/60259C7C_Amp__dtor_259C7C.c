@@ -1,5 +1,6 @@
 /* Amp__dtor_259C7C
  * address: 0x60259C7C   size: 160   group: misc
+ * sym: Amp::~Amp() as D0
  * Decompiled from the retail Deluxe (Switch) main module v1.0.0.
  */
 #include "nsmbudx_field.h"

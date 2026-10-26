@@ -1,5 +1,6 @@
 /* HammerBros__dtor
  * address: 0x602CCF64   size: 160   group: projectile
+ * sym: HammerBros::~HammerBros() as D0
  * Decompiled from the retail Deluxe (Switch) main module v1.0.0.
  */
 #include "nsmbudx_field.h"

@@ -1,5 +1,6 @@
 /* FlagSwitchRandom__dtor
  * address: 0x60606358   size: 48   group: misc
+ * sym: FlagSwitchRandom::~FlagSwitchRandom() as D0
  * Decompiled from the retail Deluxe (Switch) main module v1.0.0.
  */
 #include "nsmbudx_field.h"

@@ -1,5 +1,6 @@
 /* MovementHandler__ctor
  * address: 0x606AF89C   size: 148   group: misc
+ * sym: MovementHandler::MovementHandler() as C1
  * Decompiled from the retail Deluxe (Switch) main module v1.0.0.
  */
 #include "nsmbudx_field.h"

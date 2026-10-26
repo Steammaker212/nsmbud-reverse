@@ -1,5 +1,6 @@
 /* sead_IDisposer_ctor
  * address: 0x608F5B48   size: 92   group: sdklib
+ * sym: sead::IDisposer::IDisposer() as C2
  * Decompiled from the retail Deluxe (Switch) main module v1.0.0.
  */
 #include "nsmbudx_field.h"

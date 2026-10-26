@@ -1,5 +1,6 @@
 /* LightSource__ctor
  * address: 0x60423BEC   size: 128   group: misc
+ * sym: LightSource::LightSource() as C1
  * Decompiled from the retail Deluxe (Switch) main module v1.0.0.
  */
 #include "nsmbudx_field.h"

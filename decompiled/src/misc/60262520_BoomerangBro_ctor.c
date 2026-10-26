@@ -1,5 +1,6 @@
 /* BoomerangBro_ctor
  * address: 0x60262520   size: 72   group: misc
+ * sym: # BoomerangBro_ctor as UNKNOWN
  * Decompiled from the retail Deluxe (Switch) main module v1.0.0.
  */
 #include "nsmbudx_field.h"

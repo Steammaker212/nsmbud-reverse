@@ -1,5 +1,6 @@
 /* StateActor_ctor
  * address: 0x6000929C   size: 164   group: misc
+ * sym: # StateActor_ctor as UNKNOWN
  * Decompiled from the retail Deluxe (Switch) main module v1.0.0.
  */
 #include "nsmbudx_field.h"

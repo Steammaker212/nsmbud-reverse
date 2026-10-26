@@ -1,5 +1,6 @@
 /* nn__mii__ParamCharInfoAccessor__ctor
  * address: 0x609ADB38   size: 12   group: sdklib
+ * sym: nn::mii::ParamCharInfoAccessor::ParamCharInfoAccessor(nn::mii::CharInfo const&) as C1
  * Decompiled from the retail Deluxe (Switch) main module v1.0.0.
  */
 #include "nsmbudx_field.h"

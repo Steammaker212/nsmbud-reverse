@@ -1,5 +1,6 @@
 /* nn__hid__VibrationMixer__ctor
  * address: 0x609AD778   size: 12   group: sdklib
+ * sym: nn::hid::VibrationMixer::VibrationMixer() as C2
  * Decompiled from the retail Deluxe (Switch) main module v1.0.0.
  */
 #include "nsmbudx_field.h"

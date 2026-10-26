@@ -1,5 +1,6 @@
 /* RopeLadder_dtorFree
  * address: 0x60636140   size: 48   group: misc
+ * sym: # RopeLadder_dtorFree as UNKNOWN
  * Decompiled from the retail Deluxe (Switch) main module v1.0.0.
  */
 #include "nsmbudx_field.h"

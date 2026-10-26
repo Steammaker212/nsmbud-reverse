@@ -1,5 +1,6 @@
 /* MultiStateActor__ctor
  * address: 0x60009358   size: 172   group: misc
+ * sym: MultiStateActor::MultiStateActor(ActorBuildInfo const*) as C2
  * Decompiled from the retail Deluxe (Switch) main module v1.0.0.
  */
 #include "nsmbudx_field.h"

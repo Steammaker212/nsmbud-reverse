@@ -1,5 +1,6 @@
 /* Bowser__dtor_C782C
  * address: 0x600C782C   size: 16   group: misc
+ * sym: Bowser::~Bowser() as D0
  * Decompiled from the retail Deluxe (Switch) main module v1.0.0.
  */
 #include "nsmbudx_field.h"

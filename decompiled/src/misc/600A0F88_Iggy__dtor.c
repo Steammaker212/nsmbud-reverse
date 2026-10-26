@@ -1,5 +1,6 @@
 /* Iggy__dtor
  * address: 0x600A0F88   size: 104   group: misc
+ * sym: Iggy::~Iggy() as D2
  * Decompiled from the retail Deluxe (Switch) main module v1.0.0.
  */
 #include "nsmbudx_field.h"

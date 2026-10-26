@@ -1,5 +1,6 @@
 /* Pokey__dtor_384AFC
  * address: 0x60384AFC   size: 172   group: misc
+ * sym: Pokey::~Pokey() as D0
  * Decompiled from the retail Deluxe (Switch) main module v1.0.0.
  */
 #include "nsmbudx_field.h"

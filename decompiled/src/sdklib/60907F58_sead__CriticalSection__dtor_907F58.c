@@ -1,5 +1,6 @@
 /* sead__CriticalSection__dtor_907F58
  * address: 0x60907F58   size: 48   group: sdklib
+ * sym: sead::CriticalSection::~CriticalSection() as D0
  * Decompiled from the retail Deluxe (Switch) main module v1.0.0.
  */
 #include "nsmbudx_field.h"

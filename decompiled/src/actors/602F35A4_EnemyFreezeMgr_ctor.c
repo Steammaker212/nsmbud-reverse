@@ -1,5 +1,6 @@
 /* EnemyFreezeMgr_ctor
  * address: 0x602F35A4   size: 244   group: actors
+ * sym: # EnemyFreezeMgr_ctor as UNKNOWN
  * Decompiled from the retail Deluxe (Switch) main module v1.0.0.
  */
 #include "nsmbudx_field.h"

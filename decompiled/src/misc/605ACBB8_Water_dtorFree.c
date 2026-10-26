@@ -1,5 +1,6 @@
 /* Water_dtorFree
  * address: 0x605ACBB8   size: 152   group: misc
+ * sym: # Water_dtorFree as UNKNOWN
  * Decompiled from the retail Deluxe (Switch) main module v1.0.0.
  */
 #include "nsmbudx_field.h"

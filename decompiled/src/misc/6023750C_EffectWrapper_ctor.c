@@ -1,5 +1,6 @@
 /* EffectWrapper_ctor
  * address: 0x6023750C   size: 80   group: misc
+ * sym: EffectWrapper::EffectWrapper() as C1
  * Decompiled from the retail Deluxe (Switch) main module v1.0.0.
  */
 #include "nsmbudx_field.h"

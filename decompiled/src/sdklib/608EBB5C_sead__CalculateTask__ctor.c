@@ -1,5 +1,6 @@
 /* sead__CalculateTask__ctor
  * address: 0x608EBB5C   size: 312   group: sdklib
+ * sym: sead::CalculateTask::CalculateTask(sead::TaskConstructArg const&, char const*) as C2
  * Decompiled from the retail Deluxe (Switch) main module v1.0.0.
  */
 #include "nsmbudx_field.h"

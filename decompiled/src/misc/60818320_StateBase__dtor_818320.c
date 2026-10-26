@@ -1,5 +1,6 @@
 /* StateBase__dtor_818320
  * address: 0x60818320   size: 4   group: misc
+ * sym: StateBase::~StateBase() as D0
  * Decompiled from the retail Deluxe (Switch) main module v1.0.0.
  */
 #include "nsmbudx_field.h"

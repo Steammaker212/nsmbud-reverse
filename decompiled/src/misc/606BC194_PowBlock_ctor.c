@@ -1,5 +1,6 @@
 /* PowBlock_ctor
  * address: 0x606BC194   size: 300   group: misc
+ * sym: # PowBlock_ctor as UNKNOWN
  * Decompiled from the retail Deluxe (Switch) main module v1.0.0.
  */
 #include "nsmbudx_field.h"

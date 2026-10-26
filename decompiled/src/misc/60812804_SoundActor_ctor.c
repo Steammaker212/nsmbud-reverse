@@ -1,5 +1,6 @@
 /* SoundActor_ctor
  * address: 0x60812804   size: 224   group: misc
+ * sym: # SoundActor_ctor as UNKNOWN
  * Decompiled from the retail Deluxe (Switch) main module v1.0.0.
  */
 #include "nsmbudx_field.h"

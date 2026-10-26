@@ -1,5 +1,6 @@
 /* TitleScene_ctor
  * address: 0x607F89C4   size: 36   group: misc
+ * sym: # TitleScene_ctor as UNKNOWN
  * Decompiled from the retail Deluxe (Switch) main module v1.0.0.
  */
 #include "nsmbudx_field.h"

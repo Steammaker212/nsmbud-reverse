@@ -1,5 +1,6 @@
 /* SpinningStar_ctor
  * address: 0x606720B0   size: 892   group: misc
+ * sym: # SpinningStar_ctor as UNKNOWN
  * Decompiled from the retail Deluxe (Switch) main module v1.0.0.
  */
 #include "nsmbudx_field.h"

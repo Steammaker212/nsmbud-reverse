@@ -1,5 +1,6 @@
 /* FinalBowser__dtor_79200
  * address: 0x60079200   size: 16   group: misc
+ * sym: FinalBowser::~FinalBowser() as D0
  * Decompiled from the retail Deluxe (Switch) main module v1.0.0.
  */
 #include "nsmbudx_field.h"

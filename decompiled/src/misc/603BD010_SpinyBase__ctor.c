@@ -1,5 +1,6 @@
 /* SpinyBase__ctor
  * address: 0x603BD010   size: 208   group: misc
+ * sym: SpinyBase::SpinyBase(ActorBuildInfo const*) as C2
  * Decompiled from the retail Deluxe (Switch) main module v1.0.0.
  */
 #include "nsmbudx_field.h"

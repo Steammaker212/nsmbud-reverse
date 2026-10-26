@@ -1,5 +1,6 @@
 /* CollisionActor__ctor
  * address: 0x6000306C   size: 208   group: collision
+ * sym: CollisionActor::CollisionActor(ActorBuildInfo const*) as C2
  * Decompiled from the retail Deluxe (Switch) main module v1.0.0.
  */
 #include "nsmbudx_field.h"

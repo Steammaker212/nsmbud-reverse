@@ -1,5 +1,6 @@
 /* BobOmb_ctor
  * address: 0x6025CEBC   size: 512   group: misc
+ * sym: # BobOmb_ctor as UNKNOWN
  * Decompiled from the retail Deluxe (Switch) main module v1.0.0.
  */
 #include "nsmbudx_field.h"

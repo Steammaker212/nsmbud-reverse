@@ -1,5 +1,6 @@
 /* ActiveCollider_dtor
  * address: 0x60158CF8   size: 84   group: collision
+ * sym: ActiveCollider::~ActiveCollider() as D1
  * Decompiled from the retail Deluxe (Switch) main module v1.0.0.
  */
 #include "nsmbudx_field.h"

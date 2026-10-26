@@ -1,5 +1,6 @@
 /* SpikeTop__ctor
  * address: 0x603B630C   size: 28   group: misc
+ * sym: SpikeTop::SpikeTop(ActorBuildInfo const*) as C3
  * Decompiled from the retail Deluxe (Switch) main module v1.0.0.
  */
 #include "nsmbudx_field.h"

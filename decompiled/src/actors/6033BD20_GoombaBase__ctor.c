@@ -1,5 +1,6 @@
 /* GoombaBase__ctor
  * address: 0x6033BD20   size: 340   group: actors
+ * sym: GoombaBase::GoombaBase(ActorBuildInfo const*) as C2
  * Decompiled from the retail Deluxe (Switch) main module v1.0.0.
  */
 #include "nsmbudx_field.h"

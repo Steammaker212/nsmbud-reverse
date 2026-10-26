@@ -1,5 +1,6 @@
 /* BrosBase__dtor
  * address: 0x60263008   size: 156   group: projectile
+ * sym: BrosBase::~BrosBase() as D2
  * Decompiled from the retail Deluxe (Switch) main module v1.0.0.
  */
 #include "nsmbudx_field.h"

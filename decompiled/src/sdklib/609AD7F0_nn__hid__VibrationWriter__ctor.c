@@ -1,5 +1,6 @@
 /* nn__hid__VibrationWriter__ctor
  * address: 0x609AD7F0   size: 12   group: sdklib
+ * sym: nn::hid::VibrationWriter::VibrationWriter() as C1
  * Decompiled from the retail Deluxe (Switch) main module v1.0.0.
  */
 #include "nsmbudx_field.h"

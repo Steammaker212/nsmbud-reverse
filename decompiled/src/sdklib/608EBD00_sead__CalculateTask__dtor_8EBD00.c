@@ -1,5 +1,6 @@
 /* sead__CalculateTask__dtor_8EBD00
  * address: 0x608EBD00   size: 76   group: sdklib
+ * sym: sead::CalculateTask::~CalculateTask() as D0
  * Decompiled from the retail Deluxe (Switch) main module v1.0.0.
  */
 #include "nsmbudx_field.h"

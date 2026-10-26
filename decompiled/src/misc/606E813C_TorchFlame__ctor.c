@@ -1,5 +1,6 @@
 /* TorchFlame__ctor
  * address: 0x606E813C   size: 84   group: misc
+ * sym: TorchFlame::TorchFlame(ActorBuildInfo const*) as C3
  * Decompiled from the retail Deluxe (Switch) main module v1.0.0.
  */
 #include "nsmbudx_field.h"

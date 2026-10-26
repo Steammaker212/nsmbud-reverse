@@ -1,5 +1,6 @@
 /* sead__ControllerMgr__ctor
  * address: 0x60909668   size: 80   group: sdklib
+ * sym: sead::ControllerMgr::ControllerMgr(sead::TaskConstructArg const&) as C1
  * Decompiled from the retail Deluxe (Switch) main module v1.0.0.
  */
 #include "nsmbudx_field.h"

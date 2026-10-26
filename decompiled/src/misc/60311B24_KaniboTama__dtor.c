@@ -1,5 +1,6 @@
 /* KaniboTama__dtor
  * address: 0x60311B24   size: 128   group: misc
+ * sym: KaniboTama::~KaniboTama() as D2
  * Decompiled from the retail Deluxe (Switch) main module v1.0.0.
  */
 #include "nsmbudx_field.h"

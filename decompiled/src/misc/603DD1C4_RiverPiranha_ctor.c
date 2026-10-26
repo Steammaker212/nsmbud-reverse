@@ -1,5 +1,6 @@
 /* RiverPiranha_ctor
  * address: 0x603DD1C4   size: 396   group: misc
+ * sym: # RiverPiranha_ctor as UNKNOWN
  * Decompiled from the retail Deluxe (Switch) main module v1.0.0.
  */
 #include "nsmbudx_field.h"

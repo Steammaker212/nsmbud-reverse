@@ -1,5 +1,6 @@
 /* Enemy__dtor_2A3EA8
  * address: 0x602A3EA8   size: 76   group: actors
+ * sym: Enemy::~Enemy() as D0
  * Decompiled from the retail Deluxe (Switch) main module v1.0.0.
  */
 #include "nsmbudx_field.h"

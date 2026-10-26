@@ -1,5 +1,6 @@
 /* nn__prepo__PlayReport__ctor
  * address: 0x609AD6C4   size: 12   group: sdklib
+ * sym: nn::prepo::PlayReport::PlayReport() as C1
  * Decompiled from the retail Deluxe (Switch) main module v1.0.0.
  */
 #include "nsmbudx_field.h"

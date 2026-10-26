@@ -1,5 +1,6 @@
 /* EffectWrapper_dtorFree
  * address: 0x60021864   size: 48   group: misc
+ * sym: # EffectWrapper_dtorFree as UNKNOWN
  * Decompiled from the retail Deluxe (Switch) main module v1.0.0.
  */
 #include "nsmbudx_field.h"

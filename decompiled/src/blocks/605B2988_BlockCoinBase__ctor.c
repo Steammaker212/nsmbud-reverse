@@ -1,5 +1,6 @@
 /* BlockCoinBase__ctor
  * address: 0x605B2988   size: 640   group: blocks
+ * sym: BlockCoinBase::BlockCoinBase(ActorBuildInfo const*) as C2
  * Decompiled from the retail Deluxe (Switch) main module v1.0.0.
  */
 #include "nsmbudx_field.h"

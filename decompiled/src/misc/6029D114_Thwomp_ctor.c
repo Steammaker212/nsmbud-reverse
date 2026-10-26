@@ -1,5 +1,6 @@
 /* Thwomp_ctor
  * address: 0x6029D114   size: 224   group: misc
+ * sym: # Thwomp_ctor as UNKNOWN
  * Decompiled from the retail Deluxe (Switch) main module v1.0.0.
  */
 #include "nsmbudx_field.h"

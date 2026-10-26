@@ -1,5 +1,6 @@
 /* CourseSelectTask_ctor
  * address: 0x601FD6E4   size: 704   group: misc
+ * sym: # CourseSelectTask_ctor as UNKNOWN
  * Decompiled from the retail Deluxe (Switch) main module v1.0.0.
  */
 #include "nsmbudx_field.h"

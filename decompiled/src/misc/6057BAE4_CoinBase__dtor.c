@@ -1,5 +1,6 @@
 /* CoinBase__dtor
  * address: 0x6057BAE4   size: 76   group: misc
+ * sym: CoinBase::~CoinBase() as D0
  * Decompiled from the retail Deluxe (Switch) main module v1.0.0.
  */
 #include "nsmbudx_field.h"

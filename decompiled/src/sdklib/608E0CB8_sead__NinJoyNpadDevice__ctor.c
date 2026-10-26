@@ -1,5 +1,6 @@
 /* sead__NinJoyNpadDevice__ctor
  * address: 0x608E0CB8   size: 532   group: sdklib
+ * sym: sead::NinJoyNpadDevice::NinJoyNpadDevice(sead::ControllerMgr*, sead::Heap*) as C1
  * Decompiled from the retail Deluxe (Switch) main module v1.0.0.
  */
 #include "nsmbudx_field.h"

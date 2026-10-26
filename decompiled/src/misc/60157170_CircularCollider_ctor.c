@@ -1,5 +1,6 @@
 /* CircularCollider_ctor
  * address: 0x60157170   size: 60   group: misc
+ * sym: CircularCollider::CircularCollider() as C1
  * Decompiled from the retail Deluxe (Switch) main module v1.0.0.
  */
 #include "nsmbudx_field.h"

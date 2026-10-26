@@ -1,5 +1,6 @@
 /* StageActor__dtor_568
  * address: 0x60000568   size: 100   group: actors
+ * sym: StageActor::~StageActor() as D0
  * Decompiled from the retail Deluxe (Switch) main module v1.0.0.
  */
 #include "nsmbudx_field.h"

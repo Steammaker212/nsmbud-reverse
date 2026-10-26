@@ -1,5 +1,6 @@
 /* ActiveCollider_ctor
  * address: 0x60158C7C   size: 120   group: collision
+ * sym: ActiveCollider::ActiveCollider() as C1
  * Decompiled from the retail Deluxe (Switch) main module v1.0.0.
  */
 #include "nsmbudx_field.h"

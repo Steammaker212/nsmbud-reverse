@@ -1,5 +1,6 @@
 /* MovingSoundActor_ctor
  * address: 0x6080F088   size: 256   group: misc
+ * sym: # MovingSoundActor_ctor as UNKNOWN
  * Decompiled from the retail Deluxe (Switch) main module v1.0.0.
  */
 #include "nsmbudx_field.h"

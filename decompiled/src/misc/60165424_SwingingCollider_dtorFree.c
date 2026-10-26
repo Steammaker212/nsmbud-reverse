@@ -1,5 +1,6 @@
 /* SwingingCollider_dtorFree
  * address: 0x60165424   size: 56   group: misc
+ * sym: # SwingingCollider_dtorFree as UNKNOWN
  * Decompiled from the retail Deluxe (Switch) main module v1.0.0.
  */
 #include "nsmbudx_field.h"

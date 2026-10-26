@@ -1,5 +1,6 @@
 /* LargeGoomba_ctor
  * address: 0x6033E624   size: 68   group: misc
+ * sym: # LargeGoomba_ctor as UNKNOWN
  * Decompiled from the retail Deluxe (Switch) main module v1.0.0.
  */
 #include "nsmbudx_field.h"

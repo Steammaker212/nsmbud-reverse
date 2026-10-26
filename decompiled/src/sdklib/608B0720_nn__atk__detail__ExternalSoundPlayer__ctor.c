@@ -1,5 +1,6 @@
 /* nn__atk__detail__ExternalSoundPlayer__ctor
  * address: 0x608B0720   size: 36   group: sdklib
+ * sym: nn::atk::detail::ExternalSoundPlayer::ExternalSoundPlayer() as C1
  * Decompiled from the retail Deluxe (Switch) main module v1.0.0.
  */
 #include "nsmbudx_field.h"

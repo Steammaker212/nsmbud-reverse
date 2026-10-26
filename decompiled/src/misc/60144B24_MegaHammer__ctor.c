@@ -1,5 +1,6 @@
 /* MegaHammer__ctor
  * address: 0x60144B24   size: 424   group: misc
+ * sym: MegaHammer::MegaHammer(ActorBuildInfo const*) as C3
  * Decompiled from the retail Deluxe (Switch) main module v1.0.0.
  */
 #include "nsmbudx_field.h"

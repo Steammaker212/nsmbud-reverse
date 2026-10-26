@@ -1,5 +1,6 @@
 /* StarCoinBase_ctor
  * address: 0x605F3B14   size: 120   group: misc
+ * sym: # StarCoinBase_ctor as UNKNOWN
  * Decompiled from the retail Deluxe (Switch) main module v1.0.0.
  */
 #include "nsmbudx_field.h"

@@ -1,5 +1,6 @@
 /* BossBase__dtor_263A8
  * address: 0x600263A8   size: 128   group: actors
+ * sym: BossBase::~BossBase() as D0
  * Decompiled from the retail Deluxe (Switch) main module v1.0.0.
  */
 #include "nsmbudx_field.h"

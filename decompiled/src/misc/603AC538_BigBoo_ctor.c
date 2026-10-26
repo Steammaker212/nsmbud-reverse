@@ -1,5 +1,6 @@
 /* BigBoo_ctor
  * address: 0x603AC538   size: 420   group: misc
+ * sym: # BigBoo_ctor as UNKNOWN
  * Decompiled from the retail Deluxe (Switch) main module v1.0.0.
  */
 #include "nsmbudx_field.h"

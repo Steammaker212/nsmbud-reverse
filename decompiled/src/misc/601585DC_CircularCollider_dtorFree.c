@@ -1,5 +1,6 @@
 /* CircularCollider_dtorFree
  * address: 0x601585DC   size: 16   group: misc
+ * sym: # CircularCollider_dtorFree as UNKNOWN
  * Decompiled from the retail Deluxe (Switch) main module v1.0.0.
  */
 #include "nsmbudx_field.h"

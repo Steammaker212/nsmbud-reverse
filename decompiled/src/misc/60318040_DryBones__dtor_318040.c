@@ -1,5 +1,6 @@
 /* DryBones__dtor_318040
  * address: 0x60318040   size: 132   group: misc
+ * sym: DryBones::~DryBones() as D0
  * Decompiled from the retail Deluxe (Switch) main module v1.0.0.
  */
 #include "nsmbudx_field.h"

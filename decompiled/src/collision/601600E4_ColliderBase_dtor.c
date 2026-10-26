@@ -1,5 +1,6 @@
 /* ColliderBase_dtor
  * address: 0x601600E4   size: 204   group: collision
+ * sym: ColliderBase::~ColliderBase() as D2
  * Decompiled from the retail Deluxe (Switch) main module v1.0.0.
  */
 #include "nsmbudx_field.h"

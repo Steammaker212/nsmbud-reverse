@@ -1,5 +1,6 @@
 /* BgCenter__ctor
  * address: 0x6082D154   size: 60   group: misc
+ * sym: BgCenter::BgCenter(ActorBuildInfo const*) as C1
  * Decompiled from the retail Deluxe (Switch) main module v1.0.0.
  */
 #include "nsmbudx_field.h"

@@ -1,5 +1,6 @@
 /* SwingingCollider_ctor
  * address: 0x601653A4   size: 64   group: misc
+ * sym: # SwingingCollider_ctor as UNKNOWN
  * Decompiled from the retail Deluxe (Switch) main module v1.0.0.
  */
 #include "nsmbudx_field.h"

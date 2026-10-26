@@ -1,5 +1,6 @@
 /* BoomBoomW1__ctor
  * address: 0x6004D2E0   size: 556   group: misc
+ * sym: BoomBoomW1::BoomBoomW1(ActorBuildInfo const*) as C1
  * Decompiled from the retail Deluxe (Switch) main module v1.0.0.
  */
 #include "nsmbudx_field.h"

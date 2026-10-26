@@ -1,5 +1,6 @@
 /* TreasureChest__ctor
  * address: 0x606D9D10   size: 364   group: misc
+ * sym: TreasureChest::TreasureChest(ActorBuildInfo const*) as C3
  * Decompiled from the retail Deluxe (Switch) main module v1.0.0.
  */
 #include "nsmbudx_field.h"

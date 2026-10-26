@@ -1,5 +1,6 @@
 /* StageActor__ctor
  * address: 0x600002A0   size: 592   group: actors
+ * sym: StageActor::StageActor(ActorBuildInfo const*) as C2
  * Decompiled from the retail Deluxe (Switch) main module v1.0.0.
  */
 #include "nsmbudx_field.h"

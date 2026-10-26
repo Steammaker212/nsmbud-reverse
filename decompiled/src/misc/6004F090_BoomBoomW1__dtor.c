@@ -1,5 +1,6 @@
 /* BoomBoomW1__dtor
  * address: 0x6004F090   size: 160   group: misc
+ * sym: BoomBoomW1::~BoomBoomW1() as D2
  * Decompiled from the retail Deluxe (Switch) main module v1.0.0.
  */
 #include "nsmbudx_field.h"

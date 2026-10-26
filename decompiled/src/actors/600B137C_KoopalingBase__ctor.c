@@ -1,5 +1,6 @@
 /* KoopalingBase__ctor
  * address: 0x600B137C   size: 404   group: actors
+ * sym: KoopalingBase::KoopalingBase(ActorBuildInfo const*) as C2
  * Decompiled from the retail Deluxe (Switch) main module v1.0.0.
  */
 #include "nsmbudx_field.h"

@@ -1,5 +1,6 @@
 /* DemoScene_ctor
  * address: 0x607E4F40   size: 1264   group: misc
+ * sym: # DemoScene_ctor as UNKNOWN
  * Decompiled from the retail Deluxe (Switch) main module v1.0.0.
  */
 #include "nsmbudx_field.h"

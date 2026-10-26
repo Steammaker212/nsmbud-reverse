@@ -1,5 +1,6 @@
 /* SpinyUpsideDown__ctor
  * address: 0x60379BDC   size: 60   group: misc
+ * sym: SpinyUpsideDown::SpinyUpsideDown(ActorBuildInfo const*) as C3
  * Decompiled from the retail Deluxe (Switch) main module v1.0.0.
  */
 #include "nsmbudx_field.h"

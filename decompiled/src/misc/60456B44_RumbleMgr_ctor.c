@@ -1,5 +1,6 @@
 /* RumbleMgr_ctor
  * address: 0x60456B44   size: 816   group: misc
+ * sym: # RumbleMgr_ctor as UNKNOWN
  * Decompiled from the retail Deluxe (Switch) main module v1.0.0.
  */
 #include "nsmbudx_field.h"

@@ -1,5 +1,6 @@
 /* Enemy__ctor
  * address: 0x602A1A8C   size: 304   group: actors
+ * sym: Enemy::Enemy(ActorBuildInfo const*) as C2
  * Decompiled from the retail Deluxe (Switch) main module v1.0.0.
  */
 #include "nsmbudx_field.h"

@@ -1,5 +1,6 @@
 /* FireBros_ctor
  * address: 0x602A9A68   size: 44   group: projectile
+ * sym: # FireBros_ctor as UNKNOWN
  * Decompiled from the retail Deluxe (Switch) main module v1.0.0.
  */
 #include "nsmbudx_field.h"

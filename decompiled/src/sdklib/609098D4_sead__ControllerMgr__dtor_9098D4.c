@@ -1,5 +1,6 @@
 /* sead__ControllerMgr__dtor_9098D4
  * address: 0x609098D4   size: 60   group: sdklib
+ * sym: sead::ControllerMgr::~ControllerMgr() as D0
  * Decompiled from the retail Deluxe (Switch) main module v1.0.0.
  */
 #include "nsmbudx_field.h"

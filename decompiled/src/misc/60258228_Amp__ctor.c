@@ -1,5 +1,6 @@
 /* Amp__ctor
  * address: 0x60258228   size: 272   group: misc
+ * sym: Amp::Amp(ActorBuildInfo const*) as C3
  * Decompiled from the retail Deluxe (Switch) main module v1.0.0.
  */
 #include "nsmbudx_field.h"

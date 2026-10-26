@@ -1,5 +1,6 @@
 /* TerrainEffects_ctor
  * address: 0x60705470   size: 216   group: misc
+ * sym: # TerrainEffects_ctor as UNKNOWN
  * Decompiled from the retail Deluxe (Switch) main module v1.0.0.
  */
 #include "nsmbudx_field.h"

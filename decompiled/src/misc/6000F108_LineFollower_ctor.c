@@ -1,5 +1,6 @@
 /* LineFollower_ctor
  * address: 0x6000F108   size: 124   group: misc
+ * sym: # LineFollower_ctor as UNKNOWN
  * Decompiled from the retail Deluxe (Switch) main module v1.0.0.
  */
 #include "nsmbudx_field.h"

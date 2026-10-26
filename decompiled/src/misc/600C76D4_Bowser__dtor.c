@@ -1,5 +1,6 @@
 /* Bowser__dtor
  * address: 0x600C76D4   size: 320   group: misc
+ * sym: Bowser::~Bowser() as D2
  * Decompiled from the retail Deluxe (Switch) main module v1.0.0.
  */
 #include "nsmbudx_field.h"

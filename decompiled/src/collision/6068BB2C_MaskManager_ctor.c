@@ -1,5 +1,6 @@
 /* MaskManager_ctor
  * address: 0x6068BB2C   size: 1320   group: collision
+ * sym: # MaskManager_ctor as UNKNOWN
  * Decompiled from the retail Deluxe (Switch) main module v1.0.0.
  */
 #include "nsmbudx_field.h"

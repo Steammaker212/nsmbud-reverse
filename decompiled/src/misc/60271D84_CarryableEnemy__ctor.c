@@ -1,5 +1,6 @@
 /* CarryableEnemy__ctor
  * address: 0x60271D84   size: 76   group: misc
+ * sym: CarryableEnemy::CarryableEnemy(ActorBuildInfo const*) as C2
  * Decompiled from the retail Deluxe (Switch) main module v1.0.0.
  */
 #include "nsmbudx_field.h"

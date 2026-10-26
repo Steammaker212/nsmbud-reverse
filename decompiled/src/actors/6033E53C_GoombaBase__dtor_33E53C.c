@@ -1,5 +1,6 @@
 /* GoombaBase__dtor_33E53C
  * address: 0x6033E53C   size: 120   group: actors
+ * sym: GoombaBase::~GoombaBase() as D0
  * Decompiled from the retail Deluxe (Switch) main module v1.0.0.
  */
 #include "nsmbudx_field.h"

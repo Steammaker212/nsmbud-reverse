@@ -1,5 +1,6 @@
 /* KoopalingBase__dtor_B7E64
  * address: 0x600B7E64   size: 16   group: actors
+ * sym: KoopalingBase::~KoopalingBase() as D0
  * Decompiled from the retail Deluxe (Switch) main module v1.0.0.
  */
 #include "nsmbudx_field.h"

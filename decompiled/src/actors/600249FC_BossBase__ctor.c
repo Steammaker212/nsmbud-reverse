@@ -1,5 +1,6 @@
 /* BossBase__ctor
  * address: 0x600249FC   size: 292   group: actors
+ * sym: BossBase::BossBase(ActorBuildInfo const*) as C2
  * Decompiled from the retail Deluxe (Switch) main module v1.0.0.
  */
 #include "nsmbudx_field.h"

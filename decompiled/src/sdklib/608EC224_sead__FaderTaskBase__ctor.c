@@ -1,5 +1,6 @@
 /* sead__FaderTaskBase__ctor
  * address: 0x608EC224   size: 672   group: sdklib
+ * sym: sead::FaderTaskBase::FaderTaskBase(sead::TaskConstructArg const&, char const*) as C2
  * Decompiled from the retail Deluxe (Switch) main module v1.0.0.
  */
 #include "nsmbudx_field.h"

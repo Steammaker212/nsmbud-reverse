@@ -1,5 +1,6 @@
 /* RiverPiranha__dtor_3E0068
  * address: 0x603E0068   size: 172   group: misc
+ * sym: RiverPiranha::~RiverPiranha() as D0
  * Decompiled from the retail Deluxe (Switch) main module v1.0.0.
  */
 #include "nsmbudx_field.h"

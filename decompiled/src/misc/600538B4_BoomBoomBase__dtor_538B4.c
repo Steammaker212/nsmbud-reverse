@@ -1,5 +1,6 @@
 /* BoomBoomBase__dtor_538B4
  * address: 0x600538B4   size: 228   group: misc
+ * sym: BoomBoomBase::~BoomBoomBase() as D0
  * Decompiled from the retail Deluxe (Switch) main module v1.0.0.
  */
 #include "nsmbudx_field.h"

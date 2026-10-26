@@ -1,5 +1,6 @@
 /* Seaweed__ctor
  * address: 0x606D4C60   size: 68   group: misc
+ * sym: Seaweed::Seaweed(ActorBuildInfo const*) as C3
  * Decompiled from the retail Deluxe (Switch) main module v1.0.0.
  */
 #include "nsmbudx_field.h"

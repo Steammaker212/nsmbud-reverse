@@ -1,5 +1,6 @@
 /* nn__ui2d__Layout__ctor
  * address: 0x60855C14   size: 84   group: sdklib
+ * sym: # nn__ui2d__Layout__ctor as UNKNOWN
  * Decompiled from the retail Deluxe (Switch) main module v1.0.0.
  */
 #include "nsmbudx_field.h"

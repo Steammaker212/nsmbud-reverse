@@ -1,5 +1,6 @@
 /* IceBro_ctor
  * address: 0x602F19F4   size: 60   group: misc
+ * sym: # IceBro_ctor as UNKNOWN
  * Decompiled from the retail Deluxe (Switch) main module v1.0.0.
  */
 #include "nsmbudx_field.h"
