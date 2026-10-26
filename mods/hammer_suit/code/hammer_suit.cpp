@@ -11,6 +11,16 @@
 // The Hammer Flower item. The item code also plays skeletal animations named
 // "out", "out2", "out3", "wait" and "wait2" from this archive, so a custom
 // archive needs animations with those names.
+//
+// Do not point HAMMER_ITEM_MODEL at "hammer". romfs/Model/hammer.Nin_NX_NVN.szs
+// is the *Boss Bro's* hammer: its models are "bros_hammer", "bros_hammer_handle"
+// and "bros_hammer_model", and its only animations are down_wait / jump_st /
+// jump_md / jump_ed. None of the five names above exist in it, so the archive
+// swap fails ("archive 'hammer' is not loaded"), the model lookup returns null
+// and the game dereferences it (PC 0x6087CEF0, `ldm r0` with r0 = 0) -- an
+// "Invalid memory access at 0x0" hard crash. Use the vanilla names below, or
+// author a purpose-built item archive that exports model "hammer" and all five
+// animations.
 #define HAMMER_ITEM_ARCHIVE         "I_fireflower"
 #define HAMMER_ITEM_MODEL           "I_fireflower"
 
