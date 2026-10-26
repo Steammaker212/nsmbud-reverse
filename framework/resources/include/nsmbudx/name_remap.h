@@ -57,6 +57,7 @@ private:
     const NameRemap* mPrev;
     u32 mPrevCount;
     void* mPrevThread;
+    u32 mPrevFellBack;
 };
 
 // True if ResArchiveMgr currently holds an archive with this name.

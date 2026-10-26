@@ -21,9 +21,9 @@
 // The mode and id encoding are codedx's, so a level authored for codedx spawns
 // the same thing here. Everything above the first two rows is new.
 //
-// Example -- spawn a Choropoo (sprite 611) when the level starts:
+// Example -- spawn a Monty Mole (choropoo, sprite 51) when the level starts:
 //
-//   linkId = 611 & 0xFF, movementId = (611 >> 8) | 0x10, eventId2 = 0
+//   linkId = 51, movementId = 0x10, eventId2 = 0
 //
 // Example -- three Goombas, only while event 4 is active:
 //
@@ -72,7 +72,7 @@ u32 spriteTableSize();
 
 // True if event `index` (0-based; a level's "event 1" is index 0) is active.
 // Reads EventMgr::instance at 0x60C7B390 and the u64 mask at instance+0x10 --
-// NOT +0x0, which is codedx's offset and is wrong on Deluxe (ledger F0181).
+// the same word codedx reads (its EventMgr derives from IDisposer; ledger F0211).
 // Returns false if EventMgr has not been constructed yet, which is normal very
 // early in boot and is why the spawner defaults to no gate.
 bool eventActive(u32 index);

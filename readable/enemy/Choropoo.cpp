@@ -1,4 +1,19 @@
-// Choropoo.cpp -- the Rocky Wrench (ãƒãƒ§ãƒ­ãƒ—ãƒ¼), profile 263, sprite 611.
+// Choropoo.cpp -- Monty Mole (choropoo), profile 611, sprite 51.
+//
+// ===========================================================================
+// CORRECTION (ledger F0208): this file was written as "the Rocky Wrench,
+// profile 263, sprite 611". All three are wrong. RicBent's profiles.csv rows
+// are (hex profile id, decimal profile id): 0x263 = 611 is the profile, and
+// codedx doc/spriteToProfileId.txt maps sprite 51 to it. チョロプー is Monty
+// Mole. The Rocky Wrench is マンホールプー, profile 617 / sprite 536 -- see
+// readable/enemy/RockyWrench.cpp. The two share the archive "choropoo", which
+// is why its model names include spanner and manhole. The archive analysis
+// below was done on a Wii U file (big-endian FRES v3), not the Deluxe one, and
+// the "+0x18A0 spanner link" is an assumption: the id is resolved and fed to
+// sub_605ED0DC, a trail helper Fuzzy::onExecute also uses. The function
+// addresses (0x6027Bxxx) are Monty Mole's own and stand as written.
+// ===========================================================================
+//
 //
 // This is a complete actor: what it loads, how it moves, how it throws, how it
 // dies, and the three companion actors that make the mechanic work. Written for

@@ -147,7 +147,7 @@
 			<entry value="14">Super mushroom (if small)</entry>
 			<entry value="15">Ice flower</entry>
 		</list>
-		<list nybble="20" title="Contains (extended)" comment="Contents 16-31. 21 needs the hammer_suit mod; an unregistered 22-31 makes the game read past its contents table." category="behavior" requirednybble="13" requiredval="1">
+		<list nybble="20" title="Contains (extended)" comment="Contents 16-31. 21 needs hammer_suit, 22 p_acorn, 23 shell_suit; an unregistered 22-31 makes the game read past its contents table." category="behavior" requirednybble="13" requiredval="1">
 			<entry value="0">16: Acorn Mushroom</entry>
 			<entry value="1">17: Super Crown (1 player; coin otherwise)</entry>
 			<entry value="2">18: Coin or Mushroom (game decides)</entry>
@@ -155,7 +155,7 @@
 			<entry value="4">20: Yoshi egg</entry>
 			<entry value="5">21: HAMMER FLOWER (hammer_suit mod)</entry>
 			<entry value="6">22: P-ACORN (p_acorn mod)</entry>
-			<entry value="7">23: (free for mods)</entry>
+			<entry value="7">23: BLUE SHELL (shell_suit mod)</entry>
 			<entry value="8">24: (free for mods)</entry>
 			<entry value="9">25: (free for mods)</entry>
 			<entry value="10">26: (free for mods)</entry>
@@ -194,7 +194,7 @@
 			<entry value="14">Super mushroom (if small)</entry>
 			<entry value="15">Ice flower</entry>
 		</list>
-		<list nybble="20" title="Contains (extended)" comment="Contents 16-31. 21 needs the hammer_suit mod; an unregistered 22-31 makes the game read past its contents table." category="behavior" requirednybble="13" requiredval="1">
+		<list nybble="20" title="Contains (extended)" comment="Contents 16-31. 21 needs hammer_suit, 22 p_acorn, 23 shell_suit; an unregistered 22-31 makes the game read past its contents table." category="behavior" requirednybble="13" requiredval="1">
 			<entry value="0">16: Acorn Mushroom</entry>
 			<entry value="1">17: Super Crown (1 player; coin otherwise)</entry>
 			<entry value="2">18: Coin or Mushroom (game decides)</entry>
@@ -202,7 +202,7 @@
 			<entry value="4">20: Yoshi egg</entry>
 			<entry value="5">21: HAMMER FLOWER (hammer_suit mod)</entry>
 			<entry value="6">22: P-ACORN (p_acorn mod)</entry>
-			<entry value="7">23: (free for mods)</entry>
+			<entry value="7">23: BLUE SHELL (shell_suit mod)</entry>
 			<entry value="8">24: (free for mods)</entry>
 			<entry value="9">25: (free for mods)</entry>
 			<entry value="10">26: (free for mods)</entry>
@@ -216,7 +216,7 @@
     </sprite>
 
     <!-- hammer_suit mod (nsmbud-reverse/mods/hammer_suit): profile HammerFlower -->
-    <sprite id="734" name="Hammer Flower" notes="New power-up from the hammer_suit mod. Collecting it gives the Fire suit, but the player throws Hammer Bros hammers instead of fireballs. Also available inside ?-blocks and bricks as contents 21." files="I_fireflower;bros">
+    <sprite id="734" name="Hammer Flower" notes="New power-up from the hammer_suit mod. Collecting it gives the Fire suit, but the player throws Hammer Bros hammers instead of fireballs. Also available inside ?-blocks and bricks as contents 21." files="hammer;I_fireflower;bros">
     </sprite>
 
     <!-- bee mod (nsmbud-reverse/mods/bee): a Cheep Cheep (profile 530) with a bee model,
@@ -255,10 +255,10 @@
 
         The nybbles are the Goomba class's (sprite 467/468): the type field,
         then a type-dependent vertical offset. Nothing here is new game code:
-        the settings are read by Goomba::onCreate 0x603393F0.
+        the settings are read by the Goomba class (vtable +0x270, 0x603393F0, called from GoombaBase::onCreate).
     -->
     <sprite id="737" name="Shy Guy" notes="New enemy from the shy_guy mod: a Shy Guy that uses the Goombrat's mechanics, turning around at the edge of a platform instead of walking off it. Needs romfs/Model/shyguy.Nin_NX_NVN.szs with the animations 'walk', 'walk0' and 'walk1'; without it the Goombrat model is shown and the log says so." files="shyguy">
-        <list nybble="12" title="Type" comment="The Goomba family's type field (settings1 &amp; 0xF), read by Goomba::onCreate 0x603393F0. A Goombrat is type 0." category="behavior">
+        <list nybble="12" title="Type" comment="The Goomba family's type field (settings1 &amp; 0xF), read by the Goomba class (vtable +0x270, 0x603393F0, called from GoombaBase::onCreate). A Goombrat is type 0." category="behavior">
             <entry value="0">Normal (walks, turns at ledges)</entry>
             <entry value="1">Alternate collision sensors</entry>
             <entry value="2">No player collision</entry>
@@ -297,7 +297,7 @@
         because the count comes from the high nibble of settings2 (bits 4-7 of
         the field, which is nybble 19), so nybbles 13-18 and 20 are the child's.
     -->
-    <sprite id="738" name="Actor Spawner (custom)" notes="Spawns 1-16 actors of a chosen sprite or profile, optionally only while a level event is on. Unlike sprite 726 the event is optional (0 = spawn immediately), the event mask is read from the correct Deluxe offset, the sprite table is range-checked, and failures are logged." files="Actor_Spawner">
+    <sprite id="738" name="Actor Spawner (custom)" notes="Spawns 1-16 actors of a chosen sprite or profile, optionally only while a level event is on. Unlike sprite 726 the event is optional (0 = spawn immediately), it can spawn several with a spread, the sprite table is range-checked, and failures are logged. For a plain event-triggered spawn use codedx sprite 726." files="Actor_Spawner">
         <value    nybble="1-2"   title="Triggering Event ID" id_type="event" category="events" comment="Spawns while this event is on, and re-arms when it turns off. 0 = no gate: spawn immediately and never re-arm." />
         <value    nybble="4"     title="Spawned Actor Event ID" category="events" comment="Passed to each spawned actor as its eventId1. Only values 0-15 are meaningful." />
         <checkbox nybble="21"    mask="1" title="ID is a sprite ID" category="spawned actor" comment="Checked: treat Actor ID as a sprite ID (looked up in spriteToProfileList). Unchecked: it is already a profile ID." />
@@ -306,6 +306,14 @@
         <value    nybble="5-12"  title="Spawned Settings 1" category="spawned actor" comment="Copied to every spawned actor as its settings1 (nybbles 5-12)." />
         <value    nybble="13-18" title="Spawned Settings 2 (low)" category="spawned actor" comment="Copied to every spawned actor as settings2 bits 8-31." />
         <value    nybble="20"    title="Spawned Settings 2 (high)" category="spawned actor" comment="Copied to every spawned actor as settings2 bits 0-3." />
+    </sprite>
+
+    <!--
+        shell_suit mod (nsmbud-reverse/mods/shell_suit): the Blue Shell, a
+        DS-style shell power built on the Penguin Suit's belly slide
+        (ledger F0205, F0212-F0216).
+    -->
+    <sprite id="739" name="Blue Shell" notes="New power-up from the shell_suit mod (NSMB DS style): gives the Penguin Suit's powers, and crouching while running starts a shell dash at full speed that bounces off walls, defeats enemies and bumps block actors. Also in ?-blocks and bricks as contents 23 (tick Extended contents, pick 23). Uses the Penguin Suit item model until romfs/Model/I_shell is provided." files="I_penguin;I_shell">
     </sprite>
 
 
@@ -340,7 +348,7 @@
 			<entry value="4">20: Yoshi egg</entry>
 			<entry value="5">21: HAMMER FLOWER (hammer_suit mod)</entry>
 			<entry value="6">22: P-ACORN (p_acorn mod)</entry>
-			<entry value="7">23: (free for mods)</entry>
+			<entry value="7">23: BLUE SHELL (shell_suit mod)</entry>
 			<entry value="8">24: (free for mods)</entry>
 			<entry value="9">25: (free for mods)</entry>
 			<entry value="10">26: (free for mods)</entry>
@@ -381,7 +389,7 @@
 			<entry value="4">20: Yoshi egg</entry>
 			<entry value="5">21: HAMMER FLOWER (hammer_suit mod)</entry>
 			<entry value="6">22: P-ACORN (p_acorn mod)</entry>
-			<entry value="7">23: (free for mods)</entry>
+			<entry value="7">23: BLUE SHELL (shell_suit mod)</entry>
 			<entry value="8">24: (free for mods)</entry>
 			<entry value="9">25: (free for mods)</entry>
 			<entry value="10">26: (free for mods)</entry>
@@ -422,7 +430,7 @@
 			<entry value="4">20: Yoshi egg</entry>
 			<entry value="5">21: HAMMER FLOWER (hammer_suit mod)</entry>
 			<entry value="6">22: P-ACORN (p_acorn mod)</entry>
-			<entry value="7">23: (free for mods)</entry>
+			<entry value="7">23: BLUE SHELL (shell_suit mod)</entry>
 			<entry value="8">24: (free for mods)</entry>
 			<entry value="9">25: (free for mods)</entry>
 			<entry value="10">26: (free for mods)</entry>
@@ -463,7 +471,7 @@
 			<entry value="4">20: Yoshi egg</entry>
 			<entry value="5">21: HAMMER FLOWER (hammer_suit mod)</entry>
 			<entry value="6">22: P-ACORN (p_acorn mod)</entry>
-			<entry value="7">23: (free for mods)</entry>
+			<entry value="7">23: BLUE SHELL (shell_suit mod)</entry>
 			<entry value="8">24: (free for mods)</entry>
 			<entry value="9">25: (free for mods)</entry>
 			<entry value="10">26: (free for mods)</entry>
@@ -505,7 +513,7 @@
 			<entry value="4">20: Yoshi egg</entry>
 			<entry value="5">21: HAMMER FLOWER (hammer_suit mod)</entry>
 			<entry value="6">22: P-ACORN (p_acorn mod)</entry>
-			<entry value="7">23: (free for mods)</entry>
+			<entry value="7">23: BLUE SHELL (shell_suit mod)</entry>
 			<entry value="8">24: (free for mods)</entry>
 			<entry value="9">25: (free for mods)</entry>
 			<entry value="10">26: (free for mods)</entry>

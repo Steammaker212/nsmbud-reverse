@@ -28,10 +28,8 @@ namespace nsmbudx {
 //
 // so the instance pointer lives at 0x60C7B390 and the mask is at +0x10.
 //
-// codedx's eventmgr.h puts `events` at +0x0 and inherits IDisposer; on Deluxe
-// the base object is 0x10 bytes, so +0x0 would read a vtable pointer and every
-// gate would test true for some ids and false for others for no reason. This is
-// the one codedx offset that MUST NOT be copied.
+// codedx's eventmgr.h declares `events` after its sead::IDisposer base, which
+// is 0x10 bytes, so codedx reads +0x10 as well (ledger F0211).
 constexpr u32 cEventMgrInstance = 0x60C7B390;
 constexpr u32 cEventMgrEvents   = 0x10;
 

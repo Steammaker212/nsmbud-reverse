@@ -1,3 +1,20 @@
+// ===========================================================================
+//  CORRECTION (ledger F0204), read this first.
+//
+//  The null-dereference path below is right. The two "reasons" are not:
+//   1. There is no vanilla hammer archive. romfs/Model/hammer on the SD card is
+//      the user's own model; the base game has none (Model/ and every Pack
+//      checked; the Fire Flower's I_fireflower lives in jyotyuActorPack).
+//   2. Custom profile archives DO reach the loader: Profile_loadResources
+//      (0x60017FCC) reads Profile_getResourceListById (0x60020FF0), which
+//      codedx's template hooks. What was missing is the load class (F0202):
+//      the Hammer Flower was registered as class 1 (per level), so its
+//      archives loaded only in levels placing sprite 734, and a Hammer Flower
+//      from a ?-block elsewhere found "hammer" unmounted. Items are class 0
+//      (loaded at game start) in vanilla; nsmbudx/profile_resources.h now
+//      registers the Hammer Flower the same way.
+// ===========================================================================
+//
 // ItemModelCrash.cpp -- why "archive not loaded" is a hard crash, not a fallback.
 //
 // ===========================================================================

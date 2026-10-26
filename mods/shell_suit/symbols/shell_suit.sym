@@ -1,0 +1,3 @@
+# mods/shell_suit. RVA = VA - 0x60000000. Deluxe (Switch) v1.0.0.
+# Player state: the Penguin Suit belly slide (StateID; chosen by 0x607B8CB0 when mode == 5).
+PlayerState_PenguinSlide = 0x00CC4F8C;

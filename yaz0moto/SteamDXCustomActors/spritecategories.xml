@@ -10,6 +10,7 @@
             <attach sprite="731" />
             <attach sprite="734" />
             <attach sprite="736" />
+            <attach sprite="739" />
         </category>
         <category name="Platforms">
             <attach sprite="732" />

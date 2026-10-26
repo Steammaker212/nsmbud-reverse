@@ -13,19 +13,15 @@
 //  WHY THIS EXISTS WHEN codedx ALREADY HAS ONE
 // =====================================================================
 //
-// Three defects in codedx's version matter on Deluxe, all reversed in
-// readable/actor/ActorSpawner.cpp:
+// How it differs from codedx's version (sprite 726, which is correct on Deluxe
+// for event-triggered spawns: its event mask is at +0x10 too, ledger F0211):
 //
-//  1. It reads the event mask at EventMgr+0x0. On Deluxe the u64 `events` is at
-//     +0x10 (the IDisposer base is 0x10 bytes). +0x0 is the vtable pointer, so
-//     the gate tests nonsense and a gated spawner never fires. (F0181)
-//
-//  2. `if (!eventId2) return 2;` makes the event MANDATORY. A level that does
+//  1. `if (!eventId2) return 2;` makes the event MANDATORY. A level that does
 //     not set an event gets a sprite that deletes itself on spawn -- the most
 //     common "my spawner does nothing" failure. Here eventId2 == 0 means
 //     "no gate, spawn immediately", which is what a hand-written level wants.
 //
-//  3. `Profile::spriteToProfileList[inputId]` is unbounded (the game's own table
+//  2. `Profile::spriteToProfileList[inputId]` is unbounded (the game's own table
 //     is indexed without a check, F0101). inputId reaches 4095 but the vanilla
 //     table is 738 entries, so a typo reads past the end. Here it is checked and
 //     logged.
@@ -51,8 +47,8 @@
 //
 // Examples:
 //
-//   Rocky Wrench (sprite 611), immediately:
-//       linkId = 611 & 0xFF = 99, movementId = 0x10 | (611 >> 8) = 0x12,
+//   Rocky Wrench (sprite 536), immediately:
+//       linkId = 536 & 0xFF = 24, movementId = 0x10 | (536 >> 8) = 0x12,
 //       eventId2 = 0
 //
 //   Cheep Cheep (profile 530) x2, only while event 3 is active:

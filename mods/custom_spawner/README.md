@@ -17,16 +17,17 @@ does **not** reuse that name or that sprite, so both can live in one build:
 | | codedx sprite 726 | this mod, sprite 738 |
 |---|---|---|
 | event gate | mandatory | optional (`eventId2 = 0` = spawn now) |
-| event mask offset | `EventMgr+0x0` — **wrong on Deluxe** | `EventMgr+0x10` |
 | sprite-table index | unbounded | range-checked and logged |
 | spawn count | 1 | 1–16 |
 | positional spread | none | yes |
 | failures | silent | logged |
 
-Three of those are corrections, not features. The first is fatal: on Deluxe the
-`u64 events` mask is at `+0x10` (the `IDisposer` base is 0x10 bytes), so codedx's
-`+0x0` reads the vtable pointer. A gated codedx spawner on Deluxe tests garbage
-and never fires. See ledger F0181.
+**For a plain event-triggered spawn, use codedx's sprite 726.** It is correct on
+Deluxe: its `EventMgr` derives from `sead::IDisposer` (0x10 bytes), so `u64
+events` is at `+0x10` there too, the same word `EventMgr::set` (0x6072A4B0)
+writes (ledger F0211; an earlier note here said codedx read `+0x0`, which was
+wrong). This sprite adds an optional gate, several spawns with a spread, a
+range check and logging.
 
 ## Placement
 
@@ -47,11 +48,11 @@ authored for codedx spawns the same thing here.
 
 ### Examples
 
-**A Rocky Wrench (sprite 611), immediately**
+**A Rocky Wrench (sprite 536), immediately**
 
 ```
-linkId     = 611 & 0xFF        = 99
-movementId = 0x10 | (611 >> 8) = 0x12
+linkId     = 536 & 0xFF        = 24
+movementId = 0x10 | (536 >> 8) = 0x12
 eventId2   = 0
 ```
 

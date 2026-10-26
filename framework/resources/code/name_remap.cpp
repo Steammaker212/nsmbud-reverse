@@ -17,6 +17,10 @@ struct SafeStr
 const nsmbudx::NameRemap* sActive;
 u32 sActiveCount;
 void* sThread;
+// Bit i: remap i fell back to the vanilla archive in this scope, so its model
+// swap is skipped too -- the vanilla archive does not contain the custom model
+// name, and asking it for one was the Hammer Flower crash (ledger F0204).
+u32 sArchiveFellBack;
 
 // TPIDRURO holds the thread's TLS pointer: a cheap, unique thread identity.
 inline void* currentThread()
@@ -68,6 +72,7 @@ extern "C" void* NameRemap_archiveGet(void* mgr, SafeStr* name)
         SafeStr swapped = { name->vtable, r->archiveTo };
         if (void* archive = NameRemap_archiveGet_orig(mgr, &swapped))
             return archive;
+        sArchiveFellBack |= 1u << (u32)(r - sActive);
         nsmbudx::log("remap: archive '", r->archiveTo, "' is not loaded; using '", name->cstr, "'");
     }
     return NameRemap_archiveGet_orig(mgr, name);
@@ -77,6 +82,8 @@ extern "C" void* NameRemap_getModel(void* archive, SafeStr* name, u32 numSkl, u3
                                     u32 numShu, u32 numVis, u32 numSha, bool unk, void* heap)
 {
     if (const nsmbudx::NameRemap* r = findModel(name->cstr)) {
+        if (sArchiveFellBack & (1u << (u32)(r - sActive)))
+            return NameRemap_getModel_orig(archive, name, numSkl, numTex, numShu, numVis, numSha, unk, heap);
         SafeStr swapped = { name->vtable, r->modelTo };
         if (void* model = NameRemap_getModel_orig(archive, &swapped, numSkl, numTex, numShu,
                                                   numVis, numSha, unk, heap))
@@ -91,6 +98,8 @@ namespace nsmbudx {
 ScopedNameRemap::ScopedNameRemap(const NameRemap* remaps, u32 count)
     : mPrev(sActive), mPrevCount(sActiveCount), mPrevThread(sThread)
 {
+    mPrevFellBack = sArchiveFellBack;
+    sArchiveFellBack = 0;
     sActive = remaps;
     sActiveCount = count;
     sThread = currentThread();
@@ -98,6 +107,7 @@ ScopedNameRemap::ScopedNameRemap(const NameRemap* remaps, u32 count)
 
 ScopedNameRemap::~ScopedNameRemap()
 {
+    sArchiveFellBack = mPrevFellBack;
     sActive = mPrev;
     sActiveCount = mPrevCount;
     sThread = mPrevThread;

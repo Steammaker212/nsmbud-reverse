@@ -126,8 +126,37 @@ extern "C" int MyItem_createModel(StageActor* item)
 }
 ```
 
-The archive must be **loaded**, so list it in your profile's resources. If a name
-is missing, the remap falls back to the original and logs a warning.
+The archive must be **mounted**, so list it in your profile's resources -- and
+pick *when* it loads. `Profile::getHasResources` is a load class, not a flag
+(ledger F0202):
+
+| Class | When | Vanilla users |
+|---|---|---|
+| `ResourceLoad::AtBoot` (0) | once, at game start | every power-up item, Yoshi, the Yoshi egg |
+| `ResourceLoad::PerLevel` (1) | with levels whose area sprite lists contain the sprite | enemies, objects |
+| `ResourceLoad::WorldMap` (2) | on the world map | world-map actors |
+
+```cpp
+#include "nsmbudx/profile_resources.h"
+static sead::SafeString sMyItemResources[] = { "my_item" };
+nsmbudx::setProfileResources(ProfileId::MyItem, sMyItemResources, 1,
+                             nsmbudx::ResourceLoad::AtBoot);   // it comes out of blocks
+```
+
+An item that comes out of ?-blocks must be `AtBoot`: as `PerLevel` it loads
+only where its sprite is placed, which is how the first custom Hammer Flower
+model crashed. Actor variants pick the base profile's class by themselves.
+Listing an archive another profile already loaded is harmless.
+
+If your archive is missing, the remap logs a warning and uses the game's
+archive **and** the game's model name. If the archive is there but the model
+name inside it is wrong, the game still gets null and crashes, so check names
+with `scripts/bfres.py`. Missing *animations* are skipped: the item simply does
+not animate (F0217).
+
+Ship the archive in your mod's `romfs/Model/` folder; the build copies it. To
+test without it, build with `--placeholder-models` (`nsmbudx/models.h`): every
+mod switches to the game's own models.
 
 ## 7. Add a sprite
 

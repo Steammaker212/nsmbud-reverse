@@ -79,15 +79,17 @@
 // ---------------------------------------------------------------------------
 //
 // Each Koopaling is a *profile*, and the profile holds the factory. From
-// data/recovered/profiles.json (sprite -> profile -> factory VA):
+// codedx doc/profiles.csv (profile -> factory) and doc/spriteToProfileId.txt
+// (sprite -> profile); an earlier version listed the profile ids as sprites
+// (ledger F0210):
 //
-//     Lemmy     sprite 696  factory 0x600DBDDC   vtable 0x60BCC370
-//     Iggy      sprite 704  factory 0x60097A5C
-//     Wendy     sprite 700  factory 0x601248D0
-//     Morton    sprite 697  factory 0x600EEEC C
-//     Roy       sprite 707  factory 0x60108C84
-//     Larry     sprite 694  factory 0x600D77C4
-//     Ludwig    sprite 702  factory 0x600E7508
+//     Lemmy     profile 696  sprite 296  factory 0x600DBDDC   vtable 0x60BCC370
+//     Iggy      profile 704  sprite 403  factory 0x60097A5C
+//     Wendy     profile 700  sprite 383  factory 0x601248D0
+//     Morton    profile 697  sprite 368  factory 0x600EEECC
+//     Roy       profile 707  sprite 389  factory 0x60108C84
+//     Larry     profile 694  sprite 230  factory 0x600D77C4
+//     Ludwig    profile 702  sprite 385  factory 0x600E7508
 //
 // Note that the sprite id is NOT the profile id, and that the factories are far
 // apart in the binary (0x97A5C for Iggy, 0xDBDDC for Lemmy, 0x1248D0 for Wendy).

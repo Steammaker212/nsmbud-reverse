@@ -9,8 +9,11 @@
 // then "walk0" / "walk1" -- and the same names as *texture* animations -- so
 // give your archive those four. A missing one is logged, not fatal: the actor
 // falls back to the vanilla model.
-#define SHYGUY_ARCHIVE      "shyguy"
-#define SHYGUY_MODEL        "shyguy"
+// 1: your model; 0: the Goombrat's own (the placeholder). Follows the build:
+// `make_mod_project.py --placeholder-models` switches every mod at once.
+#define SHYGUY_CUSTOM_MODELS NSMBUDX_CUSTOM_MODELS
+#define SHYGUY_ARCHIVE      NSMBUDX_PICK_MODEL(SHYGUY_CUSTOM_MODELS, "shyguy", "kakibo")
+#define SHYGUY_MODEL        NSMBUDX_PICK_MODEL(SHYGUY_CUSTOM_MODELS, "shyguy", "kakibo")
 
 // Which vanilla behaviour to copy. This is the whole point of the mod:
 //
@@ -43,6 +46,7 @@
 
 #include "profileid.h"
 #include "game/goomba.h"
+#include "nsmbudx/models.h"
 #include "nsmbudx/actor_variant.h"
 
 NSMBUDX_ACTOR_VARIANT(shyGuyVariant,

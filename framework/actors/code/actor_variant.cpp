@@ -2,6 +2,7 @@
 
 #include "nsmbudx/actor_variant.h"
 #include "nsmbudx/log.h"
+#include "nsmbudx/profile_resources.h"
 #include "actor/actor.h"
 #include "profile.h"
 
@@ -298,9 +299,12 @@ ActorVariantRegistration::ActorVariantRegistration(const ActorVariant& def)
     for (u32 i = 0; vanilla && i < vanillaCount && count < 2 * cMaxVariantRemaps; i++)
         add(vanilla[i].data);
 
-    Profile::hasResourcesCustom[custom]  = count > 0;
-    Profile::resourceCountCustom[custom] = count;
-    Profile::resourceListsCustom[custom] = v.resources();
+    // Load class (nsmbudx/profile_resources.h): the base profile's, so a variant
+    // of an item loads at game start like the item, a variant of an enemy with
+    // its level; cVariant_LoadAtBoot forces game start.
+    ResourceLoad when = (def.options & cVariant_LoadAtBoot)
+        ? ResourceLoad::AtBoot : (ResourceLoad)Profile::getHasResources(def.baseProfileId);
+    setProfileResources(def.profileId, v.resources(), count, when);
     Profile::prioritiesCustom[custom]    = Profile::getPriority(def.baseProfileId);
 
     sNumVariants++;

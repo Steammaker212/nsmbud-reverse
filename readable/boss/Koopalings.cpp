@@ -25,15 +25,15 @@
 // KoopalingBase::KoopalingBase (0x600B137C), then installs a vtable through the
 // GOT (`ldr rX,[pc,#imm]` -> `ldr rX,[pc,rX]` -> `add rX,rX,#8`).
 //
-//   sibling  sprite  factory      vtable        sizeof
-//   -------  ------  -----------  ------------  ------
-//   Larry    694     0x600D77C4   0x60BCBC50    0x2078
-//   Lemmy    696     0x600DBDDC   0x60BCC370    0x1FD0
-//   Morton   697     0x600EEECC   0x60BCE3A4    0x21D8
-//   Wendy    700     0x601248D0   0x60BD1120    0x2168
-//   Ludwig   702     0x600E7508   0x60BCDBD4    0x20A8
-//   Iggy     704     0x60097A5C   0x60BC7C48    0x20F0
-//   Roy      707     0x60108C84   0x60BCFED0    0x2180
+//   sibling  profile sprite factory      vtable        sizeof
+//   -------  ------- ------ -----------  ------------  ------
+//   Larry    694     230    0x600D77C4   0x60BCBC50    0x2078
+//   Lemmy    696     296    0x600DBDDC   0x60BCC370    0x1FD0
+//   Morton   697     368    0x600EEECC   0x60BCE3A4    0x21D8
+//   Wendy    700     383    0x601248D0   0x60BD1120    0x2168
+//   Ludwig   702     385    0x600E7508   0x60BCDBD4    0x20A8
+//   Iggy     704     403    0x60097A5C   0x60BC7C48    0x20F0
+//   Roy      707     389    0x60108C84   0x60BCFED0    0x2180
 //
 // All seven chain to the SAME constructor (0x600B137C) before installing their
 // vtable, which is why the shared block below is identical across them. But note
@@ -206,7 +206,7 @@ const KoopalingTuning kTuning[7] =
 //      so an omitted slot there is not "default behaviour" but zero. Override
 //      all nine unless you have verified a specific one is unused.
 //
-//   4. A level with a Kupper door (sprite 609 / profile 261) whose link id
+//   4. A level with a Kupper door (profile 609 / sprite 111) whose link id
 //      matches +0x1FB8.
 //
 // You do NOT need to touch +0x314/+0x2FC/+0x2DC unless you want different

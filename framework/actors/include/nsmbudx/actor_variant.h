@@ -73,6 +73,12 @@ enum ActorVariantOption : u32
     // other code), where asking the profile system to load a file that may not
     // exist on its own is a risk. The remap still falls back if it isn't loaded.
     cVariant_NoArchiveLoad = 1 << 1,
+
+    // Load the archives at game start (load class 0) instead of with levels
+    // that place the sprite. Use it for items that come out of ?-blocks: as
+    // per-level they are only mounted where the sprite is placed, and a block
+    // elsewhere would find the archive missing (nsmbudx/profile_resources.h).
+    cVariant_LoadAtBoot = 1 << 2,
 };
 
 constexpr u32 cMaxHitRules = 8;

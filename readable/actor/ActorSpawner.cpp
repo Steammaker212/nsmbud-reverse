@@ -134,9 +134,9 @@
 //     orr  r4,r6,r4              ; set the bit for the id
 //     strd r4,[r0,#0x10]
 //
-// so `isActive(id)` is `(*(u64*)(this+0x10) >> id) & 1`. codedx's header puts
-// `events` at +0x0; on Deluxe it is at +0x10 (the IDisposer base is bigger).
-// USING CODEX'S OFFSET WOULD READ GARBAGE AND THE GATE WOULD NEVER OPEN.
+// so `isActive(id)` is `(*(u64*)(this+0x10) >> id) & 1`. codedx's header declares
+// `events` after its 0x10-byte sead::IDisposer base, so it is +0x10 there too
+// (ledger F0211; an earlier version of this note said +0x0).
 //
 // One of those call sites is the pattern a spawner must match, and it also
 // confirms the actor event fields drive events (0x60113F50):

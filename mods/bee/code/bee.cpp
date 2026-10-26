@@ -9,8 +9,11 @@
 // animation "pukupuku" on it, so include animations with those names (or the
 // model shows without them). Until the archive exists the Bee uses the Cheep
 // Cheep model and logs "remap: archive 'bee' is not loaded".
-#define BEE_ARCHIVE         "bee"
-#define BEE_MODEL           "bee"
+// 1: your model; 0: the Cheep Cheep's own (the placeholder). Follows the build:
+// `make_mod_project.py --placeholder-models` switches every mod at once.
+#define BEE_CUSTOM_MODELS   NSMBUDX_CUSTOM_MODELS
+#define BEE_ARCHIVE         NSMBUDX_PICK_MODEL(BEE_CUSTOM_MODELS, "bee", "pukupuku")
+#define BEE_MODEL           NSMBUDX_PICK_MODEL(BEE_CUSTOM_MODELS, "bee", "pukupuku")
 
 // Which Cheep Cheep the Bee behaves like. Its editor settings are that
 // sprite's (Yaz0moto sprite 101 for 530):
@@ -40,6 +43,7 @@
 
 #include "profileid.h"
 #include "game/enemy.h"
+#include "nsmbudx/models.h"
 #include "nsmbudx/actor_variant.h"
 
 NSMBUDX_ACTOR_VARIANT(beeVariant,

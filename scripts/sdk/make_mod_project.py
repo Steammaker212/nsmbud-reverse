@@ -158,6 +158,9 @@ def main() -> int:
                          "actors, sprites 724-733, and the custom-profile system). Required when "
                          "the romfs levels place those sprites: without them the level references "
                          "a profile that no module registers.")
+    ap.add_argument("--placeholder-models", action="store_true",
+                    help="build every mod with the game's own models instead of the custom "
+                         "archives (framework/core nsmbudx/models.h); mods can override per mod")
     args = ap.parse_args()
 
     repo = Path(args.repo).resolve()
@@ -176,6 +179,12 @@ def main() -> int:
     if args.with_template_code:
         copy_tree(template / "code", src / "code")
         copy_tree(template / "hooks", src / "hooks")
+        # The sweet-dx checkout's template carries a leftover v1 hammer mod
+        # (code/hammer_suit.cpp + hooks/hammer_suit.hks, its .sym not copied).
+        # Built without mods/hammer_suit it would install the old createFireBall
+        # hook or fail to link; with it, the mod's files overwrite these anyway.
+        for stale in (src / "code" / "hammer_suit.cpp", src / "hooks" / "hammer_suit.hks"):
+            stale.unlink(missing_ok=True)
     shutil.copy2(template / "symbols" / "main.sym", src / "symbols" / "main.sym")
     copy_tree(repo / "sdk" / "include", src / "include")
     copy_tree(repo / "sdk" / "symbols", src / "symbols")
@@ -198,7 +207,14 @@ def main() -> int:
             copy_tree(mod / sub, src / sub)
         for comp in components:
             copy_tree(repo / "framework" / comp / sub, src / sub)
+    config = src / "include" / "nsmbudx" / "build_config.h"
+    config.parent.mkdir(parents=True, exist_ok=True)
+    config.write_text("// Written by scripts/sdk/make_mod_project.py; see nsmbudx/models.h.\n"
+                      "#pragma once\n"
+                      f"#define NSMBUDX_CUSTOM_MODELS {0 if args.placeholder_models else 1}\n")
     print("mods: " + ", ".join(m.name for m in mods))
+    print("models: " + ("game placeholders (--placeholder-models)" if args.placeholder_models
+                        else "custom"))
     if components:
         print("framework: " + ", ".join(components))
 
