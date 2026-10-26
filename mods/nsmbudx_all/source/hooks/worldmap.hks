@@ -1,0 +1,10 @@
+@ framework/worldmap. WorldMapData::load(world, variant) (0x6017BE7C) stores
+@ the ids, clears the map and parses the CSVs; CourseSelectMgr calls it once
+@ per world and variant at boot. Entry `push {r4, lr}` is position-independent.
+@ Ledger F0064.
+
+WorldMap_load:
+    type:       hook
+    address:    0x0017BE7C
+    symbol:     WorldMap_load
+    trampoline: WorldMap_load_orig

@@ -1,0 +1,14 @@
+<?xml version="1.0"?>
+<!--
+    Project-SteamDX, the single Yaz0moto patch for nsmbud-reverse. Install this folder
+    into Yaz0moto's mods directory (Preferences -> Games Setup -> Mods directory).
+-->
+<game name="Project-SteamDX"
+      version="2.0"
+      description="Custom actors 724-739 (codedx + nsmbud-reverse mods), extended ?-block/brick contents 21-23 (Hammer Flower, P-Acorn, Blue Shell), and movement binding on the Cheep Cheep family."
+      base="New Super Mario Bros. U Deluxe"
+      patchReleaseUrl="https://github.com/Steammaker212/nsmbud-reverse">
+
+    <file name="spritedata"       path="spritedata.xml"       patch="true" />
+    <file name="spritecategories" path="spritecategories.xml" patch="true" />
+</game>

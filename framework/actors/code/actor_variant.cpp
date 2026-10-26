@@ -242,7 +242,9 @@ extern "C" u32 Variant_checkLiquid(void* result, f32* surfaceY, const Vec3* posi
 {
     u32 r = Variant_checkLiquid_orig(result, surfaceY, position, layer);
     Variant* v = runningHere();
-    if (v && (v->def->options & nsmbudx::cVariant_AirSwim)) {
+    // Callers may pass no surface or no position (the Cheep Cheep's death path does: the Bee
+    // crashed at address 0 here when killed by a hammer, Ryujinx 2026-10-26 11:58, ledger F0235).
+    if (v && (v->def->options & nsmbudx::cVariant_AirSwim) && surfaceY && position) {
         // Far above the actor, so "stay 16 below the surface" never pulls it down.
         f32 high = position->y + 1024.0f;
         if (*surfaceY < high)

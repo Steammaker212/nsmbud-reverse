@@ -1,0 +1,29 @@
+@ yoshi_tuning: Yoshi's numbers, as data patches (no code). Each value is
+@ loaded by the game at run time and used only by Yoshi's code (ledger F0086,
+@ F0088). Bytes are little-endian. Delete a block to keep the vanilla value.
+@
+@   value              vanilla           here
+@   fruits per egg     5   (05000000)    3   (03000000)
+@   flutter length     30 frames         60 frames (3C000000)
+@   flutter lift fast  0.2  (CDCC4C3E)   unchanged; 0.3 = 9A99993E
+@   flutter lift slow  0.07 (295C8F3D)   unchanged; 0.1 = CDCCCC3D
+
+Yoshi_fruitsPerEgg:
+    type:    data
+    address: 0x00B0C0C8
+    data:    03 00 00 00
+
+Yoshi_flutterFrames:
+    type:    data
+    address: 0x00B0C0CC
+    data:    3C 00 00 00
+
+@ Yoshi_flutterLiftFast:
+@     type:    data
+@     address: 0x007D3F94
+@     data:    9A 99 99 3E
+@
+@ Yoshi_flutterLiftSlow:
+@     type:    data
+@     address: 0x007D3F98
+@     data:    CD CC CC 3D
