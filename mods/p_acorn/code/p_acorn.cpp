@@ -17,11 +17,22 @@
 // Mushroom first, as from every Acorn block.
 #define PACORN_BLOCK_CONTENTS   22
 
-// 0: looks like the normal Acorn (always works).
-// 1: try the game's own P-Acorn model, "I_musasabiP" (the Quest prize uses
-//    it). It lives inside a game pack, so it is not added to the level's load
-//    list; if it isn't loaded the normal Acorn model is used and the Ryujinx
-//    log says "remap: archive 'I_musasabiP' is not loaded".
+// 0: looks like the normal Acorn.
+// 1: the game's own P-Acorn model (default). "I_musasabiP" is a *model* inside
+//    the Acorn's archive, not an archive: I_musasabi.Nin_NX_NVN.szs (in the
+//    always-mounted jyotyuActorPack) holds two FMDLs, I_musasabi and
+//    I_musasabiP (material I_musasabiP_mat_P), sharing the out/out2/out3/
+//    wait/wait2 animations. The game's per-mode item tables pair them the same
+//    way (0x6021D908: mode 8 -> "I_musasabiP"). So only the model name is
+//    swapped; the archive stays "I_musasabi", which is resident from boot.
+//
+//    History (ledger F0224): this used to remap the *archive* to I_musasabiP.
+//    That lookup always missed, but the model swap still ran inside the
+//    fallback archive and found I_musasabiP, so the P-Acorn showed. Commit
+//    7183ef71 then made a failed archive swap skip the model swap too (right
+//    for the Hammer Flower, F0204), and from then on the P-Acorn looked like a
+//    plain Acorn while still granting mode 8. The Ryujinx log line
+//    "remap: archive 'I_musasabiP' is not loaded" was that miss.
 #define PACORN_USE_GAME_P_MODEL 1
 
 // Or your own: romfs/Model/<archive>.Nin_NX_NVN.szs (set USE_GAME_P_MODEL 0).
@@ -48,9 +59,10 @@ namespace {
 const int cPlayerMode_PSquirrel = 8;    // Wii U PlayerMode; Deluxe tests +0x528 == 8 in 4 places
 
 #if PACORN_USE_GAME_P_MODEL
+// archiveTo = null: keep the archive, swap only the model inside it.
 NSMBUDX_ACTOR_VARIANT(pAcornVariant,
-    ProfileId::PAcorn, 598 /* Acorn */, "PAcorn", nsmbudx::cVariant_NoArchiveLoad,
-    { { "I_musasabi", "I_musasabiP", "I_musasabi", "I_musasabiP" } });
+    ProfileId::PAcorn, 598 /* Acorn */, "PAcorn", nsmbudx::cVariant_None,
+    { { "I_musasabi", nullptr, "I_musasabi", "I_musasabiP" } });
 #else
 NSMBUDX_ACTOR_VARIANT(pAcornVariant,
     ProfileId::PAcorn, 598 /* Acorn */, "PAcorn", nsmbudx::cVariant_None,

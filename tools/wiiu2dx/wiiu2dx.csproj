@@ -1,0 +1,21 @@
+<Project Sdk="Microsoft.NET.Sdk">
+  <!--
+    wiiu2dx: a Wii U NSMBU model -> NSMBU Deluxe output.bfres. See docs/WIIU_MODELS.md.
+    Needs KillzXGaming's BfresLibrary (MIT) checked out next to the repo:
+      git clone https://github.com/KillzXGaming/BfresLibrary ../third_party/BfresLibrary
+    or pass -p:BfresLibraryDir=<path>.
+  -->
+  <PropertyGroup>
+    <OutputType>Exe</OutputType>
+    <TargetFramework>net9.0</TargetFramework>
+    <Nullable>disable</Nullable>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <BfresLibraryDir Condition="'$(BfresLibraryDir)' == ''">$(MSBuildThisFileDirectory)..\..\..\third_party\BfresLibrary</BfresLibraryDir>
+  </PropertyGroup>
+  <ItemGroup>
+    <ProjectReference Include="$(BfresLibraryDir)\BfresLibrary\BfresLibrary.csproj" SetTargetFramework="TargetFramework=netstandard2.0" />
+    <Reference Include="Syroot.BinaryData"><HintPath>$(BfresLibraryDir)\Libraries\Syroot.BinaryData.dll</HintPath></Reference>
+    <Reference Include="Syroot.Maths"><HintPath>$(BfresLibraryDir)\Libraries\Syroot.Maths.dll</HintPath></Reference>
+    <Reference Include="Syroot.NintenTools.NSW.Bntx"><HintPath>$(BfresLibraryDir)\Libraries\Syroot.NintenTools.NSW.Bntx.dll</HintPath></Reference>
+  </ItemGroup>
+</Project>

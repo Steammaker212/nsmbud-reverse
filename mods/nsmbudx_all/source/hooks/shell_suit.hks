@@ -1,0 +1,26 @@
+@ Blue Shell (mods/shell_suit). Deluxe (Switch) v1.0.0 only. Ledger F0205, F0212-F0216.
+
+@ Player::afterExecute (0x607958F0). Only the Player class has it (Player
+@ vtable 0x60C24C74 slot 9); runs after the state code every frame. Entry
+@ `push {r4, r5, r11, lr}`, trampoline-safe (sdk/data/hookable.csv).
+ShellSuit_afterExecute:
+    type:       hook
+    address:    0x007958F0
+    symbol:     ShellSuit_afterExecute
+    trampoline: ShellSuit_afterExecute_orig
+
+@ The Penguin Suit item's grant (0x6046B6BC): Item_grantMode(item, &r, 5, 1).
+@ Entry `push {r4, lr}`, the same shape as the Acorn grant the P-Acorn hooks.
+ShellSuit_penguinGrant:
+    type:       hook
+    address:    0x0046B6BC
+    symbol:     ShellSuit_penguinGrant
+    trampoline: ShellSuit_penguinGrant_orig
+
+@ ActiveCollider_doOverlapMaybe (0x601597E8), the collider-pair test; it runs
+@ both colliders' callbacks. Entry `push {r4-r11, lr}`, trampoline-safe.
+ShellSuit_doOverlap:
+    type:       hook
+    address:    0x001597E8
+    symbol:     ShellSuit_doOverlap
+    trampoline: ShellSuit_doOverlap_orig

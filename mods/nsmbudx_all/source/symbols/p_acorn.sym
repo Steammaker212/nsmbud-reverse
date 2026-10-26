@@ -1,0 +1,8 @@
+# Deluxe (Switch) v1.0.0. RVA = VA - 0x60000000. Evidence: ledger F0020, F0045.
+
+# The item grant helper every power-up item calls: (item, &result, mode, contact).
+# Returns 1 when collected; result 1 = mode changed, 2 = already had it.
+Item_grantMode = 0x00463998;
+
+# Collect feedback: sound, rumble, score (corpus: SE_PLY_GET_ITEM_AGAIN_ref).
+Item_grantFeedback = 0x00463CD0;

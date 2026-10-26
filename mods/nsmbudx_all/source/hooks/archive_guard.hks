@@ -1,0 +1,9 @@
+@ Diagnostics: log the name of any archive the game looks up but never loaded.
+@ 0x008226EC is the archive manager's getFile (sub_608226EC); its entry is
+@ `push {r4-r11, lr}`, position-independent, so the trampoline can replay it.
+
+ArchiveGuard_getFile:
+    type:       hook
+    address:    0x008226EC
+    symbol:     ArchiveGuard_getFile
+    trampoline: ArchiveGuard_getFile_orig

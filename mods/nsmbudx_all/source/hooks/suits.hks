@@ -1,0 +1,25 @@
+@ framework/player: suit colours. The three model classes' colour routines
+@ (virtual slot 44, vtable +0xB0) are not defined functions in the database;
+@ each entry is a `push`, position-independent, so the trampolines can replay
+@ it. Ledger F0050, F0061-F0063.
+
+@ MarioModel (Mario, Luigi), vtable 0x60C23FAC.
+Suits_setColorType:
+    type:       hook
+    address:    0x0075A6E4
+    symbol:     Suits_setColorType
+    trampoline: Suits_setColorType_orig
+
+@ KinopioModel (Toads), vtable 0x60C23E94. Entry: push {r4-r8, lr}.
+Suits_kinopioSetColorType:
+    type:       hook
+    address:    0x00757B58
+    symbol:     Suits_kinopioSetColorType
+    trampoline: Suits_kinopioSetColorType_orig
+
+@ Unidentified model class, vtable 0x60C240DC. Entry: push {r4-r7, r11, lr}.
+Suits_model3SetColorType:
+    type:       hook
+    address:    0x0075D3AC
+    symbol:     Suits_model3SetColorType
+    trampoline: Suits_model3SetColorType_orig

@@ -1,0 +1,4 @@
+nn_fs_OpenFile_hook:
+    type:    hook
+    address: 0x009ADBEC
+    symbol:  nn_fs_OpenFile_hook(nn::fs::FileHandle*, char const*, int)

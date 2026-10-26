@@ -1,0 +1,10 @@
+@ Diagnostics: name and skip a model shape the renderer cannot draw
+@ (code/draw_guard.cpp, ledger F0234). 0x00434AE8 is the per-shape draw
+@ (sub_60434AE8, called per shape by 0x60435320); its entry is
+@ `push {r4-r11, lr}`, position-independent, so the trampoline can replay it.
+
+DrawGuard_drawShape:
+    type:       hook
+    address:    0x00434AE8
+    symbol:     DrawGuard_drawShape
+    trampoline: DrawGuard_drawShape_orig

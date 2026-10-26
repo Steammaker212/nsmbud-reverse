@@ -5,9 +5,12 @@ A modding framework and reverse-engineering notes for
 and built with [sweet-dx](https://github.com/jabonchan/sweet-dx). Every fact they
 rely on is recorded with its evidence.
 
-> **Working in-game today:** Fire Mario throws Hammer Bros hammers (tested on
-> Ryujinx). Next up: the Hammer Flower item, Cheep Cheep-based custom sprites, and
-> readable C regenerated from a fully typed database.
+> **Working in-game (Ryujinx, 2026-10-26):** the Hammer Flower (side-on model,
+> collectible, throws hammers), the P-Acorn, the Blue Shell, actor spawners, and
+> **Wii U models converted for Deluxe**: a Shy Guy and a Bee remodel run on
+> Nintendo's own compiled shaders. Build everything at once with
+> [mods/nsmbudx_all](mods/nsmbudx_all/); place it in levels with the one
+> Yaz0moto patch, [yaz0moto/SteamDX](yaz0moto/SteamDX/).
 
 No game files are distributed here. You need your own `main` NSO. See [NOTICE.md](NOTICE.md).
 
@@ -17,6 +20,9 @@ No game files are distributed here. You need your own `main` NSO. See [NOTICE.md
 
 | I want to… | Go to |
 |---|---|
+| **Build every mod at once** | [mods/nsmbudx_all/](mods/nsmbudx_all/): all mods + framework + codedx in one sweet-dx project, `build.py --install` |
+| **Use a Wii U model in Deluxe** | [docs/WIIU_MODELS.md](docs/WIIU_MODELS.md) + [tools/wiiu2dx/](tools/wiiu2dx/): convert, rebind to Nintendo's shaders, check |
+| **Place the custom sprites in a level** | [yaz0moto/SteamDX/](yaz0moto/SteamDX/): the one Yaz0moto patch |
 | **Make a mod** | [docs/MODDING.md](docs/MODDING.md): build, install, write a hook, add a sprite, debug a crash |
 | **See a complete example** | [mods/hammer_suit/](mods/hammer_suit/): a new power-up, with model names you can change at the top of one file |
 | **Call game functions from my code** | [sdk/](sdk/): `#include "nsmbudx/game.h"` gives 7,079 game functions by name |
@@ -37,28 +43,36 @@ No game files are distributed here. You need your own `main` NSO. See [NOTICE.md
 
 ```
 mods/            mods you can build (each has a README)
+  nsmbudx_all/     every mod + framework + codedx merged: one sweet-dx project
   hammer_suit/     Hammer Flower power-up (sprite 734, block contents 21)
   bee/             a flying Cheep Cheep with a bee model (sprite 735)
   p_acorn/         the unobtainable P-Acorn in ?-blocks (contents 22, sprite 736)
+  shy_guy/         a ledge-turning Goombrat with a Shy Guy model (sprite 737)
+  custom_spawner/  actor spawner 738, and a fixed codedx spawner 726
+  shell_suit/      the Blue Shell power-up (sprite 739, contents 23)
   diag_passthrough/  diagnostic: the hammer hook doing nothing
 framework/       reusable code mods pull in through requires.txt
   core/            nsmbudx::log -> the Ryujinx log
   game/            codedx-style class headers (game/block.h: BlockBase, ItemMgr)
   items/           custom ?-block / brick contents -> any profile
   actors/          new sprites from vanilla actors with your model (+ air-swim)
-  player/          suit colours per power-up
+  player/          suit colours, another mode's body, throw gates/handlers
   resources/       ScopedNameRemap: your archive/model names in the game's own code
-  diagnostics/     archive guard: names a missing archive before the crash
+  diagnostics/     archive guard + draw guard: name the missing archive / undrawable shape instead of crashing
 sdk/             generated game API (header, .sym, hookable.csv)
+tools/
+  wiiu2dx/         Wii U model -> Deluxe converter (C#, BfresLibrary)
 scripts/
   sdk/             the mod toolchain: build, inspect, check levels, read crash logs
   worldmap/        wmtool.py: dump, check (limits + can it be explored), rebuild world maps
+  models/          wiiu2dx.py (convert), bfres_dump, bfsha_info, bntx_compare
   ida/             live-IDA tools (ida-pro-mcp), type planning, export
   pipeline/        builds the decompiled corpus
   (loose scripts)  earlier one-off research scripts, see scripts/README.md
 docs/
   MODDING.md       the guide
   WORLDMAP.md      world maps: format, limits, custom worlds
+  WIIU_MODELS.md   Wii U models in Deluxe: how and why it works
   RE_PLAN.md       the reverse-engineering plan
   legacy/          earlier reports, quarantined until re-verified
 data/
@@ -67,7 +81,8 @@ data/
 readable/        hand-reconstructed game source, verified, readable C++
 decompiled/      the raw C corpus (src/) and earlier hand-picked functions
 research/        logs and base-game file listings
-loader/ sweetdx/ hooks/ yaz0moto/   earlier harnesses and patch sets (legacy)
+yaz0moto/SteamDX/  the level-editor patch
+loader/ sweetdx/ hooks/   earlier harnesses (legacy)
 ```
 
 ## How much to trust what you read
@@ -98,3 +113,4 @@ and member names.
 - **RicBent**: the IDA database and codedx, the base of everything here.
 - **jabonchan**: sweet-dx.
 - **aboood40091**: red-pro2 and NSMBU-Headers (Wii U).
+- **KillzXGaming**: BfresLibrary (MIT), used by tools/wiiu2dx; BfshaLibrary, read as a format reference.

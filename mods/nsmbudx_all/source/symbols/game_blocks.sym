@@ -1,0 +1,12 @@
+# game/block.h bindings (framework/game). Mangled names produced by clang++
+# from the header itself; addresses are RVAs (VA - 0x60000000).
+# Deluxe (Switch) v1.0.0 only. Evidence: data/findings/ledger.csv F0026-F0033.
+
+# ItemMgr* ItemMgr::instance
+_ZN7ItemMgr8instanceE = 0x00C9D3E4;
+
+# BlockItem ItemMgr::resolveItem(BlockContentCode, u32 playerNo, bool force)
+_ZN7ItemMgr11resolveItemE16BlockContentCodejb = 0x00465E4C;
+
+# static void ItemMgr::spawnItem(BlockItem, const Vec3*, u32, BlockItem, u8, u32)
+_ZN7ItemMgr9spawnItemE9BlockItemPK4Vec3jS0_hj = 0x004663F4;

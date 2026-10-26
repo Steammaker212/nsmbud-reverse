@@ -39,8 +39,10 @@ REPO = Path(__file__).resolve().parent.parent
 # separately) but is ALSO versioned inside it under yaz0moto/, so it is covered
 # by the repo's history like the other two patches. PATCH is the live working
 # copy; TRACKED is the committed one. Both are checked against each other.
-PATCH = REPO.parent / "steam-dx-test"
-TRACKED = REPO / "yaz0moto" / "SteamDXCustomActors"
+# Since 2026-10-26 the repo copy is the one patch (yaz0moto/SteamDX: custom actors +
+# Cheep Cheep family merged); it is both the working and the tracked copy.
+TRACKED = REPO / "yaz0moto" / "SteamDX"
+PATCH = TRACKED
 
 results: list[tuple[str, bool]] = []
 
@@ -327,9 +329,11 @@ def main() -> int:
                             attached.extend(range(int(lo), int(hi) + 1))
                     elif tok.isdigit():
                         attached.append(int(tok))
-    check("every attached sprite is declared by the patch",
-          all(s in patch for s in attached),
-          str([s for s in attached if s not in patch]))
+    # A view may attach a base-game sprite it does not redeclare (the Cheep Cheep
+    # family view attaches the base Group Controller, 616).
+    check("every attached sprite is declared by the patch or the base game",
+          all(s in patch or s in base_sprites for s in attached),
+          str([s for s in attached if s not in patch and s not in base_sprites]))
     check("no sprite attached twice",
           len(attached) == len(set(attached)),
           str(sorted({s for s in attached if attached.count(s) > 1})))
@@ -375,7 +379,7 @@ def main() -> int:
           "; ".join(drift) if drift else f"{len(live)} copy/copies in sync")
 
     # ---- the in-repo tracked copy must match the working copy
-    check("yaz0moto/SteamDXCustomActors exists", TRACKED.is_dir(), str(TRACKED))
+    check("yaz0moto/SteamDX exists", TRACKED.is_dir(), str(TRACKED))
     tracked_drift = []
     if TRACKED.is_dir():
         for f in ("main.xml", "spritedata.xml", "spritecategories.xml", "sprite.py"):

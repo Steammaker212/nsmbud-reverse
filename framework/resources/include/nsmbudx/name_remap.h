@@ -38,7 +38,7 @@ namespace nsmbudx {
 struct NameRemap
 {
     const char* archiveFrom;
-    const char* archiveTo;
+    const char* archiveTo;   // null: keep the archive (swap a model inside it)
     const char* modelFrom;   // null: leave model names alone
     const char* modelTo;
 };

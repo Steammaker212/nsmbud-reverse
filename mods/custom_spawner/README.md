@@ -8,6 +8,31 @@ The reverse is in
 reusable machinery is
 [nsmbudx/actor_spawner.h](../../framework/actors/include/nsmbudx/actor_spawner.h).
 
+## The crash (fixed 2026-10-26, ledger F0223)
+
+Level 1-1 crashed when its codedx spawner (sprite 726, event 1) created MrSun
+(sprite 724): `Invalid memory access at 0x0`, PC `main+0x430110`, inside
+`ResArchive::getModel`. The spawner was fine; **the actor it created had no
+archive**. The game loads per-level archives only for the sprite ids in each
+area's loaded-sprite list, and the editor builds that list from the sprites it
+sees placed -- never a spawner's target -- so `mrsun` was never loaded.
+
+Fixed in three places:
+
+- `framework/actors` (`spawn_resources.cpp`) loads every spawner target's
+  archives with the level, in the game's own loader and heap. This covers
+  codedx's 726 and this mod's 738 in every build that includes `actors`.
+- `spawnActors` refuses an actor whose archives are still missing and logs
+  `spawner: profile N needs archive 'x', which is not loaded` instead of
+  crashing.
+- This mod ships `code/actorspawner.cpp`, which **replaces codedx's 726** in
+  the build (same placement; spawns through the guarded path, fixes codedx's
+  always-zero child `eventId2`, logs `spawner 726: profile N on event E`).
+
+Also fixed: 738 now passes `settings2` (minus its count nibble) to the child,
+as its spritedata says, and the build writes the real sprite-table size into
+`nsmbudx/build_config.h`, so the mods' own sprites (734-739) can be spawned.
+
 ## Why a second spawner
 
 codedx already ships one at **sprite 726** (`ProfileId::ActorSpawner`), and it is
@@ -100,8 +125,10 @@ python scripts/sdk/make_mod_project.py --repo . --mod mods/custom_spawner \
 
 Verified: builds PASS. The generated code was disassembled and each instruction
 matched back to source — the `ActorMgr::instance` double deref, `mov r2,#0` for
-`unk=0`, the `i % 4` / `i / 4` spread, and the `0x60C7B390` + `+0x10` event mask
-read with its 64-bit shift. See ledger F0185.
+`unk=0`, the `i % 4` / `i / 4` spread. See ledger F0185. (The event read was
+also "matched" -- against a constant `0x60C7B390`, which was both the wrong
+address and an IDA address the game does not run at. It crashed the first time
+it ran, 2026-10-26; it now uses codedx's `EventMgr::instance`, ledger F0229.)
 
 **Not yet tested in-game.** Nothing in this repo has been run on hardware or an
 emulator, so treat "builds and the code shape is right" as the current claim, not
@@ -117,5 +144,5 @@ emulator, so treat "builds and the code shape is right" as the current claim, no
 - A gated spawner re-arms when its event goes inactive, so it is a reusable
   "appear while the switch is on", not a one-shot. Use `settings2 = 0x10` and no
   event for a true one-shot.
-- Sprite ids past 737 need `NSMBUDX_SPRITE_TABLE_SIZE` set, or
-  `profileForSprite` rejects them (by design — see ledger F0186).
+- Sprite ids past the table end are rejected by `profileForSprite` (by
+  design, ledger F0186); the build sets the size from the assembled table.

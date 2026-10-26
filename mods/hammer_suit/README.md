@@ -11,7 +11,9 @@ Flowers keep throwing fireballs.
 | Version | Behaviour | State |
 |---|---|---|
 | v1 | every Fire Flower throws hammers | verified in-game (Ryujinx, 2026-10-25) |
-| v2 | the Hammer Flower item and configurable models | built and installed; **not yet tested in-game** |
+| v2 | the Hammer Flower item and configurable models | tested 2026-10-26: model showed but faced the camera, and the item could not be collected |
+| v3 | Fire Flower variant, side-on model, shared throw handler | tested 2026-10-26: model correct, still not collectible |
+| v4 | items whose archive lacks `out`/`wait` animations are timed like the Fire Flower, so they become collectible | built and installed 2026-10-26; **awaiting test** |
 
 ## Changing the models
 
@@ -32,7 +34,13 @@ To give the item your own look:
 2. Set `HAMMER_ITEM_ARCHIVE` to the archive name and `HAMMER_ITEM_MODEL` to the
    model name inside it.
 3. The item code also plays skeletal animations named `out`, `out2`, `out3`,
-   `wait` and `wait2` from that archive, so include animations with those names.
+   `wait` and `wait2` from that archive. Include them to animate the item.
+   They also *time* the item: the ?-block appear state makes it collectible
+   when `out` passes frame 26 and moves on when it ends (ledger F0230). If
+   your archive lacks one, the mod gives it the Fire Flower's length
+   (`HAMMER_FRAMES_*`) and logs `hammer flower: item archive has no 'out'
+   animation; timing it like the Fire Flower` once -- the item still works,
+   it just does not move.
 4. Rebuild.
 
 If a name can't be found, the game uses the vanilla model and logs
@@ -71,10 +79,11 @@ MOD0 point inside the module.
 
 | Piece | Hook | What it does |
 |---|---|---|
-| Hammer Flower profile | none (codedx profile system) | Built by the game's own Fire Flower factory (`0x6045D76C`) with its `ActorInfo` and flags, so it behaves like a Fire Flower |
+| Hammer Flower item | none (`framework/actors` variant) | A variant of the Fire Flower (592), like the P-Acorn is of the Acorn: the runtime profile stays 592, so every part of the game that knows the Fire Flower by id treats it as one. As its own profile (916+) it was never collectible (F0227) |
 | Item model and animations | six Fire Flower item functions (`0x6045D79C`, `…D980`, `…DA4C`, `…DB18`, `…DBF8`, `…DCC4`) | For a Hammer Flower only, the game's own code runs with your archive/model names swapped in (`nsmbudx::ScopedNameRemap`) |
-| Collecting | Fire Flower grant (`0x6045DDC0`) | Grants Fire as usual; records whether the collector got a Hammer Flower or a plain Fire Flower |
-| Throwing | `Player::createFireBall` (`0x007AABA0`) | A hammer thrower spawns profile 759 the way Hammer Bros do, then changes that one instance: skip the held state, never pair with players, attack as a Shell |
+| Side-on model | same hooks | `HAMMER_ITEM_YAW` (a quarter turn) in `rotation.y` (+0xA0), which the item turns into its model matrix every frame (`0x60462018`). Your hammer's head lies along Z, at the camera; the turn lays it along X |
+| Collecting | Fire Flower per-frame collect check (`0x6045DDC0`, vtable +0xE0) | Grants Fire as usual; records whether the collector got a Hammer Flower or a plain Fire Flower. If a player stands inside the item while its collider is registered and the collider has not reported it, the hook reports it and logs `hammer flower: player N touched it but the collider did not report it` |
+| Throwing | `framework/player` throw handler (`Player::createFireBall` `0x007AABA0`, hooked once there) | A hammer thrower spawns profile 759 the way Hammer Bros do, then changes that one instance: skip the held state, never pair with players, attack as a Shell |
 
 Nothing shared is patched, so Hammer Bros' own hammers still hurt Mario. If the
 level has no `bros` archive loaded, the throw falls back to a fireball.
@@ -82,14 +91,15 @@ level has no `bros` archive loaded, the throw falls back to a fireball.
 The evidence for every offset is in
 [`data/findings/ledger.csv`](../../data/findings/ledger.csv) (F0009–F0025).
 
-## Test order (v2)
+## Test order (v3)
 
 | # | Do | Expect |
 |---|---|---|
-| 1 | Boot, enter 1-1 | Plays normally (after fixing its background name) |
+| 1 | Boot, enter 1-1 | Plays normally |
 | 2 | Plain Fire Flower, throw | **Fireballs** |
-| 3 | Place sprite 734, enter, look at it | A Fire Flower-looking item sits there and can be collected |
-| 4 | Collect it, throw | Hammers, as in v1 |
+| 3 | Hit a contents-21 block, or place sprite 734 | Your hammer model, seen **from the side** |
+| 4 | Walk into it | Collected: log `hammer flower: collected by player 0`. If the log also says `... the collider did not report it`, the fallback did the collecting -- report that line |
+| 5 | Throw | Hammers, as in v1 (in a level that loads `bros`) |
 | 5 | Take damage, then a plain Fire Flower | Fireballs again |
 | 6 | Set `HAMMER_ITEM_MODEL` to a name that doesn't exist, rebuild | Vanilla model, plus a `remap:` warning in the Ryujinx log, no crash |
 | 7 | Hammer Bros level | Their hammers still hurt you |

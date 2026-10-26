@@ -1,0 +1,6 @@
+# framework/player. RVA = VA - 0x60000000. Deluxe (Switch) v1.0.0.
+# PlayerMgr* PlayerMgr::instance; players at +0x30, 4 entries (ledger F0020).
+PlayerMgr_instance = 0x00CC436C;
+# PlayerModel::setPlayerMode(model, mode): non-virtual, every model class; body
+# from the mode table 0x60B0C230, honours a forced mode at model+0x1DC (F0226).
+PlayerModel_setPlayerMode = 0x0078E608;

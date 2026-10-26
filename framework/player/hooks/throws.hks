@@ -1,0 +1,18 @@
+@ framework/player: what the player throws (code/throws.cpp, ledger F0225).
+@ Mods register gates and handlers (nsmbudx/throws.h) instead of hooking
+@ these addresses themselves, so several can coexist.
+
+@ Player::canThrow. Entry `push {r4, lr}`, position-independent.
+Throws_canThrow:
+    type:       hook
+    address:    0x007AA954
+    symbol:     Throws_canThrow
+    trampoline: Throws_canThrow_orig
+
+@ Player::createFireBall (corpus: SE_PLY_THROW_ICEBALL_ref). Entry
+@ `push {r4, r5, r6, lr}`, position-independent (sdk/data/hookable.csv).
+Throws_createFireBall:
+    type:       hook
+    address:    0x007AABA0
+    symbol:     Throws_createFireBall
+    trampoline: Throws_createFireBall_orig

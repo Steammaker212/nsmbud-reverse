@@ -7,9 +7,15 @@
 
 #include "nsmbudx/actor_spawner.h"
 #include "nsmbudx/log.h"
+#include "nsmbudx/name_remap.h"
 #include "actor/stageactor.h"
 #include "actormgr.h"
+#include "eventmgr.h"
 #include "profile.h"
+
+#if __has_include("nsmbudx/build_config.h")
+#include "nsmbudx/build_config.h"       // NSMBUDX_SPRITE_TABLE_SIZE, from make_mod_project.py
+#endif
 
 namespace nsmbudx {
 
@@ -17,37 +23,33 @@ namespace nsmbudx {
 // EventMgr
 // ---------------------------------------------------------------------------
 //
-// DELUXE: EventMgr has no symbol name and no RTTI in this build -- the strings
-// "EventMgr", "eventId" and "isActive" are absent from main.nso -- but the class
-// exists. EventMgr::set survives as 0x6072A4B0, has 34 call sites, and its own
-// code proves the layout:
+// EventMgr::set (0x6072A4B0, 34 call sites) proves the layout:
 //
 //     ldrd r6,r7,[r0,#0x10]      ; u64 events
 //     orr  r4,r6,r4
 //     strd r4,[r0,#0x10]
 //
-// so the instance pointer lives at 0x60C7B390 and the mask is at +0x10.
+// and every caller loads the instance through the GOT entry for
+// EventMgr::instance, 0x60CBD8AC (e.g. 0x600C7AD0, right before
+// `bl 0x6072A4B0`). codedx's eventmgr.h has the same layout (u64 events after
+// its 0x10-byte sead::IDisposer base, F0211) and main.sym binds the symbol to
+// the same address, so this reads it through codedx's declaration.
 //
-// codedx's eventmgr.h declares `events` after its sead::IDisposer base, which
-// is 0x10 bytes, so codedx reads +0x10 as well (ledger F0211).
-constexpr u32 cEventMgrInstance = 0x60C7B390;
-constexpr u32 cEventMgrEvents   = 0x10;
-
-static inline u64 load64(u32 address)
-{
-    u64 v;
-    asm volatile("ldr %Q0, [%1]\n\tldr %R0, [%1, #4]" : "=r"(v) : "r"(address) : "memory");
-    return v;
-}
+// It must be the *symbol*. This used to read a constant address, 0x60C7B390:
+// an IDA address (the game is not loaded at 0x60000000 at runtime, so it read
+// unrelated memory) and the wrong one (0x60C7B390 is an RTTI static used by
+// CollisionActor::checkDerivedRuntimeTypeInfo). In Ryujinx the "instance" read
+// there was 0xFFFFFFF0, and the mask read at +0x10 faulted at address 0 inside
+// this function the first frame a spawner asked about its event (ledger F0229).
 
 bool eventActive(u32 index)
 {
     if (index >= 64)
         return false;
-    const void* instance = *(const void**)(uintptr_t)cEventMgrInstance;
-    if (!instance)
+    EventMgr* mgr = EventMgr::instance;
+    if (!mgr)
         return false;
-    return (load64((u32)(uintptr_t)instance + cEventMgrEvents) >> index) & 1;
+    return mgr->isActive((u8)index);
 }
 
 // ---------------------------------------------------------------------------
@@ -62,16 +64,15 @@ bool eventActive(u32 index)
 // profile.h, so sizeof() cannot be used from this translation unit. The table
 // length is therefore supplied by the build:
 //
-//   * vanilla Deluxe has 738 entries, indices 0..737 (verified: the assembled
-//     profile.cpp's last comment index is 737)
-//   * a mod that adds sprites past that must set NSMBUDX_SPRITE_TABLE_SIZE to
-//     its highest sprite id + 1, or its own sprites are rejected here
+//   * make_mod_project.py writes NSMBUDX_SPRITE_TABLE_SIZE into
+//     nsmbudx/build_config.h after appending the build's custom sprites, so
+//     the mods' own sprites (738, 739, ...) are spawnable
+//   * without it, the vanilla template size: 738 entries, indices 0..737
 //
 // Getting this wrong in the safe direction rejects a valid custom sprite (a
 // log line, no spawn). Getting it wrong in the other direction is an
 // out-of-bounds read, which is what the vanilla code already does and what this
-// check exists to stop -- so the default is the verified vanilla size and
-// over-setting it is a deliberate act.
+// check exists to stop.
 #ifndef NSMBUDX_SPRITE_TABLE_SIZE
 #define NSMBUDX_SPRITE_TABLE_SIZE 738
 #endif
@@ -94,12 +95,47 @@ u32 profileForSprite(u32 spriteId)
     return profileId;
 }
 
+u32 spawnTarget(u8 linkId, u8 movementId)
+{
+    u32 id = (u32)linkId | (((u32)movementId & 0xF) << 8);
+    return (movementId & 0x10) ? profileForSprite(id) : id;
+}
+
+// ---------------------------------------------------------------------------
+// archives
+// ---------------------------------------------------------------------------
+
+// The check the model lookup lacks: is every archive this profile names
+// mounted? "block_ice" is skipped exactly as Profile_loadResources (0x60017FCC)
+// skips it -- the engine keeps it resident and never loads it per profile.
+bool archivesReady(u32 profileId)
+{
+    const sead::SafeString* list = Profile::getResourceList(profileId);
+    u32 count = Profile::getResourceCount(profileId);
+    for (u32 i = 0; list && i < count; i++) {
+        const char* name = list[i].data;
+        if (!name || !*name)
+            continue;
+        const char* ice = "block_ice";
+        const char* n = name;
+        while (*n && *n == *ice)
+            n++, ice++;
+        if (*n == *ice)
+            continue;
+        if (!isArchiveLoaded(name)) {
+            log("spawner: profile ", profileId, " needs archive '", name, "', which is not loaded");
+            return false;
+        }
+    }
+    return true;
+}
+
 // ---------------------------------------------------------------------------
 // spawn
 // ---------------------------------------------------------------------------
 
 u32 spawnActors(u32 profileId, const void* position, u32 count, const void* offset,
-                u32 settings1, u8 eventId1)
+                u32 settings1, u8 eventId1, u32 settings2)
 {
     if (!count)
         count = 1;
@@ -112,6 +148,16 @@ u32 spawnActors(u32 profileId, const void* position, u32 count, const void* offs
     Profile* profile = Profile::get(profileId);
     if (!profile || profileId >= Profile::NUM_PROFILES) {
         log("spawner: no profile ", profileId);
+        return 0;
+    }
+
+    // An actor whose archive is not mounted dereferences null in
+    // ResArchive::getModel (0x60430110) the moment it builds its model -- the
+    // 1-1 crash (ledger F0223). The level-load scan normally prevents this;
+    // refusing here covers anything it could not see (a target changed at
+    // runtime, an archive that failed to load).
+    if (!archivesReady(profileId)) {
+        log("spawner: not spawning profile ", profileId, " (archives missing)");
         return 0;
     }
 
@@ -128,7 +174,7 @@ u32 spawnActors(u32 profileId, const void* position, u32 count, const void* offs
             raw[b] = 0;
 
         info.settings1     = settings1;
-        info.settings2     = 0;
+        info.settings2     = settings2;
         info.profile       = profile;
         info.eventId1      = eventId1 & 0xF;
         info.eventId2      = (eventId1 >> 4) & 0xF;

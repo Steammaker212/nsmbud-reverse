@@ -88,6 +88,15 @@ private:
 const Profile spawnerProfile(&SpawnerActor::build, ProfileId::SpawnerActor,
                              "SpawnerActor", nullptr, 0);
 
+// Load each placement's target with the level (framework/actors,
+// spawn_resources.cpp): the editor never lists a spawner's target among the
+// level's loaded sprites, and an actor without its archive crashes in
+// ResArchive::getModel the moment it is created (ledger F0223).
+struct SpawnerActorTargets
+{
+    SpawnerActorTargets() { nsmbudx::registerSpawnerProfile(ProfileId::SpawnerActor); }
+} sSpawnerActorTargets;
+
 SpawnerActor::SpawnerActor(const ActorBuildInfo* buildInfo)
     : StageActor(buildInfo), spawnProfileId(0), spawnCount(1), spawnOffset(0.0f),
       gateEvent(cNoGate), spawned(false)
@@ -103,18 +112,12 @@ u32 SpawnerActor::onCreate()
 {
     // Decode the id exactly as codedx does, so a level authored for codedx
     // spawns the same thing here.
-    u32 inputId = (u32)linkId | (((u32)movementId & 0xF) << 8);
-
-    if (movementId & 0x10) {
-        spawnProfileId = nsmbudx::profileForSprite(inputId);
-        if (!spawnProfileId) {
-            // Nothing to spawn. Return anything but 1 and the game marks the
-            // actor deleted (+0x13) instead of leaving an invisible no-op in
-            // the level -- anything except a verdict of 1 does that (F0180).
-            return 3;
-        }
-    } else {
-        spawnProfileId = inputId;
+    spawnProfileId = nsmbudx::spawnTarget(linkId, movementId);
+    if (!spawnProfileId) {
+        // Nothing to spawn. Return anything but 1 and the game marks the
+        // actor deleted (+0x13) instead of leaving an invisible no-op in
+        // the level -- anything except a verdict of 1 does that (F0180).
+        return 3;
     }
 
     // Count from the high nibble of settings2; 0 means 1.
@@ -150,8 +153,10 @@ u32 SpawnerActor::onExecute()
         return 1;
     }
 
+    // settings2 bits 4-7 are this spawner's count (nybble 19); the rest is the
+    // child's, as the editor's spritedata for sprite 738 describes.
     nsmbudx::spawnActors(spawnProfileId, &position, spawnCount, &spawnOffset,
-                         settings1, eventId1);
+                         settings1, eventId1, settings2 & ~0xF0u);
     spawned = true;
     return 1;
 }
