@@ -74,6 +74,10 @@ enum ActorVariantOption : u32
     // exist on its own is a risk. The remap still falls back if it isn't loaded.
     cVariant_NoArchiveLoad = 1 << 1,
 
+    // A variant of an item (load class 0) loads its archives at game start:
+    // a replacement archive must then ship as a romfs/Model file, or the
+    // game crashes at boot (nsmbudx/profile_resources.h).
+    //
     // Load the archives at game start (load class 0) instead of with levels
     // that place the sprite. Use it for items that come out of ?-blocks: as
     // per-level they are only mounted where the sprite is placed, and a block

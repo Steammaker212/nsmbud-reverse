@@ -193,16 +193,22 @@ const Profile hammerFlowerProfile((Actor* (*)(const ActorBuildInfo*))&Actor_faiy
                                   ProfileId::HammerFlower, "HammerFlower",
                                   &FireFlower_actorInfo, cFireFlowerFlags);
 
-// The Hammer Flower's archives: the configured item and hammer archives plus
-// the vanilla ones the remap falls back to, loaded at game start like every
-// vanilla item (load class 0, nsmbudx/profile_resources.h). The item comes out
-// of ?-blocks in levels that never place sprite 734, so per-level loading
-// would leave "hammer" unmounted there. A name already loaded (I_fireflower,
-// or bros in a Hammer Bros level) is skipped by the archive manager.
+// The Hammer Flower's archives: the item archive and the Fire Flower's, loaded
+// at game start like every vanilla item (load class 0, nsmbudx/profile_
+// resources.h), because the item comes out of ?-blocks in levels that never
+// place sprite 734.
+//
+// Only archives that exist at boot may be listed: a standalone romfs/Model
+// file (your "hammer", shipped in this mod's romfs/) or one in the always-
+// mounted jyotyuActorPack (I_fireflower). "bros" is neither -- it comes from
+// per-level packs -- and listing it crashed the game at boot (the resource
+// step dereferences the archive it could not load, 0x608228E4; ledger F0222).
+// So the thrown hammer still needs a level that loads "bros" (see the
+// fireball fallback in the throw).
 namespace {
 
 const char* const kResourceCandidates[] = {
-    HAMMER_ITEM_ARCHIVE, "I_fireflower", HAMMER_PROJECTILE_ARCHIVE, "bros",
+    HAMMER_ITEM_ARCHIVE, "I_fireflower",
 };
 
 sead::SafeString sHammerFlowerResources[4] = { "", "", "", "" };

@@ -12,6 +12,12 @@
 // (442), the Yoshi egg (811) -- because ?-blocks can produce them anywhere.
 // 686 are class 1 (enemies, objects), 55 are class 2 (world-map actors).
 //
+// AtBoot can only load archives that exist at boot: a standalone
+// romfs/Model/<name>.Nin_NX_NVN.szs file, or one inside the always-mounted
+// jyotyuActorPack (the vanilla items). Most enemy archives (bros, ...) come
+// from per-level packs; listed AtBoot they fail to load and the next step
+// dereferences the missing archive -- a crash at boot (ledger F0222).
+//
 // So a custom item that comes out of blocks must be AtBoot: as PerLevel its
 // archives load only in levels that also place its sprite, and anywhere else
 // the model lookup returns null (the "archive is not loaded" crash). Loading a

@@ -158,6 +158,8 @@ def main() -> int:
                          "actors, sprites 724-733, and the custom-profile system). Required when "
                          "the romfs levels place those sprites: without them the level references "
                          "a profile that no module registers.")
+    ap.add_argument("--sweetdx-exe", help="the sweet-dx compiler to run (default: <sweetdx>/build/sweetdx-windows.exe). "
+                         "The template sources still come from --sweetdx")
     ap.add_argument("--placeholder-models", action="store_true",
                     help="build every mod with the game's own models instead of the custom "
                          "archives (framework/core nsmbudx/models.h); mods can override per mod")
@@ -232,7 +234,9 @@ def main() -> int:
 
     if not args.build:
         return 0
-    exe = sweetdx / "build" / "sweetdx-windows.exe"
+    exe = Path(args.sweetdx_exe).resolve() if args.sweetdx_exe else sweetdx / "build" / "sweetdx-windows.exe"
+    if not exe.exists():
+        raise SystemExit(f"no sweet-dx compiler at {exe}")
     output = out / "output"
     if output.exists():
         shutil.rmtree(output)

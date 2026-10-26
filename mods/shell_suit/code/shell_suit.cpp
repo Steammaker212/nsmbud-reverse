@@ -7,7 +7,9 @@
 // 1: your item model (first name in each pair); 0: the game's Penguin Suit item.
 // NSMBUDX_CUSTOM_MODELS follows the build (--placeholder-models). Set this to
 // NSMBUDX_CUSTOM_MODELS once romfs/Model/I_shell.Nin_NX_NVN.szs (model
-// "I_shell") is in this mod's romfs/ folder; until then the placeholder.
+// "I_shell") is in this mod's romfs/ folder; until then the placeholder. Do not
+// switch it on without the file: item archives load at game start, and a
+// missing one crashes the game at boot.
 #define SHELL_CUSTOM_MODELS     0
 #define SHELL_ITEM_ARCHIVE      NSMBUDX_PICK_MODEL(SHELL_CUSTOM_MODELS, "I_shell", "I_penguin")
 #define SHELL_ITEM_MODEL        NSMBUDX_PICK_MODEL(SHELL_CUSTOM_MODELS, "I_shell", "I_penguin")
