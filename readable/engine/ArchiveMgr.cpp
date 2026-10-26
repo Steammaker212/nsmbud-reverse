@@ -169,3 +169,107 @@ void Profile::unsetResourcesLoaded()
     if (this->hasResourceLoaded)
         this->hasResourceLoaded = 0;
 }
+
+
+// ---------------------------------------------------------------------------
+// Which profiles get loaded, and when
+// ---------------------------------------------------------------------------
+//
+// Ledger F0202 (the load classes) and F0223 (what this means for spawners).
+
+// One placed sprite in a course area: area->blocks[7], count at
+// area->blockEntryCounts[7] (+0x98). Read by the area sprite builder
+// sub_60005E40, which copies it into an ActorBuildInfo field by field; the
+// stride is the `add sl, sl, #24` at 0x60004B64.
+struct AreaSprite                   // 0x18 bytes
+{
+    u16 type;                       // +0x00 sprite id -> SpriteToProfileTable
+    u16 x;                          // +0x02
+    u16 y;                          // +0x04
+    u8  eventId1;                   // +0x06
+    u8  eventId2;                   // +0x07
+    u32 settings1;                  // +0x08
+    u32 settings2;                  // +0x0C
+    u8  _10;                        // +0x10
+    u8  layer;                      // +0x11 -> ActorBuildInfo +0x20
+    u8  movementId;                 // +0x12
+    u8  linkId;                     // +0x13
+    u8  initStateFlag;              // +0x14
+    u8  _15[3];
+};
+
+// The area's loaded-sprite list: area->blocks[8] (+0x24), count +0x9C, one
+// 4-byte entry per sprite id. Written by the level editor from the sprites it
+// sees placed.
+struct LoadedSprite
+{
+    u16 type;
+    u16 _2;
+};
+
+enum ProfileLoadClass : u8
+{
+    cLoad_AtBoot   = 0,     // every power-up item, Yoshi, the egg (173 profiles)
+    cLoad_PerLevel = 1,     // enemies and objects (686)
+    cLoad_WorldMap = 2,     // world-map actors (55)
+};
+
+// 0x60008F10. Called with mode 0 at game start (0x607DF208), 1 at each level
+// load (0x603F8408) and 2 on the world map (0x601FDB60).
+//
+// The detail that matters for modding is mode 1: it loads only the profiles of
+// sprites in the *loaded-sprite list*, never the placed sprites. Anything that
+// creates an actor the level does not list -- an actor spawner is the obvious
+// case -- creates one whose archive was never loaded, and the actor's first
+// ResArchive::getModel (0x604300DC) dereferences the null archive. That was
+// the level 1-1 crash: spawner 726 -> MrSun, archive "mrsun", PC main+0x430110.
+// framework/actors/code/spawn_resources.cpp hooks this function and
+// Profile_loadResources to load spawner targets in the same pass.
+void LoadProfileArchives(u32 mode, sead::Heap* parent)
+{
+    u64 start = nn::os::GetSystemTick();
+
+    // Skipped entirely when the parent heap cannot hold the minimum the
+    // allocator needs (parent vtable +0x40 free size vs sub_608F61B0(4)).
+    if (parent && parent->getFreeSize(4) < sead::ExpHeap::minimumSize(4))
+        return;
+
+    // A child heap for this pass, named "ActorResLoader" (size 0: what is left
+    // of the parent), made current while the archives load.
+    sead::ExpHeap* heap = sead::ExpHeap::create(0, "ActorResLoader", parent, 4, 1, false);
+    sead::Heap* previous = heap ? sead::HeapMgr::sInstance->setCurrentHeap(heap) : nullptr;
+
+    if (mode == cLoad_PerLevel)
+    {
+        for (u32 a = 0; a < 4; a++)
+        {
+            Level::Area* area = Level::instance->getArea(a);
+            if (!area || !area->blocks[8] || !area->blockEntryCounts[8])
+                continue;
+            const LoadedSprite* list = (const LoadedSprite*)area->blocks[8];
+            for (u32 i = 0; i < area->blockEntryCounts[8]; i++)
+            {
+                u32 profileId = SpriteToProfileTable[list[i].type];
+                if (Profile::getHasResources(profileId) == cLoad_PerLevel)
+                    if (Profile* profile = Profile::get(profileId))
+                        profile->loadResources(heap);
+            }
+        }
+    }
+    else
+    {
+        // The bound is codedx's getNumProfiles call in a modded build (the
+        // `movw r4, #914` at 0x6000919C), so custom profiles take part.
+        for (u32 id = 0; id != 914; id++)
+            if (Profile::getHasResources(id) == mode)
+                if (Profile* profile = Profile::get(id))
+                    profile->loadResources(heap);
+        if (mode == cLoad_AtBoot)
+            LoadProfileArchives_helper(heap);
+    }
+
+    heap->adjust();                             // vtable +0x14: shrink to what was used
+    if (previous)
+        sead::HeapMgr::sInstance->setCurrentHeap(previous);
+    (void)start;                                // the tick pair only times the pass
+}

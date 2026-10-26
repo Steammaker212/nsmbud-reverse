@@ -301,7 +301,7 @@
         <value    nybble="1-2"   title="Triggering Event ID" id_type="event" category="events" comment="Spawns while this event is on, and re-arms when it turns off. 0 = no gate: spawn immediately and never re-arm." />
         <value    nybble="4"     title="Spawned Actor Event ID" category="events" comment="Passed to each spawned actor as its eventId1. Only values 0-15 are meaningful." />
         <checkbox nybble="21"    mask="1" title="ID is a sprite ID" category="spawned actor" comment="Checked: treat Actor ID as a sprite ID (looked up in spriteToProfileList). Unchecked: it is already a profile ID." />
-        <value    nybble="22-24" title="Actor ID" category="spawned actor" comment="Sprite ID (0-737) if the box above is checked, otherwise a profile ID. Bits 8-11 come from nybble 22, bits 0-7 from nybbles 23-24." />
+        <value    nybble="22-24" title="Actor ID" category="spawned actor" comment="Sprite ID (0-739 in a build with every mod) if the box above is checked, otherwise a profile ID. Bits 8-11 come from nybble 22, bits 0-7 from nybbles 23-24." />
         <value    nybble="19"    title="Spawn Count" category="spawning" comment="How many actors to create, 1-16. 0 is treated as 1. This is bits 4-7 of settings2." />
         <value    nybble="5-12"  title="Spawned Settings 1" category="spawned actor" comment="Copied to every spawned actor as its settings1 (nybbles 5-12)." />
         <value    nybble="13-18" title="Spawned Settings 2 (low)" category="spawned actor" comment="Copied to every spawned actor as settings2 bits 8-31." />
@@ -313,7 +313,7 @@
         DS-style shell power built on the Penguin Suit's belly slide
         (ledger F0205, F0212-F0216).
     -->
-    <sprite id="739" name="Blue Shell" notes="New power-up from the shell_suit mod (NSMB DS style): gives the Penguin Suit's powers, and crouching while running starts a shell dash at full speed that bounces off walls, defeats enemies and bumps block actors. Also in ?-blocks and bricks as contents 23 (tick Extended contents, pick 23). Uses the Penguin Suit item model until romfs/Model/I_shell is provided." files="I_penguin;I_shell">
+    <sprite id="739" name="Blue Shell" notes="New power-up from the shell_suit mod (NSMB DS style): the Penguin Suit's powers without its iceballs, worn as the Fire Flower suit; crouching while running starts a shell dash at full speed that bounces off walls, defeats enemies and bumps block actors. Also in ?-blocks and bricks as contents 23 (tick Extended contents, pick 23). The item looks like an Ice Flower until romfs/Model/I_shell is provided." files="I_iceflower;I_shell">
     </sprite>
 
 

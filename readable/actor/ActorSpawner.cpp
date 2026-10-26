@@ -150,7 +150,11 @@
 // does. The `- 1` is not a quirk, it is the convention: event id 0 in a level
 // file means "no event".
 //
-// The catch: EventMgr::instance is at 0x60C7B390, a pointer global. A custom
+// The catch: EventMgr::instance is a pointer global, 0x60CBD8AC (the GOT slot
+// 0x60C638F4 the call above loads it through; an earlier note said 0x60C7B390,
+// a miscomputed GOT read -- that is an RTTI static, ledger F0229). Reach it
+// through codedx's EventMgr::instance symbol, never a constant: the game is not
+// loaded at 0x60000000 at runtime. A custom
 // actor only needs it if it wants event gating. For a spawner the more useful
 // default is "no gate" -- spawn on create -- because relying on an event that a
 // custom level never sets produces a sprite that silently does nothing, which

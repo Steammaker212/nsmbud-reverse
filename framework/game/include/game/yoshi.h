@@ -95,6 +95,9 @@ constexpr u32 effects       = 0x2CF4;   // 3 EffectWrappers (0x68 each): flutter
 // archive list; in v1.0.0 the model's own table holds Yoshi_TexGreen four times.
 
 // Constants the code loads at run time (patchable with sweet-dx `data` hooks).
+// IDA addresses, for data patches (.hks RVA = these - 0x60000000) and for
+// reading the database. Never dereference them in mod code: the game is not
+// loaded at 0x60000000 at runtime (ledger F0229).
 constexpr u32 cFruitsPerEggAddr   = 0x60B0C0C8;   // u32 5
 constexpr u32 cFlutterFramesAddr  = 0x60B0C0CC;   // u32 30
 constexpr u32 cFlutterLiftFastAddr= 0x607D3F94;   // f32 0.2: gravity while falling faster than -1.0

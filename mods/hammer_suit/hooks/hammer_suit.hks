@@ -2,14 +2,10 @@
 @ Every entry below is a `push`, position-independent, so each trampoline can
 @ replay it (sdk/data/hookable.csv; 0x0045DDC0 checked in the disassembly).
 
-@ Player::createFireBall (corpus: SE_PLY_THROW_ICEBALL_ref)
-HammerSuit_createFireBall:
-    type:       hook
-    address:    0x007AABA0
-    symbol:     HammerSuit_createFireBall
-    trampoline: HammerSuit_createFireBall_orig
+@ Player::createFireBall (0x007AABA0) is hooked once, by framework/player
+@ (nsmbudx/throws.h); the mod registers a throw handler there.
 
-@ Fire Flower grant: sub_60463998(item, &out, 2, 1)
+@ Fire Flower per-frame collect check (vtable +0xE0): sub_60463998(item, &out, 2, 1)
 HammerFlower_grant:
     type:       hook
     address:    0x0045DDC0

@@ -1,3 +1,7 @@
 # mods/shell_suit. RVA = VA - 0x60000000. Deluxe (Switch) v1.0.0.
 # Player state: the Penguin Suit belly slide (StateID; chosen by 0x607B8CB0 when mode == 5).
 PlayerState_PenguinSlide = 0x00CC4F8C;
+# Block bump handlers (vtable +0x0A8): BlockBase and its two overrides (F0134, F0142).
+BlockBase_bump = 0x005640BC;
+BlockAmbush_bump = 0x00569738;
+BlockBabyYoshi_bump = 0x00576938;

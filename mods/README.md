@@ -21,16 +21,16 @@ them into the output.
 
 | Mod | What it does | Sprite | Status |
 |---|---|---|---|
-| [hammer_suit](hammer_suit/) | The Hammer Flower power-up: throws Hammer Bros hammers, comes in ?-blocks/bricks as contents 21, wears the Ice colours on every character, model names configurable | 734 | verified in-game; custom item model + block crash fixed in beta 0.2, awaiting test |
+| [hammer_suit](hammer_suit/) | The Hammer Flower power-up: throws Hammer Bros hammers, comes in ?-blocks/bricks as contents 21, wears the Ice colours on every character, model names configurable | 734 | v3 (2026-10-26): now a Fire Flower variant so it can be collected, model turned side-on; awaiting test |
 | [bee](bee/) | A Cheep Cheep that flies, with your bee model (framework/actors) | 735 | built, awaiting test |
 | [yoshi_fire](yoshi_fire/) | Every enemy Yoshi eats becomes fire (or ice) breath (framework/yoshi) | — | built, awaiting test |
 | [yoshi_tuning](yoshi_tuning/) | Yoshi's numbers as data patches: an egg every 3 fruits, a 60-frame flutter jump | — | built, awaiting test |
 | [worldmap_log](worldmap_log/) | Logs every parsed world map at boot, to check a custom world (framework/worldmap) | — | built, awaiting test |
 | [shy_guy](shy_guy/) | A Shy Guy with the Goombrat's mechanics: it turns at ledges (framework/actors) | 737 | built, awaiting test |
-| [shell_suit](shell_suit/) | The Blue Shell (NSMB DS): Penguin powers plus a shell dash that holds full speed, bounces off walls and bumps block actors; contents 23 | 739 | built, awaiting test |
-| [custom_spawner](custom_spawner/) | An actor spawner with an optional event gate, 1-16 spawns and a spread (codedx's sprite 726 is the plain event-triggered one) | 738 | built, awaiting test |
+| [shell_suit](shell_suit/) | The Blue Shell (NSMB DS): Penguin powers plus a shell dash that holds full speed, bounces off walls and bumps block actors; Ice Flower item model, Fire Flower suit look, no iceballs; contents 23 | 739 | fixed 2026-10-26 (the shell mark was lost the frame after collecting), awaiting test |
+| [custom_spawner](custom_spawner/) | An actor spawner with an optional event gate, 1-16 spawns and a spread; also replaces codedx's sprite 726 with a fixed one. Spawn targets' archives now load with the level (the 1-1 MrSun crash) | 738 | crash fixed 2026-10-26, awaiting test |
 | [custom_boss](custom_boss/) | World 1 boss (Lemmy) tuning: 12 HP in phases of 3, plus logging of every hit | — | built, awaiting test |
-| [p_acorn](p_acorn/) | The P-Acorn (mode 8) from ?-blocks/bricks (contents 22) and as a sprite; the game never gives it in levels | 736 | verified in-game |
+| [p_acorn](p_acorn/) | The P-Acorn (mode 8) from ?-blocks/bricks (contents 22) and as a sprite; the game never gives it in levels | 736 | verified in-game; P-Acorn model restored 2026-10-26 (it had reverted to the Acorn look), awaiting test |
 | [diag_passthrough](diag_passthrough/) | The Hammer Suit's hook with nothing in it, to tell "the mod's logic" apart from "the module or the content" | — | diagnostic |
 
 Sprite ids are fixed in each mod's `profiles.txt` and never shift. Build a mod on

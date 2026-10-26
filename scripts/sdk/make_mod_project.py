@@ -57,6 +57,14 @@ def list_file(path: Path) -> list[list[str]]:
     return rows
 
 
+def sprite_table_last(prof_cpp: Path) -> int:
+    """Highest sprite id in profile.cpp's spriteToProfileList (each row ends `// <id>`)."""
+    table = prof_cpp.read_text(encoding="utf-8")
+    start = table.index("Profile::spriteToProfileList[]")
+    end = table.index("\n};", start)
+    return max(int(n) for n in re.findall(r"//\s*(\d+)\s*$", table[start:end], re.M))
+
+
 def add_profiles(src: Path, profiles: list[list[str]]) -> None:
     """Append mod profiles to codedx's ProfileId enum and sprite table.
 
@@ -73,7 +81,7 @@ def add_profiles(src: Path, profiles: list[list[str]]) -> None:
     start = table.index("Profile::spriteToProfileList[]")
     end = table.index("\n};", start)
     body = table[start:end]
-    last = max(int(n) for n in re.findall(r"//\s*(\d+)\s*$", body, re.M))
+    last = sprite_table_last(prof_cpp)
 
     lines = []
     for name, sprite in sorted(profiles, key=lambda p: int(p[1])):
@@ -225,6 +233,13 @@ def main() -> int:
         if not args.with_template_code:
             raise SystemExit("profiles.txt needs --with-template-code (codedx's profile system)")
         add_profiles(src, profiles)
+    if (src / "code" / "profile.cpp").exists():
+        # The sprite table's real length, custom sprites included, so code that
+        # bounds-checks it (nsmbudx::profileForSprite) accepts the mods' sprites.
+        size = sprite_table_last(src / "code" / "profile.cpp") + 1
+        with config.open("a", encoding="utf-8") as fh:
+            fh.write(f"#define NSMBUDX_SPRITE_TABLE_SIZE {size}\n")
+        print(f"sprite table: {size} entries")
     shutil.copy2(args.nso, src / "nso" / "main")
 
     if check_symbols(src / "symbols", sweetdx_owned(sweetdx / "assets")):

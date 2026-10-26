@@ -28,6 +28,7 @@
 #include "nsmbudx/log.h"
 
 extern "C" u8 PlayerMgr_instance[];   // generated game API: 0x60CC436C, holds PlayerMgr*
+extern "C" void PlayerModel_setPlayerMode(void* model, u32 mode);   // symbols/player.sym
 
 namespace {
 
@@ -41,6 +42,7 @@ struct Override
     u32 when;
     f32 frame;      // < 0: none (MarioModel only)
     u32 showAs;     // cColor_Invalid: none (every class)
+    const void* owner;
 };
 
 Override sOverrides[4];
@@ -61,6 +63,25 @@ inline u32& colorTypeOf(void* model)
 {
     return *(u32*)((u8*)model + 0x1E0);
 }
+
+// What the mode change (0x607A293C) hands PlayerModel::setPlayerMode: the model
+// cached at player+0x2C68 and the display mode at player+0x2EBC.
+inline void* modeModelOf(void* player)
+{
+    return player ? *(void**)((u8*)player + 0x2C68) : nullptr;
+}
+
+inline u32 displayMode(void* player)
+{
+    return *(u32*)((u8*)player + 0x2EBC);
+}
+
+inline s32& forcedMode(void* model)
+{
+    return *(s32*)((u8*)model + 0x1DC);
+}
+
+constexpr u32 cNumModes = 10;           // modes 0-9, F0053
 
 s32 playerOfModel(void* model)
 {
@@ -145,21 +166,21 @@ extern "C" void Suits_model3SetColorType(void* model, u32 colorType, bool keepHe
 namespace nsmbudx {
 namespace suits {
 
-void overrideColor(u32 playerNo, ColorType when, f32 frame, ColorType elsewhere)
+void overrideColor(u32 playerNo, ColorType when, f32 frame, ColorType elsewhere, const void* owner)
 {
     if (playerNo < 4)
-        sOverrides[playerNo] = { true, (u32)when, frame, (u32)elsewhere };
+        sOverrides[playerNo] = { true, (u32)when, frame, (u32)elsewhere, owner };
 }
 
-void showColorAs(u32 playerNo, ColorType when, ColorType showAs)
+void showColorAs(u32 playerNo, ColorType when, ColorType showAs, const void* owner)
 {
     if (playerNo < 4)
-        sOverrides[playerNo] = { true, (u32)when, -1.0f, (u32)showAs };
+        sOverrides[playerNo] = { true, (u32)when, -1.0f, (u32)showAs, owner };
 }
 
-void clear(u32 playerNo)
+void clear(u32 playerNo, const void* owner)
 {
-    if (playerNo < 4)
+    if (playerNo < 4 && (!owner || sOverrides[playerNo].owner == owner))
         sOverrides[playerNo].active = false;
 }
 
@@ -174,6 +195,34 @@ void refresh(u32 playerNo)
     u32 current = colorTypeOf(model);
     colorTypeOf(model) = cColor_Invalid;      // the routines skip an unchanged type
     setColorType(model, current ? current : (u32)cColor_Normal, false);
+}
+
+void showBodyOf(u32 playerNo, u32 mode)
+{
+    void* player = playerAt(playerNo);
+    void* model = modeModelOf(player);
+    if (!model || mode >= cNumModes || forcedMode(model) == (s32)mode)
+        return;
+    forcedMode(model) = (s32)mode;
+    PlayerModel_setPlayerMode(model, displayMode(player));
+    refresh(playerNo);
+}
+
+void clearBody(u32 playerNo)
+{
+    void* player = playerAt(playerNo);
+    void* model = modeModelOf(player);
+    if (!model || forcedMode(model) == -1)
+        return;
+    forcedMode(model) = -1;
+    PlayerModel_setPlayerMode(model, displayMode(player));
+    refresh(playerNo);
+}
+
+bool bodyShown(u32 playerNo, u32 mode)
+{
+    void* model = modeModelOf(playerAt(playerNo));
+    return model && forcedMode(model) == (s32)mode;
 }
 
 } // namespace suits

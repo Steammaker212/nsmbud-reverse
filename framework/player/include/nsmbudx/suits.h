@@ -50,19 +50,56 @@ enum ColorType : u32
     cColor_Ice     = 3,
 };
 
+// `owner` tags an override with whoever set it (any address unique to your
+// mod), so clear(playerNo, owner) only removes your own -- a player can move
+// from one mod's power-up to another's before the first notices. nullptr
+// clears whatever is there.
+
 // When the player gets `when`, draw the `showAs` colours instead (every model class).
-void showColorAs(u32 playerNo, ColorType when, ColorType showAs);
+void showColorAs(u32 playerNo, ColorType when, ColorType showAs, const void* owner = nullptr);
 
 // When the player gets `when`: Mario and Luigi on the Normal or Small body take
 // `frame`; every other character (or frame < 0) takes the `elsewhere` colours,
 // and cColor_Invalid there leaves them vanilla.
-void overrideColor(u32 playerNo, ColorType when, f32 frame, ColorType elsewhere = cColor_Invalid);
+void overrideColor(u32 playerNo, ColorType when, f32 frame, ColorType elsewhere = cColor_Invalid,
+                   const void* owner = nullptr);
 
-void clear(u32 playerNo);
+void clear(u32 playerNo, const void* owner = nullptr);
 
 // Re-run the player's colour selection now, through the model's own routine
 // (after collecting an item that does not change the mode, for example).
 void refresh(u32 playerNo);
+
+// ---- Bodies -------------------------------------------------------------------
+//
+// The body (Normal, Small, Propeller, Penguin, Squirrel, Crown) comes from the
+// mode through the table at 0x60B0C230 {1,0,0,1,2,3,0,4,4,5} (F0053), applied
+// by PlayerModel::setPlayerMode (0x6078E608, non-virtual, every model class).
+// That routine starts with
+//
+//     if (model->forcedMode (+0x1DC) != -1) mode = model->forcedMode;
+//
+// a field the model's constructor (0x6078C444) sets for models fixed to one
+// mode and to -1 for players. Setting it shows another mode's body while the
+// player keeps its real mode -- physics, states and projectiles unchanged.
+// Every body is loaded for a player model (constructor mask 63), and all
+// player animations are in the shared CommonAnm archive, so any body can play
+// any state's animations (ledger F0226).
+//
+// The game's mode change then sets the colours from the *real* mode
+// (0x607A293C: 2 -> Fire, 6 -> Ice, else Normal), so pair this with
+// showColorAs to get another mode's colours as well.
+//
+//   // A Penguin-mode power that looks like Fire Mario:
+//   nsmbudx::suits::showBodyOf(n, 2 /* Fire */);
+//   nsmbudx::suits::showColorAs(n, cColor_Normal, cColor_Fire, &myTag);
+//
+// The model is rebuilt with each level (and the field with it), so call
+// showBodyOf again when bodyShown() turns false.
+
+void showBodyOf(u32 playerNo, u32 mode);
+void clearBody(u32 playerNo);
+bool bodyShown(u32 playerNo, u32 mode);
 
 } // namespace suits
 } // namespace nsmbudx
