@@ -1,0 +1,78 @@
+# Scenes and menus
+#
+# Addresses are RVAs (VA - 0x60000000). New Super Mario Bros. U Deluxe (Switch) v1.0.0 only.
+# Each group's tag says where its names are declared: [codedx] in the codedx headers
+# under include/, otherwise the header(s) holding the generated declarations. Names
+# tagged [framework/mods] on an entry are the ones a framework part or mod needs.
+# Constructors and destructors carry their C1/C2/D0/D1/D2 variant.
+
+# BootScene  [modbase/game/scenes/scenes.h]
+BootScene::create() = 0x00022C68;
+BootScene::ctor_helper() = 0x0048210C;
+BootScene::BootScene(int) as C1 = 0x007DEED0;
+BootScene::BootScene(int) as C2 = 0x007DEED0;
+
+# ChallengeResultScene  [modbase/game/scenes/scenes.h]
+ChallengeResultScene::create() = 0x000247B0;
+ChallengeResultScene::ctor_helper_helper_3F625C() = 0x003F625C;
+ChallengeResultScene::ctor_helper() = 0x00520BB0;
+ChallengeResultScene::ctor_helper_523680() = 0x00523680;
+ChallengeResultScene::ChallengeResultScene(int) as C1 = 0x007E0EE0;
+ChallengeResultScene::ChallengeResultScene(int) as C2 = 0x007E0EE0;
+
+# ChallengeRetryScene  [modbase/game/scenes/scenes.h]
+ChallengeRetryScene::create() = 0x00024784;
+ChallengeRetryScene::ctor_helper() = 0x00485A74;
+ChallengeRetryScene::ChallengeRetryScene(int) as C1 = 0x007E1C78;
+ChallengeRetryScene::ChallengeRetryScene(int) as C2 = 0x007E1C78;
+
+# DarkCloudDemoScene  [modbase/game/scenes/scenes.h]
+DarkCloudDemoScene::create() = 0x00024890;
+DarkCloudDemoScene::DarkCloudDemoScene(int) as C1 = 0x007E3508;
+DarkCloudDemoScene::DarkCloudDemoScene(int) as C2 = 0x007E3508;
+
+# DemoScene  [modbase/game/scenes/scenes.h]
+DemoScene::create() = 0x00024754;
+DemoScene::DemoScene(int) as C1 = 0x007E4F40;
+DemoScene::DemoScene(int) as C2 = 0x007E4F40;
+
+# GameOverScene  [modbase/game/scenes/scenes.h]
+GameOverScene::create() = 0x000247DC;
+GameOverScene::ctor_helper_helper_4BA62C() = 0x004BA62C;
+GameOverScene::ctor_helper() = 0x004E3564;
+GameOverScene::GameOverScene(int) as C1 = 0x007EC020;
+GameOverScene::GameOverScene(int) as C2 = 0x007EC020;
+
+# GameSetupScene  [modbase/game/scenes/scenes.h]
+GameSetupScene::create() = 0x00024808;
+GameSetupScene::ctor_helper() = 0x00542880;
+GameSetupScene::ctor_helper_556930() = 0x00556930;
+GameSetupScene::ctor_helper_55B894() = 0x0055B894;
+GameSetupScene::GameSetupScene(int) as C1 = 0x007ED9D8;
+GameSetupScene::GameSetupScene(int) as C2 = 0x007ED9D8;
+
+# MenuLayoutTable  [modbase/game/scenes/scenes.h]
+MenuLayoutTable::init(int, int, void*) = 0x00476A7C;
+MenuLayoutTable::init_helper() = 0x00478B70;
+MenuLayoutTable::init_helper_478D70(int, int) = 0x00478D70;
+
+# MultiPlayCourseSelectScene  [modbase/game/scenes/scenes.h]
+MultiPlayCourseSelectScene::create() = 0x00024838;
+MultiPlayCourseSelectScene::MultiPlayCourseSelectScene(int) as C1 = 0x007F1B88;
+MultiPlayCourseSelectScene::MultiPlayCourseSelectScene(int) as C2 = 0x007F1B88;
+
+# ResultScene  [modbase/game/scenes/scenes.h]
+ResultScene::create() = 0x00024864;
+ResultScene::ResultScene(int) as C1 = 0x007F4BFC;
+ResultScene::ResultScene(int) as C2 = 0x007F4BFC;
+
+# SceneMgr  [modbase/game/scenes/scenes.h]
+SceneMgr::doSceneChange(int, void*, int, int) = 0x007F5FF8;
+
+# StaffCreditTable  [modbase/game/scenes/scenes.h]
+StaffCreditTable::init() = 0x0047DCCC;
+
+# TitleScene  [modbase/game/scenes/scenes.h]
+TitleScene::create() = 0x00024728;
+TitleScene::TitleScene(int) as C1 = 0x007F89C4;
+TitleScene::TitleScene(int) as C2 = 0x007F89C4;

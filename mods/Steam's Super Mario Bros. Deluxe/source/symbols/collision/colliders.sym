@@ -1,0 +1,205 @@
+# Colliders
+#
+# Addresses are RVAs (VA - 0x60000000). New Super Mario Bros. U Deluxe (Switch) v1.0.0 only.
+# Each group's tag says where its names are declared: [codedx] in the codedx headers
+# under include/, otherwise the header(s) holding the generated declarations. Names
+# tagged [framework/mods] on an entry are the ones a framework part or mod needs.
+# Constructors and destructors carry their C1/C2/D0/D1/D2 variant.
+
+# ActiveCollider  [codedx]
+ActiveCollider::ActiveCollider() as C1 = 0x00158C7C;
+ActiveCollider::~ActiveCollider() as D1 = 0x00158CF8;
+ActiveCollider::init(StageActor*, ActiveCollider::Info const*, unsigned int) = 0x00158DE8;
+
+# ActiveCollider  [collision/activecollider.h]
+ActiveCollider::~ActiveCollider() as D0 = 0x00158D54;
+ActiveCollider::reset() = 0x00158DB4;
+ActiveCollider::check5C(int) = 0x001591FC;
+ActiveCollider::getTop() = 0x0015920C;
+ActiveCollider::getBottom() = 0x00159228;
+ActiveCollider::getCenterY() = 0x00159244;
+ActiveCollider::getRight() = 0x00159258;
+ActiveCollider::getLeft() = 0x00159274;
+ActiveCollider::getCenterX() = 0x00159290;
+ActiveCollider::doOverlapMaybe(void*) = 0x001597E8;
+
+# ActiveColliderMgr  [codedx]
+ActiveColliderMgr::instance = 0x00C88234;
+ActiveColliderMgr::isInActiveList(ActiveCollider*) = 0x0015B178;
+ActiveColliderMgr::removeFromActiveList(ActiveCollider*) = 0x0015B230;
+ActiveColliderMgr::isInCreateList(ActiveCollider*) = 0x0015B454;
+ActiveColliderMgr::addToCreateList(ActiveCollider*) = 0x0015B3F0;
+ActiveColliderMgr::removeFromCreateList(ActiveCollider*) = 0x0015B0E4;
+ActiveColliderMgr::removeFromList3(ActiveCollider*) = 0x0015B48C;
+
+# ActiveColliderMgr  [collision/activecollider.h]
+ActiveColliderMgr::inserBack(void*) = 0x0015B1FC;
+ActiveColliderMgr::remove(void*) = 0x0015B37C;
+ActiveColliderMgr::insertFront(void*) = 0x0015BB4C;
+ActiveColliderMgr::vf10() = 0x0015BB80;
+
+# CircularCollider  [codedx]
+CircularCollider::CircularCollider() as C1 = 0x00157170;
+CircularCollider::execute() = 0x00157450;
+CircularCollider::init(StageActor*, CircularCollider::Info const&) = 0x001571B0;
+
+# CircularCollider  [collision/collider.h]
+CircularCollider::vf18() = 0x00157444;
+CircularCollider::vf20(int, void*, void*, int, int) = 0x001575E8;
+CircularCollider::vf24(void*, int, int, int, int) = 0x00157944;
+CircularCollider::vf24_helper(int, void*, void*, int, int) = 0x00157A48;
+CircularCollider::vf24_helper_157D3C(int, int, void*, int, int) = 0x00157D3C;
+CircularCollider::vf28(void*, void*) = 0x00157F64;
+CircularCollider::vf2C(void*) = 0x00158088;
+CircularCollider::vf30() = 0x0015809C;
+CircularCollider::vf3C(void*, float) = 0x001581F8;
+CircularCollider::~CircularCollider() as D0 = 0x001585DC;
+CircularCollider::checkRTTI(void*) = 0x001585EC;
+CircularCollider::getRTTI() = 0x001586EC;
+CircularCollider::vf10(int, signed char) = 0x00158760;
+CircularCollider::vf14(int) = 0x00158798;
+CircularCollider::vf38() = 0x001587CC;
+
+# ColliderBase  [codedx]
+ColliderBase::~ColliderBase() as D2 = 0x001600E4;
+ColliderBase::setType(unsigned int) = 0x00160490;
+ColliderBase::setSolidity(unsigned int) = 0x00160548;
+ColliderBase::setSurfaceType(unsigned int) = 0x001605BC;
+
+# ColliderBase  [collision/collider.h]
+ColliderBase::vf10(int, signed char) = 0x0004B9B0;
+ColliderBase::vf14(int) = 0x0004B9E8;
+ColliderBase::ColliderBase() as C1 = 0x0015FFCC;
+ColliderBase::ColliderBase() as C2 = 0x0015FFCC;
+ColliderBase::~ColliderBase() as D0 = 0x00160200;
+ColliderBase::vf30() = 0x001603F8;
+ColliderBase::checkRTTI(void*) = 0x0016188C;
+ColliderBase::getRTTI() = 0x00161910;
+
+# ColliderList  [modbase/game/collision/colliders.h]
+ColliderList::insertBack(int) = 0x00153BCC;
+ColliderList::remove(int) = 0x00153C94;
+ColliderList::insert(void*, void*) = 0x0015407C;
+ColliderList::insertFront(int) = 0x001540C0;
+ColliderList::clear() = 0x001540F4;
+
+# ColliderMgr  [codedx]
+ColliderMgr::instance = 0x00C8820C;
+ColliderMgr::add(ColliderBase*) = 0x001535AC;
+
+# ColliderMgr  [collision/collider.h]
+ColliderMgr::~ColliderMgr() as D1 = 0x0015341C;
+ColliderMgr::~ColliderMgr() as D2 = 0x0015341C;
+ColliderMgr::~ColliderMgr() as D0 = 0x00153470;
+ColliderMgr::createInstance() = 0x001534D0;
+ColliderMgr::removeRelated1(void*) = 0x001536E8;
+ColliderMgr::removeFromList1(void*) = 0x001537F0;
+ColliderMgr::removeFromList3(void*) = 0x00153828;
+ColliderMgr::removeFromList2(void*) = 0x00153860;
+ColliderMgr::removeFromList4(void*) = 0x00153AD0;
+ColliderMgr::removeFromList5(void*) = 0x00153B08;
+ColliderMgr::removeRelated2(void*) = 0x00153C00;
+
+# ColliderNode  [modbase/game/collision/colliders.h]
+ColliderNode::ColliderNode() as C1 = 0x0015DF90;
+ColliderNode::ColliderNode() as C2 = 0x0015DF90;
+
+# ColliderNodeUnk1  [modbase/game/collision/colliders.h]
+ColliderNodeUnk1::ColliderNodeUnk1() as C1 = 0x00166934;
+ColliderNodeUnk1::ColliderNodeUnk1() as C2 = 0x00166934;
+
+# MaskManager  [modbase/game/collision/colliders.h]
+MaskManager::ctor_helper() = 0x0068AEEC;
+MaskManager::ctor_helper_68AF18() = 0x0068AF18;
+MaskManager::ctor_helper_68B3C4(void*) = 0x0068B3C4;
+MaskManager::ctor_helper_68B678(void*, int) = 0x0068B678;
+MaskManager::ctor_helper_68B770(int) = 0x0068B770;
+MaskManager::ctor_helper_68B778(int, int) = 0x0068B778;
+MaskManager::createInstance_() = 0x0068B8E8;
+MaskManager_createInstance::helper() = 0x0068B9A0;
+MaskManager::MaskManager() as C1 = 0x0068BB2C;
+MaskManager::MaskManager() as C2 = 0x0068BB2C;
+
+# RectCollider  [codedx]
+RectCollider::RectCollider() as C1 = 0x0004B764;
+
+# RectCollider  [collision/collider.h]
+RectCollider::~RectCollider() as D0 = 0x0004BA1C;
+RectCollider::checkRTTI(int) = 0x0004BA2C;
+RectCollider::getRTTI() = 0x0004BA34;
+RectCollider::vf28(void*, void*) = 0x001672FC;
+
+# ShapedCollider  [codedx]
+ShapedCollider::~ShapedCollider() as D2 = 0x00161BD8;
+ShapedCollider::execute() = 0x00162638;
+ShapedCollider::init(StageActor*, ShapedCollider::Info const&) = 0x0016522C;
+
+# ShapedCollider  [collision/collider.h]
+ShapedCollider::ShapedCollider() as C1 = 0x00161AD0;
+ShapedCollider::ShapedCollider() as C2 = 0x00161AD0;
+ShapedCollider::ctor2(int, int, int, int) = 0x00161B0C;
+ShapedCollider::~ShapedCollider() as D0 = 0x00161BDC;
+ShapedCollider::vf18() = 0x00161F5C;
+ShapedCollider::vf30() = 0x00161F68;
+ShapedCollider::vf34() = 0x00161FF8;
+ShapedCollider::vf40() = 0x00162170;
+ShapedCollider::vf38(void*) = 0x001624AC;
+ShapedCollider::vf3C(void*, float) = 0x001624F0;
+ShapedCollider::vf20(int, void*, void*, void*, int) = 0x001626B8;
+ShapedCollider::vf24(int, int, void*, unsigned int, void*) = 0x00162A98;
+ShapedCollider::vf24_helper(int, int, void*, int, int) = 0x00163440;
+ShapedCollider::vf24_helper_16377C(int, int, int) = 0x0016377C;
+ShapedCollider::vf28(void*, void*) = 0x00164C1C;
+ShapedCollider::vf2C(void*) = 0x00164DDC;
+ShapedCollider::checkRTTI(void*) = 0x001650B8;
+ShapedCollider::getRTTI() = 0x001651B8;
+
+# SolidOnTopCollider  [codedx]
+SolidOnTopCollider::SolidOnTopCollider() as C1 = 0x0015E08C;
+SolidOnTopCollider::~SolidOnTopCollider() as D1 = 0x0015E124;
+SolidOnTopCollider::execute() = 0x0015EAB4;
+SolidOnTopCollider::init(StageActor*, SolidOnTopCollider::Info const&, unsigned int, sead::Heap*) = 0x0015E138;
+
+# SolidOnTopCollider  [collision/collider.h]
+SolidOnTopCollider::vf28() = 0x0004C118;
+SolidOnTopCollider::vf3C() = 0x0004C120;
+SolidOnTopCollider::~SolidOnTopCollider() as D0 = 0x0015E128;
+SolidOnTopCollider::init(void*, void*) = 0x0015E3A0;
+SolidOnTopCollider::vf18() = 0x0015E824;
+SolidOnTopCollider::vf30() = 0x0015E830;
+SolidOnTopCollider::vf38(void*) = 0x0015EA70;
+SolidOnTopCollider::vf20(int, int, void*, void*, int) = 0x0015EB28;
+SolidOnTopCollider::vf24_helper(void*, void*, int, int) = 0x0015EE3C;
+SolidOnTopCollider::vf24_helper_helper_15F088(void*, int) = 0x0015F088;
+SolidOnTopCollider::vf24_helper_helper_15F1FC(void*, int) = 0x0015F1FC;
+SolidOnTopCollider::vf24_helper_15F370(unsigned int, int, int) = 0x0015F370;
+SolidOnTopCollider::vf24(int, void*, void*, int, int) = 0x0015F904;
+SolidOnTopCollider::vf2C(void*) = 0x0015FBD0;
+SolidOnTopCollider::checkRTTI(void*) = 0x0015FE58;
+SolidOnTopCollider::getRTTI() = 0x0015FF58;
+
+# SolidOnTopColliderWrapper  [modbase/game/collision/colliders.h]
+SolidOnTopColliderWrapper::~SolidOnTopColliderWrapper() as D0 = 0x000A462C;
+SolidOnTopColliderWrapper::checkRTTI(void*) = 0x000A463C;
+SolidOnTopColliderWrapper::getRTTI() = 0x000A47B0;
+
+# SwingingCollider  [modbase/game/collision/colliders.h]
+SwingingCollider::SwingingCollider() as C1 = 0x001653A4;
+SwingingCollider::SwingingCollider() as C2 = 0x001653A4;
+SwingingCollider::~SwingingCollider() as D1 = 0x001653EC;
+SwingingCollider::~SwingingCollider() as D2 = 0x001653EC;
+SwingingCollider::~SwingingCollider() as D0 = 0x00165424;
+SwingingCollider::vf18() = 0x00165978;
+SwingingCollider::vf30() = 0x00165984;
+SwingingCollider::vf3C(void*, float) = 0x00165BE0;
+SwingingCollider::execute() = 0x00165CC4;
+SwingingCollider::execute_helper() = 0x00165D48;
+SwingingCollider::vf24(int, int, void*, int, void*) = 0x00165F80;
+SwingingCollider::vf28(void*, void*) = 0x00166490;
+SwingingCollider::vf2C(void*) = 0x0016660C;
+SwingingCollider::checkRTTI(void*) = 0x00166620;
+SwingingCollider::getRTTI() = 0x00166720;
+SwingingCollider::vf14() = 0x00166794;
+SwingingCollider::vf20() = 0x0016679C;
+SwingingCollider::vf38() = 0x001667A4;
+SwingingCollider::vf28_helper(void*) = 0x0016717C;

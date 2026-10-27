@@ -1,0 +1,68 @@
+# Archives, models and animations
+#
+# Addresses are RVAs (VA - 0x60000000). New Super Mario Bros. U Deluxe (Switch) v1.0.0 only.
+# Each group's tag says where its names are declared: [codedx] in the codedx headers
+# under include/, otherwise the header(s) holding the generated declarations. Names
+# tagged [framework/mods] on an entry are the ones a framework part or mod needs.
+# Constructors and destructors carry their C1/C2/D0/D1/D2 variant.
+
+# Animation  [graphics/model.h]
+Animation::update() = 0x0040E904;
+
+# AnimationBase  [modbase/game/graphics/models.h]
+AnimationBase::AnimationBase() as C1 = 0x0040E8D8;
+AnimationBase::AnimationBase() as C2 = 0x0040E8D8;
+
+# AnimationCtrl  [modbase/game/graphics/models.h]
+AnimationCtrl::AnimationCtrl() as C1 = 0x00418368;
+AnimationCtrl::AnimationCtrl() as C2 = 0x00418368;
+
+# ModelAnimation  [codedx]
+Animation::setRepeat(bool) = 0x004183BC;
+
+# ModelWrapper  [codedx]
+ModelWrapper::ModelWrapper(Model*, unsigned int, unsigned int, unsigned int, unsigned int, unsigned int) as C1 = 0x0040F050;
+ModelWrapper::setup(ResArchive*, void*, sead::Heap*) = 0x0040F160;
+ModelWrapper::updateModel() = 0x0040F48C;
+ModelWrapper::updateAnimations() = 0x0040F3CC;
+
+# ModelWrapper  [graphics/model.h]
+ModelWrapper::setup_helper() = 0x00445C24;
+ModelWrapper::setup_helper_445CD0(int, int, void*, int) = 0x00445CD0;
+ModelWrapper::setup_helper_446E58() = 0x00446E58;
+ModelWrapper::setup_helper_446F0C(int, int, void*, int) = 0x00446F0C;
+ModelWrapper::setup_helper_450DB4() = 0x00450DB4;
+ModelWrapper::setup_helper_450E5C(int, int, void*, int) = 0x00450E5C;
+ModelWrapper::setup_helper_451438() = 0x00451438;
+ModelWrapper::setup_helper_45154C(int, int, void*, int) = 0x0045154C;
+
+# ResArchive  [codedx]
+ResArchive::getModel(sead::SafeStringBase<char> const&, unsigned int, unsigned int, unsigned int, unsigned int, unsigned int, bool, sead::Heap*) = 0x00430090;
+
+# ResArchiveMgr  [codedx]
+ResArchiveMgr::instance = 0x00C9CA88;
+ResArchiveMgr::get(sead::SafeStringBase<char> const&) = 0x0043B548;
+
+# ShaderAnimation  [codedx]
+ShaderAnimation::play(ResArchive*, sead::SafeStringBase<char> const&) = 0x00445F80;
+
+# ShaderAnimation  [graphics/model.h]  [framework/mods]
+# Wii U ShaderParamAnimation::playTexSrtAnim. Same body as play (0x445F80), but it
+# looks the name up in the archive's anim table 2 instead of table 1. play is the
+# Wii U playColorAnim: Mario's "MLH_PtoNml" colour anims go through it (0x6075B25C).
+ShaderAnimation::playTexSrt(ResArchive*, sead::SafeStringBase<char> const&) = 0x00446088;
+
+# SkeletalAnim  [modbase/game/graphics/models.h]
+SkeletalAnim::SkeletalAnim() as C1 = 0x00448610;
+SkeletalAnim::SkeletalAnim() as C2 = 0x00448610;
+SkeletalAnim::init(int, int, void*, int) = 0x004486C8;
+SkeletalAnim::calculate() = 0x00448BB0;
+SkeletalAnim::init_helper() = 0x00877D6C;
+SkeletalAnim::init_helper_877EB0(void*, int, unsigned int) = 0x00877EB0;
+SkeletalAnim::play_helper(int) = 0x00877FB4;
+
+# SkeletalAnimation  [codedx]
+SkeletalAnimation::play(ResArchive*, sead::SafeStringBase<char> const&) = 0x004488DC;
+
+# TextureAnimation  [codedx]
+TextureAnimation::play(ResArchive*, sead::SafeStringBase<char> const&) = 0x004510E4;

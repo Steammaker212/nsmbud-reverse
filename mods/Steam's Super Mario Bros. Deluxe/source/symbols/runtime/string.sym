@@ -1,0 +1,11 @@
+# C string functions
+#
+# Addresses are RVAs (VA - 0x60000000). New Super Mario Bros. U Deluxe (Switch) v1.0.0 only.
+# Each group's tag says where its names are declared: [codedx] in the codedx headers
+# under include/, otherwise the header(s) holding the generated declarations. Names
+# tagged [framework/mods] on an entry are the ones a framework part or mod needs.
+# Constructors and destructors carry their C1/C2/D0/D1/D2 variant.
+
+# string  [codedx]
+strlen(char const*) = 0x009AD4E4;
+strncmp(char const*, char const*, unsigned int) = 0x009AD514;

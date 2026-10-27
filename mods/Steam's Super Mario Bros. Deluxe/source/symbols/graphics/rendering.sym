@@ -1,0 +1,66 @@
+# Drawing, lights and effects
+#
+# Addresses are RVAs (VA - 0x60000000). New Super Mario Bros. U Deluxe (Switch) v1.0.0 only.
+# Each group's tag says where its names are declared: [codedx] in the codedx headers
+# under include/, otherwise the header(s) holding the generated declarations. Names
+# tagged [framework/mods] on an entry are the ones a framework part or mod needs.
+# Constructors and destructors carry their C1/C2/D0/D1/D2 variant.
+
+# DrawMgr  [codedx]
+DrawMgr::instance = 0x00C9CD1C;
+DrawMgr::drawModel(Model*) = 0x004432A4;
+DrawMgr::drawTile(unsigned short, Vec3 const&, unsigned int const&, Vec3 const&) = 0x0044344C;
+
+# DrawMgr  [graphics/drawmgr.h]
+DrawMgr::drawModel2(void*) = 0x00443344;
+
+# Effect  [codedx]
+Effect::spawn(int, Vec3*, Vec3i*, Vec3*) = 0x00236DA0;
+
+# EffectData  [modbase/game/graphics/rendering.h]
+EffectData::EffectData() as C1 = 0x00235DD0;
+EffectData::EffectData() as C2 = 0x00235DD0;
+EffectData::setEffectId(int) = 0x00235EA0;
+EffectData::init() = 0x0023601C;
+EffectData::update(void*, void*, void*) = 0x00236430;
+EffectData::setEffectId_helper(unsigned int) = 0x00239BDC;
+EffectData::setEffectId_helper_239BF4(void*, int, unsigned int) = 0x00239BF4;
+EffectData::init_helper() = 0x00881BA4;
+
+# EffectWrapper  [codedx]
+EffectWrapper::EffectWrapper() as C1 = 0x0023750C;
+EffectWrapper::update(int, Vec3*, Vec3i*, Vec3*) = 0x00237088;
+
+# EffectWrapper  [graphics/effect.h]
+EffectWrapper::~EffectWrapper() as D0 = 0x00021864;
+EffectWrapper::checkRTTI(void*) = 0x00021898;
+EffectWrapper::getRTTI() = 0x0002191C;
+
+# LightMask  [codedx]
+LightMask::LightMask() as C1 = 0x0068B068;
+LightMask::init(sead::Heap*, unsigned int) = 0x0068B09C;
+LightMask::update() = 0x0068B108;
+LightMask::draw() = 0x0068B35C;
+
+# LightSource  [codedx]
+LightSource::LightSource() as C1 = 0x00423BEC;
+LightSource::~LightSource() as D0 = 0x00423CA0;
+LightSource::~LightSource() as D1 = 0x00423C78;
+LightSource::update(unsigned int, Vec3*, float*, float*, float*, sead::Color4f*, float*, float*) = 0x00423CD4;
+LightSource::update(Vec3*, float*, float*, float*, sead::Color4f*, float*, float*) = 0x00423E00;
+
+# LightSource  [graphics/lightsource.h]
+LightSource::update1_helper() = 0x004148F4;
+LightSource::unkUpdate3() = 0x00423ECC;
+LightSource::update1_helper_helper_424120() = 0x00424120;
+LightSource::update1_helper_4242A8(void*) = 0x004242A8;
+
+# MistEffect  [modbase/game/graphics/rendering.h]
+MistEffect::MistEffect() as C1 = 0x005A9488;
+MistEffect::MistEffect() as C2 = 0x005A9488;
+MistEffect::vf5() = 0x005A94BC;
+MistEffect::vf49() = 0x005A9720;
+MistEffect::vf50() = 0x005A9730;
+MistEffect::vf0(void*) = 0x005A974C;
+MistEffect::vf1() = 0x005A9850;
+MistEffect::vf3() = 0x005A98C4;

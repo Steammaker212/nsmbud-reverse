@@ -1,0 +1,98 @@
+# StageActor, CollisionActor and MultiStateActor
+#
+# Addresses are RVAs (VA - 0x60000000). New Super Mario Bros. U Deluxe (Switch) v1.0.0 only.
+# Each group's tag says where its names are declared: [codedx] in the codedx headers
+# under include/, otherwise the header(s) holding the generated declarations. Names
+# tagged [framework/mods] on an entry are the ones a framework part or mod needs.
+# Constructors and destructors carry their C1/C2/D0/D1/D2 variant.
+
+# CollisionActor  [codedx]
+CollisionActor::CollisionActor(ActorBuildInfo const*) as C2 = 0x0000306C;
+CollisionActor::~CollisionActor() as D2 = 0x00003F94;
+CollisionActor::~CollisionActor() as D0 = 0x00003FC4;
+CollisionActor::checkDerivedRuntimeTypeInfo(sead::RuntimeTypeInfo::Interface const*) const = 0x00003DAC;
+CollisionActor::getRuntimeTypeInfo() const = 0x00003F20;
+CollisionActor::beforeExecute() = 0x00003310;
+CollisionActor::afterExecute(unsigned int) = 0x00003418;
+CollisionActor::onDelete() = 0x00003444;
+CollisionActor::getCollisionMgr() = 0x00003FF8;
+CollisionActor::vf84(unsigned char) = 0x00004000;
+CollisionActor::vf88() = 0x0000400C;
+CollisionActor::vf8C() = 0x00004018;
+CollisionActor::vf90() = 0x0000401C;
+CollisionActor::vf94() = 0x00004020;
+CollisionActor::vf98(float) = 0x00004028;
+CollisionActor::vf9C() = 0x0000354C;
+CollisionActor::vfA0() = 0x00003554;
+CollisionActor::vfA4() = 0x00003558;
+CollisionActor::vfA8() = 0x00004030;
+CollisionActor::vfAC(Vec2*) = 0x00004038;
+CollisionActor::vfB0(float) = 0x0000404C;
+CollisionActor::vfB4() = 0x00004054;
+CollisionActor::vfB8() = 0x0000405C;
+CollisionActor::getRect(Rect*) = 0x00004064;
+CollisionActor::handleGravity() = 0x0000355C;
+CollisionActor::handleSpeed() = 0x00003624;
+
+# CollisionActor  [actors/collisionactor.h]
+CollisionActor::afterCreate(unsigned int) = 0x00003140;
+CollisionActor::sub_600034C8() = 0x000034C8;
+CollisionActor::onDelete_thunk() = 0x000B9688;
+CollisionActor::beforeExecute_thunk() = 0x00279228;
+CollisionActor::onDelete_thunk_29741C() = 0x0029741C;
+CollisionActor::onDelete_thunk_2B42D0() = 0x002B42D0;
+
+# MultiStateActor  [codedx]
+MultiStateActor::MultiStateActor(ActorBuildInfo const*) as C2 = 0x00009358;
+MultiStateActor::~MultiStateActor() as D2 = 0x00009688;
+MultiStateActor::~MultiStateActor() as D0 = 0x000096B8;
+MultiStateActor::checkDerivedRuntimeTypeInfo(sead::RuntimeTypeInfo::Interface const*) const = 0x00009584;
+MultiStateActor::getRuntimeTypeInfo() const = 0x00009614;
+MultiStateActor::doStateChange(StateBase*) = 0x000096EC;
+
+# StageActor  [codedx]
+StageActor::StageActor(ActorBuildInfo const*) as C2 = 0x000002A0;
+StageActor::~StageActor() as D2 = 0x00000500;
+StageActor::~StageActor() as D0 = 0x00000568;
+StageActor::checkDerivedRuntimeTypeInfo(sead::RuntimeTypeInfo::Interface const*) const = 0x0000260C;
+StageActor::getRuntimeTypeInfo() const = 0x0000270C;
+StageActor::afterCreate(unsigned int) = 0x00000694;
+StageActor::beforeExecute() = 0x000006C4;
+StageActor::afterExecute(unsigned int) = 0x00000770;
+StageActor::beforeDraw() = 0x00000850;
+StageActor::setPlayerId(signed char) = 0x00002780;
+StageActor::removeActiveColliders() = 0x00000968;
+StageActor::addActiveColliders() = 0x000009A8;
+StageActor::getCollisionMgr() = 0x00002788;
+StageActor::vf54() = 0x00002790;
+StageActor::vf58() = 0x00002794;
+StageActor::vf5C() = 0x0000279C;
+StageActor::vf60() = 0x000027A0;
+StageActor::vf64() = 0x000027A4;
+StageActor::killAtGoal() = 0x00000EBC;
+StageActor::splashWater(Vec3*) = 0x00000EC0;
+StageActor::splashLava(Vec3*) = 0x00000EC4;
+StageActor::splashLavaWave(Vec3*) = 0x00000EC8;
+StageActor::splashPoison(Vec3*) = 0x00000ED4;
+StageActor::isOffScreen() = 0x000008DC;
+StageActor::damageFromUnder() = 0x000027A8;
+StageActor::distanceToPlayer(Vec2 const&) = 0x00000BAC;
+StageActor::directionToPlayerH(Vec3 const&) = 0x00000BEC;
+StageActor::directionToPlayerV(Vec3 const&) = 0x00000C88;
+StageActor::cullCheck(unsigned int) = 0x00000CD0;
+
+# StageActor  [actors/stageactor.h]
+StageActor::delete_(int) = 0x00000E90;
+StageActor::createWaterSplash(void*, int, int, void*) = 0x00000ED8;
+StageActor::updateZoneId() = 0x00000F8C;
+StageActor::accelerateX() = 0x00000FA8;
+StageActor::beforeDraw_thunk() = 0x0035B0D8;
+StageActor::isOutOfView_thunk() = 0x003CBC18;
+StageActor::beforeExecute_thunk() = 0x005D3F58;
+StageActor::beforeExecute_thunk_5FBC58() = 0x005FBC58;
+StageActor::beforeExecute_thunk_6CD004() = 0x006CD004;
+StageActor::beforeExecute_thunk_701414() = 0x00701414;
+
+# StateActor  [modbase/game/actors/stage_actor.h]
+StateActor::StateActor(void*) as C1 = 0x0000929C;
+StateActor::StateActor(void*) as C2 = 0x0000929C;

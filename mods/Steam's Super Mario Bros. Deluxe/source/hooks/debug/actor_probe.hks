@@ -1,0 +1,15 @@
+@ Actor probe: print the fields readable/engine/Actor.cpp documents, for every
+@ actor as it is constructed. This is the Phase 1 exit check -- it reads
+@ StageActor::position (+0x06C), playerId (+0x054) and type (+0x215) live.
+@
+@ Hook site: StageActor__ctor (0x600002A0, RVA 0x000002A0). It runs once per
+@ actor on the freshly constructed object, so r0 is the StageActor and the
+@ fields still hold their constructor values (position = spawn position,
+@ playerId = -1, type = 0). sdk/data/hookable.csv: 592 bytes,
+@ entry "push {r4, r5, r6, r7, r11, lr}", trampoline_safe = yes.
+
+ActorProbe_StageActor:
+    type:       hook
+    address:    0x000002A0
+    symbol:     ModBase::actorProbe::stageActor(StageActor*, ActorBuildInfo const*)
+    trampoline: ModBase::actorProbe::stageActor_orig(StageActor*, ActorBuildInfo const*)

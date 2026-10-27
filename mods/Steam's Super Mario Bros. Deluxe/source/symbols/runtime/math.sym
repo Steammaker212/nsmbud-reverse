@@ -1,0 +1,35 @@
+# Math
+#
+# Addresses are RVAs (VA - 0x60000000). New Super Mario Bros. U Deluxe (Switch) v1.0.0 only.
+# Each group's tag says where its names are declared: [codedx] in the codedx headers
+# under include/, otherwise the header(s) holding the generated declarations. Names
+# tagged [framework/mods] on an entry are the ones a framework part or mod needs.
+# Constructors and destructors carry their C1/C2/D0/D1/D2 variant.
+
+# distanceToPLayer  [modbase/game/runtime/startup.h]
+game::distanceToPLayer(void*, void*) = 0x0000AA44;
+
+# Math  [codedx]
+sin(float) = 0x009AD484;
+cos(float) = 0x009AD478;
+tan(float) = 0x009AD520;
+asin(float) = 0x009AE918;
+acos(float) = 0x009AD46C;
+atan2(float, float) = 0x009AD544;
+exp(float) = 0x009AE93C;
+log(float) = 0x009AE930;
+pow(float, float) = 0x009AD6B8;
+sqrt(float) = 0x009AD43C;
+fmod(float, float) = 0x009AD52C;
+
+# Misc  [codedx]
+mapPositionToScreen(Vec2&, Vec2 const&) = 0x000243B4;
+moveValueTo(unsigned int&, unsigned int const&, unsigned int const&) = 0x00832424;
+
+# Mtx34  [codedx]
+Mtx34::rotateX(unsigned int const&) = 0x00832AE0;
+Mtx34::rotateY(unsigned int const&) = 0x00832828;
+Mtx34::rotateZ(unsigned int const&) = 0x00832984;
+
+# MtxTranslateGetItFromHere  [modbase/game/runtime/startup.h]
+game::MtxTranslateGetItFromHere(void*) = 0x000DDEF0;

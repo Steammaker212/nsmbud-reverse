@@ -1,0 +1,205 @@
+# sead, Nintendo's engine library
+#
+# Addresses are RVAs (VA - 0x60000000). New Super Mario Bros. U Deluxe (Switch) v1.0.0 only.
+# Each group's tag says where its names are declared: [codedx] in the codedx headers
+# under include/, otherwise the header(s) holding the generated declarations. Names
+# tagged [framework/mods] on an entry are the ones a framework part or mod needs.
+# Constructors and destructors carry their C1/C2/D0/D1/D2 variant.
+
+# BufferedSafeStringBase  [modbase/game/nintendo/sead.h]
+BufferedSafeStringBase_char::vf8(void*) = 0x008FDB60;
+
+# sead  [nintendo/sead.h, modbase/game/nintendo/sead.h]
+sead::SomeString::sprtintf(void*, int, int) = 0x0001819C;
+sead::Decompressor::~Decompressor() as D1 = 0x00421008;
+sead::Decompressor::~Decompressor() as D2 = 0x00421008;
+sead::Decompressor::~Decompressor() as D0 = 0x00421174;
+sead::ResourceMgr::OpenFileRelated(void*) = 0x00902828;
+sead::Color4f::setLerp(void*, void*, float) = 0x0090B0E4;
+
+# sead::Base64  [modbase/game/nintendo/sead.h]
+sead::Base64::encode(void*, unsigned int, int) = 0x0090F764;
+
+# sead::BufferedSafeStringBase  [modbase/game/nintendo/sead.h]
+sead::BufferedSafeStringBase::assureTerminationImpl() const = 0x008FDD9C;
+
+# sead::CalculateTask  [modbase/game/nintendo/sead.h]
+sead::CalculateTask::CalculateTask(void*, int) as C1 = 0x008EBB5C;
+sead::CalculateTask::CalculateTask(void*, int) as C2 = 0x008EBB5C;
+sead::CalculateTask::~CalculateTask() as D1 = 0x008EBCB0;
+sead::CalculateTask::~CalculateTask() as D2 = 0x008EBCB0;
+sead::CalculateTask::~CalculateTask() as D0 = 0x008EBD00;
+sead::CalculateTask::getCorrespondingMethodTreeMgrTypeInfo() const = 0x008EBD54;
+sead::CalculateTask::calc() = 0x008EBDC8;
+sead::CalculateTask::attachCalcImpl() = 0x008EBDCC;
+sead::CalculateTask::attachDrawImpl() = 0x008EBE58;
+sead::CalculateTask::detachCalcImpl() = 0x008EBE5C;
+sead::CalculateTask::detachDrawImpl() = 0x008EBE64;
+sead::CalculateTask::pauseCalc(int) = 0x008EBE68;
+sead::CalculateTask::pauseDraw() = 0x008EBEE0;
+sead::CalculateTask::pauseCalcRec(int) = 0x008EBEE4;
+sead::CalculateTask::pauseDrawRec() = 0x008EBF5C;
+sead::CalculateTask::pauseCalcChild(int) = 0x008EBF60;
+sead::CalculateTask::pauseDrawChild() = 0x008EBFD8;
+sead::CalculateTask::getMethodTreeNode(unsigned int) = 0x008EBFDC;
+sead::CalculateTask::checkDerivedRuntimeTypeInfo(void*) const = 0x008EBFF0;
+sead::CalculateTask::getRuntimeTypeInfo() const = 0x008EC0F0;
+
+# sead::ControllerMgr  [modbase/game/nintendo/sead.h]
+sead::ControllerMgr::ControllerMgr(void*) as C1 = 0x00909668;
+sead::ControllerMgr::ControllerMgr(void*) as C2 = 0x00909668;
+sead::ControllerMgr::calc() = 0x00909820;
+sead::ControllerMgr::~ControllerMgr() as D1 = 0x0090989C;
+sead::ControllerMgr::~ControllerMgr() as D2 = 0x0090989C;
+sead::ControllerMgr::~ControllerMgr() as D0 = 0x009098D4;
+sead::ControllerMgr::checkDerivedRuntimeTypeInfo(void*) const = 0x00909918;
+sead::ControllerMgr::getRuntimeTypeInfo() const = 0x00909A8C;
+
+# sead::CriticalSection  [modbase/game/nintendo/sead.h]
+sead::CriticalSection::CriticalSection() as C1 = 0x00907EB4;
+sead::CriticalSection::CriticalSection() as C2 = 0x00907EB4;
+sead::CriticalSection::~CriticalSection() as D1 = 0x00907F28;
+sead::CriticalSection::~CriticalSection() as D2 = 0x00907F28;
+sead::CriticalSection::~CriticalSection() as D0 = 0x00907F58;
+sead::CriticalSection::lock() = 0x00907F8C;
+sead::CriticalSection::unlock() = 0x00907F9C;
+
+# sead::ExpHeap  [modbase/game/nintendo/sead.h]
+sead::ExpHeap::create(int, void*, int, int, int) = 0x008F5D44;
+sead::ExpHeap::tryCreate(int, void*, int, int, int) = 0x008F5D68;
+
+# sead::FaderTaskBase  [modbase/game/nintendo/sead.h]
+sead::FaderTaskBase::FaderTaskBase(void*, void*) as C1 = 0x008EC224;
+sead::FaderTaskBase::FaderTaskBase(void*, void*) as C2 = 0x008EC224;
+
+# sead::FileDeviceMgr  [modbase/game/nintendo/sead.h]
+sead::FileDeviceMgr::createInstance() = 0x008E8264;
+sead::FileDeviceMgr::FileDeviceMgr() as C1 = 0x008E82DC;
+sead::FileDeviceMgr::FileDeviceMgr() as C2 = 0x008E82DC;
+
+# sead::Framework  [modbase/game/nintendo/sead.h]
+sead::Framework::initialize() = 0x008ED684;
+
+# sead::GameFramework  [modbase/game/nintendo/sead.h]
+sead::GameFramework::initialize() = 0x008EDDEC;
+
+# sead::GameFrameworkNx  [modbase/game/nintendo/sead.h]
+sead::GameFrameworkNx::initialize() = 0x008EA004;
+
+# sead::GlobalRandom  [codedx]
+sead::GlobalRandom::instance = 0x00CCF4E4;
+
+# sead::GlobalRandom  [nintendo/sead/random.h]
+sead::GlobalRandom::SingletonDisposer::~SingletonDisposer() as D1 = 0x0090EA78;
+sead::GlobalRandom::SingletonDisposer::~SingletonDisposer() as D2 = 0x0090EA78;
+sead::GlobalRandom::SingletonDisposer::~SingletonDisposer() as D0 = 0x0090EACC;
+sead::GlobalRandom::createInstance() = 0x0090EB2C;
+
+# sead::Heap  [modbase/game/nintendo/sead.h]
+sead::Heap::Heap(int, void*, int, int, int, int) as C1 = 0x008F9594;
+sead::Heap::Heap(int, void*, int, int, int, int) as C2 = 0x008F9594;
+sead::Heap::appendDisposer(int) = 0x008F9998;
+sead::Heap::removeDisposer(int) = 0x008F99F0;
+
+# sead::HeapMgr  [modbase/game/nintendo/sead.h]
+sead::HeapMgr::findContainHeap(int) const = 0x008FA8C4;
+sead::HeapMgr::getCurrentHeap() const = 0x008FAC18;
+sead::HeapMgr::setCurrentHeap(int) = 0x008FAC4C;
+# [hammer_suit] sead::HeapMgr::sInstance (the pointer operator delete 0x608DE3A0 loads) and
+# getCurrentHeap (above) -- the heap operator new(size, 0) uses.
+sead::HeapMgr::sInstance = 0x00CCEE90;
+
+# sead::IDisposer  [codedx]
+sead::IDisposer::IDisposer() as C2 = 0x008F5B48;
+sead::IDisposer::~IDisposer() as D2 = 0x008F5C4C;
+
+# sead::IDisposer  [nintendo/sead/idisposer.h]
+sead::IDisposer::IDisposer(void*, unsigned int) as C1 = 0x008F5BAC;
+sead::IDisposer::IDisposer(void*, unsigned int) as C2 = 0x008F5BAC;
+sead::IDisposer::~IDisposer() as D0 = 0x008F5C94;
+
+# sead::ListNode  [nintendo/sead.h]
+sead::ListNode::insertFront(void*) = 0x008DE528;
+sead::ListNode::erase() = 0x008DE544;
+
+# sead::MethodTreeNode  [modbase/game/nintendo/sead.h]
+sead::MethodTreeNode::pushBackChild(void*) = 0x008EE230;
+sead::MethodTreeNode::lock() = 0x008EE29C;
+sead::MethodTreeNode::attachMutexRec(int) const = 0x008EE2AC;
+sead::MethodTreeNode::unlock() = 0x008EE2F0;
+sead::MethodTreeNode::detachAll() = 0x008EE36C;
+
+# sead::NinJoyNpadDevice  [modbase/game/nintendo/sead.h]
+sead::NinJoyNpadDevice::NinJoyNpadDevice(int, int) as C1 = 0x008E0CB8;
+sead::NinJoyNpadDevice::NinJoyNpadDevice(int, int) as C2 = 0x008E0CB8;
+sead::NinJoyNpadDevice::~NinJoyNpadDevice() as D1 = 0x008E0EE0;
+sead::NinJoyNpadDevice::~NinJoyNpadDevice() as D2 = 0x008E0EE0;
+sead::NinJoyNpadDevice::~NinJoyNpadDevice() as D0 = 0x008E0F90;
+sead::NinJoyNpadDevice::calc(void*) = 0x008E100C;
+sead::NinJoyNpadDevice::checkDerivedRuntimeTypeInfo(void*) const = 0x008E133C;
+sead::NinJoyNpadDevice::getRuntimeTypeInfo() const = 0x008E143C;
+
+# sead::NullFaderTask  [modbase/game/nintendo/sead.h]
+sead::NullFaderTask::NullFaderTask(int) as C1 = 0x008EC1E8;
+sead::NullFaderTask::NullFaderTask(int) as C2 = 0x008EC1E8;
+
+# sead::PtrArrayImpl  [modbase/game/nintendo/sead.h]
+sead::PtrArrayImpl::allocBuffer(int, int, int) = 0x008DEB28;
+
+# sead::Random  [codedx]
+sead::Random::getU32() = 0x0090EC50;
+
+# sead::Random  [nintendo/sead/random.h]
+sead::Random::init() = 0x0090EBB4;
+sead::Random::getContext(void*, void*, void*, void*) const = 0x0090EC84;
+
+# sead::ResourceMgr  [modbase/game/nintendo/sead.h]
+sead::ResourceMgr::createInstance() = 0x0090240C;
+sead::ResourceMgr::ResourceMgr() as C1 = 0x00902484;
+sead::ResourceMgr::ResourceMgr() as C2 = 0x00902484;
+
+# sead::SafeString<char>  [codedx]
+vtable for sead::SafeStringBase<char> = 0x00BC0230;
+sead::SafeStringBase<char>::~SafeStringBase() as D2 = 0x00007BEC;
+sead::SafeStringBase<char>::~SafeStringBase() as D0 = 0x00008A74;
+sead::SafeStringBase<char>::operator=(sead::SafeStringBase<char> const&) = 0x008FDB48;
+sead::SafeStringBase<char>::assureTerminationImpl_() = 0x00008A78;
+
+# sead::TaskBase  [modbase/game/nintendo/sead.h]
+sead::TaskBase::onDestroy() = 0x001FFBBC;
+sead::TaskBase::pauseCalcChild() = 0x00423508;
+sead::TaskBase::pauseDrawChild() = 0x0042350C;
+sead::TaskBase::checkDerivedRuntimeTypeInfo(void*) const = 0x008ED02C;
+sead::TaskBase::getRuntimeTypeInfo() const = 0x008ED0B0;
+sead::TaskBase::TaskBase(void*, int) as C1 = 0x008EF360;
+sead::TaskBase::TaskBase(void*, int) as C2 = 0x008EF360;
+sead::TaskBase::~TaskBase() as D1 = 0x008EF434;
+sead::TaskBase::~TaskBase() as D2 = 0x008EF434;
+sead::TaskBase::~TaskBase() as D0 = 0x008EF4C8;
+sead::TaskBase::prepare() = 0x008EF58C;
+sead::TaskBase::enterCommon() = 0x008EF590;
+sead::TaskBase::enter() = 0x008EF5F4;
+sead::TaskBase::exit() = 0x008EF5F8;
+sead::TaskBase::onEvent() = 0x008EF5FC;
+sead::TaskBase::doneDestroy() = 0x008EF74C;
+sead::TaskBase::getMethodTreeMgr() const = 0x008EF768;
+sead::TaskBase::attachMethodWithCheck() = 0x008EF778;
+
+# sead::TaskMgr  [modbase/game/nintendo/sead.h]
+sead::TaskMgr::destroyTaskSync(int) = 0x008EFD84;
+
+# sead::Thread  [modbase/game/nintendo/sead.h]
+sead::Thread::Thread(void*, void*, int, int, int, unsigned int, int) as C1 = 0x00908108;
+sead::Thread::Thread(void*, void*, int, int, int, unsigned int, int) as C2 = 0x00908108;
+
+# sead::ThreadMgr  [modbase/game/nintendo/sead.h]
+sead::ThreadMgr::createInstance() = 0x00908780;
+sead::ThreadMgr::initialize(void*) = 0x00908B14;
+
+# sead::ThreadUtil  [modbase/game/nintendo/sead.h]
+sead::ThreadUtil::ConvertPrioritySeadToPlatform() = 0x00908C28;
+
+# sead::TreeNode  [modbase/game/nintendo/sead.h]
+sead::TreeNode::TreeNode() as C1 = 0x008DEF80;
+sead::TreeNode::TreeNode() as C2 = 0x008DEF80;
+sead::TreeNode::detachAll() = 0x008DF2E0;

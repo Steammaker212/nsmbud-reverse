@@ -1,0 +1,67 @@
+# Sound
+#
+# Addresses are RVAs (VA - 0x60000000). New Super Mario Bros. U Deluxe (Switch) v1.0.0 only.
+# Each group's tag says where its names are declared: [codedx] in the codedx headers
+# under include/, otherwise the header(s) holding the generated declarations. Names
+# tagged [framework/mods] on an entry are the ones a framework part or mod needs.
+# Constructors and destructors carry their C1/C2/D0/D1/D2 variant.
+
+# BasicSoundActor  [codedx]
+BasicSoundActor::playSound(char const*, Vec2*, unsigned int) = 0x00810BBC;
+GlobalBasicSoundActorA = 0x00C7F530;
+
+# BasicSoundActor  [audio/sound.h]
+BasicSoundActor::vf0() = 0x00024494;
+BasicSoundActor::BasicSoundActor(int) as C1 = 0x00810A64;
+BasicSoundActor::BasicSoundActor(int) as C2 = 0x00810A64;
+BasicSoundActor::vf10(int, void*, int, void*) = 0x00812208;
+BasicSoundActor::vf1() = 0x008127F4;
+
+# BasicSoundActor1  [modbase/game/audio/sound.h]
+BasicSoundActor1::vf1() = 0x0002452C;
+BasicSoundActor1::vf9(void*, void*, int) = 0x0002453C;
+BasicSoundActor1::vf10(int, void*, int, int) = 0x0002459C;
+BasicSoundActor1::playSound(void*, void*, void*) = 0x0081380C;
+
+# BasicSoundActor2  [modbase/game/audio/sound.h]
+BasicSoundActor2::vf1() = 0x00024604;
+BasicSoundActor2::vf9(void*, void*, int) = 0x00024614;
+BasicSoundActor2::vf10(int, void*, int, int) = 0x00024674;
+BasicSoundActor2::vf0() = 0x00813BD4;
+BasicSoundActor2::play(void*, void*, void*) = 0x00813BD8;
+
+# MovingSoundActor  [audio/sound.h]
+MovingSoundActor::MovingSoundActor(int, int) as C1 = 0x0080F088;
+MovingSoundActor::MovingSoundActor(int, int) as C2 = 0x0080F088;
+MovingSoundActor::setPosition(void*) = 0x0080F194;
+
+# MovingSoundActorHandle  [modbase/game/audio/sound.h]
+MovingSoundActorHandle::~MovingSoundActorHandle() as D1 = 0x00026D64;
+MovingSoundActorHandle::~MovingSoundActorHandle() as D2 = 0x00026D64;
+MovingSoundActorHandle::~MovingSoundActorHandle() as D0 = 0x00026D94;
+
+# SoundActor  [audio/sound.h]
+SoundActor::SoundActor(int, void*) as C1 = 0x00812804;
+SoundActor::SoundActor(int, void*) as C2 = 0x00812804;
+SoundActor::vf0() = 0x00812900;
+SoundActor::vf1() = 0x0081293C;
+SoundActor::vf8(int, int) = 0x00812A30;
+
+# SoundSystem  [codedx]
+SoundSystem::getSoundArchive() = 0x00807560;
+SoundSystem::instance = 0x00CC6AF8;
+
+# SoundSystem  [audio/sound.h]
+SoundSystem::createInstance_helper_helper_8058AC(void*) = 0x008058AC;
+SoundSystem::createInstance_helper_helper_805A04() = 0x00805A04;
+SoundSystem::createInstance_helper_helper_805A0C() = 0x00805A0C;
+SoundSystem::createInstance_helper_helper_805A14() = 0x00805A14;
+SoundSystem::createInstance_helper_helper_805A1C() = 0x00805A1C;
+SoundSystem::createInstance_helper() = 0x00805A24;
+SoundSystem::createInstance() = 0x00806F40;
+SoundSystem::getSoundArchivePlayer() = 0x00809B54;
+SoundSystem::createInstance_helper_helper_9107C4() = 0x009107C4;
+SoundSystem::createInstance_helper_helper_910804(int) = 0x00910804;
+SoundSystem::createInstance_helper_helper_91080C(int) = 0x0091080C;
+SoundSystem::createInstance_helper_helper_910814(int) = 0x00910814;
+SoundSystem::createInstance_helper_helper_91081C(int) = 0x0091081C;

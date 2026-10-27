@@ -1,0 +1,8 @@
+@ P-Acorn. The Acorn item's grant (0x604695B0) starts with `push {r4, lr}`,
+@ position-independent, so the trampoline can replay it.
+
+PAcorn_acornGrant:
+    type:       hook
+    address:    0x004695B0
+    symbol:     ModBase::pAcorn::acornGrant(void*)
+    trampoline: ModBase::pAcorn::acornGrant_orig(void*)

@@ -1,0 +1,9 @@
+SumoBrosLightning_beginState_Down_hook:
+    type:    hook
+    symbol:  SumoBrosLightning::setYSpeed()
+    address: 0x00334CA8
+
+SumoBrosLightning_onGroundTouch_hook:
+    type:    call
+    symbol:  SumoBrosLightning::onGroundTouch(StateBase*)
+    address: 0x00334D50

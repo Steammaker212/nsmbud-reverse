@@ -1,0 +1,210 @@
+// modbase/game/enemies/goombas.h -- generated: C++ declarations for symbols/enemies/goombas.sym.
+// Game classes and functions with ABI-exact types (pointers are void*); do not edit by hand.
+// [hook] marks a function whose entry a sweet-dx trampoline can replay.
+#pragma once
+
+#include "core/types.h"
+
+class Goomba
+{
+public:
+    ~Goomba();  // D0 0x0033b64c
+    s32 build();  // 0x00337d2c [hook]
+    s32 vf270();  // 0x003393f0 [hook]
+    s32 vf274();  // 0x00339c98 [hook]
+    s32 vf278();  // 0x00339cd4 [hook]
+    s32 onDelete();  // 0x00339cf0 [hook]
+    s32 vf27C();  // 0x0033a590 [hook]
+    s32 vf284();  // 0x0033a814
+    void* collisionEnemy(void*, void*);  // 0x0033ac8c [hook]
+    s32 collisionGroundPound(s32, s32);  // 0x0033acec [hook]
+    s32 collisionPropellerDrill(s32, s32);  // 0x0033ad7c [hook]
+    s32 vf2EC();  // 0x0033adf4 [hook]
+    void* vf2F0();  // 0x0033af08 [hook]
+    s32 vfD0();  // 0x0033b068 [hook]
+    void* vfDC();  // 0x0033b0cc [hook]
+    void vf29C(s32);  // 0x0033b28c [hook]
+    s32 vf2C4();  // 0x0033b3a0 [hook]
+    void vf2CC();  // 0x0033b3d8 [hook]
+    s32 vf2C8();  // 0x0033b3dc
+    bool checkDerivedRuntimeTypeInfo(void*) const;  // 0x0033b3e0 [hook]
+    void* getRuntimeTypeInfo() const;  // 0x0033b558 [hook]
+    s32 vf8C();  // 0x0033b6e4 [hook]
+    s32 vf90();  // 0x0033b73c [hook]
+    s32 vf94();  // 0x0033b780 [hook]
+    void vfD4();  // 0x0033b78c [hook]
+    void vfD8();  // 0x0033b790 [hook]
+    bool vf2A0();  // 0x0033b7c4 [hook]
+    bool vf2A4();  // 0x0033b810 [hook]
+    bool vf2A8();  // 0x0033b830 [hook]
+    bool vf2E0();  // 0x0033b878 [hook]
+    s32 vf2F8();  // 0x0033b918 [hook]
+};
+
+class GoombaBase
+{
+public:
+    GoombaBase(void*);  // 0x0033bd20 C1/C2
+    ~GoombaBase();  // D1/D2 0x0033b5cc, D0 0x0033e53c
+    s32 damageFromUnder();  // 0x0033b6d0 [hook]
+    void vf288();  // 0x0033b794 [hook]
+    void vf290();  // 0x0033b798 [hook]
+    s32 vf294(void*);  // 0x0033b79c
+    s32 vf298(s32);  // 0x0033b7a0 [hook]
+    s32 vf2E4();  // 0x0033b908 [hook]
+    s32 vf2E8();  // 0x0033b910 [hook]
+    s32 onCreate();  // 0x0033be80 [hook]
+    s32 onExecute();  // 0x0033bfcc [hook]
+    s32 onDraw();  // 0x0033c790 [hook]
+    static s32 onDelete();  // 0x0033c7a8 [hook]
+    s32 vfE0();  // 0x0033c7b0 [hook]
+    void* collisionEnemy(void*, void*);  // 0x0033c7bc [hook]
+    s32 collisionPlayer(void*, void*);  // 0x0033c844 [hook]
+    s32 collisionYoshi(void*, void*);  // 0x0033c95c [hook]
+    void vfF4(s32, s32);  // 0x0033cab0 [hook]
+    s32 collisionGroundPoundYoshi(s32, s32);  // 0x0033cb84 [hook]
+    s32 vf110();  // 0x0033cca0 [hook]
+    s32 vf14C(s32, s32);  // 0x0033ccac [hook]
+    s32 vf1AC(s32);  // 0x0033cd80 [hook]
+    void vf270();  // 0x0033cda4 [hook]
+    void vf274();  // 0x0033cda8 [hook]
+    void vf278();  // 0x0033cdac [hook]
+    void vf284();  // 0x0033cdb0 [hook]
+    s32 vf2DC();  // 0x0033cdb4 [hook]
+    s32 vf28C(void*);  // 0x0033cf30 [hook]
+    s32 vf280();  // 0x0033d584 [hook]
+    s32 vfC8(s32, s32);  // 0x0033d62c [hook]
+    s32 splashLava(void*);  // 0x0033d71c [hook]
+    s32 killAtGoal();  // 0x0033d7f4 [hook]
+    void* addActiveColliders();  // 0x0033d848 [hook]
+    void* removeActiveColliders();  // 0x0033d8ec [hook]
+    s32 vf2AC();  // 0x0033d960 [hook]
+    void vf2B4();  // 0x0033da08 [hook]
+    s32 vf2B0();  // 0x0033da0c [hook]
+    s32 vf2B8();  // 0x0033db5c [hook]
+    void vf2C0();  // 0x0033dbb4 [hook]
+    s32 vf2BC();  // 0x0033dbb8 [hook]
+    s32 vf2C4();  // 0x0033dca0
+    s32 vf2CC();  // 0x0033dce0 [hook]
+    s32 vf2C8();  // 0x0033dcf0 [hook]
+    s32 vf2D0();  // 0x0033ded4 [hook]
+    void vf2D8();  // 0x0033defc [hook]
+    s32 vf2D4();  // 0x0033df00 [hook]
+    void* vf1F8();  // 0x0033e030 [hook]
+    void vf200();  // 0x0033e20c
+    f32 vf1FC(f32);  // 0x0033e210 [hook]
+    s32 beginState_DieFall();  // 0x0033e22c [hook]
+    static void endState_DieFall();  // 0x0033e2b8
+    s32 executeState_DieFall();  // 0x0033e2bc [hook]
+    bool checkDerivedRuntimeTypeInfo(void*) const;  // 0x0033e3c4 [hook]
+    void* getRuntimeTypeInfo() const;  // 0x0033e4c8 [hook]
+    void vf27C();  // 0x0033e5c0 [hook]
+    void vf29C();  // 0x0033e5c4 [hook]
+    s32 vf2A0();  // 0x0033e5c8 [hook]
+    s32 vf2A4();  // 0x0033e5d0 [hook]
+    s32 vf2A8();  // 0x0033e5d8 [hook]
+    s32 vf2E0();  // 0x0033e5e0 [hook]
+    void vf2EC();  // 0x0033e5e8 [hook]
+    void vf2F0();  // 0x0033e5ec [hook]
+    void vf2F4();  // 0x0033e5f0 [hook]
+    void vf2F8();  // 0x0033e5f4 [hook]
+};
+
+class LargeGoomba
+{
+public:
+    LargeGoomba();  // 0x0033e624 C1/C2
+    s32 vf156();  // 0x0033e66c [hook]
+    s32 vf160();  // 0x0033e7f4 [hook]
+    s32 vf159();  // 0x0033e858
+    s32 vf199();  // 0x0033e884
+    s32 vf162();  // 0x0033e8a8 [hook]
+    s32 vf163();  // 0x0033e9f0 [hook]
+    s32 vf172();  // 0x0033ef60 [hook]
+    s32 vf173();  // 0x0033f124 [hook]
+    s32 vf52();  // 0x0033f14c [hook]
+    s32 vf53(s32, s32, s32);  // 0x0033f1e0 [hook]
+    s32 vf167();  // 0x0033f34c [hook]
+    s32 vf168();  // 0x0033f4bc [hook]
+    s32 vf169();  // 0x0033f4f4 [hook]
+    s32 vf170();  // 0x0033f500 [hook]
+    s32 vf27(void*);  // 0x0033f588 [hook]
+    s32 vf30(void*);  // 0x0033f5b4 [hook]
+    s32 vf28(void*);  // 0x0033f5e0 [hook]
+    s32 vf26();  // 0x0033f60c [hook]
+    bool vf0(void*);  // 0x0033f704 [hook]
+    void* vf1();  // 0x0033f87c [hook]
+    void* vf2();  // 0x0033f8f0 [hook]
+    void vf3();  // 0x0033f98c [hook]
+    s32 vf45();  // 0x0033fa2c [hook]
+    bool vf46(f32);  // 0x0033fa38 [hook]
+    s32 vf71();  // 0x0033fa5c [hook]
+    s32 vf75();  // 0x0033fa68 [hook]
+    void* vf161();  // 0x0033fa78
+    s32 vf171();  // 0x0033fbbc [hook]
+    s32 vf5();  // 0x0033fd70 [hook]
+    s32 vf8();  // 0x003403e4 [hook]
+    s32 vf56();  // 0x003405b0 [hook]
+    s32 vf12();  // 0x0034079c [hook]
+    s32 vf15();  // 0x003407c8 [hook]
+    s32 vf66(void*, void*);  // 0x003408c8 [hook]
+    s32 vf67(void*, void*);  // 0x00340a9c [hook]
+    s32 vf65(s32);  // 0x00340c68 [hook]
+    s32 vf73(s32, s32);  // 0x00340d00 [hook]
+    s32 vf70(s32, s32);  // 0x00340e4c [hook]
+    s32 vf74();  // 0x00340f80 [hook]
+    s32 vf79(s32, s32);  // 0x00340f8c [hook]
+    s32 vf32();  // 0x00341384 [hook]
+    s32 vf61(s32, s32);  // 0x003413dc [hook]
+    s32 vf68();  // 0x003415ac [hook]
+    s32 vf158(s32);  // 0x003415b8 [hook]
+    s32 vf50(s32, s32);  // 0x00341654 [hook]
+    s32 vf93(void*);  // 0x00341744 [hook]
+    s32 vf198();  // 0x003418c8 [hook]
+    void* vf19();  // 0x00341950 [hook]
+    void* vf18();  // 0x003419b0 [hook]
+    void vf174();  // 0x003419fc [hook]
+    s32 vf176();  // 0x00341a64 [hook]
+    s32 vf177();  // 0x00341a74 [hook]
+    s32 vf178();  // 0x00341b40 [hook]
+    s32 vf180();  // 0x00341c58 [hook]
+    s32 vf181();  // 0x00341c74 [hook]
+    u32 vf183();  // 0x00341d2c [hook]
+    s32 vf184();  // 0x00341e80 [hook]
+    s32 vf186();  // 0x00341f08 [hook]
+    s32 vf187();  // 0x00341f18 [hook]
+    s32 vf189();  // 0x00341f98 [hook]
+    s32 vf190();  // 0x00341fa8 [hook]
+    u32 vf192();  // 0x00342084 [hook]
+    s32 vf193();  // 0x003420c8 [hook]
+    s32 vf195();  // 0x00342124 [hook]
+    s32 vf197();  // 0x0034215c [hook]
+    s32 vf196();  // 0x0034216c [hook]
+    s32 vf114();  // 0x00342328 [hook]
+};
+
+class ParaGoomba
+{
+public:
+    ~ParaGoomba();  // D0 0x0036420c
+    s32 build();  // 0x00362b14 [hook]
+    s32 vf270();  // 0x00362f2c [hook]
+    s32 vf274();  // 0x00363790
+    s32 vf278();  // 0x00363794 [hook]
+    s32 vf27C();  // 0x003637e8 [hook]
+    s32 vf280();  // 0x003638c4 [hook]
+    s32 vf28C(void*);  // 0x003639b0 [hook]
+    s32 vf294(void*);  // 0x00363a3c [hook]
+    s32 vf298(s32);  // 0x00363a80 [hook]
+    s32 collisionIceball(s32, s32);  // 0x00363adc [hook]
+    s32 collisionGroundPound(s32, s32);  // 0x00363b68 [hook]
+    s32 collisionPropellerDrill(s32, s32);  // 0x00363bb4 [hook]
+    s32 collisionGroundPoundYoshi(s32, s32);  // 0x00363c00 [hook]
+    s32 vfD0();  // 0x00363c4c [hook]
+    s32 vfDC();  // 0x00363d00 [hook]
+    s32 vf284();  // 0x00363e6c [hook]
+    s32 vf2EC();  // 0x00363e94 [hook]
+    bool checkDerivedRuntimeTypeInfo(void*) const;  // 0x00364020 [hook]
+    void* getRuntimeTypeInfo() const;  // 0x00364198 [hook]
+    s32 vf2F8();  // 0x00364290 [hook]
+};

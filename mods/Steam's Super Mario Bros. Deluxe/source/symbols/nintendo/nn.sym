@@ -1,0 +1,75 @@
+# nn, the NintendoSDK
+#
+# Addresses are RVAs (VA - 0x60000000). New Super Mario Bros. U Deluxe (Switch) v1.0.0 only.
+# Each group's tag says where its names are declared: [codedx] in the codedx headers
+# under include/, otherwise the header(s) holding the generated declarations. Names
+# tagged [framework/mods] on an entry are the ones a framework part or mod needs.
+# Constructors and destructors carry their C1/C2/D0/D1/D2 variant.
+
+# nn  [nintendo/nn/atk.h, modbase/game/nintendo/nn.h]
+nn::atk::MemorySoundArchive::MemorySoundArchive() as C1 = 0x008A8348;
+nn::atk::MemorySoundArchive::MemorySoundArchive() as C2 = 0x008A8348;
+nn::atk::SoundArchive::SoundArchive() as C1 = 0x008A9954;
+nn::atk::SoundArchive::SoundArchive() as C2 = 0x008A9954;
+nn::atk::SoundArchive::vf0() = 0x008A997C;
+nn::atk::FsSoundArchive::FsSoundArchive() as C1 = 0x0099BB78;
+nn::atk::FsSoundArchive::FsSoundArchive() as C2 = 0x0099BB78;
+
+# nn::atk  [nintendo/nn/atk.h, modbase/game/nintendo/nn.h]
+nn::atk::SoundActor::SoundActor(int) as C1 = 0x008A95F8;
+nn::atk::SoundActor::SoundActor(int) as C2 = 0x008A95F8;
+nn::atk::SoundActor::~SoundActor() as D1 = 0x008A96CC;
+nn::atk::SoundActor::~SoundActor() as D2 = 0x008A96CC;
+nn::atk::SoundActor::~SoundActor() as D0 = 0x008A9794;
+nn::atk::SoundActor::GetPlayingSoundCount(int) const = 0x008A97A4;
+nn::atk::SoundActor::SetPlayableSoundCount(int, int) = 0x008A97D0;
+nn::atk::SoundActor::SetupSound(void*, int, int, void*) = 0x008A97E0;
+nn::atk::SoundActor::detail_SetupSound(int, int, signed char, int, int) = 0x008A98BC;
+nn::atk::SoundActor::detail_GetItemId() = 0x008A9914;
+nn::atk::SoundActor::detail_GetItemId_8A9934() = 0x008A9934;
+nn::atk::detail::ExternalSoundPlayer::ExternalSoundPlayer() as C1 = 0x008B0720;
+nn::atk::detail::ExternalSoundPlayer::ExternalSoundPlayer() as C2 = 0x008B0720;
+nn::atk::detail::ExternalSoundPlayer::SetPlayableSoundCount(int) = 0x008B0A04;
+nn::atk::detail::SoundArchiveFile::StringBlockBody::GetString(int) const = 0x008B1648;
+nn::atk::detail::SoundArchiveFile::InfoBlockBody::GetItemStringId(unsigned int) const = 0x008B1AA0;
+nn::atk::detail::SoundArchiveFileReader::GetItemId(void*) const = 0x008B21B0;
+nn::atk::detail::SoundArchiveFileReader::GetItemLabel(unsigned int) const = 0x008B21CC;
+
+# nn::atk::SoundArchive  [codedx]
+nn::atk::SoundArchive::GetItemLabel(unsigned int) const = 0x008A9A04;
+nn::atk::SoundArchive::GetItemId(char const*) const = 0x008A9A4C;
+
+# nn::g3d  [modbase/game/nintendo/nn.h]
+nn::g3d::AnimObj::~AnimObj() as D1 = 0x0086AC5C;
+nn::g3d::AnimObj::~AnimObj() as D2 = 0x0086AC5C;
+nn::g3d::ResVertexShapeAnim::Initialize(void*) const = 0x00872508;
+nn::g3d::ShapeAnimObj::Bind(int) = 0x00873F04;
+nn::g3d::ShapeAnimObj::ClearResult() = 0x00874358;
+nn::g3d::ShapeAnimObj::Bind_874398(void*) = 0x00874398;
+nn::g3d::ShapeAnimObj::BindFast(int) = 0x008743A8;
+nn::g3d::ShapeAnimObj::Calculate() = 0x00874540;
+nn::g3d::ShapeAnimObj::ApplyTo(int) const = 0x00874654;
+nn::g3d::ShapeAnimObj::~ShapeAnimObj() as D0 = 0x0087479C;
+nn::g3d::SkeletalAnimObj::Bind(int) = 0x00878460;
+nn::g3d::SkeletalAnimObj::Bind_87849C(int) = 0x0087849C;
+nn::g3d::SkeletalAnimObj::BindFast(int) = 0x008784DC;
+nn::g3d::SkeletalAnimObj::ClearResult() = 0x00878588;
+nn::g3d::SkeletalAnimObj::Calculate() = 0x00878630;
+nn::g3d::SkeletalAnimObj::ApplyTo(int) const = 0x00878698;
+nn::g3d::SkeletalAnimObj::~SkeletalAnimObj() as D0 = 0x00879FB0;
+
+# nn::init  [modbase/game/nintendo/nn.h]
+nn::init::InitializeAllocator(void*, unsigned int) = 0x008350C4;
+
+# nn::oe  [modbase/game/nintendo/nn.h]
+nn::oe::Initialize_thunk(void*) = 0x008EBB54;
+
+# nn::os  [modbase/game/nintendo/nn.h]
+nn::os::YieldThread_thunk(void*) = 0x009085F4;
+
+# nn::ui2d  [modbase/game/nintendo/nn.h]
+nn::ui2d::Layout::Layout() as C1 = 0x00855C14;
+nn::ui2d::Layout::Layout() as C2 = 0x00855C14;
+
+# Nvn  [modbase/game/nintendo/nn.h]
+Nvn::resolveDeviceFunctions(void*) = 0x00836678;

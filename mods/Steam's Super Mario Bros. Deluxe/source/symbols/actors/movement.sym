@@ -1,0 +1,34 @@
+# Movement handlers and line followers
+#
+# Addresses are RVAs (VA - 0x60000000). New Super Mario Bros. U Deluxe (Switch) v1.0.0 only.
+# Each group's tag says where its names are declared: [codedx] in the codedx headers
+# under include/, otherwise the header(s) holding the generated declarations. Names
+# tagged [framework/mods] on an entry are the ones a framework part or mod needs.
+# Constructors and destructors carry their C1/C2/D0/D1/D2 variant.
+
+# LineFollower  [actors/linefollower.h]
+LineFollower::beginState_Idle() = 0x0000C380;
+LineFollower::executeState_Idle() = 0x0000C384;
+LineFollower::endState_Idle() = 0x0000C388;
+LineFollower::LineFollower() as C1 = 0x0000F108;
+LineFollower::LineFollower() as C2 = 0x0000F108;
+
+# MovementHandler  [codedx]
+MovementHandler::MovementHandler() as C1 = 0x006AF89C;
+MovementHandler::link(Vec3 const&, unsigned int, unsigned char) = 0x006AFC34;
+MovementHandler::execute() = 0x006B0E6C;
+MovementHandler::getMaskForMovementType(unsigned int) = 0x006AFC14;
+
+# MovementHandler  [actors/movementhandler.h]
+MovementHandler::beginState_FindController() = 0x006AF944;
+MovementHandler::executeState_FindController() = 0x006AF948;
+MovementHandler::endState_FindController() = 0x006AF974;
+MovementHandler::beginState_Linked() = 0x006AF978;
+MovementHandler::executeState_Linked() = 0x006AF984;
+MovementHandler::endState_Linked() = 0x006AFC10;
+MovementHandler::findMovementController() = 0x006AFCE8;
+MovementHandler::initFromStruct(void*) = 0x006B09F0;
+MovementHandler::findMovementController_helper(void*) = 0x006B0E7C;
+MovementHandler::findMovementController_helper_6B1188(int) = 0x006B1188;
+MovementHandler::findMovementController_helper_6B12C4(int) = 0x006B12C4;
+MovementHandler::findMovementController_helper_6B37CC(int) = 0x006B37CC;

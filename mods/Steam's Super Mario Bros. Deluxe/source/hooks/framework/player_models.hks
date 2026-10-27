@@ -1,0 +1,18 @@
+@ framework/player: every player model (code/framework/player_models.cpp). Mods
+@ register listeners (modbase/player_models.h) instead of hooking these themselves.
+
+@ PlayerModel::PlayerModel (6 args; the 4th, the forced mode, is -1 for players).
+@ Entry: push {r4-r8, lr}.
+PlayerModels_ctor:
+    type:       hook
+    address:    0x0078C444
+    symbol:     ModBase::playerModels::ctor(void*, void*, int, int, int, int)
+    trampoline: ModBase::playerModels::ctor_orig(void*, void*, int, int, int, int)
+
+@ PlayerModel::draw (every character's model): body +0x018, then head +0x124.
+@ Entry: push {r4, lr}.
+PlayerModels_draw:
+    type:       hook
+    address:    0x0078E574
+    symbol:     ModBase::playerModels::draw(void*)
+    trampoline: ModBase::playerModels::draw_orig(void*)

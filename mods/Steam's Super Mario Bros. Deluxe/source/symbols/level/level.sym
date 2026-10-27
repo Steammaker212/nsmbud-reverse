@@ -1,0 +1,68 @@
+# Levels, areas, tiles and events
+#
+# Addresses are RVAs (VA - 0x60000000). New Super Mario Bros. U Deluxe (Switch) v1.0.0 only.
+# Each group's tag says where its names are declared: [codedx] in the codedx headers
+# under include/, otherwise the header(s) holding the generated declarations. Names
+# tagged [framework/mods] on an entry are the ones a framework part or mod needs.
+# Constructors and destructors carry their C1/C2/D0/D1/D2 variant.
+
+# AreaRumbleMgr  [codedx]
+AreaRumbleMgr::instance = 0x00C99E3C;
+AreaRumbleMgr::rumble(int, signed char, signed char, signed char) = 0x004007D8;
+
+# AreaRumbleMgr  [level/arearumblemgr.h]
+AreaRumbleMgr::createInstance() = 0x004002F8;
+AreaRumbleMgr::rumbleForPlayer(int, int, int, int) = 0x004006B0;
+AreaRumbleMgr::rumble2(int, signed char, int) = 0x00400A34;
+AreaRumbleMgr::rumbleForPlayer_helper(float) = 0x007DAD70;
+AreaRumbleMgr::rumbleForPlayer_helper_7DBA1C(int, void*, int, int, int) = 0x007DBA1C;
+
+# EventMgr  [codedx]
+EventMgr::set(unsigned int, unsigned int, bool, unsigned int, unsigned int, unsigned int, unsigned int) = 0x0072A4B0;
+EventMgr::instance = 0x00CBD8AC;
+
+# Level  [codedx]
+Level::getArea(unsigned int) = 0x00727C60;
+Level::instance = 0x00CBD89C;
+
+# Level  [level/level.h]
+Level::vf0() = 0x00727204;
+Level::vf1() = 0x00727258;
+Level::createInstance() = 0x007272B8;
+
+# Level::Area  [codedx]
+Level::Area::getLocation(Rect*, unsigned char) = 0x00727870;
+
+# LevelInfo  [codedx]
+LevelInfo::instance = 0x00C9A684;
+
+# RumbleMgr  [modbase/game/level/level.h]
+RumbleMgr::RumbleMgr(int) as C1 = 0x00456B44;
+RumbleMgr::RumbleMgr(int) as C2 = 0x00456B44;
+RumbleMgr::create() = 0x008264F8;
+
+# TileGod  [modbase/game/level/level.h]
+TileGod::TileGod() as C1 = 0x005CEF18;
+TileGod::TileGod() as C2 = 0x005CEF18;
+TileGod::onCreate() = 0x005CEF60;
+TileGod::onExecute() = 0x005CF660;
+TileGod::onExecute_helper() = 0x005CF690;
+TileGod::checkRTTI(void*) = 0x005CF804;
+TileGod::getRTTI() = 0x005CF894;
+TileGod::~TileGod() as D0 = 0x005CF908;
+
+# TileLayer  [codedx]
+TileLayer::getTilePtr(unsigned int, unsigned int, unsigned int*) = 0x007232D4;
+
+# TileMgr  [level/tile.h]
+TileMgr::createInstance() = 0x00710CB8;
+TileMgr::TileMgr() as C1 = 0x00710D40;
+TileMgr::TileMgr() as C2 = 0x00710D40;
+TileMgr::ctor_helper() = 0x007118E8;
+TileMgr::splashRelated(void*, int, int) = 0x00715FB4;
+TileMgr::setTile(short, unsigned int, unsigned int, int) = 0x00716804;
+TileMgr::setTileArea_helper() = 0x00723334;
+
+# TilesetMgr  [codedx]
+TilesetMgr::getTileLayer(unsigned int, unsigned char) = 0x0071B2D4;
+TilesetMgr::instance = 0x00CBD828;

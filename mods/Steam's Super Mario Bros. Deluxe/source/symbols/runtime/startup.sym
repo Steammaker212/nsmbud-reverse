@@ -1,0 +1,85 @@
+# Startup, static initialisers and root tasks
+#
+# Addresses are RVAs (VA - 0x60000000). New Super Mario Bros. U Deluxe (Switch) v1.0.0 only.
+# Each group's tag says where its names are declared: [codedx] in the codedx headers
+# under include/, otherwise the header(s) holding the generated declarations. Names
+# tagged [framework/mods] on an entry are the ones a framework part or mod needs.
+# Constructors and destructors carry their C1/C2/D0/D1/D2 variant.
+
+# AreaTask  [modbase/game/runtime/startup.h]
+AreaTask::create() = 0x00022DCC;
+AreaTask::AreaTask(int) as C1 = 0x003F1530;
+AreaTask::AreaTask(int) as C2 = 0x003F1530;
+AreaTask::getWrappedXPos(float) = 0x003F4900;
+
+# CalculateTask2  [modbase/game/runtime/startup.h]
+CalculateTask2::CalculateTask2(int, int) as C1 = 0x00818330;
+CalculateTask2::CalculateTask2(int, int) as C2 = 0x00818330;
+
+# CalculateTask3  [modbase/game/runtime/startup.h]
+CalculateTask3::CalculateTask3(int, int) as C1 = 0x007F5AD8;
+CalculateTask3::CalculateTask3(int, int) as C2 = 0x007F5AD8;
+
+# CreateRootTask  [modbase/game/runtime/startup.h]
+game::CreateRootTask(int) = 0x00562A50;
+
+# cxa  [codedx]
+__cxa_guard_acquire = 0x009AD3E8;
+__cxa_guard_release = 0x009AD3F4;
+
+# debugPrintRelated  [modbase/game/runtime/startup.h]
+game::debugPrintRelated(void*) = 0x0088239C;
+
+# debugPrintRelated2  [modbase/game/runtime/startup.h]
+game::debugPrintRelated2(void*) = 0x00882024;
+
+# debugPrintRelated3  [modbase/game/runtime/startup.h]
+game::debugPrintRelated3(void*) = 0x00882120;
+
+# decompressYaz0  [modbase/game/runtime/startup.h]
+game::decompressYaz0(void*, void*) = 0x00912314;
+
+# got entries  [codedx]
+got_main_crt0 = 0x00C61A00;
+got_spriteToProfileList = 0x00C61B18;
+
+# nninitStartup  [symbols only, no declaration]
+nninitStartup = 0x00562650;
+nninitStartup_helper = 0x00822BF8;
+
+# nnMain  [symbols only, no declaration]
+nnMain = 0x00562698;
+nnMain_helper = 0x008183C8;
+nnMain_helper_helper_8EA014 = 0x008EA014;
+nnMain_helper_8ED664 = 0x008ED664;
+nnMain_helper_8ED674 = 0x008ED674;
+nnMain_helper_8FD644 = 0x008FD644;
+
+# ReadAndDecompSZS  [modbase/game/runtime/startup.h]
+ReadAndDecompSZS::helper(void*, unsigned int) = 0x00903B44;
+game::ReadAndDecompSZS(int, void*, int, void*, void*, void*) = 0x009040CC;
+
+# RootTask  [modbase/game/runtime/startup.h]
+RootTask::vf5C() = 0x008183B4;
+RootTask::vf10() = 0x00822C24;
+RootTask::vf24() = 0x00822C28;
+RootTask::vf12() = 0x008253EC;
+RootTask::vf1() = 0x00825400;
+RootTask::vf2(void*) = 0x00825410;
+
+# sInit  [modbase/game/runtime/startup.h]
+sinit::SpriteToProfileTable() = 0x00014724;
+sinit::ProfileArchiveLists() = 0x00018FD0;
+sinit::RollingHill() = 0x0060985C;
+
+# sinit  [modbase/game/runtime/startup.h]
+sinit::Enemy2() = 0x00026FDC;
+sinit::BobOmb() = 0x0025C830;
+sinit::BroBase() = 0x00267668;
+sinit::Enemy() = 0x002A8314;
+sinit::Kanibo() = 0x0030EE18;
+sinit::DryBones() = 0x00318108;
+sinit::KoopaTroopa() = 0x00359364;
+
+# table  [modbase/game/runtime/startup.h]
+game::table_init(int, int, int, int) = 0x008691AC;

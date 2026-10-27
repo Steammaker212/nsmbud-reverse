@@ -1,0 +1,279 @@
+# Bros and the things they throw
+#
+# Addresses are RVAs (VA - 0x60000000). New Super Mario Bros. U Deluxe (Switch) v1.0.0 only.
+# Each group's tag says where its names are declared: [codedx] in the codedx headers
+# under include/, otherwise the header(s) holding the generated declarations. Names
+# tagged [framework/mods] on an entry are the ones a framework part or mod needs.
+# Constructors and destructors carry their C1/C2/D0/D1/D2 variant.
+
+# BoomerangBro  [modbase/game/enemies/bros.h]
+BoomerangBro::BoomerangBro() as C1 = 0x00262520;
+BoomerangBro::BoomerangBro() as C2 = 0x00262520;
+BoomerangBro::vf181() = 0x00262570;
+BoomerangBro::vf180() = 0x00262618;
+BoomerangBro::vf183() = 0x00262678;
+BoomerangBro::vf189() = 0x002626AC;
+BoomerangBro::vf178() = 0x002626F0;
+BoomerangBro::vf179() = 0x002626F8;
+BoomerangBro::vf186() = 0x00262704;
+BoomerangBro::vf187() = 0x00262878;
+BoomerangBro::vf55() = 0x002629FC;
+BoomerangBro::vf188() = 0x00262A48;
+BoomerangBro::vf184() = 0x00262B2C;
+BoomerangBro::vf202() = 0x00262D44;
+BoomerangBro::vf0(void*) = 0x00262E1C;
+BoomerangBro::vf1() = 0x00262F94;
+BoomerangBro::vf3() = 0x002630B4;
+BoomerangBro::vf182() = 0x00263164;
+BoomerangBro::vf190() = 0x0026316C;
+
+# BroFileball  [modbase/game/enemies/bros.h]
+BroFileball::BroFileball() as C1 = 0x0013734C;
+BroFileball::BroFileball() as C2 = 0x0013734C;
+
+# BrosBase  [codedx]
+BrosBase::BrosBase(ActorBuildInfo const*) as C2 = 0x002632F0;
+BrosBase::~BrosBase() as D2 = 0x00263008;
+BrosBase::~BrosBase() as D0 = 0x00267498;
+BrosBase::checkDerivedRuntimeTypeInfo(sead::RuntimeTypeInfo::Interface const*) const = 0x00267320;
+BrosBase::getRuntimeTypeInfo() const = 0x00267424;
+BrosBase::onCreate() = 0x002634D8;
+BrosBase::onExecute() = 0x00263D10;
+BrosBase::onDraw() = 0x00264068;
+BrosBase::onDelete() = 0x00264094;
+BrosBase::killAtGoal() = 0x00266CC4;
+BrosBase::vfC8() = 0x00264E40;
+BrosBase::freeze() = 0x00264F6C;
+BrosBase::vfD4() = 0x00264800;
+BrosBase::vfDC() = 0x002649D0;
+BrosBase::vfE0() = 0x0026409C;
+BrosBase::collisionPlayer(ActiveCollider*, ActiveCollider*) = 0x00264458;
+BrosBase::collisionYoshi(ActiveCollider*, ActiveCollider*) = 0x002645C4;
+BrosBase::collisionStar(ActiveCollider*, ActiveCollider*) = 0x00264CE0;
+BrosBase::collisionPropellerDrill(ActiveCollider*, ActiveCollider*) = 0x002649E8;
+BrosBase::collisionGroundPound(ActiveCollider*, ActiveCollider*) = 0x00264B6C;
+BrosBase::collisionIceball(ActiveCollider*, ActiveCollider*) = 0x002646C4;
+BrosBase::collisionHammer(ActiveCollider*, ActiveCollider*) = 0x00264B70;
+BrosBase::vf150(ActiveCollider*, ActiveCollider*) = 0x002664AC;
+BrosBase::beginState_DieFumi() = 0x00266130;
+BrosBase::executeState_DieFumi() = 0x00266260;
+BrosBase::endState_DieFumi() = 0x0026625C;
+BrosBase::beginState_DieFall() = 0x00266294;
+BrosBase::executeState_DieFall() = 0x002663C4;
+BrosBase::endState_DieFall() = 0x002663C0;
+BrosBase::beginState_Move() = 0x0026522C;
+BrosBase::executeState_Move() = 0x00265384;
+BrosBase::endState_Move() = 0x00265380;
+BrosBase::beginState_Attack() = 0x00265670;
+BrosBase::executeState_Attack() = 0x00265698;
+BrosBase::endState_Attack() = 0x00265694;
+BrosBase::beginState_JumpSt() = 0x002658E0;
+BrosBase::executeState_JumpSt() = 0x002659D4;
+BrosBase::endState_JumpSt() = 0x002659D0;
+BrosBase::beginState_Jump() = 0x00265B00;
+BrosBase::executeState_Jump() = 0x00265BD8;
+BrosBase::endState_Jump() = 0x00265BC8;
+BrosBase::beginState_JumpEd() = 0x00265F6C;
+BrosBase::executeState_JumpEd() = 0x00266080;
+BrosBase::endState_JumpEd() = 0x0026607C;
+BrosBase::beginState_AirAttack() = 0x00265CA4;
+BrosBase::executeState_AirAttack() = 0x00265D08;
+BrosBase::endState_AirAttack() = 0x00265CE4;
+BrosBase::beginState_Down() = 0x002668FC;
+BrosBase::executeState_Down() = 0x00266A00;
+BrosBase::endState_Down() = 0x00266C90;
+BrosBase::vf2C4() = 0x00264430;
+BrosBase::getProjectileCreateFrame() = 0x00267548;
+BrosBase::getProjectileThrowFrame() = 0x00267554;
+BrosBase::setWalkingSpeed() = 0x00267560;
+BrosBase::vf2D4() = 0x00267564;
+BrosBase::getTextureId() = 0x0026756C;
+BrosBase::setWalkingTimer() = 0x00267574;
+BrosBase::vf2E0() = 0x00267578;
+BrosBase::vf2E4() = 0x00264FEC;
+BrosBase::vf2E8() = 0x0026758C;
+BrosBase::createProjectile() = 0x00267590;
+BrosBase::throwProjectile() = 0x00267594;
+BrosBase::setHopTimer() = 0x00267598;
+BrosBase::setHopSpeed() = 0x0026759C;
+BrosBase::doAirAttack() = 0x0026317C;
+BrosBase::vf300() = 0x002631B4;
+BrosBase::vf304() = 0x002631BC;
+BrosBase::doAttack() = 0x002631C4;
+BrosBase::setThrowAnimation() = 0x00265164;
+BrosBase::vf310() = 0x002631E8;
+BrosBase::vf314() = 0x002631F8;
+BrosBase::vf318() = 0x002631FC;
+BrosBase::vf31C() = 0x00263200;
+BrosBase::vf320() = 0x00263204;
+BrosBase::vf324() = 0x00263208;
+BrosBase::vf328() = 0x002675A0;
+BrosBase::vf32C() = 0x00266D64;
+BrosBase::vf330() = 0x0026320C;
+BrosBase::vf334() = 0x00263210;
+
+# FireballBase  [modbase/game/enemies/bros.h]
+FireballBase::FireballBase(void*) as C1 = 0x00135A90;
+FireballBase::FireballBase(void*) as C2 = 0x00135A90;
+FireballBase::onCreate() = 0x00135BD8;
+FireballBase::beforeExecute() = 0x00135DB0;
+FireballBase::onExecute() = 0x00135E48;
+FireballBase::onDraw() = 0x0013616C;
+FireballBase::onDelete() = 0x00136184;
+FireballBase::removeActiveColliders() = 0x001361B0;
+FireballBase::addActiveColliders() = 0x001361FC;
+FireballBase::vf65() = 0x0013625C;
+FireballBase::vf67() = 0x00136318;
+FireballBase::vfC0() = 0x001367B4;
+FireballBase::vfC8() = 0x001367B8;
+FireballBase::vfC4() = 0x001367BC;
+FireballBase::checkRTTI(void*) = 0x00136E60;
+FireballBase::getRTTI() = 0x00136EF0;
+FireballBase::~FireballBase() as D1 = 0x00136F64;
+FireballBase::~FireballBase() as D2 = 0x00136F64;
+FireballBase::~FireballBase() as D0 = 0x00136FF0;
+FireballBase::vf62() = 0x001371B4;
+FireballBase::vf63() = 0x001371BC;
+FireballBase::vf72() = 0x001371CC;
+
+# FireBros  [modbase/game/enemies/bros.h]
+FireBros::FireBros() as C1 = 0x002A9A68;
+FireBros::FireBros() as C2 = 0x002A9A68;
+FireBros::vf2D4() = 0x002A9A9C;
+FireBros::setWalkingSpeed() = 0x002A9AD0;
+FireBros::setHopTimer() = 0x002A9AFC;
+FireBros::getProjectileThrowFrame() = 0x002A9EA4;
+FireBros::checkDerivedRuntimeTypeInfo(void*) const = 0x002A9EB0;
+FireBros::getRuntimeTypeInfo() const = 0x002AA028;
+FireBros::~FireBros() as D0 = 0x002AA09C;
+FireBros::getTextureId() = 0x002AA14C;
+FireBros::setWalkingTimer() = 0x002AA154;
+FireBros::throwProjectile() = 0x002AA190;
+
+# HammerActor  [modbase/game/enemies/bros.h]
+# [hammer_suit; not in the generated game API] The hammer's thrown state. The held state's execute (sub_6013F218) switches to it
+# when the Bro lets go; its begin (sub_6013F3D8) sets the arc and enables the collider.
+HammerActor::StateID_Thrown = 0x00C87CE4;
+
+# HammerActor  [modbase/game/enemies/bros.h]
+HammerActor::setupModel() = 0x0013FCD4;
+
+# HammerBro  [modbase/game/enemies/bros.h]
+HammerBro::HammerBro() as C1 = 0x002CBB20;
+HammerBro::HammerBro() as C2 = 0x002CBB20;
+
+# HammerBros  [modbase/game/enemies/bros.h]
+HammerBros::vf2D4() = 0x002CBB8C;
+HammerBros::setWalkingSpeed() = 0x002CBBA4;
+HammerBros::vf300() = 0x002CBBD0;
+HammerBros::setHopTimer() = 0x002CBD14;
+HammerBros::setHopSpeed() = 0x002CBD58;
+HammerBros::vf2E8() = 0x002CBE30;
+HammerBros::throwProjectile() = 0x002CC124;
+HammerBros::createProjectile() = 0x002CC208;
+HammerBros::createHammer() = 0x002CC244;
+HammerBros::collisionIceball(int, int) = 0x002CC380;
+HammerBros::vf314() = 0x002CC3F8;
+HammerBros::doAttack() = 0x002CC608;
+HammerBros::setThrowAnimation() = 0x002CC650;
+HammerBros::setWalkingTimer() = 0x002CC6A0;
+HammerBros::getProjectileCreateFrame() = 0x002CC70C;
+HammerBros::getProjectileThrowFrame() = 0x002CC714;
+HammerBros::beginState_JumpSt() = 0x002CC71C;
+HammerBros::endState_JumpSt() = 0x002CC754;
+HammerBros::executeState_JumpSt() = 0x002CC758;
+HammerBros::beginState_AirAttack() = 0x002CC93C;
+HammerBros::endState_AirAttack() = 0x002CC97C;
+HammerBros::executeState_AirAttack() = 0x002CC9A0;
+HammerBros::vf324() = 0x002CCBE0;
+HammerBros::vf328() = 0x002CCBE4;
+HammerBros::vf330() = 0x002CCD70;
+HammerBros::vf334() = 0x002CCD74;
+HammerBros::checkDerivedRuntimeTypeInfo(void*) const = 0x002CCD78;
+HammerBros::getRuntimeTypeInfo() const = 0x002CCEF0;
+HammerBros::getTextureId() = 0x002CD014;
+HammerBros::vf2E0() = 0x002CD01C;
+HammerBros::doAirAttack() = 0x002CD030;
+HammerBros::vf318() = 0x002CD048;
+
+# IceBro  [modbase/game/enemies/bros.h]
+IceBro::IceBro() as C1 = 0x002F19F4;
+IceBro::IceBro() as C2 = 0x002F19F4;
+IceBro::vf181() = 0x002F1C84;
+IceBro::vf180() = 0x002F1C98;
+IceBro::vf189() = 0x002F1CC4;
+IceBro::vf80(int, int) = 0x002F1D08;
+IceBro::vf194() = 0x002F1F6C;
+IceBro::vf183() = 0x002F21C4;
+IceBro::vf179() = 0x002F2200;
+IceBro::vf203() = 0x002F220C;
+IceBro::vf0(void*) = 0x002F23B4;
+IceBro::vf1() = 0x002F252C;
+IceBro::vf3() = 0x002F25A0;
+IceBro::vf182() = 0x002F2650;
+IceBro::vf188() = 0x002F2658;
+IceBro::vf196() = 0x002F2664;
+
+# MegaHammer  [modbase/game/enemies/bros.h]
+MegaHammer::MegaHammer() as C1 = 0x00144B24;
+MegaHammer::MegaHammer() as C2 = 0x00144B24;
+
+# SledgeBro  [modbase/game/enemies/bros.h]
+SledgeBro::build() = 0x002D2E68;
+SledgeBro::SledgeBro(void*) as C1 = 0x002D5210;
+SledgeBro::SledgeBro(void*) as C2 = 0x002D5210;
+SledgeBro::onCreate() = 0x002D545C;
+SledgeBro::onExecute() = 0x002D5B50;
+SledgeBro::afterExecute(int) = 0x002D6000;
+SledgeBro::vfE0() = 0x002D6030;
+SledgeBro::onDraw() = 0x002D61FC;
+SledgeBro::vf270() = 0x002D6228;
+SledgeBro::onDelete() = 0x002D622C;
+SledgeBro::collisionPlayer(void*, void*) = 0x002D630C;
+SledgeBro::collisionStar(int, int) = 0x002D639C;
+SledgeBro::collisionYoshi(void*, void*) = 0x002D64FC;
+SledgeBro::vfC8(int, int) = 0x002D6548;
+SledgeBro::collisionGroundPound(int, int) = 0x002D6760;
+SledgeBro::vfD0() = 0x002D693C;
+SledgeBro::vfD4() = 0x002D69D0;
+SledgeBro::collisionIceball(int, int) = 0x002D6A88;
+SledgeBro::vfDC() = 0x002D6B00;
+SledgeBro::beginState_DieFumi() = 0x002D6B18;
+SledgeBro::endState_DieFumi() = 0x002D6C1C;
+SledgeBro::executeState_DieFumi() = 0x002D6C20;
+SledgeBro::beginState_DieFall() = 0x002D6C40;
+SledgeBro::endState_DieFall() = 0x002D6D38;
+SledgeBro::executeState_DieFall() = 0x002D6D3C;
+SledgeBro::killAtGoal() = 0x002D6D5C;
+SledgeBro::checkDerivedRuntimeTypeInfo(void*) const = 0x002D757C;
+SledgeBro::getRuntimeTypeInfo() const = 0x002D7680;
+SledgeBro::~SledgeBro() as D1 = 0x002D76F4;
+SledgeBro::~SledgeBro() as D2 = 0x002D76F4;
+SledgeBro::~SledgeBro() as D0 = 0x002D77BC;
+SledgeBro::removeActiveColliders() = 0x002D7888;
+SledgeBro::addActiveColliders() = 0x002D78FC;
+
+# SumoBro  [modbase/game/enemies/bros.h]
+SumoBro::StunPlayers() = 0x002D6764;
+
+# SumoBroLightning  [modbase/game/enemies/bros.h]
+SumoBroLightning::SumoBroLightning() as C1 = 0x00334BA4;
+SumoBroLightning::SumoBroLightning() as C2 = 0x00334BA4;
+SumoBroLightning::executeState_Down() = 0x00334CAC;
+SumoBroLightning::onCreate() = 0x00335270;
+SumoBroLightning::vf7() = 0x00335470;
+SumoBroLightning::vf8() = 0x00335484;
+SumoBroLightning::vf12() = 0x00335570;
+SumoBroLightning::vf49(int, int) = 0x00335604;
+SumoBroLightning::vf50(int, int) = 0x0033564C;
+SumoBroLightning::vf51(int, int) = 0x00335678;
+SumoBroLightning::vf52(int, int) = 0x003356A4;
+SumoBroLightning::vf53(int, int) = 0x003356D4;
+SumoBroLightning::vf54(int) = 0x00335704;
+SumoBroLightning::vf55() = 0x0033572C;
+SumoBroLightning::vf32() = 0x00335740;
+SumoBroLightning::vf0(void*) = 0x00335848;
+SumoBroLightning::vf1() = 0x003358D8;
+SumoBroLightning::vf2() = 0x0033594C;
+SumoBroLightning::vf3() = 0x003359D8;
+SumoBroLightning::vf56() = 0x00335A68;

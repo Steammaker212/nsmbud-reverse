@@ -1,0 +1,273 @@
+# Level objects: lifts, terrain, liquids and switches
+#
+# Addresses are RVAs (VA - 0x60000000). New Super Mario Bros. U Deluxe (Switch) v1.0.0 only.
+# Each group's tag says where its names are declared: [codedx] in the codedx headers
+# under include/, otherwise the header(s) holding the generated declarations. Names
+# tagged [framework/mods] on an entry are the ones a framework part or mod needs.
+# Constructors and destructors carry their C1/C2/D0/D1/D2 variant.
+
+# BgCenter  [modbase/game/objects/objects.h]
+BgCenter::BgCenter() as C1 = 0x0082D154;
+BgCenter::BgCenter() as C2 = 0x0082D154;
+BgCenter::checkDerivedRuntimeTypeInfo(void*) const = 0x0082D194;
+BgCenter::getRuntimeTypeInfo() const = 0x0082D294;
+BgCenter::~BgCenter() as D0 = 0x0082D308;
+
+# Chain  [modbase/game/objects/objects.h]
+Chain::Chain() as C1 = 0x006E4BE8;
+Chain::Chain() as C2 = 0x006E4BE8;
+
+# checkWaveCollision  [modbase/game/runtime/startup.h]
+game::checkWaveCollision(void*, void*) = 0x00151D34;
+
+# CloudTerrainActor  [modbase/game/objects/objects.h]
+CloudTerrainActor::CloudTerrainActor() as C1 = 0x005A77A8;
+CloudTerrainActor::CloudTerrainActor() as C2 = 0x005A77A8;
+CloudTerrainActor::vf5() = 0x005A77DC;
+CloudTerrainActor::vf49() = 0x005A7A64;
+CloudTerrainActor::vf50() = 0x005A7A74;
+CloudTerrainActor::vf0(void*) = 0x005A7A90;
+CloudTerrainActor::vf1() = 0x005A7B94;
+CloudTerrainActor::vf3() = 0x005A7C08;
+
+# createWaterSplash  [modbase/game/runtime/startup.h]
+game::createWaterSplash(void*) = 0x003EE2FC;
+game::createWaterSplash_helper(int, int, void*, int, int) = 0x003EF6E4;
+
+# FixedIcicle  [modbase/game/objects/objects.h]
+FixedIcicle::FixedIcicle() as C1 = 0x00623B7C;
+FixedIcicle::FixedIcicle() as C2 = 0x00623B7C;
+FixedIcicle::onCreate() = 0x00623DB4;
+FixedIcicle::onExecute() = 0x00623FA0;
+FixedIcicle::onDraw() = 0x00623FE4;
+FixedIcicle::onDelete() = 0x0062400C;
+FixedIcicle::removeActiveColliders() = 0x00624014;
+FixedIcicle::addActiveColliders() = 0x00624060;
+FixedIcicle::vf270() = 0x006240C0;
+FixedIcicle::vf274() = 0x006241AC;
+FixedIcicle::collisionPlayer(void*, void*) = 0x00624318;
+FixedIcicle::collisionGroundPound(int, int) = 0x0062436C;
+FixedIcicle::collisionGroundPoundYoshi(int, int) = 0x006243C4;
+FixedIcicle::collisionSlide(int, int) = 0x00624414;
+FixedIcicle::collisionStar() = 0x0062446C;
+FixedIcicle::vfA8() = 0x00624480;
+FixedIcicle::checkDerivedRuntimeTypeInfo(void*) const = 0x0062448C;
+FixedIcicle::getRuntimeTypeInfo() const = 0x00624590;
+FixedIcicle::~FixedIcicle() as D1 = 0x00624604;
+FixedIcicle::~FixedIcicle() as D2 = 0x00624604;
+FixedIcicle::~FixedIcicle() as D0 = 0x00624674;
+FixedIcicle::collisionThrowableObject() = 0x0062473C;
+
+# FlagSwitchBase  [modbase/game/objects/objects.h]
+FlagSwitchBase::FlagSwitchBase(void*) as C1 = 0x00603C0C;
+FlagSwitchBase::FlagSwitchBase(void*) as C2 = 0x00603C0C;
+FlagSwitchBase::onExecute() = 0x00603C6C;
+FlagSwitchBase::checkDerivedRuntimeTypeInfo(void*) const = 0x0060438C;
+FlagSwitchBase::getRuntimeTypeInfo() const = 0x0060441C;
+FlagSwitchBase::~FlagSwitchBase() as D0 = 0x00604490;
+
+# FlagSwitchRandom  [modbase/game/objects/objects.h]
+FlagSwitchRandom::build() = 0x00605F18;
+FlagSwitchRandom::onCreate() = 0x006060E0;
+FlagSwitchRandom::checkDerivedRuntimeTypeInfo(void*) const = 0x006061E0;
+FlagSwitchRandom::getRuntimeTypeInfo() const = 0x006062E4;
+FlagSwitchRandom::~FlagSwitchRandom() as D0 = 0x00606358;
+
+# FloatingBubble  [modbase/game/objects/objects.h]
+FloatingBubble::onCreate_helper(int, int) = 0x0015BDB8;
+FloatingBubble::FloatingBubble() as C1 = 0x00702B30;
+FloatingBubble::FloatingBubble() as C2 = 0x00702B30;
+FloatingBubble::onCreate() = 0x00703160;
+FloatingBubble::onCreate_helper_7035EC(int) = 0x007035EC;
+FloatingBubble::onExecute() = 0x007039A4;
+FloatingBubble::onDraw() = 0x00703C2C;
+FloatingBubble::vf0(void*) = 0x00704028;
+FloatingBubble::vf1() = 0x007040B8;
+FloatingBubble::vf2() = 0x0070412C;
+FloatingBubble::vf3() = 0x0070418C;
+
+# Lava  [modbase/game/objects/objects.h]
+Lava::Lava() as C1 = 0x005A7D30;
+Lava::Lava() as C2 = 0x005A7D30;
+Lava::onCreate() = 0x005A7D68;
+Lava::onCreate_helper() = 0x005A8104;
+Lava::vf49() = 0x005A8794;
+Lava::vf50() = 0x005A87B8;
+Lava::vf52() = 0x005A8AD4;
+Lava::vf8() = 0x005A8BA0;
+Lava::vf53() = 0x005A8BDC;
+Lava::vfDC() = 0x005A8BF8;
+Lava::vf56() = 0x005A9070;
+Lava::vfE8() = 0x005A909C;
+Lava::vf57() = 0x005A90A0;
+Lava::vf0(void*) = 0x005A90F8;
+Lava::vf1() = 0x005A91FC;
+Lava::vf3() = 0x005A9270;
+
+# LavaGeyser  [modbase/game/objects/objects.h]
+LavaGeyser::vf156() = 0x003E3B68;
+LavaGeyser::vf2() = 0x003E3D10;
+LavaGeyser::LavaGeyser() as C1 = 0x0070BA1C;
+LavaGeyser::LavaGeyser() as C2 = 0x0070BA1C;
+LavaGeyser::vf5() = 0x0070BD94;
+LavaGeyser::vf8() = 0x0070C198;
+LavaGeyser::vf12() = 0x0070C200;
+LavaGeyser::vf15() = 0x0070C29C;
+LavaGeyser::vf157() = 0x0070C2E0;
+LavaGeyser::vf158() = 0x0070C40C;
+LavaGeyser::vf159() = 0x0070C5A0;
+LavaGeyser::vf162() = 0x0070C72C;
+LavaGeyser::vf163() = 0x0070C77C;
+LavaGeyser::vf169() = 0x0070C984;
+LavaGeyser::vf171() = 0x0070C9F8;
+LavaGeyser::vf170() = 0x0070CA4C;
+LavaGeyser::vf172() = 0x0070CA9C;
+LavaGeyser::vf174() = 0x0070CB1C;
+LavaGeyser::vf173() = 0x0070CB70;
+LavaGeyser::vf175() = 0x0070CBC0;
+LavaGeyser::vf176() = 0x0070CBE8;
+LavaGeyser::vf178() = 0x0070CC54;
+LavaGeyser::vf179() = 0x0070CCB4;
+LavaGeyser::vf181() = 0x0070CE4C;
+LavaGeyser::vf182() = 0x0070CEC0;
+LavaGeyser::vf184() = 0x0070D02C;
+LavaGeyser::vf185() = 0x0070D068;
+LavaGeyser::vf187() = 0x0070D200;
+LavaGeyser::vf188() = 0x0070D240;
+LavaGeyser::vf3() = 0x0070D32C;
+LavaGeyser::vf42() = 0x0070D33C;
+LavaGeyser::vf161() = 0x0070D344;
+LavaGeyser::vf167() = 0x0070D360;
+LavaGeyser::vf168() = 0x0070D398;
+
+# Poison  [modbase/game/objects/objects.h]
+Poison::Poison() as C1 = 0x005A99EC;
+Poison::Poison() as C2 = 0x005A99EC;
+Poison::onCreate() = 0x005A9A20;
+Poison::vf49() = 0x005AA00C;
+Poison::vf50() = 0x005AA01C;
+Poison::onExecute() = 0x005AA034;
+Poison::vf52() = 0x005AA304;
+Poison::vf56() = 0x005AA3A8;
+Poison::vfE8() = 0x005AA3D4;
+Poison::vf57() = 0x005AA3D8;
+Poison::checkRTTI(void*) = 0x005AA430;
+Poison::getRTTI() = 0x005AA534;
+Poison::~Poison() as D0 = 0x005AA5A8;
+
+# Quicksand  [modbase/game/objects/objects.h]
+Quicksand::Quicksand() as C1 = 0x005AA770;
+Quicksand::Quicksand() as C2 = 0x005AA770;
+Quicksand::onCreate() = 0x005AA7A4;
+Quicksand::vf49() = 0x005AADDC;
+Quicksand::vf50() = 0x005AADEC;
+Quicksand::vf12() = 0x005AAE08;
+Quicksand::vf56() = 0x005AAE5C;
+Quicksand::vfE8() = 0x005AAE88;
+Quicksand::vf57() = 0x005AAE8C;
+Quicksand::vf0(void*) = 0x005AAF14;
+Quicksand::vf1() = 0x005AB018;
+Quicksand::vf3() = 0x005AB08C;
+
+# RollingHill  [modbase/game/objects/objects.h]
+RollingHill::RollingHill() as C1 = 0x006097C8;
+RollingHill::RollingHill() as C2 = 0x006097C8;
+RollingHill::onCreate() = 0x00609B28;
+RollingHill::updateModel() = 0x00609DC8;
+RollingHill::onExecute() = 0x00609FA4;
+RollingHill::onDraw() = 0x0060A354;
+RollingHill::checkRTTI(void*) = 0x0060A474;
+RollingHill::getRTTI() = 0x0060A5E8;
+RollingHill::~RollingHill() as D1 = 0x0060A65C;
+RollingHill::~RollingHill() as D2 = 0x0060A65C;
+RollingHill::~RollingHill() as D0 = 0x0060A68C;
+
+# RopeLadder  [modbase/game/objects/objects.h]
+RopeLadder::RopeLadder() as C1 = 0x0063568C;
+RopeLadder::RopeLadder() as C2 = 0x0063568C;
+RopeLadder::onCreate() = 0x00635CA8;
+RopeLadder::onExecute() = 0x00635E70;
+RopeLadder::onDraw() = 0x006360EC;
+RopeLadder::~RopeLadder() as D1 = 0x00636110;
+RopeLadder::~RopeLadder() as D2 = 0x00636110;
+RopeLadder::~RopeLadder() as D0 = 0x00636140;
+
+# Seaweed  [modbase/game/objects/objects.h]
+Seaweed::Seaweed() as C1 = 0x006D4C60;
+Seaweed::Seaweed() as C2 = 0x006D4C60;
+Seaweed::onCreate() = 0x006D4CA8;
+Seaweed::onExecute() = 0x006D4F08;
+Seaweed::onDraw() = 0x006D4F58;
+Seaweed::onDelete() = 0x006D4FB0;
+Seaweed::setupModels() = 0x006D4FB8;
+Seaweed::vf0(void*) = 0x006D5358;
+Seaweed::vf1() = 0x006D54CC;
+Seaweed::~Seaweed() as D0 = 0x006D5540;
+
+# SwingingVine  [modbase/game/objects/objects.h]
+SwingingVine::SwingingVine() as C1 = 0x006E4DB8;
+SwingingVine::SwingingVine() as C2 = 0x006E4DB8;
+
+# TerrainActor  [modbase/game/objects/objects.h]
+TerrainActor::updateModel() = 0x005A2C08;
+TerrainActor::draw() = 0x005A2C0C;
+TerrainActor::TerrainActor(void*) as C1 = 0x005A2E8C;
+TerrainActor::TerrainActor(void*) as C2 = 0x005A2E8C;
+TerrainActor::onExecute() = 0x005A4DEC;
+TerrainActor::onDraw() = 0x005A5098;
+TerrainActor::vfD4() = 0x005A548C;
+TerrainActor::vfDC() = 0x005A54A8;
+TerrainActor::vfD8() = 0x005A54AC;
+TerrainActor::vfE0() = 0x005A5594;
+TerrainActor::vfE8() = 0x005A55A8;
+TerrainActor::vfE4() = 0x005A55AC;
+TerrainActor::checkRTTi(void*) = 0x005A5660;
+TerrainActor::getRTTI() = 0x005A56F0;
+TerrainActor::~TerrainActor() as D1 = 0x005A5764;
+TerrainActor::~TerrainActor() as D2 = 0x005A5764;
+TerrainActor::~TerrainActor() as D0 = 0x005A5808;
+TerrainActor::vfC4() = 0x005A58B0;
+TerrainActor::vfC8() = 0x005A58B4;
+
+# TerrainEffects  [modbase/game/objects/objects.h]
+TerrainEffects::init_helper_helper_44C1FC(int, int, int, int, int) = 0x0044C1FC;
+TerrainEffects::draw_helper() = 0x0044C4AC;
+TerrainEffects::init_helper_helper_44E288(int, int, int) = 0x0044E288;
+TerrainEffects::vf0(void*) = 0x005A2D08;
+TerrainEffects::vf1() = 0x005A2D8C;
+TerrainEffects::TerrainEffects() as C1 = 0x00705470;
+TerrainEffects::TerrainEffects() as C2 = 0x00705470;
+TerrainEffects::init_helper(int, void*) = 0x007057F0;
+TerrainEffects::update() = 0x00705F6C;
+TerrainEffects::update_helper() = 0x00706440;
+TerrainEffects::update_helper_7067D8() = 0x007067D8;
+TerrainEffects::update_helper_helper_707290(int, int) = 0x00707290;
+TerrainEffects::draw() = 0x00707390;
+TerrainEffects::init_helper_helper_707504() = 0x00707504;
+TerrainEffects::init_helper_helper_707734(void*, void*) = 0x00707734;
+
+# TorchFlame  [modbase/game/objects/objects.h]
+TorchFlame::TorchFlame() as C1 = 0x006E813C;
+TorchFlame::TorchFlame() as C2 = 0x006E813C;
+
+# TrampolineCloud  [modbase/game/objects/objects.h]
+TrampolineCloud::TrampolineCloud() as C1 = 0x006EDB24;
+TrampolineCloud::TrampolineCloud() as C2 = 0x006EDB24;
+TrampolineCloud::vf8() = 0x006EE364;
+TrampolineCloud::vf12() = 0x006EE4D8;
+TrampolineCloud::vf0(void*) = 0x006EE524;
+TrampolineCloud::vf1() = 0x006EE5B4;
+TrampolineCloud::vf2() = 0x006EE628;
+TrampolineCloud::vf3() = 0x006EE688;
+
+# Water  [modbase/game/objects/objects.h]
+Water::Water() as C1 = 0x005AB254;
+Water::Water() as C2 = 0x005AB254;
+Water::onExecute_helper() = 0x005AC130;
+Water::onDraw_helper() = 0x005AC470;
+Water::vf49() = 0x005AC6A4;
+Water::onExecute() = 0x005AC75C;
+Water::onDraw() = 0x005AC930;
+Water::checkRTTI(void*) = 0x005ACA40;
+Water::getRTTI() = 0x005ACB44;
+Water::~Water() as D0 = 0x005ACBB8;

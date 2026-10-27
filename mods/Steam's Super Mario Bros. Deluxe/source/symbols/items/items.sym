@@ -1,0 +1,133 @@
+# Items, coins and power-ups
+#
+# Addresses are RVAs (VA - 0x60000000). New Super Mario Bros. U Deluxe (Switch) v1.0.0 only.
+# Each group's tag says where its names are declared: [codedx] in the codedx headers
+# under include/, otherwise the header(s) holding the generated declarations. Names
+# tagged [framework/mods] on an entry are the ones a framework part or mod needs.
+# Constructors and destructors carry their C1/C2/D0/D1/D2 variant.
+
+# ActorCoin  [modbase/game/items/items.h]
+ActorCoin::create() = 0x00576EEC;
+
+# CoinBase  [modbase/game/items/items.h]
+CoinBase::CoinBase(int) as C1 = 0x00579890;
+CoinBase::CoinBase(int) as C2 = 0x00579890;
+CoinBase::onExecute() = 0x00579BA0;
+CoinBase::onDraw() = 0x00579EE0;
+CoinBase::vf154() = 0x00579F9C;
+CoinBase::vf164() = 0x00579FB0;
+CoinBase::vfA0(int) = 0x0057A134;
+CoinBase::damageFromUnder() = 0x0057A1D4;
+CoinBase::vf8C() = 0x0057A650;
+CoinBase::vf90(float) = 0x0057A668;
+CoinBase::splashWater(int) = 0x0057AB10;
+CoinBase::splashLava(int) = 0x0057AB58;
+CoinBase::splashLavaWave(int) = 0x0057ABAC;
+CoinBase::splashPoison(int) = 0x0057AC00;
+CoinBase::vf16C() = 0x0057AF9C;
+CoinBase::vf174() = 0x0057B10C;
+CoinBase::vf180() = 0x0057B3D8;
+CoinBase::vf17C() = 0x0057B3DC;
+CoinBase::vf168() = 0x0057B8AC;
+CoinBase::checkDerivedRuntimeTypeInfo(void*) const = 0x0057B8F8;
+CoinBase::getRuntimeTypeInfo() const = 0x0057BA70;
+CoinBase::~CoinBase() as D0 = 0x0057BAE4;
+
+# FireFlower  [modbase/game/items/items.h]
+# [hammer_suit; not in the generated game API] The Fire Flower's ActorInfo, as registerProfile_faiyafurawa (0x6045E25C) passes it.
+FireFlower::actorInfo = 0x00B02594;
+
+# Item  [modbase/game/items/items.h]
+# [p_acorn. Evidence: ledger F0020, F0045] The item grant helper every power-up item calls: (item, &result, mode, contact).
+# Returns 1 when collected; result 1 = mode changed, 2 = already had it.
+Item::grantMode(int*, int, int) = 0x00463998;
+# [p_acorn. Evidence: ledger F0020, F0045] Collect feedback: sound, rumble, score (corpus: SE_PLY_GET_ITEM_AGAIN_ref).
+Item::grantFeedback(int, unsigned int) = 0x00463CD0;
+
+# Item  [modbase/game/items/items.h]
+Item::playAppearSound_461C50() = 0x00461C50;
+Item::loadKinokoSwitch_46DD80() = 0x0046DD80;
+Item::loadMusasabi_470B10() = 0x00470B10;
+
+# ItemNameTable  [modbase/game/items/items.h]
+ItemNameTable::init() = 0x0045CC68;
+ItemNameTable::build() = 0x004F2044;
+
+# MovementBlockCoinBase  [modbase/game/items/items.h]
+MovementBlockCoinBase::MovementBlockCoinBase(void*) as C1 = 0x005CFA04;
+MovementBlockCoinBase::MovementBlockCoinBase(void*) as C2 = 0x005CFA04;
+MovementBlockCoinBase::vfEC() = 0x005D009C;
+MovementBlockCoinBase::vf150() = 0x005D00FC;
+MovementBlockCoinBase::spawnItemUp() = 0x005D0A80;
+MovementBlockCoinBase::spawnItemDown() = 0x005D0AA4;
+MovementBlockCoinBase::checkDerivedRuntimeTypeInfo(void*) const = 0x005D0AB0;
+MovementBlockCoinBase::getRuntimeTypeInfo() const = 0x005D0BB4;
+MovementBlockCoinBase::~MovementBlockCoinBase() as D0 = 0x005D0C28;
+
+# RedCoin  [modbase/game/items/items.h]
+RedCoin::vf2() = 0x00617680;
+RedCoin::vf49() = 0x0061772C;
+RedCoin::vf50() = 0x00617734;
+RedCoin::RedCoin() as C1 = 0x006C4EA8;
+RedCoin::RedCoin() as C2 = 0x006C4EA8;
+RedCoin::onCreate() = 0x006C4ED8;
+RedCoin::vf0(void*) = 0x006C51EC;
+RedCoin::vf1() = 0x006C52F0;
+RedCoin::vf3() = 0x006C5364;
+RedCoin::onExecute() = 0x006C79A0;
+RedCoin::vf12() = 0x006C7DF0;
+RedCoin::vf15() = 0x006C7E44;
+RedCoin::vf32() = 0x006C7E4C;
+RedCoin::vf51() = 0x006C931C;
+RedCoin::vfD4() = 0x006C932C;
+RedCoin::vf52() = 0x006C9330;
+RedCoin::vf54() = 0x006C940C;
+RedCoin::vfE0() = 0x006C946C;
+RedCoin::vf55(float) = 0x006C9470;
+
+# SpinningStar  [modbase/game/items/items.h]
+SpinningStar::SpinningStar() as C1 = 0x006720B0;
+SpinningStar::SpinningStar() as C2 = 0x006720B0;
+SpinningStar::onCreate() = 0x00672AAC;
+SpinningStar::onExecute() = 0x00673140;
+SpinningStar::onExecute_helper() = 0x00673344;
+SpinningStar::onDraw() = 0x0067348C;
+SpinningStar::checkRTTI(void*) = 0x006736AC;
+SpinningStar::getRTTI() = 0x0067373C;
+SpinningStar::~SpinningStar() as D1 = 0x006737B0;
+SpinningStar::~SpinningStar() as D2 = 0x006737B0;
+SpinningStar::~SpinningStar() as D0 = 0x00673800;
+SpinningStar::ctor_helper() = 0x00673858;
+SpinningStar::onExecute_helper_674470(void*) = 0x00674470;
+
+# StarCoin  [modbase/game/items/items.h]
+StarCoin::StarCoin() as C1 = 0x005F357C;
+StarCoin::StarCoin() as C2 = 0x005F357C;
+StarCoin::onCreate() = 0x005F35CC;
+StarCoin::onExecute() = 0x005F3714;
+StarCoin::vf0(void*) = 0x005F38D0;
+StarCoin::vf1() = 0x005F39D4;
+StarCoin::~StarCoin() as D0 = 0x005F3A48;
+
+# StarCoinBase  [modbase/game/items/items.h]
+StarCoinBase::vf39() = 0x005F3A7C;
+StarCoinBase::vfC4() = 0x005F3A84;
+StarCoinBase::vfC8() = 0x005F3A88;
+StarCoinBase::vfD0() = 0x005F3A8C;
+StarCoinBase::StarCoinBase(void*) as C1 = 0x005F3B14;
+StarCoinBase::StarCoinBase(void*) as C2 = 0x005F3B14;
+StarCoinBase::onDraw() = 0x005F485C;
+StarCoinBase::onDelete() = 0x005F4884;
+StarCoinBase::updateModel() = 0x005F488C;
+StarCoinBase::vf32() = 0x005F4A14;
+StarCoinBase::vf51() = 0x005F4AD4;
+StarCoinBase::vf40(int) = 0x005F52FC;
+StarCoinBase::checkRTTI(void*) = 0x005F5510;
+StarCoinBase::getRTTI() = 0x005F55A0;
+StarCoinBase::~StarCoinBase() as D0 = 0x005F5614;
+StarCoinBase::onCreate() = 0x005F5648;
+StarCoinBase::onExecute() = 0x005F5650;
+
+# TreasureChest  [modbase/game/items/items.h]
+TreasureChest::TreasureChest() as C1 = 0x006D9D10;
+TreasureChest::TreasureChest() as C2 = 0x006D9D10;

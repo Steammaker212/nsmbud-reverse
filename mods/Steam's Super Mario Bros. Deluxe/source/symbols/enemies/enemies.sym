@@ -1,0 +1,594 @@
+# Individual enemies
+#
+# Addresses are RVAs (VA - 0x60000000). New Super Mario Bros. U Deluxe (Switch) v1.0.0 only.
+# Each group's tag says where its names are declared: [codedx] in the codedx headers
+# under include/, otherwise the header(s) holding the generated declarations. Names
+# tagged [framework/mods] on an entry are the ones a framework part or mod needs.
+# Constructors and destructors carry their C1/C2/D0/D1/D2 variant.
+
+# Amp  [modbase/game/enemies/enemies.h]
+Amp::Amp() as C1 = 0x00258228;
+Amp::Amp() as C2 = 0x00258228;
+Amp::onExecute() = 0x00258D50;
+Amp::onDraw() = 0x00259018;
+Amp::vf270() = 0x00259044;
+Amp::onDelete() = 0x00259048;
+Amp::vf274() = 0x00259050;
+Amp::vfD0() = 0x002591AC;
+Amp::collisionFireball(int, int) = 0x00259234;
+Amp::collisionPlayer(void*, void*) = 0x00259298;
+Amp::collisionPenguinSlide(int, int) = 0x002593EC;
+Amp::collisionYoshi(int, int) = 0x002594D4;
+Amp::beginState_DieFall() = 0x00259560;
+Amp::endState_DieFall() = 0x0025974C;
+Amp::executeState_DieFall() = 0x00259750;
+Amp::checkDerivedRuntimeTypeInfo(void*) const = 0x00259A58;
+Amp::getRuntimeTypeInfo() const = 0x00259B5C;
+Amp::~Amp() as D1 = 0x00259BD0;
+Amp::~Amp() as D2 = 0x00259BD0;
+Amp::~Amp() as D0 = 0x00259C7C;
+Amp::vf120() = 0x00259D2C;
+Amp::collisionGroundPound() = 0x00259D34;
+Amp::collisionPipeCannon() = 0x00259D3C;
+
+# BanzaiBill  [modbase/game/enemies/enemies.h]
+BanzaiBill::vf2() = 0x0032089C;
+BanzaiBill::vf18() = 0x00320A78;
+BanzaiBill::vf19() = 0x00320B4C;
+BanzaiBill::vf56() = 0x00320D1C;
+BanzaiBill::vf79(int, int) = 0x00320D28;
+BanzaiBill::vf42(void*) = 0x00320F00;
+BanzaiBill::initColliders() = 0x003212E0;
+BanzaiBill::initColliders_helper() = 0x0032166C;
+BanzaiBill::vf160() = 0x00321950;
+BanzaiBill::vf111() = 0x00322180;
+BanzaiBill::vf112() = 0x00322208;
+BanzaiBill::vf114() = 0x00322240;
+BanzaiBill::vf115() = 0x00322278;
+BanzaiBill::vf138() = 0x003222E4;
+BanzaiBill::vf139() = 0x003222F8;
+BanzaiBill::vf66(void*, void*) = 0x0032232C;
+BanzaiBill::vf67(void*, void*) = 0x00322534;
+BanzaiBill::vf64(void*, void*) = 0x00322D28;
+BanzaiBill::vf73(int, int) = 0x00322D98;
+BanzaiBill::vf74(int, int) = 0x00322DCC;
+BanzaiBill::vf71(int, int) = 0x00322E00;
+BanzaiBill::vf15() = 0x003231CC;
+BanzaiBill::vf54() = 0x00323200;
+BanzaiBill::vf53() = 0x00323254;
+BanzaiBill::vf26() = 0x00323280;
+BanzaiBill::vf27(void*) = 0x003232E8;
+BanzaiBill::vf28(void*) = 0x0032337C;
+BanzaiBill::vf30(void*) = 0x00323410;
+BanzaiBill::vf0(void*) = 0x003234A4;
+BanzaiBill::vf1() = 0x003235A8;
+BanzaiBill::BanzaiBill() as C1 = 0x0032A740;
+BanzaiBill::BanzaiBill() as C2 = 0x0032A740;
+BanzaiBill::vf156() = 0x0032A930;
+BanzaiBill::vf161() = 0x0032A938;
+BanzaiBill::vf8() = 0x0032AC6C;
+BanzaiBill::vf12() = 0x0032AC70;
+BanzaiBill::vf157() = 0x0032AC74;
+BanzaiBill::vf3() = 0x0032ADF8;
+BanzaiBill::vf159() = 0x0032AEE8;
+
+# BigBoo  [modbase/game/enemies/enemies.h]
+BigBoo::onCreate_helper() = 0x0000A3F8;
+BigBoo::BigBoo() as C1 = 0x003AC538;
+BigBoo::BigBoo() as C2 = 0x003AC538;
+BigBoo::vf156() = 0x003AC898;
+BigBoo::onCreate_helper_3ACE60() = 0x003ACE60;
+BigBoo::onExecute() = 0x003AD5C4;
+BigBoo::vf12() = 0x003AD820;
+BigBoo::vf15() = 0x003AD8AC;
+BigBoo::vf26() = 0x003ADD4C;
+BigBoo::vf66(int, int) = 0x003AE9D8;
+BigBoo::vf73(int, int) = 0x003AECB8;
+BigBoo::vf74(int, int) = 0x003AEDA0;
+BigBoo::vf71(int, int) = 0x003AF02C;
+BigBoo::vf84(int, int) = 0x003AF114;
+BigBoo::vf0(void*) = 0x003AF360;
+BigBoo::vf1() = 0x003AF464;
+BigBoo::vf2() = 0x003AF4D8;
+BigBoo::vf3() = 0x003AF5AC;
+BigBoo::vf78() = 0x003AF684;
+BigBoo::vf79(int, int) = 0x003AF68C;
+BigBoo::vf80(int, int) = 0x003AF6F0;
+BigBoo::vf85() = 0x003AF704;
+BigBoo::onCreate_helper_423EBC(int) = 0x00423EBC;
+
+# BillBlaster  [modbase/game/enemies/enemies.h]
+BillBlaster::BillBlaster() as C1 = 0x00324218;
+BillBlaster::BillBlaster() as C2 = 0x00324218;
+BillBlaster::onDraw() = 0x00326148;
+BillBlaster::onDelete() = 0x00326298;
+BillBlaster::checkRTTI(void*) = 0x00327264;
+BillBlaster::getRTTI() = 0x003272F4;
+BillBlaster::~BillBlaster() as D1 = 0x00327368;
+BillBlaster::~BillBlaster() as D2 = 0x00327368;
+BillBlaster::~BillBlaster() as D0 = 0x003273B8;
+
+# BobOmb  [codedx]
+BobOmb::StateID_Kicked = 0x00C8E250;
+
+# BobOmb  [code/tweaks/bob_omb.cpp]
+BobOmb::create() = 0x0025A014;
+BobOmb::BobOmb(void*) as C1 = 0x0025CEBC;
+BobOmb::BobOmb(void*) as C2 = 0x0025CEBC;
+BobOmb::onCreate() = 0x0025D0D8;
+BobOmb::setupModel() = 0x0025D3C8;
+BobOmb::decideFirstState() = 0x0025D528;
+BobOmb::onCreate_helper() = 0x0025D704;
+BobOmb::onExecute() = 0x0025DB1C;
+BobOmb::onDraw() = 0x0025DFC4;
+BobOmb::onDelete() = 0x0025E020;
+BobOmb::vf65(int, int) = 0x0025E45C;
+BobOmb::vf156(int) = 0x0025E718;
+BobOmb::vf158(int) = 0x0025E874;
+BobOmb::vf94(int) = 0x0025E91C;
+BobOmb::vf159(int, int) = 0x0025E9EC;
+BobOmb::vf67(int, void*) = 0x0025EC94;
+BobOmb::vf73(int, int) = 0x0025EE10;
+BobOmb::vf74(int, int) = 0x0025EF5C;
+BobOmb::vf79(int, int) = 0x0025EFC4;
+BobOmb::vf82(int, int) = 0x0025F188;
+BobOmb::vf80(int, int) = 0x0025F29C;
+BobOmb::vf71() = 0x0025F32C;
+BobOmb::vf64(void*, int) = 0x0025F338;
+BobOmb::vf55() = 0x0025F7B8;
+BobOmb::vf32() = 0x0025F7D8;
+BobOmb::vf162(int, int) = 0x0025F9BC;
+BobOmb::vf168() = 0x002602E8;
+BobOmb::vf170() = 0x00260418;
+BobOmb::vf169() = 0x00260428;
+BobOmb::vf165() = 0x00260684;
+BobOmb::vf167() = 0x00260724;
+BobOmb::vf166() = 0x0026074C;
+BobOmb::vf171() = 0x00260844;
+BobOmb::vf173() = 0x00260964;
+BobOmb::vf172() = 0x0026097C;
+BobOmb::vf153() = 0x00260C10;
+BobOmb::vf155() = 0x00260C28;
+BobOmb::vf114() = 0x00260C50;
+BobOmb::vf26() = 0x00260C84;
+BobOmb::vf27(void*) = 0x00260CD0;
+BobOmb::vf28(void*) = 0x00260CFC;
+BobOmb::vf30(void*) = 0x00260D28;
+BobOmb::vf174(int, void*) = 0x00260D54;
+BobOmb::vf46(float) = 0x00261000;
+BobOmb::vf49() = 0x00261020;
+BobOmb::vf163() = 0x002610E4;
+BobOmb::vf164() = 0x002610FC;
+BobOmb::vf0(void*) = 0x00261114;
+BobOmb::vf1() = 0x0026128C;
+BobOmb::vf3() = 0x00261300;
+BobOmb::onDelete_helper() = 0x00271E38;
+
+# BooCircle  [modbase/game/enemies/enemies.h]
+BooCircle::BooCircle() as C1 = 0x003B2268;
+BooCircle::BooCircle() as C2 = 0x003B2268;
+BooCircle::onCreate() = 0x003B2328;
+BooCircle::onExecute() = 0x003B2604;
+BooCircle::onDraw() = 0x003B2688;
+BooCircle::vf49(void*, unsigned int) = 0x003B2728;
+BooCircle::checkRTTI(void*) = 0x003B2A64;
+BooCircle::getRTTI() = 0x003B2AF4;
+BooCircle::~BooCircle() as D1 = 0x003B2B68;
+BooCircle::~BooCircle() as D2 = 0x003B2B68;
+BooCircle::~BooCircle() as D0 = 0x003B2B98;
+
+# CooliganSunglasses  [modbase/game/enemies/enemies.h]
+CooliganSunglasses::CooliganSunglasses() as C1 = 0x0036B7E0;
+CooliganSunglasses::CooliganSunglasses() as C2 = 0x0036B7E0;
+
+# DryBones  [modbase/game/enemies/enemies.h]
+DryBones::DryBones() as C1 = 0x00311E10;
+DryBones::DryBones() as C2 = 0x00311E10;
+DryBones::beginState_Walk() = 0x00312034;
+DryBones::endState_Walk() = 0x003124F4;
+DryBones::beginState_Turn() = 0x003124F8;
+DryBones::executeState_Turn() = 0x00312618;
+DryBones::endState_Turn() = 0x00312764;
+DryBones::onDraw() = 0x00314D30;
+DryBones::onDelete() = 0x00314E3C;
+DryBones::vfE0() = 0x00314E44;
+DryBones::collisionEnemy() = 0x003158DC;
+DryBones::collisionPlayer(void*, void*) = 0x00315B68;
+DryBones::collisionYoshi(void*, void*) = 0x00315EDC;
+DryBones::collisionGroundPound(int, int) = 0x00316408;
+DryBones::collisionGroundPoundYoshi(int, int) = 0x00316454;
+DryBones::collisionFireball(int, int) = 0x003164A0;
+DryBones::collisionIceball() = 0x00316504;
+DryBones::collisionPropellerDrill(int, int) = 0x003165C8;
+DryBones::collisionSlide(int, int) = 0x00316614;
+DryBones::collisionThrowableObject(int, int) = 0x003167C4;
+DryBones::damageFromUnder() = 0x00316828;
+DryBones::vf188(int) = 0x003169DC;
+DryBones::vf190(int) = 0x00316AA0;
+DryBones::vf19C(int) = 0x00316B64;
+DryBones::vfD0() = 0x00316C28;
+DryBones::vfD4() = 0x00316D2C;
+DryBones::vfD8() = 0x00316E0C;
+DryBones::checkCollapse() = 0x00316E28;
+DryBones::addActiveColliders() = 0x0031755C;
+DryBones::removeActiveColliders() = 0x00317698;
+DryBones::vf1F8() = 0x00317A88;
+DryBones::vf200() = 0x00317A8C;
+DryBones::vf1FC() = 0x00317A90;
+DryBones::beginState_DieFall() = 0x00317A94;
+DryBones::endState_DieFall() = 0x00317CD0;
+DryBones::checkDerivedRuntimeTypeInfo(void*) const = 0x00317E3C;
+DryBones::getRuntimeTypeInfo() const = 0x00317F40;
+DryBones::~DryBones() as D1 = 0x00317FB4;
+DryBones::~DryBones() as D2 = 0x00317FB4;
+DryBones::~DryBones() as D0 = 0x00318040;
+DryBones::vfB4() = 0x003180D0;
+
+# FireSnake  [modbase/game/enemies/enemies.h]
+FireSnake::build() = 0x002AA284;
+FireSnake::FireSnake(void*) as C1 = 0x002ABDE8;
+FireSnake::FireSnake(void*) as C2 = 0x002ABDE8;
+FireSnake::onCreate() = 0x002AC064;
+FireSnake::onExecute() = 0x002ACA38;
+FireSnake::onDraw() = 0x002AD3D0;
+FireSnake::onDelete() = 0x002AD518;
+FireSnake::splashWater(void*) = 0x002AD530;
+FireSnake::splashLava(void*) = 0x002AD5B4;
+FireSnake::splashPoison(void*) = 0x002AD5E0;
+FireSnake::removeActiveColliders() = 0x002AD664;
+FireSnake::collisionIceball(int, int) = 0x002AD780;
+FireSnake::vf150(int, int) = 0x002AD7E8;
+FireSnake::beginState_DieFall() = 0x002ADB68;
+FireSnake::endState_DieFall() = 0x002ADCFC;
+FireSnake::executeState_DieFall() = 0x002ADD00;
+FireSnake::checkDerivedRuntimeTypeInfo(void*) const = 0x002AE6E4;
+FireSnake::getRuntimeTypeInfo() const = 0x002AE7E8;
+FireSnake::~FireSnake() as D1 = 0x002AE85C;
+FireSnake::~FireSnake() as D2 = 0x002AE85C;
+FireSnake::~FireSnake() as D0 = 0x002AE908;
+FireSnake::collisionGroundPound() = 0x002AE9B8;
+FireSnake::collisionFireball(int, int) = 0x002AE9C0;
+
+# Fuzzy  [modbase/game/enemies/enemies.h]
+Fuzzy::Fuzzy() as C1 = 0x00275378;
+Fuzzy::Fuzzy() as C2 = 0x00275378;
+Fuzzy::onCreate() = 0x0027650C;
+Fuzzy::setupModel() = 0x00276D00;
+Fuzzy::beforeExecute() = 0x0027730C;
+Fuzzy::onExecute() = 0x0027733C;
+Fuzzy::onDraw() = 0x0027767C;
+Fuzzy::onDelete() = 0x002776B8;
+Fuzzy::vfE0() = 0x00277760;
+Fuzzy::vfD4() = 0x002778CC;
+Fuzzy::collisionPlayer(int, int) = 0x00277BD4;
+Fuzzy::collisionYoshi(void*, void*) = 0x00277C98;
+Fuzzy::collisionGroundPound(int, int) = 0x00277D34;
+Fuzzy::vf270(int, int) = 0x00277DFC;
+Fuzzy::collisionPenguinSlide(int, int) = 0x00277EC4;
+Fuzzy::collisionGroundPoundYoshi(int, int) = 0x00277F8C;
+Fuzzy::killAtGoal() = 0x00277FD4;
+Fuzzy::addActiveColliders() = 0x0027820C;
+Fuzzy::removeActiveColliders() = 0x0027826C;
+Fuzzy::splashWater(void*) = 0x002782F0;
+Fuzzy::splashPoison(void*) = 0x00278364;
+Fuzzy::splashLava(void*) = 0x002783A0;
+Fuzzy::beginState_DieFall() = 0x002783DC;
+Fuzzy::endState_DieFall() = 0x00278458;
+Fuzzy::executeState_DieFall() = 0x0027845C;
+Fuzzy::vf210() = 0x002784D8;
+Fuzzy::vf218() = 0x00278534;
+Fuzzy::vf214() = 0x00278538;
+Fuzzy::vf234() = 0x0027853C;
+Fuzzy::vf23C() = 0x00278598;
+Fuzzy::vf238() = 0x0027859C;
+Fuzzy::vf264() = 0x002785A0;
+Fuzzy::vf26C() = 0x0027861C;
+Fuzzy::vf268() = 0x00278620;
+Fuzzy::checkDerivedRuntimeTypeInfo(void*) const = 0x0027869C;
+Fuzzy::getRuntimeTypeInfo() const = 0x002787A0;
+Fuzzy::~Fuzzy() as D1 = 0x00278814;
+Fuzzy::~Fuzzy() as D2 = 0x00278814;
+Fuzzy::~Fuzzy() as D0 = 0x002788C0;
+Fuzzy::vfB8() = 0x00278970;
+Fuzzy::vfDC() = 0x002789DC;
+Fuzzy::collisionSlide() = 0x00278B30;
+Fuzzy::collisionPropellerDrill() = 0x00278B38;
+Fuzzy::vf180() = 0x00278B40;
+
+# Kanibo  [modbase/game/enemies/enemies.h]
+Kanibo::Kanibo() as C1 = 0x0030E308;
+Kanibo::Kanibo() as C2 = 0x0030E308;
+Kanibo::beginState_Wait() = 0x0030E498;
+Kanibo::executeState_Wait() = 0x0030E4AC;
+Kanibo::endState_Wait() = 0x0030E72C;
+Kanibo::beginState_RockUp() = 0x0030E73C;
+Kanibo::executeState_RockUp() = 0x0030E7A0;
+Kanibo::endState_RockUp() = 0x0030E968;
+Kanibo::beginState_Jump() = 0x0030E970;
+Kanibo::executeState_Jump() = 0x0030E9CC;
+Kanibo::endState_Jump() = 0x0030EB74;
+Kanibo::beginState_BackMove() = 0x0030EB78;
+Kanibo::executeState_BackMove() = 0x0030EC88;
+Kanibo::endState_BackMove() = 0x0030EE10;
+Kanibo::onCreate() = 0x0030F220;
+Kanibo::createModel() = 0x0030F3C0;
+Kanibo::updateModelMatrix() = 0x0030F544;
+Kanibo::onExecute() = 0x0030F798;
+Kanibo::onDraw() = 0x0030FC38;
+Kanibo::collisionPlayer(void*, void*) = 0x0030FC64;
+Kanibo::collisionYoshi(void*, int) = 0x0030FCFC;
+Kanibo::vf184(void*) = 0x0030FD54;
+Kanibo::vfD0() = 0x0030FD8C;
+Kanibo::vfDC() = 0x0030FE98;
+Kanibo::setTamaAction(int) = 0x0030FEB0;
+Kanibo::vf264() = 0x00310008;
+Kanibo::vf26C() = 0x00310024;
+Kanibo::vf268() = 0x00310028;
+Kanibo::beginState_DieFall() = 0x00310044;
+Kanibo::beginState_DieFumi() = 0x003100CC;
+Kanibo::endState_DieFall() = 0x00310154;
+Kanibo::executeState_DieFall() = 0x00310158;
+Kanibo::endState_DieFumi() = 0x0031017C;
+Kanibo::executeState_DieFumi() = 0x00310180;
+Kanibo::killAtGoal() = 0x00310320;
+Kanibo::splashWater(void*) = 0x00310370;
+Kanibo::splashLava(void*) = 0x0031039C;
+Kanibo::splashPoison(void*) = 0x003103C8;
+Kanibo::checkDerivedRuntimeTypeInfo(void*) const = 0x003103F4;
+Kanibo::getRuntimeTypeInfo() const = 0x003104F8;
+Kanibo::~Kanibo() as D0 = 0x0031056C;
+Kanibo::vfE0() = 0x003105C0;
+
+# KaniboTama  [modbase/game/enemies/enemies.h]
+KaniboTama::KaniboTama() as C1 = 0x00310638;
+KaniboTama::KaniboTama() as C2 = 0x00310638;
+KaniboTama::beginState_Unk1() = 0x00310718;
+KaniboTama::executeState_Unk1() = 0x003107EC;
+KaniboTama::endState_Unk1() = 0x0031098C;
+KaniboTama::beginState_Unk2() = 0x00310990;
+KaniboTama::executeState_Unk2() = 0x00310A2C;
+KaniboTama::endState_Unk2() = 0x00310AA8;
+KaniboTama::beginState_Unk3() = 0x00310AAC;
+KaniboTama::executeState_Unk3() = 0x00310ABC;
+KaniboTama::endState_Unk3() = 0x00310B48;
+KaniboTama::onCreate() = 0x00310B4C;
+KaniboTama::updateModel() = 0x00310CF4;
+KaniboTama::onExecute() = 0x00310EC4;
+KaniboTama::onDraw() = 0x00310F30;
+KaniboTama::damageFromUnder() = 0x00310F6C;
+KaniboTama::sub_60310F74(int) = 0x00310F74;
+KaniboTama::killAtGoal() = 0x003110E4;
+KaniboTama::vf8C() = 0x0031117C;
+KaniboTama::vf90(float) = 0x0031119C;
+KaniboTama::vf188(int) = 0x003116EC;
+KaniboTama::vf190(int) = 0x00311840;
+KaniboTama::checkDerivedRuntimeTypeInfo(void*) const = 0x003119AC;
+KaniboTama::getRuntimeTypeInfo() const = 0x00311AB0;
+KaniboTama::~KaniboTama() as D1 = 0x00311B24;
+KaniboTama::~KaniboTama() as D2 = 0x00311B24;
+KaniboTama::~KaniboTama() as D0 = 0x00311BB4;
+KaniboTama::vf94() = 0x00311C48;
+KaniboTama::isOnGround() = 0x00311C54;
+KaniboTama::vf178() = 0x00311C5C;
+KaniboTama::vf180() = 0x00311C60;
+
+# KoopaTroopa  [codedx]
+KoopaTroopa::StateID_Slide = 0x00C953E8;
+
+# KoopaTroopa  [code/tweaks/koopa_troopa.cpp]
+KoopaTroopa::KoopaTroopa() as C1 = 0x0035851C;
+KoopaTroopa::KoopaTroopa() as C2 = 0x0035851C;
+KoopaTroopa::onCreate() = 0x00359D98;
+KoopaTroopa::onCreate_helper() = 0x0035A168;
+KoopaTroopa::onCreate_helper_35A5CC() = 0x0035A5CC;
+KoopaTroopa::beforeExecute() = 0x0035A73C;
+KoopaTroopa::beforeExecute_helper() = 0x0035A898;
+KoopaTroopa::onExecute() = 0x0035A97C;
+KoopaTroopa::onExecute_helper() = 0x0035ABA0;
+KoopaTroopa::onDraw() = 0x0035B0DC;
+KoopaTroopa::onDelete() = 0x0035B18C;
+KoopaTroopa::vf56() = 0x0035B204;
+KoopaTroopa::vf65(int) = 0x0035B778;
+KoopaTroopa::vf66(void*, void*) = 0x0035B97C;
+KoopaTroopa::vf22() = 0x0035BE40;
+KoopaTroopa::vf176(int, int, int) = 0x0035C488;
+KoopaTroopa::vf212() = 0x0035C618;
+KoopaTroopa::vf213(int) = 0x0035C718;
+KoopaTroopa::decideFirstState() = 0x0035C740;
+KoopaTroopa::vf181() = 0x0035C8F8;
+KoopaTroopa::vf210() = 0x0035C96C;
+KoopaTroopa::vf50(int, int) = 0x0035C9C4;
+KoopaTroopa::vf209(int) = 0x0035CA00;
+KoopaTroopa::vf178() = 0x0035CAF8;
+KoopaTroopa::vf193() = 0x0035CC30;
+KoopaTroopa::vf194() = 0x0035CC58;
+KoopaTroopa::vf26() = 0x0035CC80;
+KoopaTroopa::vf185() = 0x0035D024;
+KoopaTroopa::vf186() = 0x0035D084;
+KoopaTroopa::beginState_Slide() = 0x0035D0C4;
+KoopaTroopa::endState_Slide() = 0x0035D174;
+KoopaTroopa::executeState_Slide() = 0x0035D18C;
+KoopaTroopa::vf169() = 0x0035D278;
+KoopaTroopa::vf201() = 0x0035D3C0;
+KoopaTroopa::vf200() = 0x0035D414;
+KoopaTroopa::vf202() = 0x0035D4E0;
+KoopaTroopa::vf203() = 0x0035D530;
+KoopaTroopa::vf214() = 0x0035D55C;
+KoopaTroopa::vf177() = 0x0035D5E4;
+KoopaTroopa::vf175(void*) = 0x0035D61C;
+KoopaTroopa::vf0(void*) = 0x0035D718;
+KoopaTroopa::onDelete_helper() = 0x004093B8;
+KoopaTroopa::onExecute_helper_4094BC() = 0x004094BC;
+
+# Mechakoopa  [modbase/game/enemies/enemies.h]
+Mechakoopa::Mechakoopa() as C1 = 0x00347340;
+Mechakoopa::Mechakoopa() as C2 = 0x00347340;
+
+# PlantFireball  [modbase/game/enemies/enemies.h]
+PlantFireball::vf75() = 0x0013657C;
+PlantFireball::vf70() = 0x00136624;
+PlantFireball::vf71(float) = 0x001366CC;
+PlantFireball::vfD8() = 0x001367C0;
+PlantFireball::vfE0() = 0x001367C4;
+PlantFireball::vf55() = 0x001367C8;
+PlantFireball::vfE4() = 0x001367F0;
+PlantFireball::vfEC() = 0x001367F4;
+PlantFireball::vfE8() = 0x001367F8;
+PlantFireball::vf51() = 0x001367FC;
+PlantFireball::vfD4() = 0x00136870;
+PlantFireball::vf52() = 0x00136874;
+PlantFireball::vf60() = 0x00137080;
+PlantFireball::vf61() = 0x001370DC;
+PlantFireball::vf73() = 0x001371D8;
+PlantFireball::PlantFireball() as C1 = 0x00139918;
+PlantFireball::PlantFireball() as C2 = 0x00139918;
+PlantFireball::vf63() = 0x00139CFC;
+PlantFireball::vf65() = 0x00139FD8;
+PlantFireball::vf66() = 0x0013A050;
+PlantFireball::vf64() = 0x0013A07C;
+PlantFireball::vf67() = 0x0013A104;
+PlantFireball::vf72() = 0x0013A1C4;
+PlantFireball::vf74() = 0x0013A1E8;
+PlantFireball::vf48() = 0x0013A214;
+PlantFireball::vf49() = 0x0013A234;
+PlantFireball::vf0(void*) = 0x0013A374;
+PlantFireball::vf1() = 0x0013A478;
+PlantFireball::vf3() = 0x0013A4EC;
+
+# PlantIceball  [modbase/game/enemies/enemies.h]
+PlantIceball::PlantIceball() as C1 = 0x00143930;
+PlantIceball::PlantIceball() as C2 = 0x00143930;
+
+# Pokey  [modbase/game/enemies/enemies.h]
+Pokey::Pokey() as C1 = 0x0037F5A8;
+Pokey::Pokey() as C2 = 0x0037F5A8;
+Pokey::onDraw() = 0x003813F8;
+Pokey::vfE4() = 0x00381694;
+Pokey::vf8C() = 0x003816A0;
+Pokey::vf90() = 0x003816B0;
+Pokey::removeActiveColliders() = 0x003816C0;
+Pokey::addActiveColliders() = 0x00381740;
+Pokey::killAtGoal() = 0x003817D4;
+Pokey::vfA8(void*) = 0x00381814;
+Pokey::damageFromUnder() = 0x00382680;
+Pokey::collisionStar(int, int) = 0x00382744;
+Pokey::vf154(int, int) = 0x00382924;
+Pokey::collisionSlide() = 0x00382AAC;
+Pokey::collisionPenguinSlide(int, int) = 0x00382AB4;
+Pokey::collisionThrowableObject(int, int) = 0x00382B8C;
+Pokey::collisionFireballYoshi(int, void*) = 0x00382EF4;
+Pokey::vf14C(int, int) = 0x00383010;
+Pokey::vfF4(void*, void*) = 0x003830C4;
+Pokey::collisionFireball(int, int) = 0x003832F4;
+Pokey::collisionIceball(int, int) = 0x00383520;
+Pokey::vf15C() = 0x003835E8;
+Pokey::collisionEnemy(int, int) = 0x003836A0;
+Pokey::collisionYoshi(void*, void*) = 0x00383814;
+Pokey::vfF8(void*, void*) = 0x00383978;
+Pokey::isOnGround() = 0x00384198;
+Pokey::checkDerivedRuntimeTypeInfo(void*) const = 0x003848C8;
+Pokey::getRuntimeTypeInfo() const = 0x003849CC;
+Pokey::~Pokey() as D1 = 0x00384A40;
+Pokey::~Pokey() as D2 = 0x00384A40;
+Pokey::~Pokey() as D0 = 0x00384AFC;
+Pokey::vfE0() = 0x00384BBC;
+Pokey::collisionPropellerDrill() = 0x00384C80;
+Pokey::collisionGroundPound() = 0x00384C88;
+Pokey::vf180() = 0x00384C90;
+
+# RiverPiranha  [modbase/game/enemies/enemies.h]
+RiverPiranha::RiverPiranha() as C1 = 0x003DD1C4;
+RiverPiranha::RiverPiranha() as C2 = 0x003DD1C4;
+RiverPiranha::vf270() = 0x003DD37C;
+RiverPiranha::onCreate() = 0x003DE3D4;
+RiverPiranha::onExecute() = 0x003DEB84;
+RiverPiranha::onDraw() = 0x003DF25C;
+RiverPiranha::onDelete() = 0x003DF288;
+RiverPiranha::collisionGroundPoundYoshi(int, int) = 0x003DF290;
+RiverPiranha::collisionIceball(int, int) = 0x003DF374;
+RiverPiranha::vfD0() = 0x003DF394;
+RiverPiranha::vfDC() = 0x003DF400;
+RiverPiranha::beginState_DieFall() = 0x003DFB28;
+RiverPiranha::endState_DieFall() = 0x003DFC1C;
+RiverPiranha::executeState_DieFall() = 0x003DFC20;
+RiverPiranha::collisionYoshi(void*, void*) = 0x003DFCA0;
+RiverPiranha::collisionPenguinSlide(int, int) = 0x003DFCD4;
+RiverPiranha::killAtGoal() = 0x003DFD9C;
+RiverPiranha::checkDerivedRuntimeTypeInfo(void*) const = 0x003DFE38;
+RiverPiranha::getRuntimeTypeInfo() const = 0x003DFF3C;
+RiverPiranha::~RiverPiranha() as D1 = 0x003DFFB0;
+RiverPiranha::~RiverPiranha() as D2 = 0x003DFFB0;
+RiverPiranha::~RiverPiranha() as D0 = 0x003E0068;
+RiverPiranha::removeActiveColliders() = 0x003E0124;
+RiverPiranha::addActiveColliders() = 0x003E0198;
+RiverPiranha::vfE0() = 0x003E023C;
+RiverPiranha::collisionSlide() = 0x003E0240;
+RiverPiranha::collisionPropellerDrill() = 0x003E0248;
+RiverPiranha::collisionGroundPound() = 0x003E0250;
+RiverPiranha::vf180() = 0x003E0258;
+
+# SpikeTop  [modbase/game/enemies/enemies.h]
+SpikeTop::SpikeTop() as C1 = 0x003B630C;
+SpikeTop::SpikeTop() as C2 = 0x003B630C;
+
+# Spiny  [modbase/game/enemies/enemies.h]
+Spiny::Spiny() as C1 = 0x003BB740;
+Spiny::Spiny() as C2 = 0x003BB740;
+
+# SpinyBase  [modbase/game/enemies/enemies.h]
+SpinyBase::SpinyBase(void*) as C1 = 0x003BD010;
+SpinyBase::SpinyBase(void*) as C2 = 0x003BD010;
+
+# SpinyUpsideDown  [modbase/game/enemies/enemies.h]
+SpinyUpsideDown::SpinyUpsideDown() as C1 = 0x00379BDC;
+SpinyUpsideDown::SpinyUpsideDown() as C2 = 0x00379BDC;
+
+# StoneEye  [modbase/game/enemies/enemies.h]
+StoneEye::vfDC() = 0x0063ADF4;
+StoneEye::StoneEye() as C1 = 0x0068CF54;
+StoneEye::StoneEye() as C2 = 0x0068CF54;
+StoneEye::vf12() = 0x0068D364;
+StoneEye::vf48(int, int) = 0x0068D38C;
+StoneEye::vf49(int) = 0x0068D398;
+StoneEye::vf50() = 0x0068D4A4;
+StoneEye::vf51() = 0x0068D7C8;
+StoneEye::vf53() = 0x0068D7D0;
+StoneEye::vf58(int) = 0x0068E5C4;
+StoneEye::vf59() = 0x0068E5CC;
+StoneEye::vf60() = 0x0068E5D4;
+StoneEye::vf0(void*) = 0x0068E960;
+StoneEye::vf1() = 0x0068EA64;
+StoneEye::vf2() = 0x0068EAD8;
+StoneEye::vf3() = 0x0068EB54;
+StoneEye::onCreate() = 0x006CA1EC;
+StoneEye::vf8() = 0x006CA2E0;
+StoneEye::vf11() = 0x006CA390;
+StoneEye::vf56(int, int, int) = 0x006CA4CC;
+StoneEye::vf57(int, int, int) = 0x006CA4DC;
+StoneEye::vfD0() = 0x006CA508;
+
+# Thwomp  [modbase/game/enemies/enemies.h]
+Thwomp::Thwomp() as C1 = 0x0029D114;
+Thwomp::Thwomp() as C2 = 0x0029D114;
+Thwomp::onCreate() = 0x0029DA4C;
+Thwomp::updateModel() = 0x0029E02C;
+Thwomp::onExecute() = 0x0029E1AC;
+Thwomp::onDraw() = 0x0029E21C;
+Thwomp::onDelete() = 0x0029E244;
+Thwomp::collisionStar() = 0x0029E24C;
+Thwomp::collisionPenguinSlide(int, int) = 0x0029E258;
+Thwomp::vf15C(int) = 0x0029E328;
+Thwomp::killAtGoal() = 0x0029E42C;
+Thwomp::beginState_DieFall() = 0x0029EAA4;
+Thwomp::endState_DieFall() = 0x0029EBF4;
+Thwomp::checkDerivedRuntimeTypeInfo(void*) const = 0x0029ED8C;
+Thwomp::getRuntimeTypeInfo() const = 0x0029EE90;
+Thwomp::~Thwomp() as D1 = 0x0029EF04;
+Thwomp::~Thwomp() as D2 = 0x0029EF04;
+Thwomp::~Thwomp() as D0 = 0x0029EFA0;
+Thwomp::damageFromUnder() = 0x0029F040;
+Thwomp::collisionPropellerDrill() = 0x0029F044;
+Thwomp::collisionGroundPound() = 0x0029F04C;
+Thwomp::collisionThrowableObject() = 0x0029F054;
+Thwomp::collisionFireball(int, int) = 0x0029F05C;
+Thwomp::collisionIceball(int, int) = 0x0029F0C0;

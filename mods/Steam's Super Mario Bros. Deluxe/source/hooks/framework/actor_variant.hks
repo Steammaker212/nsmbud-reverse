@@ -1,0 +1,9 @@
+@ framework/actors: cVariant_AirSwim.
+@ checkLiquidCollisions (0x60151ED8) is a label in the database, not a defined
+@ function; its entry is `push {r4-r11, lr}`, so the trampoline can replay it.
+
+Variant_checkLiquid:
+    type:       hook
+    address:    0x00151ED8
+    symbol:     ModBase::actorVariant::checkLiquid(void*, float*, Vec3 const*, unsigned char)
+    trampoline: ModBase::actorVariant::checkLiquid_orig(void*, float*, Vec3 const*, unsigned char)

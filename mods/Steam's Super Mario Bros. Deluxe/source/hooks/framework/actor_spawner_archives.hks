@@ -1,0 +1,18 @@
+@ framework/actors: load the archives of actor-spawner targets with the level
+@ (code/spawn_resources.cpp, ledger F0223).
+
+@ LoadProfileArchives(mode, parentHeap). Entry `push {r4-r9, r11, lr}`,
+@ position-independent (sdk/data/hookable.csv).
+SpawnRes_loadArchives:
+    type:       hook
+    address:    0x00008F10
+    symbol:     ModBase::spawnerArchives::loadArchives(unsigned int, void*)
+    trampoline: ModBase::spawnerArchives::loadArchives_orig(unsigned int, void*)
+
+@ Profile_loadResources(profile, heap). Entry `ldrb r2, [r0, #0x10]`,
+@ position-independent, so the trampoline can replay it.
+SpawnRes_loadResources:
+    type:       hook
+    address:    0x00017FCC
+    symbol:     ModBase::spawnerArchives::loadResources(Profile*, void*)
+    trampoline: ModBase::spawnerArchives::loadResources_orig(Profile*, void*)

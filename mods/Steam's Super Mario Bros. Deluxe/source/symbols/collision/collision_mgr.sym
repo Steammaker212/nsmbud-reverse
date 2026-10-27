@@ -1,0 +1,43 @@
+# Tile collision: CollisionMgr, ActorCollisionMgr and TileCheck
+#
+# Addresses are RVAs (VA - 0x60000000). New Super Mario Bros. U Deluxe (Switch) v1.0.0 only.
+# Each group's tag says where its names are declared: [codedx] in the codedx headers
+# under include/, otherwise the header(s) holding the generated declarations. Names
+# tagged [framework/mods] on an entry are the ones a framework part or mod needs.
+# Constructors and destructors carry their C1/C2/D0/D1/D2 variant.
+
+# ActorCollisionMgr  [collision/collisionmgr.h]
+ActorCollisionMgr::ActorCollisionMgr() as C1 = 0x00154120;
+ActorCollisionMgr::ActorCollisionMgr() as C2 = 0x00154120;
+ActorCollisionMgr::checkRTTI(void*) = 0x00154140;
+ActorCollisionMgr::getRTTI() = 0x00154240;
+ActorCollisionMgr::~ActorCollisionMgr() as D0 = 0x001542B4;
+ActorCollisionMgr::vf1C() = 0x001542C4;
+ActorCollisionMgr::vf20() = 0x001542CC;
+ActorCollisionMgr::vf24() = 0x001542D4;
+
+# CollisionMgr  [codedx]
+CollisionMgr::process() = 0x0014C6E4;
+CollisionMgr::init(StageActor*, CollisionMgr::Sensor const*, CollisionMgr::Sensor const*, CollisionMgr::Sensor const*) = 0x0014B9E8;
+CollisionMgr::setSensor(CollisionMgr::Sensor const*, unsigned int) = 0x0014BB58;
+
+# CollisionMgr  [collision/collisionmgr.h]
+CollisionMgr::CollisionMgr() as C1 = 0x0014A310;
+CollisionMgr::CollisionMgr() as C2 = 0x0014A310;
+CollisionMgr::vf14() = 0x0014B310;
+CollisionMgr::~CollisionMgr() as D1 = 0x0014B840;
+CollisionMgr::~CollisionMgr() as D2 = 0x0014B840;
+CollisionMgr::~CollisionMgr() as D0 = 0x0014B9D8;
+CollisionMgr::vf18() = 0x0014BBC8;
+CollisionMgr::process_helper() = 0x0014BF68;
+CollisionMgr::process_helper_14D020() = 0x0014D020;
+CollisionMgr::process_helper_14DDD0() = 0x0014DDD0;
+CollisionMgr::process_helper_14E8B8(int) = 0x0014E8B8;
+CollisionMgr::process_helper_14F130(void*) = 0x0014F130;
+CollisionMgr::vf28() = 0x00152C18;
+CollisionMgr::checkRTTI(void*) = 0x0015303C;
+CollisionMgr::getRTTI() = 0x001530C0;
+
+# TileCheck  [codedx]
+TileCheck::TileCheck(TileCheck::Param const&) as C1 = 0x0015D0EC;
+TileCheck::check(TileCheck::Result&, Vec2 const&, Vec2 const&, unsigned int) = 0x0015DA30;

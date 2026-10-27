@@ -1,0 +1,9 @@
+@ Poison Mushroom. The Super Mushroom's per-frame collect check (vtable +0xE0,
+@ 0x60467F48: sub_60463998(item, &result, 1, 1)) starts with `push {r4, lr}`,
+@ position-independent, so the trampoline can replay it.
+
+PoisonMushroom_collect:
+    type:       hook
+    address:    0x00467F48
+    symbol:     ModBase::poisonMushroom::collect(StageActor*)
+    trampoline: ModBase::poisonMushroom::collect_orig(StageActor*)

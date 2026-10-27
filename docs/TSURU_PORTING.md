@@ -55,6 +55,17 @@ change a port makes is in there. Who ports what is in the shared plan doc.
 | `MovementHandler` (`getMaskForMovementType`, `link`, `execute`, `position`) | the same (codedx `movementhandler.h`) |
 | `Enemy::collisionCallback`, `collisionPlayer/Star/Fireball/...` | the same names and order in codedx `actor/enemy.h` |
 | `Mathf::chase`, `Mathf::deg2idx` | `tsuru::chase`, `tsuru::deg2idx` |
+| `this->damagePlayer(hcSelf, hcOther)` (an Enemy hurting the player it touches) | `tsuru::enemyDamagePlayer(this, acSelf, acOther)` (Enemy vtable `+0xC8`, codedx `vfC8`) |
+| `processCollision(...)` == `HitType::Collide / NormalJump / MiniJump / SpinJump` | the same call; compare with `tsuru::HitType::Collide` ... (0, 1, 2, 3) |
+| `killPlayerJump(player, sead::Vector3f(...), &StateID_X)` | `killPlayerJump(player, Vec2(x, y), &StateID_X)` |
+| `ModelWrapper::create(arch, mdl, skl, texPattern, texSrt)` | the same order: codedx calls them `sklAnims`, `texAnims`, `shuAnims` |
+| `model->playTexPatternAnim(name)`; `texPatternAnims[0]->frameCtrl.startFrame / speed` | `tsuru::playTexPatternAnim(model, name)`; `model->texAnims[0]->startFrame / speed` |
+| `model->playTexSrtAnim(name)` + `texSrtAnims[0]->frameCtrl.shouldLoop(b)` | `tsuru::playTexSrtAnim(model, name, b)` |
+| `model->playColorAnim(name)` | `tsuru::playColorAnim(model, name, b)` |
+| `DECLARE_STATE` / `CREATE_STATE` / `doStateChange(&Cls::StateID_X)` / `states.execute()` | the same (codedx `actors/states.h`) |
+
+[`source/code/sprites/biddybud.cpp`](../mods/Steam's%20Super%20Mario%20Bros.%20Deluxe/source/code/sprites/biddybud.cpp)
+(sprite 742) is the reference port for states, stomp kills and texture animations.
 
 When something has no row here, look for it in codedx's `include/` first, then
 `framework/game` (`game/*.h`), then the ledger (`data/findings/ledger.csv`).
@@ -68,3 +79,7 @@ issue, and you move on to the next actor.
 | Player damage is player vtable `+0x490` (setDamage) and `+0x49C` (setDamage2); damage types keep the Wii U numbers | Deluxe `setBgDamage` 0x6076357C passes 1, 10, 14, 15 exactly like the Wii U function (ledger F0253) |
 | Effect IDs are the Wii U ones | Deluxe Lakitu passes 353/354/355 to `EffectData_create` in its water/poison/lava splash handlers, the Wii U `RP_Cmn_WaterSplash_06` / `PoisonSplash_06` / `LavaSplash_06` (F0254) |
 | `ActiveCollider::Info` layout equals Tsuru's `HitboxCollider::Info` | field for field, codedx `activecollider.h` vs Tsuru `hitboxcollider.h` |
+| Enemy vtable `+0xC8` is Tsuru's `damagePlayer(hcSelf, hcOther)` | Enemy vtable 0x60BE2808 (from `Enemy::Enemy` 0x602A1A8C); slot `+0xC8` = 0x602A20E0 casts `acOther->owner` to a player and calls player `+0x48C(player, acSelf, acOther)`; the default `Enemy::collisionPlayer` (0x602A2D54) is just this call, as on the Wii U |
+| `processCollision` returns Tsuru's `HitType` numbers | `BrosBase::collisionPlayer` (0x60264458): 3 calls `killPlayerSpin`, 1 calls `killPlayerJump`, 0 calls `Enemy::collisionPlayer` (damage) |
+| `ShaderAnimation::play` (0x445F80) is the Wii U `playColorAnim`; 0x446088 is `playTexSrtAnim`; `TextureAnimation::play` (0x4510E4) is `playTexPatternAnim` | Mario's `MLH_PtoNml` colour anims (Wii U `playColorAnim`) go through 0x445F80 (0x6075B25C). 0x446088 has the same body but reads the archive's anim table 2 instead of 1; the texture-pattern player reads table 3 |
+| `startFrame = n; speed = 0` holds a texture-pattern frame (Tsuru's colour trick) | `Animation::update` → 0x604183EC clamps `frame` into [`startFrame`, `endFrame`] before stepping by `speed` |

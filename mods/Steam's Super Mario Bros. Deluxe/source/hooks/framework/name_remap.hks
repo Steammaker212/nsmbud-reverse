@@ -1,0 +1,15 @@
+@ Scoped archive/model name remapping (framework/resources).
+@ Both entries are `push` instructions, position-independent, so the
+@ trampolines can replay them (sdk/data/hookable.csv).
+
+NameRemap_archiveGet:
+    type:       hook
+    address:    0x0043B548
+    symbol:     ModBase::nameRemap::archiveGet(void*, ModBase::nameRemap::SafeStr*)
+    trampoline: ModBase::nameRemap::archiveGet_orig(void*, ModBase::nameRemap::SafeStr*)
+
+NameRemap_getModel:
+    type:       hook
+    address:    0x00430090
+    symbol:     ModBase::nameRemap::getModel(void*, ModBase::nameRemap::SafeStr*, unsigned int, unsigned int, unsigned int, unsigned int, unsigned int, bool, void*)
+    trampoline: ModBase::nameRemap::getModel_orig(void*, ModBase::nameRemap::SafeStr*, unsigned int, unsigned int, unsigned int, unsigned int, unsigned int, bool, void*)

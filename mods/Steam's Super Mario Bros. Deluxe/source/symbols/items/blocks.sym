@@ -1,0 +1,170 @@
+# ?-blocks, bricks and the item manager
+#
+# Addresses are RVAs (VA - 0x60000000). New Super Mario Bros. U Deluxe (Switch) v1.0.0 only.
+# Each group's tag says where its names are declared: [codedx] in the codedx headers
+# under include/, otherwise the header(s) holding the generated declarations. Names
+# tagged [framework/mods] on an entry are the ones a framework part or mod needs.
+# Constructors and destructors carry their C1/C2/D0/D1/D2 variant.
+
+# BabyYoshiBlock  [modbase/game/items/blocks.h]
+BabyYoshiBlock::create() = 0x005767DC;
+BabyYoshiBlock::onCreate() = 0x0057680C;
+BabyYoshiBlock::spawnItemUp() = 0x00576B8C;
+BabyYoshiBlock::spawnItemDown() = 0x00576B90;
+BabyYoshiBlock::checkDerivedRuntimeTypeInfo(void*) const = 0x00576B94;
+
+# BlockAmbush  [modbase/game/items/blocks.h]
+BlockAmbush::bump(void*) = 0x00569738;
+
+# BlockBabyYoshi  [modbase/game/items/blocks.h]
+BlockBabyYoshi::bump(void*) = 0x00576938;
+
+# BlockBase  [game/block.h]
+# [shell_suit] Block bump handlers (vtable +0x0A8): BlockBase and its two overrides (F0134, F0142).
+BlockBase::bump(void*) = 0x005640BC;
+
+# BlockBase  [game/block.h]
+BlockBase::BlockBase(int) as C1 = 0x00563544;
+BlockBase::BlockBase(int) as C2 = 0x00563544;
+BlockBase::onExecute() = 0x005638C8;
+BlockBase::onDraw() = 0x00563984;
+BlockBase::damageFromUnder() = 0x00563A08;
+BlockBase::setupMovement() = 0x00563C28;
+BlockBase::vf174() = 0x00563CC4;
+BlockBase::vf160() = 0x00563E44;
+BlockBase::vf178() = 0x00563ED8;
+BlockBase::vf17C() = 0x00563FC0;
+BlockBase::vf16C() = 0x005640BC;
+BlockBase::onEmptied() = 0x005649F8;
+BlockBase::spawnItemUp() = 0x00564BA8;
+BlockBase::vfCC() = 0x00564BAC;
+BlockBase::spawnItemDown() = 0x00564BC0;
+BlockBase::vfE4() = 0x00564BE4;
+BlockBase::vfF4() = 0x00564D3C;
+BlockBase::vf194() = 0x00564D5C;
+BlockBase::vf19C() = 0x00564D60;
+BlockBase::vf198() = 0x00564D64;
+BlockBase::vf1A0() = 0x00564D74;
+BlockBase::vf1A8() = 0x00564D78;
+BlockBase::vf1A4() = 0x00564D7C;
+BlockBase::vf180() = 0x00564D8C;
+BlockBase::checkDerivedRuntimeTypeInfo(void*) const = 0x00564E1C;
+BlockBase::getRuntimeTypeInfo() const = 0x00564F94;
+BlockBase::~BlockBase() as D0 = 0x00565008;
+BlockBase::vf170() = 0x0056505C;
+
+# BlockCoinBase  [modbase/game/items/blocks.h]
+BlockCoinBase::~BlockCoinBase() as D1 = 0x005B1BEC;
+BlockCoinBase::~BlockCoinBase() as D2 = 0x005B1BEC;
+BlockCoinBase::spawnItemUp() = 0x005B1C90;
+BlockCoinBase::spawnItemDown() = 0x005B1C94;
+BlockCoinBase::vfEC() = 0x005B1C98;
+BlockCoinBase::BlockCoinBase(void*) as C1 = 0x005B2988;
+BlockCoinBase::BlockCoinBase(void*) as C2 = 0x005B2988;
+BlockCoinBase::spawnCoinShower() = 0x005B5958;
+BlockCoinBase::vfE8(int) = 0x005B65A8;
+BlockCoinBase::beginState_BumpUp() = 0x005B6648;
+BlockCoinBase::endState_BumpUp() = 0x005B6688;
+BlockCoinBase::beginState_BlockCoinBaseUnk1() = 0x005B6720;
+BlockCoinBase::endState_BlockCoinBaseUnk1() = 0x005B6730;
+BlockCoinBase::executeState_BlockCoinBaseUnk1() = 0x005B6734;
+BlockCoinBase::beginState_BumpDown() = 0x005B674C;
+BlockCoinBase::endState_BumpDown() = 0x005B678C;
+BlockCoinBase::beginState_BlockCoinBaseUnk2() = 0x005B6818;
+BlockCoinBase::endState_BlockCoinBaseUnk2() = 0x005B6828;
+BlockCoinBase::executeState_BlockCoinBaseUnk2() = 0x005B682C;
+BlockCoinBase::beginState_BumpUp2() = 0x005B6858;
+BlockCoinBase::endState_BumpUp2() = 0x005B68DC;
+BlockCoinBase::beginState_BumpDown2() = 0x005B6B38;
+BlockCoinBase::endState_BumpDown2() = 0x005B6B84;
+BlockCoinBase::beginState_BlockCoinUnk3() = 0x005B6C40;
+BlockCoinBase::endState_BlockCoinUnk3() = 0x005B6C50;
+BlockCoinBase::executeState_BlockCoinUnk3() = 0x005B6C54;
+BlockCoinBase::checkDerivedRuntimeTypeInfo(void*) const = 0x005B6C9C;
+BlockCoinBase::getRuntimeTypeInfo() const = 0x005B6D2C;
+BlockCoinBase::~BlockCoinBase() as D0 = 0x005B6DA0;
+
+# BrickBlockHuge  [modbase/game/items/blocks.h]
+BrickBlockHuge::create() = 0x00565AC8;
+BrickBlockHuge::onCreate() = 0x00565CA8;
+BrickBlockHuge::onExecute() = 0x00565EE8;
+BrickBlockHuge::onDraw() = 0x00565FA8;
+BrickBlockHuge::vf178() = 0x00566100;
+BrickBlockHuge::vf17C() = 0x00566228;
+BrickBlockHuge::spawnCoinShower() = 0x0056622C;
+BrickBlockHuge::spawnItemUp() = 0x00566488;
+BrickBlockHuge::spawnItemDown() = 0x0056648C;
+BrickBlockHuge::vf180() = 0x00566628;
+BrickBlockHuge::checkDerivedRuntimeTypeInfo(void*) const = 0x005666B8;
+
+# FlyingBlock  [modbase/game/items/blocks.h]
+FlyingBlock::create() = 0x00568888;
+FlyingBlock::onCreate() = 0x005688B8;
+FlyingBlock::vf184() = 0x00568B14;
+FlyingBlock::vf188() = 0x00568B44;
+FlyingBlock::vf18C() = 0x00568BD4;
+FlyingBlock::vf190() = 0x00568C78;
+FlyingBlock::checkDerivedRuntimeTypeInfo(void*) const = 0x00568CEC;
+
+# FlyingBlockForAmbush  [modbase/game/items/blocks.h]
+FlyingBlockForAmbush::create() = 0x00569474;
+FlyingBlockForAmbush::onCreate() = 0x005694B4;
+FlyingBlockForAmbush::onExecute() = 0x00569668;
+FlyingBlockForAmbush::vf16C() = 0x00569738;
+FlyingBlockForAmbush::vf1A0() = 0x0056973C;
+FlyingBlockForAmbush::vf1A8() = 0x0056974C;
+FlyingBlockForAmbush::vf1A4() = 0x00569750;
+FlyingBlockForAmbush::checkDerivedRuntimeTypeInfo(void*) const = 0x005697FC;
+
+# ItemMgr  [symbols only, no declaration]
+# [framework/game, ledger F0026-F0033] ItemMgr* ItemMgr::instance
+ItemMgr::instance = 0x00C9D3E4;
+# [framework/game, ledger F0026-F0033] BlockItem ItemMgr::resolveItem(BlockContentCode, u32 playerNo, bool force)
+ItemMgr::resolveItem(BlockContentCode, unsigned int, bool) = 0x00465E4C;
+# [framework/game, ledger F0026-F0033] static void ItemMgr::spawnItem(BlockItem, const Vec3*, u32, BlockItem, u8, u32)
+ItemMgr::spawnItem(BlockItem, Vec3 const*, unsigned int, BlockItem, unsigned char, unsigned int) = 0x004663F4;
+
+# PowBlock  [modbase/game/items/blocks.h]
+PowBlock::vf7() = 0x005C9330;
+PowBlock::vf8() = 0x005C93D4;
+PowBlock::vf66() = 0x005C9878;
+PowBlock::vf69(int) = 0x005C988C;
+PowBlock::vf70() = 0x005C99F8;
+PowBlock::vf73(int, int) = 0x005C9A0C;
+PowBlock::vf74() = 0x005C9A70;
+PowBlock::vf77() = 0x005C9A84;
+PowBlock::vf78() = 0x005C9A8C;
+PowBlock::vf23(int) = 0x005C9C40;
+PowBlock::vf61() = 0x005C9C80;
+PowBlock::vf58() = 0x005CA070;
+PowBlock::vf59() = 0x005CA0EC;
+PowBlock::vf60() = 0x005CA0F0;
+PowBlock::vf10() = 0x005CA32C;
+PowBlock::vf22() = 0x005CA338;
+PowBlock::vf39() = 0x005CA348;
+PowBlock::vf9(int) = 0x005CC3DC;
+PowBlock::vf15() = 0x005CC478;
+PowBlock::vf32() = 0x005CC8C4;
+PowBlock::vf40() = 0x005CC8EC;
+PowBlock::vfC0() = 0x005CC920;
+PowBlock::PowBlock() as C1 = 0x006BC194;
+PowBlock::PowBlock() as C2 = 0x006BC194;
+PowBlock::onCreate() = 0x006BCB34;
+PowBlock::vf63() = 0x006BD728;
+PowBlock::vf12() = 0x006BD734;
+PowBlock::vf64() = 0x006BDB70;
+PowBlock::vf62() = 0x006BDF54;
+PowBlock::vf21(int, unsigned short) = 0x006BDFC0;
+PowBlock::vf49() = 0x006BDFF0;
+PowBlock::vf51() = 0x006BDFF4;
+PowBlock::vf50() = 0x006BDFF8;
+PowBlock::vf52() = 0x006BDFFC;
+PowBlock::vf54() = 0x006BE084;
+PowBlock::vf53() = 0x006BE088;
+PowBlock::vf55() = 0x006BE2B0;
+PowBlock::vf57() = 0x006BE31C;
+PowBlock::vf56() = 0x006BE320;
+PowBlock::vf0(void*) = 0x006BE4EC;
+PowBlock::vf1() = 0x006BE664;
+PowBlock::vf2() = 0x006BE6D8;
+PowBlock::vf3() = 0x006BE728;
