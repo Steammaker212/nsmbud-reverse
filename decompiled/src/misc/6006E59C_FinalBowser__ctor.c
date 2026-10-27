@@ -1,5 +1,6 @@
 /* FinalBowser__ctor
  * address: 0x6006E59C   size: 1228   group: misc
+ * sym: FinalBowser::FinalBowser(ActorBuildInfo const*) as C1
  * Decompiled from the retail Deluxe (Switch) main module v1.0.0.
  */
 #include "nsmbudx_field.h"

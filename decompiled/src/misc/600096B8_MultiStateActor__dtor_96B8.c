@@ -1,5 +1,6 @@
 /* MultiStateActor__dtor_96B8
  * address: 0x600096B8   size: 48   group: misc
+ * sym: MultiStateActor::~MultiStateActor() as D0
  * Decompiled from the retail Deluxe (Switch) main module v1.0.0.
  */
 #include "nsmbudx_field.h"

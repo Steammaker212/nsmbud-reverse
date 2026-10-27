@@ -1,5 +1,6 @@
 /* sead__ResourceMgr__ctor
  * address: 0x60902484   size: 380   group: sdklib
+ * sym: sead::ResourceMgr::ResourceMgr() as C2
  * Decompiled from the retail Deluxe (Switch) main module v1.0.0.
  */
 #include "nsmbudx_field.h"

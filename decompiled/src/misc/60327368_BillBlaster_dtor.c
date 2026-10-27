@@ -1,5 +1,6 @@
 /* BillBlaster_dtor
  * address: 0x60327368   size: 72   group: misc
+ * sym: # BillBlaster_dtor as UNKNOWN
  * Decompiled from the retail Deluxe (Switch) main module v1.0.0.
  */
 #include "nsmbudx_field.h"

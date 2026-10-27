@@ -1,5 +1,6 @@
 /* Profile__ctor
  * address: 0x60017F6C   size: 84   group: actorcore
+ * sym: Profile::Profile(Actor* (*)(ActorBuildInfo const*), unsigned int, void*, ActorInfo const*, unsigned int) as C2
  * Decompiled from the retail Deluxe (Switch) main module v1.0.0.
  */
 #include "nsmbudx_field.h"

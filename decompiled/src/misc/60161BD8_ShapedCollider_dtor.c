@@ -1,5 +1,6 @@
 /* ShapedCollider_dtor
  * address: 0x60161BD8   size: 4   group: misc
+ * sym: ShapedCollider::~ShapedCollider() as D2
  * Decompiled from the retail Deluxe (Switch) main module v1.0.0.
  */
 #include "nsmbudx_field.h"

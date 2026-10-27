@@ -1,5 +1,6 @@
 /* BootScene_ctor
  * address: 0x607DEED0   size: 336   group: misc
+ * sym: # BootScene_ctor as UNKNOWN
  * Decompiled from the retail Deluxe (Switch) main module v1.0.0.
  */
 #include "nsmbudx_field.h"

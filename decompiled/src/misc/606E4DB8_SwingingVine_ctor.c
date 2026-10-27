@@ -1,5 +1,6 @@
 /* SwingingVine_ctor
  * address: 0x606E4DB8   size: 216   group: misc
+ * sym: # SwingingVine_ctor as UNKNOWN
  * Decompiled from the retail Deluxe (Switch) main module v1.0.0.
  */
 #include "nsmbudx_field.h"

@@ -1,5 +1,6 @@
 /* KaniboTama__ctor
  * address: 0x60310638   size: 212   group: misc
+ * sym: KaniboTama::KaniboTama() as C1
  * Decompiled from the retail Deluxe (Switch) main module v1.0.0.
  */
 #include "nsmbudx_field.h"

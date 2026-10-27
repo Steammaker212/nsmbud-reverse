@@ -1,5 +1,6 @@
 /* CooliganSunglasses__ctor
  * address: 0x6036B7E0   size: 128   group: misc
+ * sym: CooliganSunglasses::CooliganSunglasses(ActorBuildInfo const*) as C3
  * Decompiled from the retail Deluxe (Switch) main module v1.0.0.
  */
 #include "nsmbudx_field.h"

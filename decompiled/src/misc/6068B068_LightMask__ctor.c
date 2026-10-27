@@ -1,5 +1,6 @@
 /* LightMask__ctor
  * address: 0x6068B068   size: 48   group: misc
+ * sym: LightMask::LightMask() as C1
  * Decompiled from the retail Deluxe (Switch) main module v1.0.0.
  */
 #include "nsmbudx_field.h"

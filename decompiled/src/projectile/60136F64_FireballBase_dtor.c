@@ -1,5 +1,6 @@
 /* FireballBase_dtor
  * address: 0x60136F64   size: 128   group: projectile
+ * sym: # FireballBase_dtor as UNKNOWN
  * Decompiled from the retail Deluxe (Switch) main module v1.0.0.
  */
 #include "nsmbudx_field.h"

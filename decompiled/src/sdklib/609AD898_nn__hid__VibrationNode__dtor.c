@@ -1,5 +1,6 @@
 /* nn__hid__VibrationNode__dtor
  * address: 0x609AD898   size: 12   group: sdklib
+ * sym: nn::hid::VibrationNode::~VibrationNode() as D2
  * Decompiled from the retail Deluxe (Switch) main module v1.0.0.
  */
 #include "nsmbudx_field.h"

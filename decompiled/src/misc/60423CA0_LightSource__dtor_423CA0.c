@@ -1,5 +1,6 @@
 /* LightSource__dtor_423CA0
  * address: 0x60423CA0   size: 48   group: misc
+ * sym: LightSource::~LightSource() as D0
  * Decompiled from the retail Deluxe (Switch) main module v1.0.0.
  */
 #include "nsmbudx_field.h"

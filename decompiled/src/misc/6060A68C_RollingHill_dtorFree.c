@@ -1,5 +1,6 @@
 /* RollingHill_dtorFree
  * address: 0x6060A68C   size: 48   group: misc
+ * sym: # RollingHill_dtorFree as UNKNOWN
  * Decompiled from the retail Deluxe (Switch) main module v1.0.0.
  */
 #include "nsmbudx_field.h"

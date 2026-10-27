@@ -1,5 +1,6 @@
 /* FixedIcicle__dtor_624674
  * address: 0x60624674   size: 104   group: misc
+ * sym: FixedIcicle::~FixedIcicle() as D0
  * Decompiled from the retail Deluxe (Switch) main module v1.0.0.
  */
 #include "nsmbudx_field.h"

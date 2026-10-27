@@ -1,5 +1,6 @@
 /* BgCenter__dtor
  * address: 0x6082D308   size: 16   group: misc
+ * sym: BgCenter::~BgCenter() as D0
  * Decompiled from the retail Deluxe (Switch) main module v1.0.0.
  */
 #include "nsmbudx_field.h"

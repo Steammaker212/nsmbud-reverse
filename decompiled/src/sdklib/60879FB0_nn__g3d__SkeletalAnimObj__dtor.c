@@ -1,5 +1,6 @@
 /* nn__g3d__SkeletalAnimObj__dtor
  * address: 0x60879FB0   size: 4   group: sdklib
+ * sym: nn::g3d::SkeletalAnimObj::~SkeletalAnimObj() as D0
  * Decompiled from the retail Deluxe (Switch) main module v1.0.0.
  */
 #include "nsmbudx_field.h"

@@ -1,5 +1,6 @@
 /* ActorCollisionMgr_ctor
  * address: 0x60154120   size: 28   group: actors
+ * sym: # ActorCollisionMgr_ctor as UNKNOWN
  * Decompiled from the retail Deluxe (Switch) main module v1.0.0.
  */
 #include "nsmbudx_field.h"

@@ -1,5 +1,6 @@
 /* nn_atk_FsSoundArchive_ctor
  * address: 0x6099BB78   size: 88   group: sdklib
+ * sym: # nn_atk_FsSoundArchive_ctor as UNKNOWN
  * Decompiled from the retail Deluxe (Switch) main module v1.0.0.
  */
 #include "nsmbudx_field.h"

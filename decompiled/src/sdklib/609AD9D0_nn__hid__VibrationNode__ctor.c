@@ -1,5 +1,6 @@
 /* nn__hid__VibrationNode__ctor
  * address: 0x609AD9D0   size: 12   group: sdklib
+ * sym: nn::hid::VibrationNode::VibrationNode() as C2
  * Decompiled from the retail Deluxe (Switch) main module v1.0.0.
  */
 #include "nsmbudx_field.h"

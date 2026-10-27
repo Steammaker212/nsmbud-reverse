@@ -1,5 +1,6 @@
 /* StarCoin_dtorFree
  * address: 0x605F3A48   size: 48   group: misc
+ * sym: # StarCoin_dtorFree as UNKNOWN
  * Decompiled from the retail Deluxe (Switch) main module v1.0.0.
  */
 #include "nsmbudx_field.h"

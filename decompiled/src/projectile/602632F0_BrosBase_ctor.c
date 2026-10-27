@@ -1,5 +1,6 @@
 /* BrosBase_ctor
  * address: 0x602632F0   size: 448   group: projectile
+ * sym: BrosBase::BrosBase(ActorBuildInfo const*) as C2
  * Decompiled from the retail Deluxe (Switch) main module v1.0.0.
  */
 #include "nsmbudx_field.h"

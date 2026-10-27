@@ -1,5 +1,6 @@
 /* Actor__dtor
  * address: 0x60002D98   size: 144   group: actors
+ * sym: Actor::~Actor() as D2
  * Decompiled from the retail Deluxe (Switch) main module v1.0.0.
  */
 #include "nsmbudx_field.h"

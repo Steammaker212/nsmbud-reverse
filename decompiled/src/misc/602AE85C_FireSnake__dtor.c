@@ -1,5 +1,6 @@
 /* FireSnake__dtor
  * address: 0x602AE85C   size: 156   group: misc
+ * sym: FireSnake::~FireSnake() as D2
  * Decompiled from the retail Deluxe (Switch) main module v1.0.0.
  */
 #include "nsmbudx_field.h"

@@ -1,5 +1,6 @@
 /* Kanibo__dtor
  * address: 0x6031056C   size: 76   group: misc
+ * sym: Kanibo::~Kanibo() as D0
  * Decompiled from the retail Deluxe (Switch) main module v1.0.0.
  */
 #include "nsmbudx_field.h"

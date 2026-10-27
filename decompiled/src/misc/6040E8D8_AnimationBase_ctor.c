@@ -1,5 +1,6 @@
 /* AnimationBase_ctor
  * address: 0x6040E8D8   size: 40   group: misc
+ * sym: # AnimationBase_ctor as UNKNOWN
  * Decompiled from the retail Deluxe (Switch) main module v1.0.0.
  */
 #include "nsmbudx_field.h"

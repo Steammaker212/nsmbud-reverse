@@ -1,5 +1,6 @@
 /* ShellEnemy__ctor
  * address: 0x6039EF44   size: 844   group: misc
+ * sym: ShellEnemy::ShellEnemy(ActorBuildInfo const*) as C2
  * Decompiled from the retail Deluxe (Switch) main module v1.0.0.
  */
 #include "nsmbudx_field.h"

@@ -1,5 +1,6 @@
 /* RedCoin_ctor
  * address: 0x606C4EA8   size: 44   group: misc
+ * sym: # RedCoin_ctor as UNKNOWN
  * Decompiled from the retail Deluxe (Switch) main module v1.0.0.
  */
 #include "nsmbudx_field.h"

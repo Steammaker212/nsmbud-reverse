@@ -13,17 +13,20 @@
 // build: `make_mod_project.py --placeholder-models` switches every mod at once.
 #define HAMMER_CUSTOM_MODELS        NSMBUDX_CUSTOM_MODELS
 
-// The Hammer Flower item: romfs/Model/hammer.Nin_NX_NVN.szs, model "hammer".
-#define HAMMER_ITEM_ARCHIVE         NSMBUDX_PICK_MODEL(HAMMER_CUSTOM_MODELS, "hammer", "I_fireflower")
-#define HAMMER_ITEM_MODEL           NSMBUDX_PICK_MODEL(HAMMER_CUSTOM_MODELS, "hammer", "I_fireflower")
+// The Hammer Flower item: romfs/Model/I_hmrflower.Nin_NX_NVN.szs, model
+// "I_hmrflower" -- the Wii U Hammer Flower of the Tsuru framework, converted
+// with tools/wiiu2dx (README: "Porting the Tsuru assets"). It carries its own
+// out/out2/out3/wait/wait2 animations, so it animates and times itself like a
+// vanilla flower.
+#define HAMMER_ITEM_ARCHIVE         NSMBUDX_PICK_MODEL(HAMMER_CUSTOM_MODELS, "I_hmrflower", "I_fireflower")
+#define HAMMER_ITEM_MODEL           NSMBUDX_PICK_MODEL(HAMMER_CUSTOM_MODELS, "I_hmrflower", "I_fireflower")
 
-// The item model's turn about the vertical axis (a full turn is 2^32). Your
-// hammer model has its head along Z, pointing at the camera (FSHP bounds:
-// head extent x 4.5, z 6.8; handle along Y), so it reads as "facing forward".
-// A quarter turn lays the head along X: the side view a 2D game wants. The
+// The item model's turn about the vertical axis (a full turn is 2^32). The
 // item builds its model matrix from rotation every frame (0x60462018), so this
-// is all it takes. 0xC0000000 points the head the other way; 0 = as modelled.
-#define HAMMER_ITEM_YAW             NSMBUDX_PICK_MODEL(HAMMER_CUSTOM_MODELS, 0x40000000u, 0u)
+// is all it takes. The Hammer Flower faces the camera like the Fire Flower: 0.
+// (0x40000000 lays a model whose front is along Z on its side, as the earlier
+// bare-hammer item needed.)
+#define HAMMER_ITEM_YAW             0u
 
 // The item code plays skeletal animations "out", "out2", "out3", "wait" and
 // "wait2" from the item archive. Add them to yours to animate the item. Any
@@ -43,9 +46,15 @@
 #define HAMMER_FRAMES_WAIT          59.0f
 #define HAMMER_FRAMES_WAIT2         60.0f
 
-// The thrown hammer.
-#define HAMMER_PROJECTILE_ARCHIVE   "bros"
-#define HAMMER_PROJECTILE_MODEL     "bros_hammer"
+// The thrown hammer. The Hammer actor builds model "bros_hammer" from its
+// profile's first archive ("bros", through LoadResource 0x6043B548) and looks
+// up the bone "bros_hammer_model" every frame (0x6013FFFC), so a replacement
+// archive needs a bone of that name. romfs/Model/hammer.Nin_NX_NVN.szs has it,
+// ships standalone and loads at game start (the item variant lists it), so
+// hammers fly in every level. "bros" only comes with per-level packs: with the
+// placeholder, a level without Hammer Bros falls back to fireballs.
+#define HAMMER_PROJECTILE_ARCHIVE   NSMBUDX_PICK_MODEL(HAMMER_CUSTOM_MODELS, "hammer", "bros")
+#define HAMMER_PROJECTILE_MODEL     NSMBUDX_PICK_MODEL(HAMMER_CUSTOM_MODELS, "hammer", "bros_hammer")
 
 // SMB3 allowed two hammers per player on screen.
 #define HAMMER_MAX_PER_PLAYER       2
@@ -61,9 +70,12 @@
 
 // The suit's colours (framework/player). HAMMER_SUIT_COLORS borrows a look the
 // game already has, on every character (Mario, Luigi, the Toads):
-// nsmbudx::suits::cColor_Ice (default), cColor_Normal, or cColor_Fire to keep
-// the Fire look.
-#define HAMMER_SUIT_COLORS          nsmbudx::suits::cColor_Ice
+// nsmbudx::suits::cColor_Normal (default: each character's regular clothes and
+// cap, under the helmet and shell), cColor_Ice, or cColor_Fire to keep the
+// Fire look.
+#define HAMMER_SUIT_COLORS          nsmbudx::suits::cColor_Normal
+
+// The suit itself (helmet and shell): see the top of code/hammer_costume.cpp.
 
 // A real Hammer Suit: add a 4th frame to the PB_switch / PH_switch / PC_switch
 // texture-pattern animations in your Mario and Luigi model archives and set
@@ -145,14 +157,24 @@ const nsmbudx::NameRemap kProjectileRemap = {
 // The item: a Fire Flower variant. Its archives load at game start, as the
 // Fire Flower's do (load class 0, nsmbudx/profile_resources.h), because the
 // item comes out of ?-blocks in levels that never place sprite 734. Only
-// archives that exist at boot may be listed: your "hammer" ships as a
-// standalone romfs/Model file. "bros" is neither standalone nor packed -- it
-// comes from per-level packs -- and listing it crashed the game at boot
-// (0x608228E4; ledger F0222). So the thrown hammer still needs a level that
-// loads "bros" (see the fireball fallback in the throw).
+// archives that exist at boot may be listed: "I_hmrflower" and "hammer" ship
+// as standalone romfs/Model files. "bros" is neither standalone nor packed --
+// it comes from per-level packs -- and listing it crashed the game at boot
+// (0x608228E4; ledger F0222), so the projectile entry is listed only when it
+// names our own archive. The item's code never asks for "bros", so the second
+// remap only serves to load the projectile archive.
+#define HAMMER_ITEM_REMAP { "I_fireflower", HAMMER_ITEM_ARCHIVE, "I_fireflower", HAMMER_ITEM_MODEL }
+#if HAMMER_CUSTOM_MODELS
 NSMBUDX_ACTOR_VARIANT(hammerFlowerVariant,
     ProfileId::HammerFlower, cProfile_FireFlower, "HammerFlower", nsmbudx::cVariant_None,
-    { { "I_fireflower", HAMMER_ITEM_ARCHIVE, "I_fireflower", HAMMER_ITEM_MODEL } });
+    { HAMMER_ITEM_REMAP,
+      { "bros", HAMMER_PROJECTILE_ARCHIVE, "bros_hammer", HAMMER_PROJECTILE_MODEL },
+      { "hmrpy", "hmrpy", nullptr, nullptr } });   // loads the costume (hammer_costume.cpp)
+#else
+NSMBUDX_ACTOR_VARIANT(hammerFlowerVariant,
+    ProfileId::HammerFlower, cProfile_FireFlower, "HammerFlower", nsmbudx::cVariant_None,
+    { HAMMER_ITEM_REMAP });
+#endif
 
 // Player and item fields, read the way the game's own code reads them.
 inline u32 playerMode(StageActor* p)    { return *(u32*)((u8*)p + 0x528); }
@@ -272,9 +294,12 @@ bool hammerThrow(void* p, int spin, int* result)
         || !(sHammerThrower[playerNo] || HAMMER_FROM_ANY_FIRE_FLOWER))
         return false;
 
-    // No hammer archive in this level: throw a fireball rather than crash.
-    if (!nsmbudx::isArchiveLoaded("bros")) {
-        nsmbudx::log("hammer suit: archive 'bros' is not loaded here; throwing a fireball");
+    // No hammer archive loaded: throw a fireball rather than crash. With our
+    // own archive this cannot happen (it loads at game start); with the
+    // placeholder "bros" it does in levels without Hammer Bros.
+    if (!nsmbudx::isArchiveLoaded(HAMMER_PROJECTILE_ARCHIVE)) {
+        nsmbudx::log("hammer suit: archive '", HAMMER_PROJECTILE_ARCHIVE,
+                     "' is not loaded here; throwing a fireball");
         return false;
     }
 
@@ -369,12 +394,23 @@ inline f32& animFrame(u8* anim)   { return *(f32*)(anim + 0x14); }
 
 bool sAnimFallbackLogged;
 
-#define HAMMER_FLOWER_ANIM_HOOK(fn, name, frames)                            \
+// The "wait" function (0x6045DB18) plays nothing when the item's animation
+// state (+0x1820) is already 4 (idle) -- Tsuru's playIdleAnim has the same
+// check -- and it is called again while idle. Emptying the range then made a
+// bound "wait" look missing and cut it to the Fire Flower's length (seen once
+// "wait" really bound, with I_hmrflower). Such a call is passed straight on.
+inline u32 itemAnimState(StageActor* item) { return *(u32*)((u8*)item + 0x1820); }
+
+#define HAMMER_FLOWER_ANIM_HOOK(fn, name, frames, skipState)                 \
     extern "C" int fn##_orig(StageActor* item);                              \
     extern "C" int fn(StageActor* item)                                      \
     {                                                                        \
         if (!isHammerFlower(item))                                           \
             return fn##_orig(item);                                          \
+        if (itemAnimState(item) == (skipState)) {                            \
+            nsmbudx::ScopedNameRemap remap(kItemRemap);                      \
+            return fn##_orig(item);                                          \
+        }                                                                    \
         u8* anim = itemSkelAnim(item);                                       \
         if (anim)                                                            \
             animEnd(anim) = animStart(anim);                                 \
@@ -397,11 +433,11 @@ bool sAnimFallbackLogged;
         return r;                                                            \
     }
 
-HAMMER_FLOWER_ANIM_HOOK(HammerFlower_animOut,   "out",   HAMMER_FRAMES_OUT)
-HAMMER_FLOWER_ANIM_HOOK(HammerFlower_animOut2,  "out2",  HAMMER_FRAMES_OUT2)
-HAMMER_FLOWER_ANIM_HOOK(HammerFlower_animOut3,  "out3",  HAMMER_FRAMES_OUT3)
-HAMMER_FLOWER_ANIM_HOOK(HammerFlower_animWait,  "wait",  HAMMER_FRAMES_WAIT)
-HAMMER_FLOWER_ANIM_HOOK(HammerFlower_animWait2, "wait2", HAMMER_FRAMES_WAIT2)
+HAMMER_FLOWER_ANIM_HOOK(HammerFlower_animOut,   "out",   HAMMER_FRAMES_OUT,   ~0u)
+HAMMER_FLOWER_ANIM_HOOK(HammerFlower_animOut2,  "out2",  HAMMER_FRAMES_OUT2,  ~0u)
+HAMMER_FLOWER_ANIM_HOOK(HammerFlower_animOut3,  "out3",  HAMMER_FRAMES_OUT3,  ~0u)
+HAMMER_FLOWER_ANIM_HOOK(HammerFlower_animWait,  "wait",  HAMMER_FRAMES_WAIT,  4u)
+HAMMER_FLOWER_ANIM_HOOK(HammerFlower_animWait2, "wait2", HAMMER_FRAMES_WAIT2, ~0u)
 
 // The Fire Flower's per-frame collect check (vtable +0xE0, 0x6045DDC0), shared
 // by both flowers: sub_60463998(item, &result, 2, 1) grants mode 2 to the
@@ -432,4 +468,12 @@ extern "C" int HammerFlower_grant(StageActor* item)
         nsmbudx::suits::refresh(collector);
     }
     return result;
+}
+
+// For code/hammer_costume.cpp (the helmet and shell, MPL-2.0): is player n a
+// hammer player right now?
+extern "C" bool HammerSuit_isHammerPlayer(u32 playerNo, void* player)
+{
+    return playerNo < 4 && sHammerThrower[playerNo] && player
+        && playerMode((StageActor*)player) == cPlayerMode_Fire;
 }

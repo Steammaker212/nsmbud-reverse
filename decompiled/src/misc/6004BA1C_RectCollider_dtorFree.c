@@ -1,5 +1,6 @@
 /* RectCollider_dtorFree
  * address: 0x6004BA1C   size: 16   group: misc
+ * sym: # RectCollider_dtorFree as UNKNOWN
  * Decompiled from the retail Deluxe (Switch) main module v1.0.0.
  */
 #include "nsmbudx_field.h"

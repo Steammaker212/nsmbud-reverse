@@ -60,7 +60,9 @@ models (and log `remap: archive '...' is not loaded`):
 
 | File | Used by | How to make it |
 |---|---|---|
-| `hammer.Nin_NX_NVN.szs` | hammer_suit (item model) | your own model |
+| `hammer.Nin_NX_NVN.szs` | hammer_suit (thrown hammer; needs bone `bros_hammer_model`) | your own model |
+| `I_hmrflower.Nin_NX_NVN.szs` | hammer_suit (item) | Tsuru's `I_hmrflower.szs`, see [hammer_suit/README](../hammer_suit/README.md#porting-the-tsuru-assets-v5) |
+| `hmrpy.Nin_NX_NVN.szs` | hammer_suit (helmet and shell) | Tsuru's `hmrpy.szs`, same |
 | `shyguy.Nin_NX_NVN.szs` | shy_guy | `scripts/models/wiiu2dx.py --wiiu kakibo.pack --template kakibo --name shyguy ...` |
 | `bee.Nin_NX_NVN.szs` | bee | `scripts/models/wiiu2dx.py --wiiu pukupuku.pack --template pukupuku --name bee --map mt_eye=mat_pukupuku --map mat_pukupuku=mat_pukupuku --pattern-frame 1 ...` |
 

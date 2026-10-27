@@ -1,5 +1,6 @@
 /* SumoBrosBoss__dtor_31E10
  * address: 0x60031E10   size: 216   group: misc
+ * sym: SumoBrosBoss::~SumoBrosBoss() as D0
  * Decompiled from the retail Deluxe (Switch) main module v1.0.0.
  */
 #include "nsmbudx_field.h"

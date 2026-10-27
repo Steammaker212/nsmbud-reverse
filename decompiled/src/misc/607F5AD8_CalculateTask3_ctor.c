@@ -1,5 +1,6 @@
 /* CalculateTask3_ctor
  * address: 0x607F5AD8   size: 28   group: misc
+ * sym: # CalculateTask3_ctor as UNKNOWN
  * Decompiled from the retail Deluxe (Switch) main module v1.0.0.
  */
 #include "nsmbudx_field.h"

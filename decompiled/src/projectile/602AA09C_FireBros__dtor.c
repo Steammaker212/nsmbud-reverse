@@ -1,5 +1,6 @@
 /* FireBros__dtor
  * address: 0x602AA09C   size: 160   group: projectile
+ * sym: FireBros::~FireBros() as D0
  * Decompiled from the retail Deluxe (Switch) main module v1.0.0.
  */
 #include "nsmbudx_field.h"

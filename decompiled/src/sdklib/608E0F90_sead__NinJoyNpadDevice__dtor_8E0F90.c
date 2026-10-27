@@ -1,5 +1,6 @@
 /* sead__NinJoyNpadDevice__dtor_8E0F90
  * address: 0x608E0F90   size: 116   group: sdklib
+ * sym: sead::NinJoyNpadDevice::~NinJoyNpadDevice() as D0
  * Decompiled from the retail Deluxe (Switch) main module v1.0.0.
  */
 #include "nsmbudx_field.h"

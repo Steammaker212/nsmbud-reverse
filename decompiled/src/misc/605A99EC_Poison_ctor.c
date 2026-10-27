@@ -1,5 +1,6 @@
 /* Poison_ctor
  * address: 0x605A99EC   size: 48   group: misc
+ * sym: # Poison_ctor as UNKNOWN
  * Decompiled from the retail Deluxe (Switch) main module v1.0.0.
  */
 #include "nsmbudx_field.h"

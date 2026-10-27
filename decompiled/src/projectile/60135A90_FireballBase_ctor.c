@@ -1,5 +1,6 @@
 /* FireballBase_ctor
  * address: 0x60135A90   size: 308   group: projectile
+ * sym: # FireballBase_ctor as UNKNOWN
  * Decompiled from the retail Deluxe (Switch) main module v1.0.0.
  */
 #include "nsmbudx_field.h"

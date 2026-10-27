@@ -1,5 +1,6 @@
 /* Fuzzy__dtor_2788C0
  * address: 0x602788C0   size: 160   group: misc
+ * sym: Fuzzy::~Fuzzy() as D0
  * Decompiled from the retail Deluxe (Switch) main module v1.0.0.
  */
 #include "nsmbudx_field.h"

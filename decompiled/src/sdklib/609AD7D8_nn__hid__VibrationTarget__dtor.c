@@ -1,5 +1,6 @@
 /* nn__hid__VibrationTarget__dtor
  * address: 0x609AD7D8   size: 12   group: sdklib
+ * sym: nn::hid::VibrationTarget::~VibrationTarget() as D1
  * Decompiled from the retail Deluxe (Switch) main module v1.0.0.
  */
 #include "nsmbudx_field.h"

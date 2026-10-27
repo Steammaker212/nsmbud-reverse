@@ -1,5 +1,6 @@
 /* TileGod_ctor
  * address: 0x605CEF18   size: 68   group: misc
+ * sym: # TileGod_ctor as UNKNOWN
  * Decompiled from the retail Deluxe (Switch) main module v1.0.0.
  */
 #include "nsmbudx_field.h"

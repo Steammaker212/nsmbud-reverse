@@ -220,6 +220,9 @@ def main() -> int:
     ap.add_argument("--romfs", required=True, type=Path)
     ap.add_argument("--out", required=True, type=Path)
     ap.add_argument("--map", action="append", default=[])
+    ap.add_argument("--tex", action="append", default=[],
+                    help="material=tex0,tex1,...: its textures in template sampler order, when the Wii U "
+                         "sampler assign does not follow the template's layout (I_hmrflower hammer_head)")
     ap.add_argument("--pattern-frame",
                     help="show texture-pattern animations as at this frame, whatever frame the game holds "
                          "them on (the Cheep Cheep holds its colour variant, 0; the Bee needs 1) -- F0236")
@@ -253,6 +256,8 @@ def main() -> int:
                 cmd += ["--skin", f"{m['name']}={weights[0]}"]
         for m in a.map:
             cmd += ["--map", m]
+        for tex in a.tex:
+            cmd += ["--tex", tex]
         if a.pattern_frame is not None:
             cmd += ["--pattern-frame", a.pattern_frame]
         rc = subprocess.run(cmd).returncode

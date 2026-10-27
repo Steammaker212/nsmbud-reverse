@@ -13,7 +13,41 @@ Flowers keep throwing fireballs.
 | v1 | every Fire Flower throws hammers | verified in-game (Ryujinx, 2026-10-25) |
 | v2 | the Hammer Flower item and configurable models | tested 2026-10-26: model showed but faced the camera, and the item could not be collected |
 | v3 | Fire Flower variant, side-on model, shared throw handler | tested 2026-10-26: model correct, still not collectible |
-| v4 | items whose archive lacks `out`/`wait` animations are timed like the Fire Flower, so they become collectible | built and installed 2026-10-26; **awaiting test** |
+| v4 | items whose archive lacks `out`/`wait` animations are timed like the Fire Flower, so they become collectible | verified in-game 2026-10-26 (collected, throws hammers) |
+| v5 | Tsuru's assets: the animated Hammer Flower item (`I_hmrflower`), the helmet and shell drawn on the player (`hmrpy`), hammers from our own archive in every level | crashed on collecting (2026-10-26 19:35): the costume models were made while drawing, where there is no heap (F0251) |
+| v6 | costume made with the player's models (PlayerModel ctor hook); idle `wait` replays no longer cut short (F0252) | tested 2026-10-26: works |
+| v7 | regular colours instead of Ice; helmet on Mario and Luigi only, Toads keep their normal cap | built and installed 2026-10-26; **awaiting test** |
+
+## Porting the Tsuru assets (v5)
+
+The Wii U [Tsuru](https://github.com/Zenith-Team/Tsuru) framework (Zenith Team,
+MPL-2.0) ships a Hammer Suit. Its assets, converted with
+[`tools/wiiu2dx`](../../tools/wiiu2dx/) and placed in `romfs/Model/` (models are
+not committed):
+
+| Archive | Model(s) | Template | Command |
+|---|---|---|---|
+| `I_hmrflower` | the Hammer Flower item, with `out`, `out2`, `out3`, `wait`, `wait2` | `I_fireflower` | `wiiu2dx.py --wiiu I_hmrflower.szs --template I_fireflower --name I_hmrflower --map mat_hmrflower=mat_fireflower --map hammer_head=mat_fireflower --tex hammer_head=hmr,lm_01i,lm_02i ...` |
+| `hmrpy` | `hmrpy_partsC` helmet, `hmrpy_partsB` shell (D-F unused) | `bros` | `wiiu2dx.py --wiiu hmrpy.szs --template bros --name hmrpy --map mat_hmrpy_body=mat_bros_boomerang ...` |
+| `hammer` | the thrown hammer (bone `bros_hammer_model`) | your own | |
+
+Two conversion details:
+- `hammer_head` names its textures through `nw4f_map_obj_shader`, which feeds the
+  colour texture from sampler variable `_a2`. Read through the Deluxe shader, that
+  put a lightmap in the albedo slot. `--tex` gives the order explicitly.
+- `mat_bros_all` was compiled only for skinned shapes (skin count 2). The helmet and
+  shell are rigid, so they bind to the rigid `mat_bros_boomerang`, which has the
+  same texture layout (`bros_all.0`, `lm_01e`, `lm_02e`).
+
+What the code takes from Tsuru, and how it maps to Deluxe:
+
+| Tsuru (Wii U) | Here (Deluxe) |
+|---|---|
+| `HammerFlower` actor plays `out`/`out2`/`out3`/`wait`/`wait2` | the Fire Flower variant plays the same names; with `I_hmrflower` they bind, so no fallback timing |
+| `CustomPowerupModel`: made with the player's resources; helmet on `player_head`, shell on `spin`, drawn in `Player::onDraw` | made in a hook on the PlayerModel constructor 0x6078C444 (the player's heap is current there); drawn from a hook on `PlayerModel::draw` 0x6078E574; bones by name through Model vtable +0x54, world matrix +0x6C; head wrapper model+0x124, body model+0x018 |
+| hides `mat_player_hat`, shows `mat_player_hair` | not done (Deluxe's material-visibility call is not found yet); the helmet covers Mario's and Luigi's cap. Toads get the shell only: their head model is the mushroom cap, kept as it is. Model types 5, 6, 8 (other classes from the factory 0x60794BDC, layouts not mapped) get no costume |
+| two hammers per player, hammer parented to the player | `HAMMER_MAX_PER_PLAYER`, owner id at hammer +0x2E78 |
+| hammer from the level's `bros` | our `hammer` archive, loaded at game start: hammers in every level |
 
 ## Changing the models
 
@@ -109,7 +143,7 @@ The evidence for every offset is in
 - The hammer-thrower flag lives in memory. After a reboot, a saved Fire suit
   throws fireballs until a Hammer Flower is collected again.
 - **Suit colours:** a hammer thrower wears the `HAMMER_SUIT_COLORS` look
-  (default: the Ice colours) on every character, Toads included. For a real
+  (default: each character's regular colours, cap included) on every character. For a real
   Hammer Suit add a 4th frame to `PB_switch` / `PH_switch` / `PC_switch` in the
   Mario/Luigi model archives and set `HAMMER_SUIT_FRAME` to `3.0f`; the other
   characters keep `HAMMER_SUIT_COLORS`.

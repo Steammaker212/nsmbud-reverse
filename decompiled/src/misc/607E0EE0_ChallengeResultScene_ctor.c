@@ -1,5 +1,6 @@
 /* ChallengeResultScene_ctor
  * address: 0x607E0EE0   size: 444   group: misc
+ * sym: # ChallengeResultScene_ctor as UNKNOWN
  * Decompiled from the retail Deluxe (Switch) main module v1.0.0.
  */
 #include "nsmbudx_field.h"

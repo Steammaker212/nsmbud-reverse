@@ -1,5 +1,6 @@
 /* Pokey__ctor
  * address: 0x6037F5A8   size: 376   group: misc
+ * sym: Pokey::Pokey(ActorBuildInfo const*) as C1
  * Decompiled from the retail Deluxe (Switch) main module v1.0.0.
  */
 #include "nsmbudx_field.h"

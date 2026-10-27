@@ -1,5 +1,6 @@
 /* CollisionActor__dtor
  * address: 0x60003F94   size: 44   group: collision
+ * sym: CollisionActor::~CollisionActor() as D2
  * Decompiled from the retail Deluxe (Switch) main module v1.0.0.
  */
 #include "nsmbudx_field.h"

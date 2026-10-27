@@ -1,5 +1,6 @@
 /* nn__mii__detail__CalculateSizeAndAlignment__dtor
  * address: 0x609ADC4C   size: 12   group: sdklib
+ * sym: nn::mii::detail::CalculateSizeAndAlignment::~CalculateSizeAndAlignment() as D1
  * Decompiled from the retail Deluxe (Switch) main module v1.0.0.
  */
 #include "nsmbudx_field.h"

@@ -1,5 +1,6 @@
 /* RectCollider_ctor
  * address: 0x6004B764   size: 308   group: misc
+ * sym: RectCollider::RectCollider() as C1
  * Decompiled from the retail Deluxe (Switch) main module v1.0.0.
  */
 #include "nsmbudx_field.h"

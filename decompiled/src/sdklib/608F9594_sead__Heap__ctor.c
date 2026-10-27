@@ -1,5 +1,6 @@
 /* sead__Heap__ctor
  * address: 0x608F9594   size: 332   group: sdklib
+ * sym: sead::Heap::Heap(sead::SafeStringBase<char> const&, sead::Heap*, void*, unsigned long, sead::Heap::HeapDirection, bool) as C2
  * Decompiled from the retail Deluxe (Switch) main module v1.0.0.
  */
 #include "nsmbudx_field.h"

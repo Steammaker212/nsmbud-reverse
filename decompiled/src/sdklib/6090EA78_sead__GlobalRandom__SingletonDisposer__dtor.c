@@ -1,5 +1,6 @@
 /* sead__GlobalRandom__SingletonDisposer__dtor
  * address: 0x6090EA78   size: 68   group: sdklib
+ * sym: sead::GlobalRandom::SingletonDisposer_::~SingletonDisposer_() as D2
  * Decompiled from the retail Deluxe (Switch) main module v1.0.0.
  */
 #include "nsmbudx_field.h"

@@ -1,5 +1,6 @@
 /* LavaGeyser_ctor
  * address: 0x6070BA1C   size: 444   group: misc
+ * sym: # LavaGeyser_ctor as UNKNOWN
  * Decompiled from the retail Deluxe (Switch) main module v1.0.0.
  */
 #include "nsmbudx_field.h"

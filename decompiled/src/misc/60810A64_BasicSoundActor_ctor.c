@@ -1,5 +1,6 @@
 /* BasicSoundActor_ctor
  * address: 0x60810A64   size: 336   group: misc
+ * sym: # BasicSoundActor_ctor as UNKNOWN
  * Decompiled from the retail Deluxe (Switch) main module v1.0.0.
  */
 #include "nsmbudx_field.h"

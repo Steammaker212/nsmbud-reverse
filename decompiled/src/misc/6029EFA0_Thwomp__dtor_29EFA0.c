@@ -1,5 +1,6 @@
 /* Thwomp__dtor_29EFA0
  * address: 0x6029EFA0   size: 144   group: misc
+ * sym: Thwomp::~Thwomp() as D0
  * Decompiled from the retail Deluxe (Switch) main module v1.0.0.
  */
 #include "nsmbudx_field.h"

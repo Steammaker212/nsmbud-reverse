@@ -1,5 +1,6 @@
 /* sead__TaskBase__ctor
  * address: 0x608EF360   size: 200   group: sdklib
+ * sym: sead::TaskBase::TaskBase(sead::TaskConstructArg const&, char const*) as C2
  * Decompiled from the retail Deluxe (Switch) main module v1.0.0.
  */
 #include "nsmbudx_field.h"

@@ -1,5 +1,6 @@
 /* sead__Thread__ctor
  * address: 0x60908108   size: 440   group: sdklib
+ * sym: sead::Thread::Thread(sead::SafeStringBase<char> const&, sead::Heap*, int, sead::MessageQueue::BlockType, long, int, int) as C2
  * Decompiled from the retail Deluxe (Switch) main module v1.0.0.
  */
 #include "nsmbudx_field.h"

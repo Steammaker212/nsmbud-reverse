@@ -1,5 +1,6 @@
 /* nn__web__ShowWebPageArg__ctor
  * address: 0x609AD8D4   size: 12   group: sdklib
+ * sym: nn::web::ShowWebPageArg::ShowWebPageArg(char const*) as C1
  * Decompiled from the retail Deluxe (Switch) main module v1.0.0.
  */
 #include "nsmbudx_field.h"

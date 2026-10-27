@@ -1,5 +1,6 @@
 /* ColliderNodeUnk1_ctor
  * address: 0x60166934   size: 52   group: collision
+ * sym: # ColliderNodeUnk1_ctor as UNKNOWN
  * Decompiled from the retail Deluxe (Switch) main module v1.0.0.
  */
 #include "nsmbudx_field.h"

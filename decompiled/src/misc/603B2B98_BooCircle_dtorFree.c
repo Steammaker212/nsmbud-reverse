@@ -1,5 +1,6 @@
 /* BooCircle_dtorFree
  * address: 0x603B2B98   size: 48   group: misc
+ * sym: # BooCircle_dtorFree as UNKNOWN
  * Decompiled from the retail Deluxe (Switch) main module v1.0.0.
  */
 #include "nsmbudx_field.h"

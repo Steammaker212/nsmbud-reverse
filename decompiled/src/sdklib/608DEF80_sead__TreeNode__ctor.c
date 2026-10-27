@@ -1,5 +1,6 @@
 /* sead__TreeNode__ctor
  * address: 0x608DEF80   size: 24   group: sdklib
+ * sym: sead::TreeNode::TreeNode() as C2
  * Decompiled from the retail Deluxe (Switch) main module v1.0.0.
  */
 #include "nsmbudx_field.h"

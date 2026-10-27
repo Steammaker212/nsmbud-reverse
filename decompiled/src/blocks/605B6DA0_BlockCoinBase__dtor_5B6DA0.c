@@ -1,5 +1,6 @@
 /* BlockCoinBase__dtor_5B6DA0
  * address: 0x605B6DA0   size: 76   group: blocks
+ * sym: BlockCoinBase::~BlockCoinBase() as D0
  * Decompiled from the retail Deluxe (Switch) main module v1.0.0.
  */
 #include "nsmbudx_field.h"

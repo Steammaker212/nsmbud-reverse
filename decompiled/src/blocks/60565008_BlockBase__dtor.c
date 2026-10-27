@@ -1,5 +1,6 @@
 /* BlockBase__dtor
  * address: 0x60565008   size: 76   group: blocks
+ * sym: BlockBase::~BlockBase() as D0
  * Decompiled from the retail Deluxe (Switch) main module v1.0.0.
  */
 #include "nsmbudx_field.h"

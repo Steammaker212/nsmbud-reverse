@@ -1,0 +1,19 @@
+world,slot,profile,actor,start_flag,fight_courses
+1,0,908,CS W1 item,W1Item,1-32 1-33 1-34 1-55
+1,1,886,CS Piranha Plant,W1PakkunA,1-32 1-33 1-34 1-55
+2,0,899,CS W2 Goomba,W2EnemyA,2-32 2-33 2-34 2-55 2-56 2-57
+2,1,870,W2 Hammer Bro,W2EnemyB,2-32 2-33 2-34 2-55 2-56 2-57
+2,2,893,CS Waddlewing,W2EnemyC,2-32 2-33 2-34 2-55 2-56 2-57
+3,0,888,CS jumping Cheep Cheep,W3EnemyA,3-32 3-33 3-34 3-55
+3,1,888,CS jumping Cheep Cheep,W3EnemyB,3-32 3-33 3-34 3-55
+4,0,897,CS Pentaro (penguin),W4EnemyA,4-32 4-33 4-34 4-55 4-56 4-57
+4,1,897,CS Pentaro (penguin),W4EnemyB,4-32 4-33 4-34 4-55 4-56 4-57
+4,2,897,CS Pentaro (penguin),W4EnemyC,4-32 4-33 4-34 4-55 4-56 4-57
+4,3,897,CS Pentaro (penguin),W4EnemyD,4-32 4-33 4-34 4-55 4-56 4-57
+4,4,898,CS W4 item,W4EnemyD,4-32 4-33 4-34 4-55 4-56 4-57
+5,0,891,CS W5 Boo,W5bEnemy1,5-32 5-33 5-34 5-55 5-56
+5,1,891,CS W5 Boo,W5bEnemy2,5-32 5-33 5-34 5-55 5-56
+5,2,891,CS W5 Boo,W5bEnemy3,5-32 5-33 5-34 5-55 5-56
+7,0,889,CS Chorobon,ChorobonA,7-32 7-33 7-34 7-55
+7,1,889,CS Chorobon,ChorobonB,7-32 7-33 7-34 7-55
+7,2,890,CS W7 item,ChorobonC,7-32 7-33 7-34 7-55

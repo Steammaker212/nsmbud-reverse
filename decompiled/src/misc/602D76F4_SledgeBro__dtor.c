@@ -1,5 +1,6 @@
 /* SledgeBro__dtor
  * address: 0x602D76F4   size: 184   group: misc
+ * sym: SledgeBro::~SledgeBro() as D2
  * Decompiled from the retail Deluxe (Switch) main module v1.0.0.
  */
 #include "nsmbudx_field.h"

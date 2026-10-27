@@ -1,5 +1,6 @@
 /* TerrainActor_dtor
  * address: 0x605A5764   size: 148   group: misc
+ * sym: # TerrainActor_dtor as UNKNOWN
  * Decompiled from the retail Deluxe (Switch) main module v1.0.0.
  */
 #include "nsmbudx_field.h"

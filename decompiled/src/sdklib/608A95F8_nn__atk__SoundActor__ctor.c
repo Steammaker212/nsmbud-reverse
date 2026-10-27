@@ -1,5 +1,6 @@
 /* nn__atk__SoundActor__ctor
  * address: 0x608A95F8   size: 208   group: sdklib
+ * sym: nn::atk::SoundActor::SoundActor(nn::atk::SoundArchivePlayer*) as C2
  * Decompiled from the retail Deluxe (Switch) main module v1.0.0.
  */
 #include "nsmbudx_field.h"

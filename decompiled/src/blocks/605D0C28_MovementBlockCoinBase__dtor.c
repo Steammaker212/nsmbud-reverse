@@ -1,5 +1,6 @@
 /* MovementBlockCoinBase__dtor
  * address: 0x605D0C28   size: 76   group: blocks
+ * sym: MovementBlockCoinBase::~MovementBlockCoinBase() as D0
  * Decompiled from the retail Deluxe (Switch) main module v1.0.0.
  */
 #include "nsmbudx_field.h"

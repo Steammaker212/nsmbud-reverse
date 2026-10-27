@@ -1,5 +1,6 @@
 /* ActorCollisionMgr_dtorFree
  * address: 0x601542B4   size: 16   group: actors
+ * sym: # ActorCollisionMgr_dtorFree as UNKNOWN
  * Decompiled from the retail Deluxe (Switch) main module v1.0.0.
  */
 #include "nsmbudx_field.h"

@@ -1,5 +1,6 @@
 /* sead__FileDeviceMgr__ctor
  * address: 0x608E82DC   size: 204   group: sdklib
+ * sym: sead::FileDeviceMgr::FileDeviceMgr() as C2
  * Decompiled from the retail Deluxe (Switch) main module v1.0.0.
  */
 #include "nsmbudx_field.h"

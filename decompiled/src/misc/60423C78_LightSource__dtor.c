@@ -1,5 +1,6 @@
 /* LightSource__dtor
  * address: 0x60423C78   size: 36   group: misc
+ * sym: LightSource::~LightSource() as D1
  * Decompiled from the retail Deluxe (Switch) main module v1.0.0.
  */
 #include "nsmbudx_field.h"

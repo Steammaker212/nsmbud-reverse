@@ -1,5 +1,6 @@
 /* ShellEnemy__dtor_3A52F0
  * address: 0x603A52F0   size: 160   group: misc
+ * sym: ShellEnemy::~ShellEnemy() as D0
  * Decompiled from the retail Deluxe (Switch) main module v1.0.0.
  */
 #include "nsmbudx_field.h"

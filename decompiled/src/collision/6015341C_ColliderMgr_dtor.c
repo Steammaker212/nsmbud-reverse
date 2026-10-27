@@ -1,5 +1,6 @@
 /* ColliderMgr_dtor
  * address: 0x6015341C   size: 68   group: collision
+ * sym: # ColliderMgr_dtor as UNKNOWN
  * Decompiled from the retail Deluxe (Switch) main module v1.0.0.
  */
 #include "nsmbudx_field.h"

@@ -1,5 +1,6 @@
 /* SpinningStar_dtorFree
  * address: 0x60673800   size: 76   group: misc
+ * sym: # SpinningStar_dtorFree as UNKNOWN
  * Decompiled from the retail Deluxe (Switch) main module v1.0.0.
  */
 #include "nsmbudx_field.h"

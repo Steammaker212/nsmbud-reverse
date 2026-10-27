@@ -1,5 +1,6 @@
 /* Chain_ctor
  * address: 0x606E4BE8   size: 216   group: misc
+ * sym: # Chain_ctor as UNKNOWN
  * Decompiled from the retail Deluxe (Switch) main module v1.0.0.
  */
 #include "nsmbudx_field.h"

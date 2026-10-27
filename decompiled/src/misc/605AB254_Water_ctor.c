@@ -1,5 +1,6 @@
 /* Water_ctor
  * address: 0x605AB254   size: 80   group: misc
+ * sym: # Water_ctor as UNKNOWN
  * Decompiled from the retail Deluxe (Switch) main module v1.0.0.
  */
 #include "nsmbudx_field.h"

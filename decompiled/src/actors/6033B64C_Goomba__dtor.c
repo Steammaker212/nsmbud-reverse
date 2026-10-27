@@ -1,5 +1,6 @@
 /* Goomba__dtor
  * address: 0x6033B64C   size: 120   group: actors
+ * sym: Goomba::~Goomba() as D0
  * Decompiled from the retail Deluxe (Switch) main module v1.0.0.
  */
 #include "nsmbudx_field.h"

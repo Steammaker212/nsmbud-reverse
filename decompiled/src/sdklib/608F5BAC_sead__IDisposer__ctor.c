@@ -1,5 +1,6 @@
 /* sead__IDisposer__ctor
  * address: 0x608F5BAC   size: 148   group: sdklib
+ * sym: sead::IDisposer::IDisposer(sead::Heap*, sead::IDisposer::HeapNullOption) as C1
  * Decompiled from the retail Deluxe (Switch) main module v1.0.0.
  */
 #include "nsmbudx_field.h"

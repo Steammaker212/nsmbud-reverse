@@ -1,5 +1,6 @@
 /* TileCheck_ctor
  * address: 0x6015D0EC   size: 88   group: misc
+ * sym: TileCheck::TileCheck(TileCheck::Param const&) as C1
  * Decompiled from the retail Deluxe (Switch) main module v1.0.0.
  */
 #include "nsmbudx_field.h"

@@ -1,5 +1,6 @@
 /* BowserJrBase__dtor
  * address: 0x600CFEB4   size: 216   group: misc
+ * sym: BowserJrBase::~BowserJrBase() as D0
  * Decompiled from the retail Deluxe (Switch) main module v1.0.0.
  */
 #include "nsmbudx_field.h"

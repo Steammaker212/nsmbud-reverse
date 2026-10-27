@@ -1,5 +1,6 @@
 /* sead_Decompressor_dtorFree
  * address: 0x60421174   size: 68   group: sdklib
+ * sym: # sead_Decompressor_dtorFree as UNKNOWN
  * Decompiled from the retail Deluxe (Switch) main module v1.0.0.
  */
 #include "nsmbudx_field.h"

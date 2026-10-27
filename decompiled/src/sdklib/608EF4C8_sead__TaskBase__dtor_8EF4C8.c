@@ -1,5 +1,6 @@
 /* sead__TaskBase__dtor_8EF4C8
  * address: 0x608EF4C8   size: 148   group: sdklib
+ * sym: sead::TaskBase::~TaskBase() as D0
  * Decompiled from the retail Deluxe (Switch) main module v1.0.0.
  */
 #include "nsmbudx_field.h"

@@ -1,5 +1,6 @@
 /* PlayerFireball_ctor
  * address: 0x6013A7A4   size: 84   group: player
+ * sym: # PlayerFireball_ctor as UNKNOWN
  * Decompiled from the retail Deluxe (Switch) main module v1.0.0.
  */
 #include "nsmbudx_field.h"

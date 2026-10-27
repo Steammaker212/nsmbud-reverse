@@ -1,5 +1,6 @@
 /* nn__atk__SoundActor__dtor_8A9794
  * address: 0x608A9794   size: 16   group: sdklib
+ * sym: nn::atk::SoundActor::~SoundActor() as D0
  * Decompiled from the retail Deluxe (Switch) main module v1.0.0.
  */
 #include "nsmbudx_field.h"

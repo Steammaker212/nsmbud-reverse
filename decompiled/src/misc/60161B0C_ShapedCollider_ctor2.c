@@ -1,5 +1,6 @@
 /* ShapedCollider_ctor2
  * address: 0x60161B0C   size: 132   group: misc
+ * sym: # ShapedCollider_ctor2 as UNKNOWN
  * Decompiled from the retail Deluxe (Switch) main module v1.0.0.
  */
 #include "nsmbudx_field.h"

@@ -1,5 +1,6 @@
 /* MovementBlockCoinBase__ctor
  * address: 0x605CFA04   size: 280   group: blocks
+ * sym: MovementBlockCoinBase::MovementBlockCoinBase(ActorBuildInfo const*) as C2
  * Decompiled from the retail Deluxe (Switch) main module v1.0.0.
  */
 #include "nsmbudx_field.h"

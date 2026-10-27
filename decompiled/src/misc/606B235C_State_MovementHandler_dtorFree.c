@@ -1,5 +1,6 @@
 /* State_MovementHandler_dtorFree
  * address: 0x606B235C   size: 4   group: misc
+ * sym: # State_MovementHandler_dtorFree as UNKNOWN
  * Decompiled from the retail Deluxe (Switch) main module v1.0.0.
  */
 #include "nsmbudx_field.h"

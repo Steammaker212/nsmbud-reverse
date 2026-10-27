@@ -1,5 +1,6 @@
 /* BowserJrBase__ctor
  * address: 0x600CE2DC   size: 240   group: misc
+ * sym: BowserJrBase::BowserJrBase(ActorBuildInfo const*) as C2
  * Decompiled from the retail Deluxe (Switch) main module v1.0.0.
  */
 #include "nsmbudx_field.h"

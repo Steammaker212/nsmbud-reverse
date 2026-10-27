@@ -1,5 +1,6 @@
 /* nn__web__WebPageReturnValue__ctor
  * address: 0x609AD958   size: 12   group: sdklib
+ * sym: nn::web::WebPageReturnValue::WebPageReturnValue() as C1
  * Decompiled from the retail Deluxe (Switch) main module v1.0.0.
  */
 #include "nsmbudx_field.h"

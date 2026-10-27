@@ -1,5 +1,6 @@
 /* YoshiFlame__ctor
  * address: 0x607D2640   size: 124   group: actors
+ * sym: YoshiFlame::YoshiFlame(ActorBuildInfo const*) as C3
  * Decompiled from the retail Deluxe (Switch) main module v1.0.0.
  */
 #include "nsmbudx_field.h"

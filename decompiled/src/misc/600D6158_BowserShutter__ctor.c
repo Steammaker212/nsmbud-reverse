@@ -1,5 +1,6 @@
 /* BowserShutter__ctor
  * address: 0x600D6158   size: 232   group: misc
+ * sym: BowserShutter::BowserShutter(ActorBuildInfo const*) as C3
  * Decompiled from the retail Deluxe (Switch) main module v1.0.0.
  */
 #include "nsmbudx_field.h"

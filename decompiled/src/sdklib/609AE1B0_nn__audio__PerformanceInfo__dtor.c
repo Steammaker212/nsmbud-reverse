@@ -1,5 +1,6 @@
 /* nn__audio__PerformanceInfo__dtor
  * address: 0x609AE1B0   size: 12   group: sdklib
+ * sym: nn::audio::PerformanceInfo::~PerformanceInfo() as D1
  * Decompiled from the retail Deluxe (Switch) main module v1.0.0.
  */
 #include "nsmbudx_field.h"

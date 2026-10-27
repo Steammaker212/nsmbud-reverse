@@ -1,5 +1,6 @@
 /* nn__hid__VibrationPlayer__ctor
  * address: 0x609AD7E4   size: 12   group: sdklib
+ * sym: nn::hid::VibrationPlayer::VibrationPlayer() as C2
  * Decompiled from the retail Deluxe (Switch) main module v1.0.0.
  */
 #include "nsmbudx_field.h"

@@ -10,3 +10,8 @@ HammerActor_StateThrown = 0x00C87CE4;
 
 # The Fire Flower's ActorInfo, as registerProfile_faiyafurawa (0x6045E25C) passes it.
 FireFlower_actorInfo = 0x00B02594;
+
+# sead::HeapMgr::sInstance (the pointer operator delete 0x608DE3A0 loads) and
+# sead::HeapMgr::getCurrentHeap (this) -- the heap operator new(size, 0) uses.
+HeapMgr_sInstance = 0x00CCEE90;
+HeapMgr_getCurrentHeap = 0x008FAC18;

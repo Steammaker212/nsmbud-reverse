@@ -1,5 +1,6 @@
 /* TileMgr_ctor
  * address: 0x60710D40   size: 2980   group: misc
+ * sym: # TileMgr_ctor as UNKNOWN
  * Decompiled from the retail Deluxe (Switch) main module v1.0.0.
  */
 #include "nsmbudx_field.h"

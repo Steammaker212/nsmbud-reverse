@@ -1,5 +1,6 @@
 /* Yoshi_ctor
  * address: 0x607CB7D0   size: 440   group: actors
+ * sym: # Yoshi_ctor as UNKNOWN
  * Decompiled from the retail Deluxe (Switch) main module v1.0.0.
  */
 #include "nsmbudx_field.h"
