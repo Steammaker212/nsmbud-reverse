@@ -309,6 +309,10 @@ What happens to anything he eats is decided by the eaten actor's **EatData**
 (`actor+0x26C`; type at `+0x10`): when the tongue comes back, type 5
 (YoshiFire) or 6 (YoshiFireIce) is swapped for a YoshiFlame (profile 478) he
 spits. Enemy fireballs are type 5, which is why eating one gives fire breath.
+
+The two Yoshi mods below test this research; they are not part of releases.
+Build them in with `make_mod_project.py --release --with yoshi`.
+
 `framework/yoshi` (add `yoshi` to `requires.txt`):
 
 ```cpp

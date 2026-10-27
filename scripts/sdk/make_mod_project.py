@@ -148,12 +148,33 @@ def check_symbols(sym_dir: Path, module_owned: set[str]) -> int:
     return clashes
 
 
+def read_release(path: Path) -> tuple[list[str], dict[str, list[str]]]:
+    """mods/release.txt: one mod per line is in every release; `[group] mod mod ...`
+    is an optional group, added with --with group. # starts a comment."""
+    release, optional = [], {}
+    for line in path.read_text(encoding="utf-8").splitlines():
+        line = line.split("#", 1)[0].strip()
+        if not line:
+            continue
+        m = re.match(r"\[(\w+)\]\s*(.*)", line)
+        if m:
+            optional[m.group(1)] = m.group(2).split()
+        else:
+            release += line.split()
+    return release, optional
+
+
 def main() -> int:
     ap = argparse.ArgumentParser(description=__doc__.split("\n")[0])
     ap.add_argument("--repo", default=".")
-    ap.add_argument("--mod", required=True, action="append",
+    ap.add_argument("--mod", action="append", default=[],
                     help="a mod folder; repeat to build several mods into one subsdk0 "
                          "(only one subsdk0 can load, so a release build lists them all)")
+    ap.add_argument("--release", action="store_true",
+                    help="build the release: every mod listed in mods/release.txt")
+    ap.add_argument("--with", dest="groups", action="append", default=[], metavar="GROUP",
+                    help="add an optional group from mods/release.txt to --release "
+                         "(e.g. --with yoshi: the Yoshi research mods)")
     ap.add_argument("--sweetdx", required=True, help="sweet-dx checkout (has build/source)")
     ap.add_argument("--nso", required=True, help="retail main NSO")
     ap.add_argument("--out", required=True)
@@ -174,7 +195,17 @@ def main() -> int:
     args = ap.parse_args()
 
     repo = Path(args.repo).resolve()
-    mods = [(repo / m).resolve() for m in args.mod]
+    names = list(args.mod)
+    if args.release or args.groups:
+        release, optional = read_release(repo / "mods" / "release.txt")
+        for g in args.groups:
+            if g not in optional:
+                raise SystemExit(f"--with {g}: mods/release.txt has no optional group '{g}' "
+                                 f"(groups: {', '.join(sorted(optional)) or 'none'})")
+        names += [f"mods/{m}" for m in release + [m for g in args.groups for m in optional[g]]]
+    if not names:
+        raise SystemExit("name the mods: --release, or --mod <folder> (repeatable)")
+    mods = [(repo / m).resolve() for m in dict.fromkeys(names)]
     sweetdx = Path(args.sweetdx).resolve()
     template = sweetdx / "build" / "source"
     out = Path(args.out).resolve()

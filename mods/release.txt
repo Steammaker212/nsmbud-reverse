@@ -1,0 +1,17 @@
+# The mods in every release build (make_mod_project.py --release), in build order.
+# mods/nsmbudx_all is assembled from this list.
+hammer_suit
+bee
+p_acorn
+shy_guy
+shell_suit
+worldmap_log
+custom_spawner
+custom_boss
+cold_fuzzy
+poison_mushroom
+
+# Optional groups, left out of releases: add one with --with <group>.
+# yoshi: Yoshi breathes fire from eaten enemies, and tuned egg/flutter numbers.
+# They exist to test the Yoshi reverse engineering (framework/yoshi), not as features.
+[yoshi] yoshi_fire yoshi_tuning

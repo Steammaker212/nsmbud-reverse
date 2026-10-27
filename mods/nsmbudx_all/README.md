@@ -15,10 +15,10 @@ that was tested in-game on 2026-10-26: the build is byte-identical to the
 | `build.py` | builds it, adds the model archives, checks the module, optionally installs it |
 | `romfs/Model/` | **not in the repo**: put your model archives here (see below) |
 
-Mods: hammer_suit, bee, p_acorn, shy_guy, shell_suit, yoshi_fire, yoshi_tuning,
+Mods ([`mods/release.txt`](../release.txt)): hammer_suit, bee, p_acorn, shy_guy, shell_suit,
 worldmap_log, custom_spawner (which replaces codedx's sprite 726 with a fixed
 copy), custom_boss, cold_fuzzy and poison_mushroom (Tsuru ports). Framework: core,
-resources, items, game, player, actors, yoshi, worldmap, tsuru, diagnostics (archive guard + draw guard). codedx template
+resources, items, game, player, actors, worldmap, tsuru, diagnostics (archive guard + draw guard). codedx template
 sprites 724-733.
 
 | Sprite | Actor | Block contents |
@@ -78,11 +78,18 @@ It is assembled by the same tool as every other build; rerun it after changing
 a mod or the framework (then delete `source/nso/main`, which is your game file):
 
 ```powershell
-py -3 scripts/sdk/make_mod_project.py --repo . `
-  --mod mods/hammer_suit --mod mods/bee --mod mods/p_acorn --mod mods/shy_guy --mod mods/shell_suit `
-  --mod mods/yoshi_fire --mod mods/yoshi_tuning --mod mods/worldmap_log --mod mods/custom_spawner `
-  --mod mods/custom_boss --mod mods/cold_fuzzy --mod mods/poison_mushroom --sweetdx "<sweet-dx checkout>" --nso <main> `
+py -3 scripts/sdk/make_mod_project.py --repo . --release `
+  --sweetdx "<sweet-dx checkout>" --nso <main> `
   --out mods/nsmbudx_all --with-template-code --with-diagnostics
+```
+
+The mods are the ones in [`mods/release.txt`](../release.txt). The Yoshi research
+mods are not among them; add `--with yoshi` for a build that has them:
+
+```powershell
+py -3 scripts/sdk/make_mod_project.py --repo . --release --with yoshi `
+  --sweetdx "<sweet-dx checkout>" --sweetdx-exe <sweetdx.exe> --nso <main> `
+  --out mods/release_yoshi --build --with-template-code --with-diagnostics
 ```
 
 ## Licences
