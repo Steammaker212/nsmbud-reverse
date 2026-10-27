@@ -44,6 +44,13 @@ Two GPL-3.0 projects informed this work:
 * [`sweet-dx`](https://github.com/jabonchan/sweet-dx) by jabonchan — the build
   toolchain the `sweetdx/` project targets.
 
+* [`Tsuru`](https://github.com/Zenith-Team/Tsuru) by the Zenith Team (MPL-2.0) — the
+  Wii U NSMBU framework whose Hammer Suit `mods/hammer_suit` ports: its asset names
+  and the helmet/shell drawing (`CustomPowerupModel`) are adapted in
+  `mods/hammer_suit/code/hammer_suit.cpp`, which marks the ported part. Under MPL-2.0
+  that part stays available under the MPL; Tsuru's own source is not vendored
+  (`third_party/Tsuru` is outside the repository) and its models are never committed.
+
 **Neither is vendored.** Both are GPL-3.0, and this repository is not; including
 their source here would force this repository under GPL-3.0. Both are listed in
 `.gitignore`, and `sweetdx/` contains none of their code.

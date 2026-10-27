@@ -25,6 +25,12 @@ static class Program
     // Skinning inputs every NSMBUDX Wii_UBER shading model declares (bfsha_info.py).
     static readonly HashSet<string> SkinAttribs = new() { "_i0", "_i1", "_w0", "_w1" };
 
+    // --tex mat=t0,t1,...: textures for a material in template sampler order. Sampler variable
+    // names mean different things in different shader archives (the Wii U Hammer Flower's
+    // nw4f_map_obj_shader feeds its colour texture through _a2), so a model whose assign does
+    // not follow the template's layout names its textures explicitly.
+    static readonly Dictionary<string, string[]> TexOverride = new();
+
     static int Main(string[] args)
     {
         if (args.Length == 2 && args[0] == "--dump")
@@ -55,6 +61,11 @@ static class Program
             {
                 var kv = args[++i].Split('=', 2);
                 compiledSkin[kv[0]] = int.Parse(kv[1]);
+            }
+            else if (args[i] == "--tex" && i + 1 < args.Length)
+            {
+                var kv = args[++i].Split('=', 2);
+                TexOverride[kv[0]] = kv[1].Split(',');
             }
             else
                 positional.Add(args[i]);
@@ -124,7 +135,9 @@ static class Program
                     FitSkin(model, shape, want, sm);
             }
 
-            if (modelName != null && model.Name != modelName)
+            // One model takes the archive's name; a file of several parts keeps their names
+            // (the Hammer Suit's hmrpy_partsB/C are loaded by name).
+            if (modelName != null && model.Name != modelName && res.Models.Count == 1)
             {
                 Console.WriteLine($"model '{model.Name}' -> '{modelName}'");
                 res.Models.Rename(model.Name, modelName);
@@ -465,7 +478,16 @@ static class Program
             string shaderVar = tpl.ShaderAssign.SamplerAssigns.Keys
                 .FirstOrDefault(k => tpl.ShaderAssign.SamplerAssigns[k].String == tplSampler) ?? tplSampler;
             string tex = null;
-            if (srcAssign.ContainsKey(shaderVar))
+            if (TexOverride.TryGetValue(mat.Name, out var names))
+            {
+                int slot = tplSamplers.IndexOf(tplSampler);
+                tex = slot < names.Length ? names[slot] : null;
+                int idx = mat.TextureRefs.Select(t => t.Name).ToList().IndexOf(tex);
+                if (idx >= 0 && idx < srcSamplers.Count)
+                    samplerMap[srcSamplers[idx]] = tplSampler;
+                Console.WriteLine($"  {mat.Name}: {tplSampler} <- '{tex}' (--tex)");
+            }
+            else if (srcAssign.ContainsKey(shaderVar))
             {
                 samplerMap[srcAssign[shaderVar].String] = tplSampler;   // old material sampler -> new
                 int idx = srcSamplers.IndexOf(srcAssign[shaderVar].String);
@@ -594,6 +616,11 @@ static class Program
             foreach (var mat in m.Materials.Values)
                 Console.WriteLine($"  material {mat.Name}: {mat.ShaderAssign.ShadingModelName} tex=[{string.Join(",", mat.TextureRefs.Select(t => t.Name))}] " +
                                   $"samplers=[{string.Join(",", mat.Samplers.Keys)}] assign=[{string.Join(",", mat.ShaderAssign.SamplerAssigns.Keys.Select(k => k + "->" + mat.ShaderAssign.SamplerAssigns[k].String))}] params={mat.ShaderParams.Count}");
+        }
+        foreach (var s in res.SkeletalAnims.Values)
+        {
+            Console.WriteLine($"sklanim {s.Name}: frames={s.FrameCount} flags={s.FlagsAnimSettings} scale={s.FlagsScale} rot={s.FlagsRotate} " +
+                              $"bakedsize={s.BakedSize} bones=[{string.Join(",", s.BoneAnims.Select(b => $"{b.Name}:curves{b.Curves.Count}"))}]");
         }
         var anims = res.TexPatternAnims.Values;   // the Switch loader splits its material anims into these too
         foreach (var a in anims)

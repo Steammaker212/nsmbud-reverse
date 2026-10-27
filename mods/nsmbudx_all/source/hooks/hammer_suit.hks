@@ -48,3 +48,19 @@ HammerFlower_animOut2:
     address:    0x0045DCC4
     symbol:     HammerFlower_animOut2
     trampoline: HammerFlower_animOut2_orig
+
+@ PlayerModel::draw (every character's model): body +0x018, then head +0x124.
+@ The hammer suit draws its helmet and shell after it. Entry: push {r4, lr}.
+HammerSuit_drawPlayerModel:
+    type:       hook
+    address:    0x0078E574
+    symbol:     HammerSuit_drawPlayerModel
+    trampoline: HammerSuit_drawPlayerModel_orig
+
+@ PlayerModel::PlayerModel (6 args; the 4th, the forced mode, is -1 for players).
+@ The helmet and shell are made right after it, on the player's heap. Entry: push {r4-r8, lr}.
+HammerSuit_playerModelCtor:
+    type:       hook
+    address:    0x0078C444
+    symbol:     HammerSuit_playerModelCtor
+    trampoline: HammerSuit_playerModelCtor_orig

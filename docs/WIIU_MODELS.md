@@ -156,6 +156,17 @@ sampler variable through the Wii U material's own sampler assign, so a
 material whose assign is scrambled (the bee's `_a0 -> _a2`) still gets its
 albedo in `_a0`.
 
+That routing assumes the Wii U shader names its variables like the template's.
+They don't always: the Tsuru Hammer Flower's `hammer_head` material uses
+`nw4f_map_obj_shader`, which feeds its colour texture (`hmr`) from variable `_a2`.
+Routed by name, a lightmap landed in the albedo slot and the head would draw
+dark. `--tex <material>=<t0>,<t1>,...` lists the textures in template sampler
+order instead (`--tex hammer_head=hmr,lm_01i,lm_02i`). Decode the textures
+(`bntx_compare.py --png`) when unsure which one is the colour.
+
+A file with several models (Tsuru's `hmrpy`: helmet, shell, three more parts)
+keeps their names; only a single model is renamed to `--name`.
+
 Template choice rules:
 - the model's skeletal and texture-pattern animations must carry the names
   the game plays for that actor (the converter keeps names; the game looks
