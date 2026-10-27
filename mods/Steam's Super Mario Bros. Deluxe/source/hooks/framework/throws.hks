@@ -9,6 +9,23 @@ Throws_canThrow:
     symbol:     ModBase::throws::canThrow(void*)
     trampoline: ModBase::throws::canThrow_orig(void*)
 
+@ The ordinary throw: canThrow's test inlined, then the Throw state (called
+@ from 0x607965CC). Entry `push {r4-r7, r11, lr}`, position-independent.
+Throws_startThrow:
+    type:       hook
+    address:    0x007AAA00
+    symbol:     ModBase::throws::startThrow(void*)
+    trampoline: ModBase::throws::startThrow_orig(void*)
+
+@ The Throw state's execute (state 0x60CC4D6C, built at 0x607B3C64): throws
+@ again in phase 1 with the test inlined. Entry `push {r4-r6, lr}`, then
+@ `vpush {d8}`; the push alone is replayed.
+Throws_throwExecute:
+    type:       hook
+    address:    0x007AAF80
+    symbol:     ModBase::throws::throwExecute(void*)
+    trampoline: ModBase::throws::throwExecute_orig(void*)
+
 @ Player::createFireBall (corpus: SE_PLY_THROW_ICEBALL_ref). Entry
 @ `push {r4, r5, r6, lr}`, position-independent (sdk/data/hookable.csv).
 Throws_createFireBall:

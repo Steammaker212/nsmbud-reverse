@@ -117,8 +117,7 @@ mods/nsmbudx_all/output/
 mods/nsmbudx_all/build.log
 mods/Steam's Super Mario Bros. Deluxe/source/nso/
 mods/Steam's Super Mario Bros. Deluxe/output/
-mods/Steam's Super Mario Bros. Deluxe/build.log
-mods/Steam's Super Mario Bros. Deluxe/patches/steam-dx/icons/
+mods/Steam's Super Mario Bros. Deluxe/debug.log
 
 # Model archives are never committed (the user's models stay local)
 mods/**/*.szs

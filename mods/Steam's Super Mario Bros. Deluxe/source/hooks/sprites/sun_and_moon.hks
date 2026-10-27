@@ -1,0 +1,21 @@
+@ Angry Sun and Mad Moon (code/sprites/sun_and_moon.cpp): a POW block's quake
+@ and a checkpoint being reached kill them. Both entries are `push`,
+@ position-independent, so the trampolines can replay them.
+
+@ The POW block's quake state begin (state 0x60CBA6CC, built in 0x606BC77C):
+@ entered when the block is hit from below (0x606BE3E4) or lands after a throw
+@ (0x606BC598). Entry: push {r4-r6, lr}.
+MrSun_powQuake:
+    type:       hook
+    address:    0x006BC2D4
+    symbol:     ModBase::mrSun::powQuake(void*)
+    trampoline: ModBase::mrSun::powQuake_orig(void*)
+
+@ The checkpoint reached (flag, player, unk): rumble, effect 103,
+@ SE_SYS_MID_POINT, then the checkpoint is saved (0x603F6984). Called from
+@ 0x605D23D0. Entry: push {r4-r10, lr}.
+MrSun_checkpoint:
+    type:       hook
+    address:    0x005D1F54
+    symbol:     ModBase::mrSun::checkpoint(void*, int, int)
+    trampoline: ModBase::mrSun::checkpoint_orig(void*, int, int)

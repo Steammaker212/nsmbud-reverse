@@ -40,7 +40,7 @@ change a port makes is in there. Who ports what is in the shared plan doc.
 | `PROFILE_RESOURCES(id, Profile::LoadResourcesAt::Course, "a", "b")` | `PROFILE_RESOURCES(ProfileId::X, "a", "b")` |
 | `SEAD_RTTI_OVERRIDE(...)`, `virtual ~Cls() { }` | leave out |
 | `HitboxCollider`, `hcSelf` / `hcOther` | `ActiveCollider`, `acSelf` / `acOther` |
-| `HitboxCollider::Info { Vector2f, Vector2f, Shape::Rectangle, a, b, c, d, e, cb }` | `ActiveCollider::Info { {x, y}, {w, h}, 0, a, b, c, d, e, cb }`: same fields; shapes 0 rectangle, 1 circle, 2/3 trapezoid |
+| `HitboxCollider::Info { Vector2f, Vector2f, Shape::Rectangle, a, b, c, d, e, cb }` | `ActiveCollider::Info { {x, y}, {w, h}, 0, a, b, c, d, e, cb }`: same fields; shapes 0 rectangle, 1 circle, 2/3 trapezoid. `a` is the collider **kind**: Tsuru enemies use 5, Deluxe enemies 3 (the Goomba, 0x60BED0A4); the player's hammer (kind 3, vs-kind 0x824F) never meets kind 5, so ported enemies take **3** |
 | `this->hitboxCollider.init(this, &info)` | `aCollider.init(this, &info, 0)` |
 | `addHitboxColliders()` / `removeHitboxColliders()` | `addActiveColliders()` / `removeActiveColliders()` |
 | `eventID1`, `eventID2`, `movementID` | `eventId1`, `eventId2`, `movementId` |

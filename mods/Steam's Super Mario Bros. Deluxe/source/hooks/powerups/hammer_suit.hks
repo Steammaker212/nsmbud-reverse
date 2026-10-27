@@ -52,3 +52,12 @@ HammerFlower_animOut2:
 @ The helmet and shell (code/hammer_costume.cpp) are made and drawn through
 @ framework/player's model listeners (hooks/framework/player_models.hks:
 @ PlayerModel::PlayerModel 0x0078C444 and PlayerModel::draw 0x0078E574).
+
+@ HammerActor's Thrown state begin (state 0x60C87CE4, built in 0x6014083C): the
+@ arc of every thrown hammer; a player's is made faster, higher and wider
+@ (code/powerups/hammer_suit.cpp, HAMMER_THROW_*). Entry: push {r4-r6, lr}.
+HammerSuit_thrownBegin:
+    type:       hook
+    address:    0x0013F3D8
+    symbol:     ModBase::hammerSuit::thrownBegin(StageActor*)
+    trampoline: ModBase::hammerSuit::thrownBegin_orig(StageActor*)

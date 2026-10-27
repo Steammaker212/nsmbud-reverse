@@ -24,3 +24,84 @@ ShellSuit_doOverlap:
     address:    0x001597E8
     symbol:     ModBase::shellSuit::doOverlap(void*, void*)
     trampoline: ModBase::shellSuit::doOverlap_orig(void*, void*)
+
+@ The Blue Shell item (code/powerups/shell_suit.cpp, "The Blue Shell item"): the
+@ Penguin Suit item's five animation functions (vtable slots 0x60BFC1DC-1EC),
+@ entries `push {r4-r6, lr}` ("wait": `push {r4-r7, r11, lr}`), the twins of
+@ the Fire Flower functions the Hammer Flower hooks, and the shared item model
+@ update (entry `push {r4-r8, lr}`). All position-independent.
+ShellItem_animOut:
+    type:       hook
+    address:    0x0046B260
+    symbol:     ModBase::shellItem::animOut(void*)
+    trampoline: ModBase::shellItem::animOut_orig(void*)
+
+ShellItem_animOut3:
+    type:       hook
+    address:    0x0046B32C
+    symbol:     ModBase::shellItem::animOut3(void*)
+    trampoline: ModBase::shellItem::animOut3_orig(void*)
+
+ShellItem_animWait:
+    type:       hook
+    address:    0x0046B3F8
+    symbol:     ModBase::shellItem::animWait(void*)
+    trampoline: ModBase::shellItem::animWait_orig(void*)
+
+ShellItem_animWait2:
+    type:       hook
+    address:    0x0046B4D8
+    symbol:     ModBase::shellItem::animWait2(void*)
+    trampoline: ModBase::shellItem::animWait2_orig(void*)
+
+ShellItem_animOut2:
+    type:       hook
+    address:    0x0046B5A4
+    symbol:     ModBase::shellItem::animOut2(void*)
+    trampoline: ModBase::shellItem::animOut2_orig(void*)
+
+ShellItem_updateModel:
+    type:       hook
+    address:    0x00462018
+    symbol:     ModBase::shellItem::updateModel(void*)
+    trampoline: ModBase::shellItem::updateModel_orig(void*)
+
+@ The power-up change's per-frame routine (player): flickers between the old
+@ and new mode (+0x2EBC) through PlayerModel::setPlayerMode. Entry: push {r4-r7, r11, lr}.
+ShellSuit_changeFrame:
+    type:       hook
+    address:    0x007A293C
+    symbol:     ModBase::shellSuit::changeFrame(void*)
+    trampoline: ModBase::shellSuit::changeFrame_orig(void*)
+
+@ The swim state's begin and execute (Player vtable slots next to its end
+@ 0x607BC2FC; vtables 0x60C24FF8 and 0x60C25758): both pick the Penguin's
+@ swimming by mode == 5. Entries: push {r4-r6, lr} / push {r4-r7, r11, lr}.
+ShellSuit_swimBegin:
+    type:       hook
+    address:    0x007BBF54
+    symbol:     ModBase::shellSuit::swimBegin(void*)
+    trampoline: ModBase::shellSuit::swimBegin_orig(void*)
+
+ShellSuit_swimExecute:
+    type:       hook
+    address:    0x007BC590
+    symbol:     ModBase::shellSuit::swimExecute(void*)
+    trampoline: ModBase::shellSuit::swimExecute_orig(void*)
+
+@ A brick broken (mgr, info, flag): debris actor (profile 0x120), 10 points
+@ to the player at info +11, SE_OBJ_BLOCK_BREAK. Tiles and brick actors.
+@ Entry: push {r4-r11, lr}.
+ShellSuit_breakBrick:
+    type:       hook
+    address:    0x005B8E44
+    symbol:     ModBase::shellSuit::breakBrick(void*, void*, int)
+    trampoline: ModBase::shellSuit::breakBrick_orig(void*, void*, int)
+
+@ The other brick break (mgr, info, a3, a4): the player at info +9.
+@ Entry: push {r4-r9, r11, lr}.
+ShellSuit_breakBrickB:
+    type:       hook
+    address:    0x005B9AD4
+    symbol:     ModBase::shellSuit::breakBrickB(void*, void*, int, int)
+    trampoline: ModBase::shellSuit::breakBrickB_orig(void*, void*, int, int)

@@ -11,8 +11,11 @@
 //
 // Settings:
 //   nybble 5      colour: the frame of the "bud" texture-pattern anim (settings1 >> 28)
-//   nybbles 19-20 movement type (settings2 & 0xFF)
-//   nybbles 21-22 movement ID
+//   nybble 6      behaviour (settings1 >> 24): 0 flies (hovers, or follows the
+//                 movement controller below), 1 walks along the ground like a
+//                 Goombrat -- slower -- turning at walls and at ledges
+//   nybbles 19-20 movement type (settings2 & 0xFF), flying only
+//   nybbles 21-22 movement ID, flying only
 //
 // Model: tenten_w (Tsuru's archive), with the skeletal anims "FlyWait" and
 // "BlowDown", the texture-pattern anim "bud" and the texture-SRT anim "FlyWait".
@@ -27,6 +30,15 @@
 // Tsuru RP_Jugemu_CloudDisapp (effectid.h): the Wii U number is the Deluxe one
 // (ledger F0254).
 constexpr s32 cEffect_CloudDisappear = 0x15B;
+
+// Walking (nybble 6 = 1). The Goomba walks 0.5 a frame; this is slower.
+#define BIDDYBUD_WALK_SPEED     0.35f
+#define BIDDYBUD_GRAVITY        -0.1875f    // added to speed.y each frame (StageActor +0x64)
+#define BIDDYBUD_FALL_SPEED     -4.0f
+// The ledge check: a line from the centre to this far ahead and below. With no
+// ground on it, the next step would walk off, so it turns (the Goombrat's rule).
+#define BIDDYBUD_LEDGE_AHEAD    9.0f
+#define BIDDYBUD_LEDGE_BELOW    14.0f
 
 class Biddybud : public Enemy
 {
@@ -53,6 +65,20 @@ public:
 
     void spawnDeathEffect();
 
+    // Enemy's own death states (a POW, and the other kills the game handles
+    // itself): DieFumi's execute spins the actor and lets it fall, but the
+    // Biddybud's position follows its movement every frame, so it spun in place
+    // forever. It goes the way its other deaths do: the cloud, then gone.
+    void beginState_DieFumi() override;
+    void executeState_DieFumi() override;
+    void endState_DieFumi() override;
+    void beginState_DieFall() override;
+    void executeState_DieFall() override;
+    void endState_DieFall() override;
+    void startWalking();
+    void walk();
+    void turnAround();
+
     static const ActiveCollider::Info collisionInfo;
 
     ModelWrapper* model;
@@ -62,6 +88,7 @@ public:
     u32 color;
     Vec3 effectScale;
     Vec3 effectOffset;      // Tsuru's own field; hides StageActor::effectOffset (+0x23C), as in Tsuru
+    bool walking;           // nybble 6 = 1
 
     DECLARE_STATE(Biddybud, Move);
     DECLARE_STATE(Biddybud, Die);
@@ -76,9 +103,12 @@ const Profile biddybudProfile(&Biddybud::build, ProfileId::Biddybud, "Biddybud",
 PROFILE_RESOURCES(ProfileId::Biddybud, "tenten_w");
 
 // Same fields as Tsuru's HitboxCollider::Info: centre, half size, shape
-// (0 rectangle), then 5, 0, 0x824F, 0xFFFBFFFF, 0, callback.
+// (0 rectangle), kind, attack, vs-kind mask, damage mask, 0, callback. Tsuru's
+// kind is 5; Deluxe's enemies are kind 3 (the Goomba's info 0x60BED0A4), and
+// the player's hammer (kind 3, vs-kind 0x824F: info 0x60BD31F0) only meets
+// kinds 0-3, 6, 9 and 15 -- as kind 5 the Biddybud never met a hammer.
 const ActiveCollider::Info Biddybud::collisionInfo = {
-    {0.0f, 0.0f}, {8.0f, 8.0f}, 0, 5, 0, 0x824F, 0xFFFBFFFF, 0, &Enemy::collisionCallback
+    {0.0f, 0.0f}, {8.0f, 8.0f}, 0, 3, 0, 0x824F, 0xFFFBFFFF, 0, &Enemy::collisionCallback
 };
 
 Biddybud::Biddybud(const ActorBuildInfo* buildInfo)
@@ -90,6 +120,7 @@ Biddybud::Biddybud(const ActorBuildInfo* buildInfo)
     , color(0)
     , effectScale(0.5f, 0.5f, 0.5f)
     , effectOffset(0.0f, 0.0f, 0.0f)
+    , walking(false)
 { }
 
 Actor* Biddybud::build(const ActorBuildInfo* buildInfo)
@@ -102,7 +133,14 @@ u32 Biddybud::onCreate()
     color = settings1 >> 0x1C & 0xF;    // nybble 5
 
     // 3 skeletal, 1 texture-pattern, 1 texture-SRT anim (Tsuru's create order).
-    model = tsuru::createModel("tenten_w", "tenten_w", 3, 1, 1);
+    // Walking (nybble 6 = 1) uses "tenten_w_walk": the same model in the same
+    // archive without its wing shape (Body__TentenWingWingMat00, emptied). The
+    // archive has no walking animation (only FlyWait, BlowDown, PressDown), so
+    // it keeps FlyWait's body bob.
+    walking = (settings1 >> 24 & 0xF) == 1;     // nybble 6
+    model = tsuru::createModel("tenten_w", walking ? "tenten_w_walk" : "tenten_w", 3, 1, 1);
+    if (!model && walking)      // an archive from before the walking model: wings and all
+        model = tsuru::createModel("tenten_w", "tenten_w", 3, 1, 1);
     if (!model) {               // romfs/Model/tenten_w missing: leave rather than crash
         isDeleted = true;
         return 1;
@@ -125,8 +163,12 @@ u32 Biddybud::onCreate()
     aCollider.init(this, &collisionInfo, 0);
     addActiveColliders();
 
-    u32 movementMask = movementHandler.getMaskForMovementType(settings2 & 0xFF);   // nybbles 19-20
-    movementHandler.link(position, movementMask, movementId);                       // nybbles 21-22
+    if (walking) {
+        startWalking();
+    } else {
+        u32 movementMask = movementHandler.getMaskForMovementType(settings2 & 0xFF);   // nybbles 19-20
+        movementHandler.link(position, movementMask, movementId);                       // nybbles 21-22
+    }
 
     doStateChange(&StateID_Move);
 
@@ -136,8 +178,12 @@ u32 Biddybud::onCreate()
 u32 Biddybud::onExecute()
 {
     if (!isDead) {
-        movementHandler.execute();
-        position = movementHandler.position;
+        if (walking) {
+            walk();
+        } else {
+            movementHandler.execute();
+            position = movementHandler.position;
+        }
     }
 
     states.execute();
@@ -252,6 +298,71 @@ bool Biddybud::collisionFireballYoshi(ActiveCollider* acSelf, ActiveCollider* ac
     collisionFireball(acSelf, acOther);
     return true;
 }
+
+// ---- Walking ------------------------------------------------------------------
+//
+// The tile collision every Enemy carries (CollisionActor::collisionMgr, as
+// Tsuru's walkers use it): sensors around the 16 x 16 box the actor's position
+// is the centre of -- below at the feet, above at the head, on the sides at the
+// flanks. Each frame: gravity, the step, the collision pass; then it turns at a
+// wall it walks into, or at a ledge ahead while standing.
+const CollisionMgr::Sensor cWalkBelow  = { -5.0f, 5.0f, -8.0f };
+const CollisionMgr::Sensor cWalkAbove  = { -5.0f, 5.0f,  8.0f };
+const CollisionMgr::Sensor cWalkSides  = { -4.0f, 4.0f,  8.0f };
+
+// Facing: the turn the game gives walking enemies (Enemy_CommonRotations
+// 0x60AFE3E4: right 0x20000000, left 0xE0000000).
+constexpr u32 cFacing[2] = { 0x20000000, 0xE0000000 };
+
+void Biddybud::startWalking()
+{
+    collisionMgr.init(this, &cWalkBelow, &cWalkAbove, &cWalkSides);
+    *(f32*)&_64 = BIDDYBUD_GRAVITY;      // StageActor +0x64: the gravity handleGravity adds
+    maxSpeed.y = BIDDYBUD_FALL_SPEED;
+    direction = directionToPlayerH(position);
+    turnAround();
+    turnAround();       // twice: faces the player, with the speed set
+}
+
+void Biddybud::turnAround()
+{
+    direction ^= 1;
+    speed.x = direction == LEFT ? -BIDDYBUD_WALK_SPEED : BIDDYBUD_WALK_SPEED;
+    rotation.y = cFacing[direction];
+}
+
+void Biddybud::walk()
+{
+    handleGravity();
+    handleSpeed();
+    collisionMgr.process();
+
+    if (collisionMgr.isOnGround()) {
+        speed.y = 0.0f;
+        f32 ahead = direction == LEFT ? -BIDDYBUD_LEDGE_AHEAD : BIDDYBUD_LEDGE_AHEAD;
+        if (!checkForSuitableGround(ahead, -BIDDYBUD_LEDGE_BELOW)) {
+            turnAround();
+            return;
+        }
+    }
+    if (collisionMgr.isCollided(direction))
+        turnAround();
+}
+
+/** Enemy's death states */
+
+void Biddybud::beginState_DieFumi()
+{
+    Enemy::beginState_DieFumi();    // score, colliders off
+    spawnDeathEffect();
+    isDeleted = true;
+}
+void Biddybud::executeState_DieFumi() { }
+void Biddybud::endState_DieFumi() { }
+
+void Biddybud::beginState_DieFall() { beginState_DieFumi(); }
+void Biddybud::executeState_DieFall() { }
+void Biddybud::endState_DieFall() { }
 
 /** STATE: Move */
 

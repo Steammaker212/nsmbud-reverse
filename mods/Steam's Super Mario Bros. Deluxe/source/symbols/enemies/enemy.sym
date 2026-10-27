@@ -114,6 +114,12 @@ Enemy::endState_DieFumi() = 0x002A7F88;
 Enemy::beginState_DieFall() = 0x002A7FF0;
 Enemy::executeState_DieFall() = 0x002A7FF8;
 Enemy::endState_DieFall() = 0x002A7FF4;
+# [sun_and_moon] The two death states (StateVirtual<Enemy>), built in sinit_Enemy
+# (0x602A8328): DieFumi calls vtable +0x1BC/+0x1C0/+0x1C4, DieFall +0x1C8/+0x1CC/+0x1D0
+# (the state Enemy::killPlayerSpin's death info names). Without these, &StateID_DieFumi
+# linked as 0 and changing to it crashed the game.
+Enemy::StateID_DieFumi = 0x00C906EC;
+Enemy::StateID_DieFall = 0x00C90710;
 Enemy::vf1D4() = 0x002A80EC;
 Enemy::vf1D8() = 0x002A8158;
 Enemy::vf1DC() = 0x002A8154;

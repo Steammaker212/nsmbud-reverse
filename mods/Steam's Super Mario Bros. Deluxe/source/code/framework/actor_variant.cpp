@@ -116,6 +116,17 @@ u32 wrapU32(Actor* actor)
     return ((u32 (*)(Actor*))v->original[S])(actor);
 }
 
+// onExecute, handed to the variant's own onExecute when it has one.
+u32 wrapOnExecute(Actor* actor)
+{
+    Variant* v = byActor(actor);
+    VariantScope scope(v);
+    u32 (*vanilla)(Actor*) = (u32 (*)(Actor*))v->original[OnExecute];
+    if (v->def->onExecute)
+        return v->def->onExecute(actor, vanilla);
+    return vanilla(actor);
+}
+
 template <u32 S>
 void wrapVoidU32(Actor* actor, u32 result)
 {
@@ -184,7 +195,7 @@ static_assert(sizeof(kHitWrappers) / sizeof(void*) == cLastHit - cFirstHit + 1, 
 void* const kWrappers[LastWrapped + 1] = {
     nullptr, nullptr, nullptr, nullptr,
     (void*)&wrapU32<BeforeCreate>,  (void*)&wrapOnCreate,       (void*)&wrapVoidU32<AfterCreate>,
-    (void*)&wrapU32<BeforeExecute>, (void*)&wrapU32<OnExecute>, (void*)&wrapVoidU32<AfterExecute>,
+    (void*)&wrapU32<BeforeExecute>, (void*)&wrapOnExecute,      (void*)&wrapVoidU32<AfterExecute>,
     (void*)&wrapVoid<FinalExecute>,
     (void*)&wrapU32<BeforeDraw>,    (void*)&wrapU32<OnDraw>,    (void*)&wrapVoidU32<AfterDraw>,
     (void*)&wrapU32<BeforeDelete>,  (void*)&wrapU32<OnDelete>,  (void*)&wrapVoidU32<AfterDelete>,

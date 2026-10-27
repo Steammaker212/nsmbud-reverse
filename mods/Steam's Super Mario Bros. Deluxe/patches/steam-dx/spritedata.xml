@@ -319,7 +319,7 @@
         DS-style shell power built on the Penguin Suit's belly slide
         (ledger F0205, F0212-F0216).
     -->
-    <sprite id="739" name="Blue Shell" notes="New power-up from the shell_suit mod (NSMB DS style): the Penguin Suit's powers without its iceballs, worn as the Fire Flower suit; crouching while running starts a shell dash at full speed that bounces off walls, defeats enemies and bumps block actors. Also in ?-blocks and bricks as contents 23 (tick Extended contents, pick 23). The item looks like an Ice Flower until romfs/Model/I_shell is provided." files="I_iceflower;I_shell">
+    <sprite id="739" name="Blue Shell" notes="New power-up from the shell_suit mod (NSMB DS style): the Penguin Suit's powers without its iceballs, worn as the Fire Flower suit; crouching while running starts a shell dash at full speed that bounces off walls, defeats enemies and bumps block actors. Also in ?-blocks and bricks as contents 23 (tick Extended contents, pick 23). The item is romfs/Model/blue_shell (an Ice Flower without it): it rises out of blocks and trembles while it lies there. The player wears the shell on the back (and a copy in front showing its belly); crouching, ground pounding and dashing hide the player inside it, and dashing spins it." files="blue_shell;nokonokoA">
     </sprite>
 
     <sprite id="740" name="Cold Fuzzy" notes="Tsuru port (mods/cold_fuzzy, the porting kit's reference port): a Fuzzy that freezes the player on touch. Follows a path when linked to one by its movement ID. Defeated by a Star, fireballs or thrown objects." files="coldobon">
@@ -330,7 +330,7 @@
     </sprite>
 
     <!-- biddybud.cpp: colour settings1 >> 28; movementHandler.link(position, getMaskForMovementType(settings2 & 0xFF), movementId) -->
-    <sprite id="742" name="Biddybud" notes="Tsuru port (code/sprites/biddybud.cpp): a flying bug that hovers in place or follows a movement controller. Hurts the player on touch; stomping, a Star, fireballs, iceballs, ground pounds, slides, propeller drills and thrown objects defeat it. Needs romfs/Model/tenten_w.Nin_NX_NVN.szs (Tsuru's model)." files="tenten_w">
+    <sprite id="742" name="Biddybud" notes="Tsuru port (code/sprites/biddybud.cpp): a flying bug that hovers in place or follows a movement controller, or (Behaviour: Walking) walks the ground like a slower Goombrat. Hurts the player on touch; stomping, a Star, fireballs, iceballs, ground pounds, slides, propeller drills and thrown objects defeat it. Needs romfs/Model/tenten_w.Nin_NX_NVN.szs (Tsuru's model)." files="tenten_w">
         <list nybble="5" title="Colour" comment="Frame of the tenten_w model's 'bud' texture-pattern animation." category="behavior">
             <entry value="0">Red</entry>
             <entry value="1">Yellow</entry>
@@ -338,10 +338,14 @@
             <entry value="3">Blue</entry>
             <entry value="4">Pink</entry>
         </list>
+        <list nybble="6" title="Behaviour" comment="Flying hovers in place or follows the movement controller below. Walking moves along the ground like a Goombrat, slower, turning at walls and ledges; it ignores the movement settings." category="behavior">
+            <entry value="0">Flying</entry>
+            <entry value="1">Walking</entry>
+        </list>
         <!-- MovementHandler::getMaskForMovementType (0x606AFC14): types 0-11 index the mask
              table at 0x60B08668 (0, then 1 << (type - 1)); 12 and up give mask 0. Names 1-4
              are codedx's MovementHandler::MovementType. -->
-        <list nybble="19-20" title="Movement Type" comment="Which kind of movement controller to link to. None keeps it hovering in place." category="movement">
+        <list nybble="19-20" title="Movement Type" comment="Flying only: which kind of movement controller to link to. None keeps it hovering in place." category="movement">
             <entry value="0">None (hovers in place)</entry>
             <entry value="1">Rotation</entry>
             <entry value="2">Bolt</entry>

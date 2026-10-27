@@ -53,6 +53,8 @@
 
 #include "modbase/name_remap.h"
 
+class Actor;
+
 namespace ModBase {
 
 constexpr u32 cMaxVariantRemaps = 4;
@@ -118,6 +120,10 @@ struct ActorVariant
     HitRule hitRules[cMaxHitRules];
     u32 vsDamageSet;                       // OR-ed into the collider's damage mask after onCreate
     u32 vsDamageClear;                     // then these bits are cleared
+
+    // Optional: runs instead of the actor's onExecute (inside the name remap),
+    // and calls `vanilla` itself -- to add to what the actor does each frame.
+    u32 (*onExecute)(Actor* actor, u32 (*vanilla)(Actor* actor));
 };
 
 // The variant profile id an actor was built as, or 0 for any other actor. A

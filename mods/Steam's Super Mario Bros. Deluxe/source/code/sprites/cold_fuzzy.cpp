@@ -56,9 +56,12 @@ const Profile coldFuzzyProfile(&ColdFuzzy::build, ProfileId::ColdFuzzy, "ColdFuz
 PROFILE_RESOURCES(ProfileId::ColdFuzzy, "coldobon");
 
 // Same fields as Tsuru's HitboxCollider::Info: centre, half size, shape
-// (0 rectangle), then 5, 0, 0x824F, 0xFFFBFFFF, 0, callback.
+// (0 rectangle), kind, attack, vs-kind mask, damage mask, 0, callback. Tsuru's
+// kind is 5; Deluxe's enemies are kind 3 (the Goomba's info 0x60BED0A4), and
+// the player's hammer (kind 3, vs-kind 0x824F: info 0x60BD31F0) only meets
+// kinds 0-3, 6, 9 and 15 -- as kind 5 the Cold Fuzzy never met a hammer.
 const ActiveCollider::Info ColdFuzzy::collisionInfo = {
-    {0.0f, 0.0f}, {12.0f, 12.0f}, 0, 5, 0, 0x824F, 0xFFFBFFFF, 0, &Enemy::collisionCallback
+    {0.0f, 0.0f}, {12.0f, 12.0f}, 0, 3, 0, 0x824F, 0xFFFBFFFF, 0, &Enemy::collisionCallback
 };
 
 ColdFuzzy::ColdFuzzy(const ActorBuildInfo* buildInfo)

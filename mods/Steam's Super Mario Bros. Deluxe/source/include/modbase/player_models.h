@@ -41,24 +41,39 @@ typedef void (*Listener)(void* model);
 bool onCreated(Listener listener);
 bool onDrawn(Listener listener);
 
+// Asked before PlayerModel::draw: any gate that returns false hides the model's
+// body and head this frame (onDrawn listeners still run, so a mod can draw
+// something in its place -- the Blue Shell's dash shows only the shell).
+typedef bool (*DrawGate)(void* model);
+bool addDrawGate(DrawGate gate);
+
 // The model factory 0x60794BDC picks the class by character: 0 Mario and
 // 1 Luigi (MarioModel 0x6075A088), 2-4 the Toads (KinopioModel 0x607578C8),
 // 5, 6 and 8 three more classes. Set by the constructor (+0xA4).
 constexpr u32 cNumCharacters = 9;
 inline u32 character(void* model) { return *(u32*)((u8*)model + 0x0A4); }
 
-// The mode the model shows: PlayerModel::setPlayerMode (0x6078E608) stores it
-// here and picks the colours from it (2 Fire, 6 Ice, else Normal).
+// The mode the model shows: PlayerModel::setPlayerMode (0x6078E608) replaces
+// the mode it is given with forcedMode() when that is not -1, stores the result
+// here and picks the body and the colours from it (2 Fire, 6 Ice, else Normal).
+// So a forced body (modbase/suits.h showBodyOf) is what this returns, not the
+// player's real mode: the Blue Shell (Penguin mode, Fire body) shows 2.
 inline u32 shownMode(void* model) { return *(u32*)((u8*)model + 0x1D8); }
 
 // -1 for players; another mode shows that mode's body (modbase/suits.h).
 inline s32& forcedMode(void* model) { return *(s32*)((u8*)model + 0x1DC); }
 
+// A level's player (0-3), or nullptr.
+inline void* playerAt(u32 playerNo)
+{
+    u8* mgr = (u8*)PlayerMgr::instance;
+    return mgr && playerNo < 4 ? *(void**)(mgr + 0x30 + 4 * playerNo) : nullptr;
+}
+
 // The model of a level's player (0-3): *(*(player + 0x288) + 4), or nullptr.
 inline void* modelOfPlayer(u32 playerNo)
 {
-    u8* mgr = (u8*)PlayerMgr::instance;
-    void* player = mgr && playerNo < 4 ? *(void**)(mgr + 0x30 + 4 * playerNo) : nullptr;
+    void* player = playerAt(playerNo);
     void* models = player ? *(void**)((u8*)player + 0x288) : nullptr;
     return models ? *(void**)((u8*)models + 4) : nullptr;
 }

@@ -119,6 +119,11 @@ PlayerMgr::instance = 0x00CC436C;
 # PlayerMgr  [modbase/game/player/player.h]
 PlayerMgr::hasPlayer(unsigned int) = 0x00789D20;
 
+# [framework/player] The per-player projectile counts every throw check reads
+# (0x607AA954, 0x607AAA00, 0x607AAF80): a pointer to a block with player n's
+# fireballs at +0x68 + 8 * n and its iceballs at +0x88 + 8 * n (code/framework/throws.cpp).
+ModBase::throws::projectileCounts = 0x00C7B420;
+
 # PlayerModel  [modbase/game/player/player.h]
 # [framework/player] PlayerModel::setPlayerMode(model, mode): non-virtual, every model class; body
 # from the mode table 0x60B0C230, honours a forced mode at model+0x1DC (F0226).
@@ -127,6 +132,13 @@ PlayerModel::setPlayerMode(unsigned int) = 0x0078E608;
 # PlayerState  [modbase/game/player/player.h]
 # [shell_suit] Player state: the Penguin Suit belly slide (StateID; chosen by 0x607B8CB0 when mode == 5).
 Player::StateID_PenguinSlide = 0x00CC4F8C;
+# [shell_suit] Wii U PlayerBase::StateID_Crouch and StateID_HipAttack (the ground
+# pound): the Player state initializer 0x607B3920 builds the gameplay states in
+# the Wii U order, 0x24 apart, with ids None + 5 (Crouch, at 0x607B3A60) and
+# None + 9 (HipAttack, 0x607B3B50); 0x607B8CB0 picks Slip (None + 7) unless
+# mode 5, after asking whether the current state's root is HipAttack.
+Player::StateID_Crouch = 0x00CC4C4C;
+Player::StateID_HipAttack = 0x00CC4CDC;
 
 # PlayerStates  [modbase/game/player/player.h]
 PlayerStates::loadModelResources_helper(signed char) = 0x0028FDA0;

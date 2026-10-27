@@ -71,6 +71,8 @@ public:
     s32 setupRingNode_7B6D90();  // 0x007b6d90 [hook]
     s32 setupWristNodes_7B7140(void*);  // 0x007b7140 [hook]
     static StateBase StateID_PenguinSlide;  // 0x00cc4f8c
+    static StateBase StateID_Crouch;  // 0x00cc4c4c
+    static StateBase StateID_HipAttack;  // 0x00cc4cdc
 };
 
 class PlayerAnimStateTable

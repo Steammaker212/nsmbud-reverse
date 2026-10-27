@@ -48,7 +48,8 @@ public:
         Vec2 a = { position.x, position.y };
         Vec2 b = { position.x + xOffset, position.y + yOffset };
 
-        return tileCheck.check(nullptr, a, b, 8);
+        TileCheck::CheckResult result = { };
+        return tileCheck.check(result.result, a, b, 8);
     }
 
     u32 _284;                           // 284

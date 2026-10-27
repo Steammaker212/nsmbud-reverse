@@ -30,7 +30,18 @@ public:
 
 public:
     TileCheck(const Param& parm);
-    bool check(Result* result, const Vec2& pos1, const Vec2& pos2, u32 unk);
+    // 0x0015DA30 (symbols/collision/collision_mgr.sym declares it with Result&).
+    // It was declared with Result* here, which mangles to another name that no
+    // .sym defines, so the call linked to nothing and crashed the game. The
+    // game always passes a real Result (0x60003D38); its own is 0x28 bytes on
+    // the stack there, so give it a little room (CheckResult).
+    bool check(Result& result, const Vec2& pos1, const Vec2& pos2, u32 unk);
+
+    struct CheckResult
+    {
+        Result result;
+        u32 _pad[4];
+    };
 
     u8 _0;
     u8 _1;

@@ -1,0 +1,17 @@
+@ Shy Guy (code/sprites/shy_guy.cpp): the first stomp squashes, the second kills.
+@ Both entries are `push`, position-independent, so the trampolines can replay them.
+
+@ GoombaBase::vf28C, the stomp kill (killPlayerJump with DieFumi). Entry: push {r11, lr}.
+ShyGuy_stomped:
+    type:       hook
+    address:    0x0033CF30
+    symbol:     ModBase::shyGuy::stomped(void*, StageActor*)
+    trampoline: ModBase::shyGuy::stomped_orig(void*, StageActor*)
+
+@ Enemy::killPlayerSpin, the spin-jump kill every enemy shares (GoombaBase::vf294
+@ is a one-branch thunk to it). Entry: push {r4-r6, lr}.
+ShyGuy_spinKilled:
+    type:       hook
+    address:    0x002A5AE8
+    symbol:     ModBase::shyGuy::spinKilled(void*, StageActor*)
+    trampoline: ModBase::shyGuy::spinKilled_orig(void*, StageActor*)

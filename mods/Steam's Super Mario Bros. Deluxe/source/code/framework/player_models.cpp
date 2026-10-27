@@ -6,8 +6,10 @@ namespace {
 
 ModBase::playerModels::Listener sCreated[ModBase::playerModels::cMaxListeners];
 ModBase::playerModels::Listener sDrawn[ModBase::playerModels::cMaxListeners];
+ModBase::playerModels::DrawGate sGates[ModBase::playerModels::cMaxListeners];
 
-bool add(ModBase::playerModels::Listener* list, ModBase::playerModels::Listener l)
+template <typename T>
+bool add(T* list, T l)
 {
     for (u32 i = 0; i < ModBase::playerModels::cMaxListeners; i++)
         if (!list[i]) {
@@ -24,6 +26,7 @@ namespace playerModels {
 
 bool onCreated(Listener listener) { return add(sCreated, listener); }
 bool onDrawn(Listener listener)   { return add(sDrawn, listener); }
+bool addDrawGate(DrawGate gate)   { return add(sGates, gate); }
 
 } // namespace playerModels
 } // namespace ModBase
@@ -47,7 +50,12 @@ namespace ModBase { namespace playerModels { void draw_orig(void* model); } }
 namespace ModBase { namespace playerModels { void draw(void* model); } }
 void ModBase::playerModels::draw(void* model)
 {
-    ModBase::playerModels::draw_orig(model);
+    bool shown = true;
+    for (DrawGate g : sGates)
+        if (g && !g(model))
+            shown = false;
+    if (shown)
+        ModBase::playerModels::draw_orig(model);
     for (Listener l : sDrawn)
         if (l)
             l(model);
