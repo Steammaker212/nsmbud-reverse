@@ -322,6 +322,13 @@
     <sprite id="739" name="Blue Shell" notes="New power-up from the shell_suit mod (NSMB DS style): the Penguin Suit's powers without its iceballs, worn as the Fire Flower suit; crouching while running starts a shell dash at full speed that bounces off walls, defeats enemies and bumps block actors. Also in ?-blocks and bricks as contents 23 (tick Extended contents, pick 23). The item looks like an Ice Flower until romfs/Model/I_shell is provided." files="I_iceflower;I_shell">
     </sprite>
 
+    <sprite id="740" name="Cold Fuzzy" notes="Tsuru port (mods/cold_fuzzy, reference port of the porting kit): a Fuzzy that freezes the player on touch. Follows a path when linked to one by its movement ID. Defeated by a Star, fireballs or thrown objects." files="coldobon">
+        <value nybble="21-22" title="Movement ID" id_type="movement" category="movement" comment="Path controller to follow (movement type 3)." />
+    </sprite>
+
+    <sprite id="741" name="Poison Mushroom" notes="Tsuru port (mods/poison_mushroom): moves like a Super Mushroom; touching it hurts the player like poison water instead of powering up. Also in ?-blocks and bricks as contents 24 (tick Extended contents, pick 24 = 8 + 16)." files="I_kinxkx">
+    </sprite>
+
 
     <sprite id="148" name="Brick Block - Uses Lines" notes="A brick block that follows a line. Contents 21 is the Hammer Flower and 22 the P-Acorn (tick Extended contents).">
 		<checkbox nybble="8" title="Counter-Clockwise" comment="When checked, makes the ? block go counter clockwise." category="behavior" />

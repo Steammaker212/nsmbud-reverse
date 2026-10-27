@@ -842,4 +842,6 @@ u32 Profile::spriteToProfileList[] =
     ProfileId::ShyGuy,  // 737
     ProfileId::SpawnerActor,  // 738
     ProfileId::BlueShell,  // 739
+    ProfileId::ColdFuzzy,  // 740
+    ProfileId::PoisonMushroom,  // 741
 };

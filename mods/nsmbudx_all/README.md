@@ -17,8 +17,8 @@ that was tested in-game on 2026-10-26: the build is byte-identical to the
 
 Mods: hammer_suit, bee, p_acorn, shy_guy, shell_suit, yoshi_fire, yoshi_tuning,
 worldmap_log, custom_spawner (which replaces codedx's sprite 726 with a fixed
-copy), custom_boss. Framework: core, resources, items, game, player, actors,
-yoshi, worldmap, diagnostics (archive guard + draw guard). codedx template
+copy), custom_boss, cold_fuzzy and poison_mushroom (Tsuru ports). Framework: core,
+resources, items, game, player, actors, yoshi, worldmap, tsuru, diagnostics (archive guard + draw guard). codedx template
 sprites 724-733.
 
 | Sprite | Actor | Block contents |
@@ -32,6 +32,8 @@ sprites 724-733.
 | 737 | Shy Guy | |
 | 738 | Actor Spawner (custom: optional event, 1-16 spawns, spread) | |
 | 739 | Blue Shell | 23 |
+| 740 | Cold Fuzzy (Tsuru) | |
+| 741 | Poison Mushroom (Tsuru) | 24 |
 
 The level editor side is the one Yaz0moto patch in [`yaz0moto/SteamDX`](../../yaz0moto/SteamDX/).
 
@@ -63,6 +65,8 @@ models (and log `remap: archive '...' is not loaded`):
 | `hammer.Nin_NX_NVN.szs` | hammer_suit (thrown hammer; needs bone `bros_hammer_model`) | your own model |
 | `I_hmrflower.Nin_NX_NVN.szs` | hammer_suit (item) | Tsuru's `I_hmrflower.szs`, see [hammer_suit/README](../hammer_suit/README.md#porting-the-tsuru-assets-v5) |
 | `hmrpy.Nin_NX_NVN.szs` | hammer_suit (helmet and shell) | Tsuru's `hmrpy.szs`, same |
+| `coldobon.Nin_NX_NVN.szs` | cold_fuzzy (Tsuru) | see [cold_fuzzy/README](../cold_fuzzy/README.md) |
+| `I_kinxkx.Nin_NX_NVN.szs` | poison_mushroom (Tsuru) | see [poison_mushroom/README](../poison_mushroom/README.md) |
 | `shyguy.Nin_NX_NVN.szs` | shy_guy | `scripts/models/wiiu2dx.py --wiiu kakibo.pack --template kakibo --name shyguy ...` |
 | `bee.Nin_NX_NVN.szs` | bee | `scripts/models/wiiu2dx.py --wiiu pukupuku.pack --template pukupuku --name bee --map mt_eye=mat_pukupuku --map mat_pukupuku=mat_pukupuku --pattern-frame 1 ...` |
 
@@ -77,7 +81,7 @@ a mod or the framework (then delete `source/nso/main`, which is your game file):
 py -3 scripts/sdk/make_mod_project.py --repo . `
   --mod mods/hammer_suit --mod mods/bee --mod mods/p_acorn --mod mods/shy_guy --mod mods/shell_suit `
   --mod mods/yoshi_fire --mod mods/yoshi_tuning --mod mods/worldmap_log --mod mods/custom_spawner `
-  --mod mods/custom_boss --sweetdx "<sweet-dx checkout>" --nso <main> `
+  --mod mods/custom_boss --mod mods/cold_fuzzy --mod mods/poison_mushroom --sweetdx "<sweet-dx checkout>" --nso <main> `
   --out mods/nsmbudx_all --with-template-code --with-diagnostics
 ```
 

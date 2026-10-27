@@ -91,6 +91,10 @@ enum ProfileIdType
 
     BlueShell,
 
+    ColdFuzzy,
+
+    PoisonMushroom,
+
     Num
 };
 

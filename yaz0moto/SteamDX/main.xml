@@ -5,7 +5,7 @@
 -->
 <game name="Project-SteamDX"
       version="2.0"
-      description="Custom actors 724-739 (codedx + nsmbud-reverse mods), extended ?-block/brick contents 21-23 (Hammer Flower, P-Acorn, Blue Shell), and movement binding on the Cheep Cheep family."
+      description="Custom actors 724-741 (codedx + nsmbud-reverse mods, Tsuru ports), extended ?-block/brick contents 21-24 (Hammer Flower, P-Acorn, Blue Shell, Poison Mushroom), and movement binding on the Cheep Cheep family."
       base="New Super Mario Bros. U Deluxe"
       patchReleaseUrl="https://github.com/Steammaker212/nsmbud-reverse">
 
