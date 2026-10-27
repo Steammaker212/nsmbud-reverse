@@ -68,7 +68,9 @@ struct Costume
     ModelWrapper* helmet;
     ModelWrapper* shell;
 };
-constexpr u32 cMaxCostumes = 8;     // live player models: 4 in a level, the map's, spares
+// Live player models at once: up to 4 in a level, demo players, and the world
+// map's player, which builds one per character (6 managers at +920, 0x601B16CC).
+constexpr u32 cMaxCostumes = 24;
 Costume sCostumes[cMaxCostumes];
 u32 sNextCostume;
 bool sCostumeLogged;
@@ -143,13 +145,36 @@ void makeCostume(void* playerModel)
 // After PlayerModel::draw. Body +0x018 holds in MarioModel and KinopioModel;
 // the head +0x124 is Mario's or Luigi's head, but a Toad's is its mushroom
 // cap, which keeps its normal look: no helmet on Toads.
+extern "C" bool HammerSuit_isHammerCharacter(u32 character);   // hammer_suit.cpp
+void* sReported[cMaxCostumes];
+u32 sNextReported;
+
+// Once per model: a hammer character's model drawn without the suit, and why.
+void reportMissing(void* playerModel, const char* why)
+{
+    for (void* m : sReported)
+        if (m == playerModel)
+            return;
+    sReported[sNextReported] = playerModel;
+    sNextReported = (sNextReported + 1) % cMaxCostumes;
+    nsmbudx::log("hammer suit: character ", nsmbudx::playerModels::character(playerModel),
+                 " (player ", nsmbudx::playerModels::playerOf(playerModel), ") drawn without the suit: ", why,
+                 "; shown mode ", nsmbudx::playerModels::shownMode(playerModel));
+}
+
 void drawCostume(void* playerModel)
 {
-    if (!HammerSuit_isHammerModel(playerModel))
+    if (!HammerSuit_isHammerModel(playerModel)) {
+        if (HammerSuit_isHammerCharacter(nsmbudx::playerModels::character(playerModel)))
+            reportMissing(playerModel, "not in Fire mode");
         return;
+    }
     Costume* c = findCostume(playerModel);
-    if (!c)
-        return;
+    if (!c || !c->helmet || !c->shell) {
+        reportMissing(playerModel, !c ? "no costume made for this model" : "costume models not made");
+        if (!c)
+            return;
+    }
     u32 character = nsmbudx::playerModels::character(playerModel);
     ModelWrapper* body = *(ModelWrapper**)((u8*)playerModel + 0x018);
     if (character <= 1) {

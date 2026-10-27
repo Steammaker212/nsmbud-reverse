@@ -503,6 +503,11 @@ extern "C" int HammerFlower_grant(StageActor* item)
     return result;
 }
 
+extern "C" bool HammerSuit_isHammerCharacter(u32 character)
+{
+    return character < cNumCharacters && sHammerCharacter[character];
+}
+
 // For code/hammer_costume.cpp (the helmet and shell, MPL-2.0): does this model
 // show a hammer player? Its character collected a Hammer Flower and it shows
 // Fire mode -- in a level and on the world map alike.
