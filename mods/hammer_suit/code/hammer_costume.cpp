@@ -24,11 +24,11 @@
 #include "nsmbudx/log.h"
 #include "nsmbudx/models.h"
 #include "nsmbudx/name_remap.h"
+#include "nsmbudx/player_models.h"
 
 #if HAMMER_SUIT_COSTUME
 
-extern "C" u8 PlayerMgr_instance[];   // framework/player symbols/player.sym
-extern "C" bool HammerSuit_isHammerPlayer(u32 playerNo, void* player);   // hammer_suit.cpp
+extern "C" bool HammerSuit_isHammerModel(void* model);   // hammer_suit.cpp
 // symbols/hammer_suit.sym
 extern "C" void* HeapMgr_sInstance;
 extern "C" void* HeapMgr_getCurrentHeap(void* heapMgr);
@@ -37,7 +37,10 @@ extern "C" void* HeapMgr_getCurrentHeap(void* heapMgr);
 // Zenith-Team): the helmet follows the head model's bone "player_head", the
 // shell the body model's bone "spin", drawn right after the player.
 //
-// Deluxe: every character's model draws through PlayerModel::draw (0x6078E574),
+// Deluxe: the models are made and drawn through framework/player's model
+// listeners (nsmbudx/player_models.h): every player model -- the level's and
+// the world map's (profile 855) -- is built by the PlayerModel constructor
+// (0x6078C444) and drawn by PlayerModel::draw (0x6078E574),
 // which draws the body wrapper (model+0x018, 0x6079421C) and then the head
 // wrapper (model+0x124). A Model finds a bone by name through vtable +0x54 and
 // returns its world matrix through +0x6C (the world map reads its point bones
@@ -53,8 +56,10 @@ extern "C" void* HeapMgr_getCurrentHeap(void* heapMgr);
 // Ryujinx 2026-10-26 19:35, right after "collected by player 0"). Tsuru makes
 // them with the player's resources; here they are made right after the
 // PlayerModel constructor (0x6078C444), while the player is being built and
-// its heap is current, for every model with forcedMode -1 (players; +0x1DC is
-// the constructor's 4th argument). They live and die with that model's heap.
+// its heap is current. They live and die with that model's heap. Whether a
+// model wears them is decided by the model alone (HammerSuit_isHammerModel:
+// its character collected a Hammer Flower and it shows Fire mode), so the
+// world-map player wears them as the level's player does.
 namespace {
 
 struct Costume
@@ -67,18 +72,6 @@ constexpr u32 cMaxCostumes = 8;     // live player models: 4 in a level, the map
 Costume sCostumes[cMaxCostumes];
 u32 sNextCostume;
 bool sCostumeLogged;
-
-inline void* playerAt(u32 n)
-{
-    u8* mgr = *(u8**)PlayerMgr_instance;
-    return mgr ? *(void**)(mgr + 0x30 + 4 * (n & 3)) : nullptr;
-}
-
-inline void* modelOf(void* player)          // nsmbudx/suits: *(*(player + 0x288) + 4)
-{
-    void* mgr = player ? *(void**)((u8*)player + 0x288) : nullptr;
-    return mgr ? *(void**)((u8*)mgr + 4) : nullptr;
-}
 
 typedef s32 (*SearchBoneFn)(Model* model, const sead::SafeString* name);
 typedef void (*BoneMtxFn)(Model* model, s32 index, Mtx34* out);
@@ -115,8 +108,13 @@ Costume* findCostume(void* playerModel)
     return nullptr;
 }
 
+// After the PlayerModel constructor, on the owner's heap (see above). The
+// model factory 0x60794BDC: 0-1 MarioModel, 2-4 KinopioModel, 5/6/8 other
+// classes whose layouts are not mapped -- those get no costume.
 void makeCostume(void* playerModel)
 {
+    if (nsmbudx::playerModels::character(playerModel) > 4)
+        return;
     // A model rebuilt at a freed model's address replaces that entry.
     Costume* c = findCostume(playerModel);
     if (!c) {
@@ -142,63 +140,34 @@ void makeCostume(void* playerModel)
     c->shell  = ModelWrapper::create(HAMMER_COSTUME_ARCHIVE, HAMMER_COSTUME_SHELL);
 }
 
-// The costume of a player model, if its player has the hammer suit now.
-Costume* costumeFor(void* playerModel)
+// After PlayerModel::draw. Body +0x018 holds in MarioModel and KinopioModel;
+// the head +0x124 is Mario's or Luigi's head, but a Toad's is its mushroom
+// cap, which keeps its normal look: no helmet on Toads.
+void drawCostume(void* playerModel)
 {
-    for (u32 n = 0; n < 4; n++) {
-        void* player = playerAt(n);
-        if (player && modelOf(player) == playerModel)
-            return HammerSuit_isHammerPlayer(n, player) ? findCostume(playerModel) : nullptr;
-    }
-    return nullptr;
-}
-
-} // namespace
-
-// PlayerModel::PlayerModel (0x6078C444): six arguments, the 4th the forced mode.
-extern "C" void* HammerSuit_playerModelCtor_orig(void* model, void* a1, s32 a2, s32 forcedMode, s32 a4, s32 a5);
-extern "C" void* HammerSuit_playerModelCtor(void* model, void* a1, s32 a2, s32 forcedMode, s32 a4, s32 a5)
-{
-    void* r = HammerSuit_playerModelCtor_orig(model, a1, a2, forcedMode, a4, a5);
-    if (forcedMode == -1)
-        makeCostume(model);
-    return r;
-}
-
-extern "C" void HammerSuit_drawPlayerModel_orig(void* playerModel);
-extern "C" void HammerSuit_drawPlayerModel(void* playerModel)
-{
-    HammerSuit_drawPlayerModel_orig(playerModel);
-    Costume* c = costumeFor(playerModel);
+    if (!HammerSuit_isHammerModel(playerModel))
+        return;
+    Costume* c = findCostume(playerModel);
     if (!c)
         return;
-    // The model factory 0x60794BDC picks the class by type (+0x0A4): 0-1
-    // MarioModel (0x6075A088), 2-4 KinopioModel (0x607578C8), 5, 6 and 8 three
-    // other classes whose layouts are not mapped. Body +0x018 holds in the
-    // first two; the head +0x124 is Mario's or Luigi's head, but a Toad's is
-    // its mushroom cap, which keeps its normal look: no helmet on Toads.
-    u32 type = *(u32*)((u8*)playerModel + 0x0A4);
-    if (type > 4)
-        return;
+    u32 character = nsmbudx::playerModels::character(playerModel);
     ModelWrapper* body = *(ModelWrapper**)((u8*)playerModel + 0x018);
-    if (type <= 1) {
+    if (character <= 1) {
         ModelWrapper* head = *(ModelWrapper**)((u8*)playerModel + 0x124);
         drawPart(c->helmet, head, "player_head");
     }
     drawPart(c->shell, body, "spin");
 }
-#else
 
-// Costume off: the hooks (hooks/hammer_suit.hks) only pass through.
-extern "C" void* HammerSuit_playerModelCtor_orig(void* model, void* a1, s32 a2, s32 forcedMode, s32 a4, s32 a5);
-extern "C" void* HammerSuit_playerModelCtor(void* model, void* a1, s32 a2, s32 forcedMode, s32 a4, s32 a5)
+struct CostumeSetup
 {
-    return HammerSuit_playerModelCtor_orig(model, a1, a2, forcedMode, a4, a5);
-}
+    CostumeSetup()
+    {
+        nsmbudx::playerModels::onCreated(&makeCostume);
+        nsmbudx::playerModels::onDrawn(&drawCostume);
+    }
+} sCostumeSetup;
 
-extern "C" void HammerSuit_drawPlayerModel_orig(void* playerModel);
-extern "C" void HammerSuit_drawPlayerModel(void* playerModel)
-{
-    HammerSuit_drawPlayerModel_orig(playerModel);
-}
+} // namespace
+
 #endif

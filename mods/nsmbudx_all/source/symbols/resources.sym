@@ -1,0 +1,3 @@
+# framework/resources. RVA = VA - 0x60000000. Deluxe (Switch) v1.0.0.
+# nn::fs::GetEntryType(DirectoryEntryType* out, const char* path) -> nn::Result (0 = exists).
+nn_fs_GetEntryType = 0x009AE69C;

@@ -24,6 +24,8 @@
 #include "actor/stageactor.h"
 #include "model.h"
 #include "drawmgr.h"
+#include "nsmbudx/log.h"
+#include "nsmbudx/name_remap.h"
 
 namespace tsuru {
 
@@ -72,11 +74,17 @@ inline bool damagePlayer2(StageActor* player, StageActor* source, DamageType typ
 // ---- Models ---------------------------------------------------------------------
 
 // Tsuru: ModelWrapper::create(archive, model, numSklAnims, numTexAnims, ...).
-// Same in codedx; kept here so ports read the same.
+// Returns nullptr (and logs) when the archive is not loaded -- a model file
+// missing from the SD card (nsmbudx/mod_archives.h) -- where ModelWrapper::create
+// would dereference the missing archive. The other helpers accept nullptr.
 inline ModelWrapper* createModel(const char* archive, const char* model, u32 numSklAnims = 0,
                                  u32 numTexAnims = 0, u32 numShuAnims = 0, u32 numVisAnims = 0,
                                  u32 numShaAnims = 0)
 {
+    if (!nsmbudx::isArchiveLoaded(archive)) {
+        nsmbudx::log("tsuru: archive '", archive, "' is not loaded; no model");
+        return nullptr;
+    }
     return ModelWrapper::create(archive, model, numSklAnims, numTexAnims, numShuAnims,
                                 numVisAnims, numShaAnims);
 }
@@ -84,6 +92,8 @@ inline ModelWrapper* createModel(const char* archive, const char* model, u32 num
 // Tsuru: model->playSklAnim(name, idx = 0); model->loopSklAnims(loop).
 inline void playSklAnim(ModelWrapper* model, const char* name, bool loop = true, u32 idx = 0)
 {
+    if (!model)
+        return;
     model->playSklAnim(name, idx);
     if (idx < (u32)model->sklAnims.count)
         model->sklAnims[idx]->setRepeat(loop);
@@ -94,6 +104,8 @@ inline void playSklAnim(ModelWrapper* model, const char* name, bool loop = true,
 //     model->updateAnimations(); model->updateModel();
 inline void placeModel(ModelWrapper* model, StageActor* actor)
 {
+    if (!model)
+        return;
     Mtx34 mtx;
     mtx.rotateAndTranslate(actor->rotation, actor->position);
     model->setMtx(mtx);
@@ -105,7 +117,8 @@ inline void placeModel(ModelWrapper* model, StageActor* actor)
 // Tsuru: model->draw().
 inline void drawModel(ModelWrapper* model)
 {
-    DrawMgr::instance->drawModel(model);
+    if (model)
+        DrawMgr::instance->drawModel(model);
 }
 
 // ---- Math (Tsuru's Mathf / Mathu) -------------------------------------------------

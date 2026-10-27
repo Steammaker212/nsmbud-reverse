@@ -26,6 +26,7 @@
 
 #include "nsmbudx/suits.h"
 #include "nsmbudx/log.h"
+#include "nsmbudx/player_models.h"
 
 extern "C" u8 PlayerMgr_instance[];   // generated game API: 0x60CC436C, holds PlayerMgr*
 extern "C" void PlayerModel_setPlayerMode(void* model, u32 mode);   // symbols/player.sym
@@ -43,9 +44,21 @@ struct Override
     f32 frame;      // < 0: none (MarioModel only)
     u32 showAs;     // cColor_Invalid: none (every class)
     const void* owner;
+    s32 character;  // the player's character when it was set; -1 unknown
 };
 
 Override sOverrides[4];
+
+// A body shown instead of the real mode's (showBodyOf), kept per player with
+// its character so models built elsewhere -- the world map's -- show it too.
+struct Body
+{
+    bool active;
+    u32 mode;
+    s32 character;
+};
+
+Body sBodies[4];
 
 inline void* playerAt(u32 n)
 {
@@ -92,13 +105,42 @@ s32 playerOfModel(void* model)
     return -1;
 }
 
+// The level's player that owns the model; otherwise (the world map, demos)
+// the player whose character the model shows.
 const Override* overrideFor(void* model, u32 colorType)
 {
     s32 n = playerOfModel(model);
+    if (n < 0) {
+        s32 c = (s32)nsmbudx::playerModels::character(model);
+        for (u32 i = 0; i < 4 && n < 0; i++)
+            if (sOverrides[i].active && sOverrides[i].character == c)
+                n = i;
+    }
     if (n < 0 || !sOverrides[n].active || sOverrides[n].when != colorType)
         return nullptr;
     return &sOverrides[n];
 }
+
+s32 characterOfPlayer(u32 n)
+{
+    void* model = modelOf(playerAt(n));
+    return model ? (s32)nsmbudx::playerModels::character(model) : -1;
+}
+
+// A model built for a character whose player shows another body (the world
+// map's player after a level, or the next level's): the same body.
+void applyBodyOnCreate(void* model)
+{
+    s32 c = (s32)nsmbudx::playerModels::character(model);
+    for (const Body& b : sBodies)
+        if (b.active && b.character == c)
+            nsmbudx::playerModels::forcedMode(model) = (s32)b.mode;
+}
+
+struct SuitsSetup
+{
+    SuitsSetup() { nsmbudx::playerModels::onCreated(&applyBodyOnCreate); }
+} sSuitsSetup;
 
 void setFrame(void* wrapper, f32 frame)
 {
@@ -169,13 +211,13 @@ namespace suits {
 void overrideColor(u32 playerNo, ColorType when, f32 frame, ColorType elsewhere, const void* owner)
 {
     if (playerNo < 4)
-        sOverrides[playerNo] = { true, (u32)when, frame, (u32)elsewhere, owner };
+        sOverrides[playerNo] = { true, (u32)when, frame, (u32)elsewhere, owner, characterOfPlayer(playerNo) };
 }
 
 void showColorAs(u32 playerNo, ColorType when, ColorType showAs, const void* owner)
 {
     if (playerNo < 4)
-        sOverrides[playerNo] = { true, (u32)when, -1.0f, (u32)showAs, owner };
+        sOverrides[playerNo] = { true, (u32)when, -1.0f, (u32)showAs, owner, characterOfPlayer(playerNo) };
 }
 
 void clear(u32 playerNo, const void* owner)
@@ -204,6 +246,7 @@ void showBodyOf(u32 playerNo, u32 mode)
     if (!model || mode >= cNumModes || forcedMode(model) == (s32)mode)
         return;
     forcedMode(model) = (s32)mode;
+    sBodies[playerNo & 3] = { true, mode, (s32)nsmbudx::playerModels::character(model) };
     PlayerModel_setPlayerMode(model, displayMode(player));
     refresh(playerNo);
 }
@@ -212,6 +255,7 @@ void clearBody(u32 playerNo)
 {
     void* player = playerAt(playerNo);
     void* model = modeModelOf(player);
+    sBodies[playerNo & 3].active = false;
     if (!model || forcedMode(model) == -1)
         return;
     forcedMode(model) = -1;

@@ -16,7 +16,8 @@ Flowers keep throwing fireballs.
 | v4 | items whose archive lacks `out`/`wait` animations are timed like the Fire Flower, so they become collectible | verified in-game 2026-10-26 (collected, throws hammers) |
 | v5 | Tsuru's assets: the animated Hammer Flower item (`I_hmrflower`), the helmet and shell drawn on the player (`hmrpy`), hammers from our own archive in every level | crashed on collecting (2026-10-26 19:35): the costume models were made while drawing, where there is no heap (F0251) |
 | v6 | costume made with the player's models (PlayerModel ctor hook); idle `wait` replays no longer cut short (F0252) | tested 2026-10-26: works |
-| v7 | regular colours instead of Ice; helmet on Mario and Luigi only, Toads keep their normal cap | built and installed 2026-10-26; **awaiting test** |
+| v7 | regular colours instead of Ice; helmet on Mario and Luigi only, Toads keep their normal cap | tested 2026-10-26: works |
+| v8 | suit (helmet, shell, colours) on the world map too; no throw animation while both hammers are out; no crash when a model file is missing | built and installed 2026-10-27; **awaiting test** |
 
 ## Porting the Tsuru assets (v5)
 
@@ -48,6 +49,24 @@ What the code takes from Tsuru, and how it maps to Deluxe:
 | hides `mat_player_hat`, shows `mat_player_hair` | not done (Deluxe's material-visibility call is not found yet); the helmet covers Mario's and Luigi's cap. Toads get the shell only: their head model is the mushroom cap, kept as it is. Model types 5, 6, 8 (other classes from the factory 0x60794BDC, layouts not mapped) get no costume |
 | two hammers per player, hammer parented to the player | `HAMMER_MAX_PER_PLAYER`, owner id at hammer +0x2E78 |
 | hammer from the level's `bros` | our `hammer` archive, loaded at game start: hammers in every level |
+
+## World map, throws, missing models (v8)
+
+- **World map.** The map's player (profile 855) builds its model through the
+  same PlayerModel classes. framework/player's model listeners see every model,
+  and the hammer is remembered per character as well as per player, so a model
+  of a character that collected a Hammer Flower and shows Fire mode wears the
+  helmet and shell, in a level or on the map. The colours carry over the same
+  way (suits overrides are matched by character for models no level player owns).
+- **Throws.** `Player::canThrow` counts only fireballs, so the throw animation
+  played even with both hammers out. A throw gate now refuses the throw while
+  the player's hammers are all out.
+- **Missing models.** Removing a model archive from the SD card no longer
+  crashes the game at boot (framework/resources `mod_archives.h`): the
+  missing archive is not loaded, and the item uses the Fire Flower's model,
+  the throw a fireball, and the suit has no helmet or shell.
+- The hammer is remembered for as long as the game runs; after a restart, a
+  saved Fire player throws fireballs until a Hammer Flower is collected again.
 
 ## Changing the models
 

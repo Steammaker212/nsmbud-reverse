@@ -50,6 +50,7 @@
 // Deluxe (Switch) v1.0.0 only.
 
 #include "nsmbudx/actor_spawner.h"
+#include "nsmbudx/mod_archives.h"
 #include "nsmbudx/log.h"
 #include "level.h"
 #include "profile.h"
@@ -137,6 +138,9 @@ void preloadSpawnTargets(void* heap)
 // load; remember it so the per-profile hook knows which heap it is handed.
 extern "C" u32 SpawnRes_loadArchives(u32 mode, void* parentHeap)
 {
+    // Before the first pass (game start): a mod archive missing from the SD
+    // card is taken off the lists instead of crashing the loader (F0256).
+    nsmbudx::dropMissingModArchives();
     bool prevLoad = sLevelLoad, prevScanned = sScanned;
     sLevelLoad = mode == cLoadPerLevel;
     sScanned = false;

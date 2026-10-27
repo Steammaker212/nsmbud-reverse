@@ -75,6 +75,10 @@ Actor* ColdFuzzy::build(const ActorBuildInfo* buildInfo)
 u32 ColdFuzzy::onCreate()
 {
     model = tsuru::createModel("coldobon", "coldobon", 1);
+    if (!model) {               // romfs/Model/coldobon missing: leave rather than crash
+        isDeleted = true;
+        return 1;
+    }
     tsuru::playSklAnim(model, "run", true);
 
     aCollider.init(this, &collisionInfo, 0);
