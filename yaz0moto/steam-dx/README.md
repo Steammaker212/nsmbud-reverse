@@ -15,7 +15,7 @@ Mods directory), **not** the editor's own `miyamotodata/games`. On this machine:
 
 `scripts/validate_steam_dx_patch.py` checks every installed copy against this one.
 
-## New sprites (13)
+## New sprites (15)
 
 | ID | Name | From | In-game |
 |---|---|---|---|
@@ -31,6 +31,8 @@ Mods directory), **not** the editor's own `miyamotodata/games`. On this machine:
 | 737 | Shy Guy | `mods/shy_guy` | works |
 | 738 | Actor Spawner (custom) | `mods/custom_spawner` | |
 | 739 | Blue Shell | `mods/shell_suit` | works |
+| 740 | Cold Fuzzy | `mods/cold_fuzzy` (Tsuru port) | |
+| 741 | Poison Mushroom | `mods/poison_mushroom` (Tsuru port) | |
 
 727, 729 and 733 are absent on purpose: codedx's sprite table lists them, but no
 `Profile` is defined for them.
@@ -41,7 +43,7 @@ Mods directory), **not** the editor's own `miyamotodata/games`. On this machine:
 704, 706 gain checkbox 13 (*Extended contents (+16)*, bit 28 of `settings2`).
 `BlockBase::getContents` returns `(settings2 & 0xF) | ((settings2 >> 24) & 0x10)`,
 so ticking it turns contents *N* into *N + 16*: **21 Hammer Flower, 22 P-Acorn,
-23 Blue Shell** (`framework/items`). Every base field is restated, so an unticked
+23 Blue Shell, 24 Poison Mushroom** (`framework/items`). Every base field is restated, so an unticked
 block is unchanged.
 
 **Cheep Cheep family.** The 18 Pukupuku sprites (101, 106, 113, 114, 120, 129,
@@ -65,6 +67,13 @@ bits 0-7, `movementId` (22) bits 8-11, and nybble 21 mask 1 says it is a
 Both now load the spawned actor's archives with the level. The game only loads
 archives for sprites in a level's loaded-sprite list, which never holds a
 spawner's target; that was the 1-1 crash (ledger F0223).
+
+## Icons
+
+`icons/` holds the editor picture of each new sprite (`<id>.png`) and, for the
+?-block and brick sprites, one per extended content
+(`<id>_0000-0000-0000-1000-000<n>-0000.png` = contents 16 + n).
+`scripts/yaz0moto_icons.py` makes them for new sprites from Yaz0moto's own art.
 
 ## Model archives
 

@@ -29,7 +29,7 @@ change a port makes is in there. Who ports what is in the shared plan doc.
    Tsuru file it came from, and apply the name map below.
 4. **Build** with `scripts/sdk/make_mod_project.py ... --mod mods/<name>` (both
    the normal and the `--placeholder-models` build must print `PASS`), test in
-   Ryujinx, add the sprite to `yaz0moto/SteamDX`, and run
+   Ryujinx, add the sprite to `yaz0moto/steam-dx`, and run
    `scripts/validate_steam_dx_patch.py`.
 
 ## Name map

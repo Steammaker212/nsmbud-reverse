@@ -10,7 +10,7 @@ rely on is recorded with its evidence.
 > **Wii U models converted for Deluxe**: a Shy Guy and a Bee remodel run on
 > Nintendo's own compiled shaders. Build everything at once with
 > [mods/nsmbudx_all](mods/nsmbudx_all/); place it in levels with the one
-> Yaz0moto patch, [yaz0moto/SteamDX](yaz0moto/SteamDX/).
+> Yaz0moto patch, [yaz0moto/steam-dx](yaz0moto/steam-dx/).
 
 No game files are distributed here. You need your own `main` NSO. See [NOTICE.md](NOTICE.md).
 
@@ -22,7 +22,7 @@ No game files are distributed here. You need your own `main` NSO. See [NOTICE.md
 |---|---|
 | **Build every mod at once** | [mods/nsmbudx_all/](mods/nsmbudx_all/): all mods + framework + codedx in one sweet-dx project, `build.py --install` |
 | **Use a Wii U model in Deluxe** | [docs/WIIU_MODELS.md](docs/WIIU_MODELS.md) + [tools/wiiu2dx/](tools/wiiu2dx/): convert, rebind to Nintendo's shaders, check |
-| **Place the custom sprites in a level** | [yaz0moto/SteamDX/](yaz0moto/SteamDX/): the one Yaz0moto patch |
+| **Place the custom sprites in a level** | [yaz0moto/steam-dx/](yaz0moto/steam-dx/): the one Yaz0moto patch |
 | **Make a mod** | [docs/MODDING.md](docs/MODDING.md): build, install, write a hook, add a sprite, debug a crash |
 | **See a complete example** | [mods/hammer_suit/](mods/hammer_suit/): a new power-up, with model names you can change at the top of one file |
 | **Call game functions from my code** | [sdk/](sdk/): `#include "nsmbudx/game.h"` gives 7,079 game functions by name |
@@ -81,7 +81,7 @@ data/
 readable/        hand-reconstructed game source, verified, readable C++
 decompiled/      the raw C corpus (src/) and earlier hand-picked functions
 research/        logs and base-game file listings
-yaz0moto/SteamDX/  the level-editor patch
+yaz0moto/steam-dx/  the level-editor patch
 loader/ sweetdx/ hooks/   earlier harnesses (legacy)
 ```
 

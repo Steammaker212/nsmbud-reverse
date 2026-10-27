@@ -39,9 +39,10 @@ REPO = Path(__file__).resolve().parent.parent
 # separately) but is ALSO versioned inside it under yaz0moto/, so it is covered
 # by the repo's history like the other two patches. PATCH is the live working
 # copy; TRACKED is the committed one. Both are checked against each other.
-# Since 2026-10-26 the repo copy is the one patch (yaz0moto/SteamDX: custom actors +
-# Cheep Cheep family merged); it is both the working and the tracked copy.
-TRACKED = REPO / "yaz0moto" / "SteamDX"
+# Since 2026-10-26 the repo copy is the one patch (yaz0moto/steam-dx, formerly SteamDX:
+# custom actors + Cheep Cheep family merged, editor icons in icons/); it is both the
+# working and the tracked copy.
+TRACKED = REPO / "yaz0moto" / "steam-dx"
 PATCH = TRACKED
 
 results: list[tuple[str, bool]] = []
@@ -379,10 +380,10 @@ def main() -> int:
           "; ".join(drift) if drift else f"{len(live)} copy/copies in sync")
 
     # ---- the in-repo tracked copy must match the working copy
-    check("yaz0moto/SteamDX exists", TRACKED.is_dir(), str(TRACKED))
+    check("yaz0moto/steam-dx exists", TRACKED.is_dir(), str(TRACKED))
     tracked_drift = []
     if TRACKED.is_dir():
-        for f in ("main.xml", "spritedata.xml", "spritecategories.xml", "sprite.py"):
+        for f in ("main.xml", "spritedata.xml", "spritecategories.xml"):
             a, b = PATCH / f, TRACKED / f
             if not b.is_file():
                 tracked_drift.append(f"{f} missing from repo copy")
@@ -390,6 +391,12 @@ def main() -> int:
                 tracked_drift.append(f"{f} differs")
     check("repo-tracked copy matches the working copy", not tracked_drift,
           "; ".join(tracked_drift))
+
+    # ---- every sprite this patch adds (above the base range) has an editor icon
+    icons = TRACKED / "icons"
+    no_icon = [s for s in new if not (icons / f"{s}.png").is_file()]
+    check("every new sprite has an icon (icons/<id>.png)", not no_icon,
+          f"missing: {no_icon}" if no_icon else f"{len(new)} icons; scripts/yaz0moto_icons.py makes new ones")
 
     n = sum(1 for _, ok in results if ok)
     print(f"\n{'=' * 68}\n  {n}/{len(results)} checks passed\n{'=' * 68}")

@@ -35,7 +35,7 @@ sprites 724-733.
 | 740 | Cold Fuzzy (Tsuru) | |
 | 741 | Poison Mushroom (Tsuru) | 24 |
 
-The level editor side is the one Yaz0moto patch in [`yaz0moto/SteamDX`](../../yaz0moto/SteamDX/).
+The level editor side is the one Yaz0moto patch in [`yaz0moto/steam-dx`](../../yaz0moto/steam-dx/).
 
 ## Build
 

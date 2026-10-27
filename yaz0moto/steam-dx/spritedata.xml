@@ -134,7 +134,7 @@
 			<entry value="1">Two-Way (70, 642)</entry>
 			<entry value="8">Clapping controller (?)</entry>
 		</list>
-		<checkbox nybble="13" title="Extended contents (+16)" comment="Adds 16 to the contents (bit 28 of settings2). Contents 16 is the Acorn; 21 is the Hammer Flower. 22-31 are unused by the game and can be claimed by mods (framework/items)." category="behavior" />
+		<checkbox nybble="13" title="Extended contents (+16)" comment="Adds 16 to the contents (bit 28 of settings2). Contents 16 is the Acorn; 21 is the Hammer Flower, 22 the P-Acorn, 23 the Blue Shell, 24 the Poison Mushroom. 25-31 are unused by the game and can be claimed by mods (framework/items)." category="behavior" />
 		<list nybble="20" title="Contains" comment="The contents of the question block" category="behavior" requirednybble="13" requiredval="0">
 			<entry value="0">Nothing</entry>
 			<entry value="1">1 coin</entry>
@@ -159,10 +159,10 @@
 			<entry value="2">18: Coin or Mushroom (game decides)</entry>
 			<entry value="3">19: Acorn Mushroom (variant)</entry>
 			<entry value="4">20: Yoshi egg</entry>
-			<entry value="5">21: HAMMER FLOWER (hammer_suit mod)</entry>
-			<entry value="6">22: P-ACORN (p_acorn mod)</entry>
-			<entry value="7">23: BLUE SHELL (shell_suit mod)</entry>
-			<entry value="8">24: (free for mods)</entry>
+			<entry value="5">21: Hammer Flower</entry>
+			<entry value="6">22: P-Acorn</entry>
+			<entry value="7">23: Blue Shell</entry>
+			<entry value="8">24: Poison Mushroom</entry>
 			<entry value="9">25: (free for mods)</entry>
 			<entry value="10">26: (free for mods)</entry>
 			<entry value="11">27: (free for mods)</entry>
@@ -181,7 +181,7 @@
 			<entry value="1">Two-Way (70, 642)</entry>
 			<entry value="8">Clapping controller (?)</entry>
 		</list>
-		<checkbox nybble="13" title="Extended contents (+16)" comment="Adds 16 to the contents (bit 28 of settings2). Contents 16 is the Acorn; 21 is the Hammer Flower. 22-31 are unused by the game and can be claimed by mods (framework/items)." category="behavior" />
+		<checkbox nybble="13" title="Extended contents (+16)" comment="Adds 16 to the contents (bit 28 of settings2). Contents 16 is the Acorn; 21 is the Hammer Flower, 22 the P-Acorn, 23 the Blue Shell, 24 the Poison Mushroom. 25-31 are unused by the game and can be claimed by mods (framework/items)." category="behavior" />
 		<list nybble="20" title="Contains" comment="The contents of the brick block" category="behavior" requirednybble="13" requiredval="0">
 			<entry value="0">Nothing</entry>
 			<entry value="1">1 coin</entry>
@@ -206,10 +206,10 @@
 			<entry value="2">18: Coin or Mushroom (game decides)</entry>
 			<entry value="3">19: Acorn Mushroom (variant)</entry>
 			<entry value="4">20: Yoshi egg</entry>
-			<entry value="5">21: HAMMER FLOWER (hammer_suit mod)</entry>
-			<entry value="6">22: P-ACORN (p_acorn mod)</entry>
-			<entry value="7">23: BLUE SHELL (shell_suit mod)</entry>
-			<entry value="8">24: (free for mods)</entry>
+			<entry value="5">21: Hammer Flower</entry>
+			<entry value="6">22: P-Acorn</entry>
+			<entry value="7">23: Blue Shell</entry>
+			<entry value="8">24: Poison Mushroom</entry>
 			<entry value="9">25: (free for mods)</entry>
 			<entry value="10">26: (free for mods)</entry>
 			<entry value="11">27: (free for mods)</entry>
@@ -322,19 +322,19 @@
     <sprite id="739" name="Blue Shell" notes="New power-up from the shell_suit mod (NSMB DS style): the Penguin Suit's powers without its iceballs, worn as the Fire Flower suit; crouching while running starts a shell dash at full speed that bounces off walls, defeats enemies and bumps block actors. Also in ?-blocks and bricks as contents 23 (tick Extended contents, pick 23). The item looks like an Ice Flower until romfs/Model/I_shell is provided." files="I_iceflower;I_shell">
     </sprite>
 
-    <sprite id="740" name="Cold Fuzzy" notes="Tsuru port (mods/cold_fuzzy, reference port of the porting kit): a Fuzzy that freezes the player on touch. Follows a path when linked to one by its movement ID. Defeated by a Star, fireballs or thrown objects." files="coldobon">
+    <sprite id="740" name="Cold Fuzzy" notes="Tsuru port (mods/cold_fuzzy, the porting kit's reference port): a Fuzzy that freezes the player on touch. Follows a path when linked to one by its movement ID. Defeated by a Star, fireballs or thrown objects." files="coldobon">
         <value nybble="21-22" title="Movement ID" id_type="movement" category="movement" comment="Path controller to follow (movement type 3)." />
     </sprite>
 
-    <sprite id="741" name="Poison Mushroom" notes="Tsuru port (mods/poison_mushroom): moves like a Super Mushroom; touching it hurts the player like poison water instead of powering up. Also in ?-blocks and bricks as contents 24 (tick Extended contents, pick 24 = 8 + 16)." files="I_kinxkx">
+    <sprite id="741" name="Poison Mushroom" notes="Tsuru port (mods/poison_mushroom): moves like a Super Mushroom; touching it hurts the player like poison water instead of powering up. Also in ?-blocks and bricks as contents 24 (tick Extended contents, pick 24)." files="I_kinxkx">
     </sprite>
 
 
-    <sprite id="148" name="Brick Block - Uses Lines" notes="A brick block that follows a line. Contents 21 is the Hammer Flower and 22 the P-Acorn (tick Extended contents).">
+    <sprite id="148" name="Brick Block - Uses Lines" notes="A brick block that follows a line. Contents 21 is the Hammer Flower, 22 the P-Acorn, 23 the Blue Shell and 24 the Poison Mushroom (tick Extended contents).">
 		<checkbox nybble="8" title="Counter-Clockwise" comment="When checked, makes the ? block go counter clockwise." category="behavior" />
 		<value nybble="11" title="Unknown Value 11" />
 		<checkbox nybble="16" title="Faster Movement" comment="Ticking this would make the ? block move faster." category="behavior" />
-		<checkbox nybble="13" title="Extended contents (+16)" comment="Adds 16 to the contents (bit 28 of settings2). Contents 16 is the Acorn; 21 is the Hammer Flower, 22 the P-Acorn. 23-31 are unused by the game and can be claimed by mods (framework/items)." category="behavior" />
+		<checkbox nybble="13" title="Extended contents (+16)" comment="Adds 16 to the contents (bit 28 of settings2). Contents 16 is the Acorn; 21 is the Hammer Flower, 22 the P-Acorn, 23 the Blue Shell, 24 the Poison Mushroom. 25-31 are unused by the game and can be claimed by mods (framework/items)." category="behavior" />
 		<list nybble="20" title="Contents" comment="Contents of the brick block." category="behavior">
 			<entry value="0">Nothing</entry>
 			<entry value="1">1 coin</entry>
@@ -353,16 +353,16 @@
 			<entry value="14">Super mushroom (if small)</entry>
 			<entry value="15">Ice flower</entry>
 		</list>
-		<list nybble="20" title="Contents (extended)" comment="Contents 16-31. 21 needs the hammer_suit mod and 22 the p_acorn mod; an unregistered 23-31 makes the game read past its contents table." category="behavior" requirednybble="13" requiredval="1">
+		<list nybble="20" title="Contents (extended)" comment="Contents 16-31. 21 needs the hammer_suit mod, 22 p_acorn, 23 shell_suit and 24 poison_mushroom; an unregistered 25-31 makes the game read past its contents table." category="behavior" requirednybble="13" requiredval="1">
 			<entry value="0">16: Acorn Mushroom</entry>
 			<entry value="1">17: Super Crown (1 player; coin otherwise)</entry>
 			<entry value="2">18: Coin or Mushroom (game decides)</entry>
 			<entry value="3">19: Acorn Mushroom (variant)</entry>
 			<entry value="4">20: Yoshi egg</entry>
-			<entry value="5">21: HAMMER FLOWER (hammer_suit mod)</entry>
-			<entry value="6">22: P-ACORN (p_acorn mod)</entry>
-			<entry value="7">23: BLUE SHELL (shell_suit mod)</entry>
-			<entry value="8">24: (free for mods)</entry>
+			<entry value="5">21: Hammer Flower</entry>
+			<entry value="6">22: P-Acorn</entry>
+			<entry value="7">23: Blue Shell</entry>
+			<entry value="8">24: Poison Mushroom</entry>
 			<entry value="9">25: (free for mods)</entry>
 			<entry value="10">26: (free for mods)</entry>
 			<entry value="11">27: (free for mods)</entry>
@@ -375,7 +375,7 @@
 
     <sprite id="422" name="Big Brick Block">
 		<value nybble="14" title="Unknown Value 14" />
-		<checkbox nybble="13" title="Extended contents (+16)" comment="Adds 16 to the contents (bit 28 of settings2). Contents 16 is the Acorn; 21 is the Hammer Flower, 22 the P-Acorn. 23-31 are unused by the game and can be claimed by mods (framework/items)." category="behavior" />
+		<checkbox nybble="13" title="Extended contents (+16)" comment="Adds 16 to the contents (bit 28 of settings2). Contents 16 is the Acorn; 21 is the Hammer Flower, 22 the P-Acorn, 23 the Blue Shell, 24 the Poison Mushroom. 25-31 are unused by the game and can be claimed by mods (framework/items)." category="behavior" />
 		<list nybble="20" title="Contains" comment="Value 10: Breaks when hit by shell from the sides. " category="behavior">
 			<entry value="0">Nothing</entry>
 			<entry value="1">One Coin</entry>
@@ -394,16 +394,16 @@
 			<entry value="14">Mushroom if small</entry>
 			<entry value="15">Ice Flower</entry>
 		</list>
-		<list nybble="20" title="Contains (extended)" comment="Contents 16-31. 21 needs the hammer_suit mod and 22 the p_acorn mod; an unregistered 23-31 makes the game read past its contents table." category="behavior" requirednybble="13" requiredval="1">
+		<list nybble="20" title="Contains (extended)" comment="Contents 16-31. 21 needs the hammer_suit mod, 22 p_acorn, 23 shell_suit and 24 poison_mushroom; an unregistered 25-31 makes the game read past its contents table." category="behavior" requirednybble="13" requiredval="1">
 			<entry value="0">16: Acorn Mushroom</entry>
 			<entry value="1">17: Super Crown (1 player; coin otherwise)</entry>
 			<entry value="2">18: Coin or Mushroom (game decides)</entry>
 			<entry value="3">19: Acorn Mushroom (variant)</entry>
 			<entry value="4">20: Yoshi egg</entry>
-			<entry value="5">21: HAMMER FLOWER (hammer_suit mod)</entry>
-			<entry value="6">22: P-ACORN (p_acorn mod)</entry>
-			<entry value="7">23: BLUE SHELL (shell_suit mod)</entry>
-			<entry value="8">24: (free for mods)</entry>
+			<entry value="5">21: Hammer Flower</entry>
+			<entry value="6">22: P-Acorn</entry>
+			<entry value="7">23: Blue Shell</entry>
+			<entry value="8">24: Poison Mushroom</entry>
 			<entry value="9">25: (free for mods)</entry>
 			<entry value="10">26: (free for mods)</entry>
 			<entry value="11">27: (free for mods)</entry>
@@ -416,7 +416,7 @@
 
     <sprite id="526" name="Screen-following Brick Block">
 		<checkbox nybble="10" title="Z-Order" comment="Makes the sprite be on Layer 2." category="behavior" />
-		<checkbox nybble="13" title="Extended contents (+16)" comment="Adds 16 to the contents (bit 28 of settings2). Contents 16 is the Acorn; 21 is the Hammer Flower, 22 the P-Acorn. 23-31 are unused by the game and can be claimed by mods (framework/items)." category="behavior" />
+		<checkbox nybble="13" title="Extended contents (+16)" comment="Adds 16 to the contents (bit 28 of settings2). Contents 16 is the Acorn; 21 is the Hammer Flower, 22 the P-Acorn, 23 the Blue Shell, 24 the Poison Mushroom. 25-31 are unused by the game and can be claimed by mods (framework/items)." category="behavior" />
 		<list nybble="20" title="Contains" comment="What the block contains." category="behavior">
 			<entry value="0">Nothing</entry>
 			<entry value="1">1 coin</entry>
@@ -435,16 +435,16 @@
 			<entry value="14">Super mushroom (if small)</entry>
 			<entry value="15">Ice flower</entry>
 		</list>
-		<list nybble="20" title="Contains (extended)" comment="Contents 16-31. 21 needs the hammer_suit mod and 22 the p_acorn mod; an unregistered 23-31 makes the game read past its contents table." category="behavior" requirednybble="13" requiredval="1">
+		<list nybble="20" title="Contains (extended)" comment="Contents 16-31. 21 needs the hammer_suit mod, 22 p_acorn, 23 shell_suit and 24 poison_mushroom; an unregistered 25-31 makes the game read past its contents table." category="behavior" requirednybble="13" requiredval="1">
 			<entry value="0">16: Acorn Mushroom</entry>
 			<entry value="1">17: Super Crown (1 player; coin otherwise)</entry>
 			<entry value="2">18: Coin or Mushroom (game decides)</entry>
 			<entry value="3">19: Acorn Mushroom (variant)</entry>
 			<entry value="4">20: Yoshi egg</entry>
-			<entry value="5">21: HAMMER FLOWER (hammer_suit mod)</entry>
-			<entry value="6">22: P-ACORN (p_acorn mod)</entry>
-			<entry value="7">23: BLUE SHELL (shell_suit mod)</entry>
-			<entry value="8">24: (free for mods)</entry>
+			<entry value="5">21: Hammer Flower</entry>
+			<entry value="6">22: P-Acorn</entry>
+			<entry value="7">23: Blue Shell</entry>
+			<entry value="8">24: Poison Mushroom</entry>
 			<entry value="9">25: (free for mods)</entry>
 			<entry value="10">26: (free for mods)</entry>
 			<entry value="11">27: (free for mods)</entry>
@@ -455,9 +455,9 @@
 		</list>
 	</sprite>
 
-    <sprite id="704" name="Brick Block (2) - NSLU" notes="Maybe a there's a checkbox on a nybble to make this contain an acorn mushroom. Contents 21 is the Hammer Flower and 22 the P-Acorn (tick Extended contents).">
+    <sprite id="704" name="Brick Block (2) - NSLU" notes="Maybe a there's a checkbox on a nybble to make this contain an acorn mushroom. Contents 21 is the Hammer Flower, 22 the P-Acorn, 23 the Blue Shell and 24 the Poison Mushroom (tick Extended contents).">
 		<value nybble="6" title="Unknown Value 6" />
-		<checkbox nybble="13" title="Extended contents (+16)" comment="Adds 16 to the contents (bit 28 of settings2). Contents 16 is the Acorn; 21 is the Hammer Flower, 22 the P-Acorn. 23-31 are unused by the game and can be claimed by mods (framework/items)." category="behavior" />
+		<checkbox nybble="13" title="Extended contents (+16)" comment="Adds 16 to the contents (bit 28 of settings2). Contents 16 is the Acorn; 21 is the Hammer Flower, 22 the P-Acorn, 23 the Blue Shell, 24 the Poison Mushroom. 25-31 are unused by the game and can be claimed by mods (framework/items)." category="behavior" />
 		<list nybble="20" title="Contents" comment="What the brick block contains." category="behavior">
 			<entry value="0">Nothing</entry>
 			<entry value="1">1 coin</entry>
@@ -476,16 +476,16 @@
 			<entry value="14">Super mushroom (if small)</entry>
 			<entry value="15">Ice flower</entry>
 		</list>
-		<list nybble="20" title="Contents (extended)" comment="Contents 16-31. 21 needs the hammer_suit mod and 22 the p_acorn mod; an unregistered 23-31 makes the game read past its contents table." category="behavior" requirednybble="13" requiredval="1">
+		<list nybble="20" title="Contents (extended)" comment="Contents 16-31. 21 needs the hammer_suit mod, 22 p_acorn, 23 shell_suit and 24 poison_mushroom; an unregistered 25-31 makes the game read past its contents table." category="behavior" requirednybble="13" requiredval="1">
 			<entry value="0">16: Acorn Mushroom</entry>
 			<entry value="1">17: Super Crown (1 player; coin otherwise)</entry>
 			<entry value="2">18: Coin or Mushroom (game decides)</entry>
 			<entry value="3">19: Acorn Mushroom (variant)</entry>
 			<entry value="4">20: Yoshi egg</entry>
-			<entry value="5">21: HAMMER FLOWER (hammer_suit mod)</entry>
-			<entry value="6">22: P-ACORN (p_acorn mod)</entry>
-			<entry value="7">23: BLUE SHELL (shell_suit mod)</entry>
-			<entry value="8">24: (free for mods)</entry>
+			<entry value="5">21: Hammer Flower</entry>
+			<entry value="6">22: P-Acorn</entry>
+			<entry value="7">23: Blue Shell</entry>
+			<entry value="8">24: Poison Mushroom</entry>
 			<entry value="9">25: (free for mods)</entry>
 			<entry value="10">26: (free for mods)</entry>
 			<entry value="11">27: (free for mods)</entry>
@@ -499,7 +499,7 @@
 
     <sprite id="706" name="Pivotal-rotation-controlled Brick Block - NSLU 9-9">
 		<value nybble="6" title="Unknown Value 6" />
-		<checkbox nybble="13" title="Extended contents (+16)" comment="Adds 16 to the contents (bit 28 of settings2). Contents 16 is the Acorn; 21 is the Hammer Flower, 22 the P-Acorn. 23-31 are unused by the game and can be claimed by mods (framework/items)." category="behavior" />
+		<checkbox nybble="13" title="Extended contents (+16)" comment="Adds 16 to the contents (bit 28 of settings2). Contents 16 is the Acorn; 21 is the Hammer Flower, 22 the P-Acorn, 23 the Blue Shell, 24 the Poison Mushroom. 25-31 are unused by the game and can be claimed by mods (framework/items)." category="behavior" />
 		<list nybble="20" title="Contents" comment="What the Brick Block contains." category="behavior">
 			<entry value="0">Nothing</entry>
 			<entry value="1">1 coin</entry>
@@ -518,16 +518,16 @@
 			<entry value="14">Super mushroom (if small)</entry>
 			<entry value="15">Ice flower</entry>
 		</list>
-		<list nybble="20" title="Contents (extended)" comment="Contents 16-31. 21 needs the hammer_suit mod and 22 the p_acorn mod; an unregistered 23-31 makes the game read past its contents table." category="behavior" requirednybble="13" requiredval="1">
+		<list nybble="20" title="Contents (extended)" comment="Contents 16-31. 21 needs the hammer_suit mod, 22 p_acorn, 23 shell_suit and 24 poison_mushroom; an unregistered 25-31 makes the game read past its contents table." category="behavior" requirednybble="13" requiredval="1">
 			<entry value="0">16: Acorn Mushroom</entry>
 			<entry value="1">17: Super Crown (1 player; coin otherwise)</entry>
 			<entry value="2">18: Coin or Mushroom (game decides)</entry>
 			<entry value="3">19: Acorn Mushroom (variant)</entry>
 			<entry value="4">20: Yoshi egg</entry>
-			<entry value="5">21: HAMMER FLOWER (hammer_suit mod)</entry>
-			<entry value="6">22: P-ACORN (p_acorn mod)</entry>
-			<entry value="7">23: BLUE SHELL (shell_suit mod)</entry>
-			<entry value="8">24: (free for mods)</entry>
+			<entry value="5">21: Hammer Flower</entry>
+			<entry value="6">22: P-Acorn</entry>
+			<entry value="7">23: Blue Shell</entry>
+			<entry value="8">24: Poison Mushroom</entry>
 			<entry value="9">25: (free for mods)</entry>
 			<entry value="10">26: (free for mods)</entry>
 			<entry value="11">27: (free for mods)</entry>
