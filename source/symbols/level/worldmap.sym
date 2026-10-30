@@ -1,0 +1,26 @@
+# World map and course select
+#
+# Addresses are RVAs (VA - 0x60000000). New Super Mario Bros. U Deluxe (Switch) v1.0.0 only.
+# Each group's tag says where its names are declared: [codedx] in the codedx headers
+# under include/, otherwise the header(s) holding the generated declarations. Names
+# tagged [framework/mods] on an entry are the ones a framework part or mod needs.
+# Constructors and destructors carry their C1/C2/D0/D1/D2 variant.
+
+# CourseNameTable  [modbase/game/level/worldmap.h]
+CourseNameTable::init(unsigned int, unsigned int, void*) = 0x0047C13C;
+
+# CourseSelectMgr  [modbase/game/level/worldmap.h]
+# [code/framework/worldmap.cpp] CourseSelectMgr* CourseSelectMgr::sInstance (maps at +0x1C, ledger F0066).
+CourseSelectMgr::instance = 0x00C89E18;
+
+# CourseSelectTask  [modbase/game/level/worldmap.h]
+CourseSelectTask::create() = 0x000248E8;
+CourseSelectTask::CourseSelectTask(int) as C1 = 0x001FD6E4;
+CourseSelectTask::CourseSelectTask(int) as C2 = 0x001FD6E4;
+
+# StorySave  [modbase/game/level/worldmap.h]
+# [code/framework/worldmap.cpp] Story save data pointer (current world/variant/point at +428/+432/+436, F0073).
+StorySave::instance = 0x00CC6D78;
+
+# WorldNameTable  [modbase/game/level/worldmap.h]
+WorldNameTable::init(unsigned int) = 0x0047BEC0;

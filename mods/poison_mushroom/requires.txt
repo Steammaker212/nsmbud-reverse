@@ -1,6 +1,0 @@
-# framework components this mod needs (framework/<name>/)
-core
-actors
-items
-player
-tsuru

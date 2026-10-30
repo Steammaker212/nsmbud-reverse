@@ -1,5 +1,10 @@
 # Wii U models in Deluxe
 
+> **The consolidated reference is [WIIU_MODEL_CONVERSION.md](WIIU_MODEL_CONVERSION.md)**: the whole
+> pipeline, every pitfall (including the later black-model, normal and texture-dictionary
+> fixes), setup and verification. This file is the original investigation log.
+
+
 How NSMBU Deluxe stores a model, how that differs from NSMBU (Wii U), and what a
 Wii U model needs before Deluxe can draw it. Every claim below was read from the
 two games' own files with `scripts/models/bfres_dump.py`, which dumps either
@@ -35,10 +40,10 @@ broke the model until it was (ledger F0231-F0236):
 | BFRES dump (Wii U + Switch) | [`scripts/models/bfres_dump.py`](../scripts/models/bfres_dump.py), `wiiu2dx --dump` |
 | Shader archive: compiled programs | [`scripts/models/bfsha_info.py`](../scripts/models/bfsha_info.py) |
 | Textures to PNG / pixel compare | [`scripts/models/bntx_compare.py`](../scripts/models/bntx_compare.py) |
-| In-game safety net | [`framework/diagnostics/code/draw_guard.cpp`](../framework/diagnostics/code/draw_guard.cpp) |
-| Bee death crash fix | [`framework/actors/code/actor_variant.cpp`](../framework/actors/code/actor_variant.cpp) (`Variant_checkLiquid`) |
-| Findings | [`data/findings/ledger.csv`](../data/findings/ledger.csv) F0231-F0236 |
-| Where converted models go | `mods/<mod>/romfs/Model/` and `mods/nsmbudx_all/romfs/Model/` (never committed) |
+| In-game safety net | [`source/code/debug/draw_guard.cpp`](../source/code/debug/draw_guard.cpp) |
+| Bee death crash fix | [`source/code/framework/actor_variant.cpp`](../source/code/framework/actor_variant.cpp) (`Variant_checkLiquid`) |
+| Findings | [`reverse-engineering/FindingsB/ledger.csv`](../reverse-engineering/FindingsB/ledger.csv) F0231-F0236 |
+| Where converted models go | `<SD>/atmosphere/contents/0100EA80032EA000/romfs/Model/` (never committed) |
 
 ## The two archive formats
 
@@ -108,7 +113,7 @@ drawn by Nintendo's own compiled shaders.
 
 So "rename the archive" is right for the *game side* (the shy_guy and bee
 mods already load their model by a configurable archive name, see
-`framework/actors`), but the archive itself must be converted.
+`code/framework/actor_variant.cpp`), but the archive itself must be converted.
 
 ## The conversion
 
@@ -141,11 +146,11 @@ Convert, naming the archive and model after what the mod loads:
 ```sh
 # Shy Guy: a remodelled kakibo that keeps kakibo's materials -> Deluxe's kakibo shaders
 python scripts/models/wiiu2dx.py --wiiu kakibo.pack --template kakibo --name shyguy \
-    --romfs "<Deluxe romfs>" --out mods/shy_guy/romfs/Model
+    --romfs "<Deluxe romfs>" --out <SD>/atmosphere/contents/0100EA80032EA000/romfs/Model
 
 # Bee: nw4f materials NSMBU never had -> both bound to the Cheep Cheep's shader
 python scripts/models/wiiu2dx.py --wiiu pukupuku.pack --template pukupuku --name bee \
-    --romfs "<Deluxe romfs>" --out mods/bee/romfs/Model \
+    --romfs "<Deluxe romfs>" --out <SD>/atmosphere/contents/0100EA80032EA000/romfs/Model \
     --map mt_eye=mat_pukupuku --map mat_pukupuku=mat_pukupuku
 ```
 
@@ -233,7 +238,7 @@ shading model, keyed by `gsys_weight`, no default). `wiiu2dx` now fits each
 shape to its shader's compiled count and logs `skin count 4 -> 1`. Each vertex
 then follows its strongest bone -- the Goombrat's own rigid look.
 
-`framework/diagnostics` (`--with-diagnostics`) adds `draw_guard`: it checks
+`source/code/debug/draw_guard.cpp` (always in the build) is the safety net: it checks
 every link the per-shape draw (0x60434AE8) dereferences and, if one is null,
 logs `draw guard: model '...' shape N '...': null <link>` and skips only that
 shape, so a bad model shows up in the log instead of crashing the game.
@@ -251,3 +256,159 @@ the curve is flattened, so whatever frame the game holds shows the bee.
 Not reproduced: the Bee's nw4f material also multiplies by vertex colour
 (`_c0`, mostly white-to-grey baked shading). No NSMBUDX shading model reads
 vertex colour, so that soft shading is lost; colours and textures are kept.
+
+## Tsuru's models (2026-10-28)
+
+[`scripts/models/port_tsuru_models.py`](../scripts/models/port_tsuru_models.py)
+converts every Wii U model the Tsuru ports use. They go to
+`romfs/Model/dx/<name>.Nin_NX_NVN.szs`; the game loads from `romfs/Model`, so
+move a file up one level to use it. Each passes these checks:
+- every shape's skin count is one its program was compiled for;
+- every program is in the archive's `.bfsha`;
+- every texture a material names is in its BNTX.
+
+None has been tested in game yet.
+
+```sh
+python scripts/models/port_tsuru_models.py --wiiu <folder of Wii U .szs> --romfs "<Deluxe romfs>" --out <dir> [name ...]
+```
+
+### Choosing the template
+
+Pick the Deluxe actor closest to the model, in this order:
+1. **The same material.** Retail `block_challenge` is Nintendo's own conversion
+   of the triple block's `mat_block_challenge`. Grrrol's `gorogoro` has
+   `guruguru`'s materials. `star_coin`'s B coin has the Time Clock's
+   body/eye/star.
+2. **The same family:** `karon` for Basalt Bones, `nokonokoA` for Para-Bones,
+   `iggy` for Kamek's `mat_bodyA`/`mat_magic_wandB`.
+3. **A generic enemy program**, the way Nintendo did it. Its own Wii U-only
+   `mokinger` became `crasher_mat_crasher`. Here:
+   - `kuribo`: skin 1;
+   - `musasabi`: body skin 4, eye skin 0;
+   - `gabon_rock`: rock skin 0;
+   - `switch`: albedo, lightmaps and environment.
+
+| Model | Template | Notes |
+|---|---|---|
+| `block_beep`, `block_rdbl`, `block_stch` | `obj_block` | Deluxe's flying ?-block (`pata_block`) body and wing |
+| `block_trip`, `blocktripa/b/c` | `block_challenge` | the same material |
+| `clef`, `note`, `star_shard` | `star_coin` (A) | |
+| `timeclock` | `star_coin` (A, B body/eye/star) | |
+| `e_poison`, `poisball` | `switch` (`mat_switch_bikkuri_2`) | albedo, lightmaps, `poison_env` |
+| `gasagoso` | `musasabi` | body skin 2 -> 4; the string on the eye program |
+| `guruguru` | `gorogoro` | the same materials |
+| `hacchin000` | `kuribo` | |
+| `kamiya` | `iggy` | the broom on `mat_bodyA` |
+| `laron` | `karon` | keeps its own lightmaps (`lavaglow` is the glow); `mat_kalav_body`'s `lavaanim` is missing from Tsuru's file, so it uses `lavaglow` |
+| `moking` | `mokinger` (`crasher`) | skin 2/3 -> 4 |
+| `nokonokoB` | `nokonokoA` | |
+| `nukubomb`, `ukibofloat` | `gabon_rock` (`rock`) | `ukibofloat` had no lightmaps; it gets Deluxe's |
+| `nukunuku` | `musasabi` | skin 3 -> 4 |
+| `poihana` | `kuribo` | |
+| `teren` | `musasabi` | its `Clouds` sphere (a translucent `nw4f_kakiwari` fog) is dropped: no Deluxe enemy program draws it |
+| `truck` | `gorogoro` (machine) | metal parts on the metal-env program |
+
+Not converted:
+- `daikonbouBig` and `mokinger` are retail Deluxe archives.
+- `coldobon`, `tenten_w`, `hmrpy`, `I_hmrflower` and `I_kinxkx` were ported
+  earlier and are already in `romfs/Model` (`tenten_w` also has the Biddybud's
+  hand-made wingless `tenten_w_walk` model).
+
+### What `wiiu2dx` gained for this
+
+- **Skin counts fit upward too** (0 -> N and N -> M > N). The extra
+  influences repeat an index at weight 0. The program sums
+  weight * palette[index] * position, so the vertex doesn't move, whatever space
+  it is in. A skin-0 shape whose bone has no palette entry gets a rigid one,
+  appended to `MatrixToBoneList` (Kamek's wand, Basalt Bones' head).
+- **`--template-lightmaps`.** Every slot whose template texture is a lightmap
+  (`lm_*`) takes the template's own texture, byte for byte, so the model is lit
+  like the Deluxe actor it borrows shaders from. Any other texture a material
+  names that the Wii U file lacks is imported from the template the same way.
+  `ChangePlatform` bakes the textures into `textures.bntx` as bytes, so imports
+  are written into that file; `res.Textures` is not saved.
+- **`--drop-material`** removes the shapes drawn with a material that no Deluxe
+  program can draw.
+- **The BNTX name repair** also matches a damaged name that appears twice in
+  the table (a texture imported over one of the same name), using the sorted
+  table's neighbours.
+
+### Black models: `fog_index` (2026-10-28)
+
+The Cataquack (`poihana`) and Peepa (`teren`) drew solid black in game. Their
+converted materials differed from the retail templates (`kuribo`, `musasabi`) in
+exactly one value: `fog_index` was 1, where the templates have 0.
+
+That parameter came from the Wii U material: the converter keeps a Wii U value
+wherever the template has a parameter of the same name and type. Every nw4f
+material (Captain Toad / 3D World exports) carries 1. The game code never reads
+it; it is a uniform the `Wii_UBER` program uses to pick a scene fog slot.
+- Retail enemies use 0; map objects such as `daikonbouBig` use 1.
+- Nintendo's own conversion of an nw4f enemy (`mokinger`, bound to
+  `crasher_mat_crasher`) set it to 0.
+- The envsets' enemy environments (`e_default.baglenv`: lights only, no fog)
+  give the enemy programs no fog setup for slot 1.
+
+`fog_index` now always comes from the template. After that, the converted
+materials match their templates parameter for parameter.
+
+The converter also rewrites every skinned shape's indices in Nintendo's layout
+(8-bit `_i0`; `_w0` only for two or more weights), even at an unchanged skin
+count. A Wii U nw4f model kept 32-bit indices and a spare `_w0`. It also refuses
+an index past the matrix palette.
+
+`WIIU2DX_DUMP_PARAMS=1 wiiu2dx --dump <bfres>` lists each material's parameters,
+render info and options, for comparing a conversion with its template.
+
+### Still black: baked scale and proven programs (2026-10-28)
+
+With `fog_index` fixed, the Cataquack and Peepa were still black and the
+Stingby unlit. Their textures (channel selectors included), normals (unit
+length), UVs and materials (identical to the templates) were all correct. What
+set them apart from every model that works is size. They are Captain Toad
+scale (+-115, +-70 and +-60 units), and Tsuru's code shrinks them with
+`setScale` 0.1, 0.15 and 0.17. Every working conversion is drawn at scale 1.
+
+So the three are no longer faithful ports:
+- `--bake-scale` scales the model itself: positions, bone translations,
+  inverse bind matrices, shape bounds, and the translation tracks of every
+  skeletal animation. The actor then draws it at scale 1.
+- They are bound to programs already proven in game: `kakibo` (the Shy Guy's)
+  for `poihana` and `hacchin000`, and `chorobon` (the Cold Fuzzy's, 2 weights)
+  for `teren`.
+
+Textures, skeletons and animations are kept.
+
+### The real cause of the black: the BNTX texture dictionary (2026-10-28)
+
+The Cataquack and Peepa stayed solid black after the fog and scale changes. In
+both, the texture name BfresLibrary had damaged was the colour texture itself
+(`Poihana`, `Teren_dif`). In the Stingby, which drew correctly, it was
+`star_env`, a texture it never draws.
+
+The game doesn't scan names. It finds a material's texture through the BNTX
+`_DIC`, an `nn::util::ResDic`: a patricia trie whose nodes branch on bits of the
+name (bit *n* = bit `n & 7` of byte `len - 1 - (n >> 3)`). BfresLibrary
+builds that trie from the names as damaged. Restoring the string bytes, as
+`repair_bntx_names` did, leaves a trie that walks past the entry. The lookup
+fails, the sampler stays unbound, and the model draws black.
+
+A simulation of the lookup (`wiiu2dx.dict_find`) confirms it:
+- **unreachable:** `Poihana`, `Teren_dif`, `star_env`;
+- **reachable:** every name in Nintendo's own files.
+
+`wiiu2dx.py` now rebuilds the trie from the repaired names (`dict_build`).
+Rebuilt from their keys, Nintendo's dictionaries come out byte for byte the
+same: `kakibo`, `chorobon`, `kuribo`, `musasabi`, `gorogoro`, `karon`,
+`star_coin`, `obj_block`. It then refuses to write an archive in which any
+texture is not found by lookup.
+
+Every archive written before this fix has one unreachable texture: the name
+BfresLibrary damaged. In most it's the second lightmap (`lm_02*`), which leaves
+the model with half its lighting rather than black. Affected:
+- converted earlier, outside the batch: `shyguy`, `coldobon`, `hmrpy`,
+  `I_hmrflower`, `I_kinxkx`;
+- from the batch: `kamiya`, `laron`, and the others listed by a re-scan.
+
+Re-running them through `wiiu2dx.py` fixes them.

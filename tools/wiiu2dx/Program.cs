@@ -25,11 +25,290 @@ static class Program
     // Skinning inputs every NSMBUDX Wii_UBER shading model declares (bfsha_info.py).
     static readonly HashSet<string> SkinAttribs = new() { "_i0", "_i1", "_w0", "_w1" };
 
+    // Material parameters always taken from the template (see Rebind).
+    static readonly HashSet<string> TemplateOnlyParams = new() { "fog_index" };
+
     // --tex mat=t0,t1,...: textures for a material in template sampler order. Sampler variable
     // names mean different things in different shader archives (the Wii U Hammer Flower's
     // nw4f_map_obj_shader feeds its colour texture through _a2), so a model whose assign does
     // not follow the template's layout names its textures explicitly.
     static readonly Dictionary<string, string[]> TexOverride = new();
+
+    // --template-lightmaps: every sampler slot whose template texture is a lightmap (lm_*) takes the
+    // template's own texture, so the model is lit exactly like the Deluxe actor it borrows shaders
+    // from (Deluxe retuned some lightmaps; a Wii U model may also have none, as ukibofloat).
+    static bool TemplateLightmaps;
+
+    // Textures a material names that the Wii U file lacks come from the template file, already in
+    // Switch form (a missing texture would otherwise leave the slot empty in game).
+    static ResFile TemplateRes, OutRes;
+    static readonly HashSet<string> Imported = new();
+
+    static void ImportTexture(string name, HashSet<string> textureNames, bool replace)
+    {
+        if (TemplateRes == null || !TemplateRes.Textures.ContainsKey(name) || Imported.Contains(name))
+            return;
+        if (textureNames.Contains(name) && !replace)
+            return;
+        textureNames.Add(name);
+        Imported.Add(name);
+        Console.WriteLine($"  texture '{name}' taken from the template");
+    }
+
+    // ChangePlatform bakes the textures into the external file textures.bntx as bytes, so the
+    // imports are written there: a template texture replaces the one of the same name, or is added.
+    static void WriteImportedTextures(ResFile res)
+    {
+        if (Imported.Count == 0 || !res.ExternalFiles.ContainsKey("textures.bntx"))
+            return;
+        var file = res.ExternalFiles["textures.bntx"];
+        var bntx = new Syroot.NintenTools.NSW.Bntx.BntxFile(new MemoryStream(file.Data));
+        foreach (var name in Imported)
+        {
+            var src = ((BfresLibrary.Switch.SwitchTexture)TemplateRes.Textures[name]).Texture;
+            // The texture of that name -- or the one whose name BfresLibrary damaged (its last
+            // characters overwritten): imported over, kamiya's lm_02b was otherwise added a second
+            // time, and the duplicate key hung the dictionary rebuild.
+            int i = bntx.Textures.ToList().FindIndex(t => t.Name == name);
+            if (i < 0)
+                i = bntx.Textures.ToList().FindIndex(t => t.Name.Length == name.Length
+                    && t.Name.Any(c => c < 0x20 || c > 0x7E || c == '?')
+                    && t.Name.Substring(0, Math.Max(0, name.Length - 3)) == name.Substring(0, Math.Max(0, name.Length - 3)));
+            if (i >= 0)
+                bntx.Textures[i] = src;
+            else
+            {
+                bntx.Textures.Add(src);
+                bntx.TextureDict.Add(name);
+            }
+        }
+        var mem = new MemoryStream();
+        bntx.Save(mem);
+        file.Data = mem.ToArray();
+    }
+
+    // --make-block: a one-tile block model from Nintendo's block_challenge (a 16x16 quad on the
+    // lit, alpha-tested map-object program): its model renamed "block", its colour texture
+    // replaced by an RGBA8 image named "block" (alpha < 0.5 is cut out), its normal map made flat.
+    static void MakeBlock(ResFile res, byte[] rgba, uint w, uint h)
+    {
+        var model = res.Models.Values.First();
+        res.Models.Clear();
+        model.Name = "block";
+        res.Models.Add("block", model);
+        foreach (var mat in model.Materials.Values)
+            foreach (var t in mat.TextureRefs)
+                if (t.Name == "block_challenge")
+                    t.Name = "block";
+
+        // A loaded Switch bfres holds its textures.bntx as res.Textures (written back on save).
+        var flat = new byte[w * h * 4];
+        for (int i = 0; i < flat.Length; i += 4)
+        {
+            flat[i] = 128; flat[i + 1] = 128; flat[i + 2] = 255; flat[i + 3] = 255;
+        }
+        var all = res.Textures.Values.ToList();
+        res.Textures.Clear();
+        foreach (var t in all)
+        {
+            var tex = ((BfresLibrary.Switch.SwitchTexture)t).Texture;
+            if (t.Name == "block_challenge")
+            {
+                SetRgba8(tex, rgba, w, h);
+                tex.Name = "block";
+                t.Name = "block";
+            }
+            else if (t.Name == "block_challenge_nml")
+                SetRgba8(tex, flat, w, h);
+            res.Textures.Add(t.Name, t);
+        }
+    }
+
+    // block_challenge's quad maps its texture slightly inside the edges (8_8_UNorm UVs short of 0
+    // and 1), which crops a custom texture's border: snap every UV to exactly 0 or 1.
+    static void FixBlockUVs(ResFile res)
+    {
+        foreach (var model in res.Models.Values)
+            foreach (var vb in model.VertexBuffers)
+            {
+                if (!vb.Attributes.ContainsKey("_u0") || vb.Attributes["_u0"].Format.ToString() != "Format_8_8_UNorm")
+                    continue;
+                var a = vb.Attributes["_u0"];
+                var buf = vb.Buffers[a.BufferIndex];
+                var d = buf.Data[0];
+                for (int v = 0; v < vb.VertexCount; v++)
+                    for (int k = 0; k < 2; k++)
+                    {
+                        int o = v * buf.Stride + a.Offset + k;
+                        Console.Write($"{d[o]}->");
+                        d[o] = (byte)(d[o] >= 128 ? 255 : 0);
+                        Console.Write($"{d[o]} ");
+                    }
+                Console.WriteLine();
+            }
+    }
+
+    static void SetRgba8(Syroot.NintenTools.NSW.Bntx.Texture tex, byte[] rgba, uint w, uint h)
+    {
+        uint bh = BfresLibrary.Swizzling.TegraX1Swizzle.GetBlockHeight(h);
+        int bhLog2 = (int)Math.Log2(bh);
+        var data = BfresLibrary.Swizzling.TegraX1Swizzle.swizzle(w, h, 1, 1, 1, 1, 1, 4, 0, bhLog2, rgba);
+        tex.Format = Syroot.NintenTools.NSW.Bntx.GFX.SurfaceFormat.R8_G8_B8_A8_UNORM;
+        tex.Width = w;
+        tex.Height = h;
+        tex.MipCount = 1;
+        tex.MipOffsets = new long[] { 0 };
+        tex.TextureData = new List<List<byte[]>> { new List<byte[]> { data } };
+        tex.ImageSize = (uint)data.Length;
+        tex.BlockHeightLog2 = (uint)bhLog2;
+        tex.ChannelRed = Syroot.NintenTools.NSW.Bntx.GFX.ChannelType.Red;
+        tex.ChannelGreen = Syroot.NintenTools.NSW.Bntx.GFX.ChannelType.Green;
+        tex.ChannelBlue = Syroot.NintenTools.NSW.Bntx.GFX.ChannelType.Blue;
+        tex.ChannelAlpha = Syroot.NintenTools.NSW.Bntx.GFX.ChannelType.Alpha;
+    }
+
+    // --bake-scale s: the model is made s times its size, so the actor can draw it at scale 1.
+    // Tsuru draws Captain Toad-sized models (Cataquack +-115 units, Peepa +-70, Stingby +-60) shrunk
+    // by setScale 0.1-0.17; every Deluxe enemy program they borrow is drawn by the game at scale 1,
+    // and those three rendered black or unlit. Positions, bone translations, inverse bind matrices,
+    // the translation tracks of every skeletal animation and the shape bounds are scaled; rotations
+    // and normals are not touched.
+    static void BakeScale(ResFile res, float s)
+    {
+        foreach (var model in res.Models.Values)
+        {
+            foreach (var vb in model.VertexBuffers)
+            {
+                if (!vb.Attributes.ContainsKey("_p0"))
+                    continue;
+                var a = vb.Attributes["_p0"];
+                var buf = vb.Buffers[a.BufferIndex];
+                var d = buf.Data[0];
+                string fmt = a.Format.ToString();
+                for (int v = 0; v < vb.VertexCount; v++)
+                {
+                    int o = v * buf.Stride + a.Offset;
+                    if (fmt.StartsWith("Format_32_32_32"))
+                        for (int k = 0; k < 3; k++)
+                            BitConverter.GetBytes(BitConverter.ToSingle(d, o + 4 * k) * s).CopyTo(d, o + 4 * k);
+                    else if (fmt.StartsWith("Format_16_16_16_16_Single"))
+                        for (int k = 0; k < 3; k++)
+                            BitConverter.GetBytes((System.Half)((float)BitConverter.ToHalf(d, o + 2 * k) * s)).CopyTo(d, o + 2 * k);
+                    else
+                        throw new NotSupportedException($"{model.Name}: position format {fmt} for --bake-scale");
+                }
+            }
+            foreach (var bone in model.Skeleton.Bones.Values)
+            {
+                bone.Position = new Syroot.Maths.Vector3F(bone.Position.X * s, bone.Position.Y * s, bone.Position.Z * s);
+                if (bone.InverseMatrix is Syroot.Maths.Matrix3x4 inv)
+                    bone.InverseMatrix = ScaleTranslation(inv, s);
+            }
+            if (model.Skeleton.InverseModelMatrices != null)
+                model.Skeleton.InverseModelMatrices = model.Skeleton.InverseModelMatrices.Select(m => ScaleTranslation(m, s)).ToList();
+            foreach (var shape in model.Shapes.Values)
+            {
+                if (shape.SubMeshBoundings != null)
+                    shape.SubMeshBoundings = shape.SubMeshBoundings.Select(b => new Bounding
+                    {
+                        Center = new Syroot.Maths.Vector3F(b.Center.X * s, b.Center.Y * s, b.Center.Z * s),
+                        Extent = new Syroot.Maths.Vector3F(b.Extent.X * s, b.Extent.Y * s, b.Extent.Z * s),
+                    }).ToList();
+                if (shape.RadiusArray != null)
+                    shape.RadiusArray = shape.RadiusArray.Select(r => r * s).ToList();
+                if (shape.BoundingRadiusList != null)
+                    shape.BoundingRadiusList = shape.BoundingRadiusList.Select(r => new Syroot.Maths.Vector4F(r.X * s, r.Y * s, r.Z * s, r.W * s)).ToList();
+            }
+        }
+        int curves = 0;
+        foreach (var anim in res.SkeletalAnims.Values)
+            foreach (var ba in anim.BoneAnims)
+            {
+                var bd = ba.BaseData;
+                bd.Translate = new Syroot.Maths.Vector3F(bd.Translate.X * s, bd.Translate.Y * s, bd.Translate.Z * s);
+                ba.BaseData = bd;
+                foreach (var c in ba.Curves)
+                {
+                    if (c.AnimDataOffset < 0x10 || c.AnimDataOffset > 0x18)
+                        continue;   // translations only (BoneAnimDataOffset.TranslateX..Z)
+                    // value = key * Scale + Offset: float keys are scaled themselves, quantised keys
+                    // through their Scale; the Offset in both cases.
+                    if (c.KeyType == AnimCurveKeyType.Single)
+                    {
+                        for (int i = 0; i < c.Keys.GetLength(0); i++)
+                            for (int j = 0; j < c.Keys.GetLength(1); j++)
+                                c.Keys[i, j] *= s;
+                    }
+                    else
+                        c.Scale *= s;
+                    c.Offset = (float)c.Offset * s;
+                    c.Delta *= s;
+                    curves++;
+                }
+            }
+        Console.WriteLine($"  scale {s} baked in: positions, bones, bind matrices, bounds, {curves} translation curve(s)");
+    }
+
+    // BfresLibrary's ChangePlatform mangles packed 10_10_10_2 normals: on the Wii U they are a
+    // big-endian 32-bit word (x bits 0-9, y 10-19, z 20-29, signed), on the Switch the same word
+    // little-endian, but the converted words no longer decode to unit vectors (Stingby, the Hammer
+    // Suit helmet: lit on one side, flat on the other). The Wii U words are copied over, swapped.
+    // Models are matched by order, vertex buffers by index, and every count must agree.
+    static int RestorePackedNormals(ResFile sw, ResFile wu)
+    {
+        var swModels = sw.Models.Values.ToList();
+        var wuModels = wu.Models.Values.ToList();
+        int fixedBuffers = 0;
+        for (int mi = 0; mi < swModels.Count; mi++)
+        {
+            // By name; else by position when the counts agree; else the Wii U file's only model
+            // (a renamed single model, or a hand-made variant such as tenten_w_walk).
+            var sm = swModels[mi];
+            var wm = wu.Models.ContainsKey(sm.Name) ? wu.Models[sm.Name]
+                   : swModels.Count == wuModels.Count ? wuModels[mi]
+                   : wuModels.Count == 1 ? wuModels[0] : null;
+            if (wm == null)
+            {
+                Console.WriteLine($"  {sm.Name}: no matching Wii U model, skipped");
+                continue;
+            }
+            if (sm.VertexBuffers.Count != wm.VertexBuffers.Count)
+            {
+                Console.WriteLine($"  {sm.Name}: {sm.VertexBuffers.Count} vertex buffers vs Wii U {wm.VertexBuffers.Count}, skipped");
+                continue;
+            }
+            for (int vi = 0; vi < sm.VertexBuffers.Count; vi++)
+            {
+                var svb = sm.VertexBuffers[vi]; var wvb = wm.VertexBuffers[vi];
+                if (!svb.Attributes.ContainsKey("_n0") || !wvb.Attributes.ContainsKey("_n0"))
+                    continue;
+                var sa = svb.Attributes["_n0"]; var wa = wvb.Attributes["_n0"];
+                if (!sa.Format.ToString().StartsWith("Format_10_10_10_2") || !wa.Format.ToString().StartsWith("Format_10_10_10_2"))
+                    continue;
+                if (svb.VertexCount != wvb.VertexCount)
+                {
+                    Console.WriteLine($"  {sm.Name} vbuf {vi}: {svb.VertexCount} vertices vs Wii U {wvb.VertexCount}, skipped");
+                    continue;
+                }
+                var sb = svb.Buffers[sa.BufferIndex]; var wb = wvb.Buffers[wa.BufferIndex];
+                for (int v = 0; v < svb.VertexCount; v++)
+                {
+                    int wo = v * wb.Stride + wa.Offset, so = v * sb.Stride + sa.Offset;
+                    for (int k = 0; k < 4; k++)
+                        sb.Data[0][so + k] = wb.Data[0][wo + 3 - k];
+                }
+                fixedBuffers++;
+            }
+        }
+        Console.WriteLine($"  packed normals restored from the Wii U data in {fixedBuffers} vertex buffer(s)");
+        return fixedBuffers;
+    }
+
+    static Syroot.Maths.Matrix3x4 ScaleTranslation(Syroot.Maths.Matrix3x4 m, float s)
+    {
+        m.M14 *= s; m.M24 *= s; m.M34 *= s;
+        return m;
+    }
 
     static int Main(string[] args)
     {
@@ -38,12 +317,39 @@ static class Program
             Dump(new ResFile(args[1]));
             return 0;
         }
+        if (args.Length == 4 && args[0] == "--fix-normals")
+        {
+            // An already converted Deluxe bfres, its Wii U source, the output.
+            var sw = new ResFile(args[1]);
+            RestorePackedNormals(sw, new ResFile(args[2]));
+            sw.Save(args[3]);
+            return 0;
+        }
+        if (args.Length == 6 && args[0] == "--make-block")
+        {
+            // A retail block_challenge output.bfres, a raw RGBA8 image and its size, the output.
+            var block = new ResFile(args[1]);
+            MakeBlock(block, File.ReadAllBytes(args[2]), uint.Parse(args[3]), uint.Parse(args[4]));
+            FixBlockUVs(block);
+            block.Save(args[5]);
+            return 0;
+        }
+        if (args.Length == 3 && args[0] == "--fix-block-uv")
+        {
+            // A block made by --make-block before its UVs were snapped (its textures kept).
+            var block = new ResFile(args[1]);
+            FixBlockUVs(block);
+            block.Save(args[2]);
+            return 0;
+        }
         var positional = new List<string>();
         var map = new Dictionary<string, string>();
         string modelName = null;
         string dumpBntx = null;
         var compiledSkin = new Dictionary<string, int>();   // shading model -> gsys_weight compiled
         float? patternFrame = null;
+        var dropMaterials = new HashSet<string>();  // --drop-material: shapes drawn with it are removed
+        float? bakeScale = null;
         for (int i = 0; i < args.Length; i++)
         {
             if (args[i] == "--map" && i + 1 < args.Length)
@@ -67,6 +373,12 @@ static class Program
                 var kv = args[++i].Split('=', 2);
                 TexOverride[kv[0]] = kv[1].Split(',');
             }
+            else if (args[i] == "--bake-scale" && i + 1 < args.Length)
+                bakeScale = float.Parse(args[++i], System.Globalization.CultureInfo.InvariantCulture);
+            else if (args[i] == "--template-lightmaps")
+                TemplateLightmaps = true;
+            else if (args[i] == "--drop-material" && i + 1 < args.Length)
+                dropMaterials.Add(args[++i]);
             else
                 positional.Add(args[i]);
         }
@@ -89,6 +401,21 @@ static class Program
             return 1;
         }
         var templateMaterials = template.Models.Values.SelectMany(m => m.Materials.Values).ToList();
+        TemplateRes = template;
+        OutRes = res;
+
+        // A material no Deluxe program can draw (Peepa's translucent nw4f_kakiwari cloud sphere):
+        // its shapes go. Vertex buffers and the material stay, unused.
+        foreach (var model in res.Models.Values)
+        {
+            var mats = model.Materials.Values.ToList();
+            foreach (var shape in model.Shapes.Values.ToList())
+                if (dropMaterials.Contains(mats[shape.MaterialIndex].Name))
+                {
+                    model.Shapes.Remove(shape);
+                    Console.WriteLine($"  shape {model.Name}/{shape.Name} dropped (material {mats[shape.MaterialIndex].Name})");
+                }
+        }
 
         // Smooth-skinning matrices, read before the conversion (ledger F0233). FRES < 3.4 keeps each
         // inverse bind matrix on its bone; Switch keeps them as one list on the skeleton, and
@@ -131,7 +458,9 @@ static class Program
             foreach (var shape in model.Shapes.Values)
             {
                 string sm = materials[shape.MaterialIndex].ShaderAssign.ShadingModelName;
-                if (compiledSkin.TryGetValue(sm, out int want) && shape.VertexSkinCount != want)
+                // Also at an equal count: the indices are rewritten in Nintendo's layout (8-bit _i0,
+                // no _w0 for one weight); a Wii U nw4f model keeps 32-bit indices and a spare _w0.
+                if (compiledSkin.TryGetValue(sm, out int want) && (shape.VertexSkinCount != want || want >= 1))
                     FitSkin(model, shape, want, sm);
             }
 
@@ -161,6 +490,13 @@ static class Program
 
         if (patternFrame is float frame)
             FreezePatterns(res, frame);
+
+        RestorePackedNormals(res, new ResFile(positional[0]));
+
+        if (bakeScale is float scale)
+            BakeScale(res, scale);
+
+        WriteImportedTextures(res);
 
         if (dumpBntx != null && res.ExternalFiles.ContainsKey("textures.bntx"))
             File.WriteAllBytes(dumpBntx, res.ExternalFiles["textures.bntx"].Data);
@@ -263,17 +599,47 @@ static class Program
         var vb = model.VertexBuffers[shape.VertexBufferIndex];
         int have = shape.VertexSkinCount;
         int count = (int)vb.VertexCount;
-        if (model.Shapes.Values.Count(s => s.VertexBufferIndex == shape.VertexBufferIndex) > 1)
+        bool shared = model.Shapes.Values.Count(s => s.VertexBufferIndex == shape.VertexBufferIndex) > 1;
+        if (shared && have == want)
+            return;
+        if (shared)
             throw new InvalidDataException($"{shape.Name}: vertex buffer shared by several shapes; cannot refit its skinning");
 
         uint[,] idx = new uint[count, Math.Max(want, 1)];
         float[,] wt = new float[count, Math.Max(want, 1)];
-        if (have == 0 && want == 1)
+        if (have == 0 && want >= 1)
         {
+            // Every vertex follows the shape's bone; extra influences (want > 1) repeat it at
+            // weight 0, so they add nothing to the blend.
             var bone = model.Skeleton.Bones.Values.ElementAt(shape.BoneIndex);
             if (bone.RigidMatrixIndex < 0)
-                throw new InvalidDataException($"{shape.Name}: bone {bone.Name} has no rigid matrix to index");
-            for (int v = 0; v < count; v++) { idx[v, 0] = (uint)bone.RigidMatrixIndex; wt[v, 0] = 1; }
+            {
+                // A bone only skin-0 shapes hang from has no palette entry: give it a rigid one at
+                // the end of the matrix palette (BfresLibrary saves the rigid count as palette
+                // length - inverse bind matrices).
+                var palette = model.Skeleton.MatrixToBoneList as List<ushort> ?? new List<ushort>(model.Skeleton.MatrixToBoneList);
+                model.Skeleton.MatrixToBoneList = palette;
+                palette.Add((ushort)shape.BoneIndex);
+                bone.RigidMatrixIndex = (short)(palette.Count - 1);
+                Console.WriteLine($"  bone {bone.Name}: rigid matrix {bone.RigidMatrixIndex} added for {shape.Name}");
+            }
+            for (int v = 0; v < count; v++)
+                for (int k = 0; k < want; k++) { idx[v, k] = (uint)bone.RigidMatrixIndex; wt[v, k] = k == 0 ? 1 : 0; }
+        }
+        else if (have >= 1 && want >= have)
+        {
+            // Fewer influences than the program reads: keep them all and pad with copies of the
+            // first index at weight 0. The program sums weight * palette[index] * position, so a
+            // zero-weight influence leaves the vertex exactly where it was, in whatever space
+            // (bone-local for rigid, model for smooth) its palette entry expects.
+            var srcIdx = ReadComponents(vb, "_i0", count, have);
+            float[,] srcW = have > 1 && vb.Attributes.ContainsKey("_w0") ? ReadComponentsF(vb, "_w0", count, have) : null;
+            for (int v = 0; v < count; v++)
+                for (int k = 0; k < want; k++)
+                {
+                    idx[v, k] = k < have ? srcIdx[v, k] : srcIdx[v, 0];
+                    wt[v, k] = k < have ? (srcW == null ? 1f : srcW[v, k]) : 0f;
+                }
         }
         else if (have > want && want >= 1)
         {
@@ -303,6 +669,8 @@ static class Program
             RemoveAttribute(vb, n);
         uint maxIdx = 0;
         foreach (var x in idx) maxIdx = Math.Max(maxIdx, x);
+        if (maxIdx >= model.Skeleton.MatrixToBoneList.Count)
+            throw new InvalidDataException($"{shape.Name}: matrix index {maxIdx} is past the palette ({model.Skeleton.MatrixToBoneList.Count} entries)");
         if (maxIdx > 255)
             throw new InvalidDataException($"{shape.Name}: matrix index {maxIdx} does not fit 8 bits");
         var idxBytes = new byte[count * want];
@@ -444,6 +812,17 @@ static class Program
         return bits / 8;
     }
 
+    static string FormatValue(object v)
+    {
+        if (v != null && v.GetType().Namespace == "BfresLibrary" && !v.GetType().IsEnum)
+            return "{" + string.Join(" ", v.GetType().GetFields().Select(f => $"{f.Name}={f.GetValue(v)}")
+                .Concat(v.GetType().GetProperties().Where(p => p.GetIndexParameters().Length == 0)
+                .Select(p => $"{p.Name}={p.GetValue(v)}"))) + "}";
+        if (v is System.Collections.IEnumerable e && v is not string)
+            return "[" + string.Join(", ", e.Cast<object>().Select(x => Convert.ToString(x, System.Globalization.CultureInfo.InvariantCulture))) + "]";
+        return Convert.ToString(v, System.Globalization.CultureInfo.InvariantCulture);
+    }
+
     static Material PickTemplate(string name, Dictionary<string, string> map, List<Material> templates, bool quiet = false)
     {
         string want = map.TryGetValue(name, out var m) ? m : name;
@@ -500,6 +879,18 @@ static class Program
                 tex = tplIdx < tpl.TextureRefs.Count ? tpl.TextureRefs[tplIdx].Name : null;
                 Console.WriteLine($"  {mat.Name}: shader sampler {shaderVar} unassigned, using template texture '{tex}'");
             }
+            {
+                int tplIdx = tplSamplers.IndexOf(tplSampler);
+                string tplTex = tplIdx < tpl.TextureRefs.Count ? tpl.TextureRefs[tplIdx].Name : null;
+                bool lightmap = TemplateLightmaps && tplTex != null && tplTex.StartsWith("lm_");
+                if (lightmap && tex != tplTex)
+                {
+                    Console.WriteLine($"  {mat.Name}: {tplSampler} <- '{tplTex}' (template lightmap, was '{tex}')");
+                    tex = tplTex;
+                }
+                if (tex != null)
+                    ImportTexture(tex, textureNames, replace: lightmap);
+            }
             if (tex == null || !textureNames.Contains(tex))
             {
                 Console.Error.WriteLine($"  {mat.Name}: texture '{tex}' for {shaderVar} is not in the model");
@@ -526,7 +917,12 @@ static class Program
         };
 
         // Parameters: the template's set (its uniform block layout), with the Wii U value wherever
-        // the same parameter of the same type exists in the source material.
+        // the same parameter of the same type exists in the source material -- except the ones
+        // that belong to the Deluxe program's scene setup, not to the look of the material:
+        //   fog_index picks the scene fog slot the program blends into. Every Deluxe enemy uses 0
+        //   (map objects 1). nw4f materials (Captain Toad / 3D World exports) carry 1, and bound
+        //   to an enemy program the Cataquack and Peepa drew solid black. Nintendo's own conversion
+        //   of one such model (mokinger, crasher_mat_crasher) set it to the program's 0.
         var source = mat.ShaderParams;
         var parameters = new ResDict<ShaderParam>();
         int kept = 0;
@@ -538,10 +934,13 @@ static class Program
                 DependedIndex = p.DependedIndex, DependIndex = p.DependIndex,
                 DataValue = p.DataValue,
             };
-            if (source.ContainsKey(p.Name) && source[p.Name].Type == p.Type && source[p.Name].DataValue != null)
+            if (!TemplateOnlyParams.Contains(p.Name) &&
+                source.ContainsKey(p.Name) && source[p.Name].Type == p.Type && source[p.Name].DataValue != null)
             {
                 copy.DataValue = source[p.Name].DataValue;
                 kept++;
+                Console.WriteLine($"  {mat.Name}: parameter {p.Name} ({p.Type}) = {FormatValue(source[p.Name].DataValue)} " +
+                                  $"from the Wii U material (template: {FormatValue(p.DataValue)})");
             }
             parameters.Add(p.Name, copy);
         }
@@ -566,6 +965,19 @@ static class Program
     static void Dump(ResFile res)
     {
         Console.WriteLine($"FRES switch={res.IsPlatformSwitch} v{res.VersionMajor}.{res.VersionMinor}.{res.VersionMinor2} align={res.Alignment}");
+        if (Environment.GetEnvironmentVariable("WIIU2DX_DUMP_PARAMS") == "1")
+            foreach (var t in res.Textures.Values)
+            {
+                if (t is BfresLibrary.Switch.SwitchTexture st)
+                {
+                    var x = st.Texture;
+                    Console.WriteLine($"texture {x.Name}: {x.Width}x{x.Height} fmt={x.Format} mips={x.MipCount} " +
+                                      $"channels={x.ChannelRed},{x.ChannelGreen},{x.ChannelBlue},{x.ChannelAlpha} dim={x.Dim} tile={x.TileMode}");
+                }
+                else if (t is BfresLibrary.WiiU.Texture wt)
+                    Console.WriteLine($"texture {wt.Name}: {wt.Width}x{wt.Height} fmt={wt.Format} mips={wt.MipCount} " +
+                                      $"compsel={wt.CompSelR},{wt.CompSelG},{wt.CompSelB},{wt.CompSelA}");
+            }
         foreach (var m in res.Models.Values)
         {
             var sk = m.Skeleton;
@@ -573,7 +985,10 @@ static class Program
                               $"mtx2bone=[{string.Join(",", sk.MatrixToBoneList ?? new List<ushort>())}] " +
                               $"invmtx={sk.InverseModelMatrices?.Count ?? 0}");
             foreach (var b in sk.Bones.Values)
-                Console.WriteLine($"  bone {b.Name} parent={b.ParentIndex} smooth={b.SmoothMatrixIndex} rigid={b.RigidMatrixIndex} bb={b.BillboardIndex}");
+                Console.WriteLine($"  bone {b.Name} parent={b.ParentIndex} smooth={b.SmoothMatrixIndex} rigid={b.RigidMatrixIndex} bb={b.BillboardIndex}" +
+                                  (Environment.GetEnvironmentVariable("WIIU2DX_DUMP_PARAMS") == "1"
+                                      ? $" S=({b.Scale.X:0.####},{b.Scale.Y:0.####},{b.Scale.Z:0.####}) R=({b.Rotation.X:0.###},{b.Rotation.Y:0.###},{b.Rotation.Z:0.###},{b.Rotation.W:0.###}) T=({b.Position.X:0.##},{b.Position.Y:0.##},{b.Position.Z:0.##}) flags={b.Flags} rot={b.FlagsRotation}"
+                                      : ""));
             int vi = 0;
             foreach (var vb in m.VertexBuffers)
             {
@@ -581,6 +996,53 @@ static class Program
                 foreach (var a in vb.Attributes.Values)
                 {
                     Console.WriteLine($"    attr {a.Name} buf={a.BufferIndex} off={a.Offset} fmt={a.Format}");
+                    if (Environment.GetEnvironmentVariable("WIIU2DX_DUMP_PARAMS") == "1" && a.Format.ToString().StartsWith("Format_10_10_10_2"))
+                    {
+                        // Packed normals: x bits 0-9, y 10-19, z 20-29 (signed). Unit length when right.
+                        var buf = vb.Buffers[a.BufferIndex];
+                        var d = buf.Data[0];
+                        double lo = double.MaxValue, hi = 0; int bad = 0;
+                        var sumX = 0.0;
+                        for (int v = 0; v < vb.VertexCount; v++)
+                        {
+                            var bytes = d.Skip(v * buf.Stride + a.Offset).Take(4).ToArray();
+                            if (!res.IsPlatformSwitch) Array.Reverse(bytes);
+                            uint w = BitConverter.ToUInt32(bytes, 0);
+                            double c(int sh) { int x = (int)((w >> sh) & 0x3FF); if (x >= 512) x -= 1024; return x / 511.0; }
+                            double nx = c(0), ny = c(10), nz = c(20);
+                            double len = Math.Sqrt(nx * nx + ny * ny + nz * nz);
+                            lo = Math.Min(lo, len); hi = Math.Max(hi, len); sumX += nx;
+                            if (Math.Abs(len - 1) > 0.05) bad++;
+                        }
+                        Console.WriteLine($"      packed normal length [{lo:0.###},{hi:0.###}], {bad}/{vb.VertexCount} not unit, mean x {sumX / Math.Max(1, vb.VertexCount):0.###}");
+                    }
+                    if (Environment.GetEnvironmentVariable("WIIU2DX_DUMP_PARAMS") == "1" && a.Format.ToString().EndsWith("_Single"))
+                    {
+                        // Value ranges per component, and vector lengths: normals must be unit length.
+                        var buf = vb.Buffers[a.BufferIndex];
+                        int comps = a.Format.ToString().Split('_').Count(p => p == "32");
+                        var lo = Enumerable.Repeat(float.MaxValue, comps).ToArray();
+                        var hi = Enumerable.Repeat(float.MinValue, comps).ToArray();
+                        double lenMin = double.MaxValue, lenMax = 0;
+                        var data = buf.Data[0];
+                        bool big = !res.IsPlatformSwitch;
+                        for (int v = 0; v < vb.VertexCount; v++)
+                        {
+                            double len = 0;
+                            for (int k = 0; k < comps; k++)
+                            {
+                                int off = v * buf.Stride + a.Offset + 4 * k;
+                                var bytes = data.Skip(off).Take(4).ToArray();
+                                if (big) Array.Reverse(bytes);
+                                float f = BitConverter.ToSingle(bytes, 0);
+                                lo[k] = Math.Min(lo[k], f); hi[k] = Math.Max(hi[k], f);
+                                len += f * f;
+                            }
+                            len = Math.Sqrt(len);
+                            lenMin = Math.Min(lenMin, len); lenMax = Math.Max(lenMax, len);
+                        }
+                        Console.WriteLine($"      range {string.Join(" ", lo.Zip(hi, (l, h) => $"[{l:0.###},{h:0.###}]"))} length [{lenMin:0.###},{lenMax:0.###}]");
+                    }
                     if (a.Name == "_c0" && a.Format.ToString().StartsWith("Format_32_32_32_32_Single"))
                     {
                         // Distinct colours, so a material's vertex colouring can be judged.
@@ -614,13 +1076,43 @@ static class Program
                                       $"sub=[{string.Join(",", me.SubMeshes.Select(x => $"{x.Offset}+{x.Count}"))}]");
             }
             foreach (var mat in m.Materials.Values)
+            {
                 Console.WriteLine($"  material {mat.Name}: {mat.ShaderAssign.ShadingModelName} tex=[{string.Join(",", mat.TextureRefs.Select(t => t.Name))}] " +
                                   $"samplers=[{string.Join(",", mat.Samplers.Keys)}] assign=[{string.Join(",", mat.ShaderAssign.SamplerAssigns.Keys.Select(k => k + "->" + mat.ShaderAssign.SamplerAssigns[k].String))}] params={mat.ShaderParams.Count}");
+                if (Environment.GetEnvironmentVariable("WIIU2DX_DUMP_PARAMS") == "1")
+                {
+                    foreach (var p in mat.ShaderParams.Values)
+                        Console.WriteLine($"    param {p.Name} ({p.Type}) = {FormatValue(p.DataValue)}");
+                    if (mat.RenderInfos != null)
+                        foreach (var r in mat.RenderInfos.Values)
+                            Console.WriteLine($"    renderinfo {r.Name} = {FormatValue(r.Data)}");
+                    foreach (var o in mat.ShaderAssign.ShaderOptions.Keys)
+                        Console.WriteLine($"    option {o} = {mat.ShaderAssign.ShaderOptions[o].String}");
+                }
+            }
         }
         foreach (var s in res.SkeletalAnims.Values)
         {
             Console.WriteLine($"sklanim {s.Name}: frames={s.FrameCount} flags={s.FlagsAnimSettings} scale={s.FlagsScale} rot={s.FlagsRotate} " +
                               $"bakedsize={s.BakedSize} bones=[{string.Join(",", s.BoneAnims.Select(b => $"{b.Name}:curves{b.Curves.Count}"))}]");
+            if (Environment.GetEnvironmentVariable("WIIU2DX_DUMP_PARAMS") == "1")
+                foreach (var b in s.BoneAnims)
+                {
+                    var d = b.BaseData;
+                    var scaleCurves = b.Curves.Where(c => c.AnimDataOffset >= 0x4 && c.AnimDataOffset <= 0xC).ToList();
+                    string range = string.Join(" ", scaleCurves.Select(c =>
+                    {
+                        float lo = float.MaxValue, hi = float.MinValue;
+                        for (int i = 0; i < c.Keys.GetLength(0); i++)
+                        {
+                            float val = c.Keys[i, 0] * c.Scale + (float)c.Offset;
+                            lo = Math.Min(lo, val); hi = Math.Max(hi, val);
+                        }
+                        return $"0x{c.AnimDataOffset:x}:[{lo:0.###},{hi:0.###}]";
+                    }));
+                    Console.WriteLine($"    {b.Name}: flags={b.FlagsBase} baseS=({d.Scale.X:0.###},{d.Scale.Y:0.###},{d.Scale.Z:0.###}) " +
+                                      $"baseT=({d.Translate.X:0.##},{d.Translate.Y:0.##},{d.Translate.Z:0.##}) scale curves {range}");
+                }
         }
         var anims = res.TexPatternAnims.Values;   // the Switch loader splits its material anims into these too
         foreach (var a in anims)

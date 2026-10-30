@@ -1,0 +1,162 @@
+# Players, Mii and player models
+#
+# Addresses are RVAs (VA - 0x60000000). New Super Mario Bros. U Deluxe (Switch) v1.0.0 only.
+# Each group's tag says where its names are declared: [codedx] in the codedx headers
+# under include/, otherwise the header(s) holding the generated declarations. Names
+# tagged [framework/mods] on an entry are the ones a framework part or mod needs.
+# Constructors and destructors carry their C1/C2/D0/D1/D2 variant.
+
+# Player  [modbase/game/player/player.h]
+# [hammer_suit; not in the generated game API] createFireBall calls it as (player, "SE_PLY_THROW_FIRE", 0, 0) before spawning.
+Player::playSound(char const*, int, int) = 0x007734E8;
+
+# Player  [modbase/game/player/player.h]
+Player::applyPowerUpTransform(int, int, void*) = 0x00475288;
+Player::createEffectsAndState() = 0x001DBB64;
+Player::ctor_helper(int) = 0x003E49B0;
+Player::ctor_helper_3E568C(int) = 0x003E568C;
+Player::vf90() = 0x00760754;
+Player::vfE8() = 0x00763CF8;
+Player::vfC8() = 0x007647C0;
+Player::vfCC() = 0x00764A94;
+Player::vfD8(int, int) = 0x0076611C;
+Player::vfDC() = 0x00766160;
+Player::changeState(void*, int) = 0x00773DC0;
+Player::ctor_helper_77B890(int) = 0x0077B890;
+Player::animSet_load() = 0x00782DB0;
+Player::ctor_helper_786018() = 0x00786018;
+Player::getActorSlotChecked(unsigned int) = 0x00788DFC;
+Player::animSetMetamorphose_load() = 0x0078BA10;
+Player::setupModelNodes_78E270() = 0x0078E270;
+Player::animSetCarry_load(int, int, int, int, int) = 0x0078F32C;
+Player::registerRideAnimations(int, int, int) = 0x007915D4;
+Player::ReleaseCarryableEnemy_helper() = 0x007945E0;
+Player::ReleaseCarryableEnemy_helper_794678() = 0x00794678;
+Player::create() = 0x00794EA4;
+Player::Player(void*) as C1 = 0x00794EC0;
+Player::Player(void*) as C2 = 0x00794EC0;
+Player::vf14() = 0x0079569C;
+Player::vf3C() = 0x007957E0;
+Player::vf2C() = 0x00795814;
+Player::vf30() = 0x0079585C;
+Player::vf1C() = 0x007958A0;
+Player::vf24(int) = 0x007958F0;
+Player::modeToGroupIndex(int) = 0x00796A60;
+Player::vf88() = 0x00796AB0;
+Player::vfA0(int) = 0x007976B0;
+Player::vfA8() = 0x007977EC;
+Player::vf44() = 0x0079781C;
+Player::vfEC() = 0x00797890;
+Player::vf0(void*) = 0x007979D4;
+Player::vf62(int) = 0x00799200;
+Player::vfFC() = 0x00799358;
+Player::vfAC() = 0x00799A38;
+Player::vfB4() = 0x0079A7D4;
+Player::vfBC() = 0x0079ADB4;
+Player::setupWristNodes_79D5A0(void*) = 0x0079D5A0;
+Player::ReleaseCarryableEnemy(int) = 0x0079E960;
+Player::vf58() = 0x0079F0A4;
+Player::vf5C(int) = 0x0079F110;
+Player::vf54(int) = 0x0079F1B8;
+Player::vfD0() = 0x0079F224;
+Player::poisonDownUpdate(int, int) = 0x007A0E98;
+Player::stun(int) = 0x007A1F5C;
+Player::beginState_Stunned() = 0x007A205C;
+Player::endState_Stunned() = 0x007A20E0;
+Player::executeState_Stunned() = 0x007A214C;
+Player::playDownSound_7A6B18() = 0x007A6B18;
+Player::playDownSound_7A72DC() = 0x007A72DC;
+Player::playDownSound_7A75EC() = 0x007A75EC;
+Player::playDoubleJumpSound(int) = 0x007AF67C;
+Player::vf84() = 0x007B3698;
+Player::vf98() = 0x007B6C38;
+Player::setupRingNode_7B6D90() = 0x007B6D90;
+Player::setupWristNodes_7B7140(void*) = 0x007B7140;
+
+# PlayerAnimStateTable  [modbase/game/player/player.h]
+PlayerAnimStateTable::init() = 0x0077BFAC;
+
+# PlayerBase  [modbase/game/player/player.h]
+PlayerBase::ctor_helper() = 0x001542DC;
+PlayerBase::ctor_helper_7501D0() = 0x007501D0;
+PlayerBase::PlayerBase(void*) as C1 = 0x0075DEFC;
+PlayerBase::PlayerBase(void*) as C2 = 0x0075DEFC;
+PlayerBase::vf2() = 0x0075E5C0;
+PlayerBase::vf3() = 0x0075E75C;
+PlayerBase::vf5() = 0x0075E76C;
+PlayerBase::vf7() = 0x0075E8F8;
+PlayerBase::vf8() = 0x0075EA1C;
+PlayerBase::vf9(int) = 0x0075EAFC;
+PlayerBase::vf11() = 0x0075ED80;
+PlayerBase::vf32() = 0x007600A4;
+PlayerBase::vf0(void*) = 0x00760564;
+PlayerBase::vf1() = 0x007606D8;
+PlayerBase::vf20() = 0x0076074C;
+PlayerBase::ctor_helper_76DE28(void*) = 0x0076DE28;
+PlayerBase::ctor_helper_7862A4() = 0x007862A4;
+PlayerBase::dispatchVirtual3(int, float) = 0x007948E8;
+
+# PlayerFireball  [modbase/game/player/player.h]
+PlayerFireball::PlayerFireball() as C1 = 0x0013A7A4;
+PlayerFireball::PlayerFireball() as C2 = 0x0013A7A4;
+
+# PlayerLookTarget  [modbase/game/player/player.h]
+PlayerLookTarget::PlayerLookTarget(int) as C1 = 0x0000B258;
+PlayerLookTarget::PlayerLookTarget(int) as C2 = 0x0000B258;
+PlayerLookTarget::vf0() = 0x0000B29C;
+PlayerLookTarget::vf1() = 0x0000B2E4;
+
+# PlayerLookTargetList  [modbase/game/player/player.h]
+PlayerLookTargetList::add(int) = 0x0000B4D4;
+
+# PlayerLookTargetMgr  [modbase/game/player/player.h]
+PlayerLookTargetMgr::remove(int) = 0x0000B4FC;
+
+# PlayerMgr  [modbase/game/player/player.h]
+# [code/framework] PlayerMgr* PlayerMgr::instance; players at +0x30, 4 entries (ledger F0020).
+PlayerMgr::instance = 0x00CC436C;
+
+# PlayerMgr  [modbase/game/player/player.h]
+PlayerMgr::hasPlayer(unsigned int) = 0x00789D20;
+
+# [code/framework] The per-player projectile counts every throw check reads
+# (0x607AA954, 0x607AAA00, 0x607AAF80): a pointer to a block with player n's
+# fireballs at +0x68 + 8 * n and its iceballs at +0x88 + 8 * n (code/framework/throws.cpp).
+ModBase::throws::projectileCounts = 0x00C7B420;
+
+# PlayerModel  [modbase/game/player/player.h]
+# [code/framework] PlayerModel::setPlayerMode(model, mode): non-virtual, every model class; body
+# from the mode table 0x60B0C230, honours a forced mode at model+0x1DC (F0226).
+PlayerModel::setPlayerMode(unsigned int) = 0x0078E608;
+
+# PlayerState  [modbase/game/player/player.h]
+# [shell_suit] Player state: the Penguin Suit belly slide (StateID; chosen by 0x607B8CB0 when mode == 5).
+Player::StateID_PenguinSlide = 0x00CC4F8C;
+# [shell_suit] Wii U PlayerBase::StateID_Crouch and StateID_HipAttack (the ground
+# pound): the Player state initializer 0x607B3920 builds the gameplay states in
+# the Wii U order, 0x24 apart, with ids None + 5 (Crouch, at 0x607B3A60) and
+# None + 9 (HipAttack, 0x607B3B50); 0x607B8CB0 picks Slip (None + 7) unless
+# mode 5, after asking whether the current state's root is HipAttack.
+Player::StateID_Crouch = 0x00CC4C4C;
+Player::StateID_HipAttack = 0x00CC4CDC;
+
+# PlayerStates  [modbase/game/player/player.h]
+PlayerStates::loadModelResources_helper(signed char) = 0x0028FDA0;
+PlayerStates::loadModelResources_helper_28FE94() = 0x0028FE94;
+PlayerStates::updateModelAndAnims_helper(int) = 0x00290228;
+PlayerStates::updateModelAndAnims_helper_40C134(int) = 0x0040C134;
+PlayerStates::updateModelAndAnims_helper_40E87C() = 0x0040E87C;
+PlayerStates::loadModelResources_helper_4210B8(void*) = 0x004210B8;
+PlayerStates::loadModelResources_helper_43B8B0(int, int, int, void*, void*) = 0x0043B8B0;
+PlayerStates::vf2(void*) = 0x007DFA5C;
+PlayerStates::loadModelResources() = 0x007E55DC;
+PlayerStates::updateModelAndAnims() = 0x007E8220;
+PlayerStates::updateModelAndAnims_helper_7EA13C() = 0x007EA13C;
+PlayerStates::updateModelAndAnims_helper_7EA278(int, void*, void*) = 0x007EA278;
+PlayerStates::loadModelResources_helper_872A2C() = 0x00872A2C;
+PlayerStates::loadModelResources_helper_872AC4(void*, int, unsigned int) = 0x00872AC4;
+
+# UserInfo  [modbase/game/player/player.h]
+UserInfo::createInstance() = 0x0082C9F0;
+UserInfo::init() = 0x0082CA70;
+UserInfo::getUid(void*) = 0x0082CAD4;

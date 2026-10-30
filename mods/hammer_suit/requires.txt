@@ -1,7 +1,0 @@
-# framework components this mod needs (framework/<name>/)
-core
-resources
-items
-game
-player
-actors

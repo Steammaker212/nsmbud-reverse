@@ -1,3 +1,0 @@
-# New profiles this mod adds. <ProfileId name>   <sprite id>
-# 734 Hammer Flower, 735 Bee, 736 P-Acorn.
-ShyGuy               737

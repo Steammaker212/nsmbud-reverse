@@ -1,0 +1,9 @@
+# Random Yoshi colours (code/tweaks/yoshi_colors.cpp)
+#
+# Addresses are RVAs (VA - 0x60000000). New Super Mario Bros. U Deluxe (Switch) v1.0.0 only.
+
+# YoshiModel's texture archives: 4 sead::SafeStrings (vtable, cstr), filled by 0x607D4748
+ModBase::yoshiColors::texTable = 0x00CC5468;
+
+# Builds the Yoshi model holder with a colour (calls the YoshiModel ctor 0x607D4818)
+ModBase::yoshiColors::makeModel(void*, unsigned int) = 0x007D6354;

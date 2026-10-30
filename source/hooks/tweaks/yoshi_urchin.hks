@@ -1,0 +1,8 @@
+@ Yoshi bounces on Urchins (code/tweaks/yoshi_urchin.cpp). Enemy::collisionYoshi's entry is
+@ `ldr r3, [r2, #0x88]` (not PC-relative), so the trampoline can replay it.
+
+YoshiUrchin_collisionYoshi:
+    type:       hook
+    address:    0x002A2D78
+    symbol:     ModBase::urchin::collisionYoshi(Enemy*, ActiveCollider*, ActiveCollider*)
+    trampoline: ModBase::urchin::collisionYoshi_orig(Enemy*, ActiveCollider*, ActiveCollider*)

@@ -1,3 +1,0 @@
-# framework components the Tsuru porting kit needs
-core
-resources

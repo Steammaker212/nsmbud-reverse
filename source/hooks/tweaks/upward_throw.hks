@@ -1,0 +1,8 @@
+@ Upward throw (code/tweaks/upward_throw.cpp). FireballBase_onCreate's entry is
+@ `push {r4-r6, lr}`, so the trampoline can replay it.
+
+UpwardThrow_onCreate:
+    type:       hook
+    address:    0x00135BD8
+    symbol:     ModBase::upwardThrow::onCreate(StageActor*)
+    trampoline: ModBase::upwardThrow::onCreate_orig(StageActor*)

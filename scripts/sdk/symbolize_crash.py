@@ -12,7 +12,7 @@ inventory); each subsdk0 offset resolves to the mod symbol it lands in (hook
 destinations sweet-dx logged for the build).
 
 Usage:
-    python scripts/sdk/symbolize_crash.py <report or Ryujinx .log> [--build-log mods/<mod>/build/build.log]
+    python scripts/sdk/symbolize_crash.py <report or Ryujinx .log> [--build-log .projectignore/debug.log]
 """
 from __future__ import annotations
 
@@ -45,7 +45,7 @@ MODULE_BASE = 0xCD1000  # where sweet-dx places subsdk0, relative to main
 
 def load_main(repo: Path):
     rows = []
-    for r in csv.DictReader(open(repo / "data/loader/symbols.csv", encoding="utf-8")):
+    for r in csv.DictReader(open(repo / "reverse-engineering/FindingsC/symbols.csv", encoding="utf-8")):
         if r["kind"] == "function":
             rows.append((int(r["rva"], 16), int(r["size"] or 0), r["symbol"]))
     rows.sort()

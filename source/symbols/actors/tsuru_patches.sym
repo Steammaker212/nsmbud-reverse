@@ -1,0 +1,6 @@
+# Tsuru's patches to retail actors (code/tweaks/yoshi_urchin.cpp, ...)
+#
+# Addresses are RVAs (VA - 0x60000000). New Super Mario Bros. U Deluxe (Switch) v1.0.0 only.
+
+# The Urchin's vtable (Urchin and big Urchin, build 0x603C72A0)  [code/tweaks/yoshi_urchin.cpp]
+ModBase::urchin::vtable = 0x00BF70EC;

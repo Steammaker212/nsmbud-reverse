@@ -1,2 +1,0 @@
-# framework components this mod needs (framework/<name>/)
-worldmap

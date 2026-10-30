@@ -1,7 +1,0 @@
-@ Diagnostic: the hammer suit's createFireBall hook, forwarding unchanged.
-
-HammerSuit_createFireBall:
-    type:       hook
-    address:    0x007AABA0
-    symbol:     HammerSuit_createFireBall
-    trampoline: HammerSuit_createFireBall_orig

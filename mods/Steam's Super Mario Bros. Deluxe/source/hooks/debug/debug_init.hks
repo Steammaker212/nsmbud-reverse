@@ -1,4 +1,0 @@
-misc_init:
-    type:    call
-    address: 0x00562998
-    symbol:  misc_init

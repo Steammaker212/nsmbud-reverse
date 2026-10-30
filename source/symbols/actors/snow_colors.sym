@@ -1,0 +1,6 @@
+# Snow Effect colours (code/tweaks/snow_colors.cpp)
+#
+# Addresses are RVAs (VA - 0x60000000). New Super Mario Bros. U Deluxe (Switch) v1.0.0 only.
+
+# Static colour block every snow actor's update reads (set by 0x606A4404): +1..3 flake BGR, +4..7 glow ABGR
+ModBase::snowColors::colours = 0x00CB9AA0;

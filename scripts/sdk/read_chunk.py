@@ -35,7 +35,7 @@ def main() -> None:
 
     elf = Elf(args.elf)
     syms = sorted((int(r["va"], 16), r["symbol"]) for r in csv.DictReader(
-        open(Path(args.repo) / "data/loader/symbols.csv", encoding="utf-8")) if r["kind"] == "function")
+        open(Path(args.repo) / "reverse-engineering/FindingsC/symbols.csv", encoding="utf-8")) if r["kind"] == "function")
     starts = [s for s, _ in syms]
 
     def name(va):

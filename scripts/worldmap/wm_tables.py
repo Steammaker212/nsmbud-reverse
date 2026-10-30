@@ -1,12 +1,12 @@
-"""Extract the world-map tables from the retail main NSO (v1.0.0) into data/worldmap.
+"""Extract the world-map tables from the retail main NSO (v1.0.0) into reverse-engineering/FindingsG.
 
     python scripts/worldmap/wm_tables.py --nso <retail main>
 
 Writes, all read straight from the binary (ledger F0237-F0246):
 
-  data/worldmap/event_sequences.csv   the 120 scripted map events ("scenes"):
+  reverse-engineering/FindingsG/event_sequences.csv   the 120 scripted map events ("scenes"):
                                       priority and step list (table 0x60BD5514)
-  data/worldmap/map_enemies.csv       per world: map-enemy slots, their start
+  reverse-engineering/FindingsG/map_enemies.csv       per world: map-enemy slots, their start
                                       flag and the fight-course rotation
 
 The NSO is your own dump and is never committed.
@@ -50,7 +50,7 @@ FLAGS_B = ("W1PakkunA,W1PakkunB,W1Item,W2Enemy0,W2Enemy1,W2EnemyA,W2EnemyB,W2Ene
 def main() -> int:
     ap = argparse.ArgumentParser(description=__doc__, formatter_class=argparse.RawDescriptionHelpFormatter)
     ap.add_argument("--nso", required=True, type=Path)
-    ap.add_argument("--out", type=Path, default=REPO / "data" / "worldmap")
+    ap.add_argument("--out", type=Path, default=REPO / "reverse-engineering" / "FindingsG")
     a = ap.parse_args()
     img = nso_dynsym.load_image(a.nso)
     u32 = lambda va: struct.unpack_from("<I", img, va - BASE)[0]

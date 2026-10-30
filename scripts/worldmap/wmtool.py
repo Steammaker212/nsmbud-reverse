@@ -4,7 +4,7 @@ A world map is romfs/Model/CS_W<n>[a|b].Nin_NX_NVN.szs, holding
 pointW<n>[a|b].csv, routeW<n>[a|b].csv and output.bfres (the map model; every
 point is a bone of the CS_W<n> skeleton, at the bone's position). Every rule
 `check` applies is a limit or behaviour read from the game (ledger F0064-F0075,
-readable/course_select/WorldMapData.cpp).
+reverse-engineering/FindingsA/course_select/WorldMapData.cpp).
 
     python scripts/worldmap/wmtool.py dump  CS_W1.Nin_NX_NVN.szs -o work/W1
     python scripts/worldmap/wmtool.py check work/W1 --courses <romfs>/Course

@@ -1,3 +1,0 @@
-# New profiles this mod adds, appended after codedx's custom profiles.
-# <ProfileId name>   <sprite id>
-HammerFlower         734

@@ -4,13 +4,13 @@
 framework for the Wii U NSMBU. Its actors port to Deluxe with three tools from
 this repo:
 
-- `framework/tsuru` (`nsmbudx/tsuru.h`): the porting kit, for the calls Deluxe
+- `source/include/modbase/tsuru.h`: the porting kit, for the calls Deluxe
   makes differently.
 - codedx's headers: the same classes as Tsuru's, mostly under other names
   (table below).
 - `tools/wiiu2dx`: the actor's Wii U model, converted to Deluxe.
 
-The reference port is [`mods/cold_fuzzy`](../mods/cold_fuzzy/code/cold_fuzzy.cpp).
+The reference port is [`source/code/sprites/cold_fuzzy.cpp`](../source/code/sprites/cold_fuzzy.cpp).
 Put it side by side with Tsuru's `src/actors/coldfuzzy.cpp`: every kind of
 change a port makes is in there. Who ports what is in the shared plan doc.
 
@@ -18,25 +18,29 @@ change a port makes is in there. Who ports what is in the shared plan doc.
 
 1. **Model.** Convert the actor's archive with the Deluxe actor it resembles
    as the template (same skeleton and animations if possible), and record the
-   command in your mod README:
-   `py -3 scripts/models/wiiu2dx.py --wiiu <Common/actor/x.szs> --template <deluxe actor> --name <x> --romfs <romfs> --out mods/<mod>/romfs/Model`
+   command in the port's header comment:
+   `py -3 scripts/models/wiiu2dx.py --wiiu <Common/actor/x.szs> --template <deluxe actor> --name <x> --romfs <romfs> --out <SD>/atmosphere/contents/0100EA80032EA000/romfs/Model`
    ([docs/WIIU_MODELS.md](WIIU_MODELS.md)). Templates live in `romfs/Model`
-   or inside `romfs/Pack/*.pack`; the script searches both.
-2. **Folder.** `mods/<name>/`: `code/<name>.cpp`, `profiles.txt` (`<ProfileId> <sprite>`,
-   from your sprite range), `requires.txt` (`core` and `tsuru`, plus what you
-   use), `README.md`. Models in `romfs/Model/` are never committed.
+   or inside `romfs/Pack/*.pack`; the script searches both. Models are never
+   committed.
+2. **Files.** `source/code/sprites/<name>.cpp` (code file names must be unique
+   across `source/code`), plus `source/hooks/...hks` and `source/symbols/...sym`
+   if it patches the game. Add its profile after the last one in
+   `source/include/actors/profileid.h` and its sprite at the end of the table in
+   `source/code/engine/custom_profiles.cpp`.
 3. **Code.** Copy the Tsuru file, put the MPL-2.0 header on top naming the
    Tsuru file it came from, and apply the name map below.
-4. **Build** with `scripts/sdk/make_mod_project.py ... --mod mods/<name>` (both
-   the normal and the `--placeholder-models` build must print `PASS`), test in
-   Ryujinx, add the sprite to `yaz0moto/steam-dx`, and run
-   `scripts/validate_steam_dx_patch.py`.
+4. **Build** with sweet-dx (`compile.bat` builds and installs to Ryujinx), check
+   the link (no zero GOT words besides the `R_ARM_RELATIVE` one, no `bl 0`, no
+   `@plt` calls: undefined symbols link silently as 0), test in Ryujinx, and add
+   the sprite to `yaz0moto/patches/steam-dx` (spritedata, category, a 128x128
+   icon, the README row).
 
 ## Name map
 
 | Tsuru (Wii U) | Deluxe (codedx / kit) |
 |---|---|
-| `REGISTER_PROFILE(Cls, ProfileID::X)` | `const Profile xProfile(&Cls::build, ProfileId::X, "X", nullptr, 0);` + `static Actor* build(const ActorBuildInfo*)` returning `new Cls(buildInfo)`; `X <sprite>` in `profiles.txt` |
+| `REGISTER_PROFILE(Cls, ProfileID::X)` | `const Profile xProfile(&Cls::build, ProfileId::X, "X", nullptr, 0);` + `static Actor* build(const ActorBuildInfo*)` returning `new Cls(buildInfo)`; the profile in `profileid.h` and its sprite in `custom_profiles.cpp` |
 | `PROFILE_RESOURCES(id, Profile::LoadResourcesAt::Course, "a", "b")` | `PROFILE_RESOURCES(ProfileId::X, "a", "b")` |
 | `SEAD_RTTI_OVERRIDE(...)`, `virtual ~Cls() { }` | leave out |
 | `HitboxCollider`, `hcSelf` / `hcOther` | `ActiveCollider`, `acSelf` / `acOther` |
@@ -63,12 +67,64 @@ change a port makes is in there. Who ports what is in the shared plan doc.
 | `model->playTexSrtAnim(name)` + `texSrtAnims[0]->frameCtrl.shouldLoop(b)` | `tsuru::playTexSrtAnim(model, name, b)` |
 | `model->playColorAnim(name)` | `tsuru::playColorAnim(model, name, b)` |
 | `DECLARE_STATE` / `CREATE_STATE` / `doStateChange(&Cls::StateID_X)` / `states.execute()` | the same (codedx `actors/states.h`) |
+| `states.currentState()->ID == Cls::StateID_X.ID` | `states.currentState() == &StateID_X` |
+| `physicsMgr.init(this, &below, &above, &sides)`; `processCollisions()`; `isOnGround()`; `isCollided(dir)` | `collisionMgr.init(...)` (null sensors are fine, 0x6014B9E8); `process()`; the rest the same |
+| `this->gravity` | `tsuru::gravity(this)` (StageActor +0x64). Deluxe starts it at 0, where Tsuru's PhysicsActor falls, so walkers set -0.1875 themselves |
+| `handlePhysics()` | `handleGravity(); handleSpeed();` |
+| `sead::Vector2f d = distanceToPlayer()`; `.length()` | `tsuru::distanceToPlayer(this)`; `.mag()`. The `distanceToPlayer(out)` overload is the same |
+| `Direction::directionToRotationList[d]`, `Direction::opposite` | `tsuru::Direction::toRotation[d]`, `tsuru::Direction::opposite` (90-degree turns; walking enemies' 3/4 view is +-45) |
+| `sead::Mathu::chase(&u32, ...)`, `moveValueWithOverflowTo`, `Mathf::rad2idx` | `tsuru::chase(&u32, ...)`, `tsuru::moveValueWithOverflowTo`, `tsuru::rad2idx` |
+| `offscreenDelete(mask)` | `tsuru::offscreenDelete(this, mask)`: Deluxe's `StageActor::cullCheck` (0x60000CD0) is the same routine |
+| `sklAnims[0]->frameCtrl.isDone()` / `.currentFrame` / `.endFrame` | `tsuru::sklAnimDone(model)` / `sklAnimFrame` / `sklAnimEnd` |
+| `BlendingModel::create(...)`; `setSklAnim(name, blend)` | `tsuru::createModel(...)`; `tsuru::setSklAnim(model, name, blend, loop)`. It doesn't blend: the anim switches at once |
+| `GameAudio::startSoundEmy / startSoundMap(SE_X, pos)` | `tsuru::playSound("SE_X", pos)` |
+| `PlatformModel` (`create(type, tiles)`, `update(left, width)`, `draw()`) | `tsuru::PlatformModel`: the kit draws the retail `lift_han_*` `_L/_M/_R` segments itself |
+| `QuadraticBezier`, `Easing` (`tsuru/bezier.h`, `tsuru/easing.h`) | `tsuru::QuadraticBezier`, `tsuru::Easing` |
+| `ActorBuildInfo b = { 0 }; b.profile = Profile::get(id); ... ActorMgr::instance()->create(b)` | `tsuru::spawnActor(id, position, settings1, eventId1)` |
+| `HitboxColliderMgr::instance()->safeAddToCreateList(&c)` / `removeFromActiveList(&c)` | `ActiveColliderMgr::instance->isInActiveList / isInCreateList / addToCreateList / removeFromCreateList / removeFromActiveList` |
+| `hitboxCollider.colliderInfo.offset` / `.radius` / `.shape` | `aCollider.info.distToCenter` / `.distToEdge` / `.shape` (the collider keeps its own copy) |
+| `PolylineCollider` (+ `PolylineCollider::Info`) | codedx `SolidOnTopCollider`: the same Info and init. Keep the points array in the actor, not on the stack |
+| `ZoneRumbleMgr::instance()->rumble(n)` | `AreaRumbleMgr::instance->rumble(n, 1, 0, 0)` (the game's own calls pass 1, 0) |
+| `sead::GlobalRandom::instance()->getU32(n)` / `getBool()` | `randU32() % n` / `randU32() & 1` (`nintendo/sead/random.h`) |
+| `Profile::Flags::DontRenderOffScreen`, `ActorInfo{ Vector2i x3, ... }` | `1 << 1`; `ActorInfo{ x, y, x, y, x, y, 0, 0, 0, 0, 0 }` (same layout) |
+| `ProfileID::DryBones` (648) | 649 on Deluxe (sprite 137 in `spriteToProfileList`). Check other retail IDs the same way |
 
-[`source/code/sprites/biddybud.cpp`](../mods/Steam's%20Super%20Mario%20Bros.%20Deluxe/source/code/sprites/biddybud.cpp)
+**Event IDs.** Tsuru's comments call `eventID1 >> 4` "nybble 1". On Deluxe,
+`eventId1` is nybbles **3-4** and `eventId2` is nybbles 1-2. The code is the
+same; only the spritedata nybbles change.
+
+**Two link pitfalls.** sweet-dx links a shared object, so neither fails the build:
+
+- A cast from float to 64 bits (`(long long)f`) calls libgcc's `__aeabi_f2lz`,
+  which isn't linked. The call lands in an empty `.plt` slot and jumps to 0.
+  Stay in 32-bit conversions; `tsuru::deg2idx` is written that way.
+- A game class whose complete destructor has no address (EffectWrapper: only
+  its deleting destructor is known) must not be a by-value member. Hold it as a
+  `new`'d pointer instead.
+
+The ported enemies are listed in [TSURU_ENEMIES.md](TSURU_ENEMIES.md), the
+blocks and objects in [TSURU_OBJECTS.md](TSURU_OBJECTS.md).
+
+### Stage kit (`modbase/stage_kit.h`)
+
+The helpers the block and object ports share:
+
+| Helper | What it does |
+|---|---|
+| `ModBase::ActorList<T, N>` | A class's live instances (`add`/`remove` in ctor/dtor, `forEach`, `find`, `first`; skips deleted actors). Replaces Tsuru's ActorMgr walks. |
+| `ModBase::parkCollider(c, park, home)` | Moves a collider 100000 units below the level, or back to `home`: "off" without `ColliderMgr::remove`, which isn't mapped. |
+| `ModBase::BumpSensor` | A hitbox under a block that fires when a player or Yoshi touches it moving up (12-frame cooldown, `hitPlayer`), plus a 10-frame bump offset for the model. |
+| `ModBase::spawnBlockCoin(pos, dir, player)` | The block coin, profile 399, as the game's block dispatcher spawns it. |
+| `ModBase::playSoundAt(label, n, pos)` | Plays the sound `n` entries after `label` (Tsuru's numbered note / red-coin sounds). |
+| `ModBase::levelPath(id, &count)` | A path's nodes from the area's blocks 12 and 13 (Tsuru's `getPath`/`getPathNodes`); world y = `-node.y`. |
+| `ModBase::gSwitchBlockBlue` | The Red-Blue state (not saved). |
+| `ModBase::blockItems::spawnContents(block, contents, pos, down, player)` | Spawns a ?-block's contents (custom power-ups included) from any actor; see [TSURU_OBJECTS.md](TSURU_OBJECTS.md#triple-block-contents). |
+
+[`source/code/sprites/biddybud.cpp`](../source/code/sprites/biddybud.cpp)
 (sprite 742) is the reference port for states, stomp kills and texture animations.
 
 When something has no row here, look for it in codedx's `include/` first, then
-`framework/game` (`game/*.h`), then the ledger (`data/findings/ledger.csv`).
+`include/game` (`game/*.h`), then the ledger (`reverse-engineering/FindingsB/ledger.csv`).
 Anything engine-side (a class layout, a hook, a new address) goes to us as an
 issue, and you move on to the next actor.
 

@@ -1,0 +1,8 @@
+@ Random Yoshi colours (code/tweaks/yoshi_colors.cpp). In Yoshi's constructor (0x607CB7D0),
+@ `and r1, r0, #0xF` (settings1 nybble 12) then `mov r0, r5` then this `bl 0x607D6354` (build the
+@ YoshiModel with that colour). Its result is not used; r0-r3 are free after it.
+
+YoshiColors_createModel:
+    type:    call
+    address: 0x007CB818
+    symbol:  ModBase::yoshiColors::createModel(void*, unsigned int)

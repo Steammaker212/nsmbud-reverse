@@ -1,9 +1,0 @@
-@ framework/actors: cVariant_AirSwim.
-@ checkLiquidCollisions (0x60151ED8) is a label in the database, not a defined
-@ function; its entry is `push {r4-r11, lr}`, so the trampoline can replay it.
-
-Variant_checkLiquid:
-    type:       hook
-    address:    0x00151ED8
-    symbol:     Variant_checkLiquid
-    trampoline: Variant_checkLiquid_orig

@@ -1,4 +1,0 @@
-KoopaTroopa_decideFirstState_hook:
-    type:    call
-    symbol:  KoopaTroopa_decideFirstState_hook
-    address: 0x0035C744

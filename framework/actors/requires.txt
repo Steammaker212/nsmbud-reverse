@@ -1,3 +1,0 @@
-# framework parts this part needs
-core
-resources

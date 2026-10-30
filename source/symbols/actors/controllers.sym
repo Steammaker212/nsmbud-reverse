@@ -1,0 +1,26 @@
+# Tsuru's level controllers (code/sprites/tsuru_controllers.cpp)
+#
+# Addresses are RVAs (VA - 0x60000000). New Super Mario Bros. U Deluxe (Switch) v1.0.0 only.
+
+# The power-up grant: queues the mode (player +0x2C7C) and starts the change  [code/sprites/tsuru_controllers.cpp]
+ModBase::controllers::givePowerup(void*, unsigned int) = 0x007A27A8;
+
+# The level timer singleton (code/sprites/time_controls.cpp): +0x14 time left, +0x18 start time, units << 12
+ModBase::levelTimer::instance = 0x00C99DE4;
+
+# The level camera singleton (modbase/stage_kit.h ModBase::camera): found live with GDB in 1-1 --
+# its screen edges moved by exactly the scroll (+0x28 left 512 -> 687.1, +0x30 right 995.6 ->
+# 1170.6; +0x48 / +0x50 the same widened by 100; +0x74 the centre). StageActor::directionToPlayerX
+# and mapPositionToScreen read it.
+ModBase::camera::instance = 0x00CC6484;
+
+# TileMgr's instance pointer (code/sprites/wave_platform.cpp, wavy_liquid.cpp): +0x18 / +0x1C liquid
+# top, +0x20 and +0x1420 the wave height tables (1280 floats each, -8192 = none), +0x2820 wave type,
+# +0x2821 has waves. StageActor::createWaterSplash passes it on as the tile manager.
+ModBase::waves::tileMgr = 0x00CBD254;
+
+# TerrainEffects::setWaveValues(effects, height, miniHeight, speed, miniSpeed, width, miniWidth)  [code/tweaks/wavy_liquids.cpp]
+ModBase::waves::setWaveValues(void*, int, int, int, int, int, int) = 0x00705E2C;
+
+# The liquid body draw TerrainEffects_draw calls in modes 1 and 2  [code/tweaks/wavy_liquids.cpp]
+ModBase::waves::drawBody(void*) = 0x0044E360;

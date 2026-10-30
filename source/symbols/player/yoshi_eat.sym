@@ -1,0 +1,6 @@
+# Making enemies edible (modbase/yoshi.h makeEdible, code/framework/yoshi.cpp)
+#
+# Addresses are RVAs (VA - 0x60000000). New Super Mario Bros. U Deluxe (Switch) v1.0.0 only.
+
+# The enemy EatData ctor: base 0x6000BAC8 (type 3, scale 1), then vtable 0x60BE2BB8. Fuzzy_ctor calls it.
+ModBase::yoshi::constructEnemyEatData(void*, unsigned int) = 0x002A8564;

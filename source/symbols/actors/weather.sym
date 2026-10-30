@@ -1,0 +1,22 @@
+# Rain and Falling Leaves (code/sprites/weather.cpp): the snow's 2D particle drawer
+#
+# Addresses are RVAs (VA - 0x60000000). New Super Mario Bros. U Deluxe (Switch) v1.0.0 only.
+
+# The 2D particle drawer instance pointer (12 slots; the snow uses slot 0)
+ModBase::weather::drawer = 0x00C9CEF0;
+# TileMgr instance pointer: +0x9DA8 snow textures loaded, +0x9DB0 / +0x9EC0 / +0x9FD0 wmy_bgsnow.1 / .0 / .2
+ModBase::weather::tileMgr = 0x00CBD254;
+# The level camera: +0x70 left, +0x68 width, +0x7C top, +0x6C height (as the snow reads them)
+ModBase::weather::camera = 0x00CC6484;
+
+# Texture object ctor (TileMgr_ctor builds the snow's three with it)
+ModBase::weather::constructTexture(void*) = 0x0091FD58;
+# Loads texture `texture` of archive `archive`'s output.bfres into `out` (0x110 bytes)
+ModBase::weather::loadTexture(sead::SafeStringBase<char> const*, sead::SafeStringBase<char> const*, void*, unsigned int*, int) = 0x00448C14;
+# Drawer slot setup, as the snow's 0x6044B798 does for slot 0
+ModBase::weather::setSlotLayer(void*, int, int, unsigned int) = 0x00450C78;
+ModBase::weather::setSlotBlend(void*, int, int, int, int, int, unsigned int) = 0x00450CBC;
+ModBase::weather::setSlotState(void*, void const*, unsigned int) = 0x00450C98;
+ModBase::weather::initState(void*) = 0x0090B350;
+# Queues one quad (34 floats per vertex) for a slot
+ModBase::weather::drawQuad(void*, float*, int, void*, unsigned int) = 0x00450A48;

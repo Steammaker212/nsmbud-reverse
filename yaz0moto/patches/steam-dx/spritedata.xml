@@ -1,0 +1,1552 @@
+<?xml version="1.0"?>
+<!--
+    Project-SteamDX: the one Yaz0moto patch for nsmbud-reverse (yaz0moto/README.md).
+    Merged 2026-10-26 from SteamDXCustomActors (custom actors 724-739, extended block
+    contents) and CheepCheepFamily (movement binding on the 18 Cheep Cheep sprites).
+
+    Nybble layout (Yaz0moto stores the 12 settings bytes as u16 | u32 | u32 | 2 bytes):
+        1-2    eventId2
+        3-4    eventId1
+        5-12   settings1   (nybble 12 = bits 0-3 ... nybble 5 = bits 28-31)
+        13-20  settings2   (nybble 20 = bits 0-3 ... nybble 13 = bits 28-31)
+        21-22  movementId
+        23-24  linkId
+    Checkbox mask: 1 = lowest bit of the nybble, 2, 4, 8 = highest bit.
+    Event IDs are 1-based: the game uses (id - 1), so 0 means "none".
+
+    Not listed: 727 ModelTest, 729 BombBros, 733 KoopaShellBros. They are in
+    spriteToProfileList but no Profile is defined for them in source/code.
+-->
+<sprites>
+
+    <!-- ===== Overridden base sprites ===== -->
+
+    <!-- code/tweaks/snow_colors.cpp: settings1 = flake RRGGBBAA, settings2 = glow RRGGBBAA -->
+    <sprite id="198" name="Snow Effect" notes="Falling snow over the whole screen (retail: unused NSMBW leftover). Colours are 0-255 per channel. A colour left all 0 keeps its retail value (white flakes, light blue glow), so you can set only the flake. Keep Glow Alpha at 255 when you set a glow: lower values darken the flakes. Tsuru port (code/tweaks/snow_colors.cpp). Every snow sprite in an area draws with its own colours." files="env_snow">
+        <value nybble="5-6"   title="Flake Red"   category="flake" comment="0-255." />
+        <value nybble="7-8"   title="Flake Green" category="flake" comment="0-255." />
+        <value nybble="9-10"  title="Flake Blue"  category="flake" comment="0-255." />
+        <value nybble="11-12" title="Flake Alpha (unused)" category="flake" comment="Ignored on Deluxe: the flakes fade by depth." />
+        <value nybble="13-14" title="Glow Red"    category="glow" comment="0-255." />
+        <value nybble="15-16" title="Glow Green"  category="glow" comment="0-255." />
+        <value nybble="17-18" title="Glow Blue"   category="glow" comment="0-255." />
+        <value nybble="19-20" title="Glow Alpha"  category="glow" comment="Use 255 (retail). Lower values darken the flakes." />
+    </sprite>
+
+    <!-- ===== Custom actors and extended block contents ===== -->
+
+    <!-- mrsun.cpp: settings1 & 1 -->
+    <sprite id="724" name="Angry Sun" notes="Follows the player horizontally, spits fireballs and does spin/swoop attacks." files="mrsun">
+        <checkbox nybble="12" title="Stationary" comment="Stays in place instead of following the player." category="behavior" />
+    </sprite>
+
+    <!-- mrsun.cpp: same class, isMoon when profile is 915 -->
+    <sprite id="725" name="Mad Moon" notes="Ice version of the Angry Sun: spits ice balls and gives off blue light." files="mrmoon">
+        <checkbox nybble="12" title="Stationary" comment="Stays in place instead of following the player." category="behavior" />
+    </sprite>
+
+    <!-- actorspawner.cpp -->
+    <sprite id="726" name="Actor Spawner" notes="Spawns an actor at its position when the triggering event turns on. Nybbles 5-20 are passed to the spawned actor as its settings.">
+        <value    nybble="1-2"   title="Triggering Event ID" id_type="event" category="events" comment="Spawns when this event is on. 0 deletes the spawner." />
+        <value    nybble="4"     title="Spawned Actor Event ID" category="events" comment="Given to the spawned actor as its event ID 1 (nybbles 3-4). Only values 0-15." />
+        <value    nybble="5-12"  title="Spawned Settings 1" category="spawned actor" comment="Copied to the spawned actor's nybbles 5-12." />
+        <value    nybble="13-20" title="Spawned Settings 2" category="spawned actor" comment="Copied to the spawned actor's nybbles 13-20." />
+        <checkbox nybble="21"    title="ID is a sprite ID" category="spawned actor" comment="Checked: the ID below is a sprite ID. Unchecked: it is a profile ID." />
+        <value    nybble="22-24" title="Actor ID" category="spawned actor" comment="Sprite or profile ID of the actor to spawn (0-4095)." />
+    </sprite>
+
+    <!-- lightactor.cpp -->
+    <sprite id="728" name="Light Source" notes="Coloured light with a light mask. Can follow a movement controller.">
+        <value nybble="5-6"   title="Light Type" category="light" />
+        <value nybble="7-8"   title="Red"   category="light" comment="0-255" />
+        <value nybble="9-10"  title="Green" category="light" comment="0-255" />
+        <value nybble="11-12" title="Blue"  category="light" comment="0-255" />
+        <value nybble="13-14" title="Attenuation Radius" category="light" comment="Radius = value x 0.25." />
+        <value nybble="15-16" title="Light Mask Type" category="light mask" />
+        <value nybble="17-18" title="Light Mask Radius" category="light mask" comment="Radius = value x 8." />
+        <value nybble="19-20" title="Movement Type" category="movement" />
+        <value nybble="21-22" title="Movement ID" id_type="movement" category="movement" />
+    </sprite>
+
+    <!-- effectspawner.cpp -->
+    <sprite id="730" name="Effect Spawner" notes="Plays a particle effect and/or a sound when the triggering event turns on.">
+        <value    nybble="1-2"   title="Triggering Event ID" id_type="event" category="events" comment="Plays when this event is on. 0 deletes the spawner." />
+        <value    nybble="5-7"   title="Effect ID" category="effect" />
+        <checkbox nybble="8"     title="Spawn once (non-updated effect)" category="effect" comment="Spawns the effect once when triggered instead of updating it every frame." />
+        <checkbox nybble="9"     title="Disable effect" category="effect" />
+        <value    nybble="10-12" title="Effect Length" category="effect" comment="In frames. 0 = forever. Only used by updated effects." />
+        <value    nybble="13-15" title="Sound ID" category="sound" comment="Added to 0x01000000 to get the sound item ID." />
+        <checkbox nybble="16"    title="Disable sound" category="sound" />
+        <list     nybble="19"    title="Effect Scale" category="effect">
+            <entry value="0">1.0</entry>
+            <entry value="1">0.1</entry>
+            <entry value="2">0.25</entry>
+            <entry value="3">0.5</entry>
+            <entry value="4">0.75</entry>
+            <entry value="5">0.875</entry>
+            <entry value="6">1.125</entry>
+            <entry value="7">1.25</entry>
+            <entry value="8">1.5</entry>
+            <entry value="9">2.0</entry>
+            <entry value="10">2.5</entry>
+            <entry value="11">3.0</entry>
+            <entry value="12">3.5</entry>
+            <entry value="13">4.0</entry>
+            <entry value="14">5.0</entry>
+            <entry value="15">6.0</entry>
+        </list>
+        <value    nybble="20"    title="Movement Type" category="movement" />
+        <value    nybble="21-22" title="Movement ID" id_type="movement" category="movement" />
+    </sprite>
+
+    <!-- fakeStarCoin.cpp -->
+    <sprite id="731" name="Fake Star Coin" notes="A star coin that does not count towards the level's three. Collecting it triggers an event." files="star_coin">
+        <value    nybble="3-4"   title="Target Event ID" id_type="event" category="events" comment="Turned on when collected. 0 = none." />
+        <checkbox nybble="11"    title="Use alternate model (star_coinB)" category="behavior" />
+        <list     nybble="12"    title="Spin" category="behavior">
+            <entry value="0">Around the Y axis, one way</entry>
+            <entry value="1">Around the Y axis, the other way</entry>
+            <entry value="2">Around the X axis, forwards</entry>
+            <entry value="3">Around the X axis, backwards</entry>
+        </list>
+        <value    nybble="19-20" title="Movement Type" category="movement" />
+        <value    nybble="21-22" title="Movement ID" id_type="movement" category="movement" />
+    </sprite>
+
+    <!-- magiclift.cpp -->
+    <sprite id="732" name="Magic Lift" notes="Copies the tiles inside a location and turns them into a moving platform. Use a movement controller to move it.">
+        <value nybble="7-8"   title="Collider Type" category="collision" requirednybble="10" requiredval="0-1" />
+        <value nybble="9"     title="Surface Type"  category="collision" requirednybble="10" requiredval="0-1" />
+        <list  nybble="10"    title="Collision" category="collision">
+            <entry value="0">Solid</entry>
+            <entry value="1">Solid on top</entry>
+            <entry value="2">None</entry>
+        </list>
+        <value nybble="11-12" title="Location ID" id_type="location" category="behavior" comment="The tiles inside this location become the platform. The lift deletes itself if the location is missing." />
+        <value nybble="19-20" title="Movement Type" category="movement" />
+        <value nybble="21-22" title="Movement ID" id_type="movement" category="movement" />
+    </sprite>
+
+    <!--
+        Question Block / Brick Block, re-declared with the full 5-bit contents.
+        The game reads contents = settings2 & 0xF | bit 28 << 4 (BlockBase::getContents
+        0x60563294) and defines 0-20; 21-31 are free (nsmbud-reverse ledger F0026-F0028).
+        Every other field is copied unchanged from Yaz0moto's base NSMBU spritedata.
+    -->
+        <!-- 88, 90, 91: the retail Water, Poison Water and Quicksand, with Giant Waves (code/tweaks/wavy_liquids.cpp). -->
+    <sprite id="88" name="Water" notes="Another name for this is H2O. It is refreshing in warm areas, but it could freeze you in cold environments, so be careful! The water also is the natural habitat of many enemies, so once again, be careful! Based on the lava sprite, there should be nybbles for delays before rising/lowering, but the giant waves don't seem to work on this sprite. Giant Waves (Tsuru's wavy liquids, code/tweaks/wavy_liquids.cpp): the Lava's own wave settings, for a zone-wide liquid. Water keeps nybbles 14 and 16 for its own settings, so its mini-wave width and height are the defaults.">
+        <value nybble="1-2" title="Triggering Event ID" comment="The ID that triggers the water to begin rising or falling."/>
+        <value nybble="3-4" title="Target Event ID" comment="Once the water finishes rising/falling, this event is activated."/>
+        <list nybble="5" title="Rising/Lowering Speed/Direction" comment="Values with a * will cause the water to lower.">
+            <entry value="0">0.0</entry>
+            <entry value="1">1.0</entry>
+            <entry value="2">1.25</entry>
+            <entry value="3">1.5</entry>
+            <entry value="4">0.75</entry>
+            <entry value="5">0.125</entry>
+            <entry value="6">0.25</entry>
+            <entry value="7">0.5</entry>
+            <entry value="8">0.0*</entry>
+            <entry value="9">1.0*</entry>
+            <entry value="10">1.25*</entry>
+            <entry value="11">1.5*</entry>
+            <entry value="12">0.75*</entry>
+            <entry value="13">0.125*</entry>
+            <entry value="14">0.25*</entry>
+            <entry value="15">0.5*</entry>
+        </list>
+        <checkbox nybble="10" title="Place Behind Layer 1" mask="2"/>
+        <checkbox nybble="10" title="Place Behind Layer 0" mask="4"/>
+        <checkbox nybble="10" title="Topless and Invisible" mask="8" comment="The water will have no top and the water effect will cover the entire screen, but the water collision stays where the sprite is placed. Use underwater background for this."/>
+        <value nybble="11-12" title="Location ID"/>
+        <value nybble="13" title="Unknown Value 13" comment="Bitfield of some kind."/>
+        <value nybble="14" title="Unknown Value 14"/>
+        <value nybble="16" title="Z-order related?"/>
+        <checkbox nybble="20" title="Giant Waves" comment="When checked, this will create giant waves in the liquid."/>
+        <list nybble="19" title="Giant Waves: Height" comment="The height of each giant liquid wave, in blocks.">
+            <entry value="0">60</entry>
+            <entry value="1">0</entry>
+            <entry value="2">10</entry>
+            <entry value="3">20</entry>
+            <entry value="4">30</entry>
+            <entry value="5">40</entry>
+            <entry value="6">50</entry>
+            <entry value="7">60</entry>
+            <entry value="8">70</entry>
+            <entry value="9">80</entry>
+            <entry value="10">90</entry>
+            <entry value="11">100</entry>
+            <entry value="12">110</entry>
+            <entry value="13">120</entry>
+            <entry value="14">130</entry>
+            <entry value="15">140</entry>
+        </list>
+        <list nybble="18" title="Giant Waves: Speed/Direction" comment="The speed of each giant liquid wave. Values marked with a * cause the waves to move left instead of right.">
+            <entry value="0">-0.65</entry>
+            <entry value="1">3.0</entry>
+            <entry value="2">2.5</entry>
+            <entry value="3">2.0</entry>
+            <entry value="4">1.5</entry>
+            <entry value="5">1.0</entry>
+            <entry value="6">0.65</entry>
+            <entry value="7">0.3</entry>
+            <entry value="8">0.0</entry>
+            <entry value="9">0.3*</entry>
+            <entry value="10">0.65*</entry>
+            <entry value="11">1.0*</entry>
+            <entry value="12">1.5*</entry>
+            <entry value="13">2.0*</entry>
+            <entry value="14">2.5*</entry>
+            <entry value="15">3.0*</entry>
+        </list>
+        <list nybble="17" title="Giant Waves: Width" comment="The width of each giant liquid wave.">
+            <entry value="0">2.5</entry>
+            <entry value="1">0.0</entry>
+            <entry value="2">0.5</entry>
+            <entry value="3">1.0</entry>
+            <entry value="4">1.5</entry>
+            <entry value="5">2.0</entry>
+            <entry value="6">2.5</entry>
+            <entry value="7">3.0</entry>
+            <entry value="8">3.5</entry>
+            <entry value="9">4.0</entry>
+            <entry value="10">4.5</entry>
+            <entry value="11">5.0</entry>
+            <entry value="12">5.5</entry>
+            <entry value="13">6.0</entry>
+            <entry value="14">6.5</entry>
+            <entry value="15">7.0</entry>
+        </list>
+        <list nybble="15" title="Giant Waves: Mini-Wave Animation Speed" comment="The speed at which the mini-waves on top of each giant wave animate.">
+            <entry value="0">8.0</entry>
+            <entry value="1">-20.0</entry>
+            <entry value="2">-10.0</entry>
+            <entry value="3">-5.0</entry>
+            <entry value="4">-3.0</entry>
+            <entry value="5">-1.0</entry>
+            <entry value="6">-0.65</entry>
+            <entry value="7">-0.3</entry>
+            <entry value="8">0.0</entry>
+            <entry value="9">0.3</entry>
+            <entry value="10">0.65</entry>
+            <entry value="11">1.0</entry>
+            <entry value="12">3.0</entry>
+            <entry value="13">5.0</entry>
+            <entry value="14">10.0</entry>
+            <entry value="15">20.0</entry>
+        </list>
+    </sprite>
+
+    <sprite id="90" name="Poison Water" notes="Water that is &lt;font color=&quot;purple&quot;&gt;poisonous&lt;/font&gt;. Kills the player upon touch. Giant Waves (Tsuru's wavy liquids, code/tweaks/wavy_liquids.cpp): the Lava's own wave settings, for a zone-wide liquid.">
+        <checkbox nybble="5" title="Lower instead of rising" mask="8"/>
+        <list nybble="5" title="Rising Speed" comment="The rising speed of the poison water.">
+            <entry value="0">0.0</entry>
+            <entry value="1">1.0</entry>
+            <entry value="2">1.25</entry>
+            <entry value="3">1.5</entry>
+            <entry value="4">0.75</entry>
+            <entry value="5">0.125</entry>
+            <entry value="6">0.25</entry>
+            <entry value="7">0.5</entry>
+        </list>
+        <value nybble="6" title="Lowering Delay"/>
+        <value nybble="7" title="Rising Delay"/>
+        <value nybble="8-9" title="Rising Height" comment="The height, in blocks, that the poison water will rise."/>
+        <checkbox nybble="10" title="Rising" comment="If checked, the poisinous water will rise quickly."/>
+        <checkbox nybble="10" title="Topless" mask="8" comment="The poison water will have no top, but will be fully functional."/>
+        <value nybble="11-12" title="Location ID"/>
+        <checkbox nybble="20" title="Giant Waves" comment="When checked, this will create giant waves in the liquid."/>
+        <list nybble="19" title="Giant Waves: Height" comment="The height of each giant liquid wave, in blocks.">
+            <entry value="0">60</entry>
+            <entry value="1">0</entry>
+            <entry value="2">10</entry>
+            <entry value="3">20</entry>
+            <entry value="4">30</entry>
+            <entry value="5">40</entry>
+            <entry value="6">50</entry>
+            <entry value="7">60</entry>
+            <entry value="8">70</entry>
+            <entry value="9">80</entry>
+            <entry value="10">90</entry>
+            <entry value="11">100</entry>
+            <entry value="12">110</entry>
+            <entry value="13">120</entry>
+            <entry value="14">130</entry>
+            <entry value="15">140</entry>
+        </list>
+        <list nybble="18" title="Giant Waves: Speed/Direction" comment="The speed of each giant liquid wave. Values marked with a * cause the waves to move left instead of right.">
+            <entry value="0">-0.65</entry>
+            <entry value="1">3.0</entry>
+            <entry value="2">2.5</entry>
+            <entry value="3">2.0</entry>
+            <entry value="4">1.5</entry>
+            <entry value="5">1.0</entry>
+            <entry value="6">0.65</entry>
+            <entry value="7">0.3</entry>
+            <entry value="8">0.0</entry>
+            <entry value="9">0.3*</entry>
+            <entry value="10">0.65*</entry>
+            <entry value="11">1.0*</entry>
+            <entry value="12">1.5*</entry>
+            <entry value="13">2.0*</entry>
+            <entry value="14">2.5*</entry>
+            <entry value="15">3.0*</entry>
+        </list>
+        <list nybble="17" title="Giant Waves: Width" comment="The width of each giant liquid wave.">
+            <entry value="0">2.5</entry>
+            <entry value="1">0.0</entry>
+            <entry value="2">0.5</entry>
+            <entry value="3">1.0</entry>
+            <entry value="4">1.5</entry>
+            <entry value="5">2.0</entry>
+            <entry value="6">2.5</entry>
+            <entry value="7">3.0</entry>
+            <entry value="8">3.5</entry>
+            <entry value="9">4.0</entry>
+            <entry value="10">4.5</entry>
+            <entry value="11">5.0</entry>
+            <entry value="12">5.5</entry>
+            <entry value="13">6.0</entry>
+            <entry value="14">6.5</entry>
+            <entry value="15">7.0</entry>
+        </list>
+        <list nybble="16" title="Giant Waves: Height of Mini-Waves" comment="This determines the height of each mini-wave on top of each giant wave.">
+            <entry value="0">4</entry>
+            <entry value="1">0</entry>
+            <entry value="2">10</entry>
+            <entry value="3">20</entry>
+            <entry value="4">30</entry>
+            <entry value="5">40</entry>
+            <entry value="6">50</entry>
+            <entry value="7">60</entry>
+            <entry value="8">70</entry>
+            <entry value="9">80</entry>
+            <entry value="10">90</entry>
+            <entry value="11">100</entry>
+            <entry value="12">110</entry>
+            <entry value="13">120</entry>
+            <entry value="14">130</entry>
+            <entry value="15">140</entry>
+        </list>
+        <list nybble="15" title="Giant Waves: Mini-Wave Animation Speed" comment="The speed at which the mini-waves on top of each giant wave animate.">
+            <entry value="0">8.0</entry>
+            <entry value="1">-20.0</entry>
+            <entry value="2">-10.0</entry>
+            <entry value="3">-5.0</entry>
+            <entry value="4">-3.0</entry>
+            <entry value="5">-1.0</entry>
+            <entry value="6">-0.65</entry>
+            <entry value="7">-0.3</entry>
+            <entry value="8">0.0</entry>
+            <entry value="9">0.3</entry>
+            <entry value="10">0.65</entry>
+            <entry value="11">1.0</entry>
+            <entry value="12">3.0</entry>
+            <entry value="13">5.0</entry>
+            <entry value="14">10.0</entry>
+            <entry value="15">20.0</entry>
+        </list>
+        <list nybble="14" title="Giant Waves: Bounciness" comment="This causes the giant liquid waves to bounce up and down.">
+            <entry value="0">16.0</entry>
+            <entry value="1">0.0</entry>
+            <entry value="2">0.5</entry>
+            <entry value="3">1.0</entry>
+            <entry value="4">1.5</entry>
+            <entry value="5">2.0</entry>
+            <entry value="6">2.5</entry>
+            <entry value="7">3.0</entry>
+            <entry value="8">3.5</entry>
+            <entry value="9">4.0</entry>
+            <entry value="10">4.5</entry>
+            <entry value="11">5.0</entry>
+            <entry value="12">5.5</entry>
+            <entry value="13">6.0</entry>
+            <entry value="14">6.5</entry>
+            <entry value="15">7.0</entry>
+        </list>
+    </sprite>
+
+    <sprite id="91" name="Quicksand" notes="Once Mario steps in, he will start sinking. Doesn't hurt him to stay inside of it, though.&#13;&#10;&#13;&#10;If you use a location, make sure it sticks 5 blocks below the zone, or else it will not make the player die. Giant Waves (Tsuru's wavy liquids, code/tweaks/wavy_liquids.cpp): the Lava's own wave settings, for a zone-wide liquid.">
+        <checkbox nybble="10" title="Unknown Checkbox 10 Mask 4" mask="4"/>
+        <checkbox nybble="10" title="Topless" mask="8" comment="&lt;br&gt;Checking this removes the animated crest effect on the top portion of the Sprite. Creates a 'square' look. &lt;br&gt;&lt;b&gt;Note:&lt;/b&gt; Only use with a flat ceiling or else will look strange."/>
+        <value nybble="11-12" title="Location ID" comment="&lt;br&gt;Match with a Location to set the Area of this Sprite."/>
+        <checkbox nybble="20" title="Giant Waves" comment="When checked, this will create giant waves in the liquid."/>
+        <list nybble="19" title="Giant Waves: Height" comment="The height of each giant liquid wave, in blocks.">
+            <entry value="0">60</entry>
+            <entry value="1">0</entry>
+            <entry value="2">10</entry>
+            <entry value="3">20</entry>
+            <entry value="4">30</entry>
+            <entry value="5">40</entry>
+            <entry value="6">50</entry>
+            <entry value="7">60</entry>
+            <entry value="8">70</entry>
+            <entry value="9">80</entry>
+            <entry value="10">90</entry>
+            <entry value="11">100</entry>
+            <entry value="12">110</entry>
+            <entry value="13">120</entry>
+            <entry value="14">130</entry>
+            <entry value="15">140</entry>
+        </list>
+        <list nybble="18" title="Giant Waves: Speed/Direction" comment="The speed of each giant liquid wave. Values marked with a * cause the waves to move left instead of right.">
+            <entry value="0">-0.65</entry>
+            <entry value="1">3.0</entry>
+            <entry value="2">2.5</entry>
+            <entry value="3">2.0</entry>
+            <entry value="4">1.5</entry>
+            <entry value="5">1.0</entry>
+            <entry value="6">0.65</entry>
+            <entry value="7">0.3</entry>
+            <entry value="8">0.0</entry>
+            <entry value="9">0.3*</entry>
+            <entry value="10">0.65*</entry>
+            <entry value="11">1.0*</entry>
+            <entry value="12">1.5*</entry>
+            <entry value="13">2.0*</entry>
+            <entry value="14">2.5*</entry>
+            <entry value="15">3.0*</entry>
+        </list>
+        <list nybble="17" title="Giant Waves: Width" comment="The width of each giant liquid wave.">
+            <entry value="0">2.5</entry>
+            <entry value="1">0.0</entry>
+            <entry value="2">0.5</entry>
+            <entry value="3">1.0</entry>
+            <entry value="4">1.5</entry>
+            <entry value="5">2.0</entry>
+            <entry value="6">2.5</entry>
+            <entry value="7">3.0</entry>
+            <entry value="8">3.5</entry>
+            <entry value="9">4.0</entry>
+            <entry value="10">4.5</entry>
+            <entry value="11">5.0</entry>
+            <entry value="12">5.5</entry>
+            <entry value="13">6.0</entry>
+            <entry value="14">6.5</entry>
+            <entry value="15">7.0</entry>
+        </list>
+        <list nybble="16" title="Giant Waves: Height of Mini-Waves" comment="This determines the height of each mini-wave on top of each giant wave.">
+            <entry value="0">4</entry>
+            <entry value="1">0</entry>
+            <entry value="2">10</entry>
+            <entry value="3">20</entry>
+            <entry value="4">30</entry>
+            <entry value="5">40</entry>
+            <entry value="6">50</entry>
+            <entry value="7">60</entry>
+            <entry value="8">70</entry>
+            <entry value="9">80</entry>
+            <entry value="10">90</entry>
+            <entry value="11">100</entry>
+            <entry value="12">110</entry>
+            <entry value="13">120</entry>
+            <entry value="14">130</entry>
+            <entry value="15">140</entry>
+        </list>
+        <list nybble="15" title="Giant Waves: Mini-Wave Animation Speed" comment="The speed at which the mini-waves on top of each giant wave animate.">
+            <entry value="0">8.0</entry>
+            <entry value="1">-20.0</entry>
+            <entry value="2">-10.0</entry>
+            <entry value="3">-5.0</entry>
+            <entry value="4">-3.0</entry>
+            <entry value="5">-1.0</entry>
+            <entry value="6">-0.65</entry>
+            <entry value="7">-0.3</entry>
+            <entry value="8">0.0</entry>
+            <entry value="9">0.3</entry>
+            <entry value="10">0.65</entry>
+            <entry value="11">1.0</entry>
+            <entry value="12">3.0</entry>
+            <entry value="13">5.0</entry>
+            <entry value="14">10.0</entry>
+            <entry value="15">20.0</entry>
+        </list>
+        <list nybble="14" title="Giant Waves: Bounciness" comment="This causes the giant liquid waves to bounce up and down.">
+            <entry value="0">16.0</entry>
+            <entry value="1">0.0</entry>
+            <entry value="2">0.5</entry>
+            <entry value="3">1.0</entry>
+            <entry value="4">1.5</entry>
+            <entry value="5">2.0</entry>
+            <entry value="6">2.5</entry>
+            <entry value="7">3.0</entry>
+            <entry value="8">3.5</entry>
+            <entry value="9">4.0</entry>
+            <entry value="10">4.5</entry>
+            <entry value="11">5.0</entry>
+            <entry value="12">5.5</entry>
+            <entry value="13">6.0</entry>
+            <entry value="14">6.5</entry>
+            <entry value="15">7.0</entry>
+        </list>
+    </sprite>
+
+    <!-- 44: the retail Red Coin Ring, with Tsuru's coin ring duration (code/sprites/time_controls.cpp). -->
+    <sprite id="44" name="Red Coin Ring" notes="Red coins appear when a player jumps through this ring; collect all 8 for a power-up. Event Duration (Tsuru's coin ring): how long the ring keeps its event on, in frames.">
+        <value nybble="3-4" title="Target Event ID" id_type="event" category="events" comment="Use this to link the red ring with the red coins it spawns." />
+        <list nybble="11" title="Reward" category="behavior">
+            <entry value="0">Fire flower</entry>
+            <entry value="1">Propeller Mushroom</entry>
+            <entry value="2">Penguin suit</entry>
+            <entry value="3">Ice flower</entry>
+            <entry value="4">Acorn mushroom</entry>
+            <entry value="5">1-Up</entry>
+            <entry value="6">Super Mushroom</entry>
+            <entry value="7">Super Mushroom</entry>
+        </list>
+        <checkbox nybble="12" title="Shift 1/2 block to the right" category="behavior" />
+        <value nybble="13-20" title="Event Duration" category="events" comment="Frames the event stays on (60 = 1 second). 0 = the game's own (60, or 24 in its other mode)." />
+    </sprite>
+
+    <sprite id="59" name="Question Block">
+		<value nybble="3-4" title="Target ID [NSLU]*" comment="Activates this event ID if struck, *Only works in NSLU" category="behavior" />
+		<value nybble="5" title="Unknown Value 5" comment="No visible change " />
+		<value nybble="7" title="Unknown Value 7" />
+		<checkbox nybble="9-10" title="Place Behind Other Sprites" mask="17" comment="Unused; when checked, it will be placed behind other sprites. (1100 gives this result, 0x11= 17)" category="behavior" />
+		<value nybble="11" title="Unknown Value 11" />
+		<value nybble="12" title="Unknown Value 12" />
+		<checkbox nybble="15" title="Unknown Flag 15" comment="Does something with physics when checked..." />
+		<value nybble="16" title="Unknown Value 16" />
+		<value nybble="17" title="Unknown Value 17" />
+		<list nybble="19" title="Movement Type" comment="Specifies which movement controller to hook to." category="movement">
+			<entry value="0">None / Path (100)</entry>
+			<entry value="1">Two-Way (70, 642)</entry>
+			<entry value="8">Clapping controller (?)</entry>
+		</list>
+		<checkbox nybble="13" title="Extended contents (+16)" comment="Adds 16 to the contents (bit 28 of settings2). Contents 16 is the Acorn; 21 is the Hammer Flower, 22 the P-Acorn, 23 the Blue Shell, 24 the Poison Mushroom. 25-31 are unused by the game and can be claimed by mods (framework/items)." category="behavior" />
+		<list nybble="20" title="Contains" comment="The contents of the question block" category="behavior" requirednybble="13" requiredval="0">
+			<entry value="0">Nothing</entry>
+			<entry value="1">1 coin</entry>
+			<entry value="2">Fire Flower</entry>
+			<entry value="3">Fire Flower</entry>
+			<entry value="4">Propeller Mushroom</entry>
+			<entry value="5">Penguin Suit</entry>
+			<entry value="6">Mini mushroom</entry>
+			<entry value="7">Star</entry>
+			<entry value="8">Continuous star</entry>
+			<entry value="9">Yoshi egg</entry>
+			<entry value="10">10-Coin</entry>
+			<entry value="11">1-UP</entry>
+			<entry value="12">Vine</entry>
+			<entry value="13">Spring</entry>
+			<entry value="14">Super mushroom (if small)</entry>
+			<entry value="15">Ice flower</entry>
+		</list>
+		<list nybble="20" title="Contains (extended)" comment="Contents 16-31. 21 needs hammer_suit, 22 p_acorn, 23 shell_suit; an unregistered 22-31 makes the game read past its contents table." category="behavior" requirednybble="13" requiredval="1">
+			<entry value="0">16: Acorn Mushroom</entry>
+			<entry value="1">17: Super Crown (1 player; coin otherwise)</entry>
+			<entry value="2">18: Coin or Mushroom (game decides)</entry>
+			<entry value="3">19: Acorn Mushroom (variant)</entry>
+			<entry value="4">20: Yoshi egg</entry>
+			<entry value="5">21: Hammer Flower</entry>
+			<entry value="6">22: P-Acorn</entry>
+			<entry value="7">23: Blue Shell</entry>
+			<entry value="8">24: Poison Mushroom</entry>
+			<entry value="9">25: (free for mods)</entry>
+			<entry value="10">26: (free for mods)</entry>
+			<entry value="11">27: (free for mods)</entry>
+			<entry value="12">28: (free for mods)</entry>
+			<entry value="13">29: (free for mods)</entry>
+			<entry value="14">30: (free for mods)</entry>
+			<entry value="15">31: (free for mods)</entry>
+		</list>
+		<value nybble="21-22" title="Movement ID" comment="Known matched sprites: 70" id_type="movement" category="movement" />
+    </sprite>
+
+    <sprite id="60" name="Brick Block" notes="Just an ordinary brick block that can also be movement controlled.">
+		<value nybble="12" title="Unknown Value 12" />
+		<list nybble="19" title="Movement Type" comment="Specifies which movement controller to hook to." category="movement">
+			<entry value="0">None / Path (100)</entry>
+			<entry value="1">Two-Way (70, 642)</entry>
+			<entry value="8">Clapping controller (?)</entry>
+		</list>
+		<checkbox nybble="13" title="Extended contents (+16)" comment="Adds 16 to the contents (bit 28 of settings2). Contents 16 is the Acorn; 21 is the Hammer Flower, 22 the P-Acorn, 23 the Blue Shell, 24 the Poison Mushroom. 25-31 are unused by the game and can be claimed by mods (framework/items)." category="behavior" />
+		<list nybble="20" title="Contains" comment="The contents of the brick block" category="behavior" requirednybble="13" requiredval="0">
+			<entry value="0">Nothing</entry>
+			<entry value="1">1 coin</entry>
+			<entry value="2">Fire Flower</entry>
+			<entry value="3">Fire Flower</entry>
+			<entry value="4">Propeller Mushroom</entry>
+			<entry value="5">Penguin Suit</entry>
+			<entry value="6">Mini mushroom</entry>
+			<entry value="7">Star</entry>
+			<entry value="8">Continuous star</entry>
+			<entry value="9">Yoshi egg</entry>
+			<entry value="10">10-Coin</entry>
+			<entry value="11">1-UP</entry>
+			<entry value="12">Vine</entry>
+			<entry value="13">Spring</entry>
+			<entry value="14">Super mushroom (if small)</entry>
+			<entry value="15">Ice flower</entry>
+		</list>
+		<list nybble="20" title="Contains (extended)" comment="Contents 16-31. 21 needs hammer_suit, 22 p_acorn, 23 shell_suit; an unregistered 22-31 makes the game read past its contents table." category="behavior" requirednybble="13" requiredval="1">
+			<entry value="0">16: Acorn Mushroom</entry>
+			<entry value="1">17: Super Crown (1 player; coin otherwise)</entry>
+			<entry value="2">18: Coin or Mushroom (game decides)</entry>
+			<entry value="3">19: Acorn Mushroom (variant)</entry>
+			<entry value="4">20: Yoshi egg</entry>
+			<entry value="5">21: Hammer Flower</entry>
+			<entry value="6">22: P-Acorn</entry>
+			<entry value="7">23: Blue Shell</entry>
+			<entry value="8">24: Poison Mushroom</entry>
+			<entry value="9">25: (free for mods)</entry>
+			<entry value="10">26: (free for mods)</entry>
+			<entry value="11">27: (free for mods)</entry>
+			<entry value="12">28: (free for mods)</entry>
+			<entry value="13">29: (free for mods)</entry>
+			<entry value="14">30: (free for mods)</entry>
+			<entry value="15">31: (free for mods)</entry>
+		</list>
+		<value nybble="21-22" title="Movement ID" comment="Can match to 70 for sure." id_type="movement" category="movement" />
+    </sprite>
+
+    <!-- hammer_suit mod (nsmbud-reverse/mods/hammer_suit): profile HammerFlower -->
+    <sprite id="734" name="Hammer Flower" notes="New power-up from the hammer_suit mod. Collecting it gives the Fire suit, but the player throws Hammer Bros hammers instead of fireballs. Also available inside ?-blocks and bricks as contents 21." files="hammer;I_fireflower;bros">
+    </sprite>
+
+    <!-- bee mod (nsmbud-reverse/mods/bee): a Cheep Cheep (profile 530) with a bee model,
+         flying with framework/actors' air-swim option. Fields are sprite 101's. -->
+    <sprite id="735" name="Spike Top Bee" notes="A bee with a spike on top that flies like a Cheep Cheep swims. Yoshi can eat it, and bounces off its spikes when he lands on it. Follow the player makes it fly straight at them, up and down too, and never lose them (Type and Flying speed are then ignored). Needs romfs/Model/bee.Nin_NX_NVN.szs with a 'swim' skeletal animation; without it the Cheep Cheep model is shown." files="bee">
+		<list nybble="5" title="Starting direction" category="behavior">
+			<entry value="0">Towards player</entry>
+			<entry value="8">Left</entry>
+		</list>
+		<value nybble="8" title="Flying distance" comment="Value+2 (the Cheep Cheep's swimming distance)" category="behavior" />
+		<list bit="35-36" title="Flying speed" category="behavior">
+			<entry value="0">Fastest</entry>
+			<entry value="2">Fast</entry>
+			<entry value="1">Slow</entry>
+			<entry value="3">Slowest</entry>
+		</list>
+		<list nybble="12" title="Type" comment="Same values as the Cheep Cheep (the game's mask 0x609 allows exactly these). 3: distance before turning depends on nybble 8. 45° types always start facing left." category="behavior">
+			<entry value="0">Normal</entry>
+			<entry value="3">Turns around after a while</entry>
+			<entry value="9">Normal (45° Up)</entry>
+			<entry value="10">Normal (45° Down)</entry>
+		</list>
+		<checkbox nybble="13" title="Follow the player" comment="Flies straight at the nearest player from the start, at the Deep Cheep's chase speed." category="behavior" />
+		<value nybble="14" title="Speed" comment="0 = default. Otherwise value x 0.25 of the default: 4 = the same, 8 = twice as fast, 2 = half. Works with or without Follow the player." category="behavior" />
+		<value nybble="19-20" title="Movement Type" category="movement" />
+		<value nybble="21-22" title="Movement ID" id_type="movement" category="movement" />
+    </sprite>
+
+    <!-- p_acorn mod (nsmbud-reverse/mods/p_acorn): the Acorn item granting mode 8 -->
+    <sprite id="736" name="P-Acorn" notes="The P-Acorn (p_acorn mod): flies and glides like the Acorn, with unlimited air boosts. Also in ?-blocks and bricks as contents 22 (tick Extended contents, pick 22)." files="I_musasabi;I_musasabiP">
+    </sprite>
+
+    <!--
+        shy_guy mod (nsmbud-reverse/mods/shy_guy): a Shy Guy built as an actor
+        variant over the game's Goombrat (profile 468), so the ledge turn, the
+        "walk1" alert walk and the tuning all come from the game's own code
+        (ledger F0091-F0101, readable/enemy/Goomba.cpp).
+
+        The nybbles are the Goomba class's (sprite 467/468): the type field,
+        then a type-dependent vertical offset. Nothing here is new game code:
+        the settings are read by the Goomba class (vtable +0x270, 0x603393F0, called from GoombaBase::onCreate).
+    -->
+    <sprite id="737" name="Shy Guy" notes="New enemy from the shy_guy mod: a Shy Guy that uses the Goombrat's mechanics, turning around at the edge of a platform instead of walking off it. Needs romfs/Model/shyguy.Nin_NX_NVN.szs with the animations 'walk', 'walk0' and 'walk1'; without it the Goombrat model is shown and the log says so." files="shyguy">
+        <list nybble="12" title="Type" comment="The Goomba family's type field (settings1 &amp; 0xF), read by the Goomba class (vtable +0x270, 0x603393F0, called from GoombaBase::onCreate). A Goombrat is type 0." category="behavior">
+            <entry value="0">Normal (walks, turns at ledges)</entry>
+            <entry value="1">Alternate collision sensors</entry>
+            <entry value="2">No player collision</entry>
+            <entry value="3">Ceiling walker</entry>
+            <entry value="4">Follows a parent actor</entry>
+            <entry value="5">Follows a parent actor (variant)</entry>
+            <entry value="6">Ceiling walker (variant)</entry>
+            <entry value="7">Spawns far back (z = 2300)</entry>
+            <entry value="8">Like type 1</entry>
+        </list>
+        <value nybble="11" title="Type-2 variant" comment="Only read when Type is 2: (settings1 &gt;&gt; 4) &amp; 3, stored at +0x1AC8 and used as an index into a speed table (0x60338434), so it picks a variant rather than an offset." category="behavior" requirednybble="12" requiredval="2" />
+        <value nybble="19-20" title="Movement Type" category="movement" />
+        <value nybble="21-22" title="Movement ID" id_type="movement" category="movement" />
+    </sprite>
+
+    <!--
+        custom_spawner mod (nsmbud-reverse/mods/custom_spawner): profile SpawnerActor,
+        sprite 738. This is NOT the same actor as 726 above, and the difference is
+        deliberate.
+
+        726 is codedx's ActorSpawner, ported. Two of its behaviours are wrong or
+        unfriendly on Deluxe and are fixed here:
+          * 726 makes the event MANDATORY (an empty event id deletes the spawner),
+            so a level that knows nothing about events gets a sprite that silently
+            removes itself. Here eventId2 == 0 means "no gate, spawn at once".
+          * 726 reads the event mask at EventMgr+0x0, which on Deluxe is the
+            vtable pointer; the real u64 mask is at +0x10, so a gated 726 never
+            fires. This one uses +0x10 (ledger F0181).
+
+        The ID encoding is codedx's, so a level authored for 726 spawns the same
+        thing through 738: bits 0-7 from linkId, bits 8-11 from the low nibble of
+        movementId, and bit 4 of movementId selects sprite id vs profile id.
+        Nybbles 22-24 are exactly those 12 bits.
+
+        Nybble 19 is the spawn count rather than part of the child's settings2,
+        because the count comes from the high nibble of settings2 (bits 4-7 of
+        the field, which is nybble 19), so nybbles 13-18 and 20 are the child's.
+    -->
+    <sprite id="738" name="Actor Spawner (custom)" notes="Spawns 1-16 actors of a chosen sprite or profile, optionally only while a level event is on. Unlike sprite 726 the event is optional (0 = spawn immediately), it can spawn several with a spread, the sprite table is range-checked, and failures are logged. For a plain event-triggered spawn use codedx sprite 726." files="Actor_Spawner">
+        <value    nybble="1-2"   title="Triggering Event ID" id_type="event" category="events" comment="Spawns while this event is on, and re-arms when it turns off. 0 = no gate: spawn immediately and never re-arm." />
+        <value    nybble="4"     title="Spawned Actor Event ID" category="events" comment="Passed to each spawned actor as its eventId1. Only values 0-15 are meaningful." />
+        <checkbox nybble="21"    mask="1" title="ID is a sprite ID" category="spawned actor" comment="Checked: treat Actor ID as a sprite ID (looked up in spriteToProfileList). Unchecked: it is already a profile ID." />
+        <value    nybble="22-24" title="Actor ID" category="spawned actor" comment="Sprite ID (0-739 in a build with every mod) if the box above is checked, otherwise a profile ID. Bits 8-11 come from nybble 22, bits 0-7 from nybbles 23-24." />
+        <value    nybble="19"    title="Spawn Count" category="spawning" comment="How many actors to create, 1-16. 0 is treated as 1. This is bits 4-7 of settings2." />
+        <value    nybble="5-12"  title="Spawned Settings 1" category="spawned actor" comment="Copied to every spawned actor as its settings1 (nybbles 5-12)." />
+        <value    nybble="13-18" title="Spawned Settings 2 (low)" category="spawned actor" comment="Copied to every spawned actor as settings2 bits 8-31." />
+        <value    nybble="20"    title="Spawned Settings 2 (high)" category="spawned actor" comment="Copied to every spawned actor as settings2 bits 0-3." />
+    </sprite>
+
+    <!--
+        shell_suit mod (nsmbud-reverse/mods/shell_suit): the Blue Shell, a
+        DS-style shell power built on the Penguin Suit's belly slide
+        (ledger F0205, F0212-F0216).
+    -->
+    <sprite id="739" name="Blue Shell" notes="New power-up from the shell_suit mod (NSMB DS style): the Penguin Suit's powers without its iceballs, worn as the Fire Flower suit; crouching while running starts a shell dash at full speed that bounces off walls, defeats enemies and bumps block actors. Also in ?-blocks and bricks as contents 23 (tick Extended contents, pick 23). The item is romfs/Model/blue_shell (an Ice Flower without it): it rises out of blocks and trembles while it lies there. The player wears the shell on the back (and a copy in front showing its belly); crouching, ground pounding and dashing hide the player inside it, and dashing spins it." files="blue_shell;nokonokoA">
+    </sprite>
+
+    <sprite id="740" name="Cold Fuzzy" notes="Tsuru port (mods/cold_fuzzy, the porting kit's reference port): a Fuzzy that freezes the player on touch. Follows a path when linked to one by its movement ID. Defeated by a Star, fireballs or thrown objects." files="coldobon">
+        <value nybble="21-22" title="Movement ID" id_type="movement" category="movement" comment="Path controller to follow (movement type 3)." />
+    </sprite>
+
+    <sprite id="741" name="Poison Mushroom" notes="Tsuru port (mods/poison_mushroom): moves like a Super Mushroom; touching it hurts the player like poison water instead of powering up. Also in ?-blocks and bricks as contents 24 (tick Extended contents, pick 24)." files="I_kinxkx">
+    </sprite>
+
+    <!-- biddybud.cpp: colour settings1 >> 28; movementHandler.link(position, getMaskForMovementType(settings2 & 0xFF), movementId) -->
+    <sprite id="742" name="Biddybud" notes="Tsuru port (code/sprites/biddybud.cpp): a flying bug that hovers in place or follows a movement controller, or (Behaviour: Walking) walks the ground like a slower Goombrat. Hurts the player on touch; stomping, a Star, fireballs, iceballs, ground pounds, slides, propeller drills and thrown objects defeat it. Needs romfs/Model/tenten_w.Nin_NX_NVN.szs (Tsuru's model)." files="tenten_w">
+        <list nybble="5" title="Colour" comment="Frame of the tenten_w model's 'bud' texture-pattern animation." category="behavior">
+            <entry value="0">Red</entry>
+            <entry value="1">Yellow</entry>
+            <entry value="2">Green</entry>
+            <entry value="3">Blue</entry>
+            <entry value="4">Pink</entry>
+        </list>
+        <list nybble="6" title="Behaviour" comment="Flying hovers in place or follows the movement controller below. Walking moves along the ground like a Goombrat, slower, turning at walls and ledges; it ignores the movement settings." category="behavior">
+            <entry value="0">Flying</entry>
+            <entry value="1">Walking</entry>
+        </list>
+        <!-- MovementHandler::getMaskForMovementType (0x606AFC14): types 0-11 index the mask
+             table at 0x60B08668 (0, then 1 << (type - 1)); 12 and up give mask 0. Names 1-4
+             are codedx's MovementHandler::MovementType. -->
+        <list nybble="19-20" title="Movement Type" comment="Flying only: which kind of movement controller to link to. None keeps it hovering in place." category="movement">
+            <entry value="0">None (hovers in place)</entry>
+            <entry value="1">Rotation</entry>
+            <entry value="2">Bolt</entry>
+            <entry value="3">Path</entry>
+            <entry value="4">Back and forth</entry>
+            <entry value="5">Controller type 5</entry>
+            <entry value="6">Controller type 6</entry>
+            <entry value="7">Controller type 7</entry>
+            <entry value="8">Controller type 8</entry>
+            <entry value="9">Controller type 9</entry>
+            <entry value="10">Controller type 10</entry>
+            <entry value="11">Controller type 11</entry>
+        </list>
+        <value nybble="21-22" title="Movement ID" id_type="movement" category="movement" comment="Must match the Movement ID of a controller in this level." />
+    </sprite>
+
+    <!-- 743-757: Tsuru ports (code/sprites/*.cpp). Tsuru's "nybble 1/2" settings read eventId1, which is
+         nybbles 3-4 on Deluxe; nybble 5 = settings1 >> 28, 6 = >> 24, 7 = >> 20, 8 = >> 16. -->
+    <sprite id="743" name="Angry Grrrol" notes="Tsuru port (code/sprites/angry_grrrol.cpp): a spiked wheel that rolls after the nearest player, speeding up toward them. Only a Star gets past its spikes (and does not defeat it); fireballs and iceballs vanish on it. Needs romfs/Model/guruguru.Nin_NX_NVN.szs." files="guruguru">
+        <value nybble="3" title="Top Speed" comment="0.25 * (value + 1) units a frame. 0 is the slowest." category="behavior" />
+    </sprite>
+
+    <sprite id="744" name="Basalt Bones" notes="Tsuru port (code/sprites/basalt_bones.cpp): a lava Dry Bones mini-boss. Its bones fly out of the ground and assemble; it paces 8 tiles either side of where it is placed and throws fireballs. A stomp or ground pound scatters it, and it reassembles; three stomps defeat it. Stars, fireballs and everything else do nothing. Place it above lava. If the zone's Lava has Giant Waves on, the waves swell while its bones rise and settle once it assembles. Needs romfs/Model/laron.Nin_NX_NVN.szs." files="laron">
+        <value nybble="1-2" title="Defeat Event ID" id_type="event" category="events" comment="Turned on when it is defeated (open a door, spawn the goal ...). 0 = none." />
+    </sprite>
+
+    <sprite id="745" name="Para-Bones" notes="Tsuru port (code/sprites/para_bones.cpp): a winged Dry Bones that flies up and down. Stomping, a Star, iceballs, ground pounds and propeller drills knock its wings off and it lands as a normal Dry Bones; slides and thrown objects defeat it outright. Fireballs vanish on it. Needs romfs/Model/nokonokoB.Nin_NX_NVN.szs and wing.Nin_NX_NVN.szs (and the retail karon)." files="nokonokoB,wing,karon">
+        <value nybble="5" title="Flight Distance" comment="How far it flies, in tiles. 0 hovers in place." category="behavior" />
+        <value nybble="6" title="Wait Time" comment="How long it waits at each end, in half seconds." category="behavior" />
+        <checkbox nybble="7" title="Starts Rising" comment="Starts by flying up instead of down." category="behavior" />
+    </sprite>
+
+    <sprite id="746" name="Cataquack" notes="Tsuru port (code/sprites/cataquack.cpp): a duck that walks back and forth, turning at walls, and charges a player in front of it (8 tiles ahead, 6 up or down). It never hurts: touching it flings the player (or Yoshi) 8 tiles into the air. Needs romfs/Model/poihana.Nin_NX_NVN.szs." files="poihana">
+    </sprite>
+
+    <sprite id="747" name="Flaptor" notes="Tsuru port (code/sprites/flaptor.cpp): a bird that hovers or patrols, then dives at a player within 5 tiles below it, lands and takes off again. Stomping defeats it; touching it hurts. Needs romfs/Model/mokinger.Nin_NX_NVN.szs." files="mokinger">
+        <value nybble="3" title="Patrol Distance" comment="Horizontal/Vertical only: how far it flies either side of its start, in tiles." category="behavior" />
+        <list nybble="4" title="Movement" comment="Stationary turns to face the player. Any other value removes it." category="behavior">
+            <entry value="0">Stationary</entry>
+            <entry value="1">Horizontal</entry>
+            <entry value="2">Vertical</entry>
+        </list>
+    </sprite>
+
+    <sprite id="748" name="Floaty Goomba" notes="Tsuru port (code/sprites/floaty_goomba.cpp): a Goomba riding a float that bobs in the air and drifts toward a nearby player. Stomp the Goomba and the float stays behind: it bounces players up, and a ground pound pops it. Needs romfs/Model/ukibofloat.Nin_NX_NVN.szs (and the retail kuribo)." files="ukibofloat,kuribo">
+        <checkbox nybble="3" title="Float Only" comment="Just the float, a bouncy cloud to jump on; no Goomba." category="behavior" />
+    </sprite>
+
+    <sprite id="749" name="Gushen" notes="Tsuru port (code/sprites/gushen.cpp): a water spout that rises for 100 frames every 160; its spray column hurts players. Stomping defeats it. Tsuru's Gushen is unfinished: like Tsuru's it is drawn as a Star Coin." files="star_coin">
+    </sprite>
+
+    <sprite id="750" name="Jumbo Ray" notes="Tsuru port (code/sprites/jumbo_ray.cpp): a giant ray that glides right in long waves; its back is a 4-tile platform to ride. Tsuru's Jumbo Ray is unfinished: like Tsuru's it is drawn as a Star Coin." files="star_coin">
+    </sprite>
+
+    <!-- peepa.cpp: platform = eventId1 & 0xF, PlatformModel::Type (0 wood, 1 stone, 3 bolt, 7 snowy wood, 8 cloud) -->
+    <sprite id="751" name="Peepa" notes="Tsuru port (code/sprites/peepa.cpp): a ghost that follows a movement controller. With a platform it carries a 4-tile ledge (2 tiles for the cloud) you can stand on, and never hurts. Without one it hurts on touch; only a Star or Yoshi's fireballs defeat it. Needs romfs/Model/teren.Nin_NX_NVN.szs (the platforms are the retail lift_han_* models)." files="teren,lift_han_sky,lift_han_spin,lift_han_stone,lift_han_wood">
+        <checkbox nybble="3" title="Carries a Platform" comment="Carries the platform below." category="behavior" />
+        <list nybble="4" title="Platform" comment="Any other value means no platform." category="behavior">
+            <entry value="0">Wood</entry>
+            <entry value="1">Stone</entry>
+            <entry value="3">Bolt</entry>
+            <entry value="7">Snowy wood</entry>
+            <entry value="8">Cloud</entry>
+        </list>
+        <list nybble="19-20" title="Movement Type" comment="Which kind of movement controller to link to." category="movement">
+            <entry value="0">None (stays in place)</entry>
+            <entry value="1">Rotation</entry>
+            <entry value="2">Bolt</entry>
+            <entry value="3">Path</entry>
+            <entry value="4">Back and forth</entry>
+        </list>
+        <value nybble="21-22" title="Movement ID" id_type="movement" category="movement" comment="Must match the Movement ID of a controller in this level." />
+    </sprite>
+
+    <sprite id="752" name="Piranha Sprout" notes="Tsuru port (code/sprites/piranha_sprout.cpp): a small plant that lobs a seed bomb in an arc toward the player every 6 seconds. Stomping defeats it. Needs romfs/Model/nukunuku.Nin_NX_NVN.szs and nukubomb.Nin_NX_NVN.szs." files="nukunuku,nukubomb">
+        <checkbox nybble="3" title="Upside Down" comment="Hangs from a ceiling; the bombs arc downward." category="behavior" />
+    </sprite>
+
+    <sprite id="753" name="Poison Piranha" notes="Tsuru port (code/sprites/poison_piranha.cpp): a Piranha Plant that turns to face the player and spits a poison ball every 3 seconds; each ball leaves a poison puddle that lasts 10 seconds. Needs romfs/Model/poisball.Nin_NX_NVN.szs and e_poison.Nin_NX_NVN.szs (and the retail pakkun)." files="pakkun,poisball,e_poison">
+    </sprite>
+
+    <sprite id="754" name="Scuttlebug" notes="Tsuru port (code/sprites/scuttlebug.cpp): a spider on a thread that lowers and raises itself. Stomping defeats it, as do a Star, fireballs, iceballs, slides, ground pounds and thrown objects. Needs romfs/Model/gasagoso.Nin_NX_NVN.szs." files="gasagoso">
+        <value nybble="5" title="Lower Distance" comment="How far it lowers, in tiles. 0 hangs still." category="behavior" />
+        <value nybble="6" title="Wait Time" comment="How long it waits at each end, in half seconds." category="behavior" />
+    </sprite>
+
+    <sprite id="755" name="Sting Bee" notes="Tsuru port (code/sprites/stingby.cpp): a bee that patrols 4 tiles either side of its start, notices a player within 5.5 tiles and charges after them. Stomping defeats it, and Yoshi can eat it. Follow the player makes it chase like a Deep Cheep: it flies straight at them, up and down too, and does not give up. Needs romfs/Model/hacchin000.Nin_NX_NVN.szs." files="hacchin000">
+        <checkbox nybble="13" title="Follow the player" comment="Once it notices a player it flies straight at them, up and down too, and does not give up. Without this it only chases left and right." category="behavior" />
+        <value nybble="14" title="Speed" comment="0 = default. Otherwise value x 0.25 of the default: 4 = the same, 8 = twice as fast, 2 = half. Works with or without Follow the player." category="behavior" />
+    </sprite>
+
+    <sprite id="756" name="Falling Chestnut" notes="Tsuru port (code/sprites/falling_chestnut.cpp): a spiky chestnut that drops when a player walks within 3 tiles of under it, then breaks up a second after landing. It hurts on touch and cannot be defeated. Needs romfs/Model/iga_kuribo.Nin_NX_NVN.szs." files="iga_kuribo">
+    </sprite>
+
+    <sprite id="757" name="Giant Skewer" notes="Tsuru port (code/sprites/giant_skewer.cpp): a huge spiked pillar that waits 3 seconds, slams down, rests 2 seconds, then pulls back up. Hurts on touch; a Star player is knocked back. Place it above where it should slam. Needs romfs/Model/daikonbouBig.Nin_NX_NVN.szs." files="daikonbouBig">
+        <value nybble="5" title="Slam Distance" comment="How far it slams down, in steps of 108 tiles. 0 does not move." category="behavior" />
+    </sprite>
+
+    <!-- 758-769: Tsuru block / object ports (code/sprites/*.cpp). The Switch and Triple Blocks are
+         solid blocks of their own (no BlockBase), hit from below. -->
+    <sprite id="758" name="Beep Block" notes="Tsuru port (code/sprites/beep_block.cpp): a red or blue block, solid and visible only while its colour is on. The colours swap every 4 seconds; every level starts on blue. Needs romfs/Model/beep_red, beep_blue, beep_red_hollow, beep_blue_hollow.Nin_NX_NVN.szs." files="beep_red,beep_blue,beep_red_hollow,beep_blue_hollow">
+        <list nybble="3" title="Colour" category="behavior">
+            <entry value="0">Red</entry>
+            <entry value="1">Blue</entry>
+        </list>
+    </sprite>
+
+    <sprite id="759" name="Red-Blue Block" notes="Tsuru port (code/sprites/red_blue_block.cpp): solid and visible only while the Switch Block state matches its colour. The state lasts while the game runs (it starts red at boot). Needs romfs/Model/block_red, block_blue, block_red_hollow, block_blue_hollow.Nin_NX_NVN.szs." files="block_red,block_blue,block_red_hollow,block_blue_hollow">
+        <list nybble="3" title="Colour" category="behavior">
+            <entry value="0">Red</entry>
+            <entry value="1">Blue</entry>
+        </list>
+    </sprite>
+
+    <sprite id="760" name="Switch Block" notes="Tsuru port (code/sprites/switch_block.cpp): hit it from below, ground-pound it or slide a shell into it to flip every Red-Blue Block between red and blue. It can be hit any number of times. Needs romfs/Model/block_on, block_off.Nin_NX_NVN.szs." files="block_on,block_off">
+    </sprite>
+
+    <sprite id="761" name="Switch Block Event Activator" notes="Tsuru port (code/sprites/switch_block_event.cpp): turns an event on once the Switch Block state is the colour it waits for.">
+        <value nybble="3-4" title="Event ID" id_type="event" category="events" comment="Turned on when the state matches. 0 = none." />
+        <list nybble="1" title="Colour" category="behavior">
+            <entry value="0">Red</entry>
+            <entry value="1">Blue</entry>
+        </list>
+    </sprite>
+
+    <sprite id="762" name="Triple Block" notes="Tsuru port (code/sprites/triple_block.cpp): a 3-tile ?-block, placed by its left tile. Hit it from below for its contents plus a coin out of each side. The contents work like a ?-block's, custom power-ups 21-24 included; vines, springs and Yoshi eggs are not given by this block. Needs romfs/Model/blocktripa, blocktripb, blocktripc.Nin_NX_NVN.szs." files="blocktripa,blocktripb,blocktripc">
+        <list nybble="4" title="Look" category="behavior">
+            <entry value="0">Standard</entry>
+            <entry value="1">Underground</entry>
+            <entry value="2">Lava</entry>
+            <entry value="3">Lava (second pattern)</entry>
+        </list>
+        <checkbox nybble="13" title="Extended contents (+16)" comment="Adds 16 to the contents (bit 28 of settings2). Contents 16 is the Acorn; 21 is the Hammer Flower, 22 the P-Acorn, 23 the Blue Shell, 24 the Poison Mushroom. 25-31 are unused by the game and can be claimed by mods (framework/items)." category="behavior" />
+        <list nybble="20" title="Contains" comment="What it gives (as a ?-block's contents), plus a coin out of each side" category="behavior" requirednybble="13" requiredval="0">
+            <entry value="0">Nothing</entry>
+            <entry value="1">1 coin</entry>
+            <entry value="2">Fire Flower</entry>
+            <entry value="3">Fire Flower</entry>
+            <entry value="4">Propeller Mushroom</entry>
+            <entry value="5">Penguin Suit</entry>
+            <entry value="6">Mini mushroom</entry>
+            <entry value="7">Star</entry>
+            <entry value="8">Continuous star</entry>
+            <entry value="9">Yoshi egg (not in this block)</entry>
+            <entry value="10">10-Coin</entry>
+            <entry value="11">1-UP</entry>
+            <entry value="12">Vine (not in this block)</entry>
+            <entry value="13">Spring (not in this block)</entry>
+            <entry value="14">Super mushroom (if small)</entry>
+            <entry value="15">Ice flower</entry>
+        </list>
+        <list nybble="20" title="Contains (extended)" comment="Contents 16-31. 21 needs hammer_suit, 22 p_acorn, 23 shell_suit; an unregistered 22-31 makes the game read past its contents table." category="behavior" requirednybble="13" requiredval="1">
+            <entry value="0">16: Acorn Mushroom</entry>
+            <entry value="1">17: Super Crown (1 player; coin otherwise)</entry>
+            <entry value="2">18: Coin or Mushroom (game decides)</entry>
+            <entry value="3">19: Acorn Mushroom (variant)</entry>
+            <entry value="4">20: Yoshi egg (not in this block)</entry>
+            <entry value="5">21: Hammer Flower</entry>
+            <entry value="6">22: P-Acorn</entry>
+            <entry value="7">23: Blue Shell</entry>
+            <entry value="8">24: Poison Mushroom</entry>
+            <entry value="9">25: (free for mods)</entry>
+            <entry value="10">26: (free for mods)</entry>
+            <entry value="11">27: (free for mods)</entry>
+            <entry value="12">28: (free for mods)</entry>
+            <entry value="13">29: (free for mods)</entry>
+            <entry value="14">30: (free for mods)</entry>
+            <entry value="15">31: (free for mods)</entry>
+        </list>
+    </sprite>
+
+    <sprite id="763" name="Music Note" notes="Tsuru port (code/sprites/music_note.cpp): hidden until its Music Note Manager (the clef) is touched; collect every note before time runs out. Needs romfs/Model/note.Nin_NX_NVN.szs." files="note">
+        <value nybble="3-4" title="Manager ID" category="behavior" comment="The Music Note Manager it belongs to." />
+        <value nybble="1" title="Pitch" category="behavior" comment="The note it plays (0-15)." />
+        <list nybble="19-20" title="Movement Type" comment="Which kind of movement controller to link to." category="movement">
+            <entry value="0">None (stays in place)</entry>
+            <entry value="1">Rotation</entry>
+            <entry value="2">Bolt</entry>
+            <entry value="3">Path</entry>
+            <entry value="4">Back and forth</entry>
+        </list>
+        <value nybble="21-22" title="Movement ID" id_type="movement" category="movement" comment="Must match the Movement ID of a controller in this level." />
+    </sprite>
+
+    <sprite id="764" name="Music Note Manager" notes="Tsuru port (code/sprites/music_note.cpp): the clef. Touch it and its notes appear; collect them all in time for the reward. Under 3 seconds left the notes flicker. Needs romfs/Model/clef.Nin_NX_NVN.szs." files="clef">
+        <value nybble="3-4" title="ID" category="behavior" comment="Its notes use this as their Manager ID." />
+        <value nybble="1-2" title="Notes to Collect" category="behavior" />
+        <list nybble="5" title="Reward" category="behavior">
+            <entry value="0">Mushroom</entry>
+            <entry value="1">Fire Flower</entry>
+            <entry value="2">Ice Flower</entry>
+            <entry value="3">Mini Mushroom</entry>
+            <entry value="4">Propeller Mushroom</entry>
+            <entry value="5">Penguin Suit</entry>
+            <entry value="6">Acorn</entry>
+            <entry value="7">1-Up</entry>
+            <entry value="8">3-Up Moon</entry>
+            <entry value="9">Star Coin 1</entry>
+            <entry value="10">Star Coin 2</entry>
+            <entry value="11">Star Coin 3</entry>
+        </list>
+        <value nybble="6-7" title="Time Limit" category="behavior" comment="Seconds. 0 = 5." />
+        <list nybble="19-20" title="Movement Type" comment="Which kind of movement controller to link to." category="movement">
+            <entry value="0">None (stays in place)</entry>
+            <entry value="1">Rotation</entry>
+            <entry value="2">Bolt</entry>
+            <entry value="3">Path</entry>
+            <entry value="4">Back and forth</entry>
+        </list>
+        <value nybble="21-22" title="Movement ID" id_type="movement" category="movement" comment="Must match the Movement ID of a controller in this level." />
+    </sprite>
+
+    <sprite id="765" name="Star Coin Shard" notes="Tsuru port (code/sprites/star_coin_shard.cpp): one shard of a Star Coin. Needs romfs/Model/star_shard.Nin_NX_NVN.szs." files="star_shard">
+        <value nybble="3" title="Manager ID" category="behavior" comment="The Star Coin Shard Manager it belongs to." />
+    </sprite>
+
+    <sprite id="766" name="Star Coin Shard Manager" notes="Tsuru port (code/sprites/star_coin_shard.cpp): when every shard with its ID is collected, a Star Coin appears here.">
+        <value nybble="3" title="ID" category="behavior" comment="Its shards use this as their Manager ID." />
+        <value nybble="4" title="Shards to Collect" category="behavior" />
+        <list nybble="9" title="Star Coin" category="behavior" comment="Which of the level's Star Coins appears (passed on as the Star Coin's own setting).">
+            <entry value="0">Star Coin 1</entry>
+            <entry value="1">Star Coin 2</entry>
+            <entry value="2">Star Coin 3</entry>
+        </list>
+    </sprite>
+
+    <sprite id="767" name="Minecart" notes="Tsuru port (code/sprites/minecart.cpp, early in Tsuru too): rides a path from node to node at each node's speed, carrying player 1 on top until the last node. Needs romfs/Model/truck.Nin_NX_NVN.szs." files="truck">
+        <value nybble="3" title="Path ID" category="movement" comment="The path to ride (in this area)." />
+    </sprite>
+
+    <sprite id="768" name="Helical Bar" notes="Tsuru port (code/sprites/helical_bar.cpp): a firebar whose 1-3 bars curve into a spiral. Its fireballs burn the player (fire damage). Uses the retail firebar_L and center_firebar models." files="firebar_L,center_firebar">
+        <list nybble="3" title="Bars" category="behavior">
+            <entry value="0">One</entry>
+            <entry value="1">Two</entry>
+            <entry value="2">Three</entry>
+        </list>
+        <checkbox nybble="4" title="Breathing Spiral" category="behavior" comment="The spiral tightens and loosens." />
+        <value nybble="2" title="Spiral Strength" category="behavior" comment="0-15 (+1)." />
+        <checkbox nybble="1" title="Does Not Turn" category="behavior" />
+    </sprite>
+
+    <sprite id="769" name="One-Way Platform" notes="Tsuru port (code/sprites/one_way_platform.cpp): a platform solid from one side only, which turns around while its event is on. Uses the retail lift_han_* models." files="lift_han_wood,lift_han_stone,lift_han_spin">
+        <value nybble="5" title="Width" category="behavior" comment="In tiles (2 minimum)." />
+        <list nybble="6" title="Look" category="behavior">
+            <entry value="0">Wood</entry>
+            <entry value="1">Stone</entry>
+            <entry value="3">Bolt</entry>
+            <entry value="7">Snowy wood</entry>
+        </list>
+        <list nybble="7" title="Solid Side" category="behavior">
+            <entry value="0">Up</entry>
+            <entry value="1">Down</entry>
+            <entry value="2">Right</entry>
+            <entry value="3">Left</entry>
+        </list>
+        <value nybble="3-4" title="Turn-Around Event" id_type="event" category="events" comment="While on, the platform faces the other way. 0 = none." />
+        <list nybble="19-20" title="Movement Type" comment="Which kind of movement controller to link to." category="movement">
+            <entry value="0">None (stays in place)</entry>
+            <entry value="1">Rotation</entry>
+            <entry value="2">Bolt</entry>
+            <entry value="3">Path</entry>
+            <entry value="4">Back and forth</entry>
+        </list>
+        <value nybble="21-22" title="Movement ID" id_type="movement" category="movement" comment="Must match the Movement ID of a controller in this level." />
+    </sprite>
+
+    <!-- 770-775: Tsuru level controllers (code/sprites/tsuru_controllers.cpp). Invisible in game. -->
+    <sprite id="770" name="Wind Generator" notes="Tsuru port: pushes every player one way while on. Unlike Tsuru's, it pushes players only (not enemies).">
+        <list nybble="1" title="Direction" category="behavior">
+            <entry value="0">Right</entry>
+            <entry value="1">Left</entry>
+            <entry value="2">Up</entry>
+            <entry value="3">Down</entry>
+        </list>
+        <value nybble="2" title="Strength" category="behavior" comment="0-15: (n+1) x 0.1 units a frame." />
+        <value nybble="3-4" title="Event" id_type="event" category="events" comment="On while this event is on. 0 = always on." />
+    </sprite>
+
+    <sprite id="771" name="Layer Changer" notes="Tsuru port: moves every player to another layer when its event turns on.">
+        <value nybble="3-4" title="Event" id_type="event" category="events" comment="Triggers when this event turns on." />
+        <list nybble="5" title="Layer" category="behavior">
+            <entry value="0">Layer 1</entry>
+            <entry value="1">Layer 2</entry>
+            <entry value="2">Layer 0</entry>
+        </list>
+    </sprite>
+
+    <sprite id="772" name="Power-up Switcher" notes="Tsuru port: gives every player a power-up when its event turns on, then removes itself.">
+        <value nybble="1" title="Event" id_type="event" category="events" comment="1-15." />
+        <list nybble="2" title="Power-up" category="behavior">
+            <entry value="0">Small</entry>
+            <entry value="1">Super Mushroom</entry>
+            <entry value="2">Fire Flower</entry>
+            <entry value="3">Mini Mushroom</entry>
+            <entry value="4">Propeller Mushroom</entry>
+            <entry value="5">Penguin Suit</entry>
+            <entry value="6">Ice Flower</entry>
+            <entry value="7">Super Acorn</entry>
+            <entry value="8">P-Acorn</entry>
+        </list>
+    </sprite>
+
+    <sprite id="773" name="Sound Player" notes="Tsuru port: plays a sound each time its event turns on. The sound is the Deluxe sound archive item number (not Tsuru's Wii U ID).">
+        <value nybble="1-3" title="Sound" category="behavior" comment="Deluxe sound archive item number." />
+        <value nybble="4" title="Event" id_type="event" category="events" comment="1-15." />
+    </sprite>
+
+    <sprite id="774" name="Solid" notes="Tsuru port: an invisible solid box. Corners in units from the sprite, each 1-16 with a sign.">
+        <value nybble="1" title="Top-left X" category="behavior" comment="n+1 units." />
+        <checkbox nybble="2" title="Top-left X negative" category="behavior" />
+        <value nybble="3" title="Top-left Y" category="behavior" comment="n+1 units." />
+        <checkbox nybble="4" title="Top-left Y negative" category="behavior" />
+        <value nybble="5" title="Bottom-right X" category="behavior" comment="n+1 units." />
+        <checkbox nybble="6" title="Bottom-right X negative" category="behavior" />
+        <value nybble="7" title="Bottom-right Y" category="behavior" comment="n+1 units." />
+        <checkbox nybble="8" title="Bottom-right Y negative" category="behavior" />
+        <value nybble="9" title="Rotation" category="behavior" comment="11.25 degrees each." />
+    </sprite>
+
+    <sprite id="775" name="Liquid Overlay" notes="Tsuru port: inside a location, pushes the players like a current, or hurts them every 4 seconds.">
+        <value nybble="5" title="Location ID" id_type="location" category="behavior" />
+        <list nybble="6" title="Effect" category="behavior">
+            <entry value="0">Ice (freezes)</entry>
+            <entry value="1">Electric</entry>
+            <entry value="2">Poison</entry>
+            <entry value="3">Fire</entry>
+            <entry value="4">Current left</entry>
+            <entry value="5">Current right</entry>
+        </list>
+    </sprite>
+
+    <!-- 776-777: Tsuru time controls (code/sprites/time_controls.cpp). -->
+    <sprite id="776" name="Time Clock" notes="Tsuru port: a spinning clock that adds time to the level timer when touched (or takes it away). The timer never drops below 3. Needs romfs/Model/timeclock.Nin_NX_NVN.szs." files="timeclock">
+        <value nybble="10-12" title="Time" category="behavior" comment="Timer units (0-4095)." />
+        <checkbox nybble="5" title="Take time away" category="behavior" />
+    </sprite>
+
+    <sprite id="777" name="Time Changer" notes="Tsuru port: when its event turns on, adds time to the level timer, takes it away, or sets it. Invisible.">
+        <value nybble="3-4" title="Event" id_type="event" category="events" comment="Triggers when this event turns on." />
+        <list nybble="8" title="Mode" category="behavior">
+            <entry value="0">Add</entry>
+            <entry value="1">Take away</entry>
+            <entry value="2">Set</entry>
+        </list>
+        <value nybble="13-15" title="Time" category="behavior" comment="Timer units (0-4095)." />
+        <checkbox nybble="11" mask="1" title="Repeat" category="behavior" comment="Triggers again each time the event turns on (otherwise only once)." />
+    </sprite>
+
+    <sprite id="778" name="Physics Modifier" notes="Tsuru port (code/sprites/tsuru_controllers.cpp): low gravity for every player while its event is on. Every form falls slower and jumps higher. Invisible.">
+        <value nybble="3-4" title="Event" id_type="event" category="events" comment="Low gravity while this event is on. 0 = always on." />
+        <value nybble="5" title="Gravity Left" category="behavior" comment="0 = half (Tsuru's low gravity); 1-15 = n/16 of normal gravity." />
+    </sprite>
+
+    <sprite id="779" name="Wave Platform" notes="Tsuru port (code/sprites/wave_platform.cpp): a platform that floats on wavy liquid, rising, falling and tilting with the waves. It only moves where the level has waves (for now, the game's own wavy lava); elsewhere it stays where it was placed. Uses the retail lift_han_* models." files="lift_han_wood,lift_han_stone,lift_han_spin">
+        <value nybble="12" title="Width" category="behavior" comment="In tiles (2 minimum)." />
+        <list nybble="6" title="Look" category="behavior">
+            <entry value="0">Wood</entry>
+            <entry value="1">Stone</entry>
+            <entry value="3">Bolt</entry>
+            <entry value="7">Snowy wood</entry>
+        </list>
+    </sprite>
+
+    <sprite id="780" name="Model Loader" notes="Tsuru port (code/sprites/model_loader.cpp): shows a model as decoration, optionally animated and moving. The model is an entry of the table at the top of model_loader.cpp (archive, model, skeletal animation); add your own there and list the archive in its PROFILE_RESOURCES. Entry 1 is a wooden platform piece. Tsuru's parallax layer is not ported: the depth only moves the model." files="lift_han_wood">
+        <value nybble="5-6" title="Model Entry" category="behavior" comment="1-based entry of the model table in model_loader.cpp (0 shows nothing)." />
+        <list nybble="4" title="Scale" category="behavior">
+            <entry value="0">1x</entry>
+            <entry value="1">0.25x</entry>
+            <entry value="2">0.5x</entry>
+            <entry value="3">0.75x</entry>
+            <entry value="4">1.25x</entry>
+            <entry value="5">1.5x</entry>
+            <entry value="6">1.75x</entry>
+            <entry value="7">2x</entry>
+            <entry value="8">2.5x</entry>
+            <entry value="9">3x</entry>
+            <entry value="10">4x</entry>
+            <entry value="11">5x</entry>
+            <entry value="12">6x</entry>
+            <entry value="13">7x</entry>
+            <entry value="14">8x</entry>
+            <entry value="15">10x</entry>
+        </list>
+        <checkbox nybble="1" title="Set Depth" category="behavior" comment="Use the depth below instead of the default." />
+        <value nybble="2" title="Depth" category="behavior" comment="z = -250 + 70 per step (0 is far behind, 15 is in front)." />
+        <list nybble="19-20" title="Movement Type" comment="Which kind of movement controller to link to." category="movement">
+            <entry value="0">None (stays in place)</entry>
+            <entry value="1">Rotation</entry>
+            <entry value="2">Bolt</entry>
+            <entry value="3">Path</entry>
+            <entry value="4">Back and forth</entry>
+        </list>
+        <value nybble="21-22" title="Movement ID" id_type="movement" category="movement" comment="Must match the Movement ID of a controller in this level." />
+    </sprite>
+    <!-- weather.cpp: Rain, drawn by the snow's particle drawer -->
+    <sprite id="781" name="Rain" notes="Screen-wide rain: short, slightly tilted streaks drawn like the Snow Effect (code/sprites/weather.cpp). Place one per area; it follows the camera." files="env_snow">
+        <value nybble="5-6"   title="Drops" category="behavior" comment="Number of drops (0 = 220, at most 300)." />
+        <value nybble="7"     title="Tilt" category="behavior" comment="0 = 12 degrees, otherwise value x 4 degrees." />
+        <value nybble="8"     title="Speed" category="behavior" comment="0 = 10, otherwise value x 1.5 units per frame." />
+        <value nybble="9"     title="Length" category="behavior" comment="0 = 14, otherwise value x 3 units." />
+        <checkbox nybble="10" title="Behind the level" category="behavior" comment="Draws behind the level instead of in front." />
+        <value nybble="13-14" title="Red"   category="colour" comment="0-255. All four at 0 = pale blue-grey." />
+        <value nybble="15-16" title="Green" category="colour" comment="0-255." />
+        <value nybble="17-18" title="Blue"  category="colour" comment="0-255." />
+        <value nybble="19-20" title="Alpha" category="colour" comment="0-255 (default 150)." />
+    </sprite>
+
+    <!-- weather.cpp: Falling Leaves; texture romfs/Model/env_leaf (scripts/make_leaf_archive.py) -->
+    <sprite id="782" name="Falling Leaves" notes="Leaves drifting down across the screen, randomly red, orange or yellow (code/sprites/weather.cpp). Needs romfs/Model/env_leaf.Nin_NX_NVN.szs (scripts/make_leaf_archive.py). Place one per area; it follows the camera." files="env_leaf">
+        <value nybble="5-6"   title="Leaves" category="behavior" comment="Number of leaves (0 = 36, at most 150)." />
+        <value nybble="7"     title="Fall Speed" category="behavior" comment="0 = 0.7, otherwise value x 0.2 units per frame." />
+        <value nybble="8"     title="Size" category="behavior" comment="0 = 10, otherwise value x 2 units." />
+        <value nybble="9"     title="Wind" category="behavior" comment="0 = a light breeze to the right; otherwise (value - 8) x 0.15: below 8 blows left, above 8 right." />
+        <checkbox nybble="10" title="Behind the level" category="behavior" comment="Draws behind the level instead of in front." />
+        <list nybble="11" title="Colours" category="behavior">
+            <entry value="0">Autumn (red, orange, yellow)</entry>
+            <entry value="1">Green</entry>
+        </list>
+    </sprite>
+
+
+    <sprite id="148" name="Brick Block - Uses Lines" notes="A brick block that follows a line. Contents 21 is the Hammer Flower, 22 the P-Acorn, 23 the Blue Shell and 24 the Poison Mushroom (tick Extended contents).">
+		<checkbox nybble="8" title="Counter-Clockwise" comment="When checked, makes the ? block go counter clockwise." category="behavior" />
+		<value nybble="11" title="Unknown Value 11" />
+		<checkbox nybble="16" title="Faster Movement" comment="Ticking this would make the ? block move faster." category="behavior" />
+		<checkbox nybble="13" title="Extended contents (+16)" comment="Adds 16 to the contents (bit 28 of settings2). Contents 16 is the Acorn; 21 is the Hammer Flower, 22 the P-Acorn, 23 the Blue Shell, 24 the Poison Mushroom. 25-31 are unused by the game and can be claimed by mods (framework/items)." category="behavior" />
+		<list nybble="20" title="Contents" comment="Contents of the brick block." category="behavior">
+			<entry value="0">Nothing</entry>
+			<entry value="1">1 coin</entry>
+			<entry value="2">Fire flower</entry>
+			<entry value="3">Fire Flower</entry>
+			<entry value="4">Propeller Mushroom</entry>
+			<entry value="5">Penguin Suit</entry>
+			<entry value="6">Mini mushroom</entry>
+			<entry value="7">Star</entry>
+			<entry value="8">Continuous star</entry>
+			<entry value="9">Yoshi egg</entry>
+			<entry value="10">10-Coin</entry>
+			<entry value="11">1-UP</entry>
+			<entry value="12">Vine</entry>
+			<entry value="13">Spring</entry>
+			<entry value="14">Super mushroom (if small)</entry>
+			<entry value="15">Ice flower</entry>
+		</list>
+		<list nybble="20" title="Contents (extended)" comment="Contents 16-31. 21 needs the hammer_suit mod, 22 p_acorn, 23 shell_suit and 24 poison_mushroom; an unregistered 25-31 makes the game read past its contents table." category="behavior" requirednybble="13" requiredval="1">
+			<entry value="0">16: Acorn Mushroom</entry>
+			<entry value="1">17: Super Crown (1 player; coin otherwise)</entry>
+			<entry value="2">18: Coin or Mushroom (game decides)</entry>
+			<entry value="3">19: Acorn Mushroom (variant)</entry>
+			<entry value="4">20: Yoshi egg</entry>
+			<entry value="5">21: Hammer Flower</entry>
+			<entry value="6">22: P-Acorn</entry>
+			<entry value="7">23: Blue Shell</entry>
+			<entry value="8">24: Poison Mushroom</entry>
+			<entry value="9">25: (free for mods)</entry>
+			<entry value="10">26: (free for mods)</entry>
+			<entry value="11">27: (free for mods)</entry>
+			<entry value="12">28: (free for mods)</entry>
+			<entry value="13">29: (free for mods)</entry>
+			<entry value="14">30: (free for mods)</entry>
+			<entry value="15">31: (free for mods)</entry>
+		</list>
+	</sprite>
+
+    <sprite id="422" name="Big Brick Block">
+		<value nybble="14" title="Unknown Value 14" />
+		<checkbox nybble="13" title="Extended contents (+16)" comment="Adds 16 to the contents (bit 28 of settings2). Contents 16 is the Acorn; 21 is the Hammer Flower, 22 the P-Acorn, 23 the Blue Shell, 24 the Poison Mushroom. 25-31 are unused by the game and can be claimed by mods (framework/items)." category="behavior" />
+		<list nybble="20" title="Contains" comment="Value 10: Breaks when hit by shell from the sides. " category="behavior">
+			<entry value="0">Nothing</entry>
+			<entry value="1">One Coin</entry>
+			<entry value="2">Fire Flower</entry>
+			<entry value="3">Fire Flower</entry>
+			<entry value="4">Propeller Suit</entry>
+			<entry value="5">Penguin Suit</entry>
+			<entry value="6">Mini Mushroom</entry>
+			<entry value="7">Star</entry>
+			<entry value="8">UNUSED</entry>
+			<entry value="9">Yoshi</entry>
+			<entry value="10">10 coins</entry>
+			<entry value="11">1-up</entry>
+			<entry value="12">Vine</entry>
+			<entry value="13">Spring</entry>
+			<entry value="14">Mushroom if small</entry>
+			<entry value="15">Ice Flower</entry>
+		</list>
+		<list nybble="20" title="Contains (extended)" comment="Contents 16-31. 21 needs the hammer_suit mod, 22 p_acorn, 23 shell_suit and 24 poison_mushroom; an unregistered 25-31 makes the game read past its contents table." category="behavior" requirednybble="13" requiredval="1">
+			<entry value="0">16: Acorn Mushroom</entry>
+			<entry value="1">17: Super Crown (1 player; coin otherwise)</entry>
+			<entry value="2">18: Coin or Mushroom (game decides)</entry>
+			<entry value="3">19: Acorn Mushroom (variant)</entry>
+			<entry value="4">20: Yoshi egg</entry>
+			<entry value="5">21: Hammer Flower</entry>
+			<entry value="6">22: P-Acorn</entry>
+			<entry value="7">23: Blue Shell</entry>
+			<entry value="8">24: Poison Mushroom</entry>
+			<entry value="9">25: (free for mods)</entry>
+			<entry value="10">26: (free for mods)</entry>
+			<entry value="11">27: (free for mods)</entry>
+			<entry value="12">28: (free for mods)</entry>
+			<entry value="13">29: (free for mods)</entry>
+			<entry value="14">30: (free for mods)</entry>
+			<entry value="15">31: (free for mods)</entry>
+		</list>
+	</sprite>
+
+    <sprite id="526" name="Screen-following Brick Block">
+		<checkbox nybble="10" title="Z-Order" comment="Makes the sprite be on Layer 2." category="behavior" />
+		<checkbox nybble="13" title="Extended contents (+16)" comment="Adds 16 to the contents (bit 28 of settings2). Contents 16 is the Acorn; 21 is the Hammer Flower, 22 the P-Acorn, 23 the Blue Shell, 24 the Poison Mushroom. 25-31 are unused by the game and can be claimed by mods (framework/items)." category="behavior" />
+		<list nybble="20" title="Contains" comment="What the block contains." category="behavior">
+			<entry value="0">Nothing</entry>
+			<entry value="1">1 coin</entry>
+			<entry value="2">Fire flower</entry>
+			<entry value="3">Fire Flower</entry>
+			<entry value="4">Propeller Mushroom</entry>
+			<entry value="5">Penguin Suit</entry>
+			<entry value="6">Mini mushroom</entry>
+			<entry value="7">Star</entry>
+			<entry value="8">Continuous star</entry>
+			<entry value="9">Yoshi egg</entry>
+			<entry value="10">10-Coin</entry>
+			<entry value="11">1-UP</entry>
+			<entry value="12">Vine</entry>
+			<entry value="13">Spring</entry>
+			<entry value="14">Super mushroom (if small)</entry>
+			<entry value="15">Ice flower</entry>
+		</list>
+		<list nybble="20" title="Contains (extended)" comment="Contents 16-31. 21 needs the hammer_suit mod, 22 p_acorn, 23 shell_suit and 24 poison_mushroom; an unregistered 25-31 makes the game read past its contents table." category="behavior" requirednybble="13" requiredval="1">
+			<entry value="0">16: Acorn Mushroom</entry>
+			<entry value="1">17: Super Crown (1 player; coin otherwise)</entry>
+			<entry value="2">18: Coin or Mushroom (game decides)</entry>
+			<entry value="3">19: Acorn Mushroom (variant)</entry>
+			<entry value="4">20: Yoshi egg</entry>
+			<entry value="5">21: Hammer Flower</entry>
+			<entry value="6">22: P-Acorn</entry>
+			<entry value="7">23: Blue Shell</entry>
+			<entry value="8">24: Poison Mushroom</entry>
+			<entry value="9">25: (free for mods)</entry>
+			<entry value="10">26: (free for mods)</entry>
+			<entry value="11">27: (free for mods)</entry>
+			<entry value="12">28: (free for mods)</entry>
+			<entry value="13">29: (free for mods)</entry>
+			<entry value="14">30: (free for mods)</entry>
+			<entry value="15">31: (free for mods)</entry>
+		</list>
+	</sprite>
+
+    <sprite id="704" name="Brick Block (2) - NSLU" notes="Maybe a there's a checkbox on a nybble to make this contain an acorn mushroom. Contents 21 is the Hammer Flower, 22 the P-Acorn, 23 the Blue Shell and 24 the Poison Mushroom (tick Extended contents).">
+		<value nybble="6" title="Unknown Value 6" />
+		<checkbox nybble="13" title="Extended contents (+16)" comment="Adds 16 to the contents (bit 28 of settings2). Contents 16 is the Acorn; 21 is the Hammer Flower, 22 the P-Acorn, 23 the Blue Shell, 24 the Poison Mushroom. 25-31 are unused by the game and can be claimed by mods (framework/items)." category="behavior" />
+		<list nybble="20" title="Contents" comment="What the brick block contains." category="behavior">
+			<entry value="0">Nothing</entry>
+			<entry value="1">1 coin</entry>
+			<entry value="2">Fire Flower</entry>
+			<entry value="3">Fire Flower</entry>
+			<entry value="4">Propeller Mushroom</entry>
+			<entry value="5">Penguin Suit</entry>
+			<entry value="6">Mini mushroom</entry>
+			<entry value="7">Star</entry>
+			<entry value="8">Continuous star</entry>
+			<entry value="9">Yoshi egg</entry>
+			<entry value="10">10-Coin</entry>
+			<entry value="11">1-UP</entry>
+			<entry value="12">Vine</entry>
+			<entry value="13">Spring</entry>
+			<entry value="14">Super mushroom (if small)</entry>
+			<entry value="15">Ice flower</entry>
+		</list>
+		<list nybble="20" title="Contents (extended)" comment="Contents 16-31. 21 needs the hammer_suit mod, 22 p_acorn, 23 shell_suit and 24 poison_mushroom; an unregistered 25-31 makes the game read past its contents table." category="behavior" requirednybble="13" requiredval="1">
+			<entry value="0">16: Acorn Mushroom</entry>
+			<entry value="1">17: Super Crown (1 player; coin otherwise)</entry>
+			<entry value="2">18: Coin or Mushroom (game decides)</entry>
+			<entry value="3">19: Acorn Mushroom (variant)</entry>
+			<entry value="4">20: Yoshi egg</entry>
+			<entry value="5">21: Hammer Flower</entry>
+			<entry value="6">22: P-Acorn</entry>
+			<entry value="7">23: Blue Shell</entry>
+			<entry value="8">24: Poison Mushroom</entry>
+			<entry value="9">25: (free for mods)</entry>
+			<entry value="10">26: (free for mods)</entry>
+			<entry value="11">27: (free for mods)</entry>
+			<entry value="12">28: (free for mods)</entry>
+			<entry value="13">29: (free for mods)</entry>
+			<entry value="14">30: (free for mods)</entry>
+			<entry value="15">31: (free for mods)</entry>
+		</list>
+		<value nybble="21-22" title="Movement ID" id_type="movement" category="movement" />
+	</sprite>
+
+    <sprite id="706" name="Pivotal-rotation-controlled Brick Block - NSLU 9-9">
+		<value nybble="6" title="Unknown Value 6" />
+		<checkbox nybble="13" title="Extended contents (+16)" comment="Adds 16 to the contents (bit 28 of settings2). Contents 16 is the Acorn; 21 is the Hammer Flower, 22 the P-Acorn, 23 the Blue Shell, 24 the Poison Mushroom. 25-31 are unused by the game and can be claimed by mods (framework/items)." category="behavior" />
+		<list nybble="20" title="Contents" comment="What the Brick Block contains." category="behavior">
+			<entry value="0">Nothing</entry>
+			<entry value="1">1 coin</entry>
+			<entry value="2">Fire Flower</entry>
+			<entry value="3">Fire Flower</entry>
+			<entry value="4">Propeller Mushroom</entry>
+			<entry value="5">Penguin Suit</entry>
+			<entry value="6">Mini mushroom</entry>
+			<entry value="7">Star</entry>
+			<entry value="8">Continuous star</entry>
+			<entry value="9">Yoshi egg</entry>
+			<entry value="10">10-Coin</entry>
+			<entry value="11">1-UP</entry>
+			<entry value="12">Vine</entry>
+			<entry value="13">Spring</entry>
+			<entry value="14">Super mushroom (if small)</entry>
+			<entry value="15">Ice flower</entry>
+		</list>
+		<list nybble="20" title="Contents (extended)" comment="Contents 16-31. 21 needs the hammer_suit mod, 22 p_acorn, 23 shell_suit and 24 poison_mushroom; an unregistered 25-31 makes the game read past its contents table." category="behavior" requirednybble="13" requiredval="1">
+			<entry value="0">16: Acorn Mushroom</entry>
+			<entry value="1">17: Super Crown (1 player; coin otherwise)</entry>
+			<entry value="2">18: Coin or Mushroom (game decides)</entry>
+			<entry value="3">19: Acorn Mushroom (variant)</entry>
+			<entry value="4">20: Yoshi egg</entry>
+			<entry value="5">21: Hammer Flower</entry>
+			<entry value="6">22: P-Acorn</entry>
+			<entry value="7">23: Blue Shell</entry>
+			<entry value="8">24: Poison Mushroom</entry>
+			<entry value="9">25: (free for mods)</entry>
+			<entry value="10">26: (free for mods)</entry>
+			<entry value="11">27: (free for mods)</entry>
+			<entry value="12">28: (free for mods)</entry>
+			<entry value="13">29: (free for mods)</entry>
+			<entry value="14">30: (free for mods)</entry>
+			<entry value="15">31: (free for mods)</entry>
+		</list>
+		<value nybble="21-22" title="Movement ID" comment="Use this to link the block to a movement controller." id_type="movement" category="movement" />
+	</sprite>
+
+    <!-- ===== Cheep Cheep family: movement binding (nybbles 19-22). Each sprite is restated
+         in full because Yaz0moto replaces a patched sprite outright. ===== -->
+
+<sprite id="101" name="Cheep Cheep" notes="Cheep-Cheep! Since 1989.">
+        <list nybble="5" title="Starting direction" category="behavior">
+            <entry value="0">Towards player</entry>
+            <entry value="8">Left</entry>
+        </list>
+        <value nybble="8" title="Swimming distance" comment="Value+2" category="behavior" />
+        <list bit="35-36" title="Swimming speed" category="behavior">
+            <entry value="0">Fastest</entry>
+            <entry value="2">Fast</entry>
+            <entry value="1">Slow</entry>
+            <entry value="3">Slowest</entry>
+        </list>
+        <list nybble="12" title="Type" comment="The distance of swim type 3 before turning around depends on nybble 8." category="behavior">
+            <entry value="0">Normal</entry>
+            <entry value="3">Turns around after a while</entry>
+            <entry value="9">Normal (45° Up)</entry>
+            <entry value="10">Normal (45° Down)</entry>
+        </list>
+        <value nybble="19-20" title="Movement Type" category="movement" comment="Shared movement system. 0 leaves the fish swimming on its own." />
+        <value nybble="21-22" title="Movement ID" id_type="movement" category="movement" comment="Attach to a movement controller, rotation controller or path." />
+    </sprite>
+    <sprite id="106" name="Cheep Cheep Spawn Location [UNUSED]" notes="Name translates to &quot;Pukupuku is (springing out)&quot;. Only seems able to spawn red Cheep Cheeps.">
+        <value nybble="8-9" title="Location ID" id_type="location" category="behavior" />
+        <value nybble="19-20" title="Movement Type" category="movement" comment="Shared movement system. 0 leaves the fish swimming on its own." />
+        <value nybble="21-22" title="Movement ID" id_type="movement" category="movement" comment="Attach to a movement controller, rotation controller or path." />
+    </sprite>
+    <sprite id="113" name="Medium-sized Cheep Cheep">
+        <list nybble="5" title="Starting direction" category="behavior">
+            <entry value="0">Towards player</entry>
+            <entry value="8">Left</entry>
+        </list>
+        <value nybble="8" title="Swimming distance" comment="Value+2" category="behavior" />
+        <list bit="35-36" title="Swimming speed" category="behavior">
+            <entry value="0">Fastest</entry>
+            <entry value="2">Fast</entry>
+            <entry value="1">Slow</entry>
+            <entry value="3">Slowest</entry>
+        </list>
+        <list nybble="12" title="Type" comment="The distance of swim type 3 before turning around depends on nybble 8." category="behavior">
+            <entry value="0">Normal</entry>
+            <entry value="3">Turns around after a while</entry>
+            <entry value="9">Normal (45° Up)</entry>
+            <entry value="10">Normal (45° Down)</entry>
+        </list>
+        <value nybble="19-20" title="Movement Type" category="movement" comment="Shared movement system. 0 leaves the fish swimming on its own." />
+        <value nybble="21-22" title="Movement ID" id_type="movement" category="movement" comment="Attach to a movement controller, rotation controller or path." />
+    </sprite>
+    <sprite id="114" name="Cheep Cheep Formation [UNUSED]" notes="Name translates to &quot;Pukupuku [Japanese name for Cheep Cheep] (formation)&quot;&#13;&#10;Doesn't form any type of group at all by itself.">
+        <value nybble="6" title="Unknown Value 6" />
+        <value nybble="7" title="Swim Speed" comment="Alters the swim speed. Makes the cheep-cheep slower." category="behavior" />
+        <value nybble="8" title="Unknown Value 8" />
+        <list nybble="9" title="Direction" category="behavior">
+            <entry value="0">Left</entry>
+            <entry value="1">Right</entry>
+        </list>
+        <value nybble="10" title="Row Amount" category="behavior" />
+        <value nybble="11" title="Row Length" comment="Value + 1." category="behavior" />
+        <list nybble="5" title="Formation Shape" category="behavior">
+            <entry value="0">CRASHES</entry>
+            <entry value="1">Arrow</entry>
+            <entry value="2">Arrow?</entry>
+            <entry value="3">Arrow?</entry>
+            <entry value="4">Arrow?</entry>
+        </list>
+        <value nybble="19-20" title="Movement Type" category="movement" comment="Shared movement system. 0 leaves the fish swimming on its own." />
+        <value nybble="21-22" title="Movement ID" id_type="movement" category="movement" comment="Attach to a movement controller, rotation controller or path." />
+    </sprite>
+    <sprite id="120" name="Spiny Cheep Cheep" notes="When a player is closer than 6 blocks to a spiny cheep, it starts chasing him until he is at least 16 blocks away from the spiny cheep.">
+        <value nybble="3-4" title="Event ID" comment="Does not follow player when this event is active" id_type="event" category="events" />
+        <value nybble="8" title="Distance" comment="The distance it travels before turning around" category="behavior" />
+        <list nybble="9" title="Speed" category="behavior">
+            <entry value="0">0.5</entry>
+            <entry value="1">0.25</entry>
+            <entry value="2">0.4</entry>
+            <entry value="3">0.15</entry>
+        </list>
+        <checkbox nybble="12" title="Always chase player" comment="If this is not checked, the spiny cheep only starts going after the player when the distance between the player and spiny cheep is less than 6 blocks." category="behavior" />
+        <value nybble="19-20" title="Movement Type" category="movement" comment="Shared movement system. 0 leaves the fish swimming on its own." />
+        <value nybble="21-22" title="Movement ID" id_type="movement" category="movement" comment="Attach to a movement controller, rotation controller or path." />
+    </sprite>
+    <sprite id="129" name="Jumping Cheep Cheep">
+        <list nybble="5" title="Direction" comment="The direction the cheep cheep jumps in." category="behavior">
+            <entry value="0">Right</entry>
+            <entry value="1">Left</entry>
+        </list>
+        <list nybble="6" title="Jumping Height" comment="Jumping height." category="behavior">
+            <entry value="0">High</entry>
+            <entry value="1">Medium</entry>
+            <entry value="2">Low</entry>
+        </list>
+        <value nybble="7" title="Delay" category="behavior" />
+        <checkbox nybble="12" title="Unknown Value 12" />
+        <value nybble="19-20" title="Movement Type" category="movement" comment="Shared movement system. 0 leaves the fish swimming on its own." />
+        <value nybble="21-22" title="Movement ID" id_type="movement" category="movement" comment="Attach to a movement controller, rotation controller or path." />
+    </sprite>
+    <sprite id="131" name="Jumping Cheep Cheep Spawn Area" notes="A cheep cheep that jumps out of the water when the player approaches a specific location.">
+        <value nybble="9" title="Location ID" comment="When the player is in this location, Cheep Cheeps will jump from below the screen." id_type="location" category="behavior" />
+        <value nybble="19-20" title="Movement Type" category="movement" comment="Shared movement system. 0 leaves the fish swimming on its own." />
+        <value nybble="21-22" title="Movement ID" id_type="movement" category="movement" comment="Attach to a movement controller, rotation controller or path." />
+    </sprite>
+    <sprite id="482" name="Mecha Cheep">
+        <list nybble="5" title="Starting direction" category="behavior">
+            <entry value="0">Towards Player</entry>
+            <entry value="8">Left</entry>
+        </list>
+        <value nybble="8" title="Swimming distance" category="behavior" />
+        <list nybble="9" title="Swimming speed" category="behavior">
+            <entry value="0">Fastest</entry>
+            <entry value="2">Fast</entry>
+            <entry value="1">Slow</entry>
+            <entry value="3">Slowest</entry>
+        </list>
+        <list nybble="12" title="Type" category="behavior">
+            <entry value="0">Normal</entry>
+            <entry value="1">Normal (Chases Player)</entry>
+            <entry value="3">Moves back and forth</entry>
+            <entry value="8">Normal (Avoiding Player)</entry>
+            <entry value="9">Normal (45° Up)</entry>
+            <entry value="10">Normal (45° Down)</entry>
+        </list>
+        <value nybble="19-20" title="Movement Type" category="movement" comment="Shared movement system. 0 leaves the fish swimming on its own." />
+        <value nybble="21-22" title="Movement ID" id_type="movement" category="movement" comment="Attach to a movement controller, rotation controller or path." />
+    </sprite>
+    <sprite id="586" name="Flying Mecha Cheep Spawner [UNUSED]" notes="A flying version of the Mecha Cheep.">
+        <value nybble="9" title="Location ID" id_type="location" category="behavior" />
+        <value nybble="19-20" title="Movement Type" category="movement" comment="Shared movement system. 0 leaves the fish swimming on its own." />
+        <value nybble="21-22" title="Movement ID" id_type="movement" category="movement" comment="Attach to a movement controller, rotation controller or path." />
+    </sprite>
+    <sprite id="587" name="Flying Mecha Cheep [UNUSED]">
+        <list nybble="5" title="Direction" category="behavior">
+            <entry value="0">Right</entry>
+            <entry value="1">Left</entry>
+        </list>
+        <list nybble="6" title="Jumping Height" category="behavior">
+            <entry value="0">High</entry>
+            <entry value="1">Medium</entry>
+            <entry value="2">Low</entry>
+        </list>
+        <value nybble="7" title="Delay" category="behavior" />
+        <checkbox nybble="12" title="Unknown Flag 12" />
+        <value nybble="19-20" title="Movement Type" category="movement" comment="Shared movement system. 0 leaves the fish swimming on its own." />
+        <value nybble="21-22" title="Movement ID" id_type="movement" category="movement" comment="Attach to a movement controller, rotation controller or path." />
+    </sprite>
+    <sprite id="588" name="Deep Cheep" notes="Deep Cheeps are the green ones that follow you.">
+        <value nybble="5" title="Unknown Value 5" comment="Only used as 8." />
+        <value nybble="9" title="Unknown Value 9" comment="0-3; Same as Spiny Cheep" />
+        <value nybble="12" title="Unknown Value 12" comment="0-15; Same as Spiny Cheep" />
+        <value nybble="19-20" title="Movement Type" category="movement" comment="Shared movement system. 0 leaves the fish swimming on its own." />
+        <value nybble="21-22" title="Movement ID" id_type="movement" category="movement" comment="Attach to a movement controller, rotation controller or path." />
+    </sprite>
+    <sprite id="589" name="Medium Deep Cheep">
+        <value nybble="5" title="Unknown Value 5" comment="Only used as 8." />
+        <value nybble="19-20" title="Movement Type" category="movement" comment="Shared movement system. 0 leaves the fish swimming on its own." />
+        <value nybble="21-22" title="Movement ID" id_type="movement" category="movement" comment="Attach to a movement controller, rotation controller or path." />
+    </sprite>
+    <sprite id="590" name="Eep Cheep">
+        <list nybble="5" title="Direction" category="behavior">
+            <entry value="0">Towards Player</entry>
+            <entry value="8">Left</entry>
+        </list>
+        <value nybble="19-20" title="Movement Type" category="movement" comment="Shared movement system. 0 leaves the fish swimming on its own." />
+        <value nybble="21-22" title="Movement ID" id_type="movement" category="movement" comment="Attach to a movement controller, rotation controller or path." />
+    </sprite>
+    <sprite id="591" name="Medium Eep Cheep">
+        <value nybble="19-20" title="Movement Type" category="movement" comment="Shared movement system. 0 leaves the fish swimming on its own." />
+        <value nybble="21-22" title="Movement ID" id_type="movement" category="movement" comment="Attach to a movement controller, rotation controller or path." />
+    </sprite>
+    <sprite id="592" name="Searching Cheep Cheep [UNUSED]" notes="An aggressive green Cheep Cheep that tries to swim towards the player. Needs a location to function.">
+        <value nybble="8-9" title="Location ID" comment="The location ID the Cheep Cheep will spawn in once the player enters." id_type="location" category="behavior" />
+        <value nybble="19-20" title="Movement Type" category="movement" comment="Shared movement system. 0 leaves the fish swimming on its own." />
+        <value nybble="21-22" title="Movement ID" id_type="movement" category="movement" comment="Attach to a movement controller, rotation controller or path." />
+    </sprite>
+    <sprite id="597" name="Eep Cheep Spawner [UNUSED]">
+        <value nybble="8-9" title="Location ID" id_type="location" category="behavior" />
+        <value nybble="19-20" title="Movement Type" category="movement" comment="Shared movement system. 0 leaves the fish swimming on its own." />
+        <value nybble="21-22" title="Movement ID" id_type="movement" category="movement" comment="Attach to a movement controller, rotation controller or path." />
+    </sprite>
+    <sprite id="615" name="Grouped Cheep Cheep" notes="Link this sprite to a Cheep Cheep group controller (sprite 616).">
+        <checkbox nybble="5" title="Obey Backtrack" mask="8" comment="The Cheep-Cheep will not turn around and swim in the opposite direction when you backtrack." category="behavior" />
+        <value nybble="21-22" title="Cheep Cheep Group ID" id_type="group" category="behavior" />
+        <value nybble="19-20" title="Movement Type" category="movement" comment="Shared movement system. Nybbles 21-22 are this sprite's Group ID, so a movement ID is not available here." />
+    </sprite>
+    <sprite id="723" name="Medium-sized Grouped Cheep Cheep" notes="Link this sprite to a Cheep Cheep group controller (sprite 616).">
+        <checkbox nybble="5" title="Obey Backtrack" mask="8" comment="The Cheep-Cheep will not turn around and swim in the opposite direction when you backtrack." category="behavior" />
+        <value nybble="21-22" title="Cheep Cheep Group ID" id_type="group" category="behavior" />
+        <value nybble="19-20" title="Movement Type" category="movement" comment="Shared movement system. Nybbles 21-22 are this sprite's Group ID, so a movement ID is not available here." />
+    </sprite>
+    
+
+</sprites>

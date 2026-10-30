@@ -1,3 +1,0 @@
-# framework components this mod needs (framework/<name>/)
-core
-game

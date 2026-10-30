@@ -1,9 +1,8 @@
 # Modding guide
 
-This guide covers building a code mod for *NSMBU Deluxe* v1.0.0 with this
-repository and sweet-dx: install it, write hooks, add sprites, and debug crashes.
-Every step here has been run for real. The Hammer Suit in `mods/hammer_suit/`
-went through all of them.
+This guide covers working on the mod in `source/` for *NSMBU Deluxe* v1.0.0 with
+sweet-dx: build and install it, write hooks, add sprites, and debug crashes.
+Every step here has been run for real.
 
 ## 1. Setup (once)
 
@@ -11,117 +10,127 @@ You need:
 
 | What | Notes |
 |---|---|
-| The game's `main` NSO | Dumped from your own copy, v1.0.0. Build id `AEE6DCCC06D9C05B42061E2019123A61` |
-| [sweet-dx](https://github.com/jabonchan/sweet-dx) v0.0.3 | Its `build/sweetdx-windows.exe` and `build/source/` template |
+| The game's `main` NSO | Dumped from your own copy, v1.0.0, build id `AEE6DCCC06D9C05B42061E2019123A61`. Put it at `source/nso/main` (no extension; never committed) |
+| [sweet-dx](https://github.com/jabonchan/sweet-dx) | `sweetdx.exe` |
 | LLVM 16+ (`clang`, `clang++`) | On `PATH` |
-| `arm-none-eabi-ld`, `c++filt` | The Arm GNU toolchain, plus binutils from devkitPro's MSYS2 |
-| Python 3 | No packages needed |
+| `arm-none-eabi-ld`, `objdump`, `readelf`, `c++filt` | The Arm GNU toolchain / devkitPro binutils, for the link checks |
+| Python 3 | For the scripts; no packages needed (the model scripts want `libyaz0`) |
 
-## 2. Build and install a mod
+## 2. Build and install
 
-```sh
-python scripts/sdk/make_mod_project.py --mod mods/hammer_suit \
-    --sweetdx "<sweet-dx dir>" --nso <path to main> \
-    --out mods/hammer_suit/build --build --with-template-code
+```bat
+sweetdx.exe --source=../source/ --output=./output --log-file=./debug.log
 ```
 
-Copy `mods/<mod>/build/output/atmosphere/` to the root of your SD card. On
-Ryujinx, the SD card is `%APPDATA%\Ryujinx\sdcard\`. Restart the game.
+`compile.bat` (kept next to `sweetdx.exe` in the git-ignored `.projectignore/`) runs
+exactly that, copies `source/npdm/main.npdm` in, and installs `subsdk0`,
+`main.npdm` and the IPS patch into Ryujinx:
 
-The script does the following, so you don't have to:
+```
+%APPDATA%\Ryujinx\sdcard\atmosphere\contents\0100EA80032EA000\exefs\subsdk0 (+ main.npdm)
+%APPDATA%\Ryujinx\sdcard\atmosphere\exefs_patches\0100EA80032EA000\AEE6DCCC06D9C05B42061E2019123A61.ips
+```
 
-- Assembles a sweet-dx project from the template headers, `sdk/` and the
-  `framework/` parts your mod lists in `requires.txt`.
-- Adds the sprites in `profiles.txt` to codedx's tables.
-- **Refuses** to build if any `.sym` assigns a name the module itself defines.
-  Assigning `_init` once made every model render black.
-- Checks the finished `subsdk0` with `inspect_subsdk.py`, and fails the build if
-  its init pointers leave the module.
+Restart the game after installing. Two rules:
 
-Two rules:
-
-- **Only one `subsdk0` loads.** If your levels use codedx's custom sprites
-  (724–733: Mr. Sun, MagicLift, …), always pass `--with-template-code`, or those
-  levels crash on entry.
+- **Only one `subsdk0` loads.** Everything the mod does is in this one build.
 - **Delete old patches** from `atmosphere/exefs_patches/` when you switch builds.
 
-## 3. A mod's folder
+### Check the link
+
+**sweet-dx links undefined symbols silently as 0**: a misspelt `.sym` name or a
+signature that mangles differently builds fine and branches to address 0 in game.
+After every build, on the ELF sweet-dx leaves in `%TEMP%\SweetDX-Temp-*\subsdk0.elf`:
+
+1. `.got` has exactly one zero word, and its relocation is `R_ARM_RELATIVE`
+   (`readelf -r`);
+2. no `bl 0` / branches to 0 in `objdump -d`;
+3. no calls into `@plt` (a destructor's D0 PLT call is harmless).
+
+## 3. The layout
 
 ```
-mods/my_mod/
-  code/my_mod.cpp       your C++ (sweet-dx compiles every file here)
-  hooks/my_mod.hks      where to patch the game
-  symbols/my_mod.sym    game addresses the SDK doesn't already name (optional)
-  requires.txt          framework parts, one per line: core, resources, diagnostics
-  profiles.txt          new sprites: "<ProfileName> <sprite id>" (optional)
-  README.md             what it does, what it relies on, how to test it
+source/
+  code/      .cpp: sweet-dx compiles every file, recursively. File stems must be
+             unique across the tree (sprites/, powerups/, tweaks/, framework/, engine/, debug/)
+  hooks/     .hks: where to patch the game (the same folders)
+  include/   headers: game classes (actors/, collision/, game/, ...) and modbase/ (the kit)
+  symbols/   .sym: game addresses, as RVAs (IDA address - 0x60000000)
+  npdm/      main.npdm
+  nso/       main (you supply it)
 ```
 
 ## 4. Call game code
 
-`#include "nsmbudx/game.h"` declares 7,079 game functions by name, and
-`sdk/symbols/nsmbudx_game.sym` resolves them. Pointers are `void *`; the comment
-on each line names its decompiled source file:
+Declare the function with its real C++ signature and give its address in a `.sym`
+file. The `.sym` line must spell the signature exactly as the declaration mangles:
 
-```cpp
-#include "nsmbudx/game.h"
-void* fireFlower = Profile__get(592);
+```
+# source/symbols/actors/controllers.sym
+ModBase::controllers::givePowerup(void*, unsigned int) = 0x007A27A8;
+ModBase::levelTimer::instance = 0x00C99DE4;      # data: declare it extern
 ```
 
-codedx's class headers (`actor/stageactor.h`, `actormgr.h`, `model.h`, …) give you
-typed access to the core classes. For example, `StageActor::position` is at `+0x6C`.
+The class headers in `source/include` (codedx style: `actors/stageactor.h`,
+`actors/actormgr.h`, `graphics/model.h`, ...) give typed access to the core
+classes; `StageActor::position` is at `+0x6C`. For a list of 7,079 named game
+functions with their addresses, see `reverse-engineering/FindingsF/`.
 
 ## 5. Hook a function
 
-Hooking an entry needs a trampoline-safe first instruction. Look it up first:
+Hooking an entry needs a first instruction the trampoline can replay: a `push` or
+another register-only instruction, never a PC-relative one. Check it in IDA, or
+look it up:
 
 ```sh
-grep ",Player_stun," sdk/data/hookable.csv
+grep ",Player_stun," reverse-engineering/FindingsF/data/hookable.csv
 # 0x007A1F5C,Player_stun,152,e92d4070,"push {r4, r5, r6, lr}",yes,
 ```
 
 ```
-@ hooks/my_mod.hks
+@ source/hooks/tweaks/no_stun.hks
 NoStun:
     type:       hook
     address:    0x007A1F5C
-    symbol:     NoStun
-    trampoline: NoStun_orig
+    symbol:     ModBase::noStun(void*, int)
+    trampoline: ModBase::noStun_orig(void*, int)
 ```
 
 ```cpp
-extern "C" int NoStun_orig(void* player, int type);
-extern "C" int NoStun(void* player, int type)
+namespace ModBase { int noStun(void* player, int type); int noStun_orig(void* player, int type); }
+int ModBase::noStun(void* player, int type)
 {
-    return 0;                       // or: return NoStun_orig(player, type);
+    return 0;                       // or: return noStun_orig(player, type);
 }
 ```
 
 What each hook type does:
 
-- `type: hook` replaces the function and calls the original through the trampoline.
-- `type: call` replaces one call site.
-- `type: instr` / `type: data` patch raw bytes.
+- `type: hook` replaces the function; the trampoline calls the original.
+- `type: call` writes a `BL symbol` at one instruction (a call site).
+- `type: instr` assembles one ARM instruction; `type: data` writes raw bytes.
 
-Hook entries marked `no` in `hookable.csv` start with a PC-relative instruction.
-Hook a caller instead.
+sweet-dx cannot write a pointer to mod code into the game's data (vtables are
+relocated at load): to replace one class's virtual, hook the shared function and
+check the vtable (`source/code/tweaks/yoshi_urchin.cpp`). Before a `call` patch,
+check what the code after it needs in registers (`BL` clobbers r0-r3, r12, lr).
 
 ## 6. Use your own model
 
-The game names archives and models as string literals. With `framework/resources`,
-you swap them for the duration of a call:
+The game names archives and models as string literals. `ModBase::ScopedNameRemap`
+(`modbase/name_remap.h`) swaps them for the duration of a call:
 
 ```cpp
-#include "nsmbudx/name_remap.h"
+#include "modbase/name_remap.h"
 
-static const nsmbudx::NameRemap kRemap = {
+static const ModBase::NameRemap kRemap = {
     "I_fireflower", "my_item",      // archive: romfs/Model/my_item.Nin_NX_NVN.szs
     "I_fireflower", "MyItem",       // model inside it
 };
 
-extern "C" int MyItem_createModel(StageActor* item)
+int MyItem_createModel(StageActor* item)
 {
-    nsmbudx::ScopedNameRemap remap(kRemap);
+    ModBase::ScopedNameRemap remap(kRemap);
     return MyItem_createModel_orig(item);   // the game's own code, your model
 }
 ```
@@ -137,10 +146,10 @@ pick *when* it loads. `Profile::getHasResources` is a load class, not a flag
 | `ResourceLoad::WorldMap` (2) | on the world map | world-map actors |
 
 ```cpp
-#include "nsmbudx/profile_resources.h"
+#include "modbase/profile_resources.h"
 static sead::SafeString sMyItemResources[] = { "my_item" };
-nsmbudx::setProfileResources(ProfileId::MyItem, sMyItemResources, 1,
-                             nsmbudx::ResourceLoad::AtBoot);   // it comes out of blocks
+ModBase::setProfileResources(ProfileId::MyItem, sMyItemResources, 1,
+                             ModBase::ResourceLoad::AtBoot);   // it comes out of blocks
 ```
 
 An item that comes out of ?-blocks must be `AtBoot`: as `PerLevel` it loads
@@ -152,74 +161,85 @@ If your archive is missing, the remap logs a warning and uses the game's
 archive **and** the game's model name. If the archive is there but the model
 name inside it is wrong, the game still gets null and crashes, so check names
 with `scripts/bfres.py`. Missing *animations* are skipped: the item simply does
-not animate (F0217).
+not animate (F0217). `tsuru::createModel` returns null (and logs) for an archive
+that is not loaded.
 
-Ship the archive in your mod's `romfs/Model/` folder; the build copies it. To
-test without it, build with `--placeholder-models` (`nsmbudx/models.h`): every
-mod switches to the game's own models.
+Install models into `<SD>/atmosphere/contents/0100EA80032EA000/romfs/Model/`
+(never committed). `MODBASE_CUSTOM_MODELS 0` in `modbase/build_config.h` switches
+every feature to the game's own placeholder models.
 
 ## 7. Add a sprite
 
-1. Add a line to `profiles.txt`, e.g. `MyActor 735`. Sprite ids must follow on
-   from the last one: 734 is the Hammer Flower.
-2. Register it in your code with codedx's profile system:
+1. Add its profile after the last one in `source/include/actors/profileid.h`.
+2. Append its sprite to the table at the end of
+   `source/code/engine/custom_profiles.cpp` (sprite ids follow on from the last
+   one, 779 the Wave Platform), and raise `MODBASE_SPRITE_TABLE_SIZE` in
+   `modbase/build_config.h` so the Actor Spawners accept it.
+3. Register it in your code:
 
 ```cpp
-#include "profile.h"
-#include "profileid.h"
+#include "actors/profile.h"
+#include "actors/profileid.h"
 const Profile myProfile(&MyActor::build, ProfileId::MyActor, "MyActor", nullptr, 0);
 PROFILE_RESOURCES(ProfileId::MyActor, "my_archive");
 ```
 
-Place sprite 735 in your level editor. To reuse an existing actor's behaviour,
-pass the game's own factory as the build function. The Hammer Flower does this
-with `Actor_faiyafurawa_build`.
+4. Add it to the Yaz0moto patch in `yaz0moto/patches/steam-dx/`: the
+   `spritedata.xml` entry, `spritecategories.xml`, the description range in
+   `main.xml`, the `README.md` row, and a 128x128 icon `icons/<sprite>.png`.
+
+To reuse an existing actor's behaviour, pass the game's own factory as the build
+function. The Hammer Flower does this with the Fire Flower's.
 
 ## 7b. Put a new power-up in ?-blocks and bricks
 
 Blocks store a 5-bit contents value. The game defines 0–20 and leaves
-**21–31 free**. With `framework/items` (add `items` and `game` to `requires.txt`):
+**21–31 free** (21 Hammer Flower, 22 P-Acorn, 23 Blue Shell and 24 Poison
+Mushroom are taken). `code/framework/block_items.cpp`:
 
 ```cpp
-#include "nsmbudx/block_items.h"
+#include "modbase/block_items.h"
 
 struct InBlocks
 {
-    InBlocks() { nsmbudx::blockItems::registerContents(21, ProfileId::MyPowerup); }
+    InBlocks() { ModBase::blockItems::registerContents(25, ProfileId::MyPowerup); }
 };
 static InBlocks inBlocks;
 ```
 
-In the level editor, set the block's contents to **21**: settings2 low nybble
-`5`, plus bit 28 set. The block behaves like a power-up block: it bounces, and a
+In the level editor, set the block's contents to **25**: settings2 low nybble
+`9`, plus bit 28 set. The block behaves like a power-up block: it bounces, and a
 small player gets a Mushroom first, as with every flower block. Pass `false` as
 the third argument to skip that rule. The full pipeline, with the vanilla
-contents table, is in [readable/map_obj/BlockBase.cpp](../readable/map_obj/BlockBase.cpp)
-and [readable/item/ItemMgr.cpp](../readable/item/ItemMgr.cpp).
+contents table, is in
+[FindingsA/map_obj/BlockBase.cpp](../reverse-engineering/FindingsA/map_obj/BlockBase.cpp)
+and [FindingsA/item/ItemMgr.cpp](../reverse-engineering/FindingsA/item/ItemMgr.cpp).
 
 ## 7c. A new sprite from any vanilla actor, with your model
 
-`framework/actors` turns a vanilla actor into a new sprite that uses your
-archive and model. It keeps the same code, the same settings nybbles, and the
-same states:
+`code/framework/actor_variant.cpp` turns a vanilla actor into a new sprite that
+uses your archive and model. It keeps the same code, the same settings nybbles,
+and the same states:
 
 ```cpp
-#include "nsmbudx/actor_variant.h"
+#include "modbase/actor_variant.h"
 
-NSMBUDX_ACTOR_VARIANT(beeVariant,
-    ProfileId::Bee,            // add "Bee 735" to profiles.txt
-    530,                       // base: Cheep Cheep (profile ids: codedx doc/profiles.csv)
+MODBASE_ACTOR_VARIANT(beeVariant,
+    ProfileId::Bee,            // the new profile (profileid.h)
+    530,                       // base: Cheep Cheep
     "Bee",
-    nsmbudx::cVariant_AirSwim, // optional: a water actor moves through air
-    { { "pukupuku", "bee", "pukupuku", "bee" } });   // archive, then model, from -> to
+    ModBase::cVariant_AirSwim, // optional: a water actor moves through air
+    { { "pukupuku", "bee", "pukupuku", "bee" } },   // archive, then model, from -> to
+    { },                       // hit rules (7e)
+    0, 0);                     // damage-mask bits to set / clear
 ```
 
 What you need to know for a given base actor:
 
 - **Its archive and model names.** Run `python scripts/sdk/profile_resources.py`
-  with the profile id, or check its `readable/` file.
+  with the profile id, or check its `reverse-engineering/FindingsA/` file.
 - **The animation names it plays.** Your archive needs them; the names are listed
-  in its `readable/` file. For the Cheep Cheep they are `swim` (skeletal) and
+  in its FindingsA file. For the Cheep Cheep they are `swim` (skeletal) and
   `pukupuku` (texture).
 
 How it works:
@@ -230,7 +250,11 @@ How it works:
    with your names swapped.
 3. Your archives load with any level that contains the sprite.
 
-See [mods/bee/](../mods/bee/) for a complete example. To tell your variant apart in a hook (its runtime profile is the vanilla one), use `nsmbudx::variantProfileOf(actor)`; [mods/p_acorn/](../mods/p_acorn/) does that to make the Acorn grant mode 8.
+See [bee.cpp](../source/code/sprites/bee.cpp) for a complete example. To tell your
+variant apart in a hook (its runtime profile is the vanilla one), use
+`ModBase::variantProfileOf(actor)`;
+[p_acorn.cpp](../source/code/powerups/p_acorn.cpp) does that to make the Acorn
+grant mode 8.
 
 ## 7d. Give a power-up its own suit colours
 
@@ -244,11 +268,11 @@ has its own routine (virtual slot 44) that picks the frame:
 | KinopioModel (Toads) | `0x60757B58` | 3×(type−2) + 0 Normal, 1 Fire, 2 Ice |
 | vtable `0x60C240DC` (unidentified) | `0x6075D3AC` | 3×variant + 0/1/2 |
 
-`framework/player` (add `player` to `requires.txt`) changes the look two ways:
+`code/framework/suits.cpp` changes the look two ways:
 
 ```cpp
-#include "nsmbudx/suits.h"
-using namespace nsmbudx::suits;
+#include "modbase/suits.h"
+using namespace ModBase::suits;
 
 // Borrow another colour type's look, on every character, no assets needed:
 showColorAs(playerNo, cColor_Fire, cColor_Ice);
@@ -270,8 +294,8 @@ how the first Hammer Flower build crashed when a Toad collected it (ledger
 F0061). `refresh` goes through the model's own vtable.
 
 The full mechanism and the per-mode tables (body, size, height) are in
-[readable/player/PlayerModel.cpp](../readable/player/PlayerModel.cpp) and
-`framework/game/include/game/player.h`.
+[FindingsA/player/PlayerModel.cpp](../reverse-engineering/FindingsA/player/PlayerModel.cpp)
+and `source/include/game/player.h`.
 
 ## 7e. Change how an enemy reacts to attacks
 
@@ -279,16 +303,16 @@ Every enemy decides what a hit does in seven dispatchers (player, Yoshi, baby
 Yoshi, enemy, projectiles, …). Each one checks the enemy's **damage mask**
 (collider `+0x94`: bit N = attack N can hurt it), then calls one of **17
 reactions**. These are vtable slots `+0x114` (Star) to `+0x154`; all are listed
-with their attacks in `framework/game/include/game/enemy.h`. A
-`framework/actors` variant can override them:
+with their attacks in `source/include/game/enemy.h`. An actor variant can
+override them:
 
 ```cpp
 #include "game/enemy.h"
-NSMBUDX_ACTOR_VARIANT(armoredBee, ProfileId::ArmoredBee, 530, "ArmoredBee",
-    nsmbudx::cVariant_AirSwim,
+MODBASE_ACTOR_VARIANT(armoredBee, ProfileId::ArmoredBee, 530, "ArmoredBee",
+    ModBase::cVariant_AirSwim,
     { { "pukupuku", "bee", "pukupuku", "bee" } },
-    { { EnemyVt::hitFire, nsmbudx::HitReaction::Immune, 0 },                 // fireballs do nothing
-      { EnemyVt::hitIce,  nsmbudx::HitReaction::SameAs, EnemyVt::hitStar } }, // ice kills like a Star
+    { { EnemyVt::hitFire, ModBase::HitReaction::Immune, 0 },                 // fireballs do nothing
+      { EnemyVt::hitIce,  ModBase::HitReaction::SameAs, EnemyVt::hitStar } }, // ice kills like a Star
     0,                         // damage-mask bits to set (let an attack through)
     1u << 9);                  // ...and to clear (here: shells, attack 9)
 ```
@@ -300,7 +324,7 @@ NSMBUDX_ACTOR_VARIANT(armoredBee, ProfileId::ArmoredBee, 530, "ArmoredBee",
 An attack whose mask bit is clear never reaches its reaction, so set the bit if
 you want a rule for an attack the base enemy ignores. The Bee has a one-line
 example: `BEE_FIREPROOF`. The dispatchers are reconstructed in
-[readable/enemy/EnemyDamage.cpp](../readable/enemy/EnemyDamage.cpp).
+[FindingsA/enemy/EnemyDamage.cpp](../reverse-engineering/FindingsA/enemy/EnemyDamage.cpp).
 
 ## 7f. Change what Yoshi does
 
@@ -310,23 +334,20 @@ What happens to anything he eats is decided by the eaten actor's **EatData**
 (YoshiFire) or 6 (YoshiFireIce) is swapped for a YoshiFlame (profile 478) he
 spits. Enemy fireballs are type 5, which is why eating one gives fire breath.
 
-The two Yoshi mods below test this research; they are not part of releases.
-Build them in with `make_mod_project.py --release --with yoshi`.
-
-`framework/yoshi` (add `yoshi` to `requires.txt`):
+`code/framework/yoshi.cpp`:
 
 ```cpp
-#include "nsmbudx/yoshi.h"
-nsmbudx::yoshi::setBreathFromEnemies(yoshi::EatType::YoshiFire);   // every enemy -> fire
-nsmbudx::yoshi::setEatType(actor, yoshi::EatType::YoshiFireIce);   // this one -> ice
-void* held = nsmbudx::yoshi::mouthActor(yoshiActor);
+#include "modbase/yoshi.h"
+ModBase::yoshi::setBreathFromEnemies(yoshi::EatType::YoshiFire);   // every enemy -> fire
+ModBase::yoshi::setEatType(actor, yoshi::EatType::YoshiFireIce);   // this one -> ice
 ```
 
-[mods/yoshi_fire/](../mods/yoshi_fire/) is the first line as a whole mod.
+[yoshi_fire.cpp](../source/code/tweaks/yoshi_fire.cpp) is the first line, and it is
+in the build: every enemy Yoshi eats becomes fire breath.
 
 His numbers need no code. These constants are loaded at run time and read
 only by Yoshi, so a sweet-dx `data` hook changes them
-([mods/yoshi_tuning/](../mods/yoshi_tuning/)):
+([yoshi_tuning.hks](../source/hooks/tweaks/yoshi_tuning.hks)):
 
 | What | Address (RVA) | Vanilla |
 |---|---|---|
@@ -336,40 +357,42 @@ only by Yoshi, so a sweet-dx `data` hook changes them
 | flutter lift after that | `0x007D3F98` | `0.07` (f32) |
 
 The class layout, all 16 overridden/own states, the mouth states and the
-eggs are in `framework/game/include/game/yoshi.h` and
-[readable/player/Yoshi.cpp](../readable/player/Yoshi.cpp).
+eggs are in `source/include/game/yoshi.h` and
+[FindingsA/player/Yoshi.cpp](../reverse-engineering/FindingsA/player/Yoshi.cpp).
 
 ## 8. Log and debug
 
 ```cpp
-#include "nsmbudx/log.h"
-nsmbudx::log("hammer spawned for player ", (u32)playerNo);
+#include "modbase/log.h"
+ModBase::log("hammer spawned for player ", (u32)playerNo);
 ```
 
-On Ryujinx this appears in the log as `KernelSvc OutputDebugString: [nsmbudx] …`.
-The log file is `<Ryujinx folder>\Logs\Ryujinx_*.log`, and guest logging is on by
-default.
+On Ryujinx this appears in the log as `[ModBase] …`. The log file is the newest
+`<Ryujinx folder>\Logs\Ryujinx_*.log`; guest logging is on by default.
 
 When the game crashes:
 
-1. **Find the crash in the Ryujinx log.** Look for `PrintGuestStackTrace` and
-   `InvalidAccessHandler`. Then run
-   `python scripts/sdk/symbolize_crash.py <log> --build-log mods/<mod>/build/build.log`,
-   which turns the addresses into function names.
+1. **Find the crash in the Ryujinx log.** Look for `Invalid memory access`,
+   `PrintGuestStackTrace` and the `PC:` line: `RedPro-S.nss:0x<RVA>` is the game,
+   `(unknown2):0x<offset>` is the mod. The `[ModBase]` lines just above often
+   name the cause (a missing archive, a shape that cannot be drawn).
+   `python scripts/sdk/symbolize_crash.py <log>` turns the addresses into names.
 2. **If it crashes on entering a level, check the level first.** Content crashes
    look exactly like code crashes:
    ```sh
-   python scripts/sdk/course_tilesets.py --romfs <romfs> --base-tree research/reference/NSP_base_game_tree.txt <romfs>/Course/*.sarc
+   python scripts/sdk/course_tilesets.py --romfs <romfs> --base-tree <NSP base-game file tree> <romfs>/Course/*.sarc
    python scripts/sdk/course_sprites.py <romfs>/Course/*.sarc
    ```
    A background name must be bare: `Toride`, not `dv_Toride.Nin_NX`.
-3. **Build with `--with-diagnostics`.** The archive guard then logs the name of
-   any archive the game wants but never loaded, right before it crashes. That is
-   how the 1-1 crash was found.
+3. **The guards are always in the build** (`source/code/debug/`): the archive guard
+   logs the name of any archive the game wants but never loaded, right before it
+   crashes (that is how the 1-1 crash was found), and the draw guard names and
+   skips a model shape the renderer cannot draw.
+4. **Live data:** the emulator's GDB stub reads memory while you play
+   ([GDB_SETUP.md](GDB_SETUP.md)).
 
 ## 9. Before you rely on an address
 
-Check `data/findings/ledger.csv`. A mod should depend only on findings graded
-`seen-static` or `seen-runtime`. Anything `inferred` goes into your mod's test
-table. Add what you verify, with its evidence; [RE_PLAN.md](RE_PLAN.md) §2 shows
-how.
+Check `reverse-engineering/FindingsB/ledger.csv`. Depend only on findings graded
+`seen-static` or `seen-runtime`; anything `inferred` needs an in-game test. Add
+what you verify, with its evidence.

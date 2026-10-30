@@ -2,7 +2,7 @@
 
 Reverse-engineered on NSMBU Deluxe v1.0.0 (Switch, ARM32). Addresses are IDA
 addresses (RVA + 0x60000000); `.hks`/`.sym` files take the RVA. The code lives in
-`mods/Steam's Super Mario Bros. Deluxe/source`.
+`source`.
 
 ## 1. Where a throw starts
 

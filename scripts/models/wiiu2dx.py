@@ -1,10 +1,10 @@
 """Turn a Wii U NSMBU model archive into an NSMBU Deluxe one. See docs/WIIU_MODELS.md.
 
     python scripts/models/wiiu2dx.py --wiiu kakibo.pack --template kakibo --name shyguy \\
-        --romfs "<Deluxe romfs>" --out mods/shy_guy/romfs/Model
+        --romfs "<Deluxe romfs>" --out <SD>/atmosphere/contents/0100EA80032EA000/romfs/Model
 
     python scripts/models/wiiu2dx.py --wiiu pukupuku.pack --template pukupuku --name bee \\
-        --romfs "<Deluxe romfs>" --out mods/bee/romfs/Model \\
+        --romfs "<Deluxe romfs>" --out <SD>/atmosphere/contents/0100EA80032EA000/romfs/Model \\
         --map mt_eye=mat_pukupuku --map mat_pukupuku=mat_pukupuku
 
 --wiiu      the Wii U model: a .pack / .szs (SARC, Yaz0 or not) or a bare .bfres
@@ -23,6 +23,7 @@ files at 0x1000 alignment, Yaz0.
 from __future__ import annotations
 
 import argparse
+import re
 import struct
 import subprocess
 import sys
@@ -32,8 +33,24 @@ from pathlib import Path
 HERE = Path(__file__).resolve().parent
 REPO = HERE.parents[1]
 sys.path.insert(0, str(REPO / "scripts" / "sdk"))
-from course_sprites import sarc, yaz0  # noqa: E402
+from course_sprites import sarc, yaz0 as _yaz0_py  # noqa: E402
 sys.path.insert(0, str(HERE))
+
+# AboodXD's libyaz0 with its compiled module when installed (pip install --user libyaz0; on
+# Python 3.10 x64 its Cython part must be built, docs/WIIU_MODEL_CONVERSION.md): milliseconds
+# instead of minutes. Not visible under python -I (that ignores user site-packages).
+try:
+    import contextlib as _cl
+    import io as _io
+    with _cl.redirect_stdout(_io.StringIO()), _cl.redirect_stderr(_io.StringIO()):
+        import libyaz0 as _libyaz0
+    FAST_YAZ0 = _libyaz0.yaz0.__name__.endswith(("_pyd", "_so"))
+except ImportError:
+    _libyaz0, FAST_YAZ0 = None, False
+
+
+def yaz0(data: bytes) -> bytes:
+    return bytes(_libyaz0.decompress(data)) if FAST_YAZ0 else _yaz0_py(data)
 from bfsha_info import Fsha  # noqa: E402
 
 TOOL = REPO / "tools" / "wiiu2dx" / "bin" / "Release" / "net9.0" / "wiiu2dx.exe"
@@ -163,10 +180,16 @@ def repair_bntx_names(bfres: bytes, expected: set[str]) -> bytes:
     want = {n.encode() for n in expected} | {b"textures"}
     entries = bntx_strings(bytes(out[base:]))
     present = {s for _, s in entries}
-    for off, s in entries:
+    for k, (off, s) in enumerate(entries):
         if not s or s in want:
             continue
         cands = [w for w in want - present if len(w) == len(s)]
+        if not cands:
+            # The name is also stored again elsewhere in the table (a texture imported over one
+            # of the same name). The table is sorted, so its neighbours pin it down.
+            prev = entries[k - 1][1]
+            nxt = entries[k + 1][1] if k + 1 < len(entries) else bytes([0xFF])
+            cands = [w for w in want if len(w) == len(s) and prev < w < nxt]
         if len(cands) != 1:
             raise SystemExit(f"BNTX name {s!r} is damaged and cannot be matched ({cands})")
         print(f"repaired BNTX texture name {s!r} -> {cands[0].decode()!r}")
@@ -182,6 +205,87 @@ def repair_bntx_names(bfres: bytes, expected: set[str]) -> bytes:
         name = bn[no + 2:no + 2 + struct.unpack_from("<H", bn, no)[0]]
         if name not in want:
             raise SystemExit(f"BNTX texture record names {name!r}, not a model texture")
+    return rebuild_bntx_dict(bytes(out))
+
+
+# ---- BNTX texture dictionary ----------------------------------------------------------
+#
+# The game finds a material's texture through the BNTX _DIC, an nn::util::ResDic: a patricia
+# trie whose nodes test bits of the name. BfresLibrary builds it from the names *as damaged*
+# (see repair_bntx_names), so restoring the string bytes alone leaves a trie that walks past
+# the texture: the lookup fails, the sampler stays unbound and the model draws solid black.
+# That is what blacked out the Cataquack (Poihana) and Peepa (Teren_dif); Stingby's damaged
+# name was a texture it never draws. So the trie is rebuilt from the repaired names.
+# dict_build reproduces Nintendo's own dictionaries byte for byte (kakibo, chorobon, kuribo,
+# musasabi, gorogoro, karon, star_coin, obj_block).
+
+def _dic_bit(key: bytes, ref: int) -> int:
+    i = ref >> 3
+    return 0 if i >= len(key) else (key[len(key) - 1 - i] >> (ref & 7)) & 1
+
+
+def dict_build(keys: list[bytes]) -> list[list[int]]:
+    """ResDic nodes [refBit, left, right] for keys inserted in order; node 0 is the root."""
+    nodes, names = [[-1, 0, 0]], [b""]
+    if len(set(keys)) != len(keys):
+        raise ValueError(f"ResDic keys must be unique: {keys}")    # the bit search would never end
+    for k in keys:
+        prev, cur = -1, nodes[0][1]
+        while nodes[cur][0] > prev:
+            prev = nodes[cur][0]
+            cur = nodes[cur][2] if _dic_bit(k, prev) else nodes[cur][1]
+        other, b = names[cur], 0
+        while _dic_bit(k, b) == _dic_bit(other, b):
+            b += 1
+        parent, prev, cur = 0, -1, nodes[0][1]
+        while prev < nodes[cur][0] < b:
+            parent, prev = cur, nodes[cur][0]
+            cur = nodes[cur][2] if _dic_bit(k, prev) else nodes[cur][1]
+        idx = len(nodes)
+        nodes.append([b, cur, idx] if _dic_bit(k, b) else [b, idx, cur])
+        names.append(k)
+        if parent == 0:
+            nodes[0][1] = idx
+        elif _dic_bit(k, nodes[parent][0]):
+            nodes[parent][2] = idx
+        else:
+            nodes[parent][1] = idx
+    return nodes
+
+
+def dict_find(data: bytes, d: int, key: bytes) -> int | None:
+    """The game's lookup: the entry index of key in the ResDic at d, or None."""
+    def node(i):
+        return struct.unpack_from("<iHHQ", data, d + 8 + 16 * i)
+    prev, cur = -1, node(0)[1]
+    while True:
+        ref, left, right, kp = node(cur)
+        if ref <= prev:
+            name = data[kp + 2:kp + 2 + struct.unpack_from("<H", data, kp)[0]]
+            return cur - 1 if name == key else None
+        prev, cur = ref, (right if _dic_bit(key, ref) else left)
+
+
+def rebuild_bntx_dict(bfres: bytes) -> bytes:
+    """Rebuild the embedded BNTX's texture dictionary from its (repaired) names, then check
+    that every texture record is found under its own name."""
+    out = bytearray(bfres)
+    base = bfres.find(b"BNTX")
+    if base < 0:
+        return bfres
+    bn = memoryview(out)[base:]
+    d = bytes(bn).find(b"_DIC")
+    count = struct.unpack_from("<I", bn, d + 4)[0]
+    keys = []
+    for i in range(1, count + 1):
+        kp = struct.unpack_from("<Q", bn, d + 8 + 16 * i + 8)[0]
+        keys.append(bytes(bn[kp + 2:kp + 2 + struct.unpack_from("<H", bn, kp)[0]]))
+    for i, (ref, left, right) in enumerate(dict_build(keys)):
+        struct.pack_into("<iHH", bn, d + 8 + 16 * i, ref, left, right)
+    data = bytes(bn)
+    for i, k in enumerate(keys):
+        if dict_find(data, d, k) != i:
+            raise SystemExit(f"BNTX dictionary: texture {k!r} is not found by lookup")
     return bytes(out)
 
 
@@ -226,6 +330,14 @@ def main() -> int:
     ap.add_argument("--pattern-frame",
                     help="show texture-pattern animations as at this frame, whatever frame the game holds "
                          "them on (the Cheep Cheep holds its colour variant, 0; the Bee needs 1) -- F0236")
+    ap.add_argument("--template-lightmaps", action="store_true",
+                    help="lightmap slots (lm_*) take the template's own Deluxe textures: the model is lit "
+                         "like the actor it borrows shaders from (and a model without lightmaps gets them)")
+    ap.add_argument("--drop-material", action="append", default=[],
+                    help="remove the shapes drawn with this material (one no Deluxe program can draw, "
+                         "e.g. Peepa's translucent cloud sphere)")
+    ap.add_argument("--bake-scale", help="scale the model itself by this factor (positions, bones, "
+                    "animations), for an actor that would otherwise shrink it with setScale")
     ap.add_argument("--tool", type=Path, default=TOOL)
     a = ap.parse_args()
 
@@ -260,12 +372,24 @@ def main() -> int:
             cmd += ["--tex", tex]
         if a.pattern_frame is not None:
             cmd += ["--pattern-frame", a.pattern_frame]
-        rc = subprocess.run(cmd).returncode
+        if a.template_lightmaps:
+            cmd += ["--template-lightmaps"]
+        for m in a.drop_material:
+            cmd += ["--drop-material", m]
+        if a.bake_scale:
+            cmd += ["--bake-scale", a.bake_scale]
+        run = subprocess.run(cmd, capture_output=True, text=True)
+        sys.stdout.write(run.stdout)
+        sys.stderr.write(run.stderr)
+        rc = run.returncode
+        # Textures the converter took from the template (missing ones, --template-lightmaps).
+        imported = set(re.findall(r"texture '([^']+)' taken from the template", run.stdout))
         if rc not in (0, 3) or not (t / "out.bfres").exists():
             raise SystemExit(f"wiiu2dx failed ({rc})")
-        bfres = repair_bntx_names((t / "out.bfres").read_bytes(), wiiu_texture_names(wiiu_bfres))
+        bfres = repair_bntx_names((t / "out.bfres").read_bytes(), wiiu_texture_names(wiiu_bfres) | imported)
 
-    archive = yaz0_compress(write_sarc({SHADER_FILE: tpl[SHADER_FILE], "output.bfres": bfres}))
+    packed = write_sarc({SHADER_FILE: tpl[SHADER_FILE], "output.bfres": bfres})
+    archive = bytes(_libyaz0.compress(packed, 0x2000, 1)) if FAST_YAZ0 else yaz0_compress(packed)
     a.out.mkdir(parents=True, exist_ok=True)
     dest = a.out / f"{a.name}.Nin_NX_NVN.szs"
     dest.write_bytes(archive)

@@ -1,5 +1,0 @@
-# framework/worldmap. RVA = VA - 0x60000000. Deluxe (Switch) v1.0.0.
-# CourseSelectMgr* CourseSelectMgr::sInstance (maps at +0x1C, ledger F0066).
-CourseSelectMgr_instance = 0x00C89E18;
-# Story save data pointer (current world/variant/point at +428/+432/+436, F0073).
-StorySave_instance = 0x00CC6D78;

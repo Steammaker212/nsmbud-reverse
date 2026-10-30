@@ -1,0 +1,48 @@
+@ Custom Boss: retune the World 1 Lemmy fight and watch its damage pipeline.
+@ Deluxe (Switch) v1.0.0 only. See reverse-engineering/FindingsA/boss/Lemmy.cpp.
+@
+@ BossBase::vf15C (0x600259B8, RVA 0x00259B8) is where every boss collision
+@ converges -- collisionPlayer, collisionFireball, collisionGroundPound,
+@ collisionThrowableObject and Enemy::collisionCallback all reach it. Hooking it
+@ is the single best place to observe HP (+0x189C), the per-phase count
+@ (+0x18A0) and the took-damage flag (+0x18A8).
+@ reverse-engineering/FindingsF/data/hookable.csv: 252 bytes, entry "push {r4, r5, r6, lr}" (0xe92d4070),
+@ trampoline_safe = yes.
+
+CustomBoss_vf15C:
+    type:       hook
+    address:    0x00259B8
+    symbol:     ModBase::customBoss::vf15C(void*)
+    trampoline: ModBase::customBoss::vf15C_orig(void*)
+
+@ BossBase::vf314 (0x60026798, RVA 0x0026798) -- total HP. Vanilla body is
+@ "mov r0,#24 ; bx lr" (8 bytes), so there is no room for a trampoline: the hook
+@ returns the constant itself and does not call the original.
+@
+@ These one-liner constant virtuals are the whole per-boss stamina model; see
+@ reverse-engineering/FindingsA/boss/Lemmy.cpp for why +0x314 is shared but +0x2FC is per-boss.
+
+CustomBoss_vf314:
+    type:       hook
+    address:    0x0026798
+    symbol:     ModBase::customBoss::vf314(void*)
+
+@ BoomBoomBase::vf2FC (0x6004F320, RVA 0x004F320) -- hits per phase. Vanilla body
+@ is "mov r0,#6 ; bx lr" (8 bytes). +0x2FC is pure virtual in BossBase and
+@ KoopalingBase does not override it, so this implementation is what the
+@ Koopalings actually use (24/6 = 4 phases). Also trampoline-less.
+
+CustomBoss_vf2FC:
+    type:       hook
+    address:    0x004F320
+    symbol:     ModBase::customBoss::vf2FC(void*)
+
+CustomBoss_vf448:
+    type:       hook
+    address:    0x000B7EC8
+    symbol:     ModBase::customBoss::vf448(void*)
+
+CustomBoss_vf46C:
+    type:       hook
+    address:    0x000A13A4
+    symbol:     ModBase::customBoss::vf46C(void*)

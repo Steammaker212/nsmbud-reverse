@@ -1,0 +1,95 @@
+@ Wavy liquids (code/tweaks/wavy_liquids.cpp). Every entry is a `push`, so the trampolines can
+@ replay it.
+
+@ Water::onCreate (Water vtable 0x60C08888 slot 5). Entry: push {r4-r10, lr}.
+WavyLiquids_water:
+    type:       hook
+    address:    0x005AB2AC
+    symbol:     ModBase::waves::waterCreate(StageActor*)
+    trampoline: ModBase::waves::waterCreate_orig(StageActor*)
+
+@ Poison::onCreate. Entry: push {r4-r6, lr}.
+WavyLiquids_poison:
+    type:       hook
+    address:    0x005A9A20
+    symbol:     ModBase::waves::poisonCreate(StageActor*)
+    trampoline: ModBase::waves::poisonCreate_orig(StageActor*)
+
+@ Quicksand::onCreate. Entry: push {r4-r10, lr}.
+WavyLiquids_quicksand:
+    type:       hook
+    address:    0x005AA7A4
+    symbol:     ModBase::waves::quicksandCreate(StageActor*)
+    trampoline: ModBase::waves::quicksandCreate_orig(StageActor*)
+
+@ TerrainEffects::update. Entry: push {r4-r9, r11, lr}.
+WavyLiquids_update:
+    type:       hook
+    address:    0x00705F6C
+    symbol:     ModBase::waves::update(void*)
+    trampoline: ModBase::waves::update_orig(void*)
+
+
+@ Wave collision liquid (Tsuru's WaveCollision patches): where checkWaveCollision (0x60151D34) finds
+@ a point inside the waves, CollisionMgr answers lava (3, or 4 by TileMgr +0x2820) whatever the
+@ liquid. Both sites (0x60151F18 and 0x60152338: movw r0, #0x2820; ldrb r0, [r1, r0]; cmp r0, #0;
+@ moveq r0, #3; movne r0, #4; then the result is stored and the function returns) now call
+@ ModBase::waves::waveLiquid(r0, r1 = TileMgr), which answers the zone's own liquid type
+@ (TileMgr +0x2824) for a non-lava liquid.
+
+WaveCollision1_call:
+    type:    call
+    address: 0x00151F18
+    symbol:  ModBase::waves::waveLiquid(int, unsigned char*)
+
+WaveCollision1_nop1:
+    type:         instr
+    instruction:  nop
+    address:      0x00151F1C
+
+WaveCollision1_nop2:
+    type:         instr
+    instruction:  nop
+    address:      0x00151F20
+
+WaveCollision1_nop3:
+    type:         instr
+    instruction:  nop
+    address:      0x00151F24
+
+WaveCollision1_nop4:
+    type:         instr
+    instruction:  nop
+    address:      0x00151F28
+
+WaveCollision2_call:
+    type:    call
+    address: 0x00152338
+    symbol:  ModBase::waves::waveLiquid(int, unsigned char*)
+
+WaveCollision2_nop1:
+    type:         instr
+    instruction:  nop
+    address:      0x0015233C
+
+WaveCollision2_nop2:
+    type:         instr
+    instruction:  nop
+    address:      0x00152340
+
+WaveCollision2_nop3:
+    type:         instr
+    instruction:  nop
+    address:      0x00152344
+
+WaveCollision2_nop4:
+    type:         instr
+    instruction:  nop
+    address:      0x00152348
+
+@ TerrainEffects::draw: a wavy liquid's body is drawn too. Entry: push {r4-r8, lr}.
+WavyLiquids_draw:
+    type:       hook
+    address:    0x00707390
+    symbol:     ModBase::waves::draw(void*)
+    trampoline: ModBase::waves::draw_orig(void*)

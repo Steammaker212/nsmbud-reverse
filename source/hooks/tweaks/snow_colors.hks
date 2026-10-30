@@ -1,0 +1,8 @@
+@ Snow Effect colours (code/tweaks/snow_colors.cpp). The snow actor's onExecute (0x606A3990,
+@ vtable 0x60C19300 + 0x20) starts with `push {r4-r11, lr}`, so the trampoline can replay it.
+
+SnowColors_onExecute:
+    type:       hook
+    address:    0x006A3990
+    symbol:     ModBase::snowColors::onExecute(StageActor*)
+    trampoline: ModBase::snowColors::onExecute_orig(StageActor*)

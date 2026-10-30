@@ -1,9 +1,9 @@
 # World maps: how they work and how to make your own
 
 Everything here was read from Deluxe v1.0.0 (ledger F0064-F0075, F0237-F0246). The code is
-reconstructed in [readable/course_select/WorldMapData.cpp](../readable/course_select/WorldMapData.cpp),
-the structures are in `framework/game/include/game/worldmap.h`, and
-`scripts/worldmap/wmtool.py` dumps, checks and rebuilds the archives and lists the objects a map spawns; `scripts/worldmap/wm_tables.py` extracts the map-enemy and scene tables into `data/worldmap/`.
+reconstructed in [reverse-engineering/FindingsA/course_select/WorldMapData.cpp](../reverse-engineering/FindingsA/course_select/WorldMapData.cpp),
+the structures are in `source/include/game/worldmap.h`, and
+`scripts/worldmap/wmtool.py` dumps, checks and rebuilds the archives and lists the objects a map spawns; `scripts/worldmap/wm_tables.py` extracts the map-enemy and scene tables into `reverse-engineering/FindingsG/`.
 
 ## 1. Files
 
@@ -138,7 +138,7 @@ New worlds replace one of the nine (or a variant): the world count is fixed.
 5. Build it and put it in your mod's romfs:
    `python scripts/worldmap/wmtool.py build <romfs>/Model/CS_W1.Nin_NX_NVN.szs work/W1 -o romfs/Model/CS_W1.Nin_NX_NVN.szs`
    (same file order and alignment as the original; `--compress` for real Yaz0).
-6. Optional: add `mods/worldmap_log` to your build. At boot the Ryujinx log
+6. `source/code/framework/worldmap.cpp` is in the build. At boot the Ryujinx log
    shows `worldmap W1: 72 points, 134 routes` for every map, so you can see
    the game parsed all of yours.
 
@@ -226,7 +226,7 @@ bones**, or it is placed relative to bone -1; `check` warns about missing ones.
 
 The map enemies are fixed per world in code (the profile per slot comes from
 0x6021EE50) and in tables. `scripts/worldmap/wm_tables.py --nso <main>` writes
-`data/worldmap/map_enemies.csv`:
+`reverse-engineering/FindingsG/map_enemies.csv`:
 
 | World | Enemies (start point flag) |
 |---|---|
@@ -256,7 +256,7 @@ Peach's castle) are **scripted event sequences**, not files. The event manager
 through it. A step ends when every actor in the request reports done
 (0x60190CEC).
 
-`data/worldmap/event_sequences.csv` lists all 119 sequences from the table at
+`reverse-engineering/FindingsG/event_sequences.csv` lists all 119 sequences from the table at
 0x60BD5514: `{priority, steps}`, each step `{code, arg}`, ending at code 343.
 Step `7(n)` waits n frames. Other codes are commands that the camera
 (0x601DBB64, a `switch` on the current code), the player and the map objects

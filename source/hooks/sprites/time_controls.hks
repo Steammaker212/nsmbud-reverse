@@ -1,0 +1,8 @@
+@ Coin ring duration (code/sprites/time_controls.cpp): the Red Coin Ring's event switch,
+@ 0x606C6DA8, replaced (its trampoline is never called). Entry: push {r11, lr}.
+
+CoinRing_activate:
+    type:       hook
+    address:    0x006C6DA8
+    symbol:     ModBase::levelTimer::ringActivate(StageActor*)
+    trampoline: ModBase::levelTimer::ringActivate_orig(StageActor*)

@@ -17,7 +17,7 @@ Why it works, and every rule it follows: [docs/WIIU_MODELS.md](../../docs/WIIU_M
 | [`scripts/models/bfres_dump.py`](../../scripts/models/bfres_dump.py) | dumps Wii U and Switch BFRES the same way (materials, bones, shapes, anims) |
 | [`scripts/models/bfsha_info.py`](../../scripts/models/bfsha_info.py) | lists a `.bfsha`'s shading models and the option values (skin count) each was compiled for |
 | [`scripts/models/bntx_compare.py`](../../scripts/models/bntx_compare.py) | decodes textures to PNG, compares two archives pixel by pixel |
-| [`framework/diagnostics/code/draw_guard.cpp`](../../framework/diagnostics/code/draw_guard.cpp) | in-game: logs and skips a shape the renderer cannot draw instead of crashing |
+| [`source/code/debug/draw_guard.cpp`](../../source/code/debug/draw_guard.cpp) | in-game: logs and skips a shape the renderer cannot draw instead of crashing |
 
 ## Setup (once)
 

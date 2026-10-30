@@ -1,4 +1,0 @@
-static_init:
-    type:      hook
-    address:   0x0000019C
-    symbol:    static_init_hook

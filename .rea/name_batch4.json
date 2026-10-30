@@ -1,6 +1,0 @@
-[
-  {"rva": "0x921988", "name": "Table12_dispatchByByte",
-   "why": "row base a1[1] stride 12, byte at +8 used through byte_60B4658F then vtable slot 3"},
-  {"rva": "0x168DF8", "name": "Object_updateScaleFromPacked2",
-   "why": "same unpacking as 0x168DF8-style scale update with an extra float blend at +200/+204/+208"}
-]

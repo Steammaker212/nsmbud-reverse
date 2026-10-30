@@ -1,89 +1,68 @@
 # nsmbud-reverse
 
-A modding framework and reverse-engineering notes for
-***New Super Mario Bros. U Deluxe*** (Switch, v1.0.0). Mods are written in C++
-and built with [sweet-dx](https://github.com/jabonchan/sweet-dx). Every fact they
-rely on is recorded with its evidence.
+*Steam's Super Mario Bros. Deluxe*: a C++ code mod for ***New Super Mario Bros. U
+Deluxe*** (Switch, v1.0.0), built with [sweet-dx](https://github.com/jabonchan/sweet-dx),
+and the reverse-engineering notes behind it. Every fact the mod relies on is
+recorded with its evidence.
 
-> **Working in-game (Ryujinx, 2026-10-26):** the Hammer Flower (side-on model,
-> collectible, throws hammers), the P-Acorn, the Blue Shell, actor spawners, and
-> **Wii U models converted for Deluxe**: a Shy Guy and a Bee remodel run on
-> Nintendo's own compiled shaders. Build everything at once with
-> [mods/nsmbudx_all](mods/nsmbudx_all/); place it in levels with the one
-> Yaz0moto patch, [yaz0moto/steam-dx](yaz0moto/steam-dx/).
+The mod adds custom sprites 724-779 (many ported from Zenith Team's
+[Tsuru](https://github.com/Zenith-Team/Tsuru)), the Hammer Flower, P-Acorn, Blue Shell
+and Poison Mushroom power-ups, wavy liquids and other tweaks, and **Wii U models
+converted for Deluxe**. Place the sprites with the Yaz0moto patch in
+[yaz0moto/patches/steam-dx](yaz0moto/patches/steam-dx/).
 
-No game files are distributed here. You need your own `main` NSO. See [NOTICE.md](NOTICE.md).
+No game files are distributed here. You need your own `main` NSO (v1.0.0) at
+`source/nso/main`.
 
 ---
 
 ## Start here
 
-| I want to… | Go to |
+| I want to... | Go to |
 |---|---|
-| **Build every mod at once** | [mods/nsmbudx_all/](mods/nsmbudx_all/): all mods + framework + codedx in one sweet-dx project, `build.py --install` |
-| **Use a Wii U model in Deluxe** | [docs/WIIU_MODELS.md](docs/WIIU_MODELS.md) + [tools/wiiu2dx/](tools/wiiu2dx/): convert, rebind to Nintendo's shaders, check |
-| **Place the custom sprites in a level** | [yaz0moto/steam-dx/](yaz0moto/steam-dx/): the one Yaz0moto patch |
-| **Make a mod** | [docs/MODDING.md](docs/MODDING.md): build, install, write a hook, add a sprite, debug a crash |
-| **See a complete example** | [mods/hammer_suit/](mods/hammer_suit/): a new power-up, with model names you can change at the top of one file |
-| **Call game functions from my code** | [sdk/](sdk/): `#include "nsmbudx/game.h"` gives 7,079 game functions by name |
-| **Use the framework pieces** | [framework/](framework/): logging, model-name remapping, crash diagnostics |
-| **Look up what we know** | [data/findings/ledger.csv](data/findings/ledger.csv): every finding with its address, evidence and grade |
-| **Help reverse engineer** | [docs/RE_PLAN.md](docs/RE_PLAN.md): which sources to trust, how a finding is verified, and the phases |
-| **Read the game as clean C++** | [readable/](readable/): hand-reconstructed, verified subsystems with real names (blocks and items so far) |
-| **Make a new enemy from an existing one** | `framework/actors` + [mods/bee/](mods/bee/): any vanilla actor becomes a new sprite with your model (the Bee is a flying Cheep Cheep) |
-| **Change what hurts an enemy** | `framework/actors` hit rules + [docs/MODDING.md](docs/MODDING.md) §7e: fireproof, shell-proof, "dies to ice like a Star", per sprite |
-| **Give a power-up its own suit colours** | `framework/player` + [docs/MODDING.md](docs/MODDING.md) §7d: suits are a texture-animation frame; add one and select it |
-| **Make a custom world map** | [docs/WORLDMAP.md](docs/WORLDMAP.md) + `scripts/worldmap/wmtool.py`: the CSV format, every limit, point → level mapping; `check` tells you if the world can be explored |
-| **Change Yoshi** (research mods, not in releases: build with `--with yoshi`) | [docs/MODDING.md](docs/MODDING.md) §7f: fire/ice breath from any enemy ([mods/yoshi_fire/](mods/yoshi_fire/)), fruits per egg and flutter length as data patches ([mods/yoshi_tuning/](mods/yoshi_tuning/)) |
-| **Get the P-Acorn from ?-blocks** | [mods/p_acorn/](mods/p_acorn/): the P-Acorn exists in the game but no level gives it; contents 22 now does |
-| **Put a new power-up in ?-blocks** | `framework/items` + [docs/MODDING.md](docs/MODDING.md) §7b: block contents 21–31 are free for mods |
-| **Read the raw decompiled game** | [decompiled/src/](decompiled/src/): 45,148 functions, one C file each (see the caveat below) |
+| **Build and install the mod** | sweet-dx on `source/` (`compile.bat` builds and installs it to Ryujinx); see [docs/MODDING.md](docs/MODDING.md) |
+| **Place the custom sprites in a level** | [yaz0moto/patches/steam-dx/](yaz0moto/patches/steam-dx/): the Yaz0moto patch |
+| **Add or change a sprite, hook or tweak** | [docs/MODDING.md](docs/MODDING.md): the layout, hooks, profiles, debugging |
+| **Port a Tsuru actor** | [docs/TSURU_PORTING.md](docs/TSURU_PORTING.md); what is ported: [TSURU_ENEMIES](docs/TSURU_ENEMIES.md), [TSURU_OBJECTS](docs/TSURU_OBJECTS.md) |
+| **Use a Wii U model in Deluxe** | [docs/WIIU_MODELS.md](docs/WIIU_MODELS.md) + [tools/wiiu2dx/](tools/wiiu2dx/) + `scripts/models/` |
+| **Make a custom world map** | [docs/WORLDMAP.md](docs/WORLDMAP.md) + `scripts/worldmap/wmtool.py` |
+| **Debug live with GDB** | [docs/GDB_SETUP.md](docs/GDB_SETUP.md) |
+| **Look up what we know** | [reverse-engineering/FindingsB/ledger.csv](reverse-engineering/FindingsB/ledger.csv): every finding with its address, evidence and grade |
+| **Read the game as clean C++** | [reverse-engineering/FindingsA/](reverse-engineering/FindingsA/): hand-reconstructed, verified subsystems with real names |
 
 ## Repository map
 
 ```
-mods/            mods you can build (each has a README)
-  nsmbudx_all/     every mod + framework + codedx merged: one sweet-dx project
-  hammer_suit/     Hammer Flower power-up (sprite 734, block contents 21)
-  bee/             a flying Cheep Cheep with a bee model (sprite 735)
-  p_acorn/         the unobtainable P-Acorn in ?-blocks (contents 22, sprite 736)
-  shy_guy/         a ledge-turning Goombrat with a Shy Guy model (sprite 737)
-  custom_spawner/  actor spawner 738, and a fixed codedx spawner 726
-  shell_suit/      the Blue Shell power-up (sprite 739, contents 23)
-  diag_passthrough/  diagnostic: the hammer hook doing nothing
-framework/       reusable code mods pull in through requires.txt
-  core/            nsmbudx::log -> the Ryujinx log
-  game/            codedx-style class headers (game/block.h: BlockBase, ItemMgr)
-  items/           custom ?-block / brick contents -> any profile
-  actors/          new sprites from vanilla actors with your model (+ air-swim)
-  player/          suit colours, another mode's body, throw gates/handlers
-  resources/       ScopedNameRemap: your archive/model names in the game's own code
-  diagnostics/     archive guard + draw guard: name the missing archive / undrawable shape instead of crashing
-sdk/             generated game API (header, .sym, hookable.csv)
-tools/
-  wiiu2dx/         Wii U model -> Deluxe converter (C#, BfresLibrary)
+source/                 the mod: one sweet-dx project
+  code/                   .cpp (every file is compiled; file names must be unique)
+    sprites/ powerups/ tweaks/ framework/ engine/ debug/
+  hooks/                  .hks patches (same folders)
+  include/                headers: game classes (actors/, game/, ...) and modbase/ (the kit)
+  symbols/                .sym game addresses (RVAs)
+  npdm/                   main.npdm
+  nso/                    the game's main NSO, which you supply (never committed)
+yaz0moto/patches/steam-dx/  the level-editor patch (spritedata, categories, icons)
+docs/                   guides (MODDING, TSURU_*, WIIU_*, WORLDMAP, GDB_SETUP) and
+                        reports from the first sweet-dx builds (README.md lists them)
+reverse-engineering/    what we know about the game
+  FindingsA/              hand-reconstructed game source, readable C++
+  FindingsB/              ledger.csv, the findings ledger
+  FindingsC/              codedx symbol inventory (main.sym, symbols.csv)
+  FindingsD/              field and type plans
+  FindingsE/              recovered layouts and profiles
+  FindingsF/              the generated game API (header, .sym, hookable.csv)
+  FindingsG/              world-map tables (events, map enemies)
+  FindingsH/              IDA exports (xrefs, disassembly, profile registry)
 scripts/
-  sdk/             the mod toolchain: build, inspect, check levels, read crash logs
-  worldmap/        wmtool.py: dump, check (limits + can it be explored), rebuild world maps
-  models/          wiiu2dx.py (convert), bfres_dump, bfsha_info, bntx_compare
-  ida/             live-IDA tools (ida-pro-mcp), type planning, export
-  pipeline/        builds the decompiled corpus
-  (loose scripts)  earlier one-off research scripts, see scripts/README.md
-docs/
-  MODDING.md       the guide
-  WORLDMAP.md      world maps: format, limits, custom worlds
-  WIIU_MODELS.md   Wii U models in Deluxe: how and why it works
-  RE_PLAN.md       the reverse-engineering plan
-  legacy/          earlier reports, quarantined until re-verified
-data/
-  findings/        the findings ledger
-  loader/          symbol inventory (symbols.csv) used by the generators
-readable/        hand-reconstructed game source, verified, readable C++
-decompiled/      the raw C corpus (src/) and earlier hand-picked functions
-research/        logs and base-game file listings
-yaz0moto/steam-dx/  the level-editor patch
-loader/ sweetdx/ hooks/   earlier harnesses (legacy)
+  models/                 Wii U model conversion and checks
+  worldmap/               wmtool.py: dump, check, rebuild world maps
+  sdk/                    crash symbolizer, subsdk inspector, level checks
+  ida/ pipeline/ (loose)  earlier research tooling, see scripts/README.md
+tools/wiiu2dx/          Wii U model -> Deluxe converter (C#, BfresLibrary)
 ```
+
+`.projectignore/` (git-ignored) holds the local-only files: `compile.bat`,
+`sweetdx.exe`, the IDA databases, art sources and working notes.
 
 ## How much to trust what you read
 
@@ -92,12 +71,8 @@ loader/ sweetdx/ hooks/   earlier harnesses (legacy)
 | The binary, and what we observed in-game | final word |
 | RicBent's IDA database and [codedx](https://github.com/RicBent/codedx) headers | high |
 | The Wii U decomp ([red-pro2](https://github.com/aboood40091/red-pro2), [NSMBU-Headers](https://github.com/aboood40091/NSMBU-Headers), on the `wiiu-reference` branch) | meaning only; Switch addresses differ |
-| `docs/legacy/`, older names in `decompiled/` | **leads, not facts.** Several turned out wrong (see RE_PLAN §1) |
+| Older notes (the early sweet-dx reports in `docs/`), names not yet re-checked in IDA | **leads, not facts.** Several turned out wrong |
 
-The decompiled corpus is faithful to the binary (99.8% of sampled calls match).
-It's still hard to read: most functions are `sub_XXXXXXXX`, and fields are raw
-`FIELD_U32(a1, 0x…)` offsets. Phase 5 of the plan regenerates it with real types
-and member names.
 
 ## Target
 
@@ -114,3 +89,4 @@ and member names.
 - **jabonchan**: sweet-dx.
 - **aboood40091**: red-pro2 and NSMBU-Headers (Wii U).
 - **KillzXGaming**: BfresLibrary (MIT), used by tools/wiiu2dx; BfshaLibrary, read as a format reference.
+- **Zenith Team**: Tsuru (MPL-2.0), the source of the ported actors and patches.

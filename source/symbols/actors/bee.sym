@@ -1,0 +1,7 @@
+# The Spike Top Bee (code/sprites/bee.cpp)
+#
+# Addresses are RVAs (VA - 0x60000000). New Super Mario Bros. U Deluxe (Switch) v1.0.0 only.
+
+# The Cheep Cheep's Search and Chase states (ledger F0039; Pukupuku::onCreate enters Search)
+ModBase::bee::stateSearch = 0x00C960FC;
+ModBase::bee::stateChase = 0x00C96120;

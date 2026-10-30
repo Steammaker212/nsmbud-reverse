@@ -1,7 +1,0 @@
-Possible file format: MS-DOS executable (EXE) (C:\Program Files\IDA Professional 9.3\loaders\dos.dll)
-Possible file format: Portable executable for AMD64 (PE) (C:\Program Files\IDA Professional 9.3\loaders\pe.dll)
-C:\Windows\System32\whoami.exe.i64: Permission denied
-Please specify another file path for the database -> OK
-Database initialization failed with error 2
-Open database failed with result: 2
- -> OK

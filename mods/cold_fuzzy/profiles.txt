@@ -1,3 +1,0 @@
-# New profiles this mod adds. <ProfileId name>   <sprite id>
-# Tsuru ports: ours 740-759, partner 760-799 (plan doc).
-ColdFuzzy            740

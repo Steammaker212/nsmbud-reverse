@@ -1,0 +1,19 @@
+@ Star Coin hitbox (Tsuru's misc "Fix star coin hitbox"; https://github.com/Zenith-Team/Tsuru,
+@ Zenith Team, MPL-2.0). StarCoin_ActiveColliderInfo (0x60C0C504, used by 0x605F43EC) is the
+@ Wii U's box: offset (0, -3), half size (12, 15), shape 0 (rectangle) -- a box shifted down
+@ from the coin. As Tsuru: a circle of radius 15 on the coin's centre.
+
+StarCoinHitbox_offsetY:
+    type:    data
+    address: 0x00C0C508
+    data:    00 00 00 00
+
+StarCoinHitbox_sizeX:
+    type:    data
+    address: 0x00C0C50C
+    data:    00 00 70 41
+
+StarCoinHitbox_shape:
+    type:    data
+    address: 0x00C0C514
+    data:    01 00 00 00

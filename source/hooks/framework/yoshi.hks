@@ -1,0 +1,10 @@
+@ code/framework/yoshi.cpp. The tongue's "caught something" phase (0x607D0A4C, phase 2
+@ of the Tongue mouth state) reads the catch's EatData type when the tongue is
+@ back: YoshiFire/YoshiFireIce become a YoshiFlame in the mouth. Entry
+@ `push {r4-r6, lr}` is position-independent. Ledger F0082.
+
+Yoshi_tongueCaught:
+    type:       hook
+    address:    0x007D0A4C
+    symbol:     ModBase::yoshi::tongueCaught(void*)
+    trampoline: ModBase::yoshi::tongueCaught_orig(void*)
