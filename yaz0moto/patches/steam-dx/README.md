@@ -28,7 +28,7 @@ Mods directory), **not** the editor's own `miyamotodata/games`. On this machine:
 | 734 | Hammer Flower | `source/code/powerups/hammer_suit.cpp` | works |
 | 735 | Spike Top Bee | `source/code/sprites/bee.cpp` | works; follow, speed, eating and the Yoshi bounce not tested in-game |
 | 736 | P-Acorn | `source/code/powerups/p_acorn.cpp` | works |
-| 737 | Shy Guy (nine behaviours) | `source/code/sprites/shy_guy_behaviours.cpp`, `shy_guy.cpp` | builds; not tested in-game |
+| 737 | Shy Guy | `source/code/sprites/shy_guy.cpp` | works |
 | 738 | Actor Spawner (custom) | `source/code/sprites/actor_spawner_738.cpp` | |
 | 739 | Blue Shell | `source/code/powerups/shell_suit.cpp` | works |
 | 740 | Cold Fuzzy | `source/code/sprites/cold_fuzzy.cpp` (Tsuru port) | |
