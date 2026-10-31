@@ -20,12 +20,12 @@
 #include "actors/profile.h"
 #include "actors/profileid.h"
 #include "modbase/tsuru.h"
+#include "modbase/tumble_death.h"
 
-// The puff a Star-broken Grrrol leaves (cold_fuzzy.cpp uses the same).
-constexpr s32 cEffect_CloudDisappear = 0x15B;
 
 // Tsuru's PhysicsActor falls at the game's standard rate; Deluxe's starts at 0.
 #define ANGRYGRRROL_GRAVITY     -0.1875f
+#define ANGRYGRRROL_ANGER       1.7f        // on the speed and the acceleration: it is angry
 #define ANGRYGRRROL_FALL_SPEED  -4.0f
 
 class AngryGrrrol : public Enemy
@@ -43,6 +43,8 @@ public:
     void vf15C() override;
 
     void breakApart();
+
+    ModBase::TumbleDeath tumble;
 
     bool collisionFireball(ActiveCollider* acSelf, ActiveCollider* acOther) override;
     bool collisionStar(ActiveCollider* acSelf, ActiveCollider* acOther) override;
@@ -104,11 +106,14 @@ u32 AngryGrrrol::onExecute()
 {
     tsuru::placeModel(model, this);
 
+    if (tumble.execute(this))
+        return 1;
+
     Vec2 d2p = tsuru::distanceToPlayer(this);
 
-    speed.x += d2p.x * 0.00025f;
+    speed.x += d2p.x * 0.00025f * ANGRYGRRROL_ANGER;
 
-    const f32 maximum = 0.25f * ((eventId1 >> 0x4 & 0xF) + 1);     // nybble 3
+    const f32 maximum = 0.25f * ((eventId1 >> 0x4 & 0xF) + 1) * ANGRYGRRROL_ANGER;     // nybble 3
 
     if (d2p.x > 0.0f && speed.x > maximum)
         speed.x = maximum;
@@ -139,7 +144,7 @@ bool AngryGrrrol::collisionFireball(ActiveCollider* acSelf, ActiveCollider* acOt
     return true;
 }
 
-// How it dies, whatever killed it: a puff, then gone.
+// How it dies, whatever killed it: modbase/tumble_death.h.
 //
 // Enemy's deaths all go through 0x602A852C: a death record at +0x17D8 and the pending flag
 // _17F8. The next Enemy::beforeExecute (0x602A1BC8) consumes the flag, marks the actor dead
@@ -147,10 +152,7 @@ bool AngryGrrrol::collisionFireball(ActiveCollider* acSelf, ActiveCollider* acOt
 // so it stayed where it was (bug F007). Catching the flag first ends every death here.
 void AngryGrrrol::breakApart()
 {
-    Vec3 effectPos(position.x, position.y, 4500.0f);
-    Effect::spawn(cEffect_CloudDisappear, &effectPos, nullptr, &scale);
-    tsuru::playSound("SE_EMY_DOWN", position);
-    isDeleted = true;
+    tumble.begin(this);
 }
 
 u32 AngryGrrrol::beforeExecute()

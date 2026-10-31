@@ -5,8 +5,8 @@
 // (modbase/player_models.h), each on a bone of the player's body (+0x018) or
 // head (+0x124) model:
 //
-//   ModBase::costume::drawOnBone(helmet, head, "player_head");
-//   ModBase::costume::drawShell(shellBody, shellBelly, body);
+//   ModBase::costume::drawHelmet(helmet, head, character);
+//   ModBase::costume::drawShellPart(shell, body, cBackShell[shellFitIndex(character)], cHammerShellDepth);
 //
 // Deluxe (Switch) v1.0.0 only.
 
@@ -94,19 +94,77 @@ inline void drawOnBone(ModelWrapper* part, ModelWrapper* on, const char* bone,
 // nokonoko_shell's geometry: origin at the opening, dome toward +y (15.34
 // deep), head end toward +z.
 //
-// They are drawn on the body model's bone "spin" (MB_model: at (0, 12.81,
-// -0.85); bone X = up, bone Y = forward, bone Z = sideways), turned so the
-// opening faces forward, the dome back and the head end up. Each part's origin
-// (its opening) sits this far from the bone, in the player's terms:
-//   X = sideways, Y = up, Z = forward (+ in front of the player, - behind).
-// With the same offsets the two parts fit together as the whole shell.
-constexpr f32 cShellBodyOffsetX  = 0.0f;
-constexpr f32 cShellBodyOffsetY  = 1.5f;
-constexpr f32 cShellBodyOffsetZ  = 7.1f;    // the body's front reaches 6.23
+// They are drawn on the body model's bone "spin" (bone X = up, bone Y = forward,
+// bone Z = sideways), turned so the opening faces forward, the dome back and the
+// head end up. A part's origin (its opening) sits this far from the bone, in the
+// player's terms: x sideways, y up, z forward (+ in front of the player, - behind).
+// The shell is 16.92 wide, 15.34 deep and 17.42 tall at scale 1.
 
-constexpr f32 cShellBellyOffsetX = 0.0f;
-constexpr f32 cShellBellyOffsetY = 1.2f;
-constexpr f32 cShellBellyOffsetZ = 6.6f;
+// =====================================================================
+//  CONFIGURATION: how deep each suit's shell is
+// =====================================================================
+
+// A multiplier on each character's own depth (cBackShell, cWholeShell): 1.0 is the
+// size measured for that character, 1.5 is 50% deeper, and every character keeps its
+// proportions. The shell grows backward only, from where it meets the body. The Blue
+// Shell's belly plate has no multiplier: it keeps its size.
+constexpr f32 cHammerShellDepth = 1.2f;
+constexpr f32 cBlueShellDepth   = 1.2f;
+
+// =====================================================================
+
+struct PartFit
+{
+    f32 x, y, z;
+    f32 scaleSide, scaleDepth, scaleUp;
+};
+
+struct ShellFit
+{
+    PartFit body;
+    PartFit belly;
+};
+
+// Measured from each character's Normal body around bone "spin" (half width, back,
+// front, top, bottom of the torso), since they differ too much for one fit:
+//
+//                half width  back    front  top   bottom   bone height
+//   Mario          5.30      -3.20   5.96   9.0   -5.0     12.81
+//   Luigi          4.20      -2.40   4.97   9.0   -5.0     14.32
+//   Toads          5.45      -3.67   5.10   5.7   -4.0      7.34
+//   Toadette       5.10      -3.73   4.95   5.8   -4.0      7.34   (skirt: 6.14, -4.69, 6.09)
+//
+// Worn on the back (the Hammer Suit, no belly): as wide and tall as the Blue Shell's
+// dome, and ending just as far behind the player. With no belly plate to cover it, the
+// opening comes back 2.3, into the torso; that is all the difference in depth.
+constexpr PartFit cBackShell[] = {
+    { 0.0f,  2.00f, 4.56f, 0.777f, 0.674f, 0.836f },    // Mario
+    { 0.0f,  2.00f, 3.57f, 0.616f, 0.700f, 0.836f },    // Luigi
+    { 0.0f, -0.25f, 4.00f, 0.863f, 0.668f, 0.710f },    // Toads
+    { 0.0f, -0.20f, 4.30f, 0.920f, 0.742f, 0.716f },    // Toadette
+};
+
+// Worn around the body (the Blue Shell): the opening and the belly plate in front of
+// it, the dome 2.2 behind the torso. The Toads' round bodies need it lower and wider.
+constexpr ShellFit cWholeShell[] = {
+    { { 0.0f,  2.00f, 6.86f, 0.777f, 0.799f, 0.836f }, { 0.0f,  1.75f, 6.46f, 0.777f, 0.799f, 0.836f } },   // Mario
+    { { 0.0f,  2.00f, 5.87f, 0.616f, 0.760f, 0.836f }, { 0.0f,  1.75f, 5.98f, 0.616f, 0.683f, 0.836f } },   // Luigi
+    { { 0.0f, -0.25f, 6.30f, 0.863f, 0.793f, 0.710f }, { 0.0f, -0.46f, 5.90f, 0.863f, 0.793f, 0.710f } },   // Toads
+    { { 0.0f, -0.20f, 6.60f, 0.920f, 0.867f, 0.716f }, { 0.0f, -0.41f, 6.17f, 0.920f, 0.867f, 0.716f } },   // Toadette
+};
+
+// Characters by modbase/player_models.h: 0 Mario, 1 Luigi, 2-4 Toads, 6 Toadette.
+constexpr u32 cToadetteCharacter = 6;
+
+inline bool wearsShell(u32 character)
+{
+    return character <= 4 || character == cToadetteCharacter;
+}
+
+inline u32 shellFitIndex(u32 character)
+{
+    return character <= 1 ? character : character == cToadetteCharacter ? 3 : 2;
+}
 
 // The fixed turn, with a part's offset.
 inline Mtx34 shellPart(f32 x, f32 y, f32 z)
@@ -118,13 +176,43 @@ inline Mtx34 shellPart(f32 x, f32 y, f32 z)
     return m;
 }
 
-// Draws the two parts on the player's body model (either may be null).
-inline void drawShell(ModelWrapper* shellBody, ModelWrapper* shellBelly, ModelWrapper* body)
+// Draws one part on the player's body model, `depth` times as deep as its fit.
+inline void drawShellPart(ModelWrapper* part, ModelWrapper* body, const PartFit& fit, f32 depth = 1.0f)
 {
-    Mtx34 b = shellPart(cShellBodyOffsetX, cShellBodyOffsetY, cShellBodyOffsetZ);
-    Mtx34 f = shellPart(cShellBellyOffsetX, cShellBellyOffsetY, cShellBellyOffsetZ);
-    drawOnBone(shellBody, body, "spin", &b);
-    drawOnBone(shellBelly, body, "spin", &f);
+    Mtx34 local = shellPart(fit.x, fit.y, fit.z);
+    drawOnBone(part, body, "spin", &local, Vec3(fit.scaleSide, fit.scaleDepth * depth, fit.scaleUp));
+}
+
+// ---- The helmet on the head -----------------------------------------------------
+//
+// Bone "player_head" of the head model: x forward, -y up, z sideways. The Hammer Bro
+// helmet (hmrpy_partsC, x -7.68..7.04, y -13.96..1.66, z -7.97..8.33) was made for
+// Mario's head and fits it as it is. Luigi's hair reaches -14.04 (Mario's -11.86), with
+// his head narrower: hair x -5.03..5.96 (Mario -5.61..7.39), face z 5.82 (6.99). His
+// helmet keeps Mario's margins around those.
+struct HelmetFit
+{
+    f32 x, y, z;
+    f32 scaleForward, scaleUp, scaleSide;
+};
+
+constexpr HelmetFit cHelmetFit[] = {
+    { 0.0f,   0.0f,  0.0f, 1.0f,   1.0f,   1.0f   },    // Mario
+    { -0.29f, -1.15f, 0.0f, 0.845f, 1.087f, 0.833f },   // Luigi
+};
+
+// Mario (0) or Luigi (1).
+inline void drawHelmet(ModelWrapper* helmet, ModelWrapper* head, u32 character)
+{
+    const HelmetFit& fit = cHelmetFit[character & 1];
+    Mtx34 local;
+    for (u32 i = 0; i < 3; i++)
+        for (u32 j = 0; j < 4; j++)
+            local.rows[i][j] = i == j ? 1.0f : 0.0f;
+    local.rows[0][3] = fit.x;
+    local.rows[1][3] = fit.y;
+    local.rows[2][3] = fit.z;
+    drawOnBone(helmet, head, "player_head", &local, Vec3(fit.scaleForward, fit.scaleUp, fit.scaleSide));
 }
 
 // ---- Mario's cap ----------------------------------------------------------------

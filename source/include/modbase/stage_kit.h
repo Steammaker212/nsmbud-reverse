@@ -223,12 +223,14 @@ inline bool isSlidingShell(CollisionMgr* mgr)
 //
 // The level camera (Tsuru's LevelCamera), a singleton at 0x60CC6484 found live with GDB: the
 // screen's left and right edges, in level units, at +0x28 and +0x30 (+0x48 / +0x50 are the same
-// widened by 100 units, +0x74 the centre). Only valid in a level.
+// widened by 100 units, +0x74 the centre). mapPositionToScreen (0x600243B4) has the rest: the
+// centre's y at +0x80, the view's height at +0x6C. Only valid in a level.
 namespace camera {
 extern u8* instance;
 inline f32 left()    { return instance ? *(f32*)(instance + 0x28) : 0.0f; }
 inline f32 right()   { return instance ? *(f32*)(instance + 0x30) : 0.0f; }
 inline f32 centreX() { return instance ? *(f32*)(instance + 0x74) : 0.0f; }
+inline f32 top()     { return instance ? *(f32*)(instance + 0x80) + *(f32*)(instance + 0x6C) / 2.0f : 0.0f; }
 } // namespace camera
 
 // ---- Coins, sounds -----------------------------------------------------------------------

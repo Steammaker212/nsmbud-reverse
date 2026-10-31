@@ -606,7 +606,7 @@
 
     <!-- bee mod (nsmbud-reverse/mods/bee): a Cheep Cheep (profile 530) with a bee model,
          flying with framework/actors' air-swim option. Fields are sprite 101's. -->
-    <sprite id="735" name="Spike Top Bee" notes="A bee with a spike on top that flies like a Cheep Cheep swims. Yoshi can eat it, and bounces off its spikes when he lands on it. Follow the player makes it fly straight at them, up and down too, and never lose them (Type and Flying speed are then ignored). Needs romfs/Model/bee.Nin_NX_NVN.szs with a 'swim' skeletal animation; without it the Cheep Cheep model is shown." files="bee">
+    <sprite id="735" name="Spike Top Bee" notes="A bee with a spike on top that flies like a Cheep Cheep swims. Yoshi can eat it, and bounces off its spikes when he lands on it. Follow the player makes it fly straight at them, up and down too, until it falls far off screen (Type and Flying speed are then ignored). Needs romfs/Model/bee.Nin_NX_NVN.szs with a 'swim' skeletal animation; without it the Cheep Cheep model is shown." files="bee">
 		<list nybble="5" title="Starting direction" category="behavior">
 			<entry value="0">Towards player</entry>
 			<entry value="8">Left</entry>
@@ -635,17 +635,29 @@
     </sprite>
 
     <!--
-        shy_guy mod (nsmbud-reverse/mods/shy_guy): a Shy Guy built as an actor
-        variant over the game's Goombrat (profile 468), so the ledge turn, the
-        "walk1" alert walk and the tuning all come from the game's own code
-        (ledger F0091-F0101, readable/enemy/Goomba.cpp).
-
-        The nybbles are the Goomba class's (sprite 467/468): the type field,
-        then a type-dependent vertical offset. Nothing here is new game code:
-        the settings are read by the Goomba class (vtable +0x270, 0x603393F0, called from GoombaBase::onCreate).
+        Shy Guy (code/sprites/shy_guy_behaviours.cpp): its own enemy class with nine behaviours.
+        Behaviour 1, the original, is still the game's Goombrat with a private vtable
+        (code/sprites/shy_guy.cpp), so nybbles 11-12 are the Goomba class's.
     -->
-    <sprite id="737" name="Shy Guy" notes="New enemy from the shy_guy mod: a Shy Guy that uses the Goombrat's mechanics, turning around at the edge of a platform instead of walking off it. Needs romfs/Model/shyguy.Nin_NX_NVN.szs with the animations 'walk', 'walk0' and 'walk1'; without it the Goombrat model is shown and the log says so." files="shyguy">
-        <list nybble="12" title="Type" comment="The Goomba family's type field (settings1 &amp; 0xF), read by the Goomba class (vtable +0x270, 0x603393F0, called from GoombaBase::onCreate). A Goombrat is type 0." category="behavior">
+    <sprite id="737" name="Shy Guy" notes="A Shy Guy with nine behaviours, each with its own colour (code/sprites/shy_guy_behaviours.cpp). Unless the behaviour says otherwise one stomp kills it, and Yoshi can eat it. Settings marked with a behaviour only apply to that one. Needs romfs/Model/shyguy.Nin_NX_NVN.szs (scripts/models/shyguy_model.py)." files="shyguy,gabon,balloon_awachibiyoshi">
+        <list nybble="5" title="Behaviour" comment="Also picks the colour. 0: the first stomp sits it down, the second kills it; left alone it gets back up. 1: the original, shrinks when stomped. 2: jumps without moving sideways, twisting in the air. 3: spins around, a spike ball appears as it turns back, and it throws it. 4: leaps, falls flat, gets up and tries again. 5: slides after the player as if on ice, and now and then hops and spins like a skater. 6: hands over its eyes, looks slowly from side to side. 7: sits facing the player and blows bubbles that bump you around and pop on their own. 8: skips with joy.">
+            <entry value="0">0 Red: sits when stomped</entry>
+            <entry value="1">1 Orange: shrinks when stomped (original)</entry>
+            <entry value="2">2 Yellow: jumps on the spot</entry>
+            <entry value="3">3 White: spike ball thrower</entry>
+            <entry value="4">4 Green: leaps at you</entry>
+            <entry value="5">5 Blue: chases, slippery</entry>
+            <entry value="6">6 Black: sad</entry>
+            <entry value="7">7 Light blue: blows bubbles</entry>
+            <entry value="8">8 Pink: happy</entry>
+        </list>
+        <checkbox nybble="6" mask="1" title="Big" comment="Any behaviour. 10 tiles tall, walks very slowly and never falls off an edge. It cannot be hurt and does not hurt: it bumps you from the sides, and you bounce high off its head. Yoshi cannot eat it." />
+        <checkbox nybble="6" mask="2" title="Falls off edges" comment="Behaviours 0, 1, 6 and 8. Unticked it turns around at edges." />
+        <checkbox nybble="6" mask="4" title="Stationary (6, 8) / Change direction after each leap (4)" comment="Behaviour 6: sits, hands over its eyes, shaking its head no. Behaviour 8: stays on the spot, still skipping. Behaviour 4: goes the other way after every leap, like a two-way jump. Toward the player overrides it." />
+        <checkbox nybble="6" mask="8" title="Toward the player (4) / Keep off edges (5)" comment="Behaviour 4: every leap goes toward the player. Behaviour 5: chases without falling off edges." />
+        <value nybble="7" title="0: seconds sitting / 2: jump height / 3: direction / 4: leap distance / 7: bubbles" comment="0 uses the default. Behaviour 0: time sitting, in half seconds (default 10). Behaviour 2: jump height, in half tiles (default 4). Behaviour 3: throw direction, 0 at the player, 1 left, 2 right. Behaviour 4: leap distance, in tiles (default 4). Behaviour 7: bubbles in each burst (default 1)." />
+        <value nybble="8" title="2: jump wait / 3: throw time / 4: time on ground / 7: bubble time" comment="0 uses the default. Behaviour 2: wait between jumps, in tenths of a second (default 5). Behaviour 3: time between throws, in half seconds (default 6). Behaviour 4: time on the ground before getting up, in half seconds (default 3). Behaviour 7: time between bursts, in half seconds (default 3)." />
+        <list nybble="12" title="1: Type" comment="Behaviour 1 only: the Goomba family's type field (settings1 &amp; 0xF), read by the Goomba class (vtable +0x270, 0x603393F0).">
             <entry value="0">Normal (walks, turns at ledges)</entry>
             <entry value="1">Alternate collision sensors</entry>
             <entry value="2">No player collision</entry>
@@ -656,9 +668,7 @@
             <entry value="7">Spawns far back (z = 2300)</entry>
             <entry value="8">Like type 1</entry>
         </list>
-        <value nybble="11" title="Type-2 variant" comment="Only read when Type is 2: (settings1 &gt;&gt; 4) &amp; 3, stored at +0x1AC8 and used as an index into a speed table (0x60338434), so it picks a variant rather than an offset." category="behavior" requirednybble="12" requiredval="2" />
-        <value nybble="19-20" title="Movement Type" category="movement" />
-        <value nybble="21-22" title="Movement ID" id_type="movement" category="movement" />
+        <value nybble="11" title="1: Type-2 variant" comment="Behaviour 1 only, and only read when Type is 2: (settings1 &gt;&gt; 4) &amp; 3, stored at +0x1AC8 and used as an index into a speed table (0x60338434)." />
     </sprite>
 
     <!--
@@ -808,9 +818,10 @@
     <sprite id="753" name="Poison Piranha" notes="Tsuru port (code/sprites/poison_piranha.cpp): a Piranha Plant that turns to face the player and spits a poison ball every 3 seconds; each ball leaves a poison puddle that lasts 10 seconds. Needs romfs/Model/poisball.Nin_NX_NVN.szs and e_poison.Nin_NX_NVN.szs (and the retail pakkun)." files="pakkun,poisball,e_poison">
     </sprite>
 
-    <sprite id="754" name="Scuttlebug" notes="Tsuru port (code/sprites/scuttlebug.cpp): a spider on a thread that lowers and raises itself. Stomping defeats it, as do a Star, fireballs, iceballs, slides, ground pounds and thrown objects. Needs romfs/Model/gasagoso.Nin_NX_NVN.szs." files="gasagoso">
+    <sprite id="754" name="Scuttlebug" notes="Tsuru port (code/sprites/scuttlebug.cpp): a spider on a thread that lowers and raises itself. Stomping defeats it, as do a Star, fireballs, iceballs, slides, ground pounds and thrown objects. Needs romfs/Model/gasagoso.Nin_NX_NVN.szs. It waits out of sight until a player comes within about 8 tiles, then drops from above the screen to where it is placed and bounces on its thread. It always sways a little from side to side." files="gasagoso">
         <value nybble="5" title="Lower Distance" comment="How far it lowers, in tiles. 0 hangs still." category="behavior" />
         <value nybble="6" title="Wait Time" comment="How long it waits at each end, in half seconds." category="behavior" />
+        <value nybble="7" title="Rise Distance" comment="How far it climbs above where it is placed, in tiles, before coming back there. Works with Lower Distance: it then goes down, back, up and back." category="behavior" />
     </sprite>
 
     <sprite id="755" name="Sting Bee" notes="Tsuru port (code/sprites/stingby.cpp): a bee that patrols 4 tiles either side of its start, notices a player within 5.5 tiles and charges after them. Stomping defeats it, and Yoshi can eat it. Follow the player makes it chase like a Deep Cheep: it flies straight at them, up and down too, and does not give up. Needs romfs/Model/hacchin000.Nin_NX_NVN.szs." files="hacchin000">
@@ -927,6 +938,10 @@
             <entry value="9">Star Coin 1</entry>
             <entry value="10">Star Coin 2</entry>
             <entry value="11">Star Coin 3</entry>
+            <entry value="12">Hammer Flower</entry>
+            <entry value="13">Blue Shell</entry>
+            <entry value="14">P-Acorn</entry>
+            <entry value="15">Poison Mushroom</entry>
         </list>
         <value nybble="6-7" title="Time Limit" category="behavior" comment="Seconds. 0 = 5." />
         <list nybble="19-20" title="Movement Type" comment="Which kind of movement controller to link to." category="movement">

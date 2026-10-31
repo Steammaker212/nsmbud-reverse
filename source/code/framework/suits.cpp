@@ -1,12 +1,13 @@
 // suits.cpp -- see modbase/suits.h.
 //
-// Three player-model classes have their own colour routine, all virtual slot
+// Four player-model classes have their own colour routine, all virtual slot
 // 44 (vtable +0xB0) and none a defined function in the database (ledger
 // F0050, F0061-F0063):
 //
-//   MarioModel    vtable 0x60C23FAC  0x6075A6E4  head +0x124, body +0x018, bonus cap +0x224
-//   KinopioModel  vtable 0x60C23E94  0x60757B58  head +0x124, body +0x018
-//   vtable 0x60C240DC (unidentified)   0x6075D3AC  body +0x018, head +0x498; +0x224 = colour variant
+//   MarioModel     vtable 0x60C23FAC  0x6075A6E4  head +0x124, body +0x018, bonus cap +0x224
+//   KinopioModel   vtable 0x60C23E94  0x60757B58  head +0x124, body +0x018
+//   KinopicoModel  vtable 0x60C23D34  0x6075227C  head +0x124, body +0x018 (Toadette, character 6)
+//   vtable 0x60C240DC (the Mii's, character 8)    0x6075D3AC  body +0x018, head +0x498; +0x224 = colour variant
 //
 // Shared by all three:
 //
@@ -45,8 +46,8 @@ struct Override
 {
     bool active;
     u32 when;
-    f32 frame;      // < 0: none (MarioModel only)
-    u32 showAs;     // cColor_Invalid: none (every class)
+    const f32* frames;  // per character, < 0: none; null: none at all
+    u32 showAs;         // cColor_Invalid: none (every class)
     const void* owner;
     s32 character;  // the player's character when it was set; -1 unknown
 };
@@ -184,6 +185,22 @@ void setFrame(void* wrapper, f32 frame)
     *(u32*)(anim + 0x1C) |= 2;
 }
 
+// The override's frame for this model, < 0 if it has none.
+f32 frameFor(const Override* o, void* model)
+{
+    u32 c = ModBase::playerModels::character(model);
+    return o && o->frames && c < ModBase::playerModels::cNumCharacters ? o->frames[c] : -1.0f;
+}
+
+// Only Normal and Small carry the switch frames.
+void applyFrame(void* model, f32 frame)
+{
+    if (*(u32*)((u8*)model + 0x12C) > 1)
+        return;
+    setFrame(*(void**)((u8*)model + 0x018), frame);     // body
+    setFrame(*(void**)((u8*)model + 0x124), frame);     // head
+}
+
 // Runs one class's routine. showAs: the routine picks that colour's frames
 // for this class and character, then the model records the colour the game
 // asked for, so damage and mode changes behave as without the override.
@@ -209,26 +226,42 @@ namespace ModBase { namespace suits { void setColorType(void* model, u32 colorTy
 void ModBase::suits::setColorType(void* model, u32 colorType, bool keepHeadKonst3)
 {
     const Override* o = overrideFor(model, colorType);
-    if ((!o || o->frame < 0.0f) && runShowAs(&ModBase::suits::setColorType_orig, model, colorType, keepHeadKonst3, o))
+    f32 frame = frameFor(o, model);
+    if (frame < 0.0f && runShowAs(&ModBase::suits::setColorType_orig, model, colorType, keepHeadKonst3, o))
         return;
 
     ModBase::suits::setColorType_orig(model, colorType, keepHeadKonst3);
-    if (!o || o->frame < 0.0f)
+    if (frame < 0.0f)
         return;
-    u32 body = *(u32*)((u8*)model + 0x12C);
-    if (body > 1)                       // only Normal and Small carry the switch frames
-        return;
-    setFrame(*(void**)((u8*)model + 0x018), o->frame);   // body
-    setFrame(*(void**)((u8*)model + 0x124), o->frame);   // head
-    setFrame(*(void**)((u8*)model + 0x224), o->frame);   // bonus cap
+    applyFrame(model, frame);
+    if (*(u32*)((u8*)model + 0x12C) <= 1)
+        setFrame(*(void**)((u8*)model + 0x224), frame);     // bonus cap
 }
 
-// KinopioModel and the third class: frames are per character, so only showAs.
+// The same for a class with no bonus cap.
+static void setColorTypeWith(SetColorTypeFn orig, void* model, u32 colorType, bool keepHeadKonst3)
+{
+    const Override* o = overrideFor(model, colorType);
+    f32 frame = frameFor(o, model);
+    if (frame < 0.0f && runShowAs(orig, model, colorType, keepHeadKonst3, o))
+        return;
+
+    orig(model, colorType, keepHeadKonst3);
+    if (frame >= 0.0f)
+        applyFrame(model, frame);
+}
+
 namespace ModBase { namespace suits { void kinopioSetColorType(void* model, u32 colorType, bool keepHeadKonst3); } }
 void ModBase::suits::kinopioSetColorType(void* model, u32 colorType, bool keepHeadKonst3)
 {
-    if (!runShowAs(&ModBase::suits::kinopioSetColorType_orig, model, colorType, keepHeadKonst3, overrideFor(model, colorType)))
-        ModBase::suits::kinopioSetColorType_orig(model, colorType, keepHeadKonst3);
+    setColorTypeWith(&ModBase::suits::kinopioSetColorType_orig, model, colorType, keepHeadKonst3);
+}
+
+namespace ModBase { namespace suits { void kinopicoSetColorType_orig(void* model, u32 colorType, bool keepHeadKonst3); } }
+namespace ModBase { namespace suits { void kinopicoSetColorType(void* model, u32 colorType, bool keepHeadKonst3); } }
+void ModBase::suits::kinopicoSetColorType(void* model, u32 colorType, bool keepHeadKonst3)
+{
+    setColorTypeWith(&ModBase::suits::kinopicoSetColorType_orig, model, colorType, keepHeadKonst3);
 }
 
 namespace ModBase { namespace suits { void model3SetColorType(void* model, u32 colorType, bool keepHeadKonst3); } }
@@ -241,16 +274,16 @@ void ModBase::suits::model3SetColorType(void* model, u32 colorType, bool keepHea
 namespace ModBase {
 namespace suits {
 
-void overrideColor(u32 playerNo, ColorType when, f32 frame, ColorType elsewhere, const void* owner)
+void overrideColor(u32 playerNo, ColorType when, const f32* frames, ColorType elsewhere, const void* owner)
 {
     if (playerNo < 4)
-        sOverrides[playerNo] = { true, (u32)when, frame, (u32)elsewhere, owner, characterOfPlayer(playerNo) };
+        sOverrides[playerNo] = { true, (u32)when, frames, (u32)elsewhere, owner, characterOfPlayer(playerNo) };
 }
 
 void showColorAs(u32 playerNo, ColorType when, ColorType showAs, const void* owner)
 {
     if (playerNo < 4)
-        sOverrides[playerNo] = { true, (u32)when, -1.0f, (u32)showAs, owner, characterOfPlayer(playerNo) };
+        sOverrides[playerNo] = { true, (u32)when, nullptr, (u32)showAs, owner, characterOfPlayer(playerNo) };
 }
 
 void clear(u32 playerNo, const void* owner)

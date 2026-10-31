@@ -105,3 +105,23 @@ ShellSuit_breakBrickB:
     address:    0x005B9AD4
     symbol:     ModBase::shellSuit::breakBrickB(void*, void*, int, int)
     trampoline: ModBase::shellSuit::breakBrickB_orig(void*, void*, int, int)
+
+@ The sound object at player + 0x348: its one-shot, held and footstep players. A shell player
+@ plays the plain labels, not the Penguin Suit's. Entries `push {r4-r6, lr}` and `push {r4-r8, lr}`.
+ShellSuit_playSound:
+    type:       hook
+    address:    0x00814010
+    symbol:     ModBase::shellSuit::playSound(void*, char const*, int)
+    trampoline: ModBase::shellSuit::playSound_orig(void*, char const*, int)
+
+ShellSuit_holdSound:
+    type:       hook
+    address:    0x00814590
+    symbol:     ModBase::shellSuit::holdSound(void*, char const*, int)
+    trampoline: ModBase::shellSuit::holdSound_orig(void*, char const*, int)
+
+ShellSuit_stepSound:
+    type:       hook
+    address:    0x008147E8
+    symbol:     ModBase::shellSuit::stepSound(void*, char const*, unsigned int, unsigned int, float, float)
+    trampoline: ModBase::shellSuit::stepSound_orig(void*, char const*, unsigned int, unsigned int, float, float)

@@ -67,6 +67,7 @@
 #include "graphics/mask.h"
 #include "graphics/model.h"
 #include "graphics/drawmgr.h"
+#include "modbase/tsuru.h"
 
 class MrSun : public Enemy
 {
@@ -501,6 +502,7 @@ void MrSun::endState_Follow() { }
 
 void MrSun::beginState_Swoop()
 {
+    tsuru::playSound("SE_EMY_BASABASA", position);
     attacking = true;      // the dive that follows AttackSpin
 
     Vec2 targetOffset;
@@ -571,6 +573,7 @@ void MrSun::endState_AttackSpin() { }
 
 void MrSun::beginState_Spit()
 {
+    tsuru::playSound("SE_EMY_FIRE_BROS_FIRE", position);
     startAttack();
     timer = 0;
     wiggleX = position.x;

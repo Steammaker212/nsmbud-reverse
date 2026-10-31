@@ -23,9 +23,8 @@
 #include "actors/profile.h"
 #include "actors/profileid.h"
 #include "modbase/tsuru.h"
+#include "modbase/tumble_death.h"
 
-// Tsuru RP_Jugemu_CloudDisapp (effectid.h).
-constexpr s32 cEffect_CloudDisappear = 0x15B;
 
 // The retail Dry Bones: Deluxe's sprite 137 builds profile 649 (the
 // spriteToProfileList entry; Tsuru's Wii U ProfileID::DryBones is 648).
@@ -39,6 +38,8 @@ public:
 
     u32 onCreate() override;
     u32 onExecute() override;
+
+    ModBase::TumbleDeath tumble;
     u32 onDraw() override;
 
     void collisionPlayer(ActiveCollider* acSelf, ActiveCollider* acOther) override;
@@ -141,6 +142,18 @@ u32 ParaBones::onCreate()
 
 u32 ParaBones::onExecute()
 {
+    if (tumble.execute(this)) {
+        tsuru::placeModel(model, this);
+        if (wings) {
+            Mtx34 mtxWings;
+            mtxWings.rotateAndTranslate(rotation, position + Vec3(0.0f, 8.0f, 0.0f));
+            wings->setMtx(mtxWings);
+            wings->setScale(scale);
+            wings->updateModel();
+        }
+        return 1;
+    }
+
     handleGravity();
     handleSpeed();
 
@@ -209,10 +222,7 @@ bool ParaBones::collisionStar(ActiveCollider* acSelf, ActiveCollider* acOther)
 
 bool ParaBones::collisionSlide(ActiveCollider* acSelf, ActiveCollider* acOther)
 {
-    Vec3 effectOrigin(position.x, position.y, 4500.0f);
-    Vec3 effectScale(0.5f, 0.5f, 0.5f);
-    Effect::spawn(cEffect_CloudDisappear, &effectOrigin, nullptr, &effectScale);
-    isDeleted = true;
+    tumble.begin(this, 0.5f);
     return true;
 }
 

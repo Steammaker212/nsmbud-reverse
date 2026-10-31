@@ -37,6 +37,9 @@
 #define STINGBY_FOLLOW_REACHED  2.0f        // closer than this it stops, as the Deep Cheep
 #define STINGBY_FOLLOW_TURN     13.0f       // ...and it only turns when further than this
 #define STINGBY_TURN_STEP       0x11FFFFF   // rotation.y a frame
+#define STINGBY_DASH_DOWN       28.0f       // degrees "fly_dash" leans its head down
+#define STINGBY_PITCH_MAX       80.0f
+#define STINGBY_PITCH_STEP      3.0f        // degrees a frame
 
 class Stingby : public Enemy
 {
@@ -58,6 +61,8 @@ public:
     Vec3 idleCenter;
     bool follow;
     f32 speedScale;
+    f32 pitch;              // degrees its nose is turned up, against the dash's lean
+    f32 pitchTarget;
 
     DECLARE_STATE(Stingby, Idle);
     DECLARE_STATE(Stingby, Notice);
@@ -82,6 +87,8 @@ Stingby::Stingby(const ActorBuildInfo* buildInfo)
     : Enemy(buildInfo)
     , model(nullptr)
     , idleCenter(buildInfo->position)
+    , pitch(0.0f)
+    , pitchTarget(0.0f)
 { }
 
 Actor* Stingby::build(const ActorBuildInfo* buildInfo)
@@ -120,10 +127,26 @@ u32 Stingby::onExecute()
 {
     states.execute();
 
-    if (states.currentState() != &StateID_Die)
+    if (states.currentState() != &StateID_Die) {
         tsuru::chase(&rotation.y, tsuru::Direction::toRotation[direction], STINGBY_TURN_STEP);
+        if (states.currentState() != &StateID_Chase)
+            pitchTarget = 0.0f;
+        tsuru::chase(&pitch, pitchTarget, STINGBY_PITCH_STEP);
+    }
 
-    tsuru::placeModel(model, this);
+    // rotateAndTranslate turns x last, about the level's axis, which rolls a side-on Stingby.
+    // The pitch has to come first, about the bee's own: Ry(yaw) * Rx(-pitch).
+    const f32 yaw = (f32)(s32)rotation.y * 3.14159265f / 2147483648.0f;
+    const f32 tilt = deg_to_rad(-pitch);
+    const f32 cy = cos(yaw), sy = sin(yaw), c = cos(tilt), s = sin(tilt);
+    Mtx34 mtx;
+    mtx.rows[0][0] = cy;   mtx.rows[0][1] = sy * s; mtx.rows[0][2] = sy * c; mtx.rows[0][3] = position.x;
+    mtx.rows[1][0] = 0.0f; mtx.rows[1][1] = c;      mtx.rows[1][2] = -s;     mtx.rows[1][3] = position.y;
+    mtx.rows[2][0] = -sy;  mtx.rows[2][1] = cy * s; mtx.rows[2][2] = cy * c; mtx.rows[2][3] = position.z;
+    model->setMtx(mtx);
+    model->setScale(scale);
+    model->updateAnimations();
+    model->updateModel();
 
     return 1;
 }
@@ -214,6 +237,16 @@ void Stingby::executeState_Chase()
         f32 step = STINGBY_FOLLOW_SPEED * speedScale / distance;
         position.x += d2p.x * step;
         position.y += d2p.y * step;
+
+        // "fly_dash" holds its head down. It looks where it goes: up past level, and further
+        // down only once it dives steeper than the dash already leans.
+        f32 climb = 90.0f - acos(d2p.y / distance) * 180.0f / 3.14159265f;
+        if (climb > 0.0f)
+            pitchTarget = climb + STINGBY_DASH_DOWN * (climb < 30.0f ? climb / 30.0f : 1.0f);
+        else
+            pitchTarget = climb < -STINGBY_DASH_DOWN ? climb + STINGBY_DASH_DOWN : 0.0f;
+        if (pitchTarget > STINGBY_PITCH_MAX)
+            pitchTarget = STINGBY_PITCH_MAX;
         if (fabs(d2p.x) >= STINGBY_FOLLOW_TURN)
             direction = !(d2p.x > 0);
         return;
@@ -233,6 +266,7 @@ void Stingby::endState_Chase() { }
 
 void Stingby::beginState_Die()
 {
+    tsuru::playSound("SE_EMY_DOWN", position);
     tsuru::setSklAnim(model, "die_squish", 0.0f, false);
     removeActiveColliders();
 }

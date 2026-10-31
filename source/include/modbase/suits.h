@@ -7,6 +7,7 @@
 //
 //   MarioModel (Mario, Luigi)   frame 0 Normal, 1 Fire, 2 Ice
 //   KinopioModel (Toads)        frame 3*(type-2) + 0 Normal, 1 Fire, 2 Ice
+//   KinopicoModel (Toadette)    frame 0 Normal, 1 Fire, 2 Ice
 //
 // Two ways to change a power-up's look:
 //
@@ -19,10 +20,11 @@
 //    routine draws the Ice ones instead, with the right frames for Mario,
 //    Luigi or a Toad.
 //
-//  * A frame of your own (an asset edit: add frame 3 to the Mario and Luigi
-//    switch animations), with a fallback look for the other characters:
+//  * A frame of your own (an asset edit: tools/suittex), per character, with a
+//    fallback look for the characters that have none:
 //
-//      ModBase::suits::overrideColor(playerNo, ModBase::suits::cColor_Fire, 3.0f,
+//      static const f32 frames[] = { 3, 3, 7, 8, -1, -1, 3, -1, -1 };
+//      ModBase::suits::overrideColor(playerNo, ModBase::suits::cColor_Fire, frames,
 //                                    ModBase::suits::cColor_Ice);
 //
 // Then apply it now, even without a mode change:
@@ -58,10 +60,11 @@ enum ColorType : u32
 // When the player gets `when`, draw the `showAs` colours instead (every model class).
 void showColorAs(u32 playerNo, ColorType when, ColorType showAs, const void* owner = nullptr);
 
-// When the player gets `when`: Mario and Luigi on the Normal or Small body take
-// `frame`; every other character (or frame < 0) takes the `elsewhere` colours,
-// and cColor_Invalid there leaves them vanilla.
-void overrideColor(u32 playerNo, ColorType when, f32 frame, ColorType elsewhere = cColor_Invalid,
+// When the player gets `when`: on the Normal or Small body the character shows
+// its entry of `frames` (playerModels::cNumCharacters of them, kept by reference).
+// A character whose entry is < 0, or the Mii class, or null frames, takes the
+// `elsewhere` colours, and cColor_Invalid there leaves them vanilla.
+void overrideColor(u32 playerNo, ColorType when, const f32* frames, ColorType elsewhere = cColor_Invalid,
                    const void* owner = nullptr);
 
 void clear(u32 playerNo, const void* owner = nullptr);

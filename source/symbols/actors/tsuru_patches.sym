@@ -4,3 +4,6 @@
 
 # The Urchin's vtable (Urchin and big Urchin, build 0x603C72A0)  [code/tweaks/yoshi_urchin.cpp]
 ModBase::urchin::vtable = 0x00BF70EC;
+
+# A Boo Circle's Boo (profile 783, build 0x603B07B8)  [code/tweaks/ghost_hammer.cpp]
+ModBase::ghostHammer::booCircleVtable = 0x00BF5158;

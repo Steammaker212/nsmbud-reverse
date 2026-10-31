@@ -24,7 +24,8 @@
 //   nybbles 3-4   ID (its notes use it)
 //   nybbles 1-2   notes to collect
 //   nybble 5      reward: 0 Mushroom, 1 Fire Flower, 2 Ice Flower, 3 Mini Mushroom,
-//                 4 Propeller, 5 Penguin, 6 Acorn, 7 1-Up, 8 3-Up Moon, 9-11 Star Coin 1-3
+//                 4 Propeller, 5 Penguin, 6 Acorn, 7 1-Up, 8 3-Up Moon, 9-11 Star Coin 1-3,
+//                 12 Hammer Flower, 13 Blue Shell, 14 P-Acorn, 15 Poison Mushroom
 //   nybbles 6-7   time limit in seconds (0: 5)
 //   nybbles 19-20 movement type; 21-22 movement ID
 //
@@ -179,7 +180,7 @@ u32 MusicNote::onDraw()
 
 void MusicNote::collisionCallback(ActiveCollider* acSelf, ActiveCollider* acOther)
 {
-    if (acOther->owner->type != 1)      // players
+    if (acOther->owner->type != 1 && acOther->owner->type != 2)     // players; Yoshi, for his rider
         return;
     MusicNote* self = static_cast<MusicNote*>(acSelf->owner);
     if (!self->active || self->isDeleted)
@@ -230,10 +231,12 @@ u32 MusicNoteMgr::onCreate()
     return onExecute();
 }
 
-// Tsuru's reward table (profiles 591-599, the Star Coin 426).
+// Tsuru's reward table (profiles 591-599, the Star Coin 426), then the mod's power-ups, which
+// are the same items with a profile of their own.
 void MusicNoteMgr::reward(const Vec3& at)
 {
     static const u32 cItems[] = { 591, 592, 594, 593, 595, 596, 598, 597, 599 };
+    static const u32 cCustomItems[] = { ProfileId::HammerFlower, ProfileId::BlueShell, ProfileId::PAcorn, ProfileId::PoisonMushroom };
     ActorBuildInfo buildInfo = { 0 };
     buildInfo.settings1 = 0x6000000;    // nybble 6 = 6: a reward item
     buildInfo.position = at;
@@ -242,7 +245,7 @@ void MusicNoteMgr::reward(const Vec3& at)
         buildInfo.settings1 = (powerup - 9) << 12;     // which Star Coin
         buildInfo.position = position;
     } else {
-        buildInfo.profile = Profile::get(powerup < 9 ? cItems[powerup] : 591);
+        buildInfo.profile = Profile::get(powerup < 9 ? cItems[powerup] : cCustomItems[powerup - 12]);
     }
     ActorMgr::instance->create(&buildInfo, 0);
 }
@@ -291,7 +294,7 @@ u32 MusicNoteMgr::onDraw()
 void MusicNoteMgr::collisionCallback(ActiveCollider* acSelf, ActiveCollider* acOther)
 {
     MusicNoteMgr* self = static_cast<MusicNoteMgr*>(acSelf->owner);
-    if (self->touched || acOther->owner->type != 1)
+    if (self->touched || (acOther->owner->type != 1 && acOther->owner->type != 2))     // as the notes
         return;
     self->touched = true;
     self->visible = false;

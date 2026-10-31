@@ -42,6 +42,12 @@ bool setEatType(void* actor, ::yoshi::EatType type);
 void makeEdible(void* enemy, ::yoshi::EatData* eat);
 inline bool beingEaten(const ::yoshi::EatData& eat) { return eat.state != ::yoshi::EatState::None; }
 
+// The tongue no longer takes this actor (its target check reads the same pointer).
+inline void makeInedible(void* enemy) { *(::yoshi::EatData**)((u8*)enemy + ::yoshi::cActorEatDataOffset) = nullptr; }
+
+// Yoshi dies as when he is crushed. His rider gets off first, as on a hit, and lives.
+void kill(void* yoshi);
+
 // Ordinary enemies (kind Enemy, type Eat) Yoshi catches become this breath.
 // EatType::None (the default) leaves them alone.
 void setBreathFromEnemies(::yoshi::EatType breath);

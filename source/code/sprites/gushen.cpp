@@ -179,6 +179,7 @@ void Gushen::endState_Idle() { }
 
 void Gushen::beginState_Up()
 {
+    tsuru::playSound("SE_EMY_TOBIPUKU_JUMP", position);
     timer = 0;
     tsuru::gravity(this) = 0.0f;
 

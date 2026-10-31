@@ -7,3 +7,11 @@ PoisonMushroom_collect:
     address:    0x00467F48
     symbol:     ModBase::poisonMushroom::collect(StageActor*)
     trampoline: ModBase::poisonMushroom::collect_orig(StageActor*)
+
+@ Yoshi swallows what is in his mouth (0x607D05CC, the one place: every route calls it). Entry
+@ `push {r4-r7, r11, lr}` is position-independent.
+PoisonMushroom_swallow:
+    type:       hook
+    address:    0x007D05CC
+    symbol:     ModBase::poisonMushroom::swallow(void*)
+    trampoline: ModBase::poisonMushroom::swallow_orig(void*)

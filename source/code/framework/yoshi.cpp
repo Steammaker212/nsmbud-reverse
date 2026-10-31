@@ -2,6 +2,7 @@
 
 #include "modbase/yoshi.h"
 #include "modbase/game.h"
+#include "modbase/game/player/player.h"
 #include "actors/actormgr.h"
 
 namespace {
@@ -85,6 +86,24 @@ void makeEdible(void* enemy, ::yoshi::EatData* eat)
 void setBreathFromEnemies(::yoshi::EatType breath)
 {
     sBreath = breath;
+}
+
+// symbols/player/yoshi_eat.sym
+void* rider(const void* yoshi);
+extern u32 stateDie;
+
+void kill(void* yoshi)
+{
+    // What his damage handler (0x607CE2A0) does to the rider on a plain hit.
+    constexpr u32 cVtRiderGetOff = 0x594;
+    if (void* player = rider(yoshi)) {
+        typedef void (*Fn)(void*);
+        ((Fn)(*(void***)player)[cVtRiderGetOff / 4])(player);
+    }
+
+    // Player::changeState refuses while this bit is set: he is about to lay an egg.
+    *(u32*)((u8*)yoshi + 0x4B4) &= ~0x10u;
+    ((Player*)yoshi)->changeState(&stateDie, 0);
 }
 
 } // namespace yoshi

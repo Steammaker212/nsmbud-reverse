@@ -1,0 +1,8 @@
+@ Hammers do not kill a Boo Circle's Boos (code/tweaks/ghost_hammer.cpp). The entry of
+@ Enemy::collisionThrowableObject is `push {r4-r9, r11, lr}`, so the trampoline can replay it.
+
+GhostHammer_collisionThrowableObject:
+    type:       hook
+    address:    0x002A68EC
+    symbol:     ModBase::ghostHammer::collisionThrowableObject(Enemy*, ActiveCollider*, ActiveCollider*)
+    trampoline: ModBase::ghostHammer::collisionThrowableObject_orig(Enemy*, ActiveCollider*, ActiveCollider*)

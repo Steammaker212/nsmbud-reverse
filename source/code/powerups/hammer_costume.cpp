@@ -13,16 +13,14 @@
 // The suit itself, drawn on a hammer player's head and back. 0 = colours only.
 //  * The helmet: the Hammer Bro helmet of the Tsuru framework
 //    (romfs/Model/hmrpy.Nin_NX_NVN.szs, converted with tools/wiiu2dx).
-//  * The shell: romfs/Model/hammer_shell.Nin_NX_NVN.szs, two parts (its body and
-//    its belly), each placed on its own by modbase/costume.h
-//    (cShellBodyOffset* / cShellBellyOffset*).
+//  * The shell: "shell_body" of romfs/Model/hammer_shell.Nin_NX_NVN.szs, on the back and
+//    with no belly plate, fitted to each character by modbase/costume.h (cBackShell).
 // Both archives load with the Hammer Flower item, at game start (hammer_suit.cpp).
 #define HAMMER_SUIT_COSTUME         MODBASE_PICK_MODEL(MODBASE_CUSTOM_MODELS, 1, 0)
 #define HAMMER_COSTUME_ARCHIVE      "hmrpy"
 #define HAMMER_COSTUME_HELMET       "hmrpy_partsC"     // on the head model's bone "player_head"
 #define HAMMER_COSTUME_SHELL_ARCHIVE "hammer_shell"
 #define HAMMER_COSTUME_SHELL_BODY   "shell_body"       // the dome and its white rim
-#define HAMMER_COSTUME_SHELL_BELLY  "shell_belly"      // the belly plate
 
 #include "actors/stageactor.h"
 #include "graphics/model.h"
@@ -75,7 +73,6 @@ struct Costume
     void* playerModel;
     ModelWrapper* helmet;
     ModelWrapper* shellBody;    // the dome and rim (modbase/costume.h)
-    ModelWrapper* shellBelly;   // the belly plate
     bool hatless;               // this model's cap was taken off for the helmet
 };
 // Live player models at once: up to 4 in a level, demo players, and the world
@@ -95,11 +92,12 @@ Costume* findCostume(void* playerModel)
     return nullptr;
 }
 
-// The model factory 0x60794BDC: 0-1 MarioModel, 2-4 KinopioModel, 5/6/8 other
-// classes whose layouts are not mapped -- those get no costume.
+// The model factory 0x60794BDC: 0-1 MarioModel, 2-4 KinopioModel, 6 KinopicoModel
+// (Toadette; bone "spin" on its body +0x018 too). 5 and 8 are other classes whose
+// layouts are not mapped: those get no costume.
 void makeCostume(void* playerModel)
 {
-    if (ModBase::playerModels::character(playerModel) > 4)
+    if (!ModBase::costume::wearsShell(ModBase::playerModels::character(playerModel)))
         return;
     // A model rebuilt at a freed model's address replaces that entry.
     Costume* c = findCostume(playerModel);
@@ -108,7 +106,7 @@ void makeCostume(void* playerModel)
         sNextCostume = (sNextCostume + 1) % cMaxCostumes;
     }
     c->playerModel = playerModel;
-    c->helmet = c->shellBody = c->shellBelly = nullptr;
+    c->helmet = c->shellBody = nullptr;
     c->hatless = false;
 
     if (!sead::HeapMgr::sInstance || !sead::HeapMgr::sInstance->getCurrentHeap()) {
@@ -121,10 +119,8 @@ void makeCostume(void* playerModel)
     // Each part on its own: one missing archive leaves the other.
     if (ModBase::isArchiveLoaded(HAMMER_COSTUME_ARCHIVE))
         c->helmet = ModelWrapper::create(HAMMER_COSTUME_ARCHIVE, HAMMER_COSTUME_HELMET);
-    if (ModBase::isArchiveLoaded(HAMMER_COSTUME_SHELL_ARCHIVE)) {
-        c->shellBody  = ModelWrapper::create(HAMMER_COSTUME_SHELL_ARCHIVE, HAMMER_COSTUME_SHELL_BODY);
-        c->shellBelly = ModelWrapper::create(HAMMER_COSTUME_SHELL_ARCHIVE, HAMMER_COSTUME_SHELL_BELLY);
-    }
+    if (ModBase::isArchiveLoaded(HAMMER_COSTUME_SHELL_ARCHIVE))
+        c->shellBody = ModelWrapper::create(HAMMER_COSTUME_SHELL_ARCHIVE, HAMMER_COSTUME_SHELL_BODY);
     if ((!c->helmet || !c->shellBody) && !sCostumeLogged) {
         sCostumeLogged = true;
         ModBase::log("hammer suit: costume incomplete (helmet archive '" HAMMER_COSTUME_ARCHIVE "' ",
@@ -180,13 +176,11 @@ void setHatless(Costume* c, void* playerModel, bool on)
 // After PlayerModel::draw (the onDrawn listener).
 void drawCostume(void* playerModel)
 {
-    // The model factory 0x60794BDC picks the class by character (+0x0A4): 0-1
-    // MarioModel (0x6075A088), 2-4 KinopioModel (0x607578C8), 5, 6 and 8 three
-    // other classes whose layouts are not mapped. Body +0x018 holds in the
-    // first two; the head +0x124 is Mario's or Luigi's head, but a Toad's is
-    // its mushroom cap, which keeps its normal look: no helmet on Toads.
+    // Body +0x018 holds for every class that wears it (wearsShell); the head
+    // +0x124 is Mario's or Luigi's head, but a Toad's is its mushroom cap, and
+    // Toadette's hers, which keep their look: the shell only on those.
     u32 character = ModBase::playerModels::character(playerModel);
-    if (character > 4)
+    if (!ModBase::costume::wearsShell(character))
         return;
     Costume* c = costumeFor(playerModel);
     if (!c) {
@@ -200,9 +194,10 @@ void drawCostume(void* playerModel)
     if (character <= 1) {
         setHatless(c, playerModel, c->helmet != nullptr);
         ModelWrapper* head = *(ModelWrapper**)((u8*)playerModel + 0x124);
-        ModBase::costume::drawOnBone(c->helmet, head, "player_head");
+        ModBase::costume::drawHelmet(c->helmet, head, character);
     }
-    ModBase::costume::drawShell(c->shellBody, c->shellBelly, body);
+    ModBase::costume::drawShellPart(c->shellBody, body, ModBase::costume::cBackShell[ModBase::costume::shellFitIndex(character)],
+                                    ModBase::costume::cHammerShellDepth);
 }
 
 struct CostumeSetup

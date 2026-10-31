@@ -17,8 +17,9 @@
 //   nybbles 19-20 movement type (settings2 & 0xFF), flying only
 //   nybbles 21-22 movement ID, flying only
 //
-// Model: tenten_w (Tsuru's archive), with the skeletal anims "FlyWait" and
-// "BlowDown", the texture-pattern anim "bud" and the texture-SRT anim "FlyWait".
+// Model: tenten_w (Tsuru's archive), with the skeletal anims "FlyWait", "BlowDown"
+// and "Walk" (scripts/models/biddybud_walk.py), the texture-pattern anim "bud" and
+// the texture-SRT anim "FlyWait".
 
 #include "actors/enemy.h"
 #include "graphics/effect.h"
@@ -27,10 +28,7 @@
 #include "actors/profileid.h"
 #include "modbase/tsuru.h"
 #include "modbase/yoshi.h"
-
-// Tsuru RP_Jugemu_CloudDisapp (effectid.h): the Wii U number is the Deluxe one
-// (ledger F0254).
-constexpr s32 cEffect_CloudDisappear = 0x15B;
+#include "modbase/tumble_death.h"
 
 // Walking (nybble 6 = 1). The Goomba walks 0.5 a frame; this is slower.
 #define BIDDYBUD_WALK_SPEED     0.35f
@@ -64,12 +62,10 @@ public:
     bool collisionIceball(ActiveCollider* acSelf, ActiveCollider* acOther) override;
     bool collisionFireballYoshi(ActiveCollider* acSelf, ActiveCollider* acOther) override;
 
-    void spawnDeathEffect();
-
     // Enemy's own death states (a POW, and the other kills the game handles
     // itself): DieFumi's execute spins the actor and lets it fall, but the
     // Biddybud's position follows its movement every frame, so it spun in place
-    // forever. It goes the way its other deaths do: the cloud, then gone.
+    // forever. It goes the way its other deaths do.
     void beginState_DieFumi() override;
     void executeState_DieFumi() override;
     void endState_DieFumi() override;
@@ -88,10 +84,8 @@ public:
     MovementHandler movementHandler;
     bool isDead;
     u32 color;
-    Vec3 effectScale;
-    Vec3 effectOffset;      // Tsuru's own field; hides StageActor::effectOffset (+0x23C), as in Tsuru
+    ModBase::TumbleDeath tumble;
     bool walking;           // nybble 6 = 1
-    f32 walkPhase;          // the waddle drawn while walking (the archive has no walk anim)
 
     DECLARE_STATE(Biddybud, Move);
     DECLARE_STATE(Biddybud, Die);
@@ -121,10 +115,7 @@ Biddybud::Biddybud(const ActorBuildInfo* buildInfo)
     , movementHandler()
     , isDead(false)
     , color(0)
-    , effectScale(0.5f, 0.5f, 0.5f)
-    , effectOffset(0.0f, 0.0f, 0.0f)
     , walking(false)
-    , walkPhase(0.0f)
 { }
 
 Actor* Biddybud::build(const ActorBuildInfo* buildInfo)
@@ -138,9 +129,8 @@ u32 Biddybud::onCreate()
 
     // 3 skeletal, 1 texture-pattern, 1 texture-SRT anim (Tsuru's create order).
     // Walking (nybble 6 = 1) uses "tenten_w_walk": the same model in the same
-    // archive without its wing shape (Body__TentenWingWingMat00, emptied). The
-    // archive has no walking animation (only FlyWait, BlowDown, PressDown), so
-    // it keeps FlyWait's body bob.
+    // archive without its wing shape (Body__TentenWingWingMat00, emptied), and
+    // the "Walk" animation.
     walking = (settings1 >> 24 & 0xF) == 1;     // nybble 6
     model = tsuru::createModel("tenten_w", walking ? "tenten_w_walk" : "tenten_w", 3, 1, 1);
     if (!model && walking)      // an archive from before the walking model: wings and all
@@ -151,7 +141,7 @@ u32 Biddybud::onCreate()
     }
     tsuru::playTexPatternAnim(model, "bud");
     tsuru::playTexSrtAnim(model, "FlyWait", true);
-    tsuru::playSklAnim(model, "FlyWait", true);
+    tsuru::playSklAnim(model, walking ? "Walk" : "FlyWait", true);
 
     // The colour is a frozen frame of "bud": Animation::update clamps the frame
     // into [startFrame, endFrame] first (0x604183EC), as Tsuru's FrameCtrl does.
@@ -182,7 +172,7 @@ u32 Biddybud::onCreate()
 
 u32 Biddybud::onExecute()
 {
-    if (!isDead && !ModBase::yoshi::beingEaten(eatData)) {
+    if (!tumble.execute(this) && !ModBase::yoshi::beingEaten(eatData)) {
         if (walking) {
             walk();
         } else {
@@ -196,16 +186,8 @@ u32 Biddybud::onExecute()
     // tsuru::placeModel, with the model drawn 8 units below the actor as in Tsuru.
     Vec3 modelPos = position;
     modelPos.y -= 8;
-    Vec3i drawRotation = rotation;
-    if (walking && !isDead) {
-        // A waddle: rock 7 degrees each way and bob 1.5 units per step, a step every ~12 frames.
-        walkPhase += 0.25f;
-        f32 s = sin(walkPhase);
-        drawRotation.z += tsuru::deg2idx(7.0f * s);
-        modelPos.y += 1.5f * (s < 0.0f ? -s : s);
-    }
     Mtx34 mtx;
-    mtx.rotateAndTranslate(drawRotation, modelPos);
+    mtx.rotateAndTranslate(rotation, modelPos);
     model->setMtx(mtx);
     model->setScale(scale);
     model->updateAnimations();
@@ -218,13 +200,6 @@ u32 Biddybud::onDraw()
 {
     tsuru::drawModel(model);
     return 1;
-}
-
-void Biddybud::spawnDeathEffect()
-{
-    Vec3 effectOrigin(position.x, position.y, 4500.0f);
-    Vec3 effectPos = effectOrigin + effectOffset;
-    Effect::spawn(cEffect_CloudDisappear, &effectPos, nullptr, &effectScale);
 }
 
 void Biddybud::collisionPlayer(ActiveCollider* acSelf, ActiveCollider* acOther)
@@ -255,8 +230,8 @@ bool Biddybud::collisionGroundPound(ActiveCollider* acSelf, ActiveCollider* acOt
 
 bool Biddybud::collisionStar(ActiveCollider* acSelf, ActiveCollider* acOther)
 {
-    spawnDeathEffect();
-    isDeleted = true;
+    isDead = true;
+    tumble.begin(this, 0.5f);
     return true;
 }
 
@@ -286,9 +261,7 @@ bool Biddybud::collisionPropellerDrill(ActiveCollider* acSelf, ActiveCollider* a
 
 bool Biddybud::collisionThrowableObject(ActiveCollider* acSelf, ActiveCollider* acOther)
 {
-    spawnDeathEffect();
-    isDeleted = true;
-    return true;
+    return collisionStar(acSelf, acOther);
 }
 
 bool Biddybud::collisionFireball(ActiveCollider* acSelf, ActiveCollider* acOther)
@@ -367,8 +340,8 @@ void Biddybud::walk()
 void Biddybud::beginState_DieFumi()
 {
     Enemy::beginState_DieFumi();    // score, colliders off
-    spawnDeathEffect();
-    isDeleted = true;
+    isDead = true;
+    tumble.begin(this, 0.5f);
 }
 void Biddybud::executeState_DieFumi() { }
 void Biddybud::endState_DieFumi() { }
@@ -394,17 +367,10 @@ void Biddybud::beginState_Die()
 {
     tsuru::playSklAnim(model, "BlowDown", false);
     isDead = true;
-    removeActiveColliders();
+    tumble.begin(this, 0.5f);
 }
 
-void Biddybud::executeState_Die()
-{
-    counter++;
-    if (counter == 32) {    // Tsuru waits 32 frames instead of checking the anim
-        spawnDeathEffect();
-        isDeleted = true;
-    }
-}
+void Biddybud::executeState_Die() { }
 
 void Biddybud::endState_Die() { }
 
@@ -415,16 +381,9 @@ void Biddybud::beginState_DieSquish()
     // Tsuru: "PressDown" is commented out there too.
     tsuru::playSklAnim(model, "BlowDown", false);
     isDead = true;
-    removeActiveColliders();
+    tumble.begin(this, 0.5f);
 }
 
-void Biddybud::executeState_DieSquish()
-{
-    counter++;
-    if (counter == 32) {
-        spawnDeathEffect();
-        isDeleted = true;
-    }
-}
+void Biddybud::executeState_DieSquish() { }
 
 void Biddybud::endState_DieSquish() { }

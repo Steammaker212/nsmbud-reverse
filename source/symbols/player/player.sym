@@ -160,3 +160,8 @@ PlayerStates::loadModelResources_helper_872AC4(void*, int, unsigned int) = 0x008
 UserInfo::createInstance() = 0x0082C9F0;
 UserInfo::init() = 0x0082CA70;
 UserInfo::getUid(void*) = 0x0082CAD4;
+
+# Blue Shell: code/powerups/shell_suit.cpp
+ModBase::shellSuit::groundAngleOf(void*) = 0x0014C4A4;
+ModBase::shellSuit::footsteps = 0x00C2483C;
+ModBase::shellSuit::landings = 0x00C24874;

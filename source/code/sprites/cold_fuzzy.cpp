@@ -19,10 +19,7 @@
 #include "actors/profileid.h"
 #include "modbase/tsuru.h"
 #include "modbase/yoshi.h"
-
-// Tsuru RP_Jugemu_CloudDisapp (effectid.h): the Wii U number is the Deluxe one
-// (ledger F0254).
-constexpr s32 cEffect_CloudDisappear = 0x15B;
+#include "modbase/tumble_death.h"
 
 class ColdFuzzy : public Enemy
 {
@@ -47,11 +44,20 @@ public:
     bool collisionIceball(ActiveCollider* acSelf, ActiveCollider* acOther) override;
     bool collisionFireballYoshi(ActiveCollider* acSelf, ActiveCollider* acOther) override;
 
+    // Enemy's own death states (a POW): its position follows the path, so they tumble it too.
+    void beginState_DieFumi() override;
+    void executeState_DieFumi() override;
+    void endState_DieFumi() override;
+    void beginState_DieFall() override;
+    void executeState_DieFall() override;
+    void endState_DieFall() override;
+
     static const ActiveCollider::Info collisionInfo;
 
     ModelWrapper* model;
     ::yoshi::EatData eatData;
     MovementHandler movementHandler;
+    ModBase::TumbleDeath tumble;
 };
 
 const Profile coldFuzzyProfile(&ColdFuzzy::build, ProfileId::ColdFuzzy, "ColdFuzzy", nullptr, 0);
@@ -99,6 +105,9 @@ u32 ColdFuzzy::onExecute()
 {
     tsuru::placeModel(model, this);
 
+    if (tumble.execute(this))
+        return 1;
+
     // Being eaten: Enemy's eat states run and Yoshi moves it (modbase/yoshi.h). The Fuzzy has no
     // other state, so they only run now.
     if (ModBase::yoshi::beingEaten(eatData)) {
@@ -131,11 +140,21 @@ void ColdFuzzy::collisionYoshi(ActiveCollider* acSelf, ActiveCollider* acOther)
 
 bool ColdFuzzy::collisionStar(ActiveCollider* acSelf, ActiveCollider* acOther)
 {
-    Vec3 effectPos(position.x, position.y, 4500.0f);
-    Effect::spawn(cEffect_CloudDisappear, &effectPos, nullptr, &scale);
-    isDeleted = true;
+    tumble.begin(this);
     return true;
 }
+
+void ColdFuzzy::beginState_DieFumi()
+{
+    Enemy::beginState_DieFumi();    // score, colliders off
+    tumble.begin(this);
+}
+void ColdFuzzy::executeState_DieFumi() { }
+void ColdFuzzy::endState_DieFumi() { }
+
+void ColdFuzzy::beginState_DieFall() { beginState_DieFumi(); }
+void ColdFuzzy::executeState_DieFall() { }
+void ColdFuzzy::endState_DieFall() { }
 
 bool ColdFuzzy::collisionFireball(ActiveCollider* acSelf, ActiveCollider* acOther)
 {

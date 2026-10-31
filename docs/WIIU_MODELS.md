@@ -294,7 +294,7 @@ Pick the Deluxe actor closest to the model, in this order:
 | `block_beep`, `block_rdbl`, `block_stch` | `obj_block` | Deluxe's flying ?-block (`pata_block`) body and wing |
 | `block_trip`, `blocktripa/b/c` | `block_challenge` | the same material |
 | `clef`, `note`, `star_shard` | `star_coin` (A) | |
-| `timeclock` | `star_coin` (A, B body/eye/star) | |
+| `timeclock` | `lift_han_wood` | its texture is an atlas: `star_coinA` maps by normal, and showed it black |
 | `e_poison`, `poisball` | `switch` (`mat_switch_bikkuri_2`) | albedo, lightmaps, `poison_env` |
 | `gasagoso` | `musasabi` | body skin 2 -> 4; the string on the eye program |
 | `guruguru` | `gorogoro` | the same materials |

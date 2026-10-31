@@ -93,11 +93,11 @@
 
 // The suit itself (helmet and shell): see the top of code/hammer_costume.cpp.
 
-// A real Hammer Suit: add a 4th frame to the PB_switch / PH_switch / PC_switch
-// texture-pattern animations in your Mario and Luigi model archives and set
-// this to 3.0f. Mario and Luigi then use that frame; other characters keep
-// HAMMER_SUIT_COLORS. -1 = off.
-#define HAMMER_SUIT_FRAME           -1.0f
+// The suit's own textures: 1 needs the player models scripts/models/hammer_suit_textures.py
+// builds (romfs/Pack/jyotyuActorPack.pack and romfs/Model/KinopicoMdl), whose switch animations
+// have the frames below (tools/suittex/README.md). Characters without one keep
+// HAMMER_SUIT_COLORS. 0 = HAMMER_SUIT_COLORS on everyone.
+#define HAMMER_SUIT_TEXTURES        MODBASE_PICK_MODEL(MODBASE_CUSTOM_MODELS, 1, 0)
 
 // =====================================================================
 //
@@ -201,6 +201,9 @@ inline u32&  ccAttack(ActiveCollider& c)   { return c.info._18; }
 inline u32&  ccVsKind(ActiveCollider& c)   { return c.info._1C; }
 
 bool sHammerThrower[4];
+
+// Mario, Luigi, Blue Toad, Yellow Toad, the third Toad, 5, Toadette, 7, the Mii.
+const f32 cHammerFrames[ModBase::playerModels::cNumCharacters] = { 3.0f, 3.0f, 7.0f, 8.0f, -1.0f, -1.0f, 3.0f, -1.0f, -1.0f };
 
 // The same, per character (modbase/player_models.h): models that belong to no
 // level player -- the world map's -- are matched by character, so the map
@@ -370,7 +373,6 @@ bool hammerThrow(void* p, int spin, int* result)
     *slot = hammer->id;
     if (!freeSlot(playerNo))
         sReloading[playerNo] = true;    // that was the last one: wait for all of them
-    ((Player*)player)->playSound("SE_PLY_THROW_FIRE", 0, 0);
     *result = 1;
     return true;
 }
@@ -550,7 +552,8 @@ int ModBase::hammerFlower::grant(StageActor* item)
         if (hammerItem) {
             ModBase::log("hammer flower: collected by player ", collector);
             ModBase::suits::overrideColor(collector, ModBase::suits::cColor_Fire,
-                                          HAMMER_SUIT_FRAME, HAMMER_SUIT_COLORS, sHammerThrower);
+                                          HAMMER_SUIT_TEXTURES ? cHammerFrames : nullptr,
+                                          HAMMER_SUIT_COLORS, sHammerThrower);
         } else {
             ModBase::suits::clear(collector, sHammerThrower);
         }

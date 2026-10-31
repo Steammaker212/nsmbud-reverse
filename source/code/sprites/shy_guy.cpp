@@ -1,4 +1,5 @@
-// shy_guy.cpp -- the Shy Guy: a new sprite with the Goombrat's mechanics.
+// shy_guy.cpp -- the original Shy Guy, Behaviour 1 of sprite 737: the game's Goombrat with
+// two stomps. code/sprites/shy_guy_behaviours.cpp builds it, and has the other behaviours.
 //
 // =====================================================================
 //  CONFIGURATION
@@ -13,7 +14,11 @@
 // `make_mod_project.py --placeholder-models` switches every mod at once.
 #define SHYGUY_CUSTOM_MODELS MODBASE_CUSTOM_MODELS
 #define SHYGUY_ARCHIVE      MODBASE_PICK_MODEL(SHYGUY_CUSTOM_MODELS, "shyguy", "kakibo")
-#define SHYGUY_MODEL        MODBASE_PICK_MODEL(SHYGUY_CUSTOM_MODELS, "shyguy", "kakibo")
+// "shyguy_orange" is the model with the original rig and the orange texture
+// (scripts/models/shyguy_model.py).
+#define SHYGUY_MODEL        MODBASE_PICK_MODEL(SHYGUY_CUSTOM_MODELS, "shyguy_orange", "kakibo")
+#define SHYGUY_FALL_MODEL   MODBASE_PICK_MODEL(SHYGUY_CUSTOM_MODELS, "shyguy_orange", "kuribo")
+#define SHYGUY_FALL_ARCHIVE MODBASE_PICK_MODEL(SHYGUY_CUSTOM_MODELS, "shyguy", "kuribo")
 
 // Which vanilla behaviour to copy. This is the whole point of the mod:
 //
@@ -43,7 +48,7 @@
 // kills a Goomba. Spin jumps count as stomps. 0 = one stomp kills, as vanilla.
 #define SHYGUY_TWO_STOMPS       1
 #define SHYGUY_SQUASHED_HEIGHT  0.5f
-#define SHYGUY_SQUASHED_SPEED   1.7f
+#define SHYGUY_SQUASHED_SPEED   1.06f
 
 // A squashed Shy Guy that is still alive SHYGUY_RECOVER_FRAMES later (60 a
 // second) pops back up: it stretches to SHYGUY_RECOVER_TALL of its full height,
@@ -87,6 +92,7 @@ struct Squashed
     f32 scaleY;     // scale.y and the collider's y before the squash
     f32 centerY;
     f32 edgeY;
+    f32 lastX;      // position.x the frame before
 };
 
 constexpr u32 cMaxSquashed = 32;
@@ -95,7 +101,8 @@ u32 sNextSquashed;
 
 bool isShyGuy(void* actor)
 {
-    return ModBase::variantProfileOf(actor) == ProfileId::ShyGuy;
+    u32 profile = ModBase::variantProfileOf(actor);
+    return profile == ProfileId::ShyGuyClassic || profile == ProfileId::ShyGuyClassicFall;
 }
 
 Squashed* squashedOf(StageActor* a)
@@ -125,6 +132,7 @@ void squash(StageActor* a)
     s.scaleY  = a->scale.y;
     s.centerY = a->aCollider.info.distToCenter.y;
     s.edgeY   = a->aCollider.info.distToEdge.y;
+    s.lastX   = a->position.x;
     setHeight(a, s, SHYGUY_SQUASHED_HEIGHT);
 }
 
@@ -186,17 +194,17 @@ void recover(StageActor* a, Squashed& s)
     }
 }
 
-// Each frame (ActorVariant::onExecute): a squashed Shy Guy goes
-// SHYGUY_SQUASHED_SPEED times as far as the game moved it. Scaling the step the
-// game took, after it took it, keeps walls (no step, nothing added) and cannot
-// compound, however the walk state sets its speed.
+// Each frame (ActorVariant::onExecute): a squashed Shy Guy walks SHYGUY_SQUASHED_SPEED
+// times as fast. The extra step follows its speed, so a platform carrying it does not
+// count, and only comes if it moved since last frame: against a wall it adds nothing.
 u32 shyGuyExecute(Actor* actor, u32 (*vanilla)(Actor*))
 {
     StageActor* a = (StageActor*)actor;
-    f32 before = a->position.x;
     u32 r = vanilla(actor);
     if (Squashed* s = squashedOf(a)) {
-        a->position.x += (a->position.x - before) * (SHYGUY_SQUASHED_SPEED - 1.0f);
+        if (a->position.x != s->lastX)
+            a->position.x += a->speed.x * (SHYGUY_SQUASHED_SPEED - 1.0f);
+        s->lastX = a->position.x;
         recover(a, *s);
     }
     return r;
@@ -223,9 +231,18 @@ int ModBase::shyGuy::spinKilled(void* enemy, StageActor* player)
 }
 
 MODBASE_ACTOR_VARIANT(shyGuyVariant,
-    ProfileId::ShyGuy, SHYGUY_BEHAVES_LIKE, "Shy Guy", ModBase::cVariant_None,
+    ProfileId::ShyGuyClassic, SHYGUY_BEHAVES_LIKE, "Shy Guy", ModBase::cVariant_None,
     {
         { SHYGUY_VANILLA_ARCHIVE, SHYGUY_ARCHIVE,
           SHYGUY_VANILLA_MODEL,   SHYGUY_MODEL },
+    },
+    {}, 0, 0, &shyGuyExecute);
+
+// Its "falls off edges" setting: the same class built as the Goomba, which walks off them.
+MODBASE_ACTOR_VARIANT(shyGuyFallVariant,
+    ProfileId::ShyGuyClassicFall, GoombaProfile::Goomba, "Shy Guy (falls)", ModBase::cVariant_None,
+    {
+        { "kuribo", SHYGUY_FALL_ARCHIVE,
+          "kuribo", SHYGUY_FALL_MODEL },
     },
     {}, 0, 0, &shyGuyExecute);

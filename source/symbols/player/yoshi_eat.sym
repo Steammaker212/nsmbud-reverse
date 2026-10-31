@@ -4,3 +4,8 @@
 
 # The enemy EatData ctor: base 0x6000BAC8 (type 3, scale 1), then vtable 0x60BE2BB8. Fuzzy_ctor calls it.
 ModBase::yoshi::constructEnemyEatData(void*, unsigned int) = 0x002A8564;
+
+# Yoshi's rider (0x607D6C28) and his death state: what being crushed enters (0x607CE498). Its
+# begin is 0x607D3814: spits what is in the mouth, anim 148, speed.y 3, falls in front of the level.
+ModBase::yoshi::rider(void const*) = 0x007D6C28;
+ModBase::yoshi::stateDie = 0x00CC5694;

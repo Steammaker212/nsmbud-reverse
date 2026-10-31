@@ -1,4 +1,4 @@
-@ code/framework/suits.cpp: suit colours. The three model classes' colour routines
+@ code/framework/suits.cpp: suit colours. The four model classes' colour routines
 @ (virtual slot 44, vtable +0xB0) are not defined functions in the database;
 @ each entry is a `push`, position-independent, so the trampolines can replay
 @ it. Ledger F0050, F0061-F0063.
@@ -17,7 +17,14 @@ Suits_kinopioSetColorType:
     symbol:     ModBase::suits::kinopioSetColorType(void*, unsigned int, bool)
     trampoline: ModBase::suits::kinopioSetColorType_orig(void*, unsigned int, bool)
 
-@ Unidentified model class, vtable 0x60C240DC. Entry: push {r4-r7, r11, lr}.
+@ KinopicoModel (Toadette), vtable 0x60C23D34. Entry: push {r4-r7, r11, lr}.
+Suits_kinopicoSetColorType:
+    type:       hook
+    address:    0x0075227C
+    symbol:     ModBase::suits::kinopicoSetColorType(void*, unsigned int, bool)
+    trampoline: ModBase::suits::kinopicoSetColorType_orig(void*, unsigned int, bool)
+
+@ The Mii's model class, vtable 0x60C240DC. Entry: push {r4-r7, r11, lr}.
 Suits_model3SetColorType:
     type:       hook
     address:    0x0075D3AC

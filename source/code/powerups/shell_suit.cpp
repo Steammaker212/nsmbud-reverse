@@ -86,6 +86,13 @@
 #define SHELL_SPEED_MID         2.6f
 #define SHELL_ACCEL             0.035f
 #define SHELL_DECEL             0.025f
+// Slopes: how much the ground's steepness (its sine) takes from the speed each frame going up,
+// and gives going down. Climbing it does not speed up, so a long or steep slope stops it, and it
+// comes back down. SHELL_FLAT is the steepness that counts as flat.
+#define SHELL_SLOPE_PULL        0.08f
+#define SHELL_FLAT              0.02f
+// Units it goes on past the moment it bumps a block, to reach it.
+#define SHELL_BUMP_REACH        4.0f
 
 // 1: bounce off walls and keep going, like the DS shell -- also off a block the
 // shell breaks (tile bricks too) or bumps on the way, rather than going
@@ -178,6 +185,7 @@
 namespace ModBase { namespace shellSuit { void afterExecute_orig(void* player, u32 result); } }
 namespace ModBase { namespace shellSuit { int penguinGrant_orig(void* item); } }
 namespace ModBase { namespace shellSuit { bool doOverlap_orig(void* ac1, void* ac2); } }
+namespace ModBase { namespace shellSuit { s32 groundAngleOf(void* collisionMgr); } }     // 0x6014C4A4
 
 namespace {
 
@@ -197,6 +205,9 @@ inline u32& direction(void* p)    { return *(u32*)((u8*)p + 0x50); }
 inline f32& speedF(void* p)       { return *(f32*)((u8*)p + 0x58); }
 inline f32& maxSpeedF(void* p)    { return *(f32*)((u8*)p + 0x5C); }
 inline f32  posX(void* p)         { return *(f32*)((u8*)p + 0x6C); }
+// The player's CollisionMgr: the ground angle under it is what handleSpeed uses, a full turn
+// being 2^32, 0 in the air; going right, a positive angle climbs.
+inline s32  groundAngle(void* p)  { return ModBase::shellSuit::groundAngleOf((u8*)p + 0x530); }
 inline s32& rotationY(void* p)    { return *(s32*)((u8*)p + 0xA0); }
 inline StateMgr* stateMgr(void* p){ return (StateMgr*)((u8*)p + 0x26BC); }
 // The background contacts of this frame (Wii U BgCross, word 0 at +0x1AF4; the
@@ -228,6 +239,7 @@ MODBASE_ACTOR_VARIANT(shellItemVariant,
 struct ShellPlayer
 {
     bool  shell;        // collected a Blue Shell, still in (or becoming) Penguin mode
+    void* actor;        // the player, whatever it is doing, for the sound hooks
     void* dashing;      // the player while in the slide, for the overlap hook
     f32   lastX;
     u32   frames;       // frames into this dash
@@ -236,6 +248,7 @@ struct ShellPlayer
     f32   speed;        // the dash's speed (no sign)
     bool  speedUp;      // began at SHELL_SPEED_MID or faster: speeds up, else slows to a stop
     bool  bumped;       // bumped (or broke) a block actor this frame
+    u32   turnIn;       // frames until it turns from a block it bumped
 };
 ShellPlayer sPlayers[4];
 
@@ -349,6 +362,7 @@ void dash(void* player, ShellPlayer& s)
         s.speed = entry;
         s.speedUp = entry >= SHELL_SPEED_MID;
         s.lastX = posX(player);
+        s.turnIn = 0;
     }
 
 #if SHELL_BOUNCE
@@ -358,22 +372,39 @@ void dash(void* player, ShellPlayer& s)
     u32 touch = bgCross(player) & (sign > 0.0f ? cBgCross_WallTouchR : cBgCross_WallTouchL);
     f32 moved = posX(player) - s.lastX;
     bool stuck = s.frames > 2 && s.speed > 1.0f && moved < 0.25f && moved > -0.25f;
-    if (s.frames > 0 && (touch || s.bumped || stuck)) {
+    // A block is bumped when the colliders meet, which is before the shell reaches it: it goes on
+    // until it does (touch), or for this long if the bump broke the block and nothing is there.
+    if (s.bumped && s.turnIn == 0)
+        s.turnIn = 1 + (u32)(SHELL_BUMP_REACH / (s.speed > 0.5f ? s.speed : 0.5f));
+    bool bumpTurn = s.turnIn > 0 && --s.turnIn == 0;
+    if (s.frames > 0 && (touch || bumpTurn || stuck)) {
         direction(player) ^= 1;
         sign = -sign;
+        s.turnIn = 0;
     }
 #endif
     s.bumped = false;
     s.lastX = posX(player);
 
-    if (s.speedUp) {
-        s.speed += SHELL_ACCEL;
-        if (s.speed > SHELL_SPEED)
-            s.speed = SHELL_SPEED;
-    } else {
-        s.speed -= SHELL_DECEL;
-        if (s.speed < 0.0f)
+    // How steep the ground is the way it is going: above 0 it climbs.
+    f32 climb = sin((f32)groundAngle(player) * 3.14159265f / 2147483648.0f) * sign;
+    if (climb <= SHELL_FLAT) {
+        if (s.speedUp)
+            s.speed += SHELL_ACCEL;
+        else if (climb >= -SHELL_FLAT)
+            s.speed -= SHELL_DECEL;
+    }
+    s.speed -= climb * SHELL_SLOPE_PULL;
+    if (s.speed > SHELL_SPEED)
+        s.speed = SHELL_SPEED;
+    if (s.speed <= 0.0f) {
+        if (climb > SHELL_FLAT) {       // out of speed on the way up: it rolls back down
+            direction(player) ^= 1;
+            sign = -sign;
+            s.speed = 0.1f;
+        } else {
             s.speed = 0.0f;
+        }
     }
     speedF(player) = s.speed * sign;
     maxSpeedF(player) = (s.speedUp ? SHELL_SPEED : s.speed) * sign;
@@ -446,6 +477,7 @@ void ModBase::shellSuit::afterExecute(void* player, u32 result)
     if (n < 0 || n >= 4)
         return;
     ShellPlayer& s = sPlayers[n];
+    s.actor = player;
     // While a power-up change flickers, changeFrame (below) owns the look; the
     // shell ends once the change is over.
     if (!changing(player)) {
@@ -467,12 +499,102 @@ void ModBase::shellSuit::afterExecute(void* player, u32 result)
     s.hiding = s.shell && !dashing && hidesInShell(player) ? player : nullptr;
 }
 
+// ---- Sounds --------------------------------------------------------------------------------
+//
+// A shell player is in Penguin mode, so it sounds like one: Player::playSound (0x607734E8) and the
+// footsteps (0x60773968 on, by mode == 5) all end in three functions of the sound object at
+// player + 0x348. They play the same labels as anyone else for a shell player.
+namespace ModBase { namespace shellSuit {
+extern const char* footsteps[];     // by ground type, player + 0x1B5C
+extern const char* landings[];
+int playSound(void* sound, const char* label, int a);
+int playSound_orig(void* sound, const char* label, int a);
+int holdSound(void* sound, const char* label, int a);
+int holdSound_orig(void* sound, const char* label, int a);
+int stepSound(void* sound, const char* label, u32 a, u32 b, f32 x, f32 y);
+int stepSound_orig(void* sound, const char* label, u32 a, u32 b, f32 x, f32 y);
+} }
+
+namespace {
+
+constexpr u32 cPlayerSound = 0x348;
+constexpr u32 cGroundType = 0x1B5C;
+constexpr u32 cGroundTypes = 14;
+
+bool sGrantingShell;
+
+struct SoundSwap { const char* penguin; const char* plain; };
+const SoundSwap cSoundSwaps[] = {
+    { "SE_PLY_PNGN_JUMP",         "SE_PLY_JUMP" },
+    { "SE_PLY_PNGN_SLIP",         "SE_PLY_SLIP" },
+    { "SE_PLY_PNGN_SLIP_JUMP",    "SE_PLY_JUMP" },
+    { "SE_PLY_PNGN_SLIP_SEA",     "SE_PLY_SLIP_W" },
+    { "SE_PLY_PNGN_WATER_SLIDE",  "SE_PLY_SLIP_W" },
+    { "SE_PLY_PNGN_ICE_SLIP",     "SE_PLY_SLIP_ICE" },
+    { "SE_PLY_PNGN_SWIM",         "SE_PLY_SWIM" },
+    { "SE_PLY_SWIM_KICK_PENGUIN", "SE_PLY_SWIM_KICK" },
+    { "SE_PLY_PNGN_BUMP",         "SE_PLY_HIT_BLOCK" },
+    { "SE_PLY_CHANGE_PNGN",       "SE_PLY_CHANGE_BIG" },
+};
+
+bool sameLabel(const char* a, const char* b)
+{
+    while (*a && *a == *b) {
+        a++;
+        b++;
+    }
+    return *a == *b;
+}
+
+// What a shell player plays instead. `sound` may belong to any actor: only compared.
+const char* shellLabel(void* sound, const char* label)
+{
+    void* owner = (u8*)sound - cPlayerSound;
+    bool shell = sGrantingShell;
+    for (const ShellPlayer& s : sPlayers)
+        if (s.shell && s.actor == owner)
+            shell = true;
+    if (!shell || !label)
+        return label;
+
+    u32 ground = !sGrantingShell ? *(u32*)((u8*)owner + cGroundType) : 0;
+    if (ground >= cGroundTypes)
+        ground = 0;
+    if (sameLabel(label, "SE_PLY_FOOTNOTE_PNGN"))
+        return ModBase::shellSuit::footsteps[ground];
+    if (sameLabel(label, "SE_PLY_LAND_PNGN"))
+        return ModBase::shellSuit::landings[ground];
+    for (const SoundSwap& swap : cSoundSwaps)
+        if (sameLabel(label, swap.penguin))
+            return swap.plain;
+    return label;
+}
+
+} // namespace
+
+int ModBase::shellSuit::playSound(void* sound, const char* label, int a)
+{
+    return ModBase::shellSuit::playSound_orig(sound, shellLabel(sound, label), a);
+}
+
+int ModBase::shellSuit::holdSound(void* sound, const char* label, int a)
+{
+    return ModBase::shellSuit::holdSound_orig(sound, shellLabel(sound, label), a);
+}
+
+int ModBase::shellSuit::stepSound(void* sound, const char* label, u32 a, u32 b, f32 x, f32 y)
+{
+    return ModBase::shellSuit::stepSound_orig(sound, shellLabel(sound, label), a, b, x, y);
+}
+
 // The Penguin Suit item's grant (0x6046B6BC): Item_grantMode(item, &r, 5, 1),
 // then the collect feedback. item+0x1840 holds the collector afterwards.
 namespace ModBase { namespace shellSuit { int penguinGrant(void* item); } }
 int ModBase::shellSuit::penguinGrant(void* item)
 {
+    sGrantingShell = ModBase::variantProfileOf(item) == ProfileId::BlueShell;
     int granted = ModBase::shellSuit::penguinGrant_orig(item);
+    sGrantingShell = false;
     s32 collector = *(s32*)((u8*)item + 0x1840);
     if (collector >= 0 && collector < 4) {
         if (ModBase::variantProfileOf(item) == ProfileId::BlueShell) {
@@ -500,6 +622,20 @@ bool ModBase::shellSuit::playerDashing(void* actor) { return isDashing(actor); }
 // (vtable; base 0x602A5BF4) decides, so what a Star defeats -- Piranha Plants, Stingby and the
 // Bee among them, which the Penguin slide underneath only bounced off -- is defeated, and what
 // shrugs off a Star returns false and keeps the slide's usual contact.
+//
+// That contact is in the colliders' callbacks, which the overlap runs itself, and it bumps the
+// player. So the overlap runs with a stand-in for them, which only tells whether they would have
+// run, and the real ones follow only if the enemy lived through the Star.
+namespace {
+ActiveCollider* sContactFirst;
+u32 sContact;           // bit 0: the first collider's callback was due; bit 1: the second's
+
+void noteContact(ActiveCollider* self, ActiveCollider* other)
+{
+    sContact |= self == sContactFirst ? 1 : 2;
+}
+} // namespace
+
 namespace ModBase { namespace shellSuit { bool doOverlap(void* ac1, void* ac2); } }
 bool ModBase::shellSuit::doOverlap(void* ac1, void* ac2)
 {
@@ -512,10 +648,26 @@ bool ModBase::shellSuit::doOverlap(void* ac1, void* ac2)
         bool spared = enemy && enemy->profile
             && (enemy->profile->id == ProfileId::MrSun || enemy->profile->id == ProfileId::MrMoon);
         if (d1 != d2 && enemy && enemy->type == 3 && !spared) {
+            ActiveCollider* first = (ActiveCollider*)ac1;
+            ActiveCollider* second = (ActiveCollider*)ac2;
+            ActiveCollider::Callback callback1 = first->info.callback;
+            ActiveCollider::Callback callback2 = second->info.callback;
+            first->info.callback = second->info.callback = &noteContact;
+            sContactFirst = first;
+            sContact = 0;
             bool overlap = ModBase::shellSuit::doOverlap_orig(ac1, ac2);
-            if (overlap && static_cast<Enemy*>(enemy)->collisionStar((ActiveCollider*)(d1 ? ac2 : ac1),
-                                                                     (ActiveCollider*)(d1 ? ac1 : ac2)))
+            first->info.callback = callback1;
+            second->info.callback = callback2;
+
+            u32 contact = sContact;
+            if (!contact)
+                return overlap;
+            if (static_cast<Enemy*>(enemy)->collisionStar(d1 ? second : first, d1 ? first : second))
                 return false;   // defeated: no slide contact (it would bounce off)
+            if ((contact & 1) && callback1)
+                callback1(first, second);
+            if ((contact & 2) && callback2)
+                callback2(second, first);
             return overlap;
         }
     }

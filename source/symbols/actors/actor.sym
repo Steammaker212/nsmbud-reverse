@@ -813,3 +813,7 @@ ActorScaler::getOwnerScale() = 0x002A3FEC;
 # Object  [modbase/game/actors/actor.h]
 Object::invokeSlot37() = 0x000D7390;
 Object::invokeSlot37_b() = 0x000D79C4;
+
+# ActorMgr's ActorAdditionalHeap: code/sprites/helical_bar.cpp
+ModBase::actorHeap::create(void*, void**) = 0x00007BF0;
+ModBase::actorHeap::release(void*, void**) = 0x00007C5C;

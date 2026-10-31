@@ -14,20 +14,34 @@
 //   nybble 3      1: only the float (a bouncy cloud you can jump on), no Goomba
 //
 // Models: ukibofloat (the float) and kuribo (the retail Goomba, anim "hikkuri").
-// Stomping the Goomba leaves the float behind, which bounces players up; a
-// ground pound pops it.
+// Whatever kills the Goomba leaves the float behind. Nothing harms the float: it only
+// meets players, who bounce off the top of it, and a ground pound pops it. Yoshi's
+// tongue takes the actor itself, so when he eats the Goomba, or anything else kills it
+// and it falls, a new actor (settings1 bit 0) takes over as that same float.
 
 #include "actors/enemy.h"
 #include "graphics/effect.h"
 #include "actors/profile.h"
 #include "actors/profileid.h"
 #include "modbase/tsuru.h"
+#include "modbase/yoshi.h"
+#include "modbase/tumble_death.h"
 
 // Tsuru RP_Balloon_Burst_0 (effectid.h).
 constexpr s32 cEffect_BalloonBurst = 0x1B8;
 
 #define FLOATYGOOMBA_BOUNCE         4.0f    // a player's speed.y off the float
 #define FLOATYGOOMBA_CHASE_RANGE    (6.0f * 16.0f)
+
+// As spawnHammer (hammer_suit.cpp). A pair needs each collider to take the other's kind
+// (ActiveCollider_doOverlapMaybe 0x601597E8), so with only these the float never meets
+// another enemy, a hammer or a shell, and neither side reacts to it.
+constexpr u32 cVsKind_Players = (1u << 0) | (1u << 1) | (1u << 2) | (1u << 9);
+
+// An attack on the float passes through it. On the Goomba it is Enemy's, and the death
+// states below keep the float.
+#define FLOATYGOOMBA_FLOAT_PASSES(name) \
+    bool name(ActiveCollider* acSelf, ActiveCollider* acOther) override { return model ? Enemy::name(acSelf, acOther) : false; }
 
 class FloatyGoomba : public Enemy
 {
@@ -44,15 +58,42 @@ public:
     void collisionPlayer(ActiveCollider* acSelf, ActiveCollider* acOther) override;
     void collisionYoshi(ActiveCollider* acSelf, ActiveCollider* acOther) override;
     bool collisionGroundPound(ActiveCollider* acSelf, ActiveCollider* acOther) override;
+    bool collisionGroundPoundYoshi(ActiveCollider* acSelf, ActiveCollider* acOther) override;
+
+    FLOATYGOOMBA_FLOAT_PASSES(collisionStar)
+    FLOATYGOOMBA_FLOAT_PASSES(collisionSlide)
+    FLOATYGOOMBA_FLOAT_PASSES(collisionPropellerDrill)
+    FLOATYGOOMBA_FLOAT_PASSES(vf120)
+    FLOATYGOOMBA_FLOAT_PASSES(collisionPenguinSlide)
+    FLOATYGOOMBA_FLOAT_PASSES(collisionPipeCannon)
+    FLOATYGOOMBA_FLOAT_PASSES(vf134)
+    FLOATYGOOMBA_FLOAT_PASSES(collisionThrowableObject)
+    FLOATYGOOMBA_FLOAT_PASSES(collisionFireball)
+    FLOATYGOOMBA_FLOAT_PASSES(collisionHammer)
+    FLOATYGOOMBA_FLOAT_PASSES(collisionFireballYoshi)
+
+    // Enemy's own death states (a hammer, a shell, a fireball, a Star ...): the Goomba alone.
+    void beginState_DieFumi() override;
+    void executeState_DieFumi() override { }
+    void endState_DieFumi() override { }
+    void beginState_DieFall() override { beginState_DieFumi(); }
+    void executeState_DieFall() override { }
+    void endState_DieFall() override { }
+
+    void vf228() override;      // Enemy's EatOut: Yoshi spat the Goomba out
 
     void bounce(StageActor* player);
+    void flatten();
 
     static const ActiveCollider::Info collisionInfo;
 
     ModelWrapper* floaty;
     ModelWrapper* model;
+    ::yoshi::EatData eatData;   // built only with a Goomba: use it only while model is set
+    ModBase::TumbleDeath tumble;
     f32 t;
     bool onlyFloaty;
+    bool floatLeft;             // the Goomba is being eaten; another actor has the float
 
     DECLARE_STATE(FloatyGoomba, Die);
 };
@@ -73,6 +114,7 @@ FloatyGoomba::FloatyGoomba(const ActorBuildInfo* buildInfo)
     , model(nullptr)
     , t(0.0f)
     , onlyFloaty(buildInfo->eventId1 >> 0x4 & 0x1)     // nybble 3
+    , floatLeft(false)
 { }
 
 Actor* FloatyGoomba::build(const ActorBuildInfo* buildInfo)
@@ -91,9 +133,14 @@ u32 FloatyGoomba::onCreate()
         return 1;
     }
 
-    if (!onlyFloaty) {
+    if (settings1 & 1) {
+        flatten();              // what was left behind
+    } else if (onlyFloaty) {
+        aCollider.info._1C &= cVsKind_Players;
+    } else {
         model = tsuru::createModel("kuribo", "kuribo", 1);
         tsuru::playSklAnim(model, "hikkuri");
+        ModBase::yoshi::makeEdible(this, &eatData);
     }
 
     return onExecute();
@@ -101,7 +148,24 @@ u32 FloatyGoomba::onCreate()
 
 u32 FloatyGoomba::onExecute()
 {
-    states.execute();
+    if (!tumble.execute(this))
+        states.execute();
+
+    // Yoshi moves the Goomba now, and the float stays behind.
+    if (model && (tumble.active || ModBase::yoshi::beingEaten(eatData))) {
+        if (!floatLeft) {
+            floatLeft = true;
+            tsuru::spawnActor(ProfileId::FloatyGoomba, position, 1);
+        }
+
+        Mtx34 eatenMtx;
+        eatenMtx.rotateAndTranslate(rotation, position);
+        model->setMtx(eatenMtx);
+        model->setScale(scale);
+        model->updateModel();
+        model->updateAnimations();
+        return 1;
+    }
 
     Mtx34 mtx;
     mtx.rotateAndTranslate(rotation, position);
@@ -138,8 +202,22 @@ u32 FloatyGoomba::onExecute()
 u32 FloatyGoomba::onDraw()
 {
     tsuru::drawModel(model);
-    tsuru::drawModel(floaty);
+    if (!floatLeft)
+        tsuru::drawModel(floaty);
     return 1;
+}
+
+// Enemy's EatOut does nothing (0x602A972C), and its float is gone.
+void FloatyGoomba::vf228()
+{
+    tumble.begin(this);
+}
+
+// onExecute sees the tumble and leaves a new float behind.
+void FloatyGoomba::beginState_DieFumi()
+{
+    Enemy::beginState_DieFumi();    // score, colliders off
+    tumble.begin(this);
 }
 
 void FloatyGoomba::bounce(StageActor* player)
@@ -150,8 +228,9 @@ void FloatyGoomba::bounce(StageActor* player)
 
 void FloatyGoomba::collisionPlayer(ActiveCollider* acSelf, ActiveCollider* acOther)
 {
-    if (onlyFloaty || (model == nullptr && acOther->owner->position.y - position.y > 0.0f)) {
-        bounce(acOther->owner);
+    if (!model) {
+        if (acOther->owner->position.y - position.y > 0.0f)
+            bounce(acOther->owner);
         return;
     }
 
@@ -182,8 +261,14 @@ bool FloatyGoomba::collisionGroundPound(ActiveCollider* acSelf, ActiveCollider* 
     }
 
     isDeleted = true;
+    tsuru::playSound("SE_OBJ_CMN_BALLOON_BREAK", position);
     Effect::spawn(cEffect_BalloonBurst, &position, &rotation, &scale);
     return false;
+}
+
+bool FloatyGoomba::collisionGroundPoundYoshi(ActiveCollider* acSelf, ActiveCollider* acOther)
+{
+    return collisionGroundPound(acSelf, acOther);
 }
 
 /** STATE: Die */
@@ -196,10 +281,16 @@ void FloatyGoomba::beginState_Die()
         return;
     }
 
+    ModBase::yoshi::makeInedible(this);
     model = nullptr;
+    flatten();
+}
 
+void FloatyGoomba::flatten()
+{
     aCollider.info.distToEdge.y /= 1.5f;
     aCollider.info.distToEdge.x++;
+    aCollider.info._1C &= cVsKind_Players;
 }
 
 void FloatyGoomba::executeState_Die() { }

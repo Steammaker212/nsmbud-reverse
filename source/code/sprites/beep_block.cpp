@@ -29,6 +29,9 @@
 #include "modbase/tsuru.h"
 
 #define BEEP_PERIOD     240     // frames between colour swaps (Tsuru: 4 seconds)
+#define BEEP_TICK       60      // frames between ticks, as the pulse in onDraw
+#define BEEP_ON_SCREEN  16.0f   // this far past the screen's edge still counts
+#define BEEP_TICK_SOUND "SE_EMY_PATAMET_STEP_8"     // a short high note, the music notes' highest
 
 class BeepBlock : public MultiStateActor
 {
@@ -101,9 +104,21 @@ u32 BeepBlock::onCreate()
 
 u32 BeepBlock::onExecute()
 {
-    if (sBlocks.first() == this && ++sTimer >= BEEP_PERIOD) {
-        sTimer = 0;
-        sCurrent ^= 1;
+    if (sBlocks.first() == this) {
+        if (++sTimer >= BEEP_PERIOD) {
+            sTimer = 0;
+            sCurrent ^= 1;
+        }
+
+        // Only the first block counts, so a tick plays once however many there are, from one
+        // that is on screen; with none there, it stays quiet.
+        if (sTimer % BEEP_TICK == 0) {
+            f32 left = ModBase::camera::left() - BEEP_ON_SCREEN, right = ModBase::camera::right() + BEEP_ON_SCREEN;
+            BeepBlock* seen = sBlocks.find([left, right](BeepBlock* b) { return b->position.x >= left && b->position.x <= right; });
+            if (seen) {
+                tsuru::playSound(sTimer == 0 ? "SE_OBJ_STEP_ON_SWITCH" : BEEP_TICK_SOUND, seen->position);
+            }
+        }
     }
 
     Mtx34 mtx;

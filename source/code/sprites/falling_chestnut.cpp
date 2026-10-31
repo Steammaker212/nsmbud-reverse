@@ -170,7 +170,10 @@ void FallingChestnut::endState_Falling() { }
 
 /** STATE: OnGround */
 
-void FallingChestnut::beginState_OnGround() { }
+void FallingChestnut::beginState_OnGround()
+{
+    tsuru::playSound("SE_EMY_SANBO_LAND", position);
+}
 
 void FallingChestnut::executeState_OnGround()
 {

@@ -13,7 +13,7 @@
 
 // The shell's two parts, in romfs/Model/blue_shell.Nin_NX_NVN.szs (which loads
 // at game start with the Blue Shell item, shell_suit.cpp). Where each sits:
-// modbase/costume.h, cShellBodyOffset* / cShellBellyOffset*.
+// modbase/costume.h, cWholeShell, fitted to each character.
 #define SHELL_COSTUME_ARCHIVE       "blue_shell"
 #define SHELL_COSTUME_BODY          "shell_body"    // the dome and its white rim
 #define SHELL_COSTUME_BELLY         "shell_belly"   // the belly plate
@@ -75,11 +75,11 @@ Costume* findCostume(void* playerModel)
 }
 
 // After the PlayerModel constructor, on the owner's heap. The model factory
-// 0x60794BDC: 0-1 MarioModel, 2-4 KinopioModel, 5/6/8 other classes whose
-// layouts are not mapped -- those get no costume.
+// 0x60794BDC: 0-1 MarioModel, 2-4 KinopioModel, 6 KinopicoModel (Toadette); 5 and
+// 8 are other classes whose layouts are not mapped -- those get no costume.
 void makeCostume(void* playerModel)
 {
-    if (ModBase::playerModels::character(playerModel) > 4)
+    if (!ModBase::costume::wearsShell(ModBase::playerModels::character(playerModel)))
         return;
     // A model rebuilt at a freed model's address replaces that entry.
     Costume* c = findCostume(playerModel);
@@ -124,7 +124,7 @@ bool showPlayer(void* playerModel)
 }
 
 // After PlayerModel::draw (the onDrawn listener). Body +0x018 holds in
-// MarioModel and KinopioModel.
+// MarioModel, KinopioModel and KinopicoModel.
 void drawCostume(void* playerModel)
 {
     Costume* c = costumeFor(playerModel);
@@ -135,7 +135,11 @@ void drawCostume(void* playerModel)
         drawInside(c, player, rotation);
         return;
     }
-    ModBase::costume::drawShell(c->shellBody, c->shellBelly, *(ModelWrapper**)((u8*)playerModel + 0x018));
+    ModelWrapper* body = *(ModelWrapper**)((u8*)playerModel + 0x018);
+    u32 character = ModBase::playerModels::character(playerModel);
+    const ModBase::costume::ShellFit& fit = ModBase::costume::cWholeShell[ModBase::costume::shellFitIndex(character)];
+    ModBase::costume::drawShellPart(c->shellBody, body, fit.body, ModBase::costume::cBlueShellDepth);
+    ModBase::costume::drawShellPart(c->shellBelly, body, fit.belly);
 }
 
 struct CostumeSetup

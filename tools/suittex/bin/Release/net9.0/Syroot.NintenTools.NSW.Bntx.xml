@@ -1,0 +1,754 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>Syroot.NintenTools.NSW.Bntx</name>
+    </assembly>
+    <members>
+        <member name="T:Syroot.NintenTools.NSW.Bntx.BntxFile">
+            <summary>
+            Represents a NintendoWare for Cafe (NW4F) graphics data archive file.
+            </summary>
+        </member>
+        <member name="M:Syroot.NintenTools.NSW.Bntx.BntxFile.#ctor">
+            <summary>
+            Initializes a new instance of the <see cref="T:Syroot.NintenTools.NSW.Bntx.BntxFile"/> class.
+            </summary>
+        </member>
+        <member name="M:Syroot.NintenTools.NSW.Bntx.BntxFile.#ctor(System.IO.Stream,System.Boolean)">
+            <summary>
+            Initializes a new instance of the <see cref="T:Syroot.NintenTools.NSW.Bntx.BntxFile"/> class from the given <paramref name="stream"/> which
+            is optionally left open.
+            </summary>
+            <param name="stream">The <see cref="T:System.IO.Stream"/> to load the data from.</param>
+            <param name="leaveOpen"><c>true</c> to leave the stream open after reading, otherwise <c>false</c>.</param>
+        </member>
+        <member name="M:Syroot.NintenTools.NSW.Bntx.BntxFile.#ctor(System.String)">
+            <summary>
+            Initializes a new instance of the <see cref="T:Syroot.NintenTools.NSW.Bntx.BntxFile"/> class from the file with the given
+            <paramref name="fileName"/>.
+            </summary>
+            <param name="fileName">The name of the file to load the data from.</param>
+        </member>
+        <member name="P:Syroot.NintenTools.NSW.Bntx.BntxFile.Name">
+            <summary>
+            Gets or sets a name describing the contents.
+            </summary>
+        </member>
+        <member name="P:Syroot.NintenTools.NSW.Bntx.BntxFile.PlatformTarget">
+            <summary>
+            Gets or sets the target platform as a string.
+            </summary>
+        </member>
+        <member name="P:Syroot.NintenTools.NSW.Bntx.BntxFile.VersionMajor">
+            <summary>
+            Gets or sets the major revision of the BNTX structure formats.
+            </summary>
+        </member>
+        <member name="P:Syroot.NintenTools.NSW.Bntx.BntxFile.VersionMajor2">
+            <summary>
+            Gets or sets the second major revision of the BNTX structure formats.
+            </summary>
+        </member>
+        <member name="P:Syroot.NintenTools.NSW.Bntx.BntxFile.VersionMinor">
+            <summary>
+            Gets or sets the minor revision of the BNTX structure formats.
+            </summary>
+        </member>
+        <member name="P:Syroot.NintenTools.NSW.Bntx.BntxFile.VersionMinor2">
+            <summary>
+            Gets or sets the second minor revision of the BNTX structure formats.
+            </summary>
+        </member>
+        <member name="P:Syroot.NintenTools.NSW.Bntx.BntxFile.ByteOrder">
+            <summary>
+            Gets the byte order in which data is stored. Must be the endianness of the target platform.
+            </summary>
+        </member>
+        <member name="P:Syroot.NintenTools.NSW.Bntx.BntxFile.Alignment">
+            <summary>
+            Gets or sets the alignment to use for raw data blocks in the file.
+            </summary>
+        </member>
+        <member name="P:Syroot.NintenTools.NSW.Bntx.BntxFile.DataAlignment">
+            <summary>
+            Gets or sets the data alignment to use for raw data blocks in the file.
+            </summary>
+        </member>
+        <member name="P:Syroot.NintenTools.NSW.Bntx.BntxFile.TargetAddressSize">
+            <summary>
+            Gets or sets the target adress size to use for raw data blocks in the file.
+            </summary>
+        </member>
+        <member name="P:Syroot.NintenTools.NSW.Bntx.BntxFile.Flag">
+            <summary>
+            Gets or sets the flag. Unknown purpose.
+            </summary>
+        </member>
+        <member name="P:Syroot.NintenTools.NSW.Bntx.BntxFile.BlockOffset">
+            <summary>
+            Gets or sets the BlockOffset. 
+            </summary>
+        </member>
+        <member name="P:Syroot.NintenTools.NSW.Bntx.BntxFile.RelocationTable">
+            <summary>
+            Gets or sets the stored <see cref="P:Syroot.NintenTools.NSW.Bntx.BntxFile.RelocationTable"/> (_RLT) instance.
+            </summary>
+        </member>
+        <member name="P:Syroot.NintenTools.NSW.Bntx.BntxFile.Target">
+            <summary>
+            Gets or sets the target platform.
+            </summary>
+        </member>
+        <member name="P:Syroot.NintenTools.NSW.Bntx.BntxFile.Textures">
+            <summary>
+            Gets or sets a list of the stored <see cref="T:Syroot.NintenTools.NSW.Bntx.Texture"/> instances.
+            </summary>
+        </member>
+        <member name="M:Syroot.NintenTools.NSW.Bntx.BntxFile.Save(System.IO.Stream,System.Boolean)">
+            <summary>
+            Saves the contents in the given <paramref name="stream"/> and optionally leaves it open
+            </summary>
+            <param name="stream">The <see cref="T:System.IO.Stream"/> to save the contents into.</param>
+            <param name="leaveOpen"><c>true</c> to leave the stream open after writing, otherwise <c>false</c>.</param>
+        </member>
+        <member name="M:Syroot.NintenTools.NSW.Bntx.BntxFile.Save(System.String)">
+            <summary>
+            Saves the contents in the file with the given <paramref name="fileName"/>.
+            </summary>
+            <param name="fileName">The name of the file to save the contents into.</param>
+        </member>
+        <member name="T:Syroot.NintenTools.NSW.Bntx.RelocationTable">
+            <summary>
+            Represents an _RLT section in a <see cref="T:Syroot.NintenTools.NSW.Bntx.BntxFile"/> subfile, storing pointers to sections in a Bntx.
+            </summary>  
+        </member>
+        <member name="P:Syroot.NintenTools.NSW.Bntx.RelocationTable.position">
+            <summary>
+            Gets or sets the <see cref="!:VertexBuffer"/> instance storing the data which forms the shape's surface. Saved
+            depending on <see cref="!:VertexBufferIndex"/>.
+            </summary>
+        </member>
+        <member name="T:Syroot.NintenTools.NSW.Bntx.ResDict">
+            <summary>
+            Represents the non-generic base of a dictionary which can quickly look up <see cref="T:Syroot.NintenTools.NSW.Bntx.Core.IResData"/> instances via
+            key or index.
+            </summary>
+        </member>
+        <member name="M:Syroot.NintenTools.NSW.Bntx.ResDict.#ctor">
+            <summary>
+            Initializes a new instance of the <see cref="T:Syroot.NintenTools.NSW.Bntx.ResDict"/> class.
+            </summary>
+        </member>
+        <member name="P:Syroot.NintenTools.NSW.Bntx.ResDict.Count">
+            <summary>
+            Gets the number of instances stored.
+            </summary>
+        </member>
+        <member name="M:Syroot.NintenTools.NSW.Bntx.ResDict.Add(System.String)">
+            <summary>
+            Adds the given <paramref name="key"/> to insert in the dictionary.
+            </summary>
+            <exception cref="T:System.ArgumentException">Duplicated <paramref name="key"/> instances
+            already exists.</exception>
+        </member>
+        <member name="M:Syroot.NintenTools.NSW.Bntx.ResDict.Remove(System.String)">
+            <summary>
+            Removes the given <paramref name="key"/> from the dictionary.
+            </summary>
+            <exception cref="T:System.ArgumentException">Duplicated <paramref name="key"/> instances
+            already exists.</exception>
+        </member>
+        <member name="M:Syroot.NintenTools.NSW.Bntx.ResDict.ContainsKey(System.String)">
+            <summary>
+            Determines whether the given <paramref name="key"/> is in the dictionary.
+            </summary>
+            <returns><c>true</c> if <paramref name="key"/> was found in the dictionary; otherwise <c>false</c>.
+            </returns>
+        </member>
+        <member name="M:Syroot.NintenTools.NSW.Bntx.ResDict.GetKey(System.Int32)">
+            <summary>
+            Returns the key given <paramref name="index"/> is within range of the dictionary.
+            </summary>
+        </member>
+        <member name="M:Syroot.NintenTools.NSW.Bntx.ResDict.SetKey(System.Int32,System.String)">
+            <summary>
+            Returns the key given <paramref name="index"/> is within range of the dictionary.
+            </summary>
+        </member>
+        <member name="P:Syroot.NintenTools.NSW.Bntx.ResDict.Item(System.Int32)">
+            <summary>
+            Gets or sets the <see cref="T:Syroot.NintenTools.NSW.Bntx.Core.IResData"/> instance stored at the specified <paramref name="index"/>.
+            </summary>
+            <param name="index">The 0-based index of the <see cref="T:Syroot.NintenTools.NSW.Bntx.Core.IResData"/> instance to get or set.</param>
+            <returns>The <see cref="T:Syroot.NintenTools.NSW.Bntx.Core.IResData"/> at the specified <paramref name="index"/>.</returns>
+            <exception cref="T:System.ArgumentOutOfRangeException">The index is smaller than 0 or bigger or equal to
+            <see cref="P:Syroot.NintenTools.NSW.Bntx.ResDict.Count"/>.</exception>
+        </member>
+        <member name="M:Syroot.NintenTools.NSW.Bntx.ResDict.IndexOf(System.String)">
+            <summary>
+            Searches for the specified <paramref name="value"/> and returns the zero-based index of the first occurrence
+            within the entire dictionary.
+            </summary>
+            <param name="value">The <see cref="T:Syroot.NintenTools.NSW.Bntx.Core.IResData"/> instance to locate in the dictionary. The value can be
+            <c>null</c>.</param>
+            <returns>The zero-based index of the first occurence of <paramref name="value"/> within the entire
+            dictionary if found; otherwise <c>-1</c>.</returns>
+        </member>
+        <member name="M:Syroot.NintenTools.NSW.Bntx.ResDict.Clear">
+            <summary>
+            Removes all elements from the dictionary.
+            </summary>
+        </member>
+        <member name="P:Syroot.NintenTools.NSW.Bntx.ResDict.Nodes">
+            <summary>
+            Returns only the publically visible nodes, excluding the root node.
+            </summary>
+        </member>
+        <member name="T:Syroot.NintenTools.NSW.Bntx.ResDict.Node">
+            <summary>
+            Represents a node forming the Patricia trie of the dictionary.
+            </summary>
+        </member>
+        <member name="T:Syroot.NintenTools.NSW.Bntx.UserData">
+            <summary>
+            Represents custom user variables which can be attached to many sections and subfiles of a <see cref="!:ResFile"/>.
+            </summary>
+        </member>
+        <member name="P:Syroot.NintenTools.NSW.Bntx.UserData.Name">
+            <summary>
+            Gets or sets the name with which the instance can be referenced uniquely in <see cref="!:ResDict&lt;UserData&gt;"/>
+            instances.
+            </summary>
+        </member>
+        <member name="P:Syroot.NintenTools.NSW.Bntx.UserData.Type">
+            <summary>
+            The data type of the stored values.
+            </summary>
+        </member>
+        <member name="M:Syroot.NintenTools.NSW.Bntx.UserData.GetValueInt32Array">
+            <summary>
+            Returns the stored value as an array of <see cref="T:System.Int32"/> instances when the <see cref="P:Syroot.NintenTools.NSW.Bntx.UserData.Type"/> is
+            <see cref="F:Syroot.NintenTools.NSW.Bntx.UserDataType.Int32"/>.
+            </summary>
+            <returns>The typed value.</returns>
+        </member>
+        <member name="M:Syroot.NintenTools.NSW.Bntx.UserData.GetValueSingleArray">
+            <summary>
+            Returns the stored value as an array of <see cref="T:System.Single"/> instances when the <see cref="P:Syroot.NintenTools.NSW.Bntx.UserData.Type"/> is
+            <see cref="F:Syroot.NintenTools.NSW.Bntx.UserDataType.Single"/>.
+            </summary>
+            <returns>The typed value.</returns>
+        </member>
+        <member name="M:Syroot.NintenTools.NSW.Bntx.UserData.GetValueStringArray">
+            <summary>
+            Returns the stored value as an array of <see cref="T:System.String"/> instances when the <see cref="P:Syroot.NintenTools.NSW.Bntx.UserData.Type"/> is
+            <see cref="F:Syroot.NintenTools.NSW.Bntx.UserDataType.String"/> or <see cref="F:Syroot.NintenTools.NSW.Bntx.UserDataType.WString"/>.
+            </summary>
+            <returns>The typed value.</returns>
+        </member>
+        <member name="M:Syroot.NintenTools.NSW.Bntx.UserData.GetValueByteArray">
+            <summary>
+            Returns the stored value as an array of <see cref="T:System.Byte"/> instances when the <see cref="P:Syroot.NintenTools.NSW.Bntx.UserData.Type"/> is
+            <see cref="F:Syroot.NintenTools.NSW.Bntx.UserDataType.Byte"/>.
+            </summary>
+            <returns>The typed value.</returns>
+        </member>
+        <member name="M:Syroot.NintenTools.NSW.Bntx.UserData.SetValue(System.Int32[])">
+            <summary>
+            Sets the stored <paramref name="value"/> as an <see cref="T:System.Int32"/> array and the <see cref="P:Syroot.NintenTools.NSW.Bntx.UserData.Type"/> to
+            <see cref="F:Syroot.NintenTools.NSW.Bntx.UserDataType.Int32"/>
+            </summary>
+            <param name="value">The value to store.</param>
+        </member>
+        <member name="M:Syroot.NintenTools.NSW.Bntx.UserData.SetValue(System.Single[])">
+            <summary>
+            Sets the stored <paramref name="value"/> as a <see cref="T:System.Single"/> array and the <see cref="P:Syroot.NintenTools.NSW.Bntx.UserData.Type"/> to
+            <see cref="F:Syroot.NintenTools.NSW.Bntx.UserDataType.Single"/>
+            </summary>
+            <param name="value">The value to store.</param>
+        </member>
+        <member name="M:Syroot.NintenTools.NSW.Bntx.UserData.SetValue(System.String[],System.Boolean)">
+            <summary>
+            Sets the stored <paramref name="value"/> as a <see cref="T:System.String"/> array and the <see cref="P:Syroot.NintenTools.NSW.Bntx.UserData.Type"/> to
+            <see cref="F:Syroot.NintenTools.NSW.Bntx.UserDataType.String"/> or <see cref="F:Syroot.NintenTools.NSW.Bntx.UserDataType.WString"/> depending on
+            <paramref name="asUnicode"/>.
+            </summary>
+            <param name="asUnicode"><c>true</c> to store data as UTF-16 encoded strings, or <c>false</c> to store it
+            as ASCII encoded strings.</param>
+            <param name="value">The value to store.</param>
+        </member>
+        <member name="M:Syroot.NintenTools.NSW.Bntx.UserData.SetValue(System.Byte[])">
+            <summary>
+            Sets the stored <paramref name="value"/> as a <see cref="T:System.Byte"/> array and the <see cref="P:Syroot.NintenTools.NSW.Bntx.UserData.Type"/> to
+            <see cref="F:Syroot.NintenTools.NSW.Bntx.UserDataType.Byte"/>
+            </summary>
+            <param name="value">The value to store.</param>
+        </member>
+        <member name="T:Syroot.NintenTools.NSW.Bntx.UserDataType">
+            <summary>
+            Represents the possible data types of values stored in <see cref="T:Syroot.NintenTools.NSW.Bntx.UserData"/> instances.
+            </summary>
+        </member>
+        <member name="F:Syroot.NintenTools.NSW.Bntx.UserDataType.Int32">
+            <summary>
+            The values is an <see cref="F:Syroot.NintenTools.NSW.Bntx.UserDataType.Int32"/> array.
+            </summary>
+        </member>
+        <member name="F:Syroot.NintenTools.NSW.Bntx.UserDataType.Single">
+            <summary>
+            The values is a <see cref="F:Syroot.NintenTools.NSW.Bntx.UserDataType.Single"/> array.
+            </summary>
+        </member>
+        <member name="F:Syroot.NintenTools.NSW.Bntx.UserDataType.String">
+            <summary>
+            The values is a <see cref="F:Syroot.NintenTools.NSW.Bntx.UserDataType.String"/> array encoded in ASCII.
+            </summary>
+        </member>
+        <member name="F:Syroot.NintenTools.NSW.Bntx.UserDataType.Byte">
+            <summary>
+            The values is a <see cref="F:Syroot.NintenTools.NSW.Bntx.UserDataType.Byte"/> array.
+            </summary>
+        </member>
+        <member name="F:Syroot.NintenTools.NSW.Bntx.UserDataType.WString">
+            <summary>
+            The values is a <see cref="F:Syroot.NintenTools.NSW.Bntx.UserDataType.String"/> array encoded in UTF-16.
+            </summary>
+        </member>
+        <member name="T:Syroot.NintenTools.NSW.Bntx.Core.IResData">
+            <summary>
+            Represents the common interface for <see cref="T:Syroot.NintenTools.NSW.Bntx.BntxFile"/> data instances.
+            </summary>
+        </member>
+        <member name="M:Syroot.NintenTools.NSW.Bntx.Core.IResData.Load(Syroot.NintenTools.NSW.Bntx.Core.BntxFileLoader)">
+            <summary>
+            Loads raw data from the <paramref name="loader"/> data stream into instances.
+            </summary>
+            <param name="loader">The <see cref="T:Syroot.NintenTools.NSW.Bntx.Core.BntxFileLoader"/> to load data with.</param>
+        </member>
+        <member name="M:Syroot.NintenTools.NSW.Bntx.Core.IResData.Save(Syroot.NintenTools.NSW.Bntx.Core.BntxFileSaver)">
+            <summary>
+            Saves header data of the instance and queues referenced data in the given <paramref name="saver"/>.
+            </summary>
+            <param name="saver">The <see cref="T:Syroot.NintenTools.NSW.Bntx.Core.BntxFileSaver"/> to save headers and queue data with.</param>
+        </member>
+        <member name="T:Syroot.NintenTools.NSW.Bntx.Core.BntxFileLoader">
+            <summary>
+            Loads the hierachy and data of a <see cref="T:Syroot.NintenTools.NSW.Bntx.BntxFile"/>.
+            </summary>
+        </member>
+        <member name="M:Syroot.NintenTools.NSW.Bntx.Core.BntxFileLoader.#ctor(Syroot.NintenTools.NSW.Bntx.BntxFile,System.IO.Stream,System.Boolean)">
+            <summary>
+            Initializes a new instance of the <see cref="T:Syroot.NintenTools.NSW.Bntx.Core.BntxFileLoader"/> class loading data into the given
+            <paramref name="bntxFile"/> from the specified <paramref name="stream"/> which is optionally left open.
+            </summary>
+            <param name="bntxFile">The <see cref="!:Bntx.bntxFile"/> instance to load data into.</param>
+            <param name="stream">The <see cref="T:System.IO.Stream"/> to read data from.</param>
+            <param name="leaveOpen"><c>true</c> to leave the stream open after reading, otherwise <c>false</c>.</param>
+        </member>
+        <member name="M:Syroot.NintenTools.NSW.Bntx.Core.BntxFileLoader.#ctor(Syroot.NintenTools.NSW.Bntx.BntxFile,System.String)">
+            <summary>
+            Initializes a new instance of the <see cref="T:Syroot.NintenTools.NSW.Bntx.Core.BntxFileLoader"/> class from the file with the given
+            <paramref name="fileName"/>.
+            </summary>
+            <param name="BntxFile">The <see cref="T:Syroot.NintenTools.NSW.Bntx.BntxFile"/> instance to load data into.</param>
+            <param name="fileName">The name of the file to load the data from.</param>
+        </member>
+        <member name="M:Syroot.NintenTools.NSW.Bntx.Core.BntxFileLoader.#ctor(Syroot.NintenTools.NSW.Bntx.Texture,System.String)">
+            <summary>
+            Initializes a new instance of the <see cref="T:Syroot.NintenTools.NSW.Bntx.Core.BntxFileLoader"/> class from the file with the given
+            <paramref name="fileName"/>.
+            </summary>
+            <param name="texture">The <see cref="T:Syroot.NintenTools.NSW.Bntx.Texture"/> instance to load data into.</param>
+            <param name="fileName">The name of the file to load the data from.</param>
+        </member>
+        <member name="P:Syroot.NintenTools.NSW.Bntx.Core.BntxFileLoader.BntxFile">
+            <summary>
+            Gets the loaded <see cref="T:Syroot.NintenTools.NSW.Bntx.BntxFile"/> instance.
+            </summary>
+        </member>
+        <member name="P:Syroot.NintenTools.NSW.Bntx.Core.BntxFileLoader.Texture">
+            <summary>
+            Gets the loaded <see cref="T:Syroot.NintenTools.NSW.Bntx.BntxFile"/> instance.
+            </summary>
+        </member>
+        <member name="M:Syroot.NintenTools.NSW.Bntx.Core.BntxFileLoader.Execute">
+            <summary>
+            Starts deserializing the data from the <see cref="P:Syroot.NintenTools.NSW.Bntx.Core.BntxFileLoader.BntxFile"/> root.
+            </summary>
+        </member>
+        <member name="M:Syroot.NintenTools.NSW.Bntx.Core.BntxFileLoader.Load``1(System.Boolean)">
+            <summary>
+            Reads and returns an <see cref="T:Syroot.NintenTools.NSW.Bntx.Core.IResData"/> instance of type <typeparamref name="T"/> from the following
+            offset or returns <c>null</c> if the read offset is 0.
+            </summary>
+            <typeparam name="T">The type of the <see cref="T:Syroot.NintenTools.NSW.Bntx.Core.IResData"/> to read.</typeparam>
+            <returns>The <see cref="T:Syroot.NintenTools.NSW.Bntx.Core.IResData"/> instance or <c>null</c>.</returns>
+        </member>
+        <member name="M:Syroot.NintenTools.NSW.Bntx.Core.BntxFileLoader.LoadCustom``1(System.Func{``0},System.Nullable{System.Int64})">
+            <summary>
+            Reads and returns an instance of arbitrary type <typeparamref name="T"/> from the following offset with the
+            given <paramref name="callback"/> or returns <c>null</c> if the read offset is 0.
+            </summary>
+            <typeparam name="T">The type of the data to read.</typeparam>
+            <param name="callback">The callback to read the instance data with.</param>
+            <param name="offset">The optional offset to use instead of reading a following one.</param>
+            <returns>The data instance or <c>null</c>.</returns>
+            <remarks>Offset required for ExtFile header (offset specified before size).</remarks>
+        </member>
+        <member name="M:Syroot.NintenTools.NSW.Bntx.Core.BntxFileLoader.LoadDict">
+            <summary>
+            Reads and returns an <see cref="T:Syroot.NintenTools.NSW.Bntx.ResDict"/> instance
+            the following offset or returns an empty instance if the read offset is 0.
+            </summary>
+            <returns>The <see cref="T:Syroot.NintenTools.NSW.Bntx.ResDict"/> instance.</returns>
+        </member>
+        <member name="M:Syroot.NintenTools.NSW.Bntx.Core.BntxFileLoader.LoadList``1(System.Int32,System.Nullable{System.Int64})">
+            <summary>
+            Reads and returns an <see cref="T:System.Collections.Generic.IList`1"/> instance with <paramref name="count"/> elements of type
+            <typeparamref name="T"/> from the following offset or returns <c>null</c> if the read offset is 0.
+            </summary>
+            <typeparam name="T">The type of the <see cref="T:Syroot.NintenTools.NSW.Bntx.Core.IResData"/> elements.</typeparam>
+            <param name="count">The number of elements to expect for the list.</param>
+            <param name="offset">The optional offset to use instead of reading a following one.</param>
+            <returns>The <see cref="T:System.Collections.Generic.IList`1"/> instance or <c>null</c>.</returns>
+            <remarks>Offset required for FMDL FVTX lists (offset specified before count).</remarks>
+        </member>
+        <member name="M:Syroot.NintenTools.NSW.Bntx.Core.BntxFileLoader.LoadString(System.Text.Encoding,System.Int64)">
+            <summary>
+            Reads and returns a <see cref="T:System.String"/> instance from the following offset or <c>null</c> if the read
+            offset is 0.
+            </summary>
+            <param name="encoding">The optional encoding of the text.</param>
+            <returns>The read text.</returns>
+        </member>
+        <member name="M:Syroot.NintenTools.NSW.Bntx.Core.BntxFileLoader.LoadStrings(System.Int32,System.Text.Encoding)">
+            <summary>
+            Reads and returns <paramref name="count"/> <see cref="T:System.String"/> instances from the following offsets.
+            </summary>
+            <param name="count">The number of instances to read.</param>
+            <param name="encoding">The optional encoding of the texts.</param>
+            <returns>The read texts.</returns>
+        </member>
+        <member name="M:Syroot.NintenTools.NSW.Bntx.Core.BntxFileLoader.CheckSignature(System.String)">
+            <summary>
+            Reads a B ntx signature consisting of 4 ASCII characters encoded as an <see cref="T:System.UInt32"/> and checks for
+            validity.
+            </summary>
+            <param name="validSignature">A valid signature.</param>
+        </member>
+        <member name="M:Syroot.NintenTools.NSW.Bntx.Core.BntxFileLoader.ReadOffset(System.Boolean)">
+            <summary>
+            Reads a Bntx offset which is the absolute address.
+            </summary>
+            <returns>The absolute address of the offset.</returns>
+        </member>
+        <member name="M:Syroot.NintenTools.NSW.Bntx.Core.BntxFileLoader.ReadOffsets(System.Int32)">
+            <summary>
+            Reads Bntx offsets which is the absolute addresses.
+            </summary>
+            <param name="count">The number of offsets to read.</param>
+            <returns>The absolute addresses of the offsets.</returns>
+        </member>
+        <member name="T:Syroot.NintenTools.NSW.Bntx.Core.BntxFileSaver">
+            <summary>
+            Saves the hierachy and data of a <see cref="T:Syroot.NintenTools.NSW.Bntx.BntxFile"/>.
+            </summary>
+        </member>
+        <member name="F:Syroot.NintenTools.NSW.Bntx.Core.BntxFileSaver.AlignmentSmall">
+            <summary>
+            Gets or sets a data block alignment typically seen with <see cref="!:Buffer.Data"/>.
+            </summary>
+        </member>
+        <member name="M:Syroot.NintenTools.NSW.Bntx.Core.BntxFileSaver.#ctor(Syroot.NintenTools.NSW.Bntx.BntxFile,System.IO.Stream,System.Boolean)">
+            <summary>
+            Initializes a new instance of the <see cref="T:Syroot.NintenTools.NSW.Bntx.Core.BntxFileSaver"/> class saving data from the given
+            <paramref name="bntxFile"/> into the specified <paramref name="stream"/> which is optionally left open.
+            </summary>
+            <param name="bntxFile">The <see cref="!:Bntx.bntxFile"/> instance to save data from.</param>
+            <param name="stream">The <see cref="T:System.IO.Stream"/> to save data into.</param>
+            <param name="leaveOpen"><c>true</c> to leave the stream open after writing, otherwise <c>false</c>.</param>
+        </member>
+        <member name="M:Syroot.NintenTools.NSW.Bntx.Core.BntxFileSaver.#ctor(Syroot.NintenTools.NSW.Bntx.BntxFile,System.String)">
+            <summary>
+            Initializes a new instance of the <see cref="T:Syroot.NintenTools.NSW.Bntx.Core.BntxFileSaver"/> class for the file with the given
+            <paramref name="fileName"/>.
+            </summary>
+            <param name="BntxFile">The <see cref="T:Syroot.NintenTools.NSW.Bntx.BntxFile"/> instance to save.</param>
+            <param name="fileName">The name of the file to save the data into.</param>
+        </member>
+        <member name="M:Syroot.NintenTools.NSW.Bntx.Core.BntxFileSaver.#ctor(Syroot.NintenTools.NSW.Bntx.Texture,Syroot.NintenTools.NSW.Bntx.BntxFile,System.String)">
+            <summary>
+            Initializes a new instance of the <see cref="T:Syroot.NintenTools.NSW.Bntx.Core.BntxFileSaver"/> class for the file with the given
+            <paramref name="fileName"/>.
+            </summary>
+            <param name="BntxFile">The <see cref="T:Syroot.NintenTools.NSW.Bntx.BntxFile"/> instance to save.</param>
+            <param name="fileName">The name of the file to save the data into.</param>
+        </member>
+        <member name="P:Syroot.NintenTools.NSW.Bntx.Core.BntxFileSaver.BntxFile">
+            <summary>
+            Gets the saved <see cref="T:Syroot.NintenTools.NSW.Bntx.BntxFile"/> instance.
+            </summary>
+        </member>
+        <member name="P:Syroot.NintenTools.NSW.Bntx.Core.BntxFileSaver.Texture">
+            <summary>
+            Gets the saved <see cref="!:Bfres.Texture"/> instance.
+            </summary>
+        </member>
+        <member name="P:Syroot.NintenTools.NSW.Bntx.Core.BntxFileSaver.CurrentIndex">
+            <summary>
+            Gets the current index when writing lists or dicts.
+            </summary>
+        </member>
+        <member name="M:Syroot.NintenTools.NSW.Bntx.Core.BntxFileSaver.Execute">
+            <summary>
+            Starts serializing the data from the <see cref="P:Syroot.NintenTools.NSW.Bntx.Core.BntxFileSaver.BntxFile"/> root.
+            </summary>
+        </member>
+        <member name="M:Syroot.NintenTools.NSW.Bntx.Core.BntxFileSaver.SaveRelocateEntryToSection(System.Int64,System.UInt32,System.UInt32,System.UInt32,System.UInt32,System.String)">
+            <summary>
+            Save pointer array to be relocated in section 1
+            </summary>
+        </member>
+        <member name="M:Syroot.NintenTools.NSW.Bntx.Core.BntxFileSaver.SaveHeaderBlock(System.Boolean)">
+            <summary>
+            Reserves space for an offset and size for header block.
+            </summary>
+        </member>
+        <member name="M:Syroot.NintenTools.NSW.Bntx.Core.BntxFileSaver.Save(Syroot.NintenTools.NSW.Bntx.Core.IResData,System.Int32)">
+            <summary>
+            Reserves space for an offset to the <paramref name="resData"/> written later.
+            </summary>
+            <param name="resData">The <see cref="T:Syroot.NintenTools.NSW.Bntx.Core.IResData"/> to save.</param>
+            <param name="index">The index of the element, used for instances referenced by a <see cref="T:Syroot.NintenTools.NSW.Bntx.ResDict"/>.
+            </param>
+        </member>
+        <member name="M:Syroot.NintenTools.NSW.Bntx.Core.BntxFileSaver.SaveFieldFileSize">
+            <summary>
+            Reserves space for the <see cref="T:Syroot.NintenTools.NSW.Bntx.BntxFile"/> file size field which is automatically filled later.
+            </summary>
+        </member>
+        <member name="M:Syroot.NintenTools.NSW.Bntx.Core.BntxFileSaver.SaveFieldStringPool">
+            <summary>
+            Reserves space for the <see cref="T:Syroot.NintenTools.NSW.Bntx.BntxFile"/> string pool size and offset fields which are automatically
+            filled later.
+            </summary>
+        </member>
+        <member name="M:Syroot.NintenTools.NSW.Bntx.Core.BntxFileSaver.SaveList``1(System.Collections.Generic.IEnumerable{``0},System.Boolean)">
+            <summary>
+            Reserves space for an offset to the <paramref name="list"/> written later.
+            </summary>
+            <typeparam name="T">The type of the <see cref="T:Syroot.NintenTools.NSW.Bntx.Core.IResData"/> elements.</typeparam>
+            <param name="list">The <see cref="T:System.Collections.Generic.IList`1"/> to save.</param>
+        </member>
+        <member name="M:Syroot.NintenTools.NSW.Bntx.Core.BntxFileSaver.SaveDict(Syroot.NintenTools.NSW.Bntx.ResDict)">
+            <summary>
+            Reserves space for an offset to the <paramref name="dict"/> written later.
+            </summary>
+            <typeparam name="T">The type of the <see cref="T:Syroot.NintenTools.NSW.Bntx.Core.IResData"/> element values.</typeparam>
+            <param name="dict">The <see cref="T:Syroot.NintenTools.NSW.Bntx.ResDict"/> to save.</param>
+        </member>
+        <member name="M:Syroot.NintenTools.NSW.Bntx.Core.BntxFileSaver.SaveCustom(System.Object,System.Action)">
+            <summary>
+            Reserves space for an offset to the <paramref name="data"/> written later with the
+            <paramref name="callback"/>.
+            </summary>
+            <param name="data">The data to save.</param>
+            <param name="callback">The <see cref="T:System.Action"/> to invoke to write the data.</param>
+        </member>
+        <member name="M:Syroot.NintenTools.NSW.Bntx.Core.BntxFileSaver.SaveString(System.String,System.Text.Encoding)">
+            <summary>
+            Reserves space for an offset to the <paramref name="str"/> written later in the string pool with the
+            specified <paramref name="encoding"/>.
+            </summary>
+            <param name="str">The name to save.</param>
+            <param name="encoding">The <see cref="T:System.Text.Encoding"/> in which the name will be stored.</param>
+        </member>
+        <member name="M:Syroot.NintenTools.NSW.Bntx.Core.BntxFileSaver.SaveStrings(System.Collections.Generic.IEnumerable{System.String},System.Text.Encoding)">
+            <summary>
+            Reserves space for offsets to the <paramref name="strings"/> written later in the string pool with the
+            specified <paramref name="encoding"/>
+            </summary>
+            <param name="strings">The names to save.</param>
+            <param name="encoding">The <see cref="T:System.Text.Encoding"/> in which the names will be stored.</param>
+        </member>
+        <member name="M:Syroot.NintenTools.NSW.Bntx.Core.BntxFileSaver.SaveBlock(System.Object,System.UInt32,System.Action)">
+            <summary>
+            Reserves space for an offset to the <paramref name="data"/> written later in the data block pool.
+            </summary>
+            <param name="data">The data to save.</param>
+            <param name="alignment">The alignment to seek to before invoking the callback.</param>
+            <param name="callback">The <see cref="T:System.Action"/> to invoke to write the data.</param>
+        </member>
+        <member name="M:Syroot.NintenTools.NSW.Bntx.Core.BntxFileSaver.WriteSignature(System.String)">
+            <summary>
+            Writes a Bntx signature consisting of 4 ASCII characters encoded as an <see cref="T:System.UInt32"/>.
+            </summary>
+            <param name="value">A valid signature.</param>
+        </member>
+        <member name="T:Syroot.NintenTools.NSW.Bntx.GFX.Dim">
+            <summary>
+            Represents shapes of a given surface or texture.
+            </summary>
+        </member>
+        <member name="T:Syroot.NintenTools.NSW.Bntx.GFX.SurfaceDim">
+            <summary>
+            Represents shapes of a given surface or texture.
+            </summary>
+        </member>
+        <member name="T:Syroot.NintenTools.NSW.Bntx.GFX.SurfaceFormat">
+            <summary>
+            Represents desired texture, color-buffer, depth-buffer, or scan-buffer formats.
+            </summary>
+        </member>
+        <member name="T:Syroot.NintenTools.NSW.Bntx.GFX.TileMode">
+            <summary>
+            Represents the desired tiling modes for a surface.
+            </summary>
+        </member>
+        <member name="T:Syroot.NintenTools.NSW.Bntx.Texture">
+            <summary>
+            Represents an FMDL subfile in a <see cref="T:Syroot.NintenTools.NSW.Bntx.BntxFile"/>, storing multi-dimensional texture data.
+            </summary>
+        </member>
+        <member name="M:Syroot.NintenTools.NSW.Bntx.Texture.Import(System.IO.Stream,System.Boolean)">
+            <summary>
+            Initializes a new instance of the <see cref="!:Material"/> class from the given <paramref name="stream"/> which
+            is optionally left open.
+            </summary>
+            <param name="stream">The <see cref="T:System.IO.Stream"/> to load the data from.</param>
+            <param name="leaveOpen"><c>true</c> to leave the stream open after reading, otherwise <c>false</c>.</param>
+        </member>
+        <member name="M:Syroot.NintenTools.NSW.Bntx.Texture.Import(System.String)">
+            <summary>
+            Initializes a new instance of the <see cref="!:ResFile"/> class from the file with the given
+            <paramref name="fileName"/>.
+            </summary>
+            <param name="fileName">The name of the file to load the data from.</param>
+        </member>
+        <member name="M:Syroot.NintenTools.NSW.Bntx.Texture.Export(System.IO.Stream,Syroot.NintenTools.NSW.Bntx.BntxFile,System.Boolean)">
+            <summary>
+            Saves the contents in the given <paramref name="stream"/> and optionally leaves it open
+            </summary>
+            <param name="stream">The <see cref="T:System.IO.Stream"/> to save the contents into.</param>
+            <param name="leaveOpen"><c>true</c> to leave the stream open after writing, otherwise <c>false</c>.</param>
+        </member>
+        <member name="M:Syroot.NintenTools.NSW.Bntx.Texture.Export(System.String,Syroot.NintenTools.NSW.Bntx.BntxFile)">
+            <summary>
+            Saves the contents in the file with the given <paramref name="fileName"/>.
+            </summary>
+            <param name="fileName">The name of the file to save the contents into.</param>
+        </member>
+        <member name="P:Syroot.NintenTools.NSW.Bntx.Texture.ChannelRed">
+            <summary>
+            Gets or sets the source channel to map to the R (red) channel.
+            </summary>
+        </member>
+        <member name="P:Syroot.NintenTools.NSW.Bntx.Texture.ChannelGreen">
+            <summary>
+            Gets or sets the source channel to map to the G (green) channel.
+            </summary>
+        </member>
+        <member name="P:Syroot.NintenTools.NSW.Bntx.Texture.ChannelBlue">
+            <summary>
+            Gets or sets the source channel to map to the B (blue) channel.
+            </summary>
+        </member>
+        <member name="P:Syroot.NintenTools.NSW.Bntx.Texture.ChannelAlpha">
+            <summary>
+            Gets or sets the source channel to map to the A (alpha) channel.
+            </summary>
+        </member>
+        <member name="P:Syroot.NintenTools.NSW.Bntx.Texture.Width">
+            <summary>
+            Gets or sets the width of the texture.
+            </summary>
+        </member>
+        <member name="P:Syroot.NintenTools.NSW.Bntx.Texture.Height">
+            <summary>
+            Gets or sets the height of the texture.
+            </summary>
+        </member>
+        <member name="P:Syroot.NintenTools.NSW.Bntx.Texture.MipCount">
+            <summary>
+            Gets or sets the number of mipmaps stored in the <see cref="!:MipData"/>.
+            </summary>
+        </member>
+        <member name="P:Syroot.NintenTools.NSW.Bntx.Texture.Format">
+            <summary>
+            Gets or sets the desired texture data buffer format.
+            </summary>
+        </member>
+        <member name="P:Syroot.NintenTools.NSW.Bntx.Texture.Name">
+            <summary>
+            Gets or sets the name with which the instance can be referenced uniquely in <see cref="!:ResDict&lt;Texture&gt;"/>
+            instances.
+            </summary>
+        </member>
+        <member name="P:Syroot.NintenTools.NSW.Bntx.Texture.Path">
+            <summary>
+            Gets or sets the path of the file which originally supplied the data of this instance.
+            </summary>
+        </member>
+        <member name="P:Syroot.NintenTools.NSW.Bntx.Texture.Depth">
+            <summary>
+            Gets or sets the depth of the texture.
+            </summary>
+        </member>
+        <member name="P:Syroot.NintenTools.NSW.Bntx.Texture.TileMode">
+            <summary>
+            Gets or sets the tiling mode.
+            </summary>
+        </member>
+        <member name="P:Syroot.NintenTools.NSW.Bntx.Texture.Swizzle">
+            <summary>
+            Gets or sets the swizzling value.
+            </summary>
+        </member>
+        <member name="P:Syroot.NintenTools.NSW.Bntx.Texture.Alignment">
+            <summary>
+            Gets or sets the swizzling alignment.
+            </summary>
+        </member>
+        <member name="P:Syroot.NintenTools.NSW.Bntx.Texture.Pitch">
+            <summary>
+            Gets or sets the pixel swizzling stride.
+            </summary>
+        </member>
+        <member name="P:Syroot.NintenTools.NSW.Bntx.Texture.Dim">
+            <summary>
+            Gets or sets the dims of the texture.
+            </summary>
+        </member>
+        <member name="P:Syroot.NintenTools.NSW.Bntx.Texture.SurfaceDim">
+            <summary>
+            Gets or sets the shape of the texture.
+            </summary>
+        </member>
+        <member name="P:Syroot.NintenTools.NSW.Bntx.Texture.MipOffsets">
+            <summary>
+            Gets or sets the offsets in the <see cref="!:MipData"/> array to the data of the mipmap level corresponding
+            to the array index.
+            </summary>
+        </member>
+        <member name="P:Syroot.NintenTools.NSW.Bntx.Texture.TextureData">
+            <summary>
+            The raw bytes of texture data stored for each mip map
+            </summary>
+        </member>
+        <member name="P:Syroot.NintenTools.NSW.Bntx.Texture.Flags">
+            <summary>
+            Gets or sets info flags
+            </summary>
+        </member>
+        <member name="P:Syroot.NintenTools.NSW.Bntx.Texture.ImageSize">
+            <summary>
+            Gets or sets the image size
+            </summary>
+        </member>
+        <member name="P:Syroot.NintenTools.NSW.Bntx.Texture.SampleCount">
+            <summary>
+            Gets or sets sample amount
+            </summary>
+        </member>
+    </members>
+</doc>

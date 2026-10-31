@@ -11,8 +11,8 @@
 //   - the platform is the kit's tsuru::PlatformModel (the game's lift_han_*
 //     segment models, drawn by the kit) and is drawn only when there is one --
 //     Tsuru draws an unplaced wood platform for every platformless Peepa;
-//   - Enemy's own death states (a POW ...) end it with the cloud, as the
-//     Biddybud's do: its position follows the movement controller every frame,
+//   - Enemy's own death states (a POW ...) end it with modbase/tumble_death.h, as
+//     the Biddybud's do: its position follows the movement controller every frame,
 //     so DieFumi's fall would spin it in place forever.
 //
 // Settings:
@@ -31,9 +31,7 @@
 #include "actors/profile.h"
 #include "actors/profileid.h"
 #include "modbase/tsuru.h"
-
-// Tsuru RP_Jugemu_CloudDisapp (effectid.h).
-constexpr s32 cEffect_CloudDisappear = 0x15B;
+#include "modbase/tumble_death.h"
 
 // Tsuru ColliderBase::SurfaceType::Cloud (codedx lists 0-5 only).
 constexpr u32 cSurfaceType_Cloud = 6;
@@ -71,7 +69,6 @@ public:
     void endState_DieFall() override;
 
     void hurt(ActiveCollider* acSelf, ActiveCollider* acOther);
-    void vanish();
 
     static const ActiveCollider::Info collisionInfo;
 
@@ -83,8 +80,7 @@ public:
     SolidOnTopCollider polylineCollider;
     bool hasPlatform;
     u32 platformType;
-    Vec3 effectScale;
-    Vec3 effectOffset;      // Tsuru's own field; hides StageActor::effectOffset (+0x23C), as in Tsuru
+    ModBase::TumbleDeath tumble;
 
     DECLARE_STATE(Peepa, Die);
 };
@@ -111,8 +107,6 @@ Peepa::Peepa(const ActorBuildInfo* buildInfo)
     , polylineCollider()
     , hasPlatform(false)
     , platformType(0)
-    , effectScale(0.7f, 0.7f, 0.7f)
-    , effectOffset(0.0f, 0.0f, 0.0f)
 { }
 
 Actor* Peepa::build(const ActorBuildInfo* buildInfo)
@@ -122,6 +116,7 @@ Actor* Peepa::build(const ActorBuildInfo* buildInfo)
 
 u32 Peepa::onCreate()
 {
+    tumble.sound = "SE_EMY_TERESA_DEAD";
     hasPlatform = (eventId1 >> 0x04 & 0xF);    // nybble 3
     platformType = (eventId1 & 0xF);           // nybble 4
 
@@ -180,8 +175,10 @@ u32 Peepa::onCreate()
 
 u32 Peepa::onExecute()
 {
-    movementHandler.execute();
-    position = movementHandler.position;
+    if (!tumble.execute(this)) {
+        movementHandler.execute();
+        position = movementHandler.position;
+    }
 
     Mtx34 peepaMtx;
     Vec3 peepaModelPos = position;
@@ -265,20 +262,12 @@ bool Peepa::collisionFireballYoshi(ActiveCollider* acSelf, ActiveCollider* acOth
     return true;
 }
 
-void Peepa::vanish()
-{
-    Vec3 effectOrigin(position.x, position.y, 4500.0f);
-    Vec3 effectPos = effectOrigin + effectOffset;
-    Effect::spawn(cEffect_CloudDisappear, &effectPos, nullptr, &effectScale);
-    isDeleted = true;
-}
-
 /** Enemy's death states */
 
 void Peepa::beginState_DieFumi()
 {
     Enemy::beginState_DieFumi();    // score, colliders off
-    vanish();
+    tumble.begin(this, 0.7f);
 }
 void Peepa::executeState_DieFumi() { }
 void Peepa::endState_DieFumi() { }
@@ -291,7 +280,7 @@ void Peepa::endState_DieFall() { }
 
 void Peepa::beginState_Die()
 {
-    vanish();
+    tumble.begin(this, 0.7f);
 }
 
 void Peepa::executeState_Die() { }

@@ -18,13 +18,17 @@
 // "AttackLand" and "PressDown".
 
 #include "actors/enemy.h"
+#include "graphics/effect.h"
 #include "actors/profile.h"
 #include "actors/profileid.h"
 #include "modbase/tsuru.h"
+#include "modbase/yoshi.h"
+#include "modbase/tumble_death.h"
 
 #define FLAPTOR_DIVE_RANGE      (5.0f * 16.0f)
 #define FLAPTOR_GRAVITY         -0.1875f
 #define FLAPTOR_FALL_SPEED      -4.0f
+#define FLAPTOR_DIVE_WAIT       60      // frames after landing before it can dive again: it rises first
 
 class Flaptor : public Enemy
 {
@@ -41,13 +45,19 @@ public:
     void collisionPlayer(ActiveCollider* acSelf, ActiveCollider* acOther) override;
     void collisionYoshi(ActiveCollider* acSelf, ActiveCollider* acOther) override;
 
+    void vf228() override;      // Enemy's EatOut: Yoshi spat it out
+
     static const ActiveCollider::Info collisionInfo;
 
     ModelWrapper* model;
+    ::yoshi::EatData eatData;
+    ModBase::TumbleDeath tumble;
     Vec3 startPosition;
     f32 threshold;
     f32 timer;
     u8 moveType;
+
+    u32 diveWait = 0;
 
     DECLARE_STATE(Flaptor, Idle);
     DECLARE_STATE(Flaptor, Dive);
@@ -112,6 +122,8 @@ u32 Flaptor::onCreate()
         return 1;
     }
 
+    ModBase::yoshi::makeEdible(this, &eatData);
+
     doStateChange(&StateID_Idle);
 
     return onExecute();
@@ -125,6 +137,9 @@ u32 Flaptor::onExecute()
     model->setScale(scale);
     model->updateModel();
     model->updateAnimations();
+
+    if (tumble.execute(this))
+        return 1;
 
     timer++;
 
@@ -153,6 +168,12 @@ void Flaptor::collisionYoshi(ActiveCollider* acSelf, ActiveCollider* acOther)
     collisionPlayer(acSelf, acOther);
 }
 
+// Enemy's EatOut does nothing (0x602A972C): it would hang where Yoshi let it go.
+void Flaptor::vf228()
+{
+    tumble.begin(this);
+}
+
 /** STATE: Idle */
 
 void Flaptor::beginState_Idle()
@@ -162,6 +183,9 @@ void Flaptor::beginState_Idle()
 
 void Flaptor::executeState_Idle()
 {
+    if (diveWait > 0)
+        diveWait--;
+
     switch (moveType) {
         case Stationary: {
             tsuru::chase(&rotation.y, tsuru::Direction::toRotation[directionToPlayerH(position)], tsuru::deg2idx(4.0f));
@@ -209,7 +233,7 @@ void Flaptor::executeState_Idle()
     }
 
     Vec2 d2p = tsuru::distanceToPlayer(this);
-    if (d2p.mag() <= FLAPTOR_DIVE_RANGE && d2p.y < 4.0f)
+    if (diveWait == 0 && d2p.mag() <= FLAPTOR_DIVE_RANGE && d2p.y < 4.0f)
         doStateChange(&StateID_Dive);
 }
 
@@ -219,6 +243,7 @@ void Flaptor::endState_Idle() { }
 
 void Flaptor::beginState_Dive()
 {
+    tsuru::playSound("SE_EMY_BASABASA", position);
     tsuru::gravity(this) = FLAPTOR_GRAVITY;
     maxSpeed.y = FLAPTOR_FALL_SPEED;
 
@@ -241,6 +266,7 @@ void Flaptor::endState_Dive() { }
 
 void Flaptor::beginState_Land()
 {
+    tsuru::playSound("SE_EMY_SANBO_LAND", position);
     speed.y = 0.0f;
     tsuru::playSklAnim(model, "AttackLand", false);
 }
@@ -251,7 +277,10 @@ void Flaptor::executeState_Land()
         doStateChange(&StateID_Idle);
 }
 
-void Flaptor::endState_Land() { }
+void Flaptor::endState_Land()
+{
+    diveWait = FLAPTOR_DIVE_WAIT;
+}
 
 /** STATE: DieSquish */
 

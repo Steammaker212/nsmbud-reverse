@@ -36,10 +36,8 @@
 //
 // New settings (the Cheep Cheep class never reads these bits of settings2):
 //   nybble 13  1: follow the player. It steers straight at them, up and down too, at the Deep
-//              Cheep's chase speed (0.75 units a frame) and never loses them. Retail's Search
-//              (0x60371AC4) only swims level with a bob, and Chase (0x60371E0C) starts only for a
-//              player in a box ahead, so a Bee off that line flew away: the class runs in mode 1
-//              (profile 534) for its turning and animation, and the position is set here.
+//              Cheep's chase speed (0.75 units a frame). The class stays in its plain Swim state,
+//              so it spawns and despawns as any Bee, and the turning and position are set here.
 //   nybble 14  speed: 0 the default, otherwise value x 0.25 of it (4 = the same, 8 = twice).
 //              Without Follow, all the class's movement ends up in position during onExecute,
 //              so the move it made is scaled afterwards.
@@ -64,18 +62,18 @@
 #include "modbase/models.h"
 #include "modbase/actor_variant.h"
 #include "modbase/log.h"
+#include "modbase/tsuru.h"
 #include "modbase/yoshi.h"
 #include "util/math.h"
 
 namespace ModBase { namespace bee {
-extern u8 stateSearch[];    // the Cheep Cheep's states, symbols/actors/bee.sym
-extern u8 stateChase[];
+extern u8 stateSwim[];      // the Cheep Cheep's state, symbols/actors/bee.sym
+u32 facingYaw(void* bee, u32 direction);    // 0x603737E4: rotation.y to face this way
 } }
 
 namespace {
 
-constexpr u32 cPukupukuMode   = 0x2DA8;     // Pukupuku::mode (ledger F0036)
-constexpr u32 cModeSearch     = 1;          // what profile 534 sets
+constexpr u32 cTurnStep       = 0x2000000;  // rotation.y a frame, as the Search state
 constexpr u32 cDeadFlag       = 0x218;      // set by Enemy::beforeExecute when it dies
 constexpr f32 cFollowSpeed    = 0.75f;      // the Deep Cheep's chase speed
 constexpr f32 cFollowReached  = 2.0f;       // closer than this it stops, as the Deep Cheep
@@ -94,27 +92,40 @@ constexpr u32 cEatPoolSize = 32;
     return nullptr;
 }
 
+// Where each follower was made: see onExecute.
+struct Follower
+{
+    u32 id;
+    Vec3 position;
+};
+Follower sFollowers[cEatPoolSize];
+
 inline u32 speedSetting(StageActor* bee) { return bee->settings2 >> 24 & 0xF; }     // nybble 14
 
 void beforeCreate(Actor* actor)
 {
     StageActor* bee = (StageActor*)actor;
-    if (bee->settings2 >> 28 & 1)                                                   // nybble 13
-        *(u32*)((u8*)bee + cPukupukuMode) = cModeSearch;
     if (::yoshi::EatData* eat = freeEatData())
         ModBase::yoshi::makeEdible(bee, eat);
+
+    if (bee->settings2 >> 28 & 1) {
+        ActorMgrRelated* actors = (ActorMgrRelated*)((s32)ActorMgr::instance + 0x6A20);
+        for (Follower& f : sFollowers)
+            if (!f.id || !actors->getById(f.id)) {
+                f.id = bee->id;
+                f.position = bee->position;
+                break;
+            }
+    }
 }
 
-// Following: only in the two states that swim, so a frozen, stomped or eaten Bee stays out of it.
+// Following: only while it swims, so a frozen, stomped or eaten Bee stays out of it.
 bool following(Enemy* bee)
 {
-    if (!(bee->settings2 >> 28 & 1))
-        return false;
-    void* state = bee->states.currentState();
-    return state == ModBase::bee::stateSearch || state == ModBase::bee::stateChase;
+    return (bee->settings2 >> 28 & 1) && (void*)bee->states.currentState() == ModBase::bee::stateSwim;
 }
 
-u32 onExecute(Actor* actor, u32 (*vanilla)(Actor*))
+u32 steer(Actor* actor, u32 (*vanilla)(Actor*))
 {
     Enemy* bee = (Enemy*)actor;
     ::yoshi::EatData* eat = ModBase::yoshi::eatData(bee);
@@ -132,7 +143,8 @@ u32 onExecute(Actor* actor, u32 (*vanilla)(Actor*))
         bee->distanceToPlayer(toPlayer);
         distance = sqrt(toPlayer.x * toPlayer.x + toPlayer.y * toPlayer.y);
         if (fabs(toPlayer.x) >= cFollowTurn)
-            bee->direction = toPlayer.x < 0.0f;     // the class turns the model to this
+            bee->direction = toPlayer.x < 0.0f;
+        tsuru::chase(&bee->rotation.y, ModBase::bee::facingYaw(bee, bee->direction), cTurnStep);
     }
 
     u32 r = vanilla(actor);
@@ -143,15 +155,28 @@ u32 onExecute(Actor* actor, u32 (*vanilla)(Actor*))
             bee->position.x = before.x + toPlayer.x * step;
             bee->position.y = before.y + toPlayer.y * step;
         }
-        static u32 sDiag;
-        if (sDiag < 600 && sDiag++ % 60 == 0)
-            ModBase::log("[DIAG] follow bee pos=", (s32)bee->position.x, ",", (s32)bee->position.y,
-                         " toPlayer=", (s32)toPlayer.x, ",", (s32)toPlayer.y, " dir=", bee->direction);
     } else {
         bee->position.x = before.x + (bee->position.x - before.x) * k;
         bee->position.y = before.y + (bee->position.y - before.y) * k;
     }
     return r;
+}
+
+// A follower reaches its first frame far from where it was made (the log, every spawn: made at
+// y -824, y 360 and a different z), and that frame's cull would delete it before it was ever seen,
+// leaving it to respawn only once the player had gone away and come back. It is put back, once;
+// what moves it is not known. The ones after that are its own.
+u32 onExecute(Actor* actor, u32 (*vanilla)(Actor*))
+{
+    Enemy* bee = (Enemy*)actor;
+    if (bee->settings2 >> 28 & 1)
+        for (Follower& f : sFollowers)
+            if (f.id == bee->id) {
+                bee->position = f.position;
+                f.id = 0;
+                break;
+            }
+    return steer(actor, vanilla);
 }
 
 } // namespace

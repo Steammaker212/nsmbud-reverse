@@ -142,6 +142,12 @@ enum ProfileIdType
     Rain,
     FallingLeaves,
 
+    ShyGuyClassic,          // no sprites: code/sprites/shy_guy_behaviours.cpp builds these
+    ShyGuyClassicFall,
+    ShyGuySpikeBall,
+    ShyGuyBubble,
+    ScuttlebugThread,
+
     Num
 };
 

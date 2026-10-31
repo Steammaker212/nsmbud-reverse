@@ -42,6 +42,11 @@ enum class EatType : u32
     DrinkBig     = 4,
     YoshiFire    = 5,
     YoshiFireIce = 6,
+
+    // Not the game's. When the tongue hits (0x607D0D44), Drink is swallowed at once and DrinkBig
+    // is swallowed its own way; anything else stays in the mouth until spat. Eat would too, but
+    // code/framework/yoshi.cpp turns every enemy's Eat into breath, and nothing else reads this.
+    HoldInMouth  = 7,
 };
 
 enum class EatState : u32 { None = 0, EatTongue = 1, EatMouth = 2, DamageSpitOut = 3, SpitOut = 4 };
